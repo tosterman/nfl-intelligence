@@ -1,0 +1,18 @@
+[
+  {
+    "browser": "chromium",
+    "status": 200,
+    "text": "Since the previous collection \u00b7 No changes observed\n\nCompared Sep 10 at Thu 4:09 PM ET with Sep 10 at Thu 4:24 PM ET. These are collection times; the time of each underlying report is unknown.\n\nNo differences in the two teams\u2019 matching weekly entries. This does not confirm unchanged health or lineups.",
+    "documentWidth": 320,
+    "viewport": 320,
+    "errors": []
+  },
+  {
+    "browser": "webkit",
+    "status": 200,
+    "text": "Since the previous collection \u00b7 No changes observed\n\nCompared Sep 10 at Thu 4:09 PM ET with Sep 10 at Thu 4:24 PM ET. These are collection times; the time of each underlying report is unknown.\n\nNo differences in the two teams\u2019 matching weekly entries. This does not confirm unchanged health or lineups.",
+    "documentWidth": 320,
+    "viewport": 320,
+    "errors": []
+  }
+]

@@ -9,8 +9,10 @@ def release_files():
     paths=[p for p in ROOT.iterdir() if p.name in ALLOW_ROOT]
     for folder in ['src','public']:
         paths.extend(p for p in (ROOT/folder).rglob('*') if p.is_file())
-    paths.append(ROOT/'data/site.json')
-    paths.append(ROOT/'data/weather.json')
+    for name in ['site.json','weather.json','weather-venues.json','weather-osm-venues.json',
+                 'personnel.json','personnel-collection.json','personnel-changes.json',
+                 'quarterbacks.json','quarterback-collection.json']:
+        paths.append(ROOT/'data'/name)
     for p in paths:
         binary=p.suffix in ['.ttf','.woff','.woff2','.png','.jpg','.ico']
         files.append({'file':p.relative_to(ROOT).as_posix(),'data':base64.b64encode(p.read_bytes()).decode() if binary else p.read_text(encoding='utf-8-sig'),'encoding':'base64' if binary else 'utf-8'})

@@ -34,7 +34,7 @@ def changes(before, after):
         result.append(dict(zip(('season', 'type', 'week', 'team', 'playerId'), key)) | {
             'kind': 'first-observed' if a is None else 'no-longer-present' if b is None else 'changed',
             'observedAfter': before['retrievedAt'], 'observedBy': after['retrievedAt'],
-            'eventTime': None, 'fields': fields,
+            'eventTime': None, 'playerName': (b or a)['name'], 'position': (b or a).get('position'), 'fields': fields,
         })
     return result
 
@@ -74,6 +74,14 @@ def main():
               'baseline': {'captureHash': captures[0]['captureHash'], 'retrievedAt': captures[0]['retrievedAt'], 'rows': len(captures[0]['players'])},
               'captures': [{k: s[k] for k in ('captureHash', 'sourceHash', 'retrievedAt', 'assetUpdatedAt')} for s in captures],
               'transitions': transitions}
+    current = json.loads((ROOT / 'data/personnel.json').read_bytes())
+    current_hash = hashlib.sha256((json.dumps(current, sort_keys=True, separators=(',', ':')) + '\n').encode()).hexdigest()
+    if current_hash != captures[-1]['captureHash']:
+        raise ValueError('Current personnel snapshot differs from latest verified capture')
+    public = {'schemaVersion': 1, 'sourceHash': current['sourceHash'], 'retrievedAt': current['retrievedAt'],
+              'previousRetrievedAt': captures[-2]['retrievedAt'] if len(captures) > 1 else None,
+              'changes': transitions[-1]['changes'] if transitions else []}
+    (ROOT / 'data/personnel-changes.json').write_text(json.dumps(public, indent=2)+'\n')
     (ROOT / 'reviews/personnel-change-ledger.json').write_text(json.dumps(report, indent=2)+'\n')
     print(json.dumps({'captures': len(captures), 'transitions': len(transitions), 'changes': sum(len(t['changes']) for t in transitions)}))
 

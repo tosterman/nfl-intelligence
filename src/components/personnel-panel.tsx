@@ -4,6 +4,7 @@ import { personnelForGame, orderPersonnelReports } from "@/lib/personnel";
 import type { Game } from "@/lib/types";
 import { teams, date, time } from "@/lib/teams";
 import { PersonnelExpiry } from "./personnel-expiry";
+import { PersonnelChangesPanel } from "./personnel-changes";
 import { QuarterbackContext } from "./quarterback-context";
 
 export function PersonnelPanel({ game }: { game: Game }) {
@@ -35,6 +36,7 @@ export function PersonnelPanel({ game }: { game: Game }) {
             {time(snapshot.assetUpdatedAt)} ET · Acquired{" "}
             {date(snapshot.retrievedAt)} at {time(snapshot.retrievedAt)} ET
           </p>
+          <PersonnelChangesPanel game={game} snapshot={snapshot} />
           <div className="personnel-teams">
             {[game.away, game.home].map((team) => {
               const players = orderPersonnelReports(
