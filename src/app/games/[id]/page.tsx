@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { site, teams, pct, signed, time, date } from "@/lib/data";
 import { fairMoneyline } from "@/lib/math";
 import { TeamMark } from "@/components/brand";
+import { RevisionHistory } from "@/components/revision-history";
 export function generateStaticParams() {
   return site.games.map((g) => ({ id: g.id }));
 }
@@ -374,34 +375,11 @@ export default async function GamePage({
                   of full health, calm weather, or market agreement.
                 </p>
               </section>
-              <section className="panel">
-                <h2>What changed</h2>
-                {g.history.map((s, snapshotIndex) => (
-                  <div className="timeline-item" key={s.hash}>
-                    <strong>
-                      {date(snapshotTime(s))} · {time(snapshotTime(s))} ET
-                    </strong>
-                    <p>
-                      {teams[g.home].short}{" "}
-                      {pct(s.prediction.homeWinProbability)} · Expected margin{" "}
-                      {signed(s.prediction.homeMargin)}
-                    </p>
-                    <p className="fine">
-                      {snapshotIndex === 0
-                        ? "Initial model snapshot. No earlier prediction is available."
-                        : s.modelVersion !==
-                            g.history[snapshotIndex - 1].modelVersion
-                          ? `Model upgraded from ${g.history[snapshotIndex - 1].modelVersion} to ${s.modelVersion}.`
-                          : "Input refresh; earlier snapshots are retained."}
-                    </p>
-                  </div>
-                ))}
-                <p className="fine">
-                  Every snapshot is retained. A new model run never replaces a
-                  pregame record. Times above are generation times; verified
-                  public availability is recorded separately.
-                </p>
-              </section>
+              <RevisionHistory
+                history={g.history}
+                home={teams[g.home].short}
+                away={teams[g.away].short}
+              />
               <section className="panel">
                 <h2>Under the hood</h2>
                 <p className="fine">

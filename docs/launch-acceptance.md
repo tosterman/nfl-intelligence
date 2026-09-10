@@ -27,7 +27,7 @@ The exact-release verifier accommodates JavaScript integral-number serialization
 | 17 Pipeline | Validated acquisition, fitted artifact, ledger, CI, deployment and receipt workflow | Authenticated production deployment and successful unattended run |
 | 18 Simulation | Analytic normal residual approximation, explicitly labeled | Discrete outcome simulation only if it improves validation |
 | 19–20 Explanation and specific why | Contributions reconcile to margin; historical profiles provide context | Personnel/scheme explanations require missing inputs |
-| 21 What changed | Generation revisions exposed on game page | Verified public revision history and input-change attribution |
+| 21 What changed | Expandable generation revisions; score/margin/total/probability deltas; model, configuration and source identity changes distinguished | Verified public history and attribution to specific football inputs |
 | 22–24 Homepage, cards, detail | Slate, filters, expected/final distinctions, contextual navigation, analysis and evidence | Continued usability tests with actual fans/editorial users |
 | 25–29 Design, dark mode, visual language, motion, mobile | Original visual system, self-hosted licensed fonts, reduced-motion treatment, responsive layouts | Physical-device and broader assistive-technology evaluation |
 | 30 Accountability | All-game metrics, pushes/ties/no-picks, market benchmark; prospective grades require receipts | Genuine public pregame predictions and results |

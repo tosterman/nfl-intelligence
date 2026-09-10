@@ -1938,3 +1938,35 @@ summary {
   white-space: nowrap;
   border: 0;
 }
+
+.revision {
+  border-top: 1px solid var(--line);
+  padding: 16px 0;
+}
+.revision summary {
+  line-height: 1.6;
+}
+.revision-deltas {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+}
+.revision-deltas > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+.revision-deltas dt {
+  color: var(--muted);
+}
+.revision-deltas dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.revision-reasons {
+  padding-left: 18px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+}

@@ -31,6 +31,10 @@ export type Snapshot = {
   trainingThrough: string;
   prediction: Prediction;
   hash: string;
+  sourceHash?: string;
+  efficiencySourceHashes?: string[];
+  modelCodeHash?: string;
+  configuration?: Record<string, unknown>;
 };
 export type Game = {
   id: string;
