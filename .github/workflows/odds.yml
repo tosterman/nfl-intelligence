@@ -22,3 +22,11 @@ jobs:
       - run: npx tsx scripts/collect_odds.ts
         env:
           ODDS_COLLECTION_SECRET: ${{ secrets.ODDS_COLLECTION_SECRET }}
+      - name: Retain collection evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: odds-collection-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 90
+          path: release-recovery/odds-collection-report.json
+          if-no-files-found: error
