@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "identityNamespace": "nflverse injury-feed GSIS ID within season/type/week/team",
+  "codeHashes": {
+    "personnel_changes.py": "0646243afd44589c07d3b97ccda43364cfd194f2456c4440ba9c5cbfe760a22e",
+    "refresh_personnel.py": "f8761156ea4d7b6238f68bed5927477d6d51bd2e69e37a51fd42365046c0856e"
+  },
+  "interpretation": "Observed feed differences only. Missing rows do not establish availability. Event times and cross-feed identity mappings are unknown.",
+  "baseline": {
+    "captureHash": "a81386b9f7536ba65cba92ec2f1ffec5f00e74523e0182a3f3e452493aecaf56",
+    "retrievedAt": "2026-09-10T17:43:32.666394+00:00",
+    "rows": 139
+  },
+  "captures": [
+    {
+      "captureHash": "a81386b9f7536ba65cba92ec2f1ffec5f00e74523e0182a3f3e452493aecaf56",
+      "sourceHash": "96dcc98e297a38ecb8edcc7ab8864260b2899e24604f60c2a9514498ea53c2fb",
+      "retrievedAt": "2026-09-10T17:43:32.666394+00:00",
+      "assetUpdatedAt": "2026-09-10T12:03:24Z"
+    },
+    {
+      "captureHash": "3145f5e1299b506e29884f8ec6dd8109548bc424bb5e64c47603aa5651badb7e",
+      "sourceHash": "96dcc98e297a38ecb8edcc7ab8864260b2899e24604f60c2a9514498ea53c2fb",
+      "retrievedAt": "2026-09-10T17:46:20.719404+00:00",
+      "assetUpdatedAt": "2026-09-10T12:03:24Z"
+    },
+    {
+      "captureHash": "0432f1eef213d2864c0f863f2af522e86d1a3d29da6224030fd444191fff45b5",
+      "sourceHash": "96dcc98e297a38ecb8edcc7ab8864260b2899e24604f60c2a9514498ea53c2fb",
+      "retrievedAt": "2026-09-10T17:47:09.772903+00:00",
+      "assetUpdatedAt": "2026-09-10T12:03:24Z"
+    },
+    {
+      "captureHash": "0b4da4da19572bea86c4ab3952a67cedd5879b0fff05f12497a426ab3be58ed4",
+      "sourceHash": "96dcc98e297a38ecb8edcc7ab8864260b2899e24604f60c2a9514498ea53c2fb",
+      "retrievedAt": "2026-09-10T18:37:08.932616+00:00",
+      "assetUpdatedAt": "2026-09-10T12:03:24Z"
+    },
+    {
+      "captureHash": "93efae94f88ccfeb574f5837529953955204f96728425a332cc43fcee8369ae4",
+      "sourceHash": "96dcc98e297a38ecb8edcc7ab8864260b2899e24604f60c2a9514498ea53c2fb",
+      "retrievedAt": "2026-09-10T18:57:38.474917+00:00",
+      "assetUpdatedAt": "2026-09-10T12:03:24Z"
+    },
+    {
+      "captureHash": "4e1956c29b7991a6b1941987e365c55b9e436f5a9af88c66d446a5ee127eea67",
+      "sourceHash": "96dcc98e297a38ecb8edcc7ab8864260b2899e24604f60c2a9514498ea53c2fb",
+      "retrievedAt": "2026-09-10T19:58:16.500822+00:00",
+      "assetUpdatedAt": "2026-09-10T12:03:24Z"
+    },
+    {
+      "captureHash": "369f98fb044018436ad90aaf2090ef41a977bbac65f3803f8b855f22cdd38bfd",
+      "sourceHash": "96dcc98e297a38ecb8edcc7ab8864260b2899e24604f60c2a9514498ea53c2fb",
+      "retrievedAt": "2026-09-10T20:09:09.897337+00:00",
+      "assetUpdatedAt": "2026-09-10T12:03:24Z"
+    },
+    {
+      "captureHash": "c09a41625e884270e9e0469cd40d802d45b9045e3e350f023f71d1d2ef0db5f8",
+      "sourceHash": "96dcc98e297a38ecb8edcc7ab8864260b2899e24604f60c2a9514498ea53c2fb",
+      "retrievedAt": "2026-09-10T20:24:24.691947+00:00",
+      "assetUpdatedAt": "2026-09-10T12:03:24Z"
+    }
+  ],
+  "transitions": [
+    {
+      "beforeCapture": "a81386b9f7536ba65cba92ec2f1ffec5f00e74523e0182a3f3e452493aecaf56",
+      "afterCapture": "3145f5e1299b506e29884f8ec6dd8109548bc424bb5e64c47603aa5651badb7e",
+      "changes": []
+    },
+    {
+      "beforeCapture": "3145f5e1299b506e29884f8ec6dd8109548bc424bb5e64c47603aa5651badb7e",
+      "afterCapture": "0432f1eef213d2864c0f863f2af522e86d1a3d29da6224030fd444191fff45b5",
+      "changes": []
+    },
+    {
+      "beforeCapture": "0432f1eef213d2864c0f863f2af522e86d1a3d29da6224030fd444191fff45b5",
+      "afterCapture": "0b4da4da19572bea86c4ab3952a67cedd5879b0fff05f12497a426ab3be58ed4",
+      "changes": []
+    },
+    {
+      "beforeCapture": "0b4da4da19572bea86c4ab3952a67cedd5879b0fff05f12497a426ab3be58ed4",
+      "afterCapture": "93efae94f88ccfeb574f5837529953955204f96728425a332cc43fcee8369ae4",
+      "changes": []
+    },
+    {
+      "beforeCapture": "93efae94f88ccfeb574f5837529953955204f96728425a332cc43fcee8369ae4",
+      "afterCapture": "4e1956c29b7991a6b1941987e365c55b9e436f5a9af88c66d446a5ee127eea67",
+      "changes": []
+    },
+    {
+      "beforeCapture": "4e1956c29b7991a6b1941987e365c55b9e436f5a9af88c66d446a5ee127eea67",
+      "afterCapture": "369f98fb044018436ad90aaf2090ef41a977bbac65f3803f8b855f22cdd38bfd",
+      "changes": []
+    },
+    {
+      "beforeCapture": "369f98fb044018436ad90aaf2090ef41a977bbac65f3803f8b855f22cdd38bfd",
+      "afterCapture": "c09a41625e884270e9e0469cd40d802d45b9045e3e350f023f71d1d2ef0db5f8",
+      "changes": []
+    }
+  ]
+}
