@@ -1,0 +1,11 @@
+# Kickoff weather context — 2026-09-10
+
+Real NWS hourly forecasts were acquired for four upcoming games: CHI/CAR, NYJ/TEN, WAS/PHI and DEN/KC. Operator-address and Census evidence is in weather-venue-sources.md. The mapping is deliberately by exact venue, not team; international/neutral and unresolved venues remain unavailable. Initial coverage is partial.
+
+The period containing kickoff is selected with an inclusive start and exclusive end. Issue time and capture time are distinct. Missing temperature or precipitation probability stays unknown; invalid values and stale/future issue times fail closed. Rendering checks venue and kickoff again to prevent reuse after rescheduling, and hides stale values. A client timer and visibility-change handler expire weather on an open tab. It is area forecast context, not field measurements or a verified roof-state inference. Numerical model outputs remain unchanged.
+
+Independent review found two defects, both fixed: captured source bytes were initially disposable; compressed responses are now committed and included in recovery artifacts. Open tabs initially did not expire; the client expiry boundary now does. Source fingerprints are verified by decompressing archived bytes, and the recorded period/temperature is reproduced in regression tests. Weather history is local capture evidence, not independently proven pregame publication.
+
+Actual local browser check on WAS/PHI showed the acquired NWS period: 83°F, west wind5mph, precipitation probability21%, issued Sep10 at04:09ET for the hour containing Sep13 kickoff. These are captured forecast values, not permanent claims about game-day conditions. Source disclosure expanded successfully. At320px, document width305px showed no overflow. Melbourne correctly displayed unavailable; no Los Angeles forecast was substituted. Automatic expiry is code-reviewed, not a simulated browser-clock certification.
+
+Primary documentation: https://www.weather.gov/documentation/services-web-api and https://www.weather.gov/disclaimer/ . Marketplace discovery was attempted before implementation but CLI demanded authentication; direct NWS API requests succeeded and do not require paid provisioning. No SDK, paid provider or owner account was fabricated. Operational unattended publication remains blocked by Vercel credentials.

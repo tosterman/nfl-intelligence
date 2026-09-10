@@ -6,6 +6,7 @@ import { site, teams, pct, signed, time, date } from "@/lib/data";
 import { fairMoneyline } from "@/lib/math";
 import { TeamMark } from "@/components/brand";
 import { RevisionHistory } from "@/components/revision-history";
+import { WeatherContext } from "@/components/weather-context";
 export function generateStaticParams() {
   return site.games.map((g) => ({ id: g.id }));
 }
@@ -150,6 +151,7 @@ export default async function GamePage({
           </div>
           <div className="detail-grid">
             <div className="detail-stack">
+              <WeatherContext game={g} />
               <section className="panel">
                 <h2>The model’s read</h2>
                 <p className="lead">
@@ -364,7 +366,7 @@ export default async function GamePage({
                 </div>
                 <div className="availability">
                   <span>Kickoff weather</span>
-                  <span>Unknown</span>
+                  <span>Not in model</span>
                 </div>
                 <div className="availability">
                   <span>Live market</span>

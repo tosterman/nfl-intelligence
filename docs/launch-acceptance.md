@@ -21,7 +21,7 @@ The exact-release verifier accommodates JavaScript integral-number serialization
 | 11 Personnel | Explicit unavailable coverage state | Current availability, starter changes, snap-weighted player value, rights and timestamps |
 | 12 Matchup | Opposing historical efficiency profiles and additive contributions | Nonlinear scheme, trench and player interactions |
 | 13 Situational | Venue identity and neutral-site adjustment | Validated rest/travel/coaching/schedule effects |
-| 14 Weather | Explicit unavailable state | Archived forecast-at-kickoff inputs and validated effects |
+| 14 Weather | Real NWS kickoff-hour context for four mapped US venues; issue/retrieval timestamps, stale/unknown states, compressed source archives | Broader venue/international coverage and validated numerical effects |
 | 15 Market intelligence | Closing-line benchmark separate from model | Price history, movement, CLV and executable-price evidence |
 | 16 Time-aware data | Source hashes/times, weekly cutoff, code/configuration identity; missing kickoff withheld | Historical vintage data and additional feed availability timestamps |
 | 17 Pipeline | Validated acquisition, fitted artifact, ledger, CI, deployment and receipt workflow | Authenticated production deployment and successful unattended run |

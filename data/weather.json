@@ -1,0 +1,2134 @@
+{
+  "generatedAt": "2026-09-10T14:51:06.604935+00:00",
+  "games": {
+    "2026_01_NE_SEA": {
+      "status": "unavailable",
+      "gameId": "2026_01_NE_SEA",
+      "kickoff": "2026-09-10T00:20:00+00:00",
+      "venue": "Lumen Field",
+      "reason": "Pregame forecast collection has closed"
+    },
+    "2026_01_SF_LA": {
+      "status": "unavailable",
+      "gameId": "2026_01_SF_LA",
+      "kickoff": "2026-09-11T00:35:00+00:00",
+      "venue": "Melbourne Cricket Ground",
+      "reason": "Verified US venue location unavailable"
+    },
+    "2026_01_ARI_LAC": {
+      "status": "unavailable",
+      "gameId": "2026_01_ARI_LAC",
+      "kickoff": "2026-09-13T20:25:00+00:00",
+      "venue": "SoFi Stadium",
+      "reason": "Verified US venue location unavailable"
+    },
+    "2026_01_ATL_PIT": {
+      "status": "unavailable",
+      "gameId": "2026_01_ATL_PIT",
+      "kickoff": "2026-09-13T17:00:00+00:00",
+      "venue": "Acrisure Stadium",
+      "reason": "Verified US venue location unavailable"
+    },
+    "2026_01_BAL_IND": {
+      "status": "unavailable",
+      "gameId": "2026_01_BAL_IND",
+      "kickoff": "2026-09-13T17:00:00+00:00",
+      "venue": "Lucas Oil Stadium",
+      "reason": "Verified US venue location unavailable"
+    },
+    "2026_01_BUF_HOU": {
+      "status": "unavailable",
+      "gameId": "2026_01_BUF_HOU",
+      "kickoff": "2026-09-13T17:00:00+00:00",
+      "venue": "Reliant Stadium",
+      "reason": "Verified US venue location unavailable"
+    },
+    "2026_01_CHI_CAR": {
+      "status": "available",
+      "gameId": "2026_01_CHI_CAR",
+      "kickoff": "2026-09-13T17:00:00+00:00",
+      "venue": "Bank of America Stadium",
+      "issuedAt": "2026-09-10T12:13:09+00:00",
+      "periodStart": "2026-09-13T13:00:00-04:00",
+      "periodEnd": "2026-09-13T14:00:00-04:00",
+      "temperature": 86,
+      "temperatureUnit": "F",
+      "precipitationProbability": 6,
+      "windSpeed": "2 mph",
+      "windDirection": "W",
+      "summary": "Mostly Sunny",
+      "retrievedAt": "2026-09-10T14:51:05.096248+00:00",
+      "sourceUrl": "https://api.weather.gov/gridpoints/GSP/119,65/forecast/hourly",
+      "sourceHash": "62a537048a833b1902f2317e04178a09ef6bb588e4145ec2c78710ed44516692",
+      "pointUrl": "https://api.weather.gov/points/35.2258,-80.8509",
+      "pointHash": "ea275119f3ecddc84c39a41dbadc805a73b6584c31e8b694f35d758601ec0045",
+      "latitude": 35.225780031248,
+      "longitude": -80.850875963353,
+      "locationEvidence": {
+        "address": "800 South Mint Street, Charlotte, NC 28202",
+        "addressSource": "https://www.panthers.com/stadium/booking",
+        "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=800+South+Mint+Street%2C+Charlotte%2C+NC+28202&benchmark=Public_AR_Current&format=json",
+        "retrievedAt": "2026-09-10T14:50:37.367650+00:00",
+        "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+        "geocodeBenchmark": "Public_AR_Current",
+        "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+        "geocodeMatches": [
+          {
+            "tigerLine": {
+              "side": "R",
+              "tigerLineId": "640628025"
+            },
+            "coordinates": {
+              "x": -80.850875963353,
+              "y": 35.225780031248
+            },
+            "addressComponents": {
+              "zip": "28202",
+              "streetName": "MINT",
+              "preType": "",
+              "city": "CHARLOTTE",
+              "preDirection": "S",
+              "suffixDirection": "",
+              "fromAddress": "800",
+              "state": "NC",
+              "suffixType": "ST",
+              "toAddress": "898",
+              "suffixQualifier": "",
+              "preQualifier": ""
+            },
+            "matchedAddress": "800 S MINT ST, CHARLOTTE, NC, 28202"
+          }
+        ],
+        "latitude": 35.225780031248,
+        "longitude": -80.850875963353,
+        "status": "confirmed-address-geocode",
+        "matchedAddress": "800 S MINT ST, CHARLOTTE, NC, 28202"
+      },
+      "modelAdjustment": false
+    },
+    "2026_01_CLE_JAX": {
+      "status": "unavailable",
+      "gameId": "2026_01_CLE_JAX",
+      "kickoff": "2026-09-13T17:00:00+00:00",
+      "venue": "EverBank Stadium",
+      "reason": "Verified US venue location unavailable"
+    },
+    "2026_01_DAL_NYG": {
+      "status": "unavailable",
+      "gameId": "2026_01_DAL_NYG",
+      "kickoff": "2026-09-14T00:20:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Verified US venue location unavailable"
+    },
+    "2026_01_GB_MIN": {
+      "status": "unavailable",
+      "gameId": "2026_01_GB_MIN",
+      "kickoff": "2026-09-13T20:25:00+00:00",
+      "venue": "U.S. Bank Stadium",
+      "reason": "Verified US venue location unavailable"
+    },
+    "2026_01_MIA_LV": {
+      "status": "unavailable",
+      "gameId": "2026_01_MIA_LV",
+      "kickoff": "2026-09-13T20:25:00+00:00",
+      "venue": "Allegiant Stadium",
+      "reason": "Verified US venue location unavailable"
+    },
+    "2026_01_NO_DET": {
+      "status": "unavailable",
+      "gameId": "2026_01_NO_DET",
+      "kickoff": "2026-09-13T17:00:00+00:00",
+      "venue": "Ford Field",
+      "reason": "Verified US venue location unavailable"
+    },
+    "2026_01_NYJ_TEN": {
+      "status": "available",
+      "gameId": "2026_01_NYJ_TEN",
+      "kickoff": "2026-09-13T17:00:00+00:00",
+      "venue": "Nissan Stadium",
+      "issuedAt": "2026-09-10T11:06:52+00:00",
+      "periodStart": "2026-09-13T12:00:00-05:00",
+      "periodEnd": "2026-09-13T13:00:00-05:00",
+      "temperature": 88,
+      "temperatureUnit": "F",
+      "precipitationProbability": 10,
+      "windSpeed": "0 mph",
+      "windDirection": "",
+      "summary": "Sunny",
+      "retrievedAt": "2026-09-10T14:51:05.553606+00:00",
+      "sourceUrl": "https://api.weather.gov/gridpoints/OHX/50,57/forecast/hourly",
+      "sourceHash": "98841ad4d10aa049e31394ab864643ab9efbab6b8830c4ee38db6493976522df",
+      "pointUrl": "https://api.weather.gov/points/36.1670,-86.7740",
+      "pointHash": "b77c6f18d1c723b356599015ccc272725f6d5d6161a69443ab3dabc74deea8bd",
+      "latitude": 36.166985485846,
+      "longitude": -86.77398727028,
+      "locationEvidence": {
+        "address": "1 Titans Way, Nashville, TN 37213",
+        "addressSource": "https://www.nashville.gov/departments/sports-authority/nissan-stadium",
+        "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1+Titans+Way%2C+Nashville%2C+TN+37213&benchmark=Public_AR_Current&format=json",
+        "retrievedAt": "2026-09-10T14:50:37.369132+00:00",
+        "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+        "geocodeBenchmark": "Public_AR_Current",
+        "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+        "geocodeMatches": [
+          {
+            "tigerLine": {
+              "side": "R",
+              "tigerLineId": "97221175"
+            },
+            "coordinates": {
+              "x": -86.77398727028,
+              "y": 36.166985485846
+            },
+            "addressComponents": {
+              "zip": "37213",
+              "streetName": "TITANS",
+              "preType": "",
+              "city": "NASHVILLE",
+              "preDirection": "",
+              "suffixDirection": "",
+              "fromAddress": "99",
+              "state": "TN",
+              "suffixType": "WAY",
+              "toAddress": "1",
+              "suffixQualifier": "",
+              "preQualifier": ""
+            },
+            "matchedAddress": "1 TITANS WAY, NASHVILLE, TN, 37213"
+          }
+        ],
+        "latitude": 36.166985485846,
+        "longitude": -86.77398727028,
+        "status": "confirmed-address-geocode",
+        "matchedAddress": "1 TITANS WAY, NASHVILLE, TN, 37213"
+      },
+      "modelAdjustment": false
+    },
+    "2026_01_TB_CIN": {
+      "status": "unavailable",
+      "gameId": "2026_01_TB_CIN",
+      "kickoff": "2026-09-13T17:00:00+00:00",
+      "venue": "Paycor Stadium",
+      "reason": "Verified US venue location unavailable"
+    },
+    "2026_01_WAS_PHI": {
+      "status": "available",
+      "gameId": "2026_01_WAS_PHI",
+      "kickoff": "2026-09-13T20:25:00+00:00",
+      "venue": "Lincoln Financial Field",
+      "issuedAt": "2026-09-10T08:09:38+00:00",
+      "periodStart": "2026-09-13T16:00:00-04:00",
+      "periodEnd": "2026-09-13T17:00:00-04:00",
+      "temperature": 83,
+      "temperatureUnit": "F",
+      "precipitationProbability": 21,
+      "windSpeed": "5 mph",
+      "windDirection": "W",
+      "summary": "Slight Chance Showers And Thunderstorms",
+      "retrievedAt": "2026-09-10T14:51:06.102331+00:00",
+      "sourceUrl": "https://api.weather.gov/gridpoints/PHI/50,77/forecast/hourly",
+      "sourceHash": "4454aae0333c520aee698e27ee57831c1d5bba80b8d14846be9a4676e6a6b8a6",
+      "pointUrl": "https://api.weather.gov/points/39.9044,-75.1667",
+      "pointHash": "8ba19a4b1138d9e91ec895ec75beaa57b5aaa8c7bf97f422afed127a4023c174",
+      "latitude": 39.904449230665,
+      "longitude": -75.166688629533,
+      "locationEvidence": {
+        "address": "1020 Pattison Avenue, Philadelphia, PA 19148",
+        "addressSource": "https://www.lincolnfinancialfield.com/faqs/",
+        "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1020+Pattison+Avenue%2C+Philadelphia%2C+PA+19148&benchmark=Public_AR_Current&format=json",
+        "retrievedAt": "2026-09-10T14:50:37.455583+00:00",
+        "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+        "geocodeBenchmark": "Public_AR_Current",
+        "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+        "geocodeMatches": [
+          {
+            "tigerLine": {
+              "side": "L",
+              "tigerLineId": "640220983"
+            },
+            "coordinates": {
+              "x": -75.166688629533,
+              "y": 39.904449230665
+            },
+            "addressComponents": {
+              "zip": "19148",
+              "streetName": "PATTISON",
+              "preType": "",
+              "city": "PHILADELPHIA",
+              "preDirection": "",
+              "suffixDirection": "",
+              "fromAddress": "822",
+              "state": "PA",
+              "suffixType": "AVE",
+              "toAddress": "1198",
+              "suffixQualifier": "",
+              "preQualifier": ""
+            },
+            "matchedAddress": "1020 PATTISON AVE, PHILADELPHIA, PA, 19148"
+          }
+        ],
+        "latitude": 39.904449230665,
+        "longitude": -75.166688629533,
+        "status": "confirmed-address-geocode",
+        "matchedAddress": "1020 PATTISON AVE, PHILADELPHIA, PA, 19148",
+        "addressNote": "The stadium operator specifically recommends 1020 Pattison Avenue for GPS/directions, rather than its mailing address."
+      },
+      "modelAdjustment": false
+    },
+    "2026_01_DEN_KC": {
+      "status": "available",
+      "gameId": "2026_01_DEN_KC",
+      "kickoff": "2026-09-15T00:15:00+00:00",
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "issuedAt": "2026-09-10T06:26:52+00:00",
+      "periodStart": "2026-09-14T19:00:00-05:00",
+      "periodEnd": "2026-09-14T20:00:00-05:00",
+      "temperature": 83,
+      "temperatureUnit": "F",
+      "precipitationProbability": 42,
+      "windSpeed": "12 mph",
+      "windDirection": "S",
+      "summary": "Chance Showers And Thunderstorms",
+      "retrievedAt": "2026-09-10T14:51:06.602748+00:00",
+      "sourceUrl": "https://api.weather.gov/gridpoints/EAX/47,48/forecast/hourly",
+      "sourceHash": "1026ca9b3db594f248303d5f7a951c5641762996848fa54062db2e8f978eac48",
+      "pointUrl": "https://api.weather.gov/points/39.0489,-94.4865",
+      "pointHash": "19a8cef566da1b4253c26ca2c9f6be18d51d3ff17c363bdd68d353af8fed5a27",
+      "latitude": 39.048923084936,
+      "longitude": -94.486488590578,
+      "locationEvidence": {
+        "address": "1 Arrowhead Drive, Kansas City, MO 64129",
+        "addressSource": "https://www.chiefs.com/stadium/atozguide",
+        "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1+Arrowhead+Drive%2C+Kansas+City%2C+MO+64129&benchmark=Public_AR_Current&format=json",
+        "retrievedAt": "2026-09-10T14:50:37.485420+00:00",
+        "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+        "geocodeBenchmark": "Public_AR_Current",
+        "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+        "geocodeMatches": [
+          {
+            "tigerLine": {
+              "side": "R",
+              "tigerLineId": "91460449"
+            },
+            "coordinates": {
+              "x": -94.486488590578,
+              "y": 39.048923084936
+            },
+            "addressComponents": {
+              "zip": "64129",
+              "streetName": "ARROWHEAD",
+              "preType": "",
+              "city": "KANSAS CITY",
+              "preDirection": "",
+              "suffixDirection": "",
+              "fromAddress": "1",
+              "state": "MO",
+              "suffixType": "DR",
+              "toAddress": "99",
+              "suffixQualifier": "",
+              "preQualifier": ""
+            },
+            "matchedAddress": "1 ARROWHEAD DR, KANSAS CITY, MO, 64129"
+          }
+        ],
+        "latitude": 39.048923084936,
+        "longitude": -94.486488590578,
+        "status": "confirmed-address-geocode",
+        "matchedAddress": "1 ARROWHEAD DR, KANSAS CITY, MO, 64129"
+      },
+      "modelAdjustment": false
+    },
+    "2026_02_DET_BUF": {
+      "status": "unavailable",
+      "gameId": "2026_02_DET_BUF",
+      "kickoff": "2026-09-18T00:15:00+00:00",
+      "venue": "Highmark Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_02_CAR_ATL": {
+      "status": "unavailable",
+      "gameId": "2026_02_CAR_ATL",
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "venue": "Mercedes-Benz Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_02_CIN_HOU": {
+      "status": "unavailable",
+      "gameId": "2026_02_CIN_HOU",
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "venue": "Reliant Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_02_CLE_TB": {
+      "status": "unavailable",
+      "gameId": "2026_02_CLE_TB",
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "venue": "Raymond James Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_02_GB_NYJ": {
+      "status": "unavailable",
+      "gameId": "2026_02_GB_NYJ",
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_02_IND_KC": {
+      "status": "unavailable",
+      "gameId": "2026_02_IND_KC",
+      "kickoff": "2026-09-21T00:20:00+00:00",
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_02_JAX_DEN": {
+      "status": "unavailable",
+      "gameId": "2026_02_JAX_DEN",
+      "kickoff": "2026-09-20T20:05:00+00:00",
+      "venue": "Empower Field at Mile High",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_02_LV_LAC": {
+      "status": "unavailable",
+      "gameId": "2026_02_LV_LAC",
+      "kickoff": "2026-09-20T20:05:00+00:00",
+      "venue": "SoFi Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_02_MIA_SF": {
+      "status": "unavailable",
+      "gameId": "2026_02_MIA_SF",
+      "kickoff": "2026-09-20T20:25:00+00:00",
+      "venue": "Levi's Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_02_MIN_CHI": {
+      "status": "unavailable",
+      "gameId": "2026_02_MIN_CHI",
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "venue": "Soldier Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_02_NO_BAL": {
+      "status": "unavailable",
+      "gameId": "2026_02_NO_BAL",
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "venue": "M&T Bank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_02_PHI_TEN": {
+      "status": "unavailable",
+      "gameId": "2026_02_PHI_TEN",
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "venue": "Nissan Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_02_PIT_NE": {
+      "status": "unavailable",
+      "gameId": "2026_02_PIT_NE",
+      "kickoff": "2026-09-20T17:00:00+00:00",
+      "venue": "Gillette Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_02_SEA_ARI": {
+      "status": "unavailable",
+      "gameId": "2026_02_SEA_ARI",
+      "kickoff": "2026-09-20T20:25:00+00:00",
+      "venue": "State Farm Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_02_WAS_DAL": {
+      "status": "unavailable",
+      "gameId": "2026_02_WAS_DAL",
+      "kickoff": "2026-09-20T20:25:00+00:00",
+      "venue": "AT&T Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_02_NYG_LA": {
+      "status": "unavailable",
+      "gameId": "2026_02_NYG_LA",
+      "kickoff": "2026-09-22T00:15:00+00:00",
+      "venue": "SoFi Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_03_ATL_GB": {
+      "status": "unavailable",
+      "gameId": "2026_03_ATL_GB",
+      "kickoff": "2026-09-25T00:15:00+00:00",
+      "venue": "Lambeau Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_03_ARI_SF": {
+      "status": "unavailable",
+      "gameId": "2026_03_ARI_SF",
+      "kickoff": "2026-09-27T20:05:00+00:00",
+      "venue": "Levi's Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_03_BAL_DAL": {
+      "status": "unavailable",
+      "gameId": "2026_03_BAL_DAL",
+      "kickoff": "2026-09-27T20:25:00+00:00",
+      "venue": "Maracana Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_03_CAR_CLE": {
+      "status": "unavailable",
+      "gameId": "2026_03_CAR_CLE",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "venue": "Huntington Bank Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_03_CIN_PIT": {
+      "status": "unavailable",
+      "gameId": "2026_03_CIN_PIT",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "venue": "Acrisure Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_03_HOU_IND": {
+      "status": "unavailable",
+      "gameId": "2026_03_HOU_IND",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "venue": "Lucas Oil Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_03_KC_MIA": {
+      "status": "unavailable",
+      "gameId": "2026_03_KC_MIA",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "venue": "Hard Rock Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_03_LAC_BUF": {
+      "status": "unavailable",
+      "gameId": "2026_03_LAC_BUF",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "venue": "Highmark Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_03_LA_DEN": {
+      "status": "unavailable",
+      "gameId": "2026_03_LA_DEN",
+      "kickoff": "2026-09-28T00:20:00+00:00",
+      "venue": "Empower Field at Mile High",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_03_LV_NO": {
+      "status": "unavailable",
+      "gameId": "2026_03_LV_NO",
+      "kickoff": "2026-09-27T20:25:00+00:00",
+      "venue": "Caesars Superdome",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_03_MIN_TB": {
+      "status": "unavailable",
+      "gameId": "2026_03_MIN_TB",
+      "kickoff": "2026-09-27T20:05:00+00:00",
+      "venue": "Raymond James Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_03_NE_JAX": {
+      "status": "unavailable",
+      "gameId": "2026_03_NE_JAX",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "venue": "EverBank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_03_NYJ_DET": {
+      "status": "unavailable",
+      "gameId": "2026_03_NYJ_DET",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "venue": "Ford Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_03_SEA_WAS": {
+      "status": "unavailable",
+      "gameId": "2026_03_SEA_WAS",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "venue": "Northwest Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_03_TEN_NYG": {
+      "status": "unavailable",
+      "gameId": "2026_03_TEN_NYG",
+      "kickoff": "2026-09-27T17:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_03_PHI_CHI": {
+      "status": "unavailable",
+      "gameId": "2026_03_PHI_CHI",
+      "kickoff": "2026-09-29T00:15:00+00:00",
+      "venue": "Soldier Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_04_PIT_CLE": {
+      "status": "unavailable",
+      "gameId": "2026_04_PIT_CLE",
+      "kickoff": "2026-10-02T00:15:00+00:00",
+      "venue": "Huntington Bank Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_04_ARI_NYG": {
+      "status": "unavailable",
+      "gameId": "2026_04_ARI_NYG",
+      "kickoff": "2026-10-04T17:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_04_DAL_HOU": {
+      "status": "unavailable",
+      "gameId": "2026_04_DAL_HOU",
+      "kickoff": "2026-10-04T17:00:00+00:00",
+      "venue": "Reliant Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_04_DEN_SF": {
+      "status": "unavailable",
+      "gameId": "2026_04_DEN_SF",
+      "kickoff": "2026-10-04T20:25:00+00:00",
+      "venue": "Levi's Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_04_DET_CAR": {
+      "status": "unavailable",
+      "gameId": "2026_04_DET_CAR",
+      "kickoff": "2026-10-05T00:20:00+00:00",
+      "venue": "Bank of America Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_04_GB_TB": {
+      "status": "unavailable",
+      "gameId": "2026_04_GB_TB",
+      "kickoff": "2026-10-04T17:00:00+00:00",
+      "venue": "Raymond James Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_04_IND_WAS": {
+      "status": "unavailable",
+      "gameId": "2026_04_IND_WAS",
+      "kickoff": "2026-10-04T13:30:00+00:00",
+      "venue": "Tottenham Hotspur Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_04_JAX_CIN": {
+      "status": "unavailable",
+      "gameId": "2026_04_JAX_CIN",
+      "kickoff": "2026-10-04T17:00:00+00:00",
+      "venue": "Paycor Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_04_KC_LV": {
+      "status": "unavailable",
+      "gameId": "2026_04_KC_LV",
+      "kickoff": "2026-10-04T20:25:00+00:00",
+      "venue": "Allegiant Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_04_LAC_SEA": {
+      "status": "unavailable",
+      "gameId": "2026_04_LAC_SEA",
+      "kickoff": "2026-10-04T20:25:00+00:00",
+      "venue": "Lumen Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_04_LA_PHI": {
+      "status": "unavailable",
+      "gameId": "2026_04_LA_PHI",
+      "kickoff": "2026-10-04T17:00:00+00:00",
+      "venue": "Lincoln Financial Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_04_MIA_MIN": {
+      "status": "unavailable",
+      "gameId": "2026_04_MIA_MIN",
+      "kickoff": "2026-10-04T20:05:00+00:00",
+      "venue": "U.S. Bank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_04_NE_BUF": {
+      "status": "unavailable",
+      "gameId": "2026_04_NE_BUF",
+      "kickoff": "2026-10-04T17:00:00+00:00",
+      "venue": "Highmark Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_04_NYJ_CHI": {
+      "status": "unavailable",
+      "gameId": "2026_04_NYJ_CHI",
+      "kickoff": "2026-10-04T17:00:00+00:00",
+      "venue": "Soldier Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_04_TEN_BAL": {
+      "status": "unavailable",
+      "gameId": "2026_04_TEN_BAL",
+      "kickoff": "2026-10-04T17:00:00+00:00",
+      "venue": "M&T Bank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_04_ATL_NO": {
+      "status": "unavailable",
+      "gameId": "2026_04_ATL_NO",
+      "kickoff": "2026-10-06T00:15:00+00:00",
+      "venue": "Caesars Superdome",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_05_TB_DAL": {
+      "status": "unavailable",
+      "gameId": "2026_05_TB_DAL",
+      "kickoff": "2026-10-09T00:15:00+00:00",
+      "venue": "AT&T Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_05_BAL_ATL": {
+      "status": "unavailable",
+      "gameId": "2026_05_BAL_ATL",
+      "kickoff": "2026-10-12T00:20:00+00:00",
+      "venue": "Mercedes-Benz Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_05_CHI_GB": {
+      "status": "unavailable",
+      "gameId": "2026_05_CHI_GB",
+      "kickoff": "2026-10-11T20:25:00+00:00",
+      "venue": "Lambeau Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_05_CIN_MIA": {
+      "status": "unavailable",
+      "gameId": "2026_05_CIN_MIA",
+      "kickoff": "2026-10-11T17:00:00+00:00",
+      "venue": "Hard Rock Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_05_CLE_NYJ": {
+      "status": "unavailable",
+      "gameId": "2026_05_CLE_NYJ",
+      "kickoff": "2026-10-11T17:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_05_DEN_LAC": {
+      "status": "unavailable",
+      "gameId": "2026_05_DEN_LAC",
+      "kickoff": "2026-10-11T20:05:00+00:00",
+      "venue": "SoFi Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_05_DET_ARI": {
+      "status": "unavailable",
+      "gameId": "2026_05_DET_ARI",
+      "kickoff": "2026-10-11T20:25:00+00:00",
+      "venue": "State Farm Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_05_HOU_TEN": {
+      "status": "unavailable",
+      "gameId": "2026_05_HOU_TEN",
+      "kickoff": "2026-10-11T17:00:00+00:00",
+      "venue": "Nissan Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_05_IND_PIT": {
+      "status": "unavailable",
+      "gameId": "2026_05_IND_PIT",
+      "kickoff": "2026-10-11T17:00:00+00:00",
+      "venue": "Acrisure Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_05_LV_NE": {
+      "status": "unavailable",
+      "gameId": "2026_05_LV_NE",
+      "kickoff": "2026-10-11T17:00:00+00:00",
+      "venue": "Gillette Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_05_MIN_NO": {
+      "status": "unavailable",
+      "gameId": "2026_05_MIN_NO",
+      "kickoff": "2026-10-11T17:00:00+00:00",
+      "venue": "Caesars Superdome",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_05_NYG_WAS": {
+      "status": "unavailable",
+      "gameId": "2026_05_NYG_WAS",
+      "kickoff": "2026-10-11T17:00:00+00:00",
+      "venue": "Northwest Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_05_PHI_JAX": {
+      "status": "unavailable",
+      "gameId": "2026_05_PHI_JAX",
+      "kickoff": "2026-10-11T13:30:00+00:00",
+      "venue": "Tottenham Hotspur Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_05_SF_SEA": {
+      "status": "unavailable",
+      "gameId": "2026_05_SF_SEA",
+      "kickoff": "2026-10-11T20:25:00+00:00",
+      "venue": "Lumen Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_05_BUF_LA": {
+      "status": "unavailable",
+      "gameId": "2026_05_BUF_LA",
+      "kickoff": "2026-10-13T00:15:00+00:00",
+      "venue": "SoFi Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_06_SEA_DEN": {
+      "status": "unavailable",
+      "gameId": "2026_06_SEA_DEN",
+      "kickoff": "2026-10-16T00:15:00+00:00",
+      "venue": "Empower Field at Mile High",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_06_ARI_LA": {
+      "status": "unavailable",
+      "gameId": "2026_06_ARI_LA",
+      "kickoff": "2026-10-18T20:05:00+00:00",
+      "venue": "SoFi Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_06_BAL_CLE": {
+      "status": "unavailable",
+      "gameId": "2026_06_BAL_CLE",
+      "kickoff": "2026-10-18T17:00:00+00:00",
+      "venue": "Huntington Bank Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_06_BUF_LV": {
+      "status": "unavailable",
+      "gameId": "2026_06_BUF_LV",
+      "kickoff": "2026-10-18T20:25:00+00:00",
+      "venue": "Allegiant Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_06_CAR_PHI": {
+      "status": "unavailable",
+      "gameId": "2026_06_CAR_PHI",
+      "kickoff": "2026-10-18T17:00:00+00:00",
+      "venue": "Lincoln Financial Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_06_CHI_ATL": {
+      "status": "unavailable",
+      "gameId": "2026_06_CHI_ATL",
+      "kickoff": "2026-10-18T17:00:00+00:00",
+      "venue": "Mercedes-Benz Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_06_DAL_GB": {
+      "status": "unavailable",
+      "gameId": "2026_06_DAL_GB",
+      "kickoff": "2026-10-19T00:20:00+00:00",
+      "venue": "Lambeau Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_06_HOU_JAX": {
+      "status": "unavailable",
+      "gameId": "2026_06_HOU_JAX",
+      "kickoff": "2026-10-18T13:30:00+00:00",
+      "venue": "Wembley Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_06_LAC_KC": {
+      "status": "unavailable",
+      "gameId": "2026_06_LAC_KC",
+      "kickoff": "2026-10-18T20:25:00+00:00",
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_06_NO_NYG": {
+      "status": "unavailable",
+      "gameId": "2026_06_NO_NYG",
+      "kickoff": "2026-10-18T17:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_06_NYJ_NE": {
+      "status": "unavailable",
+      "gameId": "2026_06_NYJ_NE",
+      "kickoff": "2026-10-18T17:00:00+00:00",
+      "venue": "Gillette Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_06_PIT_TB": {
+      "status": "unavailable",
+      "gameId": "2026_06_PIT_TB",
+      "kickoff": "2026-10-18T17:00:00+00:00",
+      "venue": "Raymond James Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_06_TEN_IND": {
+      "status": "unavailable",
+      "gameId": "2026_06_TEN_IND",
+      "kickoff": "2026-10-18T17:00:00+00:00",
+      "venue": "Lucas Oil Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_06_WAS_SF": {
+      "status": "unavailable",
+      "gameId": "2026_06_WAS_SF",
+      "kickoff": "2026-10-20T00:15:00+00:00",
+      "venue": "Levi's Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_07_NE_CHI": {
+      "status": "unavailable",
+      "gameId": "2026_07_NE_CHI",
+      "kickoff": "2026-10-23T00:15:00+00:00",
+      "venue": "Soldier Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_07_CIN_BAL": {
+      "status": "unavailable",
+      "gameId": "2026_07_CIN_BAL",
+      "kickoff": "2026-10-25T17:00:00+00:00",
+      "venue": "M&T Bank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_07_CLE_TEN": {
+      "status": "unavailable",
+      "gameId": "2026_07_CLE_TEN",
+      "kickoff": "2026-10-25T17:00:00+00:00",
+      "venue": "Nissan Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_07_DEN_ARI": {
+      "status": "unavailable",
+      "gameId": "2026_07_DEN_ARI",
+      "kickoff": "2026-10-25T20:05:00+00:00",
+      "venue": "State Farm Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_07_GB_DET": {
+      "status": "unavailable",
+      "gameId": "2026_07_GB_DET",
+      "kickoff": "2026-10-25T20:25:00+00:00",
+      "venue": "Ford Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_07_IND_MIN": {
+      "status": "unavailable",
+      "gameId": "2026_07_IND_MIN",
+      "kickoff": "2026-10-25T17:00:00+00:00",
+      "venue": "U.S. Bank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_07_KC_SEA": {
+      "status": "unavailable",
+      "gameId": "2026_07_KC_SEA",
+      "kickoff": "2026-10-26T00:20:00+00:00",
+      "venue": "Lumen Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_07_LA_LV": {
+      "status": "unavailable",
+      "gameId": "2026_07_LA_LV",
+      "kickoff": "2026-10-25T20:25:00+00:00",
+      "venue": "Allegiant Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_07_MIA_NYJ": {
+      "status": "unavailable",
+      "gameId": "2026_07_MIA_NYJ",
+      "kickoff": "2026-10-25T17:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_07_NYG_HOU": {
+      "status": "unavailable",
+      "gameId": "2026_07_NYG_HOU",
+      "kickoff": "2026-10-25T17:00:00+00:00",
+      "venue": "Reliant Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_07_PIT_NO": {
+      "status": "unavailable",
+      "gameId": "2026_07_PIT_NO",
+      "kickoff": "2026-10-25T13:30:00+00:00",
+      "venue": "Stade de France",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_07_SF_ATL": {
+      "status": "unavailable",
+      "gameId": "2026_07_SF_ATL",
+      "kickoff": "2026-10-25T17:00:00+00:00",
+      "venue": "Mercedes-Benz Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_07_TB_CAR": {
+      "status": "unavailable",
+      "gameId": "2026_07_TB_CAR",
+      "kickoff": "2026-10-25T17:00:00+00:00",
+      "venue": "Bank of America Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_07_DAL_PHI": {
+      "status": "unavailable",
+      "gameId": "2026_07_DAL_PHI",
+      "kickoff": "2026-10-27T00:15:00+00:00",
+      "venue": "Lincoln Financial Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_08_CAR_GB": {
+      "status": "unavailable",
+      "gameId": "2026_08_CAR_GB",
+      "kickoff": "2026-10-30T00:15:00+00:00",
+      "venue": "Lambeau Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_08_ARI_DAL": {
+      "status": "unavailable",
+      "gameId": "2026_08_ARI_DAL",
+      "kickoff": "2026-11-01T18:00:00+00:00",
+      "venue": "AT&T Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_08_ATL_TB": {
+      "status": "unavailable",
+      "gameId": "2026_08_ATL_TB",
+      "kickoff": "2026-11-01T18:00:00+00:00",
+      "venue": "Raymond James Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_08_BAL_BUF": {
+      "status": "unavailable",
+      "gameId": "2026_08_BAL_BUF",
+      "kickoff": "2026-11-01T18:00:00+00:00",
+      "venue": "Highmark Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_08_CLE_PIT": {
+      "status": "unavailable",
+      "gameId": "2026_08_CLE_PIT",
+      "kickoff": "2026-11-01T18:00:00+00:00",
+      "venue": "Acrisure Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_08_IND_JAX": {
+      "status": "unavailable",
+      "gameId": "2026_08_IND_JAX",
+      "kickoff": "2026-11-01T18:00:00+00:00",
+      "venue": "EverBank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_08_KC_DEN": {
+      "status": "unavailable",
+      "gameId": "2026_08_KC_DEN",
+      "kickoff": "2026-11-01T21:25:00+00:00",
+      "venue": "Empower Field at Mile High",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_08_LAC_LA": {
+      "status": "unavailable",
+      "gameId": "2026_08_LAC_LA",
+      "kickoff": "2026-11-01T21:05:00+00:00",
+      "venue": "SoFi Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_08_LV_NYJ": {
+      "status": "unavailable",
+      "gameId": "2026_08_LV_NYJ",
+      "kickoff": "2026-11-01T18:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_08_MIN_DET": {
+      "status": "unavailable",
+      "gameId": "2026_08_MIN_DET",
+      "kickoff": "2026-11-01T18:00:00+00:00",
+      "venue": "Ford Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_08_NE_MIA": {
+      "status": "unavailable",
+      "gameId": "2026_08_NE_MIA",
+      "kickoff": "2026-11-01T21:25:00+00:00",
+      "venue": "Hard Rock Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_08_PHI_WAS": {
+      "status": "unavailable",
+      "gameId": "2026_08_PHI_WAS",
+      "kickoff": "2026-11-02T01:20:00+00:00",
+      "venue": "Northwest Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_08_TEN_CIN": {
+      "status": "unavailable",
+      "gameId": "2026_08_TEN_CIN",
+      "kickoff": "2026-11-01T18:00:00+00:00",
+      "venue": "Paycor Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_08_CHI_SEA": {
+      "status": "unavailable",
+      "gameId": "2026_08_CHI_SEA",
+      "kickoff": "2026-11-03T01:15:00+00:00",
+      "venue": "Lumen Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_09_JAX_BAL": {
+      "status": "unavailable",
+      "gameId": "2026_09_JAX_BAL",
+      "kickoff": "2026-11-06T01:15:00+00:00",
+      "venue": "M&T Bank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_09_ARI_SEA": {
+      "status": "unavailable",
+      "gameId": "2026_09_ARI_SEA",
+      "kickoff": "2026-11-08T21:25:00+00:00",
+      "venue": "Lumen Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_09_CIN_ATL": {
+      "status": "unavailable",
+      "gameId": "2026_09_CIN_ATL",
+      "kickoff": "2026-11-08T14:30:00+00:00",
+      "venue": "Bernabeu",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_09_CLE_NO": {
+      "status": "unavailable",
+      "gameId": "2026_09_CLE_NO",
+      "kickoff": "2026-11-08T18:00:00+00:00",
+      "venue": "Caesars Superdome",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_09_DAL_IND": {
+      "status": "unavailable",
+      "gameId": "2026_09_DAL_IND",
+      "kickoff": "2026-11-08T18:00:00+00:00",
+      "venue": "Lucas Oil Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_09_DEN_CAR": {
+      "status": "unavailable",
+      "gameId": "2026_09_DEN_CAR",
+      "kickoff": "2026-11-08T18:00:00+00:00",
+      "venue": "Bank of America Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_09_DET_MIA": {
+      "status": "unavailable",
+      "gameId": "2026_09_DET_MIA",
+      "kickoff": "2026-11-08T18:00:00+00:00",
+      "venue": "Hard Rock Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_09_GB_NE": {
+      "status": "unavailable",
+      "gameId": "2026_09_GB_NE",
+      "kickoff": "2026-11-08T21:25:00+00:00",
+      "venue": "Gillette Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_09_HOU_LAC": {
+      "status": "unavailable",
+      "gameId": "2026_09_HOU_LAC",
+      "kickoff": "2026-11-08T21:05:00+00:00",
+      "venue": "SoFi Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_09_LA_WAS": {
+      "status": "unavailable",
+      "gameId": "2026_09_LA_WAS",
+      "kickoff": "2026-11-08T18:00:00+00:00",
+      "venue": "Northwest Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_09_LV_SF": {
+      "status": "unavailable",
+      "gameId": "2026_09_LV_SF",
+      "kickoff": "2026-11-08T21:05:00+00:00",
+      "venue": "Levi's Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_09_NYG_PHI": {
+      "status": "unavailable",
+      "gameId": "2026_09_NYG_PHI",
+      "kickoff": "2026-11-08T18:00:00+00:00",
+      "venue": "Lincoln Financial Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_09_NYJ_KC": {
+      "status": "unavailable",
+      "gameId": "2026_09_NYJ_KC",
+      "kickoff": "2026-11-08T18:00:00+00:00",
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_09_TB_CHI": {
+      "status": "unavailable",
+      "gameId": "2026_09_TB_CHI",
+      "kickoff": "2026-11-09T01:20:00+00:00",
+      "venue": "Soldier Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_09_BUF_MIN": {
+      "status": "unavailable",
+      "gameId": "2026_09_BUF_MIN",
+      "kickoff": "2026-11-10T01:15:00+00:00",
+      "venue": "U.S. Bank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_10_WAS_NYG": {
+      "status": "unavailable",
+      "gameId": "2026_10_WAS_NYG",
+      "kickoff": "2026-11-13T01:15:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_10_BUF_NYJ": {
+      "status": "unavailable",
+      "gameId": "2026_10_BUF_NYJ",
+      "kickoff": "2026-11-15T18:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_10_CAR_NO": {
+      "status": "unavailable",
+      "gameId": "2026_10_CAR_NO",
+      "kickoff": "2026-11-15T18:00:00+00:00",
+      "venue": "Caesars Superdome",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_10_HOU_CLE": {
+      "status": "unavailable",
+      "gameId": "2026_10_HOU_CLE",
+      "kickoff": "2026-11-15T18:00:00+00:00",
+      "venue": "Huntington Bank Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_10_JAX_TEN": {
+      "status": "unavailable",
+      "gameId": "2026_10_JAX_TEN",
+      "kickoff": "2026-11-15T18:00:00+00:00",
+      "venue": "Nissan Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_10_KC_ATL": {
+      "status": "unavailable",
+      "gameId": "2026_10_KC_ATL",
+      "kickoff": "2026-11-15T18:00:00+00:00",
+      "venue": "Mercedes-Benz Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_10_LA_ARI": {
+      "status": "unavailable",
+      "gameId": "2026_10_LA_ARI",
+      "kickoff": "2026-11-15T21:05:00+00:00",
+      "venue": "State Farm Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_10_MIA_IND": {
+      "status": "unavailable",
+      "gameId": "2026_10_MIA_IND",
+      "kickoff": "2026-11-15T18:00:00+00:00",
+      "venue": "Lucas Oil Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_10_MIN_GB": {
+      "status": "unavailable",
+      "gameId": "2026_10_MIN_GB",
+      "kickoff": "2026-11-15T18:00:00+00:00",
+      "venue": "Lambeau Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_10_NE_DET": {
+      "status": "unavailable",
+      "gameId": "2026_10_NE_DET",
+      "kickoff": "2026-11-15T14:30:00+00:00",
+      "venue": "FC Bayern Munich Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_10_PIT_CIN": {
+      "status": "unavailable",
+      "gameId": "2026_10_PIT_CIN",
+      "kickoff": "2026-11-16T01:20:00+00:00",
+      "venue": "Paycor Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_10_SEA_LV": {
+      "status": "unavailable",
+      "gameId": "2026_10_SEA_LV",
+      "kickoff": "2026-11-15T21:05:00+00:00",
+      "venue": "Allegiant Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_10_SF_DAL": {
+      "status": "unavailable",
+      "gameId": "2026_10_SF_DAL",
+      "kickoff": "2026-11-15T21:25:00+00:00",
+      "venue": "AT&T Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_10_LAC_BAL": {
+      "status": "unavailable",
+      "gameId": "2026_10_LAC_BAL",
+      "kickoff": "2026-11-17T01:15:00+00:00",
+      "venue": "M&T Bank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_11_IND_HOU": {
+      "status": "unavailable",
+      "gameId": "2026_11_IND_HOU",
+      "kickoff": "2026-11-20T01:15:00+00:00",
+      "venue": "Reliant Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_11_ARI_KC": {
+      "status": "unavailable",
+      "gameId": "2026_11_ARI_KC",
+      "kickoff": "2026-11-22T18:00:00+00:00",
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_11_BAL_CAR": {
+      "status": "unavailable",
+      "gameId": "2026_11_BAL_CAR",
+      "kickoff": "2026-11-22T18:00:00+00:00",
+      "venue": "Bank of America Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_11_JAX_NYG": {
+      "status": "unavailable",
+      "gameId": "2026_11_JAX_NYG",
+      "kickoff": "2026-11-22T18:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_11_LV_DEN": {
+      "status": "unavailable",
+      "gameId": "2026_11_LV_DEN",
+      "kickoff": "2026-11-22T21:25:00+00:00",
+      "venue": "Empower Field at Mile High",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_11_MIA_BUF": {
+      "status": "unavailable",
+      "gameId": "2026_11_MIA_BUF",
+      "kickoff": "2026-11-22T18:00:00+00:00",
+      "venue": "Highmark Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_11_MIN_SF": {
+      "status": "unavailable",
+      "gameId": "2026_11_MIN_SF",
+      "kickoff": "2026-11-23T01:20:00+00:00",
+      "venue": "Estadio Banorte",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_11_NO_CHI": {
+      "status": "unavailable",
+      "gameId": "2026_11_NO_CHI",
+      "kickoff": "2026-11-22T18:00:00+00:00",
+      "venue": "Soldier Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_11_NYJ_LAC": {
+      "status": "unavailable",
+      "gameId": "2026_11_NYJ_LAC",
+      "kickoff": "2026-11-22T21:05:00+00:00",
+      "venue": "SoFi Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_11_PIT_PHI": {
+      "status": "unavailable",
+      "gameId": "2026_11_PIT_PHI",
+      "kickoff": "2026-11-22T21:25:00+00:00",
+      "venue": "Lincoln Financial Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_11_TB_DET": {
+      "status": "unavailable",
+      "gameId": "2026_11_TB_DET",
+      "kickoff": "2026-11-22T18:00:00+00:00",
+      "venue": "Ford Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_11_TEN_DAL": {
+      "status": "unavailable",
+      "gameId": "2026_11_TEN_DAL",
+      "kickoff": "2026-11-22T18:00:00+00:00",
+      "venue": "AT&T Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_11_CIN_WAS": {
+      "status": "unavailable",
+      "gameId": "2026_11_CIN_WAS",
+      "kickoff": "2026-11-24T01:15:00+00:00",
+      "venue": "Northwest Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_12_GB_LA": {
+      "status": "unavailable",
+      "gameId": "2026_12_GB_LA",
+      "kickoff": "2026-11-26T01:00:00+00:00",
+      "venue": "SoFi Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_12_CHI_DET": {
+      "status": "unavailable",
+      "gameId": "2026_12_CHI_DET",
+      "kickoff": "2026-11-26T18:00:00+00:00",
+      "venue": "Ford Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_12_KC_BUF": {
+      "status": "unavailable",
+      "gameId": "2026_12_KC_BUF",
+      "kickoff": "2026-11-27T01:20:00+00:00",
+      "venue": "Highmark Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_12_PHI_DAL": {
+      "status": "unavailable",
+      "gameId": "2026_12_PHI_DAL",
+      "kickoff": "2026-11-26T21:30:00+00:00",
+      "venue": "AT&T Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_12_DEN_PIT": {
+      "status": "unavailable",
+      "gameId": "2026_12_DEN_PIT",
+      "kickoff": "2026-11-27T20:00:00+00:00",
+      "venue": "Acrisure Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_12_ATL_MIN": {
+      "status": "unavailable",
+      "gameId": "2026_12_ATL_MIN",
+      "kickoff": "2026-11-29T18:00:00+00:00",
+      "venue": "U.S. Bank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_12_BAL_HOU": {
+      "status": "unavailable",
+      "gameId": "2026_12_BAL_HOU",
+      "kickoff": "2026-11-29T18:00:00+00:00",
+      "venue": "Reliant Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_12_LV_CLE": {
+      "status": "unavailable",
+      "gameId": "2026_12_LV_CLE",
+      "kickoff": "2026-11-29T18:00:00+00:00",
+      "venue": "Huntington Bank Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_12_NE_LAC": {
+      "status": "unavailable",
+      "gameId": "2026_12_NE_LAC",
+      "kickoff": "2026-11-30T01:20:00+00:00",
+      "venue": "SoFi Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_12_NO_CIN": {
+      "status": "unavailable",
+      "gameId": "2026_12_NO_CIN",
+      "kickoff": "2026-11-29T18:00:00+00:00",
+      "venue": "Paycor Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_12_NYG_IND": {
+      "status": "unavailable",
+      "gameId": "2026_12_NYG_IND",
+      "kickoff": "2026-11-29T18:00:00+00:00",
+      "venue": "Lucas Oil Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_12_NYJ_MIA": {
+      "status": "unavailable",
+      "gameId": "2026_12_NYJ_MIA",
+      "kickoff": "2026-11-29T18:00:00+00:00",
+      "venue": "Hard Rock Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_12_SEA_SF": {
+      "status": "unavailable",
+      "gameId": "2026_12_SEA_SF",
+      "kickoff": "2026-11-29T21:25:00+00:00",
+      "venue": "Levi's Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_12_TEN_JAX": {
+      "status": "unavailable",
+      "gameId": "2026_12_TEN_JAX",
+      "kickoff": "2026-11-29T21:05:00+00:00",
+      "venue": "EverBank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_12_WAS_ARI": {
+      "status": "unavailable",
+      "gameId": "2026_12_WAS_ARI",
+      "kickoff": "2026-11-29T21:25:00+00:00",
+      "venue": "State Farm Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_12_CAR_TB": {
+      "status": "unavailable",
+      "gameId": "2026_12_CAR_TB",
+      "kickoff": "2026-12-01T01:15:00+00:00",
+      "venue": "Raymond James Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_13_KC_LA": {
+      "status": "unavailable",
+      "gameId": "2026_13_KC_LA",
+      "kickoff": "2026-12-04T01:15:00+00:00",
+      "venue": "SoFi Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_13_BUF_NE": {
+      "status": "unavailable",
+      "gameId": "2026_13_BUF_NE",
+      "kickoff": "2026-12-06T21:25:00+00:00",
+      "venue": "Gillette Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_13_CAR_MIN": {
+      "status": "unavailable",
+      "gameId": "2026_13_CAR_MIN",
+      "kickoff": "2026-12-06T21:25:00+00:00",
+      "venue": "U.S. Bank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_13_CIN_CLE": {
+      "status": "unavailable",
+      "gameId": "2026_13_CIN_CLE",
+      "kickoff": "2026-12-06T18:00:00+00:00",
+      "venue": "Huntington Bank Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_13_DET_ATL": {
+      "status": "unavailable",
+      "gameId": "2026_13_DET_ATL",
+      "kickoff": "2026-12-06T18:00:00+00:00",
+      "venue": "Mercedes-Benz Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_13_GB_NO": {
+      "status": "unavailable",
+      "gameId": "2026_13_GB_NO",
+      "kickoff": "2026-12-06T18:00:00+00:00",
+      "venue": "Caesars Superdome",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_13_HOU_PIT": {
+      "status": "unavailable",
+      "gameId": "2026_13_HOU_PIT",
+      "kickoff": "2026-12-07T01:20:00+00:00",
+      "venue": "Acrisure Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_13_JAX_CHI": {
+      "status": "unavailable",
+      "gameId": "2026_13_JAX_CHI",
+      "kickoff": "2026-12-06T18:00:00+00:00",
+      "venue": "Soldier Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_13_LAC_TB": {
+      "status": "unavailable",
+      "gameId": "2026_13_LAC_TB",
+      "kickoff": "2026-12-06T18:00:00+00:00",
+      "venue": "Raymond James Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_13_MIA_DEN": {
+      "status": "unavailable",
+      "gameId": "2026_13_MIA_DEN",
+      "kickoff": "2026-12-06T21:05:00+00:00",
+      "venue": "Empower Field at Mile High",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_13_PHI_ARI": {
+      "status": "unavailable",
+      "gameId": "2026_13_PHI_ARI",
+      "kickoff": "2026-12-06T21:05:00+00:00",
+      "venue": "State Farm Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_13_SF_NYG": {
+      "status": "unavailable",
+      "gameId": "2026_13_SF_NYG",
+      "kickoff": "2026-12-06T18:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_13_WAS_TEN": {
+      "status": "unavailable",
+      "gameId": "2026_13_WAS_TEN",
+      "kickoff": "2026-12-06T18:00:00+00:00",
+      "venue": "Nissan Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_13_DAL_SEA": {
+      "status": "unavailable",
+      "gameId": "2026_13_DAL_SEA",
+      "kickoff": "2026-12-08T01:15:00+00:00",
+      "venue": "Lumen Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_14_MIN_NE": {
+      "status": "unavailable",
+      "gameId": "2026_14_MIN_NE",
+      "kickoff": "2026-12-11T01:15:00+00:00",
+      "venue": "Gillette Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_14_ATL_CLE": {
+      "status": "unavailable",
+      "gameId": "2026_14_ATL_CLE",
+      "kickoff": "2026-12-13T18:00:00+00:00",
+      "venue": "Huntington Bank Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_14_BUF_GB": {
+      "status": "unavailable",
+      "gameId": "2026_14_BUF_GB",
+      "kickoff": "2026-12-14T01:20:00+00:00",
+      "venue": "Lambeau Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_14_CHI_MIA": {
+      "status": "unavailable",
+      "gameId": "2026_14_CHI_MIA",
+      "kickoff": "2026-12-13T18:00:00+00:00",
+      "venue": "Hard Rock Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_14_DEN_NYJ": {
+      "status": "unavailable",
+      "gameId": "2026_14_DEN_NYJ",
+      "kickoff": "2026-12-13T18:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_14_HOU_WAS": {
+      "status": "unavailable",
+      "gameId": "2026_14_HOU_WAS",
+      "kickoff": "2026-12-13T18:00:00+00:00",
+      "venue": "Northwest Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_14_IND_PHI": {
+      "status": "unavailable",
+      "gameId": "2026_14_IND_PHI",
+      "kickoff": "2026-12-13T18:00:00+00:00",
+      "venue": "Lincoln Financial Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_14_KC_CIN": {
+      "status": "unavailable",
+      "gameId": "2026_14_KC_CIN",
+      "kickoff": "2026-12-13T21:25:00+00:00",
+      "venue": "Paycor Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_14_LAC_LV": {
+      "status": "unavailable",
+      "gameId": "2026_14_LAC_LV",
+      "kickoff": "2026-12-13T21:05:00+00:00",
+      "venue": "Allegiant Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_14_LA_SF": {
+      "status": "unavailable",
+      "gameId": "2026_14_LA_SF",
+      "kickoff": "2026-12-13T21:25:00+00:00",
+      "venue": "Levi's Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_14_NO_CAR": {
+      "status": "unavailable",
+      "gameId": "2026_14_NO_CAR",
+      "kickoff": "2026-12-13T18:00:00+00:00",
+      "venue": "Bank of America Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_14_NYG_SEA": {
+      "status": "unavailable",
+      "gameId": "2026_14_NYG_SEA",
+      "kickoff": "2026-12-13T21:25:00+00:00",
+      "venue": "Lumen Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_14_TB_BAL": {
+      "status": "unavailable",
+      "gameId": "2026_14_TB_BAL",
+      "kickoff": "2026-12-13T18:00:00+00:00",
+      "venue": "M&T Bank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_14_TEN_DET": {
+      "status": "unavailable",
+      "gameId": "2026_14_TEN_DET",
+      "kickoff": "2026-12-13T18:00:00+00:00",
+      "venue": "Ford Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_14_PIT_JAX": {
+      "status": "unavailable",
+      "gameId": "2026_14_PIT_JAX",
+      "kickoff": "2026-12-15T01:15:00+00:00",
+      "venue": "EverBank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_15_SF_LAC": {
+      "status": "unavailable",
+      "gameId": "2026_15_SF_LAC",
+      "kickoff": "2026-12-18T01:15:00+00:00",
+      "venue": "SoFi Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_15_CHI_BUF": {
+      "status": "unavailable",
+      "gameId": "2026_15_CHI_BUF",
+      "kickoff": "2026-12-20T01:20:00+00:00",
+      "venue": "Highmark Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_15_SEA_PHI": {
+      "status": "unavailable",
+      "gameId": "2026_15_SEA_PHI",
+      "kickoff": "2026-12-19T22:00:00+00:00",
+      "venue": "Lincoln Financial Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_15_ATL_WAS": {
+      "status": "unavailable",
+      "gameId": "2026_15_ATL_WAS",
+      "kickoff": "2026-12-20T18:00:00+00:00",
+      "venue": "Northwest Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_15_BAL_PIT": {
+      "status": "unavailable",
+      "gameId": "2026_15_BAL_PIT",
+      "kickoff": "2026-12-20T18:00:00+00:00",
+      "venue": "Acrisure Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_15_CIN_CAR": {
+      "status": "unavailable",
+      "gameId": "2026_15_CIN_CAR",
+      "kickoff": "2026-12-20T18:00:00+00:00",
+      "venue": "Bank of America Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_15_CLE_NYG": {
+      "status": "unavailable",
+      "gameId": "2026_15_CLE_NYG",
+      "kickoff": "2026-12-20T18:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_15_DAL_LA": {
+      "status": "unavailable",
+      "gameId": "2026_15_DAL_LA",
+      "kickoff": "2026-12-20T21:25:00+00:00",
+      "venue": "SoFi Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_15_DEN_LV": {
+      "status": "unavailable",
+      "gameId": "2026_15_DEN_LV",
+      "kickoff": "2026-12-20T21:25:00+00:00",
+      "venue": "Allegiant Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_15_DET_MIN": {
+      "status": "unavailable",
+      "gameId": "2026_15_DET_MIN",
+      "kickoff": "2026-12-21T01:20:00+00:00",
+      "venue": "U.S. Bank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_15_IND_TEN": {
+      "status": "unavailable",
+      "gameId": "2026_15_IND_TEN",
+      "kickoff": "2026-12-20T18:00:00+00:00",
+      "venue": "Nissan Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_15_JAX_HOU": {
+      "status": "unavailable",
+      "gameId": "2026_15_JAX_HOU",
+      "kickoff": "2026-12-20T18:00:00+00:00",
+      "venue": "Reliant Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_15_MIA_GB": {
+      "status": "unavailable",
+      "gameId": "2026_15_MIA_GB",
+      "kickoff": "2026-12-20T18:00:00+00:00",
+      "venue": "Lambeau Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_15_NO_TB": {
+      "status": "unavailable",
+      "gameId": "2026_15_NO_TB",
+      "kickoff": "2026-12-20T18:00:00+00:00",
+      "venue": "Raymond James Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_15_NYJ_ARI": {
+      "status": "unavailable",
+      "gameId": "2026_15_NYJ_ARI",
+      "kickoff": "2026-12-20T21:05:00+00:00",
+      "venue": "State Farm Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_15_NE_KC": {
+      "status": "unavailable",
+      "gameId": "2026_15_NE_KC",
+      "kickoff": "2026-12-22T01:15:00+00:00",
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_16_HOU_PHI": {
+      "status": "unavailable",
+      "gameId": "2026_16_HOU_PHI",
+      "kickoff": "2026-12-25T01:15:00+00:00",
+      "venue": "Lincoln Financial Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_16_BUF_DEN": {
+      "status": "unavailable",
+      "gameId": "2026_16_BUF_DEN",
+      "kickoff": "2026-12-25T21:30:00+00:00",
+      "venue": "Empower Field at Mile High",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_16_GB_CHI": {
+      "status": "unavailable",
+      "gameId": "2026_16_GB_CHI",
+      "kickoff": "2026-12-25T18:00:00+00:00",
+      "venue": "Soldier Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_16_LA_SEA": {
+      "status": "unavailable",
+      "gameId": "2026_16_LA_SEA",
+      "kickoff": "2026-12-26T01:15:00+00:00",
+      "venue": "Lumen Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_16_ARI_NO": {
+      "status": "unavailable",
+      "gameId": "2026_16_ARI_NO",
+      "kickoff": "2026-12-27T18:00:00+00:00",
+      "venue": "Caesars Superdome",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_16_CAR_PIT": {
+      "status": "unavailable",
+      "gameId": "2026_16_CAR_PIT",
+      "kickoff": "2026-12-27T18:00:00+00:00",
+      "venue": "Acrisure Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_16_CIN_IND": {
+      "status": "unavailable",
+      "gameId": "2026_16_CIN_IND",
+      "kickoff": "2026-12-27T18:00:00+00:00",
+      "venue": "Lucas Oil Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_16_CLE_BAL": {
+      "status": "unavailable",
+      "gameId": "2026_16_CLE_BAL",
+      "kickoff": "2026-12-27T18:00:00+00:00",
+      "venue": "M&T Bank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_16_JAX_DAL": {
+      "status": "unavailable",
+      "gameId": "2026_16_JAX_DAL",
+      "kickoff": "2026-12-28T01:20:00+00:00",
+      "venue": "AT&T Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_16_LAC_MIA": {
+      "status": "unavailable",
+      "gameId": "2026_16_LAC_MIA",
+      "kickoff": "2026-12-27T18:00:00+00:00",
+      "venue": "Hard Rock Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_16_NE_NYJ": {
+      "status": "unavailable",
+      "gameId": "2026_16_NE_NYJ",
+      "kickoff": "2026-12-27T18:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_16_SF_KC": {
+      "status": "unavailable",
+      "gameId": "2026_16_SF_KC",
+      "kickoff": "2026-12-27T21:25:00+00:00",
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_16_TB_ATL": {
+      "status": "unavailable",
+      "gameId": "2026_16_TB_ATL",
+      "kickoff": "2026-12-27T18:00:00+00:00",
+      "venue": "Mercedes-Benz Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_16_TEN_LV": {
+      "status": "unavailable",
+      "gameId": "2026_16_TEN_LV",
+      "kickoff": "2026-12-27T21:05:00+00:00",
+      "venue": "Allegiant Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_16_WAS_MIN": {
+      "status": "unavailable",
+      "gameId": "2026_16_WAS_MIN",
+      "kickoff": "2026-12-27T18:00:00+00:00",
+      "venue": "U.S. Bank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_16_NYG_DET": {
+      "status": "unavailable",
+      "gameId": "2026_16_NYG_DET",
+      "kickoff": "2026-12-29T01:15:00+00:00",
+      "venue": "Ford Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_17_BAL_CIN": {
+      "status": "unavailable",
+      "gameId": "2026_17_BAL_CIN",
+      "kickoff": "2027-01-01T01:15:00+00:00",
+      "venue": "Paycor Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_17_BUF_MIA": {
+      "status": "unavailable",
+      "gameId": "2026_17_BUF_MIA",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "venue": "Hard Rock Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_17_DEN_NE": {
+      "status": "unavailable",
+      "gameId": "2026_17_DEN_NE",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "venue": "Gillette Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_17_DET_CHI": {
+      "status": "unavailable",
+      "gameId": "2026_17_DET_CHI",
+      "kickoff": "2027-01-03T21:25:00+00:00",
+      "venue": "Soldier Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_17_IND_CLE": {
+      "status": "unavailable",
+      "gameId": "2026_17_IND_CLE",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "venue": "Huntington Bank Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_17_KC_LAC": {
+      "status": "unavailable",
+      "gameId": "2026_17_KC_LAC",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "venue": "SoFi Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_17_LA_TB": {
+      "status": "unavailable",
+      "gameId": "2026_17_LA_TB",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "venue": "Raymond James Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_17_LV_ARI": {
+      "status": "unavailable",
+      "gameId": "2026_17_LV_ARI",
+      "kickoff": "2027-01-03T21:05:00+00:00",
+      "venue": "State Farm Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_17_MIN_NYJ": {
+      "status": "unavailable",
+      "gameId": "2026_17_MIN_NYJ",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_17_NO_ATL": {
+      "status": "unavailable",
+      "gameId": "2026_17_NO_ATL",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "venue": "Mercedes-Benz Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_17_NYG_DAL": {
+      "status": "unavailable",
+      "gameId": "2026_17_NYG_DAL",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "venue": "AT&T Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_17_PHI_SF": {
+      "status": "unavailable",
+      "gameId": "2026_17_PHI_SF",
+      "kickoff": "2027-01-04T01:20:00+00:00",
+      "venue": "Levi's Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_17_PIT_TEN": {
+      "status": "unavailable",
+      "gameId": "2026_17_PIT_TEN",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "venue": "Nissan Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_17_SEA_CAR": {
+      "status": "unavailable",
+      "gameId": "2026_17_SEA_CAR",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "venue": "Bank of America Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_17_WAS_JAX": {
+      "status": "unavailable",
+      "gameId": "2026_17_WAS_JAX",
+      "kickoff": "2027-01-03T18:00:00+00:00",
+      "venue": "EverBank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_17_HOU_GB": {
+      "status": "unavailable",
+      "gameId": "2026_17_HOU_GB",
+      "kickoff": "2027-01-05T01:15:00+00:00",
+      "venue": "Lambeau Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_18_ATL_CAR": {
+      "status": "unavailable",
+      "gameId": "2026_18_ATL_CAR",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "venue": "Bank of America Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_18_CHI_MIN": {
+      "status": "unavailable",
+      "gameId": "2026_18_CHI_MIN",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "venue": "U.S. Bank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_18_CLE_CIN": {
+      "status": "unavailable",
+      "gameId": "2026_18_CLE_CIN",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "venue": "Paycor Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_18_DAL_WAS": {
+      "status": "unavailable",
+      "gameId": "2026_18_DAL_WAS",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "venue": "Northwest Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_18_DET_GB": {
+      "status": "unavailable",
+      "gameId": "2026_18_DET_GB",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "venue": "Lambeau Field",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_18_JAX_IND": {
+      "status": "unavailable",
+      "gameId": "2026_18_JAX_IND",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "venue": "Lucas Oil Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_18_LAC_DEN": {
+      "status": "unavailable",
+      "gameId": "2026_18_LAC_DEN",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "venue": "Empower Field at Mile High",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_18_LV_KC": {
+      "status": "unavailable",
+      "gameId": "2026_18_LV_KC",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_18_MIA_NE": {
+      "status": "unavailable",
+      "gameId": "2026_18_MIA_NE",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "venue": "Gillette Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_18_NYJ_BUF": {
+      "status": "unavailable",
+      "gameId": "2026_18_NYJ_BUF",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "venue": "Highmark Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_18_PHI_NYG": {
+      "status": "unavailable",
+      "gameId": "2026_18_PHI_NYG",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "venue": "MetLife Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_18_PIT_BAL": {
+      "status": "unavailable",
+      "gameId": "2026_18_PIT_BAL",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "venue": "M&T Bank Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_18_SEA_LA": {
+      "status": "unavailable",
+      "gameId": "2026_18_SEA_LA",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "venue": "SoFi Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_18_SF_ARI": {
+      "status": "unavailable",
+      "gameId": "2026_18_SF_ARI",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "venue": "State Farm Stadium",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_18_TB_NO": {
+      "status": "unavailable",
+      "gameId": "2026_18_TB_NO",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "venue": "Caesars Superdome",
+      "reason": "Outside the seven-day collection window"
+    },
+    "2026_18_TEN_HOU": {
+      "status": "unavailable",
+      "gameId": "2026_18_TEN_HOU",
+      "kickoff": "2027-01-10T18:00:00+00:00",
+      "venue": "Reliant Stadium",
+      "reason": "Outside the seven-day collection window"
+    }
+  }
+}
