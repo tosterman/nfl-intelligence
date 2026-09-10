@@ -28,7 +28,7 @@ The selected no-rest model's separate 2023 margin MAE is **10.452249132**, total
 
 ## Evidence and limits
 
-`scripts/experiment_rest.py` is an independent experiment and writes only `reviews/rest-experiment-results.json`. It includes full selection metrics, separate 2023 metrics, and game-level prediction evidence. Source weekly efficiency artifacts retain the existing URLs, hashes and license metadata; schedules come from the checked-in `data/games.csv`. Original scores, model files, site, and ledger are untouched.
+`scripts/experiment_rest.py` is an independent experiment and writes only `reviews/rest-experiment-results.json`. It includes full selection metrics, separate 2023 metrics, and game-level prediction evidence. Source weekly efficiency artifacts retain the existing URLs, hashes and license metadata; schedules come from the locally cached `data/games.csv`, which is excluded from Git. Original scores, model files, site, and ledger are untouched.
 
 Five tests passed in `tests/test_rest_experiment.py`: strict date-cutoff exclusion, future residual perturbation, team-swap sign symmetry, offseason/unavailable-history handling, and ignoring both uncompleted rows and source-provided rest fields. Historical completion availability is approximated by previous calendar dates; the file is not a vintage schedule archive. A later rescheduling correction could differ from what was known before a real forecast, and the existing EPA vintage limitations remain. Rest-day differences are associations, not demonstrated causal effects. This experiment does not test travel, altitude, circadian effects, preparation quality, or personnel recovery.
 
