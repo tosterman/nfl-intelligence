@@ -320,6 +320,20 @@ select:focus-visible {
   margin-top: 28px;
   color: #9caaba;
 }
+.spotlight-copy .neutral-venue {
+  font-size: 12px;
+  color: #c0d2e7;
+  margin-top: 12px;
+}
+.card-venue {
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #c0d2e7;
+  background: #1a222c;
+  overflow-wrap: anywhere;
+}
 .field-art {
   position: absolute;
   right: -80px;

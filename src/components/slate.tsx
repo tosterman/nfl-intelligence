@@ -154,10 +154,16 @@ export function Slate({
             </div>
             <h2>A game of margins.</h2>
             <p>
-              {teams[featured.away].name} at {teams[featured.home].name}. See
-              what separates the teams, and how much room the model leaves for a
-              different result.
+              {teams[featured.away].name} {featured.neutral ? "vs" : "at"}{" "}
+              {teams[featured.home].name}. See what separates the teams, and how
+              much room the model leaves for a different result.
             </p>
+            {featured.neutral && (
+              <p className="neutral-venue">
+                Neutral venue · {featured.venue}. No home-field points in the
+                model.
+              </p>
+            )}
             <Link
               className="text-link"
               href={`/games/${featured.id}?from=${encodeURIComponent(returnTo)}`}
@@ -186,7 +192,7 @@ export function Slate({
                   {featured.snapshot!.prediction.awayScore.toFixed(1)}
                 </strong>
               </div>
-              <span className="versus">at</span>
+              <span className="versus">{featured.neutral ? "vs" : "at"}</span>
               <div>
                 <TeamMark code={featured.home} large />
                 <span>{teams[featured.home].name}</span>
@@ -229,8 +235,12 @@ export function Slate({
           <span>
             <small>In focus · {time(featured.kickoff)} ET</small>
             <strong>
-              {teams[featured.away].name} at {teams[featured.home].name}
+              {teams[featured.away].name} {featured.neutral ? "vs" : "at"}{" "}
+              {teams[featured.home].name}
             </strong>
+            {featured.neutral && (
+              <small>Neutral venue · {featured.venue}</small>
+            )}
           </span>
           <ArrowUpRight size={19} />
         </Link>
@@ -404,6 +414,7 @@ function GameCard({
               : "Awaiting forecast"}
         </span>
       </div>
+      {g.neutral && <p className="card-venue">Neutral venue · {g.venue}</p>}
       <div className="card-teams">
         {[g.away, g.home].map((code, i) => (
           <div className="team-row" key={code}>
@@ -412,7 +423,15 @@ function GameCard({
               <small>{teams[code].city}</small>
               <h3>
                 {teams[code].name}
-                <span>{i === 1 ? "Home" : "Away"}</span>
+                <span>
+                  {g.neutral
+                    ? i === 1
+                      ? "Designated home"
+                      : "Designated away"
+                    : i === 1
+                      ? "Home"
+                      : "Away"}
+                </span>
               </h3>
             </div>
             <strong>
