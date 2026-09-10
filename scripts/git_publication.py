@@ -61,7 +61,7 @@ def capture(sha,expected,ledger,timeout=600):
 def main():
     branch=subprocess.check_output(['git','branch','--show-current'],text=True).strip()
     if branch!='main':raise ValueError('Native publication requires main checkout')
-    subprocess.run(['git','add','data/site.json','data/ledger.json','data/source.json','data/weather.json','data/weather-ledger.json','data/weather-sources/'],check=True)
+    subprocess.run(['git','add','data/site.json','data/ledger.json','data/source.json','data/weather.json','data/weather-ledger.json','data/weather-sources/','data/personnel.json','data/personnel-collection.json','data/personnel-sources/'],check=True)
     changed=subprocess.run(['git','diff','--cached','--quiet']).returncode
     if changed==1:subprocess.run(['git','commit','-m','data: publish refreshed forecast edition'],check=True)
     elif changed!=0:raise RuntimeError('Cannot inspect staged publication')

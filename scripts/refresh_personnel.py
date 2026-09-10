@@ -1,5 +1,5 @@
 """Collect attributed practice/report snapshots; never modifies model forecasts."""
-import csv, gzip, hashlib, io, json, re
+import csv, gzip, hashlib, io, json, os, re, tempfile
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from audit_personnel import read
@@ -97,8 +97,29 @@ def main():
     encoded = (json.dumps(snapshot, sort_keys=True, separators=(',', ':')) + '\n').encode()
     capture_hash = hashlib.sha256(encoded).hexdigest()
     (folder / (capture_hash + '.snapshot.json.gz')).write_bytes(gzip.compress(encoded, mtime=0))
-    (ROOT / 'data/personnel.json').write_bytes(encoded)
+    with tempfile.NamedTemporaryFile(dir=ROOT / 'data', suffix='.tmp', delete=False) as staged:
+        staged.write(encoded)
+        staged_path = Path(staged.name)
+    try:
+        os.replace(staged_path, ROOT / 'data/personnel.json')
+    finally:
+        staged_path.unlink(missing_ok=True)
     print(f'Personnel snapshot: {len(players)} rows; source {digest}. Model unchanged.')
 
+def run_collection():
+    """Record acquisition failure separately, preserving the last verified snapshot."""
+    checked = datetime.now(timezone.utc).isoformat()
+    try:
+        main()
+        state = {'status': 'ok', 'checkedAt': checked}
+        code = 0
+    except Exception as error:
+        state = {'status': 'unavailable', 'checkedAt': checked,
+                 'reason': 'Personnel acquisition or validation failed', 'errorType': type(error).__name__}
+        print('Personnel acquisition failed; last verified snapshot retained with its original timestamps.')
+        code = 1
+    (ROOT / 'data/personnel-collection.json').write_text(json.dumps(state, indent=2) + '\n')
+    return code
+
 if __name__ == '__main__':
-    main()
+    raise SystemExit(run_collection())

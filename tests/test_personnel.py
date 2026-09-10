@@ -1,8 +1,10 @@
-import csv, gzip, hashlib, io, json, sys, unittest
+import csv, gzip, hashlib, io, json, sys, tempfile, unittest
+from unittest.mock import patch
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from refresh_personnel import normalize, for_game
+import refresh_personnel
 
 class PersonnelTests(unittest.TestCase):
     def setUp(self):
@@ -65,6 +67,19 @@ class PersonnelTests(unittest.TestCase):
         for path in (root / 'data/personnel-sources').glob('*.snapshot.json.gz'):
             captured = gzip.decompress(path.read_bytes())
             self.assertEqual(hashlib.sha256(captured).hexdigest(), path.name.split('.')[0])
+
+    def test_failed_collection_retains_snapshot_and_records_failure(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'data').mkdir()
+            pointer = root / 'data/personnel.json'
+            pointer.write_bytes(b'previous verified bytes')
+            with patch.object(refresh_personnel, 'ROOT', root), patch.object(refresh_personnel, 'main', side_effect=ValueError('invalid source')):
+                self.assertEqual(refresh_personnel.run_collection(), 1)
+            self.assertEqual(pointer.read_bytes(), b'previous verified bytes')
+            state = json.loads((root / 'data/personnel-collection.json').read_text())
+            self.assertEqual(state['status'], 'unavailable')
+            self.assertNotIn('invalid source', json.dumps(state))
 
 if __name__ == '__main__':
     unittest.main()
