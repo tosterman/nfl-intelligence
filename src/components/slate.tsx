@@ -290,7 +290,7 @@ export function Slate({
           schedule; model differences are not validated betting edges.
         </p>
         <div className="toolbar">
-          <div className="filters" aria-label="Filter games">
+          <div className="filters" role="group" aria-label="Filter games">
             {[
               ["all", "All games"],
               ["forecast", "With forecasts"],

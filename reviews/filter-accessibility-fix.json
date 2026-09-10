@@ -1,0 +1,16 @@
+[
+  {
+    "engine": "chromium",
+    "groupName": "Filter games",
+    "keyboardEnterAndSpace": true,
+    "violations": 0,
+    "incomplete": 0
+  },
+  {
+    "engine": "webkit",
+    "groupName": "Filter games",
+    "keyboardEnterAndSpace": true,
+    "violations": 0,
+    "incomplete": 0
+  }
+]
