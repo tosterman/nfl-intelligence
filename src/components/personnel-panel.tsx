@@ -6,6 +6,7 @@ import { teams, date, time } from "@/lib/teams";
 import { PersonnelExpiry } from "./personnel-expiry";
 import { PersonnelChangesPanel } from "./personnel-changes";
 import { QuarterbackContext } from "./quarterback-context";
+import { PlayerUsage } from "./player-usage";
 
 export function PersonnelPanel({ game }: { game: Game }) {
   const selected = personnelForGame(snapshot, game);
@@ -93,6 +94,7 @@ export function PersonnelPanel({ game }: { game: Game }) {
                                 .join(" · ")}
                             </div>
                           )}
+                          <PlayerUsage snapshot={snapshot} player={player} />
                         </li>
                       ))}
                     </ul>
@@ -105,6 +107,14 @@ export function PersonnelPanel({ game }: { game: Game }) {
       )}
       <details>
         <summary>Personnel source & limitations</summary>
+        <p className="fine">
+          Historical participation uses the{" "}
+          <a href="https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2025.csv">
+            nflverse 2025 snap-count release
+          </a>
+          , joined through retained player identifiers. These revised historical
+          records are not a preserved pregame data vintage.
+        </p>
         <p className="fine">
           A blank designation or absent player does not establish health or
           availability. Practice participation is separate from game status. The

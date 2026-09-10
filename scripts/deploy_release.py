@@ -12,7 +12,7 @@ def release_files():
     for folder in ['src','public']:
         paths.extend(p for p in (ROOT/folder).rglob('*') if p.is_file())
     for name in ['site.json','weather.json','weather-venues.json','weather-osm-venues.json',
-                 'personnel.json','personnel-collection.json','personnel-changes.json',
+                 'personnel.json','personnel-collection.json','personnel-changes.json','player-usage.json',
                  'quarterbacks.json','quarterback-collection.json']:
         paths.append(ROOT/'data'/name)
     for p in paths:
