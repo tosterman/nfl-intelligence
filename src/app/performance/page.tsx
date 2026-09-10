@@ -18,16 +18,6 @@ export default function Performance() {
           wrong, and whether its confidence is deserved.
         </p>
       </div>
-      <div className="notice">
-        <strong>
-          Retrospective development evaluation · 2024–2025 seasons
-        </strong>
-        <br />
-        These are historical replays, generated after the games. They are not
-        predictions published before kickoff, and not evidence of profitable
-        wagering. This period has been inspected during development and is no
-        longer an untouched holdout.
-      </div>
       <section className="panel">
         <h2>Published-before-kickoff record</h2>
         {site.livePerformance.games ? (
@@ -125,6 +115,17 @@ export default function Performance() {
         )}
         <LiveCalibration bins={site.livePerformance.calibration} />
       </section>
+      <h2 style={{ marginTop: 36 }}>Historical development record</h2>
+      <div className="notice">
+        <strong>
+          Retrospective development evaluation · 2024–2025 seasons
+        </strong>
+        <br />
+        These are historical replays, generated after the games. They are not
+        predictions published before kickoff, and not evidence of profitable
+        wagering. This period has been inspected during development and is no
+        longer an untouched holdout.
+      </div>
       <div className="kpi-grid">
         <div className="kpi">
           <small>Straight-up accuracy</small>
