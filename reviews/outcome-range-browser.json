@@ -1,0 +1,14 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "text": "Room for a different result\n\nThe middle 80% of modeled margins span 49ers by 14.1 to Rams by 20.6.\n\nThe middle 80% of modeled combined scores span 31.8 to 66.2 total points.\n\nEach range leaves about 20% of its modeled outcomes outside it. These are separate ranges, not an 80% guarantee that both will hold. They describe possible game results, not confidence in the average prediction. Football scores are whole numbers; these continuous-model boundaries are approximate.",
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "text": "Room for a different result\n\nThe middle 80% of modeled margins span 49ers by 14.1 to Rams by 20.6.\n\nThe middle 80% of modeled combined scores span 31.8 to 66.2 total points.\n\nEach range leaves about 20% of its modeled outcomes outside it. These are separate ranges, not an 80% guarantee that both will hold. They describe possible game results, not confidence in the average prediction. Football scores are whole numbers; these continuous-model boundaries are approximate.",
+    "overflow": false
+  }
+]

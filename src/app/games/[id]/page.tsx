@@ -214,10 +214,10 @@ export default async function GamePage({
                   efficiency, not player-specific matchup findings.
                 </p>
                 <div className="notice">
-                  The middle 80% of modeled home-team margins run from{" "}
-                  {signed(p.marginInterval80[0])} to{" "}
-                  {signed(p.marginInterval80[1])} points. This is outcome
-                  variability, not a confidence interval on the estimated mean.
+                  <strong>Room for a different result</strong>
+                  <p>The middle 80% of modeled margins span {marginRange(p.marginInterval80, teams[g.home].name, teams[g.away].name) ?? "an unavailable range"}.</p>
+                  <p>The middle 80% of modeled combined scores span {p.totalInterval80[0].toFixed(1)} to {p.totalInterval80[1].toFixed(1)} total points.</p>
+                  <p className="fine">Each range leaves about 20% of its modeled outcomes outside it. These are separate ranges, not an 80% guarantee that both will hold. They describe possible game results, not confidence in the average prediction. Football scores are whole numbers; these continuous-model boundaries are approximate.</p>
                 </div>
                 <p className="fine">
                   Explanation generated deterministically from the structured
@@ -448,3 +448,4 @@ export default async function GamePage({
     </div>
   );
 }
+import { marginRange } from "@/lib/outcome-range";
