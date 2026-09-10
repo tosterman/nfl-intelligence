@@ -7,7 +7,6 @@ data/ledger.json
 data/publications.json
 data/weather-ledger.json
 data/weather-sources/
-data/weather-venues.json
 reviews/
 tests/
 scripts/
