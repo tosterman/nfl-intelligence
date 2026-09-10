@@ -1,0 +1,164 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "weeks": [
+      {
+        "week": 1,
+        "visibleGames": 1
+      },
+      {
+        "week": 2,
+        "visibleGames": 1
+      },
+      {
+        "week": 3,
+        "visibleGames": 1
+      },
+      {
+        "week": 4,
+        "visibleGames": 1
+      },
+      {
+        "week": 5,
+        "visibleGames": 1
+      },
+      {
+        "week": 6,
+        "visibleGames": 1
+      },
+      {
+        "week": 7,
+        "visibleGames": 1
+      },
+      {
+        "week": 8,
+        "visibleGames": 1
+      },
+      {
+        "week": 9,
+        "visibleGames": 1
+      },
+      {
+        "week": 10,
+        "visibleGames": 1
+      },
+      {
+        "week": 11,
+        "visibleGames": 0
+      },
+      {
+        "week": 12,
+        "visibleGames": 1
+      },
+      {
+        "week": 13,
+        "visibleGames": 1
+      },
+      {
+        "week": 14,
+        "visibleGames": 1
+      },
+      {
+        "week": 15,
+        "visibleGames": 1
+      },
+      {
+        "week": 16,
+        "visibleGames": 1
+      },
+      {
+        "week": 17,
+        "visibleGames": 1
+      },
+      {
+        "week": 18,
+        "visibleGames": 1
+      }
+    ],
+    "roundTripPreserved": true,
+    "errors": [],
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "weeks": [
+      {
+        "week": 1,
+        "visibleGames": 1
+      },
+      {
+        "week": 2,
+        "visibleGames": 1
+      },
+      {
+        "week": 3,
+        "visibleGames": 1
+      },
+      {
+        "week": 4,
+        "visibleGames": 1
+      },
+      {
+        "week": 5,
+        "visibleGames": 1
+      },
+      {
+        "week": 6,
+        "visibleGames": 1
+      },
+      {
+        "week": 7,
+        "visibleGames": 1
+      },
+      {
+        "week": 8,
+        "visibleGames": 1
+      },
+      {
+        "week": 9,
+        "visibleGames": 1
+      },
+      {
+        "week": 10,
+        "visibleGames": 1
+      },
+      {
+        "week": 11,
+        "visibleGames": 0
+      },
+      {
+        "week": 12,
+        "visibleGames": 1
+      },
+      {
+        "week": 13,
+        "visibleGames": 1
+      },
+      {
+        "week": 14,
+        "visibleGames": 1
+      },
+      {
+        "week": 15,
+        "visibleGames": 1
+      },
+      {
+        "week": 16,
+        "visibleGames": 1
+      },
+      {
+        "week": 17,
+        "visibleGames": 1
+      },
+      {
+        "week": 18,
+        "visibleGames": 1
+      }
+    ],
+    "roundTripPreserved": true,
+    "errors": [],
+    "overflow": false
+  }
+]
