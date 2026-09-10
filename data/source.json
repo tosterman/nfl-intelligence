@@ -1,7 +1,7 @@
 {
   "url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv",
-  "sha256": "1933dc6f97984bf96d7c7506da9ab6f27bab0fbdf32a699784efd33861ac74eb",
-  "retrievedAt": "2026-09-10T17:47:04.741848+00:00",
+  "sha256": "2e8e529f458f38f34001479faac3da18f59b89ca5c9c7b7010c9a899a53fa291",
+  "retrievedAt": "2026-09-10T18:37:01.000302+00:00",
   "license": "CC BY 4.0",
   "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md"
 }
