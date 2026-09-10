@@ -7,6 +7,7 @@ import hashlib,json,re,subprocess,time,urllib.request
 from datetime import datetime,timezone
 from pathlib import Path
 from record_publication import verified_snapshot_hashes
+from publication import write_receipts
 ROOT=Path(__file__).resolve().parents[1]
 REPO='tosterman/nfl-intelligence'
 PUBLIC_URL='https://nfl-intelligence-one.vercel.app'
@@ -74,7 +75,7 @@ def main():
     receipt=capture(sha,expected,ledger)
     path=ROOT/'data/publications.json';receipts=json.loads(path.read_text())
     if not any(r.get('evidenceType')==receipt['evidenceType'] and r.get('sourceCommit')==receipt['sourceCommit'] and r.get('githubStatusId')==receipt['githubStatusId'] for r in receipts):
-        receipts.append(receipt);path.write_text(json.dumps(receipts,indent=2)+'\n')
+        receipts.append(receipt);write_receipts(path,receipts)
     print('Verified native Git publication for '+sha+'; '+str(len(receipt['snapshotHashes']))+' snapshots')
 
 if __name__=='__main__':main()

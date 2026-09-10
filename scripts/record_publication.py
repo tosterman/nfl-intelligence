@@ -5,7 +5,7 @@ results to make_receipt. Operator-trusted evidence, not independent notarization
 import argparse,hashlib,json,os,urllib.request
 from datetime import datetime,timezone
 from pathlib import Path
-from publication import snapshot_valid
+from publication import snapshot_valid,write_receipts
 
 def forecast_artifact(site):
     """Exact public /api/forecasts response expected from this release."""
@@ -53,5 +53,5 @@ def main():
     root=Path(__file__).resolve().parents[1];ledger=json.loads((root/'data/ledger.json').read_text());expected=json.loads((root/'data/site.json').read_text());receipt=make_receipt(deployment,artifact,ledger,expected_site=expected)
     path=root/'data/publications.json';receipts=json.loads(path.read_text())
     if any(r.get('deploymentId')==receipt['deploymentId'] for r in receipts):raise ValueError('Deployment already recorded')
-    receipts.append(receipt);path.write_text(json.dumps(receipts,indent=2)+'\n');print(f'Recorded {len(receipt["snapshotHashes"])} verified snapshots')
+    receipts.append(receipt);write_receipts(path,receipts);print(f'Recorded {len(receipt["snapshotHashes"])} verified snapshots')
 if __name__=='__main__':main()

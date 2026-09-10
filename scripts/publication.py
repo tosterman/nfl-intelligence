@@ -1,7 +1,20 @@
 """Publication receipts are separate from generated forecasts and game results."""
 from datetime import datetime
-import hashlib,json,math
+import hashlib,json,math,os,tempfile
+from pathlib import Path
 from calibration import calibration_bins
+
+def write_receipts(path,receipts):
+    """Replace only after the complete ledger is written and flushed beside it."""
+    temporary=None
+    try:
+        with tempfile.NamedTemporaryFile(mode='w',encoding='utf-8',dir=path.parent,prefix='.publications-',suffix='.tmp',delete=False) as file:
+            temporary=Path(file.name)
+            json.dump(receipts,file,indent=2,allow_nan=False);file.write('\n')
+            file.flush();os.fsync(file.fileno())
+        os.replace(temporary,path)
+    finally:
+        if temporary is not None:temporary.unlink(missing_ok=True)
 
 def snapshot_valid(snapshot):
     payload={k:v for k,v in snapshot.items() if k!='hash'}
