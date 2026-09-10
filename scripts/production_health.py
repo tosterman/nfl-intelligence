@@ -8,7 +8,7 @@ from urllib.error import HTTPError,URLError
 
 ROOT=Path(__file__).resolve().parents[1]
 ORIGIN='https://nfl-intelligence-one.vercel.app'
-ENDPOINTS={'forecasts':'/api/status','odds':'/api/odds-status','personnel':'/api/personnel-status'}
+ENDPOINTS={'forecasts':'/api/status','odds':'/api/odds-status','personnel':'/api/personnel-status','weather':'/api/weather-status'}
 
 def age(value,now):
     if not isinstance(value,str):raise ValueError('Missing acquisition timestamp')
@@ -33,6 +33,20 @@ def validate_health(kind,http_status,payload,now):
             raise ValueError('Personnel acquisition or source is stale')
         if type(payload.get('rowCount')) is not int or payload['rowCount']<=0 or not re.fullmatch(r'[a-f0-9]{64}',payload.get('sourceHash','')):
             raise ValueError('Personnel source identity missing')
+    elif kind=='weather':
+        if payload.get('maximumAgeHours')!=30 or not 0<=age(payload.get('generatedAt'),now)<30:
+            raise ValueError('Weather collection is stale')
+        if not age(payload['generatedAt'],now)<=age(payload.get('collectionStartedAt'),now)<30:
+            raise ValueError('Weather collection start is invalid or stale')
+        checks=payload.get('checks');count=payload.get('eligibleGames')
+        if type(count) is not int or count<0 or not isinstance(checks,list) or len(checks)!=count or type(payload.get('availableGames')) is not int or payload['availableGames']!=count:
+            raise ValueError('Weather coverage counts are inconsistent')
+        if any(not isinstance(c,dict) or c.get('status')!='ok' or not isinstance(c.get('gameId'),str) or not c['gameId'] for c in checks):
+            raise ValueError('Weather game checks are incomplete')
+        if len({c['gameId'] for c in checks})!=count:raise ValueError('Duplicate weather game checks')
+        for check in checks:
+            if any(not -5/60<=age(check.get(k),now)<=30 for k in ['issuedAt','retrievedAt']) or not re.fullmatch(r'[a-f0-9]{64}',check.get('sourceHash','')):
+                raise ValueError('Weather source is stale or unidentified')
     elif kind=='forecasts':
         checks=payload.get('checks')
         if not isinstance(checks,list) or len(checks)!=4 or any(not isinstance(c,dict) for c in checks):

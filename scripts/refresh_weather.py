@@ -69,7 +69,7 @@ def main():
             digest=hashlib.sha256(json.dumps(record,sort_keys=True,separators=(',',':')).encode()).hexdigest()
             if digest not in hashes:ledger.append(record|{'hash':digest});hashes.add(digest)
     path.write_text(json.dumps(ledger,indent=2)+'\n')
-    (ROOT/'data/weather.json').write_text(json.dumps({'generatedAt':datetime.now(timezone.utc).isoformat(),'games':games},indent=2)+'\n')
+    (ROOT/'data/weather.json').write_text(json.dumps({'collectionStartedAt':now.isoformat(),'generatedAt':datetime.now(timezone.utc).isoformat(),'games':games},indent=2)+'\n')
     print(f'Weather context: {sum(g["status"]=="available" for g in games.values())} games. Numerical forecasts unchanged.')
 
 if __name__=='__main__':main()

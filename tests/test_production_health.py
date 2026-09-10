@@ -39,6 +39,7 @@ class ProductionHealthTests(unittest.TestCase):
                 at=datetime.now(timezone.utc).isoformat()
                 payload={'status':'ok','fetchedAt':at,'maximumAgeHours':6}
                 if self.path=='/api/personnel-status':payload={'status':'ok','collectionStatus':'ok','season':datetime.now(timezone.utc).year,'expectedSeason':datetime.now(timezone.utc).year,'checkedAt':at,'retrievedAt':at,'assetUpdatedAt':at,'sourceHash':'a'*64,'rowCount':1,'maximumAgeHours':30}
+                if self.path=='/api/weather-status':payload={'status':'ok','collectionStartedAt':at,'generatedAt':at,'maximumAgeHours':30,'eligibleGames':0,'availableGames':0,'checks':[]}
                 self.wfile.write(json.dumps(payload).encode())
             def log_message(self,*args):pass
         server=ThreadingHTTPServer(('127.0.0.1',0),Handler)
@@ -51,6 +52,7 @@ class ProductionHealthTests(unittest.TestCase):
                 self.assertEqual([a['httpStatus'] for a in report['checks']['forecasts']['attempts']],[503,503])
                 self.assertTrue(report['checks']['odds']['healthy'])
                 self.assertTrue(report['checks']['personnel']['healthy'])
+                self.assertTrue(report['checks']['weather']['healthy'])
         finally:server.shutdown();server.server_close();worker.join()
 
     def test_personnel_failure_and_old_asset_override_claimed_health(self):
@@ -58,5 +60,14 @@ class ProductionHealthTests(unittest.TestCase):
         validate_health('personnel',200,good,self.now)
         for change in [{'collectionStatus':'unavailable'},{'season':2025},{'rowCount':0},{'assetUpdatedAt':(self.now-timedelta(hours=30)).isoformat()},{'checkedAt':(self.now+timedelta(seconds=1)).isoformat()}]:
             with self.assertRaises(ValueError):validate_health('personnel',200,good|change,self.now)
+
+    def test_weather_checks_counts_and_source_ages(self):
+        good={'status':'ok','collectionStartedAt':self.at,'generatedAt':self.at,'maximumAgeHours':30,'eligibleGames':1,'availableGames':1,
+            'checks':[{'gameId':'g','status':'ok','issuedAt':self.at,'retrievedAt':self.at,'sourceHash':'a'*64}]}
+        validate_health('weather',200,good,self.now)
+        for change in [{'eligibleGames':0},{'checks':[]},{'availableGames':0},
+            {'checks':[{**good['checks'][0],'issuedAt':(self.now-timedelta(hours=31)).isoformat()}]},
+            {'generatedAt':(self.now+timedelta(seconds=1)).isoformat()}]:
+            with self.assertRaises(ValueError):validate_health('weather',200,good|change,self.now)
 
 if __name__=='__main__':unittest.main()

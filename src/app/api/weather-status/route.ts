@@ -1,0 +1,12 @@
+import snapshot from "../../../../data/weather.json";
+import venues from "../../../../data/weather-venues.json";
+import site from "../../../../data/site.json";
+import { weatherHealth } from "@/lib/weather-health";
+export const dynamic = "force-dynamic";
+export async function GET() {
+  const result = weatherHealth(snapshot, site.games, venues);
+  return Response.json(result, {
+    status: result.status === "ok" ? 200 : 503,
+    headers: { "Cache-Control": "no-store" },
+  });
+}
