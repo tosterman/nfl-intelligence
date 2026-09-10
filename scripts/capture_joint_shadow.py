@@ -10,8 +10,8 @@ from joint_scores import reconcile_scores
 from publication import snapshot_valid
 ROOT=Path(__file__).resolve().parents[1]
 
-def verify_frozen(reference,prior_hashes,code_hashes):
-    if prior_hashes!=reference['priorHashes'] or any(code_hashes.get(k)!=v for k,v in reference['codeHashes'].items()):raise ValueError('Frozen research distribution changed; new protocol required')
+def verify_frozen(reference,prior_hashes,code_hashes,fit):
+    if fit!=reference['fit'] or prior_hashes!=reference['priorHashes'] or any(code_hashes.get(k)!=v for k,v in reference['codeHashes'].items()):raise ValueError('Frozen research distribution changed; new protocol required')
 
 def eligible_games(local,public,now):
     if local['modelVersion']!=public['modelVersion'] or local['generatedAt']!=public['generatedAt']:raise ValueError('Public edition differs')
@@ -38,7 +38,7 @@ def main():
     prior_hashes={k:hashlib.sha256(p.tobytes()).hexdigest() for k,p in [('candidate',candidate),('reference',reference)]}
     code_hashes={n:hashlib.sha256((ROOT/'scripts'/n).read_bytes()).hexdigest() for n in ['capture_joint_shadow.py','evaluate_joint_scores.py','joint_scores.py','build_data.py','publication.py']}
     frozen_path=ROOT/'reviews/joint-shadow-reference.json'
-    verify_frozen(json.loads(frozen_path.read_text()),prior_hashes,code_hashes)
+    verify_frozen(json.loads(frozen_path.read_text()),prior_hashes,code_hashes,fit)
     for g in games:
         prediction=g['snapshot']['prediction'];tie=fit['tieProbability'] if g['type']=='REG' else 0
         records.append({'gameId':g['id'],'season':g['season'],'week':g['week'],'type':g['type'],'home':g['home'],'away':g['away'],'kickoff':g['kickoff'],'pointSnapshot':g['snapshot'],

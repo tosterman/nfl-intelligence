@@ -9,5 +9,24 @@
     "joint_scores.py": "1279680b6e2df70f1a38a9bbb76962482a026f8f6f42c8790672af6b45e0a150",
     "build_data.py": "1137dbd0f57c6d0b913dc10439172b5a742d77c9cac0229a0d1fb7e26064bba5"
   },
-  "evidence": "Recomputed with identical evaluation schedule, prior-construction code and solver; verified fit equality before freezing."
+  "evidence": "Recomputed with identical evaluation schedule, prior-construction code and solver; verified fit equality before freezing.",
+  "fit": {
+    "games": 3793,
+    "regularGames": 3631,
+    "tieProbability": 0.003484320557491289,
+    "referenceMean": [
+      22.75204323754283,
+      22.75204323754286
+    ],
+    "referenceCovariance": [
+      [
+        102.13427278273373,
+        -4.838440109436058
+      ],
+      [
+        -4.838440109436058,
+        102.13427278273372
+      ]
+    ]
+  }
 }

@@ -1,0 +1,29 @@
+{
+  "status": "verified-before-kickoff",
+  "observedAt": "2026-09-10T19:51:08.667371+00:00",
+  "githubHttpDate": "2026-09-10T19:51:08+00:00",
+  "commit": "238391db2f88fa0aea1b0e840b9dd3e357aff0bf",
+  "url": "https://raw.githubusercontent.com/tosterman/nfl-intelligence/238391db2f88fa0aea1b0e840b9dd3e357aff0bf/reviews/joint-shadow/41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c.json.gz",
+  "archive": "reviews/joint-shadow/41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c.json.gz",
+  "sha256": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+  "compressedHash": "e9bae300fa7a50188636fc3e43826a63dc0be99791ee3da38f86ffe4f121de86",
+  "generatedAt": "2026-09-10T19:50:28.489614+00:00",
+  "gameIds": [
+    "2026_01_SF_LA",
+    "2026_01_ARI_LAC",
+    "2026_01_ATL_PIT",
+    "2026_01_BAL_IND",
+    "2026_01_BUF_HOU",
+    "2026_01_CHI_CAR",
+    "2026_01_CLE_JAX",
+    "2026_01_DAL_NYG",
+    "2026_01_GB_MIN",
+    "2026_01_MIA_LV",
+    "2026_01_NO_DET",
+    "2026_01_NYJ_TEN",
+    "2026_01_TB_CIN",
+    "2026_01_WAS_PHI",
+    "2026_01_DEN_KC"
+  ],
+  "verifierHash": "09b66ce3f2c87cae7324598b77a7bb4be5efb15e8a28dc12d101cad43f9f63ef"
+}
