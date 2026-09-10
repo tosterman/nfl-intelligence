@@ -2058,3 +2058,15 @@ summary {
   .calibration-svg text { font-size: 22px; }
   .calibration-svg .axis-label { font-size: 20px; }
 }
+.diagnostic-band {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.diagnostic-band > summary {
+  cursor: pointer;
+  line-height: 1.6;
+}
+.diagnostic-band .ratings-table-wrap {
+  max-height: 420px;
+  overflow: auto;
+}

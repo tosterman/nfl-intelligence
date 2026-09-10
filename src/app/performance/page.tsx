@@ -2,6 +2,7 @@ import Link from "next/link";
 import { site, pct } from "@/lib/data";
 import { LiveCalibration } from "@/components/live-calibration";
 import { marginComparisonSummary } from "@/lib/performance-summary";
+import { PerformanceBands } from "@/components/performance-bands";
 export const metadata = { title: "Track record — Every result counts" };
 export default function Performance() {
   const m = site.performance.aggregate;
@@ -466,6 +467,7 @@ export default function Performance() {
           Read the assumptions and limitations →
         </Link>
       </section>
+      <PerformanceBands records={site.performance.records} />
     </div>
   );
 }
