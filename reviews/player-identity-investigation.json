@@ -1,0 +1,56 @@
+{
+  "source": {
+    "url": "https://github.com/nflverse/nflverse-data/releases/download/players/players.csv",
+    "sha256": "c2402e02d39c7ca1adbd9ca5c894bb11f693ab01da0721bff44db2a8bd1ea53d",
+    "bytes": 7287825,
+    "archivedAt": "2026-09-10T19:14:27.144543+00:00",
+    "verification": "Byte length and digest matched GitHub release asset metadata during acquisition.",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md"
+  },
+  "auditHash": "13d6b7d9e5b6ee1cee378824a0daa9b5f72ddf63975db587c3575d4721e35bab",
+  "codeHashes": {
+    "player_identity.py": "8ec8a2c25ccd014bdfb64a4fa2d2e7768221aa06d31ad3a190c791924b697b75",
+    "investigate_personnel_id.py": "ee684db9349ec43d20579e78a5bbec8962af7b9c70a5d3b24677f14fa1147f99"
+  },
+  "findings": [
+    {
+      "reportId": "00-0041363",
+      "depthChartId": "THO581952",
+      "reportScope": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "reportTeam": "SF"
+      },
+      "comparison": {
+        "status": "different-registry-identities",
+        "left": [
+          {
+            "gsis_id": "00-0041363",
+            "display_name": "James Thompson Jr.",
+            "esb_id": "THO743352",
+            "pfr_id": "ThomJa06",
+            "position": "DT",
+            "rookie_season": "2026",
+            "last_season": "2026",
+            "latest_team": "SF"
+          }
+        ],
+        "right": [
+          {
+            "gsis_id": "THO581952",
+            "display_name": "James Thompson",
+            "esb_id": "THO581952",
+            "pfr_id": "ThomJa01",
+            "position": "WR",
+            "rookie_season": "1978",
+            "last_season": "1978",
+            "latest_team": "NYG"
+          }
+        ],
+        "meaning": "Registry identity comparison, not independent roster or injury confirmation. Names and identifiers from other namespaces are not automatic joins."
+      }
+    }
+  ]
+}

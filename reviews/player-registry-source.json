@@ -1,0 +1,9 @@
+{
+  "url": "https://github.com/nflverse/nflverse-data/releases/download/players/players.csv",
+  "sha256": "c2402e02d39c7ca1adbd9ca5c894bb11f693ab01da0721bff44db2a8bd1ea53d",
+  "bytes": 7287825,
+  "archivedAt": "2026-09-10T19:14:27.144543+00:00",
+  "verification": "Byte length and digest matched GitHub release asset metadata during acquisition.",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md"
+}
