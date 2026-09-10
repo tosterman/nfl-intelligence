@@ -30,6 +30,16 @@ def main():
             (work/'data'/name).write_bytes(checked_bytes((inputs/(name+'.gz')).read_bytes(),manifest['files'][name]))
         for name in ['joint-shadow-reference.json','joint-event-audit-protocol.md','joint-settlement-protocol.md']:
             shutil.copyfile(ROOT/'reviews'/name,work/'reviews'/name)
+        diagnostic="""import sys,json,hashlib
+from pathlib import Path
+sys.path.insert(0,'scripts')
+from evaluate_joint_scores import priors
+from build_data import load_rows
+f=json.loads(Path('reviews/joint-shadow-reference.json').read_text())
+c,r,fit=priors(load_rows(Path('data/games.csv')))
+print(json.dumps({'priorHashes':{n:hashlib.sha256(p.tobytes()).hexdigest() for n,p in [('candidate',c),('reference',r)]},'expectedPriorHashes':f['priorHashes'],'fit':fit,'expectedFit':f['fit'],'changedCode':[n for n,h in f['codeHashes'].items() if hashlib.sha256((Path('scripts')/n).read_bytes()).hexdigest()!=h]}),flush=True)
+"""
+        subprocess.run([sys.executable,'-c',diagnostic],cwd=work,check=True)
         verified=[]
         for script,report in [('audit_joint_events.py','joint-event-audit.json'),('audit_joint_settlement.py','joint-settlement-audit.json')]:
             subprocess.run([sys.executable,str(work/'scripts'/script)],cwd=work,check=True,stdout=subprocess.DEVNULL)
