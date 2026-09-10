@@ -30,6 +30,8 @@ jobs:
       - run: npm ci
       - run: pip install -r requirements.txt
       - run: npm run data:refresh
+      - name: Verify retained forecast input bytes
+        run: python scripts/verify_forecast_inputs.py
       - run: python scripts/refresh_weather.py
       - name: Collect listed quarterback roles
         continue-on-error: true
@@ -66,6 +68,8 @@ jobs:
             data/site.json
             data/ledger.json
             data/source.json
+            data/games.csv
+            data/raw/stats_team_week_*.csv
             data/publications.json
             data/weather.json
             data/weather-ledger.json
@@ -82,6 +86,7 @@ jobs:
             data/personnel-sources/
             release-recovery/deployment.json
             release-recovery/git-publication.json
+            release-recovery/forecast-inputs.json
       - name: Commit forecast archive and publication receipt
         run: |
           git config user.name 'NFL Intelligence publisher'

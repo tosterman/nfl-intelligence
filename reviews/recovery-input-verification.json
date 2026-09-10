@@ -1,0 +1,115 @@
+{
+  "editionGeneratedAt": "2026-09-10T20:51:58.138285+00:00",
+  "inputsMatch": true,
+  "files": [
+    {
+      "path": "data/games.csv",
+      "expectedSha256": "2ba81cf5c1fb3f9213ee01fc62e2e0365054403472cdd3367fd2c088b16a424f",
+      "actualSha256": "2ba81cf5c1fb3f9213ee01fc62e2e0365054403472cdd3367fd2c088b16a424f",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2010.csv",
+      "expectedSha256": "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "actualSha256": "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2011.csv",
+      "expectedSha256": "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "actualSha256": "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2012.csv",
+      "expectedSha256": "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "actualSha256": "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2013.csv",
+      "expectedSha256": "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "actualSha256": "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2014.csv",
+      "expectedSha256": "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "actualSha256": "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2015.csv",
+      "expectedSha256": "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "actualSha256": "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2016.csv",
+      "expectedSha256": "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "actualSha256": "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2017.csv",
+      "expectedSha256": "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "actualSha256": "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2018.csv",
+      "expectedSha256": "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "actualSha256": "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2019.csv",
+      "expectedSha256": "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "actualSha256": "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2020.csv",
+      "expectedSha256": "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "actualSha256": "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2021.csv",
+      "expectedSha256": "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "actualSha256": "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2022.csv",
+      "expectedSha256": "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "actualSha256": "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2023.csv",
+      "expectedSha256": "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "actualSha256": "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2024.csv",
+      "expectedSha256": "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "actualSha256": "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2025.csv",
+      "expectedSha256": "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "actualSha256": "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "matches": true
+    },
+    {
+      "path": "data/raw/stats_team_week_2026.csv",
+      "expectedSha256": "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845",
+      "actualSha256": "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845",
+      "matches": true
+    }
+  ],
+  "scope": "Input bytes only; not a numerical replay or publication receipt."
+}
