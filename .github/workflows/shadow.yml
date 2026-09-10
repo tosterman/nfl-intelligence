@@ -1,0 +1,41 @@
+name: Grade prospective score research
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ['Refresh and publish forecasts']
+    types: [completed]
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: joint-shadow-grading
+  cancel-in-progress: false
+jobs:
+  grade:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # Refresh commits its results after starting; its original head_sha is stale.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install -r requirements.txt
+      - run: python -m unittest discover -s tests -p 'test_joint_grading.py'
+      - run: python scripts/grade_joint_shadow.py
+      - name: Record source revision
+        shell: bash
+        run: git rev-parse HEAD > reviews/joint-shadow-source-commit.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: joint-shadow-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 90
+          if-no-files-found: error
+          path: |
+            reviews/joint-shadow-performance.json
+            reviews/joint-shadow-source-commit.txt
+            data/site.json
