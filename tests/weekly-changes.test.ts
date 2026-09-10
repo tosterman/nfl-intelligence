@@ -54,8 +54,16 @@ test("briefing retains links to history even when the active forecast is withhel
   const game = fixture(); game.snapshot = null;
   const html = renderToStaticMarkup(createElement(WeeklyChanges, { games: [game], week: 1, asOf: now }));
   assert.match(html, /1 matchup history cannot be compared here/);
-  assert.match(html, /\/games\/g#forecast-changes/);
+  assert.match(html, /\/games\/g\?from=%2F%3Fweek%3D1#forecast-changes/);
   assert.doesNotMatch(html, /No retained forecasts/);
+});
+test("both comparable and unavailable history links retain the selected slate view", () => {
+  const returnTo = "/?week=1&q=Rams&filter=forecast&sort=confidence";
+  for (const retained of [true, false]) {
+    const game = fixture(); if (!retained) game.snapshot = null;
+    const html = renderToStaticMarkup(createElement(WeeklyChanges, { games: [game], week: 1, asOf: now, returnTo }));
+    assert.ok(html.includes(`?from=${encodeURIComponent(returnTo)}#forecast-changes`));
+  }
 });
 test("briefing displays numerical revision and contribution precision without publication claims", () => {
   const html = renderToStaticMarkup(createElement(WeeklyChanges, { games: [fixture("g", .001)], week: 1, asOf: now }));

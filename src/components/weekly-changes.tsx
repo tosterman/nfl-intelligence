@@ -4,13 +4,14 @@ import { date, time, teams } from "@/lib/teams";
 import { snapshotTime, type Game } from "@/lib/types";
 const deltaText = (value: number) => `${value > 0 ? "+" : ""}${value.toFixed(3)}`;
 
-export function WeeklyChanges({ games, week, asOf }: { games: Game[]; week: number; asOf: number }) {
+export function WeeklyChanges({ games, week, asOf, returnTo }: { games: Game[]; week: number; asOf: number; returnTo?: string }) {
   const changes = weeklyChanges(games, asOf);
   const comparable = changes.filter((row) => row.kind === "revision").length;
   const available = changes.filter((row) => row.kind !== "unavailable");
   const unavailable = games.filter((game) =>
     changes.some((row) => row.game.id === game.id && row.kind === "unavailable") ||
     (!game.snapshot && game.history.length > 0));
+  const historyLink = (id: string) => `/games/${id}?from=${encodeURIComponent(returnTo ?? `/?week=${week}`)}#forecast-changes`;
   return (
     <details className="panel weekly-changes">
       <summary>What changed this week? <span>Week {week} · {comparable} comparable {comparable === 1 ? "revision" : "revisions"}</span></summary>
@@ -25,7 +26,7 @@ export function WeeklyChanges({ games, week, asOf }: { games: Game[]; week: numb
         <ul className="weekly-change-list">
           {available.map(({ game, current, previous, kind, note, delta, contribution }) => (
             <li key={game.id}>
-              <Link href={`/games/${game.id}#forecast-changes`}>
+              <Link href={historyLink(game.id)}>
                 {teams[game.away].name} {game.neutral ? "vs." : "at"} {teams[game.home].name} →
               </Link>
               <p>{note}</p>
@@ -48,7 +49,7 @@ export function WeeklyChanges({ games, week, asOf }: { games: Game[]; week: numb
         <summary>{unavailable.length} matchup {unavailable.length === 1 ? "history" : "histories"} cannot be compared here</summary>
         <p>Current matchup context, timing or model/source identity is missing or incompatible. The retained histories remain available:</p>
         <ul className="weekly-change-list">
-          {unavailable.map((game) => <li key={game.id}><Link href={`/games/${game.id}#forecast-changes`}>
+          {unavailable.map((game) => <li key={game.id}><Link href={historyLink(game.id)}>
             {teams[game.away].name} {game.neutral ? "vs." : "at"} {teams[game.home].name} →
           </Link></li>)}
         </ul>

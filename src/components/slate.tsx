@@ -271,7 +271,7 @@ export function Slate({
         </Link>
       </section>
       <section className="games-section">
-        <WeeklyChanges games={weekGames} week={week} asOf={initialNow} />
+        <WeeklyChanges games={weekGames} week={week} asOf={initialNow} returnTo={returnTo} />
         <div className="section-heading">
           <div>
             <h2>

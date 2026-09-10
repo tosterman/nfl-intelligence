@@ -1,0 +1,38 @@
+[
+  {
+    "engine": "chromium",
+    "returnState": {
+      "week": [
+        "1"
+      ],
+      "q": [
+        "Rams"
+      ],
+      "filter": [
+        "forecast"
+      ],
+      "sort": [
+        "confidence"
+      ]
+    },
+    "historyAnchorVisible": true
+  },
+  {
+    "engine": "webkit",
+    "returnState": {
+      "week": [
+        "1"
+      ],
+      "q": [
+        "Rams"
+      ],
+      "filter": [
+        "forecast"
+      ],
+      "sort": [
+        "confidence"
+      ]
+    },
+    "historyAnchorVisible": true
+  }
+]
