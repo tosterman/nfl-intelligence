@@ -1,5 +1,9 @@
 import { snapshotTime, type Snapshot } from "@/lib/types";
-import { compareRevisions, sameRevisionContext } from "@/lib/revisions";
+import {
+  compareRevisions,
+  sameRevisionContext,
+  contributionChanges,
+} from "@/lib/revisions";
 import { date, time, signed, pct } from "@/lib/teams";
 
 export function RevisionHistory({ history }: { history: Snapshot[] }) {
@@ -22,6 +26,8 @@ export function RevisionHistory({ history }: { history: Snapshot[] }) {
             : null;
         const home = snapshot.gameContext?.home ?? "Recorded home side";
         const away = snapshot.gameContext?.away ?? "Recorded away side";
+        const contributions =
+          diff && previous ? contributionChanges(previous, snapshot) : null;
         return (
           <details
             className="revision"
@@ -65,6 +71,63 @@ export function RevisionHistory({ history }: { history: Snapshot[] }) {
                     <dd>{signed(diff.total)}</dd>
                   </div>
                 </dl>
+                {contributions ? (
+                  <details>
+                    <summary>Explain the margin change</summary>
+                    <p className="fine">
+                      Changes in retained statistical contributions to {home}’s
+                      margin. Positive changes move the margin toward {home};
+                      negative changes toward {away}. These are model accounting
+                      terms, not proven football causes.
+                    </p>
+                    <div
+                      className="table-scroll"
+                      tabIndex={0}
+                      role="region"
+                      aria-label="Margin contribution changes"
+                    >
+                      <table className="comparison">
+                        <thead>
+                          <tr>
+                            <th scope="col">Contribution</th>
+                            <th scope="col">Previous</th>
+                            <th scope="col">Current</th>
+                            <th scope="col">Change</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {contributions.rows.map((row) => (
+                            <tr key={row.name}>
+                              <th scope="row">{row.name}</th>
+                              <td>{signed(row.before, 3)}</td>
+                              <td>{signed(row.after, 3)}</td>
+                              <td>{signed(row.change, 3)}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <th scope="row">Home margin</th>
+                            <td>{signed(previous.prediction.homeMargin, 3)}</td>
+                            <td>{signed(snapshot.prediction.homeMargin, 3)}</td>
+                            <td>{signed(contributions.marginChange, 3)}</td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                    <p className="fine">
+                      Points shown to three decimals to retain small revisions.
+                      Rounding reconciliation, when present, is arithmetic
+                      rather than a football effect.
+                    </p>
+                  </details>
+                ) : (
+                  <p className="fine">
+                    A contribution breakdown is unavailable: it requires
+                    matching model definitions and complete contributions that
+                    reconcile to both margins.
+                  </p>
+                )}
                 {diff.changes.length > 0 ? (
                   <ul className="revision-reasons">
                     {diff.changes.map((change) => (

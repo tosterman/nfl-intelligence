@@ -1,0 +1,11 @@
+# Explain forecast revisions through retained contributions
+
+The revision panel now offers an expandable margin-contribution comparison: prior value, current value, and change. Positive changes move the margin toward the recorded home side, negative changes toward the away side. The footer shows both margins and their difference. This advances the founding requirement to explain changes without inventing injury, weather, or player causes.
+
+The breakdown requires matching game context, model version, nonempty model-code identity, and configuration. Contribution definitions must match, with unique names, finite values, and nonempty descriptions. Each complete contribution array must sum to its recorded margin within 0.000001 points. The optional named rounding term may appear in only one snapshot; it is shown explicitly as arithmetic. Changed, missing, malformed, or unreconciled definitions withhold the breakdown. Source-file changes alone do not establish a football explanation.
+
+Values are displayed to three decimals, matching the current producer's contribution precision. No forecast or archived contribution was modified. Legacy snapshots lacking context cannot expose this comparison; real production examples require subsequent compatible context-bearing revisions.
+
+Ten revision tests cover direction, provenance, context, definition compatibility, missing/duplicate/nonfinite/null terms, sum reconciliation, and optional rounding. All 92 application tests passed before the final null-entry guard; affected tests and TypeScript checks were rerun after it. Independent automated review identified that defensive gap and otherwise found the accounting and wording sound.
+
+The browser evidence uses an explicitly synthetic pair rendered by the actual component into a local page with the application's styles. Chromium and WebKit at 320 and 1440 pixels verified keyboard expansion, comparison-region focus, the expected +0.400 passing contribution, and no document overflow. The 320-pixel view was visually inspected. These are fixture checks, not real historical revision evidence or production verification. Browser results are retained in `revision-contributions-browser.json`.

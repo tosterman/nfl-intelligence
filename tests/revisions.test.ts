@@ -1,6 +1,10 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { compareRevisions, sameRevisionContext } from "../src/lib/revisions";
+import {
+  compareRevisions,
+  sameRevisionContext,
+  contributionChanges,
+} from "../src/lib/revisions";
 import type { Snapshot } from "../src/lib/types";
 
 const original: Snapshot = {
@@ -118,4 +122,88 @@ test("revision comparisons require matching recorded matchup context", () => {
       }),
       false,
     );
+});
+
+function contributionPair(): [Snapshot, Snapshot] {
+  const a: Snapshot = {
+    ...original,
+    gameContext: {
+      season: 2026,
+      week: 1,
+      type: "REG",
+      home: "PHI",
+      away: "DAL",
+      kickoff: "2026-09-12T00:00:00Z",
+      venue: "Example",
+      neutral: false,
+    },
+    prediction: {
+      ...original.prediction,
+      contributions: [
+        { name: "Passing efficiency", points: 1, detail: "Prior performance" },
+        { name: "Scoring offense", points: 2, detail: "Prior scoring" },
+      ],
+    },
+  };
+  const b = structuredClone(a);
+  b.prediction.homeMargin = 3.4;
+  b.prediction.contributions[0].points = 1.4;
+  return [a, b];
+}
+
+test("contribution deltas reconcile to margin change and ignore input order", () => {
+  const [a, b] = contributionPair();
+  b.prediction.contributions.reverse();
+  const result = contributionChanges(a, b);
+  assert.ok(result);
+  assert.equal(result.rows[0].name, "Passing efficiency");
+  assert.ok(
+    Math.abs(result.rows.reduce((sum, r) => sum + r.change, 0) - 0.4) < 1e-9,
+  );
+});
+
+test("incompatible definitions or unreconciled contributions are withheld", () => {
+  for (const kind of [
+    "context",
+    "code",
+    "config",
+    "version",
+    "detail",
+    "missing",
+    "duplicate",
+    "nonfinite",
+    "null-term",
+    "sum",
+  ]) {
+    const [a, b] = contributionPair();
+    if (kind === "context") b.gameContext!.venue = "Other";
+    if (kind === "code") b.modelCodeHash = undefined;
+    if (kind === "config") b.configuration = { changed: true };
+    if (kind === "version") b.modelVersion = "v2";
+    if (kind === "detail")
+      b.prediction.contributions[0].detail = "Different definition";
+    if (kind === "missing") b.prediction.contributions.pop();
+    if (kind === "duplicate")
+      b.prediction.contributions.push(b.prediction.contributions[0]);
+    if (kind === "nonfinite") b.prediction.contributions[0].points = NaN;
+    if (kind === "null-term")
+      b.prediction.contributions[0] =
+        null as unknown as (typeof b.prediction.contributions)[number];
+    if (kind === "sum") b.prediction.homeMargin = 9;
+    assert.equal(contributionChanges(a, b), null, kind);
+  }
+});
+
+test("optional rounding reconciliation is preserved as arithmetic, not a football cause", () => {
+  const [a, b] = contributionPair();
+  b.prediction.contributions.push({
+    name: "Rounding reconciliation",
+    points: 0.001,
+    detail: "Reconciles displayed rounded contributions.",
+  });
+  b.prediction.homeMargin = 3.401;
+  const result = contributionChanges(a, b);
+  assert.ok(result);
+  assert.equal(result.rows.at(-1)?.name, "Rounding reconciliation");
+  assert.equal(result.rows.at(-1)?.before, 0);
 });

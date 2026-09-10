@@ -25,6 +25,76 @@ function stable(value: unknown): string {
   return JSON.stringify(value) ?? "undefined";
 }
 
+export function contributionChanges(previous: Snapshot, current: Snapshot) {
+  if (
+    !sameRevisionContext(previous, current) ||
+    !previous.modelCodeHash ||
+    previous.modelCodeHash !== current.modelCodeHash ||
+    previous.modelVersion !== current.modelVersion ||
+    !previous.configuration ||
+    !current.configuration ||
+    stable(previous.configuration) !== stable(current.configuration)
+  )
+    return null;
+  const rounding = "Rounding reconciliation";
+  const before = previous.prediction.contributions,
+    after = current.prediction.contributions;
+  for (const [terms, margin] of [
+    [before, previous.prediction.homeMargin],
+    [after, current.prediction.homeMargin],
+  ] as const) {
+    if (
+      !Array.isArray(terms) ||
+      !terms.length ||
+      !Number.isFinite(margin) ||
+      terms.some(
+        (t) =>
+          !t ||
+          typeof t !== "object" ||
+          typeof t.name !== "string" ||
+          !t.name ||
+          typeof t.detail !== "string" ||
+          !t.detail ||
+          !Number.isFinite(t.points),
+      ) ||
+      new Set(terms.map((t) => t.name)).size !== terms.length ||
+      Math.abs(terms.reduce((sum, t) => sum + t.points, 0) - margin) > 1e-6
+    )
+      return null;
+  }
+  const a = new Map(before.map((t) => [t.name, t])),
+    b = new Map(after.map((t) => [t.name, t]));
+  const names = [...new Set([...a.keys(), ...b.keys()])];
+  for (const name of names) {
+    if (name !== rounding && (!a.has(name) || !b.has(name))) return null;
+    if (
+      a.has(name) &&
+      b.has(name) &&
+      a.get(name)!.detail !== b.get(name)!.detail
+    )
+      return null;
+  }
+  const rows = names.map((name) => ({
+    name,
+    before: a.get(name)?.points ?? 0,
+    after: b.get(name)?.points ?? 0,
+    change: (b.get(name)?.points ?? 0) - (a.get(name)?.points ?? 0),
+  }));
+  rows.sort((x, y) =>
+    x.name === rounding
+      ? 1
+      : y.name === rounding
+        ? -1
+        : Math.abs(y.change) - Math.abs(x.change) ||
+          x.name.localeCompare(y.name),
+  );
+  return {
+    rows,
+    marginChange:
+      current.prediction.homeMargin - previous.prediction.homeMargin,
+  };
+}
+
 export function compareRevisions(previous: Snapshot, current: Snapshot) {
   if (previous.gameId !== current.gameId)
     throw new Error("Cannot compare different games");
