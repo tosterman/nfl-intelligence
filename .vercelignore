@@ -8,6 +8,7 @@ data/publications.json
 data/weather-ledger.json
 data/weather-sources/
 data/weather-location-sources/
+data/quarterback-sources/
 reviews/
 tests/
 scripts/

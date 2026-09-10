@@ -4,6 +4,7 @@ import { personnelForGame } from "@/lib/personnel";
 import type { Game } from "@/lib/types";
 import { teams, date, time } from "@/lib/teams";
 import { PersonnelExpiry } from "./personnel-expiry";
+import { QuarterbackContext } from "./quarterback-context";
 
 export function PersonnelPanel({ game }: { game: Game }) {
   const selected = personnelForGame(snapshot, game);
@@ -18,6 +19,7 @@ export function PersonnelPanel({ game }: { game: Game }) {
         acquired weekly file, not confirmed lineups. Personnel does not adjust
         this model’s forecast.
       </p>
+      <QuarterbackContext game={game} />
       {collection.status !== "ok" && (
         <p role="status">
           Latest collection failed. Any entries below come from the previous
