@@ -2,6 +2,14 @@
 
 Verdict: implemented research edition; public operational and commercial launch not accepted. Source: https://github.com/tosterman/nfl-intelligence. Vercel deployment creation succeeded, but its URLs require login and the connected account returns 404 for deployment status. No READY state, public rendering, analytics ingestion or prospective publication receipt is claimed.
 
+## Verified release evidence
+
+Code commit: 7c0474b5764656b4996ffe38522636203e262efb. [GitHub CI](https://github.com/tosterman/nfl-intelligence/actions/runs/34490239007) passed all 37 Python and six TypeScript tests, production build and production dependency audit. Local production build also passed; audit reported zero vulnerabilities. A final local browser pass fixed and rechecked an SVG title hydration mismatch on the calibration chart. No hosted render or load-test result is implied.
+
+Latest production submission: dpl_J1BZvohQYVUqJy8eG4rmHXKtVVZk, created as INITIALIZING. [Vercel inspector](https://vercel.com/khnum/nfl-intelligence/J1BZvohQYVUqJy8eG4rmHXKtVVZk). Alias https://nfl-intelligence-khnum.vercel.app redirected to Vercel login on anonymous browser check. Deployment lookup through the connected team returned 404. The 42-file submitted release contains the verified code and current artifact. Public receipt list remains empty.
+
+The exact-release verifier accommodates JavaScript integral-number serialization while retaining canonical local snapshot hashes. Recovery bundles are retained for 90 days in the refresh workflow; concurrent archive pushes retry without force and fail closed on merge conflict. These are tested code paths, not a demonstrated successful production refresh.
+
 ## Founding document coverage
 
 | Sections | Implemented evidence | Remaining requirement |
