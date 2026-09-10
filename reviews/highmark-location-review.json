@@ -1,0 +1,41 @@
+{
+  "retrievedAt": "2026-09-10T22:14:57.641801+00:00",
+  "mapDataSource": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3Bnwr%5B%22name%22~%22Highmark+Stadium%22%5D%2842.76%2C-78.81%2C42.79%2C-78.77%29%3Bout+tags+bb%3B",
+  "mapDataHash": "754a2f6270056b7e294c9ff4a3dddea60611a3eb8920a07c4f6b0c24f0b2008a",
+  "elements": [
+    {
+      "type": "way",
+      "id": 1339149058,
+      "bounds": {
+        "minlat": 42.7718387,
+        "minlon": -78.7935739,
+        "maxlat": 42.7742458,
+        "maxlon": -78.7908082
+      },
+      "tags": {
+        "addr:city": "Orchard Park",
+        "addr:housenumber": "10",
+        "addr:postcode": "14127",
+        "addr:state": "NY",
+        "addr:street": "Bills Plaza",
+        "building": "yes",
+        "leisure": "stadium",
+        "name": "Highmark Stadium",
+        "sport": "american_football",
+        "start_date": "2026",
+        "wikidata": "Q16251517",
+        "wikipedia": "en:Highmark Stadium"
+      }
+    }
+  ],
+  "status": "withheld-address-unresolved",
+  "productionMapChanged": false,
+  "officialAddressObservation": {
+    "url": "https://www.thehighmarkstadium.com/",
+    "address": "One Bills Plaza, Orchard Park, NY 14127",
+    "evidenceType": "search-index excerpt only",
+    "directFetch": "Root redirect loop; /home and /parking-transportation returned HTTP 404. Full source page not retained."
+  },
+  "decision": "OSM way 1339149058 has start_date 2026 and 10 Bills Plaza. Official indexed address says One Bills Plaza. Do not treat these house numbers as equivalent or substitute the prior stadium.",
+  "nextEvidenceNeeded": "Directly retrievable current stadium address or primary geospatial reference reconciling the 2026 venue."
+}
