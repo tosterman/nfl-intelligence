@@ -1,0 +1,79 @@
+"""Read-only production probes. No odds acquisition or analytics events are sent."""
+import json,re,time
+from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime,timezone
+from pathlib import Path
+from urllib.request import Request,build_opener,HTTPRedirectHandler
+from urllib.error import HTTPError,URLError
+
+ROOT=Path(__file__).resolve().parents[1]
+ORIGIN='https://nfl-intelligence-one.vercel.app'
+ENDPOINTS={'forecasts':'/api/status','odds':'/api/odds-status'}
+
+def age(value,now):
+    if not isinstance(value,str):raise ValueError('Missing acquisition timestamp')
+    try:at=datetime.fromisoformat(value.replace('Z','+00:00'))
+    except ValueError:raise ValueError('Invalid acquisition timestamp') from None
+    if at.tzinfo is None:raise ValueError('Timestamp lacks timezone')
+    return (now-at).total_seconds()/3600
+
+def validate_health(kind,http_status,payload,now):
+    if http_status!=200 or not isinstance(payload,dict) or payload.get('status')!='ok':
+        raise ValueError('Endpoint did not report healthy HTTP 200')
+    if kind=='odds':
+        if payload.get('maximumAgeHours')!=6 or not 0<=age(payload.get('fetchedAt'),now)<=6:
+            raise ValueError('Odds acquisition is missing, stale or future-dated')
+    elif kind=='forecasts':
+        checks=payload.get('checks')
+        if not isinstance(checks,list) or len(checks)!=4 or any(not isinstance(c,dict) for c in checks):
+            raise ValueError('Forecast health checks are incomplete')
+        names=[c.get('name') for c in checks]
+        if any(not isinstance(n,str) for n in names) or len(set(names))!=4 or not {'Model edition','Schedule and results'}.issubset(names):
+            raise ValueError('Forecast health identities are invalid')
+        years=sorted(int(n[:4]) for n in names if re.fullmatch(r'\d{4} efficiency source',n))
+        season=payload.get('season')
+        if type(season) is not int or not now.year-1<=season<=now.year or years!=[season-1,season]:
+            raise ValueError('Recent efficiency sources are missing')
+        if any(c.get('status')!='ok' or not -5/60<=age(c.get('retrievedAt'),now)<=30 for c in checks):
+            raise ValueError('A forecast input is invalid or older than thirty hours')
+        edition=next(c['retrievedAt'] for c in checks if c['name']=='Model edition')
+        if age(payload.get('generatedAt'),now)!=age(edition,now) or not isinstance(payload.get('modelVersion'),str) or not payload['modelVersion'] or not re.fullmatch(r'[a-f0-9]{64}',payload.get('sourceHash','')):
+            raise ValueError('Forecast identity is incomplete or inconsistent')
+    else:raise ValueError('Unknown probe')
+
+class NoRedirect(HTTPRedirectHandler):
+    def redirect_request(self,req,fp,code,msg,headers,newurl):return None
+
+def probe(kind):
+    attempts=[]
+    for attempt in range(2):
+        result={'observedAt':datetime.now(timezone.utc).isoformat(),'httpStatus':None,'healthy':False}
+        try:
+            request=Request(ORIGIN+ENDPOINTS[kind],headers={'User-Agent':'NFL-Intelligence-Health/1.0','Cache-Control':'no-cache'})
+            with build_opener(NoRedirect()).open(request,timeout=10) as response:
+                result['httpStatus']=response.status
+                raw=response.read(100001)
+                if len(raw)>100000:raise ValueError('Health response exceeded limit')
+                payload=json.loads(raw)
+                validate_health(kind,response.status,payload,datetime.now(timezone.utc))
+                result.update(healthy=True,reason='Verified status and acquisition times')
+        except HTTPError as error:
+            result.update(httpStatus=error.code,reason='Unhealthy HTTP response or redirect')
+        except (URLError,TimeoutError,OSError):result['reason']='Network request failed'
+        except (ValueError,TypeError,KeyError):result['reason']='Invalid, incomplete or stale health payload'
+        attempts.append(result)
+        if result['healthy']:break
+        if attempt==0:time.sleep(2)
+    return {'endpoint':ENDPOINTS[kind],'healthy':attempts[-1]['healthy'],'attempts':attempts}
+
+def main():
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        results=dict(zip(ENDPOINTS,executor.map(probe,ENDPOINTS)))
+    report={'checkedAt':datetime.now(timezone.utc).isoformat(),'healthy':all(r['healthy'] for r in results.values()),'checks':results}
+    output=ROOT/'release-recovery'/'health-report.json'
+    output.parent.mkdir(exist_ok=True)
+    output.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+    print(json.dumps(report,indent=2))
+    return 0 if report['healthy'] else 1
+
+if __name__=='__main__':raise SystemExit(main())

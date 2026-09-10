@@ -6,6 +6,7 @@ export function GET() {
   return Response.json(
     {
       ...health,
+      season: site.season,
       generatedAt: site.generatedAt,
       ageHours: health.checks[0].ageHours,
       modelVersion: site.modelVersion,
