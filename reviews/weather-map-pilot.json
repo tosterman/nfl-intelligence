@@ -1,0 +1,154 @@
+{
+  "retrievedAt": "2026-09-10T18:23:13.256470+00:00",
+  "sourceUrl": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3B%28nwr%5B%22leisure%22%3D%22stadium%22%5D%5B%22name%22%3D%22Gillette+Stadium%22%5D%3Bnwr%5B%22leisure%22%3D%22stadium%22%5D%5B%22name%22%3D%22Paycor+Stadium%22%5D%3Bnwr%5B%22leisure%22%3D%22stadium%22%5D%5B%22name%22%3D%22Hard+Rock+Stadium%22%5D%3Bnwr%5B%22leisure%22%3D%22stadium%22%5D%5B%22name%22%3D%22Huntington+Bank+Field%22%5D%3Bnwr%5B%22leisure%22%3D%22stadium%22%5D%5B%22name%22%3D%22Northwest+Stadium%22%5D%3B%29%3Bout+tags+bb%3B",
+  "sourceHash": "13673a0a3925aafee9dd44f157a587ccabce216b885e1599b35fa6706ab6be0d",
+  "response": {
+    "version": 0.6,
+    "generator": "Overpass API 0.7.62.11 87bfad18",
+    "osm3s": {
+      "timestamp_osm_base": "2026-09-10T18:21:06Z",
+      "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+    },
+    "elements": [
+      {
+        "type": "way",
+        "id": 24617361,
+        "bounds": {
+          "minlat": 38.906483,
+          "minlon": -76.8662496,
+          "maxlat": 38.9088769,
+          "maxlon": -76.862855
+        },
+        "tags": {
+          "addr:city": "Landover",
+          "addr:housenumber": "1600",
+          "addr:postcode": "20785",
+          "addr:state": "MD",
+          "addr:street": "Ring Road",
+          "capacity": "62000",
+          "ele": "71",
+          "gnis:feature_id": "2013939",
+          "leisure": "stadium",
+          "name": "Northwest Stadium",
+          "operator": "Washington Commanders",
+          "sport": "american_football",
+          "website": "https://northweststadium.com/",
+          "wikidata": "Q583085",
+          "wikipedia": "en:Northwest Stadium"
+        }
+      },
+      {
+        "type": "way",
+        "id": 41020147,
+        "bounds": {
+          "minlat": 41.5048626,
+          "minlon": -81.7012646,
+          "maxlat": 41.5072425,
+          "maxlon": -81.6979528
+        },
+        "tags": {
+          "addr:city": "Cleveland",
+          "addr:housenumber": "100",
+          "addr:street": "Alfred Lerner Way",
+          "alt_name": "Cleveland Browns Stadium",
+          "leisure": "stadium",
+          "loc_name": "Factory of Sadness",
+          "name": "Huntington Bank Field",
+          "old_name": "FirstEnergy Stadium",
+          "sport": "american_football",
+          "start_date": "1999",
+          "wikidata": "Q1100756",
+          "wikipedia": "en:Huntington Bank Field"
+        }
+      },
+      {
+        "type": "way",
+        "id": 171419981,
+        "bounds": {
+          "minlat": 25.9563253,
+          "minlon": -80.2406505,
+          "maxlat": 25.9595067,
+          "maxlon": -80.2370264
+        },
+        "tags": {
+          "addr:city": "Miami Gardens",
+          "addr:housenumber": "347",
+          "addr:postcode": "33056",
+          "addr:state": "FL",
+          "addr:street": "Don Shula Drive",
+          "capacity:american_football": "65000",
+          "capacity:tennis": "14000",
+          "gnis:feature_id": "304246",
+          "leisure": "stadium",
+          "name": "Hard Rock Stadium",
+          "old_name": "Pro Player Stadium, Dolphin Stadium, Sun Life Stadium, Miami Stadium",
+          "phone": "+13059438000",
+          "sport": "american_football;tennis",
+          "start_date": "1987",
+          "tripadvisor": "12703806",
+          "website": "https://www.hardrockstadium.com/",
+          "wikidata": "Q864339",
+          "wikimedia_commons": "Category:Hard Rock Stadium",
+          "wikipedia": "en:Hard Rock Stadium"
+        }
+      },
+      {
+        "type": "way",
+        "id": 210540615,
+        "bounds": {
+          "minlat": 39.09421,
+          "minlon": -84.5175382,
+          "maxlat": 39.0966339,
+          "maxlon": -84.5145272
+        },
+        "tags": {
+          "addr:city": "Cincinnati",
+          "addr:housenumber": "1",
+          "addr:postcode": "45202",
+          "addr:state": "OH",
+          "addr:street": "Paycor Stadium",
+          "ele": "151",
+          "gnis:feature_id": "2013984",
+          "leisure": "stadium",
+          "loc_name": "PBS",
+          "name": "Paycor Stadium",
+          "name:etymology": "Paycor",
+          "name:etymology:wikidata": "Q107175522",
+          "note": "Please discuss this site with local mappers before modifying how these ways are structured and tagged. There is a reason for so many ways and multipolygons.",
+          "old_name": "Paul Brown Stadium",
+          "operator": "Cincinnati Bengals",
+          "start_date": "2000",
+          "wikidata": "Q1632294",
+          "wikipedia": "en:Paycor Stadium"
+        }
+      },
+      {
+        "type": "relation",
+        "id": 18511570,
+        "bounds": {
+          "minlat": 42.0895542,
+          "minlon": -71.2660309,
+          "maxlat": 42.0922092,
+          "maxlon": -71.2624951
+        },
+        "tags": {
+          "addr:city": "Foxborough",
+          "addr:housenumber": "1",
+          "addr:postcode": "02035",
+          "addr:state": "MA",
+          "addr:street": "Patriot Place",
+          "alt_name": "Boston Stadium",
+          "leisure": "stadium",
+          "name": "Gillette Stadium",
+          "old_name": "CMGI Field",
+          "operator": "New England Patriots",
+          "sport": "american_football;soccer",
+          "start_date": "2002",
+          "type": "multipolygon",
+          "wikidata": "Q373355",
+          "wikipedia": "en:Gillette Stadium"
+        }
+      }
+    ]
+  }
+}

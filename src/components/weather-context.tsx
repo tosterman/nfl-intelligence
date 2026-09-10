@@ -74,6 +74,28 @@ export function WeatherContext({
             >
               National Weather Service source ↗
             </a>
+            {record.locationEvidence?.status === "confirmed-osm-stadium" && (
+              <p className="fine">
+                Stadium map location:{" "}
+                <a
+                  href={record.locationEvidence.mapSource}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  OpenStreetMap contributors
+                </a>{" "}
+                (
+                <a
+                  href="https://www.openstreetmap.org/copyright"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  ODbL
+                </a>
+                ). The lookup uses the mapped stadium bounds, not a field
+                sensor.
+              </p>
+            )}
             <p className="hash">{record.sourceHash}</p>
             <p className="fine">
               The linked source updates over time; the fingerprint identifies

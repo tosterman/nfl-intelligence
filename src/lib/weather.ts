@@ -15,6 +15,7 @@ export type WeatherRecord = {
   summary?: string | null;
   sourceUrl?: string;
   sourceHash?: string;
+  locationEvidence?: { status?: string; mapSource?: string };
 };
 export function weatherStatus(
   record: WeatherRecord | undefined,

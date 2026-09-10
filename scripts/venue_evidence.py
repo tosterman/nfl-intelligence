@@ -8,6 +8,22 @@ def words(value):
     return [ABBREVIATIONS.get(w,w) for w in re.findall(r'[A-Z0-9]+',value.upper())]
 
 def validate_venue(venue):
+    if venue.get('status')=='confirmed-osm-stadium':
+        element=venue['mapElement'];tags=element['tags'];bounds=element['bounds']
+        address=venue['address'].split(',')
+        if tags.get('leisure')!='stadium' or element.get('type') not in ['way','relation'] or len(address)!=3:
+            raise ValueError('Invalid stadium map feature')
+        street=tags.get('addr:housenumber','')+' '+tags.get('addr:street','')
+        state=words(address[2])[0]
+        if words(street)!=words(address[0]) or words(tags.get('addr:city',''))!=words(address[1]) or venue['pointState']!=state or tags.get('addr:state',state)!=state:
+            raise ValueError('Map address does not match official venue location')
+        for axis,name,limit in [('lat','latitude',90),('lon','longitude',180)]:
+            lo,hi=bounds['min'+axis],bounds['max'+axis]
+            if any(type(v) not in (int,float) or not math.isfinite(v) for v in [lo,hi,venue[name]]) or not -limit<=lo<hi<=limit or hi-lo>.05 or venue[name]!=(lo+hi)/2:
+                raise ValueError('Invalid stadium bounds or derived coordinates')
+        if venue.get('license')!='ODbL-1.0' or venue.get('attribution')!='OpenStreetMap contributors':
+            raise ValueError('Map attribution missing')
+        return
     if venue.get('status')!='confirmed-address-geocode':return
     matches=venue.get('geocodeMatches',[])
     if len(matches)!=1:raise ValueError('Venue requires one recorded Census match')

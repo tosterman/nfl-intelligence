@@ -57,6 +57,9 @@ def acquire_game(game,venues,now,fetch=read_nws):
 
 def main():
     site=json.loads((ROOT/'data/site.json').read_text());venues=json.loads((ROOT/'data/weather-venues.json').read_text())
+    osm=json.loads((ROOT/'data/weather-osm-venues.json').read_text())
+    if any(venues[name].get('status')!='unavailable' for name in set(venues)&set(osm)):raise ValueError('Conflicting venue evidence sources')
+    venues.update(osm)
     for venue in venues.values():validate_venue(venue)
     now=datetime.now(timezone.utc);games={};path=ROOT/'data/weather-ledger.json'
     ledger=json.loads(path.read_text()) if path.exists() else []

@@ -1,10 +1,31 @@
-import json,sys,unittest
+import json,sys,unittest,gzip,hashlib,copy
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from venue_evidence import validate_venue
 ROOT=Path(__file__).resolve().parents[1]
 
 class VenueEvidenceTests(unittest.TestCase):
+    def test_osm_bounds_and_source_bytes_are_reproducible(self):
+        for name,v in json.loads((ROOT/'data/weather-osm-venues.json').read_text()).items():
+            validate_venue(v)
+            for key in ['mapDataHash','pointHash']:
+                raw=gzip.decompress((ROOT/'data/weather-location-sources'/(v[key]+'.json.gz')).read_bytes())
+                self.assertEqual(hashlib.sha256(raw).hexdigest(),v[key])
+                payload=json.loads(raw)
+                if key=='mapDataHash':self.assertIn(v['mapElement'],payload['elements'])
+                else:
+                    self.assertEqual(payload['properties']['relativeLocation']['properties']['state'],v['pointState'])
+                    self.assertEqual(payload['geometry']['type'],'Point')
+                    self.assertEqual(payload['geometry']['coordinates'],[round(v['longitude'],4),round(v['latitude'],4)])
+            self.assertEqual(v['mapElement']['tags']['name'],name)
+
+    def test_osm_wrong_address_or_shifted_center_is_rejected(self):
+        original=json.loads((ROOT/'data/weather-osm-venues.json').read_text())['Gillette Stadium']
+        for field,value in [('latitude',0),('attribution',''),('pointState','FL')]:
+            with self.assertRaises(ValueError):validate_venue(original|{field:value})
+        changed=copy.deepcopy(original);changed['mapElement']['tags']['addr:street']='Patriot Circle'
+        with self.assertRaisesRegex(ValueError,'address'):validate_venue(changed)
+
     def test_every_published_census_point_matches_its_evidence(self):
         venues=json.loads((ROOT/'data/weather-venues.json').read_text())
         self.assertTrue(any(v.get('status')=='confirmed-address-geocode' for v in venues.values()))
