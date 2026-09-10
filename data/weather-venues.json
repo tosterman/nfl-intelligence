@@ -249,16 +249,25 @@
     "matchedAddress": "1265 LOMBARDI AVE, GREEN BAY, WI, 54304"
   },
   "Soldier Field": {
-    "address": "1410 S Museum Campus Drive, Chicago, IL 60605",
-    "addressSource": "https://www.soldierfield.com/stadium-info/contact-us",
-    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1410+S+Museum+Campus+Drive%2C+Chicago%2C+IL+60605&benchmark=Public_AR_Current&format=json",
-    "retrievedAt": "2026-09-10T17:37:43.521180+00:00",
-    "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
-    "geocodeBenchmark": "Public_AR_Current",
-    "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
-    "geocodeMatches": [],
+    "address": "1410 S Special Olympics Drive, Chicago, IL 60605",
+    "addressSource": "https://www.soldierfield.com/assets/doc/Soldier-Field-Private-Event-Rental-3456da4a50.pdf",
+    "addressSourceHash": "3456da4a50ff77ee4e3dbcac5047f85b7c67fcd8eb1ca7613bc41a8aee36f5b9",
+    "addressSourcePage": 14,
+    "addressCheckedAt": "2026-09-10",
     "status": "unavailable",
-    "reason": "US Census returned no unique match for the official address; coordinates withheld."
+    "reason": "Updated operator address awaiting verified map reconciliation.",
+    "previousAddressEvidence": {
+      "address": "1410 S Museum Campus Drive, Chicago, IL 60605",
+      "addressSource": "https://www.soldierfield.com/stadium-info/contact-us",
+      "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1410+S+Museum+Campus+Drive%2C+Chicago%2C+IL+60605&benchmark=Public_AR_Current&format=json",
+      "retrievedAt": "2026-09-10T17:37:43.521180+00:00",
+      "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+      "geocodeBenchmark": "Public_AR_Current",
+      "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+      "geocodeMatches": [],
+      "status": "unavailable",
+      "reason": "US Census returned no unique match for the official address; coordinates withheld."
+    }
   },
   "M&T Bank Stadium": {
     "address": "1101 Russell Street, Baltimore, MD 21230",

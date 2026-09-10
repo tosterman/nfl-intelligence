@@ -1,0 +1,62 @@
+{
+  "retrievedAt": "2026-09-10T19:32:14.161064+00:00",
+  "mapDataSource": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3B%28nwr%5B%22leisure%22%3D%22stadium%22%5D%5B%22name%22%3D%22Soldier+Field%22%5D%3B%29%3Bout+tags+bb%3B",
+  "mapDataHash": "22dc507ef0ad31cdb65ffca414f97976336f72dfd450ad2a5edba7b46d090634",
+  "candidates": {
+    "Soldier Field": {
+      "address": "1410 S Special Olympics Drive, Chicago, IL 60605",
+      "addressSource": "https://www.soldierfield.com/assets/doc/Soldier-Field-Private-Event-Rental-3456da4a50.pdf",
+      "status": "confirmed-osm-stadium",
+      "latitude": 41.86247025,
+      "longitude": -87.616724,
+      "coordinateMeaning": "Midpoint of a named OpenStreetMap stadium bounding box, reconciled to the official address. Area forecast lookup only; not surveyed field coordinates.",
+      "mapSource": "https://www.openstreetmap.org/way/24587933",
+      "mapElement": {
+        "type": "way",
+        "id": 24587933,
+        "bounds": {
+          "minlat": 41.8608671,
+          "minlon": -87.618043,
+          "maxlat": 41.8640734,
+          "maxlon": -87.615405
+        },
+        "tags": {
+          "addr:city": "Chicago",
+          "addr:housenumber": "1410",
+          "addr:postcode": "60605",
+          "addr:state": "IL",
+          "addr:street": "South Special Olympics Drive",
+          "addr:street:name": "Special Olympics",
+          "addr:street:prefix": "South",
+          "addr:street:type": "Drive",
+          "chicago:building_id": "836579",
+          "leisure": "stadium",
+          "name": "Soldier Field",
+          "operator": "ASM Global",
+          "owner": "Chicago Park District",
+          "sport": "american_football",
+          "start_date": "1924",
+          "website": "https://www.soldierfield.com/",
+          "wikidata": "Q1132413",
+          "wikipedia": "en:Soldier Field"
+        }
+      },
+      "mapDataSource": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3B%28nwr%5B%22leisure%22%3D%22stadium%22%5D%5B%22name%22%3D%22Soldier+Field%22%5D%3B%29%3Bout+tags+bb%3B",
+      "mapDataHash": "22dc507ef0ad31cdb65ffca414f97976336f72dfd450ad2a5edba7b46d090634",
+      "retrievedAt": "2026-09-10T19:32:14.161064+00:00",
+      "attribution": "OpenStreetMap contributors",
+      "license": "ODbL-1.0",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "pointUrl": "https://api.weather.gov/points/41.8625,-87.6167",
+      "pointHash": "9bab7ffbd062773bd05439e6bed6cc76a85b665ff286a1652dd33a5678f30ad4",
+      "pointCheckedAt": "2026-09-10T19:32:14.259964+00:00",
+      "pointState": "IL",
+      "pointCity": "Chicago",
+      "forecastHourly": "https://api.weather.gov/gridpoints/LOT/76,72/forecast/hourly",
+      "addressSourceHash": "3456da4a50ff77ee4e3dbcac5047f85b7c67fcd8eb1ca7613bc41a8aee36f5b9",
+      "addressSourcePage": 14,
+      "addressCheckedAt": "2026-09-10"
+    }
+  },
+  "rejected": {}
+}

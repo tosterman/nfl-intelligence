@@ -1,0 +1,9 @@
+# Soldier Field weather location
+
+The previous lookup used 1410 S Museum Campus Drive from the stadium contact page and failed the strict address match. That same page's footer lists Special Olympics Drive. The operator's [private event guide](https://www.soldierfield.com/assets/doc/Soldier-Field-Private-Event-Rental-3456da4a50.pdf), PDF page 14 (printed page 13), explicitly gives 1410 S. Special Olympics Drive, Chicago, IL 60605. Downloaded bytes: 15,914,107; SHA-256 `3456da4a50ff77ee4e3dbcac5047f85b7c67fcd8eb1ca7613bc41a8aee36f5b9`. The old address/geocoder evidence is retained as `previousAddressEvidence`; the validator was not relaxed.
+
+The named [OSM stadium way 24587933](https://www.openstreetmap.org/way/24587933) has matching house number, street, municipality, state and a bounded stadium geometry. Its bounds midpoint is 41.86247025, -87.616724. This is an area-weather lookup point, not a surveyed playing-field center. The NWS rounded-coordinate response identifies Chicago, Illinois and resolves to LOT grid 76,72. OSM attribution and ODbL licensing are retained with the record.
+
+Five venue-evidence tests reproduce map and point response hashes, object identity, coordinates and address validation across all accepted records; seven weather tests pass. A live hourly endpoint probe returned 156 periods through September 17 at 02:00 CDT, archived as `cdca608e4629178c41abf80009a9312c2a52825bc378d239161c62604d44816d.json.gz`. Minnesota at Chicago is September 20, outside that coverage. No forecast is invented or published for it now. The existing scheduled collector will evaluate the location when the game enters its collection window.
+
+Verified domestic location coverage increases from sixteen to seventeen. This does not add numerical weather effects, international coverage or proof of a future successful game forecast. Raw OSM and NWS evidence remains in the attributed location-source archive.
