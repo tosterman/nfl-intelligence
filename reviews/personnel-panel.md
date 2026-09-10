@@ -1,0 +1,9 @@
+# Public personnel context — September 10, 2026
+
+Matchup pages now render a two-team practice/report panel from the verified personnel snapshot. The server sends only matching game rows as rendered content. Source acquisition and asset update times are visible; individual report dates remain explicitly unknown. Practice participation, game designation and their respective injury fields are separate. Empty designations read Unreported, and missing team rows read unknown availability. No numerical personnel adjustment is claimed.
+
+The selector rejects stale/future/malformed source times and closes at kickoff. A browser expiry boundary checks every second and on visibility changes, hiding rows after expiry or kickoff; background timer throttling can defer a check until the page becomes visible. Postseason schedule phases map to POST. The independent collection failure flag is displayed even if a prior snapshot remains within its age window. The existing headline/evidence labels now say personnel and weather are not in the model, avoiding contradiction with their context panels.
+
+All 41 TypeScript tests pass. Production build passed. Adversarial review caught live-data-dependent tests that would fail as Week 1 expired; fixed deterministic fixtures now cover scope, blank designations, playoff matching, source age, kickoff, final status and future timestamps. The production page is dynamic. Local browser inspection of Bears/Panthers verified six source-backed entries, timing copy and desktop two-column layout. No new physical-mobile or full accessibility certification is claimed.
+
+The provider does not establish individual report dates or complete coverage. This module shows acquired file entries, not confirmed starters or a complete current injury report. Next requirements include dated reports, deeper player impact validation and independent personnel collection monitoring.

@@ -12,6 +12,7 @@ import { fairMoneyline } from "@/lib/math";
 import { TeamMark } from "@/components/brand";
 import { RevisionHistory } from "@/components/revision-history";
 import { WeatherContext } from "@/components/weather-context";
+import { PersonnelPanel } from "@/components/personnel-panel";
 export function generateStaticParams() {
   return site.games.map((g) => ({ id: g.id }));
 }
@@ -154,7 +155,7 @@ export default async function GamePage({
             <div className="kpi">
               <small>Model confidence</small>
               <strong>Limited</strong>
-              <span>Personnel & weather unavailable</span>
+              <span>Personnel & weather not in model</span>
             </div>
           </div>
           <div className="detail-grid">
@@ -344,7 +345,7 @@ export default async function GamePage({
                 </div>
                 <div className="availability">
                   <span>Player availability</span>
-                  <span>Unknown</span>
+                  <span>Not in model</span>
                 </div>
                 <div className="availability">
                   <span>Trench & scheme matchup</span>
@@ -404,6 +405,7 @@ export default async function GamePage({
               </section>
             </div>
           </div>
+          <PersonnelPanel game={g} />
           <MarketHistoryPanel
             history={marketData![1]}
             home={g.home}
