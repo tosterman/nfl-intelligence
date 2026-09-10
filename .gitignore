@@ -10,3 +10,4 @@ data/games.csv
 data/raw/
 *.tsbuildinfo
 founding.docx
+.tools/

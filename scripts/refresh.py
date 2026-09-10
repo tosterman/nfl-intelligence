@@ -1,5 +1,5 @@
 """Production publication artifact builder; all persisted forecasts are append-only."""
-import csv,hashlib,json,math,os,subprocess,urllib.request
+import csv,hashlib,json,math,os,subprocess,tempfile,urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime,timezone
 from pathlib import Path
@@ -15,18 +15,40 @@ CONFIG={'scoreHalfLifeDays':180,'scoreRidge':6,'efficiencyHalfLifeDays':90,'effi
 
 def canonical(value):return json.dumps(value,sort_keys=True,separators=(',',':'))
 def digest(value):return hashlib.sha256(canonical(value).encode()).hexdigest()
+def validate_schedule(rows):
+    seen=set()
+    for r in rows:
+        if not r['game_id'] or r['game_id'] in seen:raise ValueError('Duplicate or empty game identifier')
+        seen.add(r['game_id'])
+        if r['home_team'] not in base.IDX or r['away_team'] not in base.IDX or r['home_team']==r['away_team']:raise ValueError('Invalid matchup')
+        datetime.fromisoformat(r['gameday'])
+        if r['gametime']:base.kickoff(r)
+        scores=[r['home_score'],r['away_score']]
+        if (scores[0] is None)!=(scores[1] is None):raise ValueError('Incomplete final score')
+        if any(v is not None and (not math.isfinite(v) or v<0 or v!=int(v)) for v in scores):raise ValueError('Invalid final score')
+    if not rows:raise ValueError('Empty schedule')
+
 def acquire():
     raw=ROOT/'data/games.csv';meta_path=ROOT/'data/source.json'
     if os.environ.get('NFL_OFFLINE')!='1':
         payload=urllib.request.urlopen(SOURCE,timeout=45).read()
         if not payload.startswith(b'game_id,') or len(payload)<100000:raise ValueError('Invalid schedule input')
-        raw.write_bytes(payload)
+        # Parse and validate a staging file before replacing the last usable cache.
+        staged=None
+        try:
+            with tempfile.NamedTemporaryFile(dir=raw.parent,suffix='.csv',delete=False) as stream:
+                stream.write(payload);staged=Path(stream.name)
+            rows=base.load_rows(staged);validate_schedule(rows)
+            staged.replace(raw)
+        finally:
+            if staged is not None:staged.unlink(missing_ok=True)
         meta={'url':SOURCE,'sha256':hashlib.sha256(payload).hexdigest(),'retrievedAt':datetime.now(timezone.utc).isoformat(),'license':'CC BY 4.0','licenseUrl':'https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md'}
         meta_path.write_text(json.dumps(meta,indent=2)+'\n')
     else:
         meta=json.loads(meta_path.read_text())
         if meta['sha256']!=hashlib.sha256(raw.read_bytes()).hexdigest():raise ValueError('Offline source digest mismatch')
-    return base.load_rows(raw),meta
+    rows=base.load_rows(raw);validate_schedule(rows)
+    return rows,meta
 
 def canonical_prediction(margin,total,sigmas,contributions,profiles=None):
     if not all(math.isfinite(v) for v in [margin,total,*sigmas]) or min(sigmas)<=0 or not 0<(total-abs(margin))/2<=70 or (total+abs(margin))/2>70:raise ValueError('Invalid projection')
@@ -108,11 +130,13 @@ def main():
     beta,n,last=base.fit(rows,cutoff,180,6)
     ledger_path=ROOT/'data/ledger.json';previous=json.loads(ledger_path.read_text()) if ledger_path.exists() else [];ledger=list(previous)
     model_digest=hashlib.sha256(b''.join((ROOT/'scripts'/p).read_text().replace('\r\n','\n').encode() for p in ['build_data.py','experiment_model.py','refresh.py'])).hexdigest()
+    now=datetime.now(timezone.utc)
     for r in targets:
+        if base.kickoff(r)<=now:continue
         blend=predictions[r['game_id']];p=canonical_prediction(blend['homeMargin'],blend['total'],sigmas,evidence(blend),profiles_for(r,statmap,rows,cutoff))
         existing=[s for s in ledger if s['gameId']==r['game_id']]
         if existing and existing[-1]['modelVersion']==VERSION and existing[-1]['prediction']==p and existing[-1].get('modelCodeHash')==model_digest:continue
-        snap={'gameId':r['game_id'],'modelVersion':VERSION,'generatedAt':now.isoformat(),'trainingGames':n,'trainingThrough':last,'prediction':p,'sourceHash':source['sha256'],'efficiencySourceHashes':[m['sha256'] for _,m in downloads],'modelCodeHash':model_digest,'configuration':CONFIG}
+        snap={'gameId':r['game_id'],'modelVersion':VERSION,'generatedAt':now.isoformat(),'trainingGames':n,'trainingThrough':last,'prediction':p,'sourceHash':source['sha256'],'sourceRetrievedAt':source['retrievedAt'],'efficiencyRetrievedAt':max(m['retrievedAt'] for _,m in downloads),'efficiencySourceHashes':[m['sha256'] for _,m in downloads],'modelCodeHash':model_digest,'configuration':CONFIG}
         snap['hash']=digest(snap);ledger.append(snap)
     verify_append_only(previous,ledger)
     games=[]

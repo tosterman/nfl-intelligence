@@ -18,16 +18,24 @@ def request(path,body=None):
     token=os.environ['VERCEL_TOKEN'];team=os.environ['VERCEL_ORG_ID']
     req=urllib.request.Request('https://api.vercel.com'+path+('?' if '?' not in path else '&')+'teamId='+team,data=json.dumps(body).encode() if body else None,headers={'Authorization':'Bearer '+token,'Content-Type':'application/json'})
     return json.load(urllib.request.urlopen(req,timeout=60))
+def save_recovery_metadata(meta):
+    """Keep only public deployment identity; never persist tokens/API secrets."""
+    folder=ROOT/'release-recovery';folder.mkdir(exist_ok=True)
+    value={key:meta[key] for key in ['id','url','readyState','createdAt','ready'] if key in meta}
+    (folder/'deployment.json').write_text(json.dumps(value,indent=2)+'\n')
 def main():
+    expected=json.loads((ROOT/'data/site.json').read_text())
     result=request('/v13/deployments',{'name':'nfl-intelligence','project':os.environ['VERCEL_PROJECT_ID'],'target':'production','files':release_files(),'projectSettings':{'framework':'nextjs','nodeVersion':'22.x'}})
+    save_recovery_metadata(result)
     for _ in range(90):
         meta=request('/v13/deployments/'+result['id'])
+        save_recovery_metadata(meta)
         if meta['readyState']=='READY':break
         if meta['readyState'] in ['ERROR','CANCELED']:raise RuntimeError('Deployment failed: '+meta['readyState'])
         time.sleep(5)
     else:raise TimeoutError('Deployment did not become ready')
     url='https://'+meta['url'];artifact=json.load(urllib.request.urlopen(url+'/api/forecasts',timeout=30))
-    ledger=json.loads((ROOT/'data/ledger.json').read_text());receipt=make_receipt(meta,artifact,ledger)
+    ledger=json.loads((ROOT/'data/ledger.json').read_text());receipt=make_receipt(meta,artifact,ledger,expected_site=expected)
     path=ROOT/'data/publications.json';receipts=json.loads(path.read_text());receipts.append(receipt);path.write_text(json.dumps(receipts,indent=2)+'\n')
     print('Verified '+url+'; archived '+str(len(receipt['snapshotHashes']))+' forecast versions')
 if __name__=='__main__':main()

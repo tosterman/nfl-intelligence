@@ -97,6 +97,15 @@ export default function Performance() {
             ))}
             <path d="M45 250L365 30" stroke="#7f8ea2" strokeDasharray="5 6" />
             {m.calibration.map((b, i) => (
+              <path
+                key={`interval-${i}`}
+                d={`M${45 + b.predicted * 320} ${250 - b.observedLow95 * 220}V${250 - b.observedHigh95 * 220}`}
+                stroke="#acc8e8"
+                strokeWidth="2"
+                strokeOpacity=".5"
+              />
+            ))}
+            {m.calibration.map((b, i) => (
               <circle
                 key={i}
                 cx={45 + b.predicted * 320}
@@ -106,8 +115,7 @@ export default function Performance() {
                 fillOpacity=".75"
               >
                 <title>
-                  {pct(b.predicted)} predicted; {pct(b.observed)} observed;{" "}
-                  {b.count} games
+                  {`${pct(b.predicted)} predicted; ${pct(b.observed)} observed; ${b.count} games`}
                 </title>
               </circle>
             ))}
@@ -129,7 +137,12 @@ export default function Performance() {
                 {m.calibration.map((b, i) => (
                   <tr key={i}>
                     <td>{pct(b.predicted)}</td>
-                    <td>{pct(b.observed)}</td>
+                    <td>
+                      {pct(b.observed)}{" "}
+                      <small>
+                        ({pct(b.observedLow95)}–{pct(b.observedHigh95)})
+                      </small>
+                    </td>
                     <td>{b.count}</td>
                   </tr>
                 ))}
@@ -137,8 +150,9 @@ export default function Performance() {
             </table>
           </details>
           <p className="fine">
-            Small bins are noisy. Ties are excluded. This plot is diagnostic;
-            the held-out outcomes did not tune the probability mapping.
+            Vertical lines and parenthesized ranges show 95% Wilson intervals
+            for observed win rates. Small bins are noisy. Ties are excluded.
+            This retrospective diagnostic did not tune the probability mapping.
           </p>
         </section>
         <section className="panel">

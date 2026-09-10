@@ -24,6 +24,8 @@ jobs:
             exit 1
           fi
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -39,6 +41,19 @@ jobs:
       - run: npm run build
       - name: Deploy and verify publication
         run: python scripts/deploy_release.py
+      - name: Retain publication recovery evidence even if deployment fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: publication-recovery-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 90
+          if-no-files-found: warn
+          path: |
+            data/site.json
+            data/ledger.json
+            data/source.json
+            data/publications.json
+            release-recovery/deployment.json
       - name: Commit forecast archive and publication receipt
         run: |
           git config user.name 'NFL Intelligence publisher'
@@ -46,4 +61,4 @@ jobs:
           git add data/site.json data/ledger.json data/source.json data/publications.json
           git diff --cached --quiet && exit 0
           git commit -m 'data: archive verified forecast publication'
-          git push
+          python scripts/push_publication.py

@@ -19,7 +19,7 @@ const pages: Record<
       },
       {
         heading: "A research edition, in public",
-        text: "The present model is a tested scoring baseline, not a complete personnel or matchup model. The product publishes its limitations alongside its projections. It has not demonstrated a profitable betting edge.",
+        text: "The present model combines opponent-adjusted scoring and historical efficiency profiles. Personnel and scheme interactions remain outside its current coverage. The product publishes its limitations alongside its projections. It has not demonstrated a profitable betting edge.",
       },
       {
         heading: "Independent identity",
@@ -42,7 +42,7 @@ const pages: Record<
       },
       {
         heading: "What we store",
-        text: "The site stores your analytics preference in browser local storage under nfl-analytics-consent. It has no account registration, payment collection, email list or personalized advertising. Searching for teams happens in your browser.",
+        text: "The site stores your analytics preference in browser local storage under nfl-analytics-consent. It has no account registration, payment collection, email list or personalized advertising. Team search and filters appear in the page URL, which can be retained in browser history and ordinary hosting request logs. Optional analytics strip URL queries and fragments before sending events.",
       },
       {
         heading: "Hosting and analytics",

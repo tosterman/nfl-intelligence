@@ -4,7 +4,8 @@ import { Privacy } from "@/components/privacy";
 import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://nfl-intelligence.vercel.app",
+    process.env.NEXT_PUBLIC_SITE_URL ||
+      "https://nfl-intelligence-khnum.vercel.app",
   ),
   title: {
     default: "NFL Intelligence — Know the game",

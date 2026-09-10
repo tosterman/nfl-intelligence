@@ -3,56 +3,56 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/fonts/font-0.ttf) format("truetype");
+  src: url(/fonts/font-0.woff2) format("woff2");
 }
 @font-face {
   font-family: "Barlow";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(/fonts/font-1.ttf) format("truetype");
+  src: url(/fonts/font-1.woff2) format("woff2");
 }
 @font-face {
   font-family: "Barlow";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(/fonts/font-2.ttf) format("truetype");
+  src: url(/fonts/font-2.woff2) format("woff2");
 }
 @font-face {
   font-family: "Barlow";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(/fonts/font-3.ttf) format("truetype");
+  src: url(/fonts/font-3.woff2) format("woff2");
 }
 @font-face {
   font-family: "Barlow Condensed";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/fonts/font-4.ttf) format("truetype");
+  src: url(/fonts/font-4.woff2) format("woff2");
 }
 @font-face {
   font-family: "Barlow Condensed";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(/fonts/font-5.ttf) format("truetype");
+  src: url(/fonts/font-5.woff2) format("woff2");
 }
 @font-face {
   font-family: "Barlow Condensed";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(/fonts/font-6.ttf) format("truetype");
+  src: url(/fonts/font-6.woff2) format("woff2");
 }
 @font-face {
   font-family: "Barlow Condensed";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(/fonts/font-7.ttf) format("truetype");
+  src: url(/fonts/font-7.woff2) format("woff2");
 }
 
 :root {
@@ -1908,4 +1908,33 @@ summary {
   .team-page-heading p {
     font-size: 12px;
   }
+}
+
+@media (max-width: 760px) {
+  .tools .search {
+    flex: 1;
+    min-width: 0;
+  }
+  .tools .search input {
+    width: 100%;
+    min-width: 0;
+  }
+  .tools .sort {
+    flex-shrink: 0;
+  }
+  .tools {
+    gap: 10px;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

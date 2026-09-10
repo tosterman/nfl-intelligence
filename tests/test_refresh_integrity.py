@@ -18,6 +18,26 @@ import numpy as np
 
 
 class RefreshIntegrityTests(unittest.TestCase):
+    def test_malformed_download_preserves_last_source(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);(root/'data').mkdir()
+            raw=root/'data/games.csv';meta=root/'data/source.json'
+            raw.write_bytes(b'last good source');meta.write_text('{"last":"good"}')
+            malformed=b'game_id,home_team\n'+b'broken,INVALID\n'*10000
+            response=type('Response',(),{'read':lambda self:malformed})()
+            with patch.object(refresh,'ROOT',root),patch.dict(refresh.os.environ,{'NFL_OFFLINE':'0'}),patch.object(refresh.urllib.request,'urlopen',return_value=response):
+                with self.assertRaises((ValueError,KeyError)):
+                    refresh.acquire()
+            self.assertEqual(raw.read_bytes(),b'last good source')
+            self.assertEqual(meta.read_text(),'{"last":"good"}')
+
+    def test_schedule_rejects_duplicate_matchups_and_partial_scores(self):
+        row={'game_id':'g','home_team':'PHI','away_team':'DAL','gameday':'2026-09-10','gametime':'20:00','home_score':None,'away_score':None}
+        with self.assertRaisesRegex(ValueError,'Duplicate'):
+            refresh.validate_schedule([row,row])
+        with self.assertRaisesRegex(ValueError,'Incomplete'):
+            refresh.validate_schedule([{**row,'home_score':21}])
+
     def setUp(self):
         self.game = {'id':'g', 'kickoff':'2026-09-10T20:00:00+00:00', 'status':'final', 'actualHome':24, 'actualAway':21}
         self.snap = {'gameId':'g', 'generatedAt':'2026-09-10T10:00:00+00:00', 'prediction':{'homeWinProbability':.6,'homeMargin':3,'total':45}}

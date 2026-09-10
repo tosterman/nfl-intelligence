@@ -2,7 +2,8 @@ import type { MetadataRoute } from "next";
 import { site } from "@/lib/data";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://nfl-intelligence.vercel.app";
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    "https://nfl-intelligence-khnum.vercel.app";
   return [
     "",
     "/ratings",

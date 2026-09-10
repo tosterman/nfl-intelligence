@@ -36,6 +36,9 @@ class EngineTests(unittest.TestCase):
             payload={k:v for k,v in snapshot.items() if k!='hash'}
             self.assertEqual(hashlib.sha256(json.dumps(payload,sort_keys=True,separators=(',',':')).encode()).hexdigest(),snapshot['hash'])
             self.assertLess(engine.datetime.fromisoformat(snapshot.get('generatedAt',snapshot.get('publishedAt'))),engine.kickoff(rows[snapshot['gameId']]))
+            if 'sourceRetrievedAt' in snapshot:
+                self.assertLessEqual(snapshot['sourceRetrievedAt'],snapshot['generatedAt'])
+                self.assertLessEqual(snapshot['efficiencyRetrievedAt'],snapshot['generatedAt'])
     def test_replay_accounting(self):
         data=json.loads((engine.ROOT/'data/site.json').read_text());m=data['performance']['aggregate']
         self.assertEqual(m['decisiveGames']+m['ties'],m['games'])

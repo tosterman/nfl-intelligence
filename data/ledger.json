@@ -4903,5 +4903,4335 @@
       "protocol": "weekly-freeze"
     },
     "hash": "ea9f8d47eb6b85f55dbc6fa2c885d9350925d0fa8d0119da05aeb9cc8183d55c"
+  },
+  {
+    "gameId": "2026_01_SF_LA",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:28:48.074397+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 26.12,
+      "awayScore": 22.89,
+      "homeMargin": 3.237,
+      "total": 49.012,
+      "homeWinProbability": 0.59449,
+      "marginInterval80": [
+        -14.1,
+        20.6
+      ],
+      "totalInterval80": [
+        31.8,
+        66.2
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": 1.743,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.623,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": 0.287,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.239,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": -0.097,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": 0.14,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.23,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": 0.072,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "SF",
+          "games": 76,
+          "through": "2026-01-17",
+          "passEpa": 0.138,
+          "rushEpa": -0.057,
+          "cpoe": 4.91,
+          "sackRate": 0.0464,
+          "passEpaAllowed": 0.114,
+          "rushEpaAllowed": 0.024
+        },
+        {
+          "team": "LA",
+          "games": 73,
+          "through": "2026-01-25",
+          "passEpa": 0.218,
+          "rushEpa": -0.0,
+          "cpoe": 0.15,
+          "sackRate": 0.039,
+          "passEpaAllowed": 0.036,
+          "rushEpaAllowed": -0.046
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "377399f73924b4b0c884fc7f4e751c21c4f135e58f0c02c4ddd566bf9d7f7849",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "7d7a2ab65d2e936583d14ea11a5957be00a1b41015f5f04d8db65f6af4deee4b"
+  },
+  {
+    "gameId": "2026_01_ARI_LAC",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:28:48.074397+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 25.11,
+      "awayScore": 19.88,
+      "homeMargin": 5.228,
+      "total": 44.989,
+      "homeWinProbability": 0.65031,
+      "marginInterval80": [
+        -12.1,
+        22.6
+      ],
+      "totalInterval80": [
+        27.8,
+        62.2
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": -0.176,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 2.821,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": 0.122,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.26,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": 0.042,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": 0.02,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.082,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": 0.073,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.001,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "ARI",
+          "games": 68,
+          "through": "2026-01-04",
+          "passEpa": 0.014,
+          "rushEpa": -0.053,
+          "cpoe": 1.08,
+          "sackRate": 0.0827,
+          "passEpaAllowed": 0.208,
+          "rushEpaAllowed": -0.005
+        },
+        {
+          "team": "LAC",
+          "games": 71,
+          "through": "2026-01-11",
+          "passEpa": -0.056,
+          "rushEpa": -0.008,
+          "cpoe": 0.31,
+          "sackRate": 0.1045,
+          "passEpaAllowed": -0.071,
+          "rushEpaAllowed": -0.126
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "377399f73924b4b0c884fc7f4e751c21c4f135e58f0c02c4ddd566bf9d7f7849",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "581f5ea9b09bc0b056113803d9c4075a0eebbb9f2a47b57dd4ce584880e7978a"
+  },
+  {
+    "gameId": "2026_01_ATL_PIT",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:28:48.074397+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 23.82,
+      "awayScore": 20.95,
+      "homeMargin": 2.877,
+      "total": 44.77,
+      "homeWinProbability": 0.58415,
+      "marginInterval80": [
+        -14.5,
+        20.2
+      ],
+      "totalInterval80": [
+        27.6,
+        61.9
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": 0.179,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.726,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": -0.139,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.111,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": 0.037,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": -0.127,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.064,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": 0.041,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "ATL",
+          "games": 68,
+          "through": "2026-01-04",
+          "passEpa": 0.019,
+          "rushEpa": -0.061,
+          "cpoe": -2.83,
+          "sackRate": 0.0484,
+          "passEpaAllowed": -0.008,
+          "rushEpaAllowed": 0.001
+        },
+        {
+          "team": "PIT",
+          "games": 71,
+          "through": "2026-01-12",
+          "passEpa": -0.013,
+          "rushEpa": -0.026,
+          "cpoe": -0.38,
+          "sackRate": 0.0579,
+          "passEpaAllowed": 0.061,
+          "rushEpaAllowed": -0.025
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "377399f73924b4b0c884fc7f4e751c21c4f135e58f0c02c4ddd566bf9d7f7849",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "35fb18d99619dd0f818fef45e7e3823d65eba2f18f3970e0d998dbf66aa2d6b2"
+  },
+  {
+    "gameId": "2026_01_BAL_IND",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:28:48.074397+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 24.83,
+      "awayScore": 24.26,
+      "homeMargin": 0.564,
+      "total": 49.093,
+      "homeWinProbability": 0.51663,
+      "marginInterval80": [
+        -16.8,
+        17.9
+      ],
+      "totalInterval80": [
+        31.9,
+        66.3
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": 0.009,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": -1.235,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": -0.068,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": -0.188,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": -0.078,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": 0.232,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": -0.043,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": -0.05,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "BAL",
+          "games": 73,
+          "through": "2026-01-04",
+          "passEpa": 0.079,
+          "rushEpa": 0.08,
+          "cpoe": 3.84,
+          "sackRate": 0.0945,
+          "passEpaAllowed": 0.084,
+          "rushEpaAllowed": -0.128
+        },
+        {
+          "team": "IND",
+          "games": 68,
+          "through": "2026-01-04",
+          "passEpa": 0.05,
+          "rushEpa": 0.038,
+          "cpoe": -0.62,
+          "sackRate": 0.0491,
+          "passEpaAllowed": 0.089,
+          "rushEpaAllowed": -0.058
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "377399f73924b4b0c884fc7f4e751c21c4f135e58f0c02c4ddd566bf9d7f7849",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "092861243d8bdda875c5fb7ad22c6b3b701d7a68dceefcf0028b9c89b1ef9b0a"
+  },
+  {
+    "gameId": "2026_01_BUF_HOU",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:28:48.074397+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 23.84,
+      "awayScore": 22.76,
+      "homeMargin": 1.082,
+      "total": 46.598,
+      "homeWinProbability": 0.53185,
+      "marginInterval80": [
+        -16.3,
+        18.4
+      ],
+      "totalInterval80": [
+        29.4,
+        63.8
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": -2.263,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 1.734,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": -0.318,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": -0.234,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": -0.171,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": 0.215,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.081,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": 0.053,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "BUF",
+          "games": 75,
+          "through": "2026-01-17",
+          "passEpa": 0.192,
+          "rushEpa": 0.065,
+          "cpoe": 4.01,
+          "sackRate": 0.0669,
+          "passEpaAllowed": -0.085,
+          "rushEpaAllowed": 0.034
+        },
+        {
+          "team": "HOU",
+          "games": 74,
+          "through": "2026-01-18",
+          "passEpa": 0.008,
+          "rushEpa": -0.108,
+          "cpoe": -3.16,
+          "sackRate": 0.0508,
+          "passEpaAllowed": -0.188,
+          "rushEpaAllowed": -0.106
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "377399f73924b4b0c884fc7f4e751c21c4f135e58f0c02c4ddd566bf9d7f7849",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "53db62ed714b0f7de47f8246dc3ffbcdf999dd7aa9ec8db23e83aa511bbb61e4"
+  },
+  {
+    "gameId": "2026_01_CHI_CAR",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:28:48.074397+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 22.13,
+      "awayScore": 23.49,
+      "homeMargin": -1.361,
+      "total": 45.619,
+      "homeWinProbability": 0.45997,
+      "marginInterval80": [
+        -18.7,
+        16.0
+      ],
+      "totalInterval80": [
+        28.4,
+        62.8
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": -2.155,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": -0.373,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": -0.403,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": -0.264,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": 0.131,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": -0.142,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": -0.051,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": -0.088,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.001,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "CHI",
+          "games": 70,
+          "through": "2026-01-18",
+          "passEpa": 0.086,
+          "rushEpa": 0.033,
+          "cpoe": -3.41,
+          "sackRate": 0.0373,
+          "passEpaAllowed": 0.068,
+          "rushEpaAllowed": -0.015
+        },
+        {
+          "team": "CAR",
+          "games": 69,
+          "through": "2026-01-10",
+          "passEpa": -0.066,
+          "rushEpa": -0.069,
+          "cpoe": 1.56,
+          "sackRate": 0.0619,
+          "passEpaAllowed": 0.132,
+          "rushEpaAllowed": 0.0
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "377399f73924b4b0c884fc7f4e751c21c4f135e58f0c02c4ddd566bf9d7f7849",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "2ae9166cba6c32479c4cb44e6f22549d1c79dd5e2ee2d960983456964790b604"
+  },
+  {
+    "gameId": "2026_01_CLE_JAX",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:28:48.074397+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 25.39,
+      "awayScore": 17.53,
+      "homeMargin": 7.856,
+      "total": 42.92,
+      "homeWinProbability": 0.71913,
+      "marginInterval80": [
+        -9.5,
+        25.2
+      ],
+      "totalInterval80": [
+        25.7,
+        60.1
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": 4.018,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.671,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": 0.775,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.011,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": 0.119,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": -0.021,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.133,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": 0.163,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": 0.002,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "CLE",
+          "games": 69,
+          "through": "2026-01-04",
+          "passEpa": -0.262,
+          "rushEpa": -0.06,
+          "cpoe": -5.22,
+          "sackRate": 0.0931,
+          "passEpaAllowed": -0.142,
+          "rushEpaAllowed": -0.048
+        },
+        {
+          "team": "JAX",
+          "games": 71,
+          "through": "2026-01-11",
+          "passEpa": 0.11,
+          "rushEpa": -0.041,
+          "cpoe": -0.32,
+          "sackRate": 0.061,
+          "passEpaAllowed": -0.113,
+          "rushEpaAllowed": -0.026
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "377399f73924b4b0c884fc7f4e751c21c4f135e58f0c02c4ddd566bf9d7f7849",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "5968d6011bcec86e85d6a0c96ecffbaca5bf799f03f261135b6205f214c610e8"
+  },
+  {
+    "gameId": "2026_01_DAL_NYG",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:28:48.074397+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 25.99,
+      "awayScore": 24.47,
+      "homeMargin": 1.525,
+      "total": 50.457,
+      "homeWinProbability": 0.54485,
+      "marginInterval80": [
+        -15.8,
+        18.9
+      ],
+      "totalInterval80": [
+        33.3,
+        67.6
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": -1.988,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 1.719,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": -0.153,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.132,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": -0.006,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": -0.188,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.055,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": -0.03,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.001,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "DAL",
+          "games": 71,
+          "through": "2026-01-04",
+          "passEpa": 0.153,
+          "rushEpa": -0.048,
+          "cpoe": 0.72,
+          "sackRate": 0.0458,
+          "passEpaAllowed": 0.263,
+          "rushEpaAllowed": 0.077
+        },
+        {
+          "team": "NYG",
+          "games": 70,
+          "through": "2026-01-04",
+          "passEpa": -0.024,
+          "rushEpa": 0.038,
+          "cpoe": -1.24,
+          "sackRate": 0.0939,
+          "passEpaAllowed": 0.037,
+          "rushEpaAllowed": 0.126
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "377399f73924b4b0c884fc7f4e751c21c4f135e58f0c02c4ddd566bf9d7f7849",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "667dc20187a3dcf239e6c01429776ee5a9380e098bcae32f7224aa7d4c421ee1"
+  },
+  {
+    "gameId": "2026_01_GB_MIN",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:28:48.074397+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 21.91,
+      "awayScore": 20.86,
+      "homeMargin": 1.042,
+      "total": 42.769,
+      "homeWinProbability": 0.53067,
+      "marginInterval80": [
+        -16.3,
+        18.4
+      ],
+      "totalInterval80": [
+        25.6,
+        59.9
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": -1.187,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.972,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": -0.552,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.052,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": -0.096,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": -0.046,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.017,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": -0.103,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "GB",
+          "games": 72,
+          "through": "2026-01-10",
+          "passEpa": 0.19,
+          "rushEpa": -0.046,
+          "cpoe": 4.08,
+          "sackRate": 0.0646,
+          "passEpaAllowed": 0.103,
+          "rushEpaAllowed": -0.054
+        },
+        {
+          "team": "MIN",
+          "games": 70,
+          "through": "2026-01-04",
+          "passEpa": -0.194,
+          "rushEpa": -0.054,
+          "cpoe": -2.73,
+          "sackRate": 0.1174,
+          "passEpaAllowed": -0.182,
+          "rushEpaAllowed": -0.109
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "377399f73924b4b0c884fc7f4e751c21c4f135e58f0c02c4ddd566bf9d7f7849",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "fc2d4c190054eae2ed9c54fc3d3f7f6b4f57ef780b08beed6290e83ea8848e23"
+  },
+  {
+    "gameId": "2026_01_MIA_LV",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:28:48.074397+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 20.61,
+      "awayScore": 22.14,
+      "homeMargin": -1.529,
+      "total": 42.751,
+      "homeWinProbability": 0.45504,
+      "marginInterval80": [
+        -18.9,
+        15.8
+      ],
+      "totalInterval80": [
+        25.6,
+        59.9
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": -1.989,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": -0.468,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": -0.467,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": -0.3,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": -0.027,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": -0.179,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": -0.039,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": -0.043,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.002,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "MIA",
+          "games": 70,
+          "through": "2026-01-04",
+          "passEpa": 0.026,
+          "rushEpa": -0.079,
+          "cpoe": 1.67,
+          "sackRate": 0.0748,
+          "passEpaAllowed": 0.145,
+          "rushEpaAllowed": -0.008
+        },
+        {
+          "team": "LV",
+          "games": 68,
+          "through": "2026-01-04",
+          "passEpa": -0.208,
+          "rushEpa": -0.263,
+          "cpoe": -1.31,
+          "sackRate": 0.1092,
+          "passEpaAllowed": 0.114,
+          "rushEpaAllowed": -0.1
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "377399f73924b4b0c884fc7f4e751c21c4f135e58f0c02c4ddd566bf9d7f7849",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "becc1980dca6d90599c90d6dbb46f52b2b6815c02cebac5d8c2e7a81d954e87c"
+  },
+  {
+    "gameId": "2026_01_NO_DET",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:28:48.074397+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 26.46,
+      "awayScore": 20.39,
+      "homeMargin": 6.071,
+      "total": 46.849,
+      "homeWinProbability": 0.67309,
+      "marginInterval80": [
+        -11.3,
+        23.4
+      ],
+      "totalInterval80": [
+        29.7,
+        64.0
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": 4.281,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": -0.555,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": 0.269,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.005,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": -0.014,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": 0.085,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": -0.056,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": 0.072,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.001,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "NO",
+          "games": 68,
+          "through": "2026-01-04",
+          "passEpa": 0.018,
+          "rushEpa": -0.138,
+          "cpoe": 2.28,
+          "sackRate": 0.0801,
+          "passEpaAllowed": -0.04,
+          "rushEpaAllowed": -0.112
+        },
+        {
+          "team": "DET",
+          "games": 72,
+          "through": "2026-01-04",
+          "passEpa": 0.173,
+          "rushEpa": -0.069,
+          "cpoe": 1.49,
+          "sackRate": 0.0636,
+          "passEpaAllowed": 0.022,
+          "rushEpaAllowed": 0.006
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "377399f73924b4b0c884fc7f4e751c21c4f135e58f0c02c4ddd566bf9d7f7849",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "4b7acc4080661379f5f7debcd758ba3224205caf7e7d0722967693db665803b3"
+  },
+  {
+    "gameId": "2026_01_NYJ_TEN",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:28:48.074397+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 23.98,
+      "awayScore": 20.92,
+      "homeMargin": 3.063,
+      "total": 44.907,
+      "homeWinProbability": 0.58948,
+      "marginInterval80": [
+        -14.3,
+        20.4
+      ],
+      "totalInterval80": [
+        27.7,
+        62.1
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": 0.096,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.266,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": 0.132,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.094,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": 0.035,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": 0.251,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.14,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": 0.063,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": 0.001,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "NYJ",
+          "games": 68,
+          "through": "2026-01-04",
+          "passEpa": -0.213,
+          "rushEpa": -0.087,
+          "cpoe": -6.08,
+          "sackRate": 0.1046,
+          "passEpaAllowed": 0.308,
+          "rushEpaAllowed": -0.01
+        },
+        {
+          "team": "TEN",
+          "games": 68,
+          "through": "2026-01-04",
+          "passEpa": -0.194,
+          "rushEpa": -0.056,
+          "cpoe": -3.28,
+          "sackRate": 0.0806,
+          "passEpaAllowed": 0.212,
+          "rushEpaAllowed": -0.029
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "377399f73924b4b0c884fc7f4e751c21c4f135e58f0c02c4ddd566bf9d7f7849",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "a84b69daee8a3893356e8941835ac6152a3bc2492d42c9d5dca9da836963a128"
+  },
+  {
+    "gameId": "2026_01_TB_CIN",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:28:48.074397+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 25.36,
+      "awayScore": 24.17,
+      "homeMargin": 1.195,
+      "total": 49.527,
+      "homeWinProbability": 0.53516,
+      "marginInterval80": [
+        -16.2,
+        18.5
+      ],
+      "totalInterval80": [
+        32.4,
+        66.7
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": 0.793,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": -1.625,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": 0.02,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": -0.154,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": 0.11,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": 0.129,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.016,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": -0.081,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": 0.002,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "TB",
+          "games": 72,
+          "through": "2026-01-03",
+          "passEpa": 0.015,
+          "rushEpa": 0.003,
+          "cpoe": -1.69,
+          "sackRate": 0.0647,
+          "passEpaAllowed": 0.119,
+          "rushEpaAllowed": -0.109
+        },
+        {
+          "team": "CIN",
+          "games": 70,
+          "through": "2026-01-04",
+          "passEpa": 0.041,
+          "rushEpa": 0.024,
+          "cpoe": 2.42,
+          "sackRate": 0.0547,
+          "passEpaAllowed": 0.155,
+          "rushEpaAllowed": 0.049
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "377399f73924b4b0c884fc7f4e751c21c4f135e58f0c02c4ddd566bf9d7f7849",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "c1160fea21e682d2d5acd709c1a99e3bb0c769f3150c41d4dc55cfde9550aace"
+  },
+  {
+    "gameId": "2026_01_WAS_PHI",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:28:48.074397+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 25.96,
+      "awayScore": 19.52,
+      "homeMargin": 6.439,
+      "total": 45.489,
+      "homeWinProbability": 0.68283,
+      "marginInterval80": [
+        -10.9,
+        23.8
+      ],
+      "totalInterval80": [
+        28.3,
+        62.7
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": 0.323,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 3.162,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": 0.489,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.065,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": 0.098,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": 0.056,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.219,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": 0.043,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.001,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "WAS",
+          "games": 71,
+          "through": "2026-01-04",
+          "passEpa": 0.014,
+          "rushEpa": 0.013,
+          "cpoe": 1.32,
+          "sackRate": 0.0711,
+          "passEpaAllowed": 0.221,
+          "rushEpaAllowed": 0.057
+        },
+        {
+          "team": "PHI",
+          "games": 77,
+          "through": "2026-01-11",
+          "passEpa": 0.087,
+          "rushEpa": -0.028,
+          "cpoe": 2.68,
+          "sackRate": 0.0605,
+          "passEpaAllowed": -0.106,
+          "rushEpaAllowed": -0.066
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "377399f73924b4b0c884fc7f4e751c21c4f135e58f0c02c4ddd566bf9d7f7849",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "689175a085937f4e4d7575308215162dd7282f1a1fe5872c2f8c639342ae3d70"
+  },
+  {
+    "gameId": "2026_01_DEN_KC",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:28:48.074397+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 21.3,
+      "awayScore": 20.86,
+      "homeMargin": 0.443,
+      "total": 42.157,
+      "homeWinProbability": 0.51306,
+      "marginInterval80": [
+        -16.9,
+        17.8
+      ],
+      "totalInterval80": [
+        25.0,
+        59.3
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": -0.674,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": -0.192,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": -0.318,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.221,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": -0.046,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": -0.385,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": -0.027,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": -0.12,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.001,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "DEN",
+          "games": 71,
+          "through": "2026-01-25",
+          "passEpa": 0.046,
+          "rushEpa": -0.048,
+          "cpoe": -1.64,
+          "sackRate": 0.0426,
+          "passEpaAllowed": -0.144,
+          "rushEpaAllowed": -0.022
+        },
+        {
+          "team": "KC",
+          "games": 78,
+          "through": "2026-01-04",
+          "passEpa": -0.034,
+          "rushEpa": 0.006,
+          "cpoe": -2.03,
+          "sackRate": 0.0835,
+          "passEpaAllowed": -0.012,
+          "rushEpaAllowed": -0.093
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "377399f73924b4b0c884fc7f4e751c21c4f135e58f0c02c4ddd566bf9d7f7849",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "5ddc70af494a103f68f614590c97825b7dc368d6965eaa6b8b57079f63571a42"
+  },
+  {
+    "gameId": "2026_01_SF_LA",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:33:34.288751+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 26.12,
+      "awayScore": 22.89,
+      "homeMargin": 3.237,
+      "total": 49.012,
+      "homeWinProbability": 0.59449,
+      "marginInterval80": [
+        -14.1,
+        20.6
+      ],
+      "totalInterval80": [
+        31.8,
+        66.2
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": 1.743,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.623,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": 0.287,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.239,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": -0.097,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": 0.14,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.23,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": 0.072,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "SF",
+          "games": 76,
+          "through": "2026-01-17",
+          "passEpa": 0.138,
+          "rushEpa": -0.057,
+          "cpoe": 4.91,
+          "sackRate": 0.0464,
+          "passEpaAllowed": 0.114,
+          "rushEpaAllowed": 0.024
+        },
+        {
+          "team": "LA",
+          "games": 73,
+          "through": "2026-01-25",
+          "passEpa": 0.218,
+          "rushEpa": -0.0,
+          "cpoe": 0.15,
+          "sackRate": 0.039,
+          "passEpaAllowed": 0.036,
+          "rushEpaAllowed": -0.046
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "98b5e04faf18d043a76ffcb20ff4b848899c279dc10e947168fc09a80aa387d9",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "701bb3906afb8edc1924a538b71eedbb1d5bdc540cdd0c21042726028e9cef49"
+  },
+  {
+    "gameId": "2026_01_ARI_LAC",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:33:34.288751+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 25.11,
+      "awayScore": 19.88,
+      "homeMargin": 5.228,
+      "total": 44.989,
+      "homeWinProbability": 0.65031,
+      "marginInterval80": [
+        -12.1,
+        22.6
+      ],
+      "totalInterval80": [
+        27.8,
+        62.2
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": -0.176,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 2.821,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": 0.122,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.26,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": 0.042,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": 0.02,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.082,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": 0.073,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.001,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "ARI",
+          "games": 68,
+          "through": "2026-01-04",
+          "passEpa": 0.014,
+          "rushEpa": -0.053,
+          "cpoe": 1.08,
+          "sackRate": 0.0827,
+          "passEpaAllowed": 0.208,
+          "rushEpaAllowed": -0.005
+        },
+        {
+          "team": "LAC",
+          "games": 71,
+          "through": "2026-01-11",
+          "passEpa": -0.056,
+          "rushEpa": -0.008,
+          "cpoe": 0.31,
+          "sackRate": 0.1045,
+          "passEpaAllowed": -0.071,
+          "rushEpaAllowed": -0.126
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "98b5e04faf18d043a76ffcb20ff4b848899c279dc10e947168fc09a80aa387d9",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "271a6bbff30ceef181e6eea4842f55d135923cb7f3a12166c9e502414b6b53ef"
+  },
+  {
+    "gameId": "2026_01_ATL_PIT",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:33:34.288751+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 23.82,
+      "awayScore": 20.95,
+      "homeMargin": 2.877,
+      "total": 44.77,
+      "homeWinProbability": 0.58415,
+      "marginInterval80": [
+        -14.5,
+        20.2
+      ],
+      "totalInterval80": [
+        27.6,
+        61.9
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": 0.179,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.726,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": -0.139,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.111,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": 0.037,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": -0.127,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.064,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": 0.041,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "ATL",
+          "games": 68,
+          "through": "2026-01-04",
+          "passEpa": 0.019,
+          "rushEpa": -0.061,
+          "cpoe": -2.83,
+          "sackRate": 0.0484,
+          "passEpaAllowed": -0.008,
+          "rushEpaAllowed": 0.001
+        },
+        {
+          "team": "PIT",
+          "games": 71,
+          "through": "2026-01-12",
+          "passEpa": -0.013,
+          "rushEpa": -0.026,
+          "cpoe": -0.38,
+          "sackRate": 0.0579,
+          "passEpaAllowed": 0.061,
+          "rushEpaAllowed": -0.025
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "98b5e04faf18d043a76ffcb20ff4b848899c279dc10e947168fc09a80aa387d9",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "de2daa368cb644980793f21630b90b54aa629ca21a676c3eb6a78eb60ed232e3"
+  },
+  {
+    "gameId": "2026_01_BAL_IND",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:33:34.288751+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 24.83,
+      "awayScore": 24.26,
+      "homeMargin": 0.564,
+      "total": 49.093,
+      "homeWinProbability": 0.51663,
+      "marginInterval80": [
+        -16.8,
+        17.9
+      ],
+      "totalInterval80": [
+        31.9,
+        66.3
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": 0.009,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": -1.235,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": -0.068,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": -0.188,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": -0.078,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": 0.232,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": -0.043,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": -0.05,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "BAL",
+          "games": 73,
+          "through": "2026-01-04",
+          "passEpa": 0.079,
+          "rushEpa": 0.08,
+          "cpoe": 3.84,
+          "sackRate": 0.0945,
+          "passEpaAllowed": 0.084,
+          "rushEpaAllowed": -0.128
+        },
+        {
+          "team": "IND",
+          "games": 68,
+          "through": "2026-01-04",
+          "passEpa": 0.05,
+          "rushEpa": 0.038,
+          "cpoe": -0.62,
+          "sackRate": 0.0491,
+          "passEpaAllowed": 0.089,
+          "rushEpaAllowed": -0.058
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "98b5e04faf18d043a76ffcb20ff4b848899c279dc10e947168fc09a80aa387d9",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "f40827c9ba8a8db4047a9560272c1a855180a0e258744b435d7e01958ceb7603"
+  },
+  {
+    "gameId": "2026_01_BUF_HOU",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:33:34.288751+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 23.84,
+      "awayScore": 22.76,
+      "homeMargin": 1.082,
+      "total": 46.598,
+      "homeWinProbability": 0.53185,
+      "marginInterval80": [
+        -16.3,
+        18.4
+      ],
+      "totalInterval80": [
+        29.4,
+        63.8
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": -2.263,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 1.734,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": -0.318,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": -0.234,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": -0.171,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": 0.215,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.081,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": 0.053,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "BUF",
+          "games": 75,
+          "through": "2026-01-17",
+          "passEpa": 0.192,
+          "rushEpa": 0.065,
+          "cpoe": 4.01,
+          "sackRate": 0.0669,
+          "passEpaAllowed": -0.085,
+          "rushEpaAllowed": 0.034
+        },
+        {
+          "team": "HOU",
+          "games": 74,
+          "through": "2026-01-18",
+          "passEpa": 0.008,
+          "rushEpa": -0.108,
+          "cpoe": -3.16,
+          "sackRate": 0.0508,
+          "passEpaAllowed": -0.188,
+          "rushEpaAllowed": -0.106
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "98b5e04faf18d043a76ffcb20ff4b848899c279dc10e947168fc09a80aa387d9",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "97b9f7f83ea9804777cc463cee187e5dac9de6b3ed813b5cba9a91b6c4027e56"
+  },
+  {
+    "gameId": "2026_01_CHI_CAR",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:33:34.288751+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 22.13,
+      "awayScore": 23.49,
+      "homeMargin": -1.361,
+      "total": 45.619,
+      "homeWinProbability": 0.45997,
+      "marginInterval80": [
+        -18.7,
+        16.0
+      ],
+      "totalInterval80": [
+        28.4,
+        62.8
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": -2.155,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": -0.373,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": -0.403,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": -0.264,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": 0.131,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": -0.142,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": -0.051,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": -0.088,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.001,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "CHI",
+          "games": 70,
+          "through": "2026-01-18",
+          "passEpa": 0.086,
+          "rushEpa": 0.033,
+          "cpoe": -3.41,
+          "sackRate": 0.0373,
+          "passEpaAllowed": 0.068,
+          "rushEpaAllowed": -0.015
+        },
+        {
+          "team": "CAR",
+          "games": 69,
+          "through": "2026-01-10",
+          "passEpa": -0.066,
+          "rushEpa": -0.069,
+          "cpoe": 1.56,
+          "sackRate": 0.0619,
+          "passEpaAllowed": 0.132,
+          "rushEpaAllowed": 0.0
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "98b5e04faf18d043a76ffcb20ff4b848899c279dc10e947168fc09a80aa387d9",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "e00107f8bca7d11f93603cc1ff865b47b02bb7cd7f7ab76b244979a835490cee"
+  },
+  {
+    "gameId": "2026_01_CLE_JAX",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:33:34.288751+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 25.39,
+      "awayScore": 17.53,
+      "homeMargin": 7.856,
+      "total": 42.92,
+      "homeWinProbability": 0.71913,
+      "marginInterval80": [
+        -9.5,
+        25.2
+      ],
+      "totalInterval80": [
+        25.7,
+        60.1
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": 4.018,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.671,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": 0.775,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.011,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": 0.119,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": -0.021,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.133,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": 0.163,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": 0.002,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "CLE",
+          "games": 69,
+          "through": "2026-01-04",
+          "passEpa": -0.262,
+          "rushEpa": -0.06,
+          "cpoe": -5.22,
+          "sackRate": 0.0931,
+          "passEpaAllowed": -0.142,
+          "rushEpaAllowed": -0.048
+        },
+        {
+          "team": "JAX",
+          "games": 71,
+          "through": "2026-01-11",
+          "passEpa": 0.11,
+          "rushEpa": -0.041,
+          "cpoe": -0.32,
+          "sackRate": 0.061,
+          "passEpaAllowed": -0.113,
+          "rushEpaAllowed": -0.026
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "98b5e04faf18d043a76ffcb20ff4b848899c279dc10e947168fc09a80aa387d9",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "ab3a7928029569fa55535471b950762cd7c15b3ab6497b26d92c92ea2eb9545e"
+  },
+  {
+    "gameId": "2026_01_DAL_NYG",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:33:34.288751+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 25.99,
+      "awayScore": 24.47,
+      "homeMargin": 1.525,
+      "total": 50.457,
+      "homeWinProbability": 0.54485,
+      "marginInterval80": [
+        -15.8,
+        18.9
+      ],
+      "totalInterval80": [
+        33.3,
+        67.6
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": -1.988,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 1.719,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": -0.153,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.132,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": -0.006,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": -0.188,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.055,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": -0.03,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.001,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "DAL",
+          "games": 71,
+          "through": "2026-01-04",
+          "passEpa": 0.153,
+          "rushEpa": -0.048,
+          "cpoe": 0.72,
+          "sackRate": 0.0458,
+          "passEpaAllowed": 0.263,
+          "rushEpaAllowed": 0.077
+        },
+        {
+          "team": "NYG",
+          "games": 70,
+          "through": "2026-01-04",
+          "passEpa": -0.024,
+          "rushEpa": 0.038,
+          "cpoe": -1.24,
+          "sackRate": 0.0939,
+          "passEpaAllowed": 0.037,
+          "rushEpaAllowed": 0.126
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "98b5e04faf18d043a76ffcb20ff4b848899c279dc10e947168fc09a80aa387d9",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "94e4e67069c266340de55659dfe2a3ade0c6e1b1d07d1ae37b56d33cf3b29f1d"
+  },
+  {
+    "gameId": "2026_01_GB_MIN",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:33:34.288751+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 21.91,
+      "awayScore": 20.86,
+      "homeMargin": 1.042,
+      "total": 42.769,
+      "homeWinProbability": 0.53067,
+      "marginInterval80": [
+        -16.3,
+        18.4
+      ],
+      "totalInterval80": [
+        25.6,
+        59.9
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": -1.187,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.972,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": -0.552,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.052,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": -0.096,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": -0.046,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.017,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": -0.103,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "GB",
+          "games": 72,
+          "through": "2026-01-10",
+          "passEpa": 0.19,
+          "rushEpa": -0.046,
+          "cpoe": 4.08,
+          "sackRate": 0.0646,
+          "passEpaAllowed": 0.103,
+          "rushEpaAllowed": -0.054
+        },
+        {
+          "team": "MIN",
+          "games": 70,
+          "through": "2026-01-04",
+          "passEpa": -0.194,
+          "rushEpa": -0.054,
+          "cpoe": -2.73,
+          "sackRate": 0.1174,
+          "passEpaAllowed": -0.182,
+          "rushEpaAllowed": -0.109
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "98b5e04faf18d043a76ffcb20ff4b848899c279dc10e947168fc09a80aa387d9",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "0116cf652c3b80ff1a78b948ad67c64c472fe3b46c2df74da64381ad78d612dc"
+  },
+  {
+    "gameId": "2026_01_MIA_LV",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:33:34.288751+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 20.61,
+      "awayScore": 22.14,
+      "homeMargin": -1.529,
+      "total": 42.751,
+      "homeWinProbability": 0.45504,
+      "marginInterval80": [
+        -18.9,
+        15.8
+      ],
+      "totalInterval80": [
+        25.6,
+        59.9
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": -1.989,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": -0.468,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": -0.467,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": -0.3,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": -0.027,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": -0.179,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": -0.039,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": -0.043,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.002,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "MIA",
+          "games": 70,
+          "through": "2026-01-04",
+          "passEpa": 0.026,
+          "rushEpa": -0.079,
+          "cpoe": 1.67,
+          "sackRate": 0.0748,
+          "passEpaAllowed": 0.145,
+          "rushEpaAllowed": -0.008
+        },
+        {
+          "team": "LV",
+          "games": 68,
+          "through": "2026-01-04",
+          "passEpa": -0.208,
+          "rushEpa": -0.263,
+          "cpoe": -1.31,
+          "sackRate": 0.1092,
+          "passEpaAllowed": 0.114,
+          "rushEpaAllowed": -0.1
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "98b5e04faf18d043a76ffcb20ff4b848899c279dc10e947168fc09a80aa387d9",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "74257690477a0b3fecf64a4aa82cdc101b0ff596137f007f4fcca7b3fe6d4c12"
+  },
+  {
+    "gameId": "2026_01_NO_DET",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:33:34.288751+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 26.46,
+      "awayScore": 20.39,
+      "homeMargin": 6.071,
+      "total": 46.849,
+      "homeWinProbability": 0.67309,
+      "marginInterval80": [
+        -11.3,
+        23.4
+      ],
+      "totalInterval80": [
+        29.7,
+        64.0
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": 4.281,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": -0.555,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": 0.269,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.005,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": -0.014,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": 0.085,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": -0.056,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": 0.072,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.001,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "NO",
+          "games": 68,
+          "through": "2026-01-04",
+          "passEpa": 0.018,
+          "rushEpa": -0.138,
+          "cpoe": 2.28,
+          "sackRate": 0.0801,
+          "passEpaAllowed": -0.04,
+          "rushEpaAllowed": -0.112
+        },
+        {
+          "team": "DET",
+          "games": 72,
+          "through": "2026-01-04",
+          "passEpa": 0.173,
+          "rushEpa": -0.069,
+          "cpoe": 1.49,
+          "sackRate": 0.0636,
+          "passEpaAllowed": 0.022,
+          "rushEpaAllowed": 0.006
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "98b5e04faf18d043a76ffcb20ff4b848899c279dc10e947168fc09a80aa387d9",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "444d1c5b5ce2324439381e5e3cf7d4d8637bf76c4bd7b9ed47f2f44c7bc5f8de"
+  },
+  {
+    "gameId": "2026_01_NYJ_TEN",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:33:34.288751+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 23.98,
+      "awayScore": 20.92,
+      "homeMargin": 3.063,
+      "total": 44.907,
+      "homeWinProbability": 0.58948,
+      "marginInterval80": [
+        -14.3,
+        20.4
+      ],
+      "totalInterval80": [
+        27.7,
+        62.1
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": 0.096,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.266,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": 0.132,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.094,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": 0.035,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": 0.251,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.14,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": 0.063,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": 0.001,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "NYJ",
+          "games": 68,
+          "through": "2026-01-04",
+          "passEpa": -0.213,
+          "rushEpa": -0.087,
+          "cpoe": -6.08,
+          "sackRate": 0.1046,
+          "passEpaAllowed": 0.308,
+          "rushEpaAllowed": -0.01
+        },
+        {
+          "team": "TEN",
+          "games": 68,
+          "through": "2026-01-04",
+          "passEpa": -0.194,
+          "rushEpa": -0.056,
+          "cpoe": -3.28,
+          "sackRate": 0.0806,
+          "passEpaAllowed": 0.212,
+          "rushEpaAllowed": -0.029
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "98b5e04faf18d043a76ffcb20ff4b848899c279dc10e947168fc09a80aa387d9",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "ddbca7ef758f86f6955abd54d79262c3709f806744c756a4d1188358cf0147df"
+  },
+  {
+    "gameId": "2026_01_TB_CIN",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:33:34.288751+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 25.36,
+      "awayScore": 24.17,
+      "homeMargin": 1.195,
+      "total": 49.527,
+      "homeWinProbability": 0.53516,
+      "marginInterval80": [
+        -16.2,
+        18.5
+      ],
+      "totalInterval80": [
+        32.4,
+        66.7
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": 0.793,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": -1.625,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": 0.02,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": -0.154,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": 0.11,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": 0.129,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.016,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": -0.081,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": 0.002,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "TB",
+          "games": 72,
+          "through": "2026-01-03",
+          "passEpa": 0.015,
+          "rushEpa": 0.003,
+          "cpoe": -1.69,
+          "sackRate": 0.0647,
+          "passEpaAllowed": 0.119,
+          "rushEpaAllowed": -0.109
+        },
+        {
+          "team": "CIN",
+          "games": 70,
+          "through": "2026-01-04",
+          "passEpa": 0.041,
+          "rushEpa": 0.024,
+          "cpoe": 2.42,
+          "sackRate": 0.0547,
+          "passEpaAllowed": 0.155,
+          "rushEpaAllowed": 0.049
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "98b5e04faf18d043a76ffcb20ff4b848899c279dc10e947168fc09a80aa387d9",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "e7e0f35f0a49c427e2cb9127b6e1beafe4351e7416a13a14f7040204b11afad4"
+  },
+  {
+    "gameId": "2026_01_WAS_PHI",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:33:34.288751+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 25.96,
+      "awayScore": 19.52,
+      "homeMargin": 6.439,
+      "total": 45.489,
+      "homeWinProbability": 0.68283,
+      "marginInterval80": [
+        -10.9,
+        23.8
+      ],
+      "totalInterval80": [
+        28.3,
+        62.7
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": 0.323,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": 3.162,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": 0.489,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.065,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": 0.098,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": 0.056,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": 0.219,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": 0.043,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.001,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "WAS",
+          "games": 71,
+          "through": "2026-01-04",
+          "passEpa": 0.014,
+          "rushEpa": 0.013,
+          "cpoe": 1.32,
+          "sackRate": 0.0711,
+          "passEpaAllowed": 0.221,
+          "rushEpaAllowed": 0.057
+        },
+        {
+          "team": "PHI",
+          "games": 77,
+          "through": "2026-01-11",
+          "passEpa": 0.087,
+          "rushEpa": -0.028,
+          "cpoe": 2.68,
+          "sackRate": 0.0605,
+          "passEpaAllowed": -0.106,
+          "rushEpaAllowed": -0.066
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "98b5e04faf18d043a76ffcb20ff4b848899c279dc10e947168fc09a80aa387d9",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "62b9f7d6ba908131918e1c80081720e555a019823e6f95e481aeef7d89163798"
+  },
+  {
+    "gameId": "2026_01_DEN_KC",
+    "modelVersion": "score-efficiency-v1.2.0",
+    "generatedAt": "2026-09-10T14:33:34.288751+00:00",
+    "trainingGames": 1184,
+    "trainingThrough": "2026-02-08",
+    "prediction": {
+      "homeScore": 21.3,
+      "awayScore": 20.86,
+      "homeMargin": 0.443,
+      "total": 42.157,
+      "homeWinProbability": 0.51306,
+      "marginInterval80": [
+        -16.9,
+        17.8
+      ],
+      "totalInterval80": [
+        25.0,
+        59.3
+      ],
+      "sigmaMargin": 13.538,
+      "sigmaTotal": 13.401,
+      "contributions": [
+        {
+          "name": "Scoring offense",
+          "points": -0.674,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Scoring defense",
+          "points": -0.192,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Home field",
+          "points": 1.985,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Efficiency baseline",
+          "points": 0.0,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Passing efficiency",
+          "points": -0.318,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rushing efficiency",
+          "points": 0.221,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Completion quality",
+          "points": -0.046,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass protection & pressure",
+          "points": -0.385,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Turnover profile",
+          "points": -0.027,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Pass frequency",
+          "points": -0.12,
+          "detail": "Weighted statistical contribution from prior games; not a causal player effect."
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.001,
+          "detail": "Reconciles displayed rounded contributions."
+        }
+      ],
+      "profiles": [
+        {
+          "team": "DEN",
+          "games": 71,
+          "through": "2026-01-25",
+          "passEpa": 0.046,
+          "rushEpa": -0.048,
+          "cpoe": -1.64,
+          "sackRate": 0.0426,
+          "passEpaAllowed": -0.144,
+          "rushEpaAllowed": -0.022
+        },
+        {
+          "team": "KC",
+          "games": 78,
+          "through": "2026-01-04",
+          "passEpa": -0.034,
+          "rushEpa": 0.006,
+          "cpoe": -2.03,
+          "sackRate": 0.0835,
+          "passEpaAllowed": -0.012,
+          "rushEpaAllowed": -0.093
+        }
+      ]
+    },
+    "sourceHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "sourceRetrievedAt": "2026-09-10T14:28:45.058496+00:00",
+    "efficiencyRetrievedAt": "2026-09-10T14:28:45.571456+00:00",
+    "efficiencySourceHashes": [
+      "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845"
+    ],
+    "modelCodeHash": "98b5e04faf18d043a76ffcb20ff4b848899c279dc10e947168fc09a80aa387d9",
+    "configuration": {
+      "scoreHalfLifeDays": 180,
+      "scoreRidge": 6,
+      "efficiencyHalfLifeDays": 90,
+      "efficiencyRidge": 10,
+      "efficiencyWeight": 0.25,
+      "selectionSeasons": [
+        2021,
+        2022
+      ],
+      "residualSeason": 2023,
+      "evaluationSeasons": [
+        2024,
+        2025
+      ],
+      "protocol": "weekly-freeze"
+    },
+    "hash": "33426a63975fa59de48fc59212d874f016b73fc6758a2872cb999f8978eaf1b9"
   }
 ]

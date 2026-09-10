@@ -38,8 +38,16 @@ export function Privacy() {
     <>
       {choice === "yes" && (
         <>
-          <Analytics beforeSend={(event) => (consented() ? event : null)} />
-          <SpeedInsights beforeSend={(event) => (consented() ? event : null)} />
+          <Analytics
+            beforeSend={(event) =>
+              consented() ? { ...event, url: event.url.split(/[?#]/)[0] } : null
+            }
+          />
+          <SpeedInsights
+            beforeSend={(event) =>
+              consented() ? { ...event, url: event.url.split(/[?#]/)[0] } : null
+            }
+          />
         </>
       )}
       {choice === null && (

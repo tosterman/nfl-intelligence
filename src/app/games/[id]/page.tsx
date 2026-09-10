@@ -43,6 +43,10 @@ export default async function GamePage({
     : 0;
   return (
     <div className="subpage">
+      <h1 className="sr-only">
+        {teams[g.away].city} {teams[g.away].name} at {teams[g.home].city}{" "}
+        {teams[g.home].name} · Week {g.week}
+      </h1>
       <Link className="breadcrumb" href={returnTo}>
         <ArrowLeft size={14} /> Back to the slate <span>/</span> Week {g.week}
       </Link>
@@ -63,7 +67,7 @@ export default async function GamePage({
               <small>
                 {teams[code].city} · {i ? "Home" : "Away"}
               </small>
-              {i ? <h2>{teams[code].name}</h2> : <h1>{teams[code].name}</h1>}
+              <h2>{teams[code].name}</h2>
               <strong>
                 {g.status === "final"
                   ? i

@@ -90,7 +90,10 @@ def metrics(preds):
     calibration=[]
     for lo,hi in [(0,.4),(.4,.5),(.5,.6),(.6,.7),(.7,1.01)]:
         mask=(prob>=lo)&(prob<hi)
-        if mask.any():calibration.append({'predicted':round(float(prob[mask].mean()),4),'observed':round(float(y[mask].mean()),4),'count':int(mask.sum()),'lower':lo,'upper':min(hi,1)})
+        if mask.any():
+            n=int(mask.sum());rate=float(y[mask].mean());z=1.96;den=1+z*z/n
+            center=(rate+z*z/(2*n))/den;half=z*math.sqrt(rate*(1-rate)/n+z*z/(4*n*n))/den
+            calibration.append({'predicted':round(float(prob[mask].mean()),4),'observed':round(rate,4),'count':n,'lower':lo,'upper':min(hi,1),'observedLow95':round(center-half,4),'observedHigh95':round(center+half,4)})
     market=[p for p in preds if p['marketMargin'] is not None]
     ats={'wins':0,'losses':0,'pushes':0,'noPick':0}; totals=dict(ats)
     for p in preds:
