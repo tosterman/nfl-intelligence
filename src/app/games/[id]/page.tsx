@@ -28,10 +28,19 @@ export async function generateMetadata({
 }) {
   const { id } = await params;
   const g = site.games.find((g) => g.id === id);
+  if (!g) return { title: "Game not found" };
+  const matchup = `${teams[g.away].name} ${g.neutral ? "vs" : "at"} ${teams[g.home].name}`;
+  const title = `${matchup} — ${g.season} Week ${g.week}`;
+  const description = g.status === "final"
+    ? `${matchup}: final result and available pregame model evidence for ${g.season} Week ${g.week}. Review the record and its limitations.`
+    : g.snapshot
+      ? `${matchup}: independent expected scores, win probabilities, outcome ranges and source evidence for ${g.season} Week ${g.week}. Model uncertainty stays explicit.`
+      : `${matchup}: schedule and available matchup context for ${g.season} Week ${g.week}. A current model forecast is not yet available.`;
+  const url = `/games/${g.id}`;
   return {
-    title: g
-      ? `${teams[g.away].name} ${g.neutral ? "vs" : "at"} ${teams[g.home].name} — Week ${g.week}`
-      : "Game not found",
+    title, description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, type: "website", siteName: "NFL Intelligence", images: ["/opengraph-image"] },
   };
 }
 export default async function GamePage({

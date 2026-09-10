@@ -14,8 +14,14 @@ export async function generateMetadata({
 }) {
   const { team } = await params;
   const t = teams[team.toUpperCase()];
+  if (!t) return { title: "Team not found" };
+  const title = `${t.city} ${t.name} — ${site.season} team intelligence`;
+  const description = `${t.city} ${t.name}: ${site.season} schedule, opponent-adjusted scoring ratings and available game forecasts. Explore the evidence and model limitations.`;
+  const url = `/teams/${team.toLowerCase()}`;
   return {
-    title: t ? `${t.city} ${t.name} — Team intelligence` : "Team not found",
+    title, description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, type: "website", siteName: "NFL Intelligence", images: ["/opengraph-image"] },
   };
 }
 export default async function TeamPage({

@@ -1,0 +1,30 @@
+[
+  {
+    "path": "/games/2026_01_SF_LA?from=%2F%3Fweek%3D1",
+    "title": "49ers vs Rams \u2014 2026 Week 1",
+    "description": "49ers vs Rams: independent expected scores, win probabilities, outcome ranges and source evidence for 2026 Week 1. Model uncertainty stays explicit.",
+    "canonical": "https://nfl-intelligence-one.vercel.app/games/2026_01_SF_LA",
+    "image": "https://nfl-intelligence-one.vercel.app/opengraph-image"
+  },
+  {
+    "path": "/games/2026_02_DET_BUF",
+    "title": "Lions at Bills \u2014 2026 Week 2",
+    "description": "Lions at Bills: schedule and available matchup context for 2026 Week 2. A current model forecast is not yet available.",
+    "canonical": "https://nfl-intelligence-one.vercel.app/games/2026_02_DET_BUF",
+    "image": "https://nfl-intelligence-one.vercel.app/opengraph-image"
+  },
+  {
+    "path": "/games/2026_01_NE_SEA",
+    "title": "Patriots at Seahawks \u2014 2026 Week 1",
+    "description": "Patriots at Seahawks: final result and available pregame model evidence for 2026 Week 1. Review the record and its limitations.",
+    "canonical": "https://nfl-intelligence-one.vercel.app/games/2026_01_NE_SEA",
+    "image": "https://nfl-intelligence-one.vercel.app/opengraph-image"
+  },
+  {
+    "path": "/teams/NE",
+    "title": "New England Patriots \u2014 2026 team intelligence",
+    "description": "New England Patriots: 2026 schedule, opponent-adjusted scoring ratings and available game forecasts. Explore the evidence and model limitations.",
+    "canonical": "https://nfl-intelligence-one.vercel.app/teams/ne",
+    "image": "https://nfl-intelligence-one.vercel.app/opengraph-image"
+  }
+]
