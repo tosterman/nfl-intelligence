@@ -1,0 +1,173 @@
+{
+  "checkedAt": "2026-09-10T21:48:49.903139+00:00",
+  "origin": "http://localhost:3000",
+  "teamPages": [
+    {
+      "path": "/teams/ari",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/atl",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/bal",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/buf",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/car",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/chi",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/cin",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/cle",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/dal",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/den",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/det",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/gb",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/hou",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/ind",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/jax",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/kc",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/la",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/lac",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/lv",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/mia",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/min",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/ne",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/no",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/nyg",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/nyj",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/phi",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/pit",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/sea",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/sf",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/tb",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/ten",
+      "status": 200,
+      "hasHeading": true
+    },
+    {
+      "path": "/teams/was",
+      "status": 200,
+      "hasHeading": true
+    }
+  ],
+  "staticPagesWithoutForecastDate": [
+    "/privacy",
+    "/about",
+    "/contact",
+    "/responsible-use",
+    "/methodology"
+  ]
+}
