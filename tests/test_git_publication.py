@@ -10,6 +10,31 @@ from test_publication_preflight import fixture
 NOW=datetime(2026,9,10,17,tzinfo=timezone.utc)
 def status():return {'id':4,'context':'Vercel','state':'success','creator':{'id':35613825,'login':'vercel[bot]'},'target_url':'https://vercel.com/khnum/nfl-intelligence/abc123','created_at':'2026-09-10T16:45:08Z'}
 class GitPublicationTests(unittest.TestCase):
+ def test_rejected_push_retains_intended_commit_without_receipt_or_capture(self):
+  with tempfile.TemporaryDirectory() as folder:
+   root=Path(folder);(root/'data').mkdir();site,ledger=fixture()
+   for name,value in [('site',site),('ledger',ledger),('publications',[{'existing':'receipt'}])]:
+    (root/f'data/{name}.json').write_text(json.dumps(value))
+   before=(root/'data/publications.json').read_bytes()
+   def command(args,**kwargs):
+    if args[1]=='push':raise git_publication.subprocess.CalledProcessError(1,args)
+    return SimpleNamespace(returncode=0)
+   with patch.object(git_publication,'ROOT',root),patch('git_publication.subprocess.check_output',side_effect=['main','a'*40]),patch('git_publication.subprocess.run',side_effect=command),patch('git_publication.capture') as capture:
+    with self.assertRaises(git_publication.subprocess.CalledProcessError):git_publication.main()
+   capture.assert_not_called()
+   self.assertEqual((root/'data/publications.json').read_bytes(),before)
+   recovery=json.loads((root/'release-recovery/git-publication.json').read_text())
+   self.assertEqual(recovery['sourceCommit'],'a'*40)
+   self.assertEqual(recovery['evidenceType'],'publication-intent-only')
+ def test_intent_disk_failure_stops_before_remote_push(self):
+  with tempfile.TemporaryDirectory() as folder:
+   root=Path(folder);(root/'data').mkdir();site,ledger=fixture()
+   for name,value in [('site',site),('ledger',ledger)]:
+    (root/f'data/{name}.json').write_text(json.dumps(value))
+   with patch.object(git_publication,'ROOT',root),patch('git_publication.subprocess.check_output',side_effect=['main','a'*40]),patch('git_publication.subprocess.run',return_value=SimpleNamespace(returncode=0)) as command,patch('git_publication.write_receipts',side_effect=OSError('Simulated disk failure')),patch('git_publication.capture') as capture:
+    with self.assertRaises(OSError):git_publication.main()
+   self.assertFalse(any(call.args[0][1]=='push' for call in command.call_args_list))
+   capture.assert_not_called()
  def test_provider_limit_is_classified_without_accepting_non_deployment_url(self):
   limited={**status(),'state':'failure','target_url':'https://vercel.com/khnum?upgradeToPro=build-rate-limit'}
   with self.assertRaisesRegex(ValueError,'build rate limit'):verified_status([limited],NOW)

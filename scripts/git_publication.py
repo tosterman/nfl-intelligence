@@ -72,11 +72,13 @@ def main():
     changed=subprocess.run(['git','diff','--cached','--quiet']).returncode
     if changed==1:subprocess.run(['git','commit','-m','data: publish refreshed forecast edition'],check=True)
     elif changed!=0:raise RuntimeError('Cannot inspect staged publication')
-    # Fail closed on concurrent updates; do not silently rebase a tested release.
-    subprocess.run(['git','push','origin','HEAD:refs/heads/main'],check=True)
     sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
     recovery=ROOT/'release-recovery';recovery.mkdir(exist_ok=True)
-    (recovery/'git-publication.json').write_text(json.dumps({'sourceCommit':sha,'repository':REPO,'publicAlias':PUBLIC_URL,'expectedArtifactFile':'data/site.json','canonicalLedgerFile':'data/ledger.json'},indent=2)+'\n')
+    # Retain intent before the remote mutation, including when push is rejected.
+    # This record never proves a successful push, deployment or public capture.
+    write_receipts(recovery/'git-publication.json',{'evidenceType':'publication-intent-only','sourceCommit':sha,'repository':REPO,'publicAlias':PUBLIC_URL,'expectedArtifactFile':'data/site.json','canonicalLedgerFile':'data/ledger.json'})
+    # Fail closed on concurrent updates; do not silently rebase a tested release.
+    subprocess.run(['git','push','origin','HEAD:refs/heads/main'],check=True)
     receipt=capture(sha,expected,ledger)
     path=ROOT/'data/publications.json';receipts=json.loads(path.read_text())
     if not any(r.get('evidenceType')==receipt['evidenceType'] and r.get('sourceCommit')==receipt['sourceCommit'] and r.get('githubStatusId')==receipt['githubStatusId'] for r in receipts):
