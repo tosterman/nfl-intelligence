@@ -55,6 +55,8 @@ score-efficiency-v1.2.0: 570 retrospective development games, 569 decisive and o
 
 ## External launch gates
 
+Operational update: the forecast publishing workflow is temporarily disabled because its main-branch implementation lacks the staged cooldown guard and its next schedule precedes the provider retry boundary. Odds and health workflows remain active. Restore and verify it using `docs/publication-resume.md`; historical successful runs below do not establish current publisher availability. The new Acrisure integration is staged with 19 verified US venue locations and eight available game weather records at its collection time.
+
 1. Public deployment and exact-artifact capture are verified. Continue production monitoring and broader device/performance verification.
 2. The connected Git integration now supports the refresh/deploy/archive workflow without a separate Vercel token. The complete manually dispatched workflow succeeded (34504966362), including GitHub-token push, provider deployment, exact public capture, recovery artifact and receipt push. One actual scheduled five-feed health check is now verified (34524200347); no scheduled odds or forecast run was observed in that audit. Sustained clock-triggered reliability, failure recovery drills and branch protection with an explicit publishing-writer policy remain.
 3. Web Analytics is now enabled and consented production pageviews are verified through the reporting API. A declined control page remained untracked in the bounded check. Speed Insights reports received data; representative performance remains unverified. Custom-event reporting is blocked by the current plan. See `reviews/analytics-ingestion.md` and `docs/measurement-plan.md` for exact evidence and limitations.

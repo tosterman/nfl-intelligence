@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-09-10T22:56:10.703977+00:00",
+  "reason": "Production publisher lacks staged cooldown guard; next nominal schedule precedes provider retry boundary",
+  "retryNotBefore": "2026-09-11T20:25:03Z",
+  "workflows": {
+    "refresh.yml": {
+      "id": 354986963,
+      "path": ".github/workflows/refresh.yml",
+      "state": "disabled_manually"
+    },
+    "odds.yml": {
+      "id": 355114597,
+      "path": ".github/workflows/odds.yml",
+      "state": "active"
+    },
+    "health.yml": {
+      "id": 355133167,
+      "path": ".github/workflows/health.yml",
+      "state": "active"
+    }
+  }
+}

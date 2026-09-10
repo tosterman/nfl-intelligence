@@ -1,0 +1,14 @@
+# Resume the temporarily paused forecast publisher
+
+On September 10, 2026, `refresh.yml` was disabled through GitHub Actions. Readback confirmed `disabled_manually`. The main branch still lacked the staged cooldown guard and its next nominal 10:30 UTC run would precede the provider's September 11 20:25:03 UTC retry boundary. Odds collection and health monitoring remain active. This pause prevents automated forecast publication; it does not keep the existing public forecast edition current.
+
+Before resuming:
+
+1. Recheck the authenticated main-commit Vercel status and retry boundary. Do not assume that elapsed time guarantees capacity. Preserve any newer provider instruction.
+2. Finish the reviewed release onto main, including the cooldown guard, forecast input retention and odds collection budget safeguards. Reconcile any main-branch changes. Do not deploy the synthetic context-builder fixture.
+3. Generate a fresh edition from retained real inputs, validate its pregame contexts and hashes, run the required checks, and retain publication intent. The existing checked-in legacy edition is not an acceptable substitute for this refresh.
+4. After the provider allows an attempt, complete one controlled publication, verify the exact public artifact against the expected edition and canonical ledger, and retain the publication receipt. A green build alone does not establish publication.
+5. Re-enable the workflow with `gh workflow enable refresh.yml` and read back `active`. Its checkout must contain the release safeguards before it is allowed to publish. If the workflow itself is needed for the controlled publication, enable it only after those safeguards reach main and the retry boundary has been rechecked; dispatch it once and inspect that run.
+6. Observe a subsequent actual scheduled run through refresh, public capture and receipt archival. A manual dispatch is not evidence of scheduler reliability. Confirm odds and health workflows remain active, and monitor feed freshness and whether the public edition matches the intended release.
+
+Record the resumed workflow state and successful publication evidence alongside the pause receipt in `reviews/publication-workflow-pause.json`. Until then, report the publisher as paused, not operational or sustainably scheduled. No hosting upgrade or deployment retry was made as part of the pause.
