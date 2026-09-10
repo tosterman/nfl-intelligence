@@ -1,0 +1,2390 @@
+{
+  "generatedAt": "2026-09-10T19:12:36.906876+00:00",
+  "cutoff": "2026-09-10T18:57:34.215384+00:00",
+  "season": 2026,
+  "reportScope": {
+    "season": 2026,
+    "type": "REG",
+    "week": 1
+  },
+  "meaning": "Identity agreement between two feeds from the same publisher; not independent confirmation of a roster, injury or starter. Not-listed entries are unresolved, not disproved.",
+  "counts": {
+    "matched": 134,
+    "name-variant": 4,
+    "identifier-mismatch": 1
+  },
+  "reports": 139,
+  "depthSourceHash": "db0a09454965e6fcd4d7378a19381fa53f251432f80f09ebdcc45f78f5e1bc9f",
+  "personnelSourceHash": "96dcc98e297a38ecb8edcc7ab8864260b2899e24604f60c2a9514498ea53c2fb",
+  "inputHashes": {
+    "personnel": "93efae94f88ccfeb574f5837529953955204f96728425a332cc43fcee8369ae4",
+    "quarterbacks": "0ba418820a94d8cbc7f3e85be4a98631f25661ecefdbd94a5d1f1da4c2e9ca28"
+  },
+  "codeHash": "c665de4327671efbc5618fa986ed6423383ec0c70868df34e7d3ea061ac1eace",
+  "records": [
+    {
+      "playerId": "00-0034381",
+      "name": "Josh Sweat",
+      "reportTeam": "ARI",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ARI"
+      ],
+      "depthNamesOnReportTeam": [
+        "Josh Sweat"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0035859",
+      "name": "Blake Gillikin",
+      "reportTeam": "ARI",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ARI"
+      ],
+      "depthNamesOnReportTeam": [
+        "Blake Gillikin"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039007",
+      "name": "Garrett Williams",
+      "reportTeam": "ARI",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ARI"
+      ],
+      "depthNamesOnReportTeam": [
+        "Garrett Williams"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039808",
+      "name": "Isaiah Adams",
+      "reportTeam": "ARI",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ARI"
+      ],
+      "depthNamesOnReportTeam": [
+        "Isaiah Adams"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039864",
+      "name": "Dadrion Taylor-Demerson",
+      "reportTeam": "ARI",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ARI"
+      ],
+      "depthNamesOnReportTeam": [
+        "Dadrion Taylor-Demerson"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040751",
+      "name": "Will Johnson",
+      "reportTeam": "ARI",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ARI"
+      ],
+      "depthNamesOnReportTeam": [
+        "Will Johnson"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041027",
+      "name": "Jeremiyah Love",
+      "reportTeam": "ARI",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ARI"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jeremiyah Love"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0031576",
+      "name": "Za'Darius Smith",
+      "reportTeam": "ATL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ATL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Za'Darius Smith"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036354",
+      "name": "Kyle Hinton",
+      "reportTeam": "ATL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ATL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Kyle Hinton"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039859",
+      "name": "Brandon Dorlus",
+      "reportTeam": "ATL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ATL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Brandon Dorlus"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039917",
+      "name": "Michael Penix Jr.",
+      "reportTeam": "ATL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ATL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Michael Penix Jr."
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040156",
+      "name": "Billy Bowman Jr.",
+      "reportTeam": "ATL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ATL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Billy Bowman Jr."
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041044",
+      "name": "Zachariah Branch",
+      "reportTeam": "ATL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ATL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Zachariah Branch"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036130",
+      "name": "Nnamdi Madubuike",
+      "reportTeam": "BAL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "BAL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Nnamdi Madubuike"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039064",
+      "name": "Zay Flowers",
+      "reportTeam": "BAL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "BAL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Zay Flowers"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039792",
+      "name": "Devontez Walker",
+      "reportTeam": "BAL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "BAL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Devontez Walker"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040069",
+      "name": "Teddye Buchanan",
+      "reportTeam": "BAL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "BAL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Teddye Buchanan"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0035537",
+      "name": "Ty Johnson",
+      "reportTeam": "BUF",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "BUF"
+      ],
+      "depthNamesOnReportTeam": [
+        "Ty Johnson"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040192",
+      "name": "Jordan Hancock",
+      "reportTeam": "BUF",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "BUF"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jordan Hancock"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040724",
+      "name": "T.J. Sanders",
+      "reportTeam": "BUF",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "BUF"
+      ],
+      "depthNamesOnReportTeam": [
+        "T.J. Sanders"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036903",
+      "name": "Bobby Brown III",
+      "reportTeam": "CAR",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CAR"
+      ],
+      "depthNamesOnReportTeam": [
+        "Bobby Brown III"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0037007",
+      "name": "Patrick Jones II",
+      "reportTeam": "CAR",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CAR"
+      ],
+      "depthNamesOnReportTeam": [
+        "Patrick Jones II"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039344",
+      "name": "Jonathon Brooks",
+      "reportTeam": "CAR",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CAR"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jonathon Brooks"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0038416",
+      "name": "Tyson Bagent",
+      "reportTeam": "CHI",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CHI"
+      ],
+      "depthNamesOnReportTeam": [
+        "Tyson Bagent"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039919",
+      "name": "Rome Odunze",
+      "reportTeam": "CHI",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CHI"
+      ],
+      "depthNamesOnReportTeam": [
+        "Rome Odunze"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040740",
+      "name": "Ozzy Trapilo",
+      "reportTeam": "CHI",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CHI"
+      ],
+      "depthNamesOnReportTeam": [
+        "Ozzy Trapilo"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036410",
+      "name": "Tee Higgins",
+      "reportTeam": "CIN",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CIN"
+      ],
+      "depthNamesOnReportTeam": [
+        "Tee Higgins"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036900",
+      "name": "Ja'Marr Chase",
+      "reportTeam": "CIN",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CIN"
+      ],
+      "depthNamesOnReportTeam": [
+        "Ja'Marr Chase"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040756",
+      "name": "Shemar Stewart",
+      "reportTeam": "CIN",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CIN"
+      ],
+      "depthNamesOnReportTeam": [
+        "Shemar Stewart"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0033131",
+      "name": "Maliek Collins",
+      "reportTeam": "CLE",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CLE"
+      ],
+      "depthNamesOnReportTeam": [
+        "Maliek Collins"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036953",
+      "name": "Teven Jenkins",
+      "reportTeam": "CLE",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CLE"
+      ],
+      "depthNamesOnReportTeam": [
+        "Teven Jenkins"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040579",
+      "name": "Carson Schwesinger",
+      "reportTeam": "CLE",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CLE"
+      ],
+      "depthNamesOnReportTeam": [
+        "Carson Schwesinger"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041073",
+      "name": "Parker Brailsford",
+      "reportTeam": "CLE",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CLE"
+      ],
+      "depthNamesOnReportTeam": [
+        "Parker Brailsford"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0033093",
+      "name": "Jonathan Bullard",
+      "reportTeam": "DAL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "DAL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jonathan Bullard"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040017",
+      "name": "Ajani Cornelius",
+      "reportTeam": "DAL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "DAL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Ajani Cornelius"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0038660",
+      "name": "Trevor Nowaske",
+      "reportTeam": "DET",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "DET"
+      ],
+      "depthNamesOnReportTeam": [
+        "Trevor Nowaske"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0038820",
+      "name": "Christian Izien",
+      "reportTeam": "DET",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "DET"
+      ],
+      "depthNamesOnReportTeam": [
+        "Christian Izien"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039396",
+      "name": "Mekhi Wingo",
+      "reportTeam": "DET",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "DET"
+      ],
+      "depthNamesOnReportTeam": [
+        "Mekhi Wingo"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039660",
+      "name": "Thomas Harper",
+      "reportTeam": "DET",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "DET"
+      ],
+      "depthNamesOnReportTeam": [
+        "Thomas Harper"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039862",
+      "name": "Ennis Rakestraw Jr.",
+      "reportTeam": "DET",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "DET"
+      ],
+      "depthNamesOnReportTeam": [
+        "Ennis Rakestraw Jr."
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041441",
+      "name": "Derrick Moore",
+      "reportTeam": "DET",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "DET"
+      ],
+      "depthNamesOnReportTeam": [
+        "Derrick Moore"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041442",
+      "name": "Jimmy Rolder",
+      "reportTeam": "DET",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "DET"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jimmy Rolder"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041445",
+      "name": "Keith Abney II",
+      "reportTeam": "DET",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "DET"
+      ],
+      "depthNamesOnReportTeam": [
+        "Keith Abney II"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0033109",
+      "name": "Javon Hargrave",
+      "reportTeam": "GB",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "GB"
+      ],
+      "depthNamesOnReportTeam": [
+        "Javon Hargrave"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036551",
+      "name": "Aaron Banks",
+      "reportTeam": "GB",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "GB"
+      ],
+      "depthNamesOnReportTeam": [
+        "Aaron Banks"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0037075",
+      "name": "Devonte Wyatt",
+      "reportTeam": "GB",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "GB"
+      ],
+      "depthNamesOnReportTeam": [
+        "Devonte Wyatt"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0037817",
+      "name": "Zach Bako-Bewele",
+      "reportTeam": "GB",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "GB"
+      ],
+      "depthNamesOnReportTeam": [
+        "Zach Bako-Bewele"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039812",
+      "name": "Ty'Ron Hopper",
+      "reportTeam": "GB",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "GB"
+      ],
+      "depthNamesOnReportTeam": [
+        "Ty'Ron Hopper"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039904",
+      "name": "Jordan Morgan",
+      "reportTeam": "GB",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "GB"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jordan Morgan"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040010",
+      "name": "Barryn Sorrell",
+      "reportTeam": "GB",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "GB"
+      ],
+      "depthNamesOnReportTeam": [
+        "Barryn Sorrell"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040016",
+      "name": "Warren Brinson",
+      "reportTeam": "GB",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "GB"
+      ],
+      "depthNamesOnReportTeam": [
+        "Warren Brinson"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0032071",
+      "name": "Trent Brown",
+      "reportTeam": "HOU",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "HOU"
+      ],
+      "depthNamesOnReportTeam": [
+        "Trent Brown"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041440",
+      "name": "Kayden McDonald",
+      "reportTeam": "HOU",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "HOU"
+      ],
+      "depthNamesOnReportTeam": [
+        "Kayden McDonald"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041465",
+      "name": "Wade Woodaz",
+      "reportTeam": "HOU",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "HOU"
+      ],
+      "depthNamesOnReportTeam": [
+        "Wade Woodaz"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0037292",
+      "name": "Andrew Ogletree",
+      "reportTeam": "IND",
+      "status": "name-variant",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "IND"
+      ],
+      "depthNamesOnReportTeam": [
+        "Drew Ogletree"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0037664",
+      "name": "Alec Pierce",
+      "reportTeam": "IND",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "IND"
+      ],
+      "depthNamesOnReportTeam": [
+        "Alec Pierce"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039876",
+      "name": "Sedrick Van Pran-Granger",
+      "reportTeam": "IND",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "IND"
+      ],
+      "depthNamesOnReportTeam": [
+        "Sedrick Van Pran-Granger"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041043",
+      "name": "A.J. Haulcy",
+      "reportTeam": "IND",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "IND"
+      ],
+      "depthNamesOnReportTeam": [
+        "A.J. Haulcy"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0034960",
+      "name": "Jakobi Meyers",
+      "reportTeam": "JAX",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "JAX"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jakobi Meyers"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036655",
+      "name": "Cole Van Lanen",
+      "reportTeam": "JAX",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "JAX"
+      ],
+      "depthNamesOnReportTeam": [
+        "Cole Van Lanen"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040238",
+      "name": "LeQuint Allen Jr.",
+      "reportTeam": "JAX",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "JAX"
+      ],
+      "depthNamesOnReportTeam": [
+        "LeQuint Allen Jr."
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0031388",
+      "name": "Aaron Donald",
+      "reportTeam": "LA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "LA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Aaron Donald"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0033110",
+      "name": "Tyler Higbee",
+      "reportTeam": "LA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "LA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Tyler Higbee"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0033868",
+      "name": "Myles Garrett",
+      "reportTeam": "LA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "LA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Myles Garrett"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036603",
+      "name": "Alaric Jackson",
+      "reportTeam": "LA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "LA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Alaric Jackson"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036672",
+      "name": "Grant Stuard",
+      "reportTeam": "LA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "LA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Grant Stuard"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0037195",
+      "name": "Jaylen Watson",
+      "reportTeam": "LA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "LA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jaylen Watson"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039137",
+      "name": "Byron Young",
+      "reportTeam": "LA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "LA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Byron Young"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0031040",
+      "name": "Khalil Mack",
+      "reportTeam": "LAC",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "LAC"
+      ],
+      "depthNamesOnReportTeam": [
+        "Khalil Mack"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0037320",
+      "name": "Deane Leonard",
+      "reportTeam": "LAC",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "LAC"
+      ],
+      "depthNamesOnReportTeam": [
+        "Deane Leonard"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0038454",
+      "name": "Keaton Mitchell",
+      "reportTeam": "LAC",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "LAC"
+      ],
+      "depthNamesOnReportTeam": [
+        "Keaton Mitchell"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039111",
+      "name": "Tuli Tuipulotu",
+      "reportTeam": "LAC",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "LAC"
+      ],
+      "depthNamesOnReportTeam": [
+        "Tuli Tuipulotu"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040221",
+      "name": "R.J. Mickens",
+      "reportTeam": "LAC",
+      "status": "name-variant",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "LAC"
+      ],
+      "depthNamesOnReportTeam": [
+        "RJ Mickens"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041550",
+      "name": "Brenen Thompson",
+      "reportTeam": "LAC",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "LAC"
+      ],
+      "depthNamesOnReportTeam": [
+        "Brenen Thompson"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039338",
+      "name": "Brock Bowers",
+      "reportTeam": "LV",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "LV"
+      ],
+      "depthNamesOnReportTeam": [
+        "Brock Bowers"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040122",
+      "name": "Ashton Jeanty",
+      "reportTeam": "LV",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "LV"
+      ],
+      "depthNamesOnReportTeam": [
+        "Ashton Jeanty"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0034779",
+      "name": "Ronnie Harrison",
+      "reportTeam": "MIA",
+      "status": "name-variant",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "MIA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Ronnie Harrison Jr."
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041524",
+      "name": "Will Kacmarek",
+      "reportTeam": "MIA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "MIA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Will Kacmarek"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041579",
+      "name": "Seydou Traore",
+      "reportTeam": "MIA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "MIA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Seydou Traore"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041053",
+      "name": "Caleb Tiernan",
+      "reportTeam": "MIN",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "MIN"
+      ],
+      "depthNamesOnReportTeam": [
+        "Caleb Tiernan"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041054",
+      "name": "Jakobe Thomas",
+      "reportTeam": "MIN",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "MIN"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jakobe Thomas"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041354",
+      "name": "Jacob Thomas",
+      "reportTeam": "MIN",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "MIN"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jacob Thomas"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036981",
+      "name": "Christian Barmore",
+      "reportTeam": "NE",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NE"
+      ],
+      "depthNamesOnReportTeam": [
+        "Christian Barmore"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0037413",
+      "name": "Ben Brown",
+      "reportTeam": "NE",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NE"
+      ],
+      "depthNamesOnReportTeam": [
+        "Ben Brown"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040734",
+      "name": "TreVeyon Henderson",
+      "reportTeam": "NE",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NE"
+      ],
+      "depthNamesOnReportTeam": [
+        "TreVeyon Henderson"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0027962",
+      "name": "Cameron Jordan",
+      "reportTeam": "NO",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NO"
+      ],
+      "depthNamesOnReportTeam": [
+        "Cameron Jordan"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0033906",
+      "name": "Alvin Kamara",
+      "reportTeam": "NO",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NO"
+      ],
+      "depthNamesOnReportTeam": [
+        "Alvin Kamara"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039373",
+      "name": "Audric Estim\u00e9",
+      "reportTeam": "NO",
+      "status": "name-variant",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NO"
+      ],
+      "depthNamesOnReportTeam": [
+        "Audric Estime"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041041",
+      "name": "Oscar Delp",
+      "reportTeam": "NO",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NO"
+      ],
+      "depthNamesOnReportTeam": [
+        "Oscar Delp"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0031270",
+      "name": "Shelby Harris",
+      "reportTeam": "NYG",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NYG"
+      ],
+      "depthNamesOnReportTeam": [
+        "Shelby Harris"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036386",
+      "name": "Andrew Thomas",
+      "reportTeam": "NYG",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NYG"
+      ],
+      "depthNamesOnReportTeam": [
+        "Andrew Thomas"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039337",
+      "name": "Malik Nabers",
+      "reportTeam": "NYG",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NYG"
+      ],
+      "depthNamesOnReportTeam": [
+        "Malik Nabers"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039446",
+      "name": "Bryan Hudson",
+      "reportTeam": "NYG",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NYG"
+      ],
+      "depthNamesOnReportTeam": [
+        "Bryan Hudson"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039847",
+      "name": "Theo Johnson",
+      "reportTeam": "NYG",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NYG"
+      ],
+      "depthNamesOnReportTeam": [
+        "Theo Johnson"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0033375",
+      "name": "Tim Patrick",
+      "reportTeam": "NYJ",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NYJ"
+      ],
+      "depthNamesOnReportTeam": [
+        "Tim Patrick"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036902",
+      "name": "Joseph Ossai",
+      "reportTeam": "NYJ",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NYJ"
+      ],
+      "depthNamesOnReportTeam": [
+        "Joseph Ossai"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0038120",
+      "name": "Breece Hall",
+      "reportTeam": "NYJ",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NYJ"
+      ],
+      "depthNamesOnReportTeam": [
+        "Breece Hall"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039798",
+      "name": "Isaiah Davis",
+      "reportTeam": "NYJ",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NYJ"
+      ],
+      "depthNamesOnReportTeam": [
+        "Isaiah Davis"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041032",
+      "name": "Kenyon Sadiq",
+      "reportTeam": "NYJ",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NYJ"
+      ],
+      "depthNamesOnReportTeam": [
+        "Kenyon Sadiq"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041038",
+      "name": "D'Angelo Ponds",
+      "reportTeam": "NYJ",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NYJ"
+      ],
+      "depthNamesOnReportTeam": [
+        "D'Angelo Ponds"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036224",
+      "name": "Jonathan Greenard",
+      "reportTeam": "PHI",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "PHI"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jonathan Greenard"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041483",
+      "name": "Eli Stowers",
+      "reportTeam": "PHI",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "PHI"
+      ],
+      "depthNamesOnReportTeam": [
+        "Eli Stowers"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039167",
+      "name": "Joey Porter Jr.",
+      "reportTeam": "PIT",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "PIT"
+      ],
+      "depthNamesOnReportTeam": [
+        "Joey Porter Jr."
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036363",
+      "name": "Josh Jones",
+      "reportTeam": "SEA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SEA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Josh Jones"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0038765",
+      "name": "Ty Okada",
+      "reportTeam": "SEA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SEA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Ty Okada"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0038797",
+      "name": "Emanuel Wilson",
+      "reportTeam": "SEA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SEA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Emanuel Wilson"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039020",
+      "name": "Anthony Bradford",
+      "reportTeam": "SEA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SEA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Anthony Bradford"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039793",
+      "name": "AJ Barner",
+      "reportTeam": "SEA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SEA"
+      ],
+      "depthNamesOnReportTeam": [
+        "AJ Barner"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040648",
+      "name": "Tory Horton",
+      "reportTeam": "SEA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SEA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Tory Horton"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040733",
+      "name": "Nick Emmanwori",
+      "reportTeam": "SEA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SEA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Nick Emmanwori"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040873",
+      "name": "Julian Neal",
+      "reportTeam": "SEA",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SEA"
+      ],
+      "depthNamesOnReportTeam": [
+        "Julian Neal"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0029892",
+      "name": "Kyle Juszczyk",
+      "reportTeam": "SF",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SF"
+      ],
+      "depthNamesOnReportTeam": [
+        "Kyle Juszczyk"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0033288",
+      "name": "George Kittle",
+      "reportTeam": "SF",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SF"
+      ],
+      "depthNamesOnReportTeam": [
+        "George Kittle"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0034982",
+      "name": "Dre Greenlaw",
+      "reportTeam": "SF",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SF"
+      ],
+      "depthNamesOnReportTeam": [
+        "Dre Greenlaw"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0035413",
+      "name": "Luke Gifford",
+      "reportTeam": "SF",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SF"
+      ],
+      "depthNamesOnReportTeam": [
+        "Luke Gifford"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0035717",
+      "name": "Nick Bosa",
+      "reportTeam": "SF",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SF"
+      ],
+      "depthNamesOnReportTeam": [
+        "Nick Bosa"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039345",
+      "name": "Renardo Green",
+      "reportTeam": "SF",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SF"
+      ],
+      "depthNamesOnReportTeam": [
+        "Renardo Green"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040152",
+      "name": "Upton Stout",
+      "reportTeam": "SF",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SF"
+      ],
+      "depthNamesOnReportTeam": [
+        "Upton Stout"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040721",
+      "name": "Alfred Collins",
+      "reportTeam": "SF",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SF"
+      ],
+      "depthNamesOnReportTeam": [
+        "Alfred Collins"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041363",
+      "name": "James Thompson Jr.",
+      "reportTeam": "SF",
+      "status": "identifier-mismatch",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [],
+      "depthNamesOnReportTeam": [],
+      "sameNameCandidates": [
+        {
+          "playerId": "THO581952",
+          "name": "James Thompson Jr."
+        }
+      ],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041556",
+      "name": "Romello Height",
+      "reportTeam": "SF",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SF"
+      ],
+      "depthNamesOnReportTeam": [
+        "Romello Height"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041557",
+      "name": "Gracen Halton",
+      "reportTeam": "SF",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "SF"
+      ],
+      "depthNamesOnReportTeam": [
+        "Gracen Halton"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0034989",
+      "name": "Justin Skule",
+      "reportTeam": "TB",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "TB"
+      ],
+      "depthNamesOnReportTeam": [
+        "Justin Skule"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0035942",
+      "name": "Christian Rozeboom",
+      "reportTeam": "TB",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "TB"
+      ],
+      "depthNamesOnReportTeam": [
+        "Christian Rozeboom"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0038951",
+      "name": "Sean Tucker",
+      "reportTeam": "TB",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "TB"
+      ],
+      "depthNamesOnReportTeam": [
+        "Sean Tucker"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039855",
+      "name": "Jalen McMillan",
+      "reportTeam": "TB",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "TB"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jalen McMillan"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040129",
+      "name": "Emeka Egbuka",
+      "reportTeam": "TB",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "TB"
+      ],
+      "depthNamesOnReportTeam": [
+        "Emeka Egbuka"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041031",
+      "name": "Rueben Bain Jr.",
+      "reportTeam": "TB",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "TB"
+      ],
+      "depthNamesOnReportTeam": [
+        "Rueben Bain Jr."
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041082",
+      "name": "Billy Schrauth",
+      "reportTeam": "TB",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "TB"
+      ],
+      "depthNamesOnReportTeam": [
+        "Billy Schrauth"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039858",
+      "name": "Cedric Gray",
+      "reportTeam": "TEN",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "TEN"
+      ],
+      "depthNamesOnReportTeam": [
+        "Cedric Gray"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0041508",
+      "name": "Keldric Faulk",
+      "reportTeam": "TEN",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "TEN"
+      ],
+      "depthNamesOnReportTeam": [
+        "Keldric Faulk"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0032268",
+      "name": "Marcus Mariota",
+      "reportTeam": "WAS",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "WAS"
+      ],
+      "depthNamesOnReportTeam": [
+        "Marcus Mariota"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0035149",
+      "name": "Nick Allegretti",
+      "reportTeam": "WAS",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "WAS"
+      ],
+      "depthNamesOnReportTeam": [
+        "Nick Allegretti"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0035279",
+      "name": "Charles Omenihu",
+      "reportTeam": "WAS",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "WAS"
+      ],
+      "depthNamesOnReportTeam": [
+        "Charles Omenihu"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036286",
+      "name": "K'Lavon Chaisson",
+      "reportTeam": "WAS",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "WAS"
+      ],
+      "depthNamesOnReportTeam": [
+        "K'Lavon Chaisson"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0036940",
+      "name": "Odafe Oweh",
+      "reportTeam": "WAS",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "WAS"
+      ],
+      "depthNamesOnReportTeam": [
+        "Odafe Oweh"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039368",
+      "name": "Jordan Magee",
+      "reportTeam": "WAS",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "WAS"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jordan Magee"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0039912",
+      "name": "Ben Sinnott",
+      "reportTeam": "WAS",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "WAS"
+      ],
+      "depthNamesOnReportTeam": [
+        "Ben Sinnott"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    },
+    {
+      "playerId": "00-0040242",
+      "name": "Jacory Croskey-Merritt",
+      "reportTeam": "WAS",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "WAS"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jacory Croskey-Merritt"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+    }
+  ]
+}

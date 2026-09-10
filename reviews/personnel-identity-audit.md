@@ -1,0 +1,11 @@
+# Personnel identity cross-check
+
+At the common acquisition cutoff `2026-09-10T18:57:34.215384+00:00`, 139 personnel reports were compared with each team's newest prior depth-chart snapshot, limited to thirty hours. The raw depth-chart CSV was reconstructed from content-addressed blocks with per-block and full-source SHA-256 checks. The report retains both source fingerprints, normalized input fingerprints, code identity and every row-level outcome.
+
+Results: **134 exact ID/team/name matches, four same-ID/team name variants, one identifier mismatch, and no team conflicts**. Name variants were Andrew/Drew Ogletree, R.J./RJ Mickens, Ronnie Harrison/ Ronnie Harrison Jr., and Audric Estime with/without its accent. These are retained as differences rather than automatically rewriting source names.
+
+The initial ID-only comparison appeared to leave James Thompson Jr. absent. Inspection of the actual source row found him under `THO581952`, while the personnel feed uses `00-0041363`. The [49ers' unofficial depth chart](https://www.49ers.com/team/depth-chart), marked updated September 8, 2026 and checked September 10, lists James Thompson Jr. at right defensive tackle. This corroborates the named player's team presence; it does not independently establish an ID mapping or validate his injury designation. No fuzzy name match was promoted to a canonical identity.
+
+The audit separates missing entries, missing source coverage, different-team ID matches, multi-team ambiguity, inconsistent names and same-name/different-ID candidates. It selects the newest team snapshot across all positions before filtering identities, so an older player row cannot silently survive a newer team update. Four tests cover those branches, the thirty-hour and strict-before-cutoff boundaries, duplicate position roles and refusal to silently merge identifiers.
+
+Both normalized feeds come from nflverse, so agreement is a cross-feed consistency check, not two independent confirmations of health, lineup or roster truth. Absence can reflect depth-chart coverage or source timing. The named ID discrepancy must be resolved before using this cross-source join for numerical player-impact features. Production reports and forecasts are unchanged; this is a reproducible audit, not an automated production gate.
