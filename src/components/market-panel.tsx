@@ -113,7 +113,12 @@ export function MarketPanel({
               ))}
             </select>
           </label>
-          <div className="table-scroll">
+          <div
+            className="table-scroll"
+            tabIndex={0}
+            role="region"
+            aria-label="Model and sportsbook comparison"
+          >
             <table className="comparison">
               <thead>
                 <tr>

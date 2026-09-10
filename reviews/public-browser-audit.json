@@ -1,0 +1,631 @@
+{
+  "checkedAt": "2026-09-10T20:36:58.186530+00:00",
+  "url": "https://nfl-intelligence-one.vercel.app",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 320,
+        "documentWidth": 320,
+        "clientWidth": 320,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 33
+        }
+      ],
+      "passes": 23
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/ratings",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 320,
+        "documentWidth": 320,
+        "clientWidth": 320,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 96
+        }
+      ],
+      "passes": 23
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/performance",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 320,
+        "documentWidth": 320,
+        "clientWidth": 320,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 14
+        }
+      ],
+      "passes": 26
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/methodology",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 320,
+        "documentWidth": 320,
+        "clientWidth": 320,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 23
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/games/2026_01_SF_LA?from=%2F%3Fweek%3D1%26q%3D%26filter%3Dall%26sort%3Dkickoff",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 320,
+        "documentWidth": 360,
+        "clientWidth": 320,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 36
+        }
+      ],
+      "passes": 30
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/teams/PHI",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 320,
+        "documentWidth": 320,
+        "clientWidth": 320,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ],
+      "passes": 23
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "clientWidth": 390,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 32
+        }
+      ],
+      "passes": 23
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "route": "/ratings",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "clientWidth": 390,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 64
+        }
+      ],
+      "passes": 23
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "route": "/performance",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "clientWidth": 390,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 11
+        }
+      ],
+      "passes": 25
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "route": "/methodology",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "clientWidth": 390,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 23
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "route": "/games/2026_01_SF_LA?from=%2F%3Fweek%3D1%26q%3D%26filter%3Dall%26sort%3Dkickoff",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "clientWidth": 390,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 28
+        }
+      ],
+      "passes": 30
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "route": "/teams/PHI",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "clientWidth": 390,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "passes": 22
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "documentWidth": 1440,
+        "clientWidth": 1440,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 35
+        }
+      ],
+      "passes": 23
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/ratings",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "documentWidth": 1440,
+        "clientWidth": 1440,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 32
+        }
+      ],
+      "passes": 22
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/performance",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "documentWidth": 1440,
+        "clientWidth": 1440,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 11
+        }
+      ],
+      "passes": 25
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/methodology",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "documentWidth": 1440,
+        "clientWidth": 1440,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 23
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/games/2026_01_SF_LA?from=%2F%3Fweek%3D1%26q%3D%26filter%3Dall%26sort%3Dkickoff",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "documentWidth": 1440,
+        "clientWidth": 1440,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 13
+        }
+      ],
+      "passes": 29
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/teams/PHI",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "documentWidth": 1440,
+        "clientWidth": 1440,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ],
+      "passes": 22
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "clientWidth": 390,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 32
+        }
+      ],
+      "passes": 23
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/ratings",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "clientWidth": 390,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 64
+        }
+      ],
+      "passes": 23
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/performance",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "clientWidth": 390,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 11
+        }
+      ],
+      "passes": 25
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/methodology",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "clientWidth": 390,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 23
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/games/2026_01_SF_LA?from=%2F%3Fweek%3D1%26q%3D%26filter%3Dall%26sort%3Dkickoff",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "clientWidth": 390,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 28
+        }
+      ],
+      "passes": 30
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/teams/PHI",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "clientWidth": 390,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "passes": 22
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "documentWidth": 1440,
+        "clientWidth": 1440,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 35
+        }
+      ],
+      "passes": 23
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/ratings",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "documentWidth": 1440,
+        "clientWidth": 1440,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 32
+        }
+      ],
+      "passes": 22
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/performance",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "documentWidth": 1440,
+        "clientWidth": 1440,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 11
+        }
+      ],
+      "passes": 25
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/methodology",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "documentWidth": 1440,
+        "clientWidth": 1440,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [],
+      "passes": 23
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/games/2026_01_SF_LA?from=%2F%3Fweek%3D1%26q%3D%26filter%3Dall%26sort%3Dkickoff",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "documentWidth": 1440,
+        "clientWidth": 1440,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 13
+        }
+      ],
+      "passes": 29
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/teams/PHI",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "documentWidth": 1440,
+        "clientWidth": 1440,
+        "h1": 1
+      },
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 2
+        }
+      ],
+      "passes": 22
+    }
+  ]
+}
