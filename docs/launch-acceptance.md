@@ -57,3 +57,9 @@ score-efficiency-v1.2.0: 570 retrospective development games, 569 decisive and o
 6. Add the missing inputs and demonstrate their benefit before presenting this as complete football intelligence.
 
 No claim of perfect quality, Google approval, operational automation or revenue is made. The goal remains open.
+
+## Git integration follow-up — 2026-09-10
+
+The authenticated Vercel project API now confirms a GitHub link to `tosterman/nfl-intelligence`, production branch `main`. This removes the missing repository connection. A post-link push is used to verify the native build path; connection metadata alone is not a successful deployment.
+
+At this inspection, Vercel reports no configured project environment variables and GitHub Actions exposes only the project/org identifier secret names. The odds credential location is being clarified with the owner. The existing refresh workflow still requires its deployment token; native Git deployment does not itself replace the current exact-artifact publication receipt workflow.
