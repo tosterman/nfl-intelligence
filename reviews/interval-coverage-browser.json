@@ -1,0 +1,34 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "rows": 5,
+    "overflow": false,
+    "lastColumnReached": true,
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "rows": 5,
+    "overflow": false,
+    "lastColumnReached": true,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "rows": 5,
+    "overflow": false,
+    "lastColumnReached": true,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "rows": 5,
+    "overflow": false,
+    "lastColumnReached": true,
+    "errors": []
+  }
+]
