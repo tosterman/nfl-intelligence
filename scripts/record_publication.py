@@ -20,10 +20,7 @@ def wire_json(value):
         return item
     return json.dumps(normalize(value),sort_keys=True,separators=(',',':'),allow_nan=False)
 
-def make_receipt(deployment,artifact,ledger,now=None,*,expected_site):
-    if deployment.get('readyState')!='READY' or not deployment.get('id','').startswith('dpl_'):raise ValueError('Verified READY deployment required')
-    url=deployment.get('url','')
-    if not url or '/' in url or not url.endswith('.vercel.app'):raise ValueError('Unexpected deployment hostname')
+def verified_snapshot_hashes(artifact,ledger,expected_site):
     if wire_json(artifact)!=wire_json(forecast_artifact(expected_site)):raise ValueError('Published artifact differs from intended release')
     known={s['hash']:s for s in ledger};hashes=[]
     for game in artifact.get('games',[]):
@@ -32,6 +29,13 @@ def make_receipt(deployment,artifact,ledger,now=None,*,expected_site):
             if original is None or not snapshot_valid(original) or wire_json(original)!=wire_json(snap):raise ValueError('Published forecast differs from canonical ledger')
             hashes.append(snap['hash'])
     if not hashes:raise ValueError('No verifiable forecasts in deployment')
+    return sorted(set(hashes))
+
+def make_receipt(deployment,artifact,ledger,now=None,*,expected_site):
+    if deployment.get('readyState')!='READY' or not deployment.get('id','').startswith('dpl_'):raise ValueError('Verified READY deployment required')
+    url=deployment.get('url','')
+    if not url or '/' in url or not url.endswith('.vercel.app'):raise ValueError('Unexpected deployment hostname')
+    hashes=verified_snapshot_hashes(artifact,ledger,expected_site)
     at=now or datetime.now(timezone.utc)
     artifact_hash=hashlib.sha256(json.dumps(artifact,sort_keys=True,separators=(',',':')).encode()).hexdigest()
     return {'status':'ready','publishedAt':at.isoformat(),'deploymentUrl':'https://'+url,'deploymentId':deployment['id'],'snapshotHashes':sorted(set(hashes)),'artifactSha256':artifact_hash}

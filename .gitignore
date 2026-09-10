@@ -13,3 +13,5 @@ founding.docx
 .tools/
 .vercel
 .env*
+
+release-recovery/
