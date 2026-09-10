@@ -34,7 +34,7 @@ Sources: [nflverse data releases](https://github.com/nflverse/nflverse-data), [C
 
 ## Publishing
 
-`scripts/deploy_release.py` deploys through Vercel REST using `VERCEL_TOKEN`, `VERCEL_ORG_ID`, and `VERCEL_PROJECT_ID` environment secrets. It verifies READY state, fetches the deployed forecast artifact, compares each snapshot with its canonical local version, then records the receipt. A failed deployment cannot enter the prospective record. The public `/api/status` endpoint returns 503 when the artifact is over 30 hours old.
+`scripts/deploy_release.py` deploys through Vercel REST using `VERCEL_TOKEN`, `VERCEL_ORG_ID`, and `VERCEL_PROJECT_ID` environment secrets. It verifies READY state, fetches the deployed forecast artifact, compares each snapshot with its canonical local version, then records the receipt. A failed deployment cannot enter the prospective record. The public `/api/status` endpoint returns 503 when the model edition, schedule/results input, or either of the two recent efficiency-season inputs is over 30 hours old or lacks a valid acquisition time. An offline rerun cannot make stale inputs healthy. Individual checks are returned for monitoring, and the slate uses the same assessment.
 
 GitHub Actions verifies every push and provides a daily refresh workflow. Scheduled publishing requires the three repository secrets. Missing credentials fail explicitly before changing public data. Retain branch protection and restrict write access to ledger and publication workflows. Git administrators can rewrite history; hashes and receipts are evidence, not absolute immutability guarantees.
 

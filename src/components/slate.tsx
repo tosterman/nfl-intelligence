@@ -14,6 +14,7 @@ import { teams, pct, signed, time, date } from "@/lib/teams";
 import type { Game } from "@/lib/types";
 import { TeamMark } from "./brand";
 import { track } from "@vercel/analytics";
+import { assessFreshness, type FreshnessInput } from "@/lib/freshness";
 function event(name: string) {
   try {
     if (localStorage.getItem("nfl-analytics-consent") === "yes") track(name);
@@ -23,8 +24,12 @@ export function Slate({
   games,
   site,
   initial,
+  freshness,
+  initialStale,
 }: {
   games: Game[];
+  freshness: FreshnessInput[];
+  initialStale: boolean;
   initial: { week: number; query: string; filter: string; sort: string };
   site: {
     week: number;
@@ -41,14 +46,13 @@ export function Slate({
   useEffect(() => {
     window.history.replaceState(null, "", returnTo);
   }, [returnTo]);
-  const [stale, setStale] = useState(false);
+  const [stale, setStale] = useState(initialStale);
   useEffect(() => {
-    const check = () =>
-      setStale(Date.now() - Date.parse(site.generatedAt) > 30 * 3600000);
+    const check = () => setStale(assessFreshness(freshness).status !== "ok");
     check();
     const timer = setInterval(check, 60000);
     return () => clearInterval(timer);
-  }, [site.generatedAt]);
+  }, [freshness]);
   const weekGames = games.filter((g) => g.week === week);
   const filtered = weekGames
     .filter(
@@ -130,9 +134,9 @@ export function Slate({
       </section>
       {stale && (
         <div className="notice" role="status">
-          This edition is more than 30 hours old. Treat schedules, game status
-          and forecasts as potentially outdated. The last refresh is shown
-          below.
+          This edition or a required input is older than 30 hours, or its
+          timestamp cannot be verified. Treat schedules, game status and
+          forecasts as potentially outdated.
         </div>
       )}
       {featured && (
@@ -348,7 +352,7 @@ export function Slate({
         </Link>
       </section>
       <p className="source-stamp">
-        Data refreshed {date(site.generatedAt)}, {time(site.generatedAt)} ET ·
+        Model generated {date(site.generatedAt)}, {time(site.generatedAt)} ET ·
         nflverse schedule and results · {site.modelVersion}
       </p>
     </>

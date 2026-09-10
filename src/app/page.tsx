@@ -1,5 +1,6 @@
 import { site } from "@/lib/data";
 import { Slate } from "@/components/slate";
+import { assessFreshness, freshnessInputs } from "@/lib/freshness";
 export default async function Home({
   searchParams,
 }: {
@@ -20,6 +21,8 @@ export default async function Home({
   return (
     <Slate
       initial={initial}
+      freshness={freshnessInputs(site)}
+      initialStale={assessFreshness(freshnessInputs(site)).status !== "ok"}
       games={site.games}
       site={{
         week: site.week,
