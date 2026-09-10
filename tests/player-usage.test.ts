@@ -1,7 +1,10 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import type { PlayerReport } from "../src/lib/personnel";
-import { usageForPlayer } from "../src/lib/player-usage";
+import {
+  usageForPlayer,
+  hasUsageIdentityConflict,
+} from "../src/lib/player-usage";
 const now = Date.parse("2026-09-11T00:00:00Z");
 const player: PlayerReport = {
   playerId: "fixture",
@@ -44,6 +47,35 @@ const artifact = {
     },
   ],
 };
+
+test("identity conflict is explicit only for its bound report", () => {
+  const copy = structuredClone(artifact);
+  copy.records[0].identityStatus = "identifier-mismatch";
+  assert.equal(hasUsageIdentityConflict(copy, personnel, player, now), true);
+  assert.equal(
+    hasUsageIdentityConflict(artifact, personnel, player, now),
+    false,
+  );
+  assert.equal(
+    hasUsageIdentityConflict(
+      copy,
+      { ...personnel, sourceHash: "new" },
+      player,
+      now,
+    ),
+    false,
+  );
+  assert.equal(
+    hasUsageIdentityConflict(
+      copy,
+      personnel,
+      { ...player, name: "Other" },
+      now,
+    ),
+    false,
+  );
+  assert.equal(usageForPlayer(copy, personnel, player, now), null);
+});
 
 test("verified usage exposes historical context without availability claims", () => {
   const value = usageForPlayer(artifact, personnel, player, now);

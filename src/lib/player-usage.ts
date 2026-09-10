@@ -5,7 +5,7 @@ const object = (value: unknown): Record<string, unknown> | null =>
     ? (value as Record<string, unknown>)
     : null;
 
-export function usageForPlayer(
+function boundRecord(
   raw: unknown,
   snapshot: PersonnelSnapshot,
   player: PlayerReport,
@@ -41,13 +41,32 @@ export function usageForPlayer(
           (k) => r[k] === player[k as keyof PlayerReport],
         ),
     );
-  if (
-    matching.length !== 1 ||
-    matching[0]!.name !== player.name ||
-    matching[0]!.identityStatus !== "matched"
-  )
-    return null;
-  const usage = object(matching[0]!.usage),
+  if (matching.length !== 1 || matching[0]!.name !== player.name) return null;
+  return { record: matching[0]!, data, calculated };
+}
+
+export function hasUsageIdentityConflict(
+  raw: unknown,
+  snapshot: PersonnelSnapshot,
+  player: PlayerReport,
+  now = Date.now(),
+) {
+  return (
+    boundRecord(raw, snapshot, player, now)?.record.identityStatus ===
+    "identifier-mismatch"
+  );
+}
+
+export function usageForPlayer(
+  raw: unknown,
+  snapshot: PersonnelSnapshot,
+  player: PlayerReport,
+  now = Date.now(),
+) {
+  const bound = boundRecord(raw, snapshot, player, now);
+  if (!bound || bound.record.identityStatus !== "matched") return null;
+  const { data, calculated } = bound;
+  const usage = object(bound.record.usage),
     shares = object(usage?.weightedShares);
   if (
     !usage ||

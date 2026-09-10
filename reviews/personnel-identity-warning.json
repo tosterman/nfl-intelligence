@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-09-10T22:10:30.980631+00:00",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "warningVisibleOutsideDetails": true,
+      "affectedReport": "James Thompson Jr.",
+      "noOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "warningVisibleOutsideDetails": true,
+      "affectedReport": "James Thompson Jr.",
+      "noOverflow": true
+    }
+  ]
+}
