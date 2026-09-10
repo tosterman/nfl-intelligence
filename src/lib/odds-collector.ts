@@ -20,11 +20,33 @@ export function canReuseSnapshot(feed: OddsFeed | null, now = Date.now()) {
   );
 }
 export async function collectOdds() {
-  const key = process.env.ODDS_API_KEY;
+  return runOddsCollection({
+    key: process.env.ODDS_API_KEY,
+    read: readStoredOdds,
+    publish: publishOdds,
+    fetcher: fetch,
+    now: Date.now,
+  });
+}
+export async function runOddsCollection({
+  key,
+  read,
+  publish,
+  fetcher,
+  now,
+}: {
+  key: string | undefined;
+  read: () => Promise<OddsFeed | null>;
+  publish: (
+    feed: OddsFeed,
+  ) => Promise<{ fetchedAt: string; sha256: string; events: number }>;
+  fetcher: typeof fetch;
+  now: () => number;
+}) {
   if (!key) throw new Error("Collection configuration missing");
-  const existing = await readStoredOdds();
-  const health = oddsHealth(existing);
-  if (canReuseSnapshot(existing))
+  const existing = await read();
+  const health = oddsHealth(existing, now());
+  if (canReuseSnapshot(existing, now()))
     return { ...health, status: "already-current" };
   const url = new URL(
     "https://api.the-odds-api.com/v4/sports/americanfootball_nfl/odds/",
@@ -35,25 +57,28 @@ export async function collectOdds() {
     markets: "h2h,spreads,totals",
     oddsFormat: "american",
   }).toString();
-  const response = await fetch(url, {
+  const response = await fetcher(url, {
     cache: "no-store",
     signal: AbortSignal.timeout(10000),
   });
   if (!response.ok) throw new Error("Odds acquisition failed");
-  const feed = normalizeOdds(await response.json(), new Date().toISOString());
+  const feed = normalizeOdds(
+    await response.json(),
+    new Date(now()).toISOString(),
+  );
   let evidence;
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
-      evidence = await publishOdds(feed);
+      evidence = await publish(feed);
       break;
     } catch {
       if (attempt === 2) throw new Error("Odds storage failed");
     }
   }
-  const saved = await readStoredOdds();
+  const saved = await read();
   if (
     !saved ||
-    oddsHealth(saved).status !== "ok" ||
+    oddsHealth(saved, now()).status !== "ok" ||
     prepareArchive(saved).sha256 !== evidence?.sha256
   )
     throw new Error("Odds readback failed");
