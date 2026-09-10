@@ -8,7 +8,7 @@ from urllib.error import HTTPError,URLError
 
 ROOT=Path(__file__).resolve().parents[1]
 ORIGIN='https://nfl-intelligence-one.vercel.app'
-ENDPOINTS={'forecasts':'/api/status','odds':'/api/odds-status'}
+ENDPOINTS={'forecasts':'/api/status','odds':'/api/odds-status','personnel':'/api/personnel-status'}
 
 def age(value,now):
     if not isinstance(value,str):raise ValueError('Missing acquisition timestamp')
@@ -23,6 +23,16 @@ def validate_health(kind,http_status,payload,now):
     if kind=='odds':
         if payload.get('maximumAgeHours')!=6 or not 0<=age(payload.get('fetchedAt'),now)<=6:
             raise ValueError('Odds acquisition is missing, stale or future-dated')
+    elif kind=='personnel':
+        if payload.get('maximumAgeHours')!=30 or payload.get('collectionStatus')!='ok':
+            raise ValueError('Personnel collection failed')
+        season=payload.get('season')
+        if type(season) is not int or not now.year-1<=season<=now.year or season!=payload.get('expectedSeason'):
+            raise ValueError('Personnel season mismatch')
+        if any(not 0<=age(payload.get(k),now)<30 for k in ['checkedAt','retrievedAt','assetUpdatedAt']):
+            raise ValueError('Personnel acquisition or source is stale')
+        if type(payload.get('rowCount')) is not int or payload['rowCount']<=0 or not re.fullmatch(r'[a-f0-9]{64}',payload.get('sourceHash','')):
+            raise ValueError('Personnel source identity missing')
     elif kind=='forecasts':
         checks=payload.get('checks')
         if not isinstance(checks,list) or len(checks)!=4 or any(not isinstance(c,dict) for c in checks):
@@ -67,7 +77,7 @@ def probe(kind):
     return {'endpoint':ENDPOINTS[kind],'healthy':attempts[-1]['healthy'],'attempts':attempts}
 
 def main():
-    with ThreadPoolExecutor(max_workers=2) as executor:
+    with ThreadPoolExecutor(max_workers=3) as executor:
         results=dict(zip(ENDPOINTS,executor.map(probe,ENDPOINTS)))
     report={'checkedAt':datetime.now(timezone.utc).isoformat(),'healthy':all(r['healthy'] for r in results.values()),'checks':results}
     output=ROOT/'release-recovery'/'health-report.json'

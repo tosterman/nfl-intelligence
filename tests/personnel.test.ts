@@ -1,6 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { personnelForGame } from "../src/lib/personnel";
+import { personnelHealth } from "../src/lib/personnel-health";
 import type { Game } from "../src/lib/types";
 const game = {
   season: 2026,
@@ -34,6 +35,34 @@ const snapshot = {
   ],
 };
 const now = Date.parse(snapshot.retrievedAt);
+test("personnel health distinguishes failed collection and stale sources from fresh downloads", () => {
+  const data = { ...snapshot, season: 2026 };
+  const collection = { status: "ok", checkedAt: snapshot.retrievedAt };
+  assert.equal(personnelHealth(data, collection, 2026, now).status, "ok");
+  assert.equal(
+    personnelHealth(data, { ...collection, status: "unavailable" }, 2026, now)
+      .status,
+    "unavailable",
+  );
+  assert.equal(
+    personnelHealth(data, collection, 2027, now).status,
+    "unavailable",
+  );
+  assert.equal(
+    personnelHealth(
+      { ...data, assetUpdatedAt: new Date(now - 30 * 3600000).toISOString() },
+      collection,
+      2026,
+      now,
+    ).status,
+    "unavailable",
+  );
+  assert.equal(
+    personnelHealth({ ...data, sourceHash: "bad" }, collection, 2026, now)
+      .status,
+    "unavailable",
+  );
+});
 test("personnel matches only exact scope and preserves blank designations", () => {
   const result = personnelForGame(snapshot, game, now);
   assert.ok(result.players.length > 0);

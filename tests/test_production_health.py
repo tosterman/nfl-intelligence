@@ -36,7 +36,10 @@ class ProductionHealthTests(unittest.TestCase):
                 failed=self.path=='/api/status'
                 self.send_response(503 if failed else 200)
                 self.send_header('Content-Type','application/json');self.end_headers()
-                self.wfile.write(json.dumps({'status':'ok','fetchedAt':datetime.now(timezone.utc).isoformat(),'maximumAgeHours':6}).encode())
+                at=datetime.now(timezone.utc).isoformat()
+                payload={'status':'ok','fetchedAt':at,'maximumAgeHours':6}
+                if self.path=='/api/personnel-status':payload={'status':'ok','collectionStatus':'ok','season':datetime.now(timezone.utc).year,'expectedSeason':datetime.now(timezone.utc).year,'checkedAt':at,'retrievedAt':at,'assetUpdatedAt':at,'sourceHash':'a'*64,'rowCount':1,'maximumAgeHours':30}
+                self.wfile.write(json.dumps(payload).encode())
             def log_message(self,*args):pass
         server=ThreadingHTTPServer(('127.0.0.1',0),Handler)
         worker=threading.Thread(target=server.serve_forever,daemon=True);worker.start()
@@ -47,6 +50,13 @@ class ProductionHealthTests(unittest.TestCase):
                 self.assertFalse(report['healthy'])
                 self.assertEqual([a['httpStatus'] for a in report['checks']['forecasts']['attempts']],[503,503])
                 self.assertTrue(report['checks']['odds']['healthy'])
+                self.assertTrue(report['checks']['personnel']['healthy'])
         finally:server.shutdown();server.server_close();worker.join()
+
+    def test_personnel_failure_and_old_asset_override_claimed_health(self):
+        good={'status':'ok','collectionStatus':'ok','season':2026,'expectedSeason':2026,'checkedAt':self.at,'retrievedAt':self.at,'assetUpdatedAt':self.at,'sourceHash':'a'*64,'rowCount':1,'maximumAgeHours':30}
+        validate_health('personnel',200,good,self.now)
+        for change in [{'collectionStatus':'unavailable'},{'season':2025},{'rowCount':0},{'assetUpdatedAt':(self.now-timedelta(hours=30)).isoformat()},{'checkedAt':(self.now+timedelta(seconds=1)).isoformat()}]:
+            with self.assertRaises(ValueError):validate_health('personnel',200,good|change,self.now)
 
 if __name__=='__main__':unittest.main()
