@@ -1,0 +1,19 @@
+{
+  "meaning": "Exact local inputs matched to committed event and settlement audit hashes. Original schedule acquisition time is not preserved here.",
+  "provider": "nflverse",
+  "sourceUrl": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+  "files": {
+    "games.csv": {
+      "sha256": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+      "bytes": 2178321,
+      "compressedSha256": "bb4cb63faff3fbb3c6a928bc452f0e24c4d6208666923f08c3cc79b3b5585d57"
+    },
+    "site.json": {
+      "sha256": "91497ce97cbf78b7e3b2cdc1f3992ed07d1a1132e22987a8e9fba92b82e2bd46",
+      "bytes": 754780,
+      "compressedSha256": "785bb1d7370f27f323d1f92e1a44369e80b9ef1d1d8e5efdf9295c66242f9d22"
+    }
+  }
+}
