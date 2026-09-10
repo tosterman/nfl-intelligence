@@ -81,5 +81,19 @@ class PersonnelTests(unittest.TestCase):
             self.assertEqual(state['status'], 'unavailable')
             self.assertNotIn('invalid source', json.dumps(state))
 
+    def test_pointer_replace_failure_preserves_previous_bytes(self):
+        raw = self.raw([self.row])
+        asset = {'name': 'injuries_2026.csv', 'browser_download_url': 'https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv',
+                 'digest': 'sha256:' + hashlib.sha256(raw).hexdigest(), 'size': len(raw), 'updated_at': datetime.now(timezone.utc).isoformat()}
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder); (root / 'data').mkdir()
+            (root / 'data/site.json').write_text(json.dumps({'season': 2026, 'games': [self.game]}))
+            pointer = root / 'data/personnel.json'; pointer.write_bytes(b'prior snapshot')
+            with patch.object(refresh_personnel, 'ROOT', root), patch.object(refresh_personnel, 'read', side_effect=[json.dumps({'assets': [asset]}).encode(), raw]), patch.object(refresh_personnel.os, 'replace', side_effect=OSError('replace failed')):
+                self.assertEqual(refresh_personnel.run_collection(), 1)
+            self.assertEqual(pointer.read_bytes(), b'prior snapshot')
+            self.assertEqual(list((root / 'data').glob('*.tmp')), [])
+            self.assertEqual(json.loads((root / 'data/personnel-collection.json').read_text())['status'], 'unavailable')
+
 if __name__ == '__main__':
     unittest.main()
