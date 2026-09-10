@@ -1,0 +1,32 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "chartColors": {
+      "foreground": "rgb(184, 193, 205)",
+      "background": "rgb(23, 26, 31)"
+    },
+    "chartTextContrast": 9.591235821440863,
+    "table": {
+      "scrollLeft": 59,
+      "clientWidth": 242,
+      "scrollWidth": 301,
+      "lastColumnVisible": true
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "chartColors": {
+      "foreground": "rgb(184, 193, 205)",
+      "background": "rgb(23, 26, 31)"
+    },
+    "chartTextContrast": 9.591235821440863,
+    "table": {
+      "scrollLeft": 59,
+      "clientWidth": 242,
+      "scrollWidth": 301,
+      "lastColumnVisible": true
+    }
+  }
+]
