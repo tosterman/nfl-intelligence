@@ -4,6 +4,8 @@ Verdict: publicly deployed research edition; full operational and commercial lau
 
 ## Verified release evidence
 
+Current hosting limitation: refresh [34526122759](https://github.com/tosterman/nfl-intelligence/actions/runs/34526122759) pushed a new edition but Vercel rejected deployment at its build-rate limit. The public status endpoint remains healthy on the verified edition generated `2026-09-10T20:09:04.084122Z`; the newer Git edition is not accepted as published. Main deletion and non-fast-forward protection are now active, as recorded in `reviews/main-history-protection.md`. Development continues on `internal-development` with automatic deployments disabled for that branch and GitHub checks retained; see `docs/release-batching.md`. Hosting capacity recovery and a subsequent verified publication remain open.
+
 The baseline evidence below is historical. Subsequent releases verified the native refresh/publication workflow, private odds acquisition and recent sportsbook history, and consented Analytics ingestion. Current details are in `reviews/production-monitoring.md`, `reviews/market-history.md`, `reviews/analytics-ingestion.md` and `docs/measurement-plan.md`. The coverage table and external launch gates reflect those updates; early inspection notes at the end retain their original context.
 
 Application baseline: e99b1c3ce22e2095dcada6ebff31d9937e939080. [GitHub CI](https://github.com/tosterman/nfl-intelligence/actions/runs/34493114456) passed 59 Python and 20 TypeScript tests, production build and production dependency audit. This release corrects canonical URLs to the actual production alias and excludes private/source-only files from CLI uploads.
