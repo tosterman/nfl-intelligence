@@ -890,6 +890,8 @@ select:focus-visible {
   color: #b2bac6;
 }
 .consent {
+  max-height: calc(100dvh - 36px);
+  overflow-y: auto;
   position: fixed;
   bottom: 18px;
   left: 50%;

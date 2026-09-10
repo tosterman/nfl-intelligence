@@ -17,7 +17,22 @@ export function Privacy() {
   const [choice, setChoice] = useState<string | null>("loading");
   const declineRef = useRef<HTMLButtonElement>(null);
   const settingsRef = useRef<HTMLButtonElement>(null);
+  const bannerRef = useRef<HTMLElement>(null);
+  const [bannerSpace, setBannerSpace] = useState(0);
   const openedByUser = useRef(false);
+  useEffect(() => {
+    const banner = bannerRef.current;
+    if (choice !== null || !banner) {
+      setBannerSpace(0);
+      return;
+    }
+    const measure = () =>
+      setBannerSpace(Math.ceil(banner.getBoundingClientRect().height) + 36);
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(banner);
+    return () => observer.disconnect();
+  }, [choice]);
   useEffect(() => {
     if (choice === null && openedByUser.current) declineRef.current?.focus();
   }, [choice]);
@@ -59,7 +74,11 @@ export function Privacy() {
         </>
       )}
       {choice === null && (
-        <aside className="consent" aria-label="Analytics privacy choice">
+        <aside
+          ref={bannerRef}
+          className="consent"
+          aria-label="Analytics privacy choice"
+        >
           <div>
             <strong>A little insight helps us improve.</strong>
             <p>
@@ -90,6 +109,7 @@ export function Privacy() {
       >
         Privacy settings
       </button>
+      <div aria-hidden="true" style={{ height: bannerSpace }} />
     </>
   );
 }

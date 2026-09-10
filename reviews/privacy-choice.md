@@ -11,3 +11,9 @@ Manually opening settings focuses Decline, including when the banner is already 
 An automated UX reviewer identified the already-open focus issue and missing revocation test. Both were addressed. A pointer attempt on the footer settings button while the fixed banner was open was intercepted by the banner; the already-open activation test uses keyboard input. This is not a claim that fixed overlays cannot obscure footer content. Human screen-reader, real-device, broader overlay review, live provider ingestion, and production verification remain outstanding.
 
 No production deployment or monetization setting changed.
+
+## Footer overlap correction
+
+The previously reproduced pointer obstruction is now fixed. While the banner is visible, a ResizeObserver measures its height and reserves matching space after the footer settings button. The space is removed when the banner closes. The banner is capped to the dynamic viewport height minus 36 pixels and can scroll internally, keeping its controls reachable on short screens.
+
+The expanded browser check passed twelve interactions in Chromium and WebKit, including clicking settings with the banner already open and operating the banner at 568 by 180 pixels. The 320-pixel footer view was visually inspected: footer links and settings appear above the banner. TypeScript checking passed. These checks close the reproduced footer obstruction; they do not establish universal zoom, assistive-technology, or device coverage.

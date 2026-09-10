@@ -18,8 +18,7 @@ def main():
             for page in (first, second):
                 page.goto('http://localhost:3000/ratings', wait_until='networkidle')
                 expect(page.get_by_role('button', name='Decline', exact=True)).to_be_visible()
-            first.get_by_role('button', name='Privacy settings', exact=True).focus()
-            first.keyboard.press('Enter')
+            first.get_by_role('button', name='Privacy settings', exact=True).click(timeout=5000)
             expect(first.get_by_role('button', name='Decline', exact=True)).to_be_focused()
             second.get_by_role('button', name='Decline', exact=True).click()
             banner = first.get_by_role('complementary', name='Analytics privacy choice')
@@ -53,12 +52,21 @@ def main():
                 first.keyboard.press('Enter')
             expect(banner).not_to_be_visible()
             assert first.evaluate('localStorage.getItem("nfl-analytics-consent")') == 'no'
+            first.set_viewport_size({'width': 568, 'height': 180})
+            settings.click()
+            bounds = banner.bounding_box()
+            assert bounds and bounds['y'] >= 0 and bounds['y'] + bounds['height'] <= 180
+            first.get_by_role('button', name='Allow analytics', exact=True).scroll_into_view_if_needed()
+            first.get_by_role('button', name='Decline', exact=True).click()
+            expect(banner).not_to_be_visible()
+            first.set_viewport_size({'width': 320, 'height': 800})
             results.append({'engine': engine, 'width': 320, 'passed': [
                 'cross-tab decline closes banner', 'unrelated storage preserves decline',
                 'decline survives reload', 'keyboard settings opens with decline focused',
                 'saving decline without reload returns focus to settings', 'invalid choice is undecided live and after reload',
                 'clearing storage restores choice prompt', 'already-open settings activation focuses decline',
-                'allow synchronizes across tabs', 'revoking allow reloads with decline retained'],
+                'allow synchronizes across tabs', 'revoking allow reloads with decline retained',
+                'pointer settings reachable beneath open banner', 'short landscape banner fits and controls reachable'],
                 'documentWidth': first.evaluate('document.documentElement.scrollWidth')})
             assert results[-1]['documentWidth'] == 320
             browser.close()

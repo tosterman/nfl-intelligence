@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-09-10T21:40:48.209828+00:00",
+  "checkedAt": "2026-09-10T21:42:23.707585+00:00",
   "url": "http://localhost:3000/ratings",
-  "sourceHash": "fd75b371e37281bd19aaf69d563605ec1d640a204a1a2f66e2800c6d6811e266",
+  "sourceHash": "3803e4d6574e9a6ea53760e56415a54186e1988b36511577d85cc2d06f118cb3",
   "results": [
     {
       "engine": "chromium",
@@ -16,7 +16,9 @@
         "clearing storage restores choice prompt",
         "already-open settings activation focuses decline",
         "allow synchronizes across tabs",
-        "revoking allow reloads with decline retained"
+        "revoking allow reloads with decline retained",
+        "pointer settings reachable beneath open banner",
+        "short landscape banner fits and controls reachable"
       ],
       "documentWidth": 320
     },
@@ -33,7 +35,9 @@
         "clearing storage restores choice prompt",
         "already-open settings activation focuses decline",
         "allow synchronizes across tabs",
-        "revoking allow reloads with decline retained"
+        "revoking allow reloads with decline retained",
+        "pointer settings reachable beneath open banner",
+        "short landscape banner fits and controls reachable"
       ],
       "documentWidth": 320
     }
