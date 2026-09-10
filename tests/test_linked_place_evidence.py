@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 from linked_place_evidence import validate_candidate
+from venue_evidence import validate_venue
 
 
 class LinkedPlaceEvidenceTests(unittest.TestCase):
@@ -23,6 +24,24 @@ class LinkedPlaceEvidenceTests(unittest.TestCase):
 
     def test_retained_candidate_is_consistent(self):
         self.check(self.candidate)
+
+    def test_registered_location_requires_bound_evidence_and_attribution(self):
+        c = self.candidate
+        venue = {'status': 'confirmed-official-linked-place', 'linkedPlaceEvidence': c,
+                 'latitude': c['derivedLatitude'], 'longitude': c['derivedLongitude'],
+                 'mapElement': c['osmElement'], 'mapDataHash': c['osmResponseHash'],
+                 'pointHash': c['pointHash'], 'pointUrl': c['pointUrl'],
+                 'pointState': c['pointState'], 'forecastHourly': c['forecastHourly'],
+                 'address': '100 Art Rooney Avenue, Pittsburgh, PA 15212',
+                 'addressSource': c['officialLinkSource'],
+                 'mapSource': 'https://www.openstreetmap.org/way/24722790',
+                 'license': 'ODbL-1.0', 'attribution': 'OpenStreetMap contributors'}
+        validate_venue(venue)
+        for key, value in [('latitude', 0), ('mapDataHash', '0' * 64),
+                           ('attribution', ''), ('address', '900 Art Rooney Avenue, Pittsburgh, PA 15212'),
+                           ('linkedPlaceEvidence', {}), ('forecastHourly', 'https://example.com/')]:
+            with self.subTest(key=key), self.assertRaises((ValueError, KeyError)):
+                validate_venue(venue | {key: value})
 
     def test_wrong_place_or_official_reference_is_rejected(self):
         mutations = [

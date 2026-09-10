@@ -455,5 +455,108 @@
     "pointState": "CA",
     "pointCity": "Santa Clara",
     "forecastHourly": "https://api.weather.gov/gridpoints/MTR/97,86/forecast/hourly"
+  },
+  "Acrisure Stadium": {
+    "status": "confirmed-official-linked-place",
+    "address": "100 Art Rooney Avenue, Pittsburgh, PA 15212",
+    "addressSource": "https://acrisurestadium.com/event/pittsburgh-steelers-vs-atlanta-falcons-2/",
+    "latitude": 40.44672985,
+    "longitude": -80.0158181,
+    "coordinateMeaning": "Midpoint of OSM stadium bounds, reconciled through an official-linked named place. Stadium-vicinity forecast only; not surveyed field coordinates.",
+    "mapSource": "https://www.openstreetmap.org/way/24722790",
+    "mapElement": {
+      "type": "way",
+      "id": 24722790,
+      "bounds": {
+        "minlat": 40.4454471,
+        "minlon": -80.0174149,
+        "maxlat": 40.4480126,
+        "maxlon": -80.0142213
+      },
+      "tags": {
+        "ele": "221",
+        "gnis:feature_id": "2013978",
+        "leisure": "stadium",
+        "name": "Acrisure Stadium",
+        "name:de": "Acrisure Stadium",
+        "name:en": "Acrisure Stadium",
+        "name:es": "Acrisure Stadium",
+        "name:fr": "Acrisure Stadium",
+        "name:it": "Acrisure Stadium",
+        "old_name": "Heinz Field",
+        "sport": "american_football",
+        "start_date": "2001",
+        "wheelchair": "yes",
+        "wikidata": "Q1067148",
+        "wikipedia": "en:Acrisure Stadium"
+      }
+    },
+    "mapDataHash": "38ac440d0c34341a72d7516250be88e8ecc8eeed598fe437f7efbb2fbb33a47f",
+    "attribution": "OpenStreetMap contributors",
+    "license": "ODbL-1.0",
+    "licenseUrl": "https://www.openstreetmap.org/copyright",
+    "pointUrl": "https://api.weather.gov/points/40.4467,-80.0158",
+    "pointHash": "156a5249892d80c0751966dd14be1a74f8337e6a42bcb1daa1b33708c33f8da7",
+    "pointCheckedAt": "2026-09-10T22:48:27.523668+00:00",
+    "pointState": "PA",
+    "forecastHourly": "https://api.weather.gov/gridpoints/PBZ/77,66/forecast/hourly",
+    "linkedPlaceEvidence": {
+      "checkedAt": "2026-09-10T22:48:27.523668+00:00",
+      "status": "candidate-only",
+      "productionMapChanged": false,
+      "officialLinkSource": "https://acrisurestadium.com/event/pittsburgh-steelers-vs-atlanta-falcons-2/",
+      "officialHtmlHash": "7b8bd58231cea08b73b142df2c2672f617c971e308b275bca8fa8a1e9683d671",
+      "officialLinkPresent": true,
+      "linkedPlaceUrl": "https://www.waze.com/live-map/directions/acrisure-stadium-art-rooney-ave-100-pittsburgh?to=place.w.183501204.1834880973.255564",
+      "linkedPlaceHtmlHash": "75b43736938d20edcc3d7f074863f9ee040cf43e7b043a606ca06e2d3df8130d",
+      "place": {
+        "name": "Acrisure Stadium",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "United States",
+          "addressRegion": "Pennsylvania",
+          "addressLocality": "Pittsburgh",
+          "streetAddress": "100 Art Rooney Ave"
+        }
+      },
+      "placeLatitude": 40.446612452,
+      "placeLongitude": -80.015672375,
+      "osmElement": {
+        "type": "way",
+        "id": 24722790,
+        "bounds": {
+          "minlat": 40.4454471,
+          "minlon": -80.0174149,
+          "maxlat": 40.4480126,
+          "maxlon": -80.0142213
+        },
+        "tags": {
+          "ele": "221",
+          "gnis:feature_id": "2013978",
+          "leisure": "stadium",
+          "name": "Acrisure Stadium",
+          "name:de": "Acrisure Stadium",
+          "name:en": "Acrisure Stadium",
+          "name:es": "Acrisure Stadium",
+          "name:fr": "Acrisure Stadium",
+          "name:it": "Acrisure Stadium",
+          "old_name": "Heinz Field",
+          "sport": "american_football",
+          "start_date": "2001",
+          "wheelchair": "yes",
+          "wikidata": "Q1067148",
+          "wikipedia": "en:Acrisure Stadium"
+        }
+      },
+      "osmResponseHash": "38ac440d0c34341a72d7516250be88e8ecc8eeed598fe437f7efbb2fbb33a47f",
+      "placeInsideStadiumBounds": true,
+      "derivedLatitude": 40.44672985,
+      "derivedLongitude": -80.0158181,
+      "pointUrl": "https://api.weather.gov/points/40.4467,-80.0158",
+      "pointHash": "156a5249892d80c0751966dd14be1a74f8337e6a42bcb1daa1b33708c33f8da7",
+      "forecastHourly": "https://api.weather.gov/gridpoints/PBZ/77,66/forecast/hourly",
+      "pointState": "PA",
+      "sourceRetention": "Full HTML in ignored local release-recovery; selected factual place fields and page digests in this report. OSM/NWS original JSON compressed by digest."
+    }
   }
 }

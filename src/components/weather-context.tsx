@@ -74,11 +74,11 @@ export function WeatherContext({
             >
               National Weather Service source ↗
             </a>
-            {record.locationEvidence?.status === "confirmed-osm-stadium" && (
+            {["confirmed-osm-stadium", "confirmed-official-linked-place"].includes(record.locationEvidence?.status ?? "") && (
               <p className="fine">
                 Stadium map location:{" "}
                 <a
-                  href={record.locationEvidence.mapSource}
+                  href={record.locationEvidence?.mapSource}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -94,6 +94,14 @@ export function WeatherContext({
                 </a>
                 ). The lookup uses the mapped stadium bounds, not a field
                 sensor.
+              </p>
+            )}
+            {record.locationEvidence?.status === "confirmed-official-linked-place" && (
+              <p className="fine">
+                Venue identity was reconciled using the stadium website’s link
+                to a named map place at its official address. The place falls
+                within the stadium’s mapped bounds; this does not establish
+                field-level accuracy.
               </p>
             )}
             <p className="hash">{record.sourceHash}</p>

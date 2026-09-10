@@ -6,10 +6,35 @@ not proof that a website attested to these fields. Raw OSM/NWS bytes are verifie
 import hashlib
 import json
 import math
+import gzip
+from pathlib import Path
 from venue_evidence import words
 
 OFFICIAL = 'https://acrisurestadium.com/event/pittsburgh-steelers-vs-atlanta-falcons-2/'
 PLACE = 'https://www.waze.com/live-map/directions/acrisure-stadium-art-rooney-ave-100-pittsburgh?to=place.w.183501204.1834880973.255564'
+
+
+def validate_registered_venue(venue):
+    c = venue['linkedPlaceEvidence']
+    sources = Path(__file__).resolve().parents[1] / 'data/weather-location-sources'
+    raw = []
+    for key in ('osmResponseHash', 'pointHash'):
+        digest = c[key]
+        require(isinstance(digest, str) and len(digest) == 64
+                and all(ch in '0123456789abcdef' for ch in digest), 'Invalid source digest')
+        raw.append(gzip.decompress((sources / (digest + '.json.gz')).read_bytes()))
+    validate_candidate(c, *raw)
+    binding = {'latitude': 'derivedLatitude', 'longitude': 'derivedLongitude',
+               'mapElement': 'osmElement', 'mapDataHash': 'osmResponseHash',
+               'pointHash': 'pointHash', 'pointUrl': 'pointUrl', 'pointState': 'pointState',
+               'forecastHourly': 'forecastHourly', 'addressSource': 'officialLinkSource'}
+    require(all(venue.get(key) == c[value] for key, value in binding.items()),
+            'Registered venue differs from reviewed evidence')
+    require(venue.get('address') == '100 Art Rooney Avenue, Pittsburgh, PA 15212'
+            and venue.get('mapSource') == 'https://www.openstreetmap.org/way/24722790',
+            'Registered address or map source mismatch')
+    require(venue.get('license') == 'ODbL-1.0'
+            and venue.get('attribution') == 'OpenStreetMap contributors', 'Map attribution missing')
 
 
 def require(condition, message):
