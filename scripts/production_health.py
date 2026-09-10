@@ -8,7 +8,8 @@ from urllib.error import HTTPError,URLError
 
 ROOT=Path(__file__).resolve().parents[1]
 ORIGIN='https://nfl-intelligence-one.vercel.app'
-ENDPOINTS={'forecasts':'/api/status','odds':'/api/odds-status','personnel':'/api/personnel-status','weather':'/api/weather-status'}
+ENDPOINTS={'forecasts':'/api/status','odds':'/api/odds-status','personnel':'/api/personnel-status','weather':'/api/weather-status','quarterbacks':'/api/quarterback-status'}
+NFL_TEAMS=set('ARI ATL BAL BUF CAR CHI CIN CLE DAL DEN DET GB HOU IND JAX KC LA LAC LV MIA MIN NE NO NYG NYJ PHI PIT SEA SF TB TEN WAS'.split())
 
 def age(value,now):
     if not isinstance(value,str):raise ValueError('Missing acquisition timestamp')
@@ -33,6 +34,17 @@ def validate_health(kind,http_status,payload,now):
             raise ValueError('Personnel acquisition or source is stale')
         if type(payload.get('rowCount')) is not int or payload['rowCount']<=0 or not re.fullmatch(r'[a-f0-9]{64}',payload.get('sourceHash','')):
             raise ValueError('Personnel source identity missing')
+    elif kind=='quarterbacks':
+        if payload.get('maximumAgeHours')!=30 or payload.get('collectionStatus')!='ok':raise ValueError('Quarterback collection failed')
+        season=payload.get('season')
+        if type(season) is not int or not now.year-1<=season<=now.year or season!=payload.get('expectedSeason'):raise ValueError('Quarterback season mismatch')
+        if any(not 0<=age(payload.get(k),now)<30 for k in ['checkedAt','retrievedAt','assetUpdatedAt']):raise ValueError('Quarterback source is stale')
+        if not re.fullmatch(r'[a-f0-9]{64}',payload.get('sourceHash','')):raise ValueError('Quarterback source identity missing')
+        expected=payload.get('expectedTeams');checks=payload.get('checks')
+        if not isinstance(expected,list) or len(expected)!=32 or any(not isinstance(t,str) for t in expected) or set(expected)!=NFL_TEAMS:raise ValueError('Expected quarterback team set incomplete')
+        if not isinstance(checks,list) or len(checks)!=32 or any(not isinstance(c,dict) or not isinstance(c.get('team'),str) or c.get('status')!='ok' or not 0<=age(c.get('recordedAt'),now)<30 for c in checks):raise ValueError('Quarterback role checks incomplete or stale')
+        if {c['team'] for c in checks}!=NFL_TEAMS:raise ValueError('Quarterback team checks mismatch')
+        if age(payload['assetUpdatedAt'],now)<age(payload['retrievedAt'],now) or any(age(c['recordedAt'],now)<age(payload['retrievedAt'],now) for c in checks):raise ValueError('Quarterback source postdates acquisition')
     elif kind=='weather':
         if payload.get('maximumAgeHours')!=30 or not 0<=age(payload.get('generatedAt'),now)<30:
             raise ValueError('Weather collection is stale')

@@ -40,6 +40,7 @@ class ProductionHealthTests(unittest.TestCase):
                 payload={'status':'ok','fetchedAt':at,'maximumAgeHours':6}
                 if self.path=='/api/personnel-status':payload={'status':'ok','collectionStatus':'ok','season':datetime.now(timezone.utc).year,'expectedSeason':datetime.now(timezone.utc).year,'checkedAt':at,'retrievedAt':at,'assetUpdatedAt':at,'sourceHash':'a'*64,'rowCount':1,'maximumAgeHours':30}
                 if self.path=='/api/weather-status':payload={'status':'ok','collectionStartedAt':at,'generatedAt':at,'maximumAgeHours':30,'eligibleGames':0,'availableGames':0,'checks':[]}
+                if self.path=='/api/quarterback-status':payload={'status':'ok','collectionStatus':'ok','season':datetime.now(timezone.utc).year,'expectedSeason':datetime.now(timezone.utc).year,'checkedAt':at,'retrievedAt':at,'assetUpdatedAt':at,'sourceHash':'a'*64,'maximumAgeHours':30,'expectedTeams':sorted(production_health.NFL_TEAMS),'checks':[{'team':t,'status':'ok','recordedAt':at} for t in sorted(production_health.NFL_TEAMS)]}
                 self.wfile.write(json.dumps(payload).encode())
             def log_message(self,*args):pass
         server=ThreadingHTTPServer(('127.0.0.1',0),Handler)
@@ -53,6 +54,7 @@ class ProductionHealthTests(unittest.TestCase):
                 self.assertTrue(report['checks']['odds']['healthy'])
                 self.assertTrue(report['checks']['personnel']['healthy'])
                 self.assertTrue(report['checks']['weather']['healthy'])
+                self.assertTrue(report['checks']['quarterbacks']['healthy'])
         finally:server.shutdown();server.server_close();worker.join()
 
     def test_personnel_failure_and_old_asset_override_claimed_health(self):
@@ -60,6 +62,14 @@ class ProductionHealthTests(unittest.TestCase):
         validate_health('personnel',200,good,self.now)
         for change in [{'collectionStatus':'unavailable'},{'season':2025},{'rowCount':0},{'assetUpdatedAt':(self.now-timedelta(hours=30)).isoformat()},{'checkedAt':(self.now+timedelta(seconds=1)).isoformat()}]:
             with self.assertRaises(ValueError):validate_health('personnel',200,good|change,self.now)
+
+    def test_quarterback_team_coverage_and_role_freshness(self):
+        teams=sorted(production_health.NFL_TEAMS)
+        good={'status':'ok','collectionStatus':'ok','season':2026,'expectedSeason':2026,'checkedAt':self.at,'retrievedAt':self.at,'assetUpdatedAt':self.at,'sourceHash':'a'*64,'maximumAgeHours':30,'expectedTeams':teams,'checks':[{'team':t,'status':'ok','recordedAt':self.at} for t in teams]}
+        validate_health('quarterbacks',200,good,self.now)
+        with self.assertRaises(ValueError):validate_health('quarterbacks',200,good|{'retrievedAt':(self.now-timedelta(hours=1)).isoformat()},self.now)
+        for change in [{'checks':good['checks'][:-1]}, {'expectedTeams':teams[:-1]+[teams[0]]}, {'checks':good['checks'][:-1]+[good['checks'][0]]}, {'collectionStatus':'unavailable'}, {'season':2025}, {'sourceHash':'bad'}, {'checks':[{**c,'recordedAt':(self.now-timedelta(hours=30)).isoformat()} for c in good['checks']]}, {'assetUpdatedAt':(self.now+timedelta(seconds=1)).isoformat()}]:
+            with self.subTest(change=change),self.assertRaises(ValueError):validate_health('quarterbacks',200,good|change,self.now)
 
     def test_weather_checks_counts_and_source_ages(self):
         good={'status':'ok','collectionStartedAt':self.at,'generatedAt':self.at,'maximumAgeHours':30,'eligibleGames':1,'availableGames':1,
