@@ -3,8 +3,28 @@ import assert from "node:assert/strict";
 import site from "../data/site.json";
 import {
   performanceBands,
+  spreadDiagnostic,
   type DiagnosticRecord,
 } from "../src/lib/performance-bands";
+test("spread row evidence preserves away selection, pushes and ungraded cases", () => {
+  const away = {
+    ...record,
+    homeMargin: -4,
+    marketMargin: -2,
+    actualMargin: -3,
+  };
+  assert.deepEqual(spreadDiagnostic(away), { side: "Away", result: "Win" });
+  assert.equal(spreadDiagnostic({ ...away, actualMargin: -1 }).result, "Loss");
+  assert.equal(spreadDiagnostic({ ...away, actualMargin: -2 }).result, "Push");
+  assert.equal(
+    spreadDiagnostic({ ...away, homeMargin: -2 }).result,
+    "No direction",
+  );
+  assert.equal(
+    spreadDiagnostic({ ...away, marketMargin: null }).result,
+    "Missing market",
+  );
+});
 const record: DiagnosticRecord = {
   id: "g",
   season: 2024,
@@ -18,12 +38,19 @@ const record: DiagnosticRecord = {
 };
 test("retained confidence bands reconcile to the existing all-game record", () => {
   const groups = performanceBands(site.performance.records);
-  const total = (key: "decisive" | "ties" | "correct") => groups.confidence.reduce((sum, band) => sum + band[key], 0);
+  const total = (key: "decisive" | "ties" | "correct") =>
+    groups.confidence.reduce((sum, band) => sum + band[key], 0);
   assert.equal(total("decisive"), site.performance.aggregate.decisiveGames);
   assert.equal(total("ties"), site.performance.aggregate.ties);
   assert.equal(total("correct"), site.performance.aggregate.wins);
-  assert.equal(groups.confidence.flatMap(b => b.records).length, site.performance.aggregate.games);
-  assert.equal(groups.disagreement.flatMap(b => b.records).length, site.performance.aggregate.marketGames);
+  assert.equal(
+    groups.confidence.flatMap((b) => b.records).length,
+    site.performance.aggregate.games,
+  );
+  assert.equal(
+    groups.disagreement.flatMap((b) => b.records).length,
+    site.performance.aggregate.marketGames,
+  );
 });
 test("fixed bands preserve boundary games, ties, missing markets and losses", () => {
   const rows = [

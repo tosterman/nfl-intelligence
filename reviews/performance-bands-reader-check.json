@@ -1,0 +1,14 @@
+[
+  {
+    "engine": "chromium",
+    "readableMatchup": true,
+    "keyboardReachedLastColumn": true,
+    "columnCount": 11
+  },
+  {
+    "engine": "webkit",
+    "readableMatchup": true,
+    "keyboardReachedLastColumn": true,
+    "columnCount": 11
+  }
+]

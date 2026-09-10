@@ -1,7 +1,18 @@
 import {
   performanceBands,
+  spreadDiagnostic,
   type DiagnosticRecord,
 } from "@/lib/performance-bands";
+import { teams, signed } from "@/lib/teams";
+
+function matchup(r: DiagnosticRecord) {
+  const parts = r.id.split("_");
+  const away = teams[parts[2]],
+    home = teams[parts[3]];
+  return away && home
+    ? `${away.name} at ${home.name} · ${r.season} W${r.week}`
+    : r.id;
+}
 
 export function PerformanceBands({ records }: { records: DiagnosticRecord[] }) {
   const groups = performanceBands(records);
@@ -37,7 +48,13 @@ export function PerformanceBands({ records }: { records: DiagnosticRecord[] }) {
                 {b.marginMae?.toFixed(2) ?? "Unavailable"}; total MAE{" "}
                 {b.totalMae?.toFixed(2) ?? "Unavailable"}. Against the closing
                 spread: {b.wins} wins, {b.losses} losses, {b.pushes} pushes;{" "}
-                {b.noDirection} with no model direction.
+                {b.noDirection} with no model direction. {b.missingMarket}{" "}
+                missing markets.
+              </p>
+              <p className="fine">
+                Margins = home points minus away points; positive favors home.
+                Scroll the table for totals and spread outcomes. At neutral
+                venues, home/away denotes the schedule designation.
               </p>
               <div
                 className="ratings-table-wrap"
@@ -49,24 +66,38 @@ export function PerformanceBands({ records }: { records: DiagnosticRecord[] }) {
                   <thead>
                     <tr>
                       <th scope="col">Game</th>
-                      <th scope="col">Home win</th>
+                      <th scope="col">Home win probability</th>
                       <th scope="col">Model margin</th>
                       <th scope="col">Final margin</th>
                       <th scope="col">Market margin</th>
                       <th scope="col">Margin error</th>
+                      <th scope="col">Model total</th>
+                      <th scope="col">Final total</th>
+                      <th scope="col">Total error</th>
+                      <th scope="col">Spread side</th>
+                      <th scope="col">Spread result</th>
                     </tr>
                   </thead>
                   <tbody>
                     {b.records.map((r) => (
                       <tr key={r.id}>
-                        <th scope="row">{r.id.replaceAll("_", " · ")}</th>
+                        <th scope="row">{matchup(r)}</th>
                         <td>{(r.homeWinProbability * 100).toFixed(1)}%</td>
-                        <td>{r.homeMargin.toFixed(2)}</td>
-                        <td>{r.actualMargin}</td>
-                        <td>{r.marketMargin?.toFixed(2) ?? "Missing"}</td>
+                        <td>{signed(r.homeMargin, 2)}</td>
+                        <td>{signed(r.actualMargin, 0)}</td>
+                        <td>
+                          {r.marketMargin == null
+                            ? "Missing"
+                            : signed(r.marketMargin, 2)}
+                        </td>
                         <td>
                           {Math.abs(r.homeMargin - r.actualMargin).toFixed(2)}
                         </td>
+                        <td>{r.total.toFixed(2)}</td>
+                        <td>{r.actualTotal}</td>
+                        <td>{Math.abs(r.total - r.actualTotal).toFixed(2)}</td>
+                        <td>{spreadDiagnostic(r).side}</td>
+                        <td>{spreadDiagnostic(r).result}</td>
                       </tr>
                     ))}
                   </tbody>

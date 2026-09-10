@@ -2070,3 +2070,5 @@ summary {
   max-height: 420px;
   overflow: auto;
 }
+.diagnostic-band table { min-width: 1040px; }
+.diagnostic-band tbody th { min-width: 170px; }

@@ -9,6 +9,17 @@ export type DiagnosticRecord = {
   actualTotal: number;
   marketMargin: number | null;
 };
+export function spreadDiagnostic(r: DiagnosticRecord) {
+  if (r.marketMargin == null)
+    return { side: "Unavailable", result: "Missing market" };
+  const direction = Math.sign(r.homeMargin - r.marketMargin);
+  if (!direction) return { side: "Neither", result: "No direction" };
+  const outcome = direction * Math.sign(r.actualMargin - r.marketMargin);
+  return {
+    side: direction > 0 ? "Home" : "Away",
+    result: outcome > 0 ? "Win" : outcome < 0 ? "Loss" : "Push",
+  };
+}
 function summarize(label: string, records: DiagnosticRecord[]) {
   const decisive = records.filter((r) => r.actualMargin !== 0);
   const selections = records.filter(
@@ -37,6 +48,7 @@ function summarize(label: string, records: DiagnosticRecord[]) {
     noDirection: records.filter(
       (r) => r.marketMargin != null && r.homeMargin === r.marketMargin,
     ).length,
+    missingMarket: records.filter((r) => r.marketMargin == null).length,
   };
 }
 export function performanceBands(records: DiagnosticRecord[]) {
