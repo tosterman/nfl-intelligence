@@ -1,0 +1,34 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "status": 200,
+    "keyboardToggle": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "status": 200,
+    "keyboardToggle": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "status": 200,
+    "keyboardToggle": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "status": 200,
+    "keyboardToggle": true,
+    "overflow": false,
+    "pageErrors": []
+  }
+]

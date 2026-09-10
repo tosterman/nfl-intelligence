@@ -2040,6 +2040,12 @@ summary {
 
 .live-calibration{margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
 
+.metric-guide { margin-bottom: 24px; }
+.metric-guide summary { min-height: 44px; align-content: center; }
+.metric-guide dl { display: grid; gap: 24px; margin: 24px 0 0; max-width: 76ch; }
+.metric-guide dt { font-weight: 600; }
+.metric-guide dd { margin: 8px 0 0; color: var(--muted); line-height: 1.7; }
+
 .scheduled-context{display:grid;gap:24px;margin-top:24px}.scheduled-context .personnel-panel{margin-top:0}
 
 @media (max-width: 600px) {

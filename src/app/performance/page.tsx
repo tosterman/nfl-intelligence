@@ -18,6 +18,61 @@ export default function Performance() {
           wrong, and whether its confidence is deserved.
         </p>
       </div>
+      <details className="panel metric-guide">
+        <summary>How to read this record</summary>
+        <dl>
+          <div>
+            <dt>Winner accuracy</dt>
+            <dd>
+              How often the more likely team won. Ties are excluded. Getting
+              the winner right does not mean a bet beat its price or spread.
+            </dd>
+          </div>
+          <div>
+            <dt>Margin and total error · Lower is better</dt>
+            <dd>
+              Mean absolute error (MAE) is the average distance from the final
+              result, in points. Predicting a home win by 7 when the home team
+              wins by 3 gives a margin error of 4. Total error measures the
+              combined score the same way.
+            </dd>
+          </div>
+          <div>
+            <dt>Brier score and log loss · Lower is better</dt>
+            <dd>
+              These score the probability, not just the chosen winner. A 60%
+              home win forecast has a Brier score of 0.16 if the home team wins
+              and 0.36 if it loses. Log loss penalizes confident mistakes more
+              sharply. Both scores are averaged across decisive games.
+            </dd>
+          </div>
+          <div>
+            <dt>Calibration</dt>
+            <dd>
+              Across many games forecast near 60%, roughly 60% should go that
+              way. The chart checks that relationship; a small group can look
+              good or bad by chance.
+            </dd>
+          </div>
+          <div>
+            <dt>80% interval coverage</dt>
+            <dd>
+              The share of final results inside the forecast ranges. The target
+              is about 8 in 10 over many games, not 100%. Coverage also needs to
+              be judged alongside range width: wider ranges are easier to hit.
+            </dd>
+          </div>
+          <div>
+            <dt>Closing line and push</dt>
+            <dd>
+              The closing line is the recorded market benchmark near kickoff;
+              it may differ from a price available earlier. A push lands exactly
+              on the spread or total and is counted separately from wins and
+              losses.
+            </dd>
+          </div>
+        </dl>
+      </details>
       <section className="panel">
         <h2>Published-before-kickoff record</h2>
         {site.livePerformance.games ? (
