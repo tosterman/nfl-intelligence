@@ -6,6 +6,7 @@ import { assessGameOdds, type OddsFeed, type BookQuote } from "@/lib/odds";
 import { fairMoneyline, noVig } from "@/lib/math";
 import { teams, signed, pct, time, date } from "@/lib/teams";
 import type { Prediction } from "@/lib/types";
+import { BookSnapshot } from "@/components/book-snapshot";
 type Match = {
   home: string;
   away: string;
@@ -242,6 +243,7 @@ export function MarketPanel({
             sportsbooks with eligible quotes. Check the sportsbook for its
             current price and settlement rules.
           </p>
+          <BookSnapshot books={books} home={home} away={away} />
         </>
       )}
       <p className="fine">

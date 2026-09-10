@@ -908,6 +908,18 @@ select:focus-visible {
   width: max-content;
   max-width: calc(100% - 32px);
 }
+.book-snapshot {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line, #303841);
+}
+.book-snapshot summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.market-panel .book-snapshot table {
+  min-width: 680px;
+}
 .consent strong {
   font-size: 13px;
   font-weight: 500;

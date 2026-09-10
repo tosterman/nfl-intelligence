@@ -13,6 +13,73 @@ const game = {
   status: "scheduled",
   kickoff: "2026-09-11T00:35:00Z",
 };
+test("cross-book snapshot preserves distinct quotes and excludes expired books", () => {
+  const pair = { observedAt: at, homePrice: -110, awayPrice: -110 };
+  const feed: OddsFeed = {
+    state: "ready",
+    fetchedAt: at,
+    events: [
+      {
+        ...game,
+        id: "g",
+        books: [
+          {
+            book: "first",
+            name: "First Book",
+            spread: { ...pair, homePoint: -3.5 },
+            total: null,
+            moneyline: pair,
+          },
+          {
+            book: "second",
+            name: "Second Book",
+            spread: {
+              ...pair,
+              observedAt: "2026-09-10T15:00:00Z",
+              homePoint: -2.5,
+            },
+            total: {
+              observedAt: at,
+              point: 44.5,
+              overPrice: -105,
+              underPrice: -115,
+            },
+            moneyline: null,
+          },
+          {
+            book: "old",
+            name: "Expired Book",
+            spread: {
+              ...pair,
+              observedAt: "2026-09-09T00:00:00Z",
+              homePoint: -9,
+            },
+            total: null,
+            moneyline: null,
+          },
+        ],
+      },
+    ],
+  };
+  const panel = renderToStaticMarkup(
+    createElement(MarketPanel, {
+      game,
+      feed,
+      initialNow: Date.parse(at),
+      prediction: site.games.find((g) => g.snapshot)!.snapshot!.prediction,
+      freshness: [],
+    }),
+  );
+  assert.match(panel, /Across sportsbooks/);
+  assert.match(panel, /-3.5 to -2.5/);
+  assert.match(panel, /2 books/);
+  assert.match(panel, /First Book/);
+  assert.match(panel, /Second Book/);
+  assert.doesNotMatch(panel, /Expired Book/);
+  assert.match(panel, /Not quoted/);
+  assert.match(panel, /snapshot ranges/);
+  assert.match(panel, /No eligible quote/);
+});
 test("missing markets explain the actual gate without implying no betting edge", () => {
   const initialNow = Date.parse(at);
   const empty: OddsFeed = { state: "ready", fetchedAt: at, events: [] };

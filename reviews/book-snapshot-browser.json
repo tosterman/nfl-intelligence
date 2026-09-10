@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-09-10T21:55:08.162634+00:00",
+  "url": "http://localhost:3000/games/2026_01_SF_LA",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "status": 200,
+      "books": 9,
+      "table": {
+        "left": 40,
+        "width": 244,
+        "content": 680
+      },
+      "noDocumentOverflow": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "status": 200,
+      "books": 9,
+      "table": {
+        "left": 0,
+        "width": 711,
+        "content": 711
+      },
+      "noDocumentOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "status": 200,
+      "books": 9,
+      "table": {
+        "left": 40,
+        "width": 244,
+        "content": 680
+      },
+      "noDocumentOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "status": 200,
+      "books": 9,
+      "table": {
+        "left": 0,
+        "width": 711,
+        "content": 711
+      },
+      "noDocumentOverflow": true
+    }
+  ]
+}
