@@ -455,7 +455,7 @@ function GameCard({
                 {pct(Math.max(p.homeWinProbability, 1 - p.homeWinProbability))}
               </strong>
             </span>
-            <small>Win probability</small>
+            <small>Pregame win probability</small>
           </div>
           <div className="prob-track">
             <i

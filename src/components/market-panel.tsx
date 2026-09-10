@@ -2,7 +2,7 @@
 import { assessFreshness, type FreshnessInput } from "@/lib/freshness";
 import { track } from "@vercel/analytics";
 import { useEffect, useState } from "react";
-import { quotesForGame, type OddsFeed } from "@/lib/odds";
+import { quotesForGame, type OddsFeed, type BookQuote } from "@/lib/odds";
 import { fairMoneyline, noVig } from "@/lib/math";
 import { teams, signed, pct, time, date } from "@/lib/teams";
 import type { Prediction } from "@/lib/types";
@@ -27,6 +27,10 @@ function useClock(initial: number) {
   return now;
 }
 const stamp = (value: string) => `${date(value)}, ${time(value)} ET`;
+const defaultBook = (books: BookQuote[]) =>
+  books.find((b) => b.book === "fanduel" && b.spread) ??
+  books.find((b) => b.spread) ??
+  books[0];
 export function MarketCard({
   game,
   feed,
@@ -38,20 +42,19 @@ export function MarketCard({
 }) {
   const now = useClock(initialNow),
     books = quotesForGame(feed, game, now);
-  const book =
-    books.find((b) => b.book === "fanduel" && b.spread) ??
-    books.find((b) => b.spread);
+  const book = defaultBook(books);
   return (
     <div>
       <small>Market snapshot</small>
       <span>
         {book?.spread
-          ? `${teams[game.home].short} ${signed(book.spread.homePoint)}`
+          ? `${teams[game.home].short} ${signed(book.spread.homePoint)} (${signed(book.spread.homePrice, 0)})`
           : feed.state === "not-configured"
             ? "Not connected"
             : "No current quote"}
       </span>
       {book && <small>{book.name}</small>}
+      {book?.spread && <small>As of {stamp(book.spread.observedAt)}</small>}
     </div>
   );
 }
@@ -70,8 +73,8 @@ export function MarketPanel({
 }) {
   const now = useClock(initialNow),
     books = quotesForGame(feed, game, now);
-  const [selected, setSelected] = useState("fanduel");
-  const book = books.find((b) => b.book === selected) ?? books[0];
+  const [selected, setSelected] = useState<string | null>(null);
+  const book = books.find((b) => b.book === selected) ?? defaultBook(books);
   const expired = !!game.kickoff && now >= Date.parse(game.kickoff);
   const modelFresh = assessFreshness(freshness, now).status === "ok";
   const home = teams[game.home].short,

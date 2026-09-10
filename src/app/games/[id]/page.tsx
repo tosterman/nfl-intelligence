@@ -25,7 +25,7 @@ export async function generateMetadata({
   const g = site.games.find((g) => g.id === id);
   return {
     title: g
-      ? `${teams[g.away].name} at ${teams[g.home].name} — Week ${g.week}`
+      ? `${teams[g.away].name} ${g.neutral ? "vs" : "at"} ${teams[g.home].name} — Week ${g.week}`
       : "Game not found",
   };
 }
@@ -55,8 +55,8 @@ export default async function GamePage({
   return (
     <div className="subpage">
       <h1 className="sr-only">
-        {teams[g.away].city} {teams[g.away].name} at {teams[g.home].city}{" "}
-        {teams[g.home].name} · Week {g.week}
+        {teams[g.away].city} {teams[g.away].name} {g.neutral ? "vs" : "at"}{" "}
+        {teams[g.home].city} {teams[g.home].name} · Week {g.week}
       </h1>
       <Link className="breadcrumb" href={returnTo}>
         <ArrowLeft size={14} /> Back to the slate <span>/</span> Week {g.week}
@@ -76,7 +76,14 @@ export default async function GamePage({
             <div className="detail-team" key={code}>
               <TeamMark code={code} large />
               <small>
-                {teams[code].city} · {i ? "Home" : "Away"}
+                {teams[code].city} ·{" "}
+                {g.neutral
+                  ? i
+                    ? "Designated home"
+                    : "Designated away"
+                  : i
+                    ? "Home"
+                    : "Away"}
               </small>
               <h2>{teams[code].name}</h2>
               <strong>
@@ -90,9 +97,15 @@ export default async function GamePage({
               </strong>
               <span>
                 {p
-                  ? `${pct(i ? p.homeWinProbability : 1 - p.homeWinProbability)} win probability`
+                  ? `${pct(i ? p.homeWinProbability : 1 - p.homeWinProbability)} pregame win probability`
                   : "No pregame forecast"}
               </span>
+              {g.status === "final" && p && (
+                <span>
+                  Pregame estimate: {(i ? p.homeScore : p.awayScore).toFixed(1)}{" "}
+                  points
+                </span>
+              )}
             </div>
           ))}
         </div>
@@ -176,9 +189,14 @@ export default async function GamePage({
                   The model’s read
                 </h2>
                 <p className="lead">
-                  {teams[favorite!].city} has the stronger scoring profile, with
-                  a {pct(probability)} chance of winning a decisive game. The
-                  expected margin is {Math.abs(p.homeMargin).toFixed(1)} points.
+                  {teams[favorite!].city}{" "}
+                  {g.status === "final"
+                    ? "had the stronger pregame scoring profile"
+                    : "has the stronger pregame scoring profile"}
+                  , with a {pct(probability)} chance of winning a decisive game.
+                  The pregame expected margin{" "}
+                  {g.status === "final" ? "was" : "is"}{" "}
+                  {Math.abs(p.homeMargin).toFixed(1)} points.
                 </p>
                 <p>
                   {p.contributions
