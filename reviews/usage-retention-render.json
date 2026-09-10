@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-09-10T22:07:57.751Z",
+  "playerId": "00-0034381",
+  "results": [
+    {
+      "state": "matching",
+      "showsShares": true,
+      "showsUnknown": false
+    },
+    {
+      "state": "changed-retrieval",
+      "showsShares": false,
+      "showsUnknown": true
+    },
+    {
+      "state": "changed-source",
+      "showsShares": false,
+      "showsUnknown": true
+    }
+  ]
+}

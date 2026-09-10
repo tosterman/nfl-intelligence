@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-09-10T22:07:44.015452+00:00",
+  "workflowSha256": "4dedecbfb92d71a603522b511c93a79e7b56c7f8923b4ce74f662bc69510f1f9",
+  "continueOnError": true,
+  "simulatedStages": true,
+  "results": [
+    {
+      "failedStage": "scripts/audit_personnel_identity.py",
+      "exitCode": 23,
+      "executedStages": [
+        "scripts/audit_personnel_identity.py"
+      ],
+      "oldArtifactPreserved": true
+    },
+    {
+      "failedStage": "scripts/audit_player_usage.py",
+      "exitCode": 23,
+      "executedStages": [
+        "scripts/audit_personnel_identity.py",
+        "scripts/audit_player_usage.py"
+      ],
+      "oldArtifactPreserved": true
+    },
+    {
+      "failedStage": "scripts/build_public_usage.py",
+      "exitCode": 23,
+      "executedStages": [
+        "scripts/audit_personnel_identity.py",
+        "scripts/audit_player_usage.py",
+        "scripts/build_public_usage.py"
+      ],
+      "oldArtifactPreserved": true
+    },
+    {
+      "failedStage": null,
+      "exitCode": 0,
+      "executedStages": [
+        "scripts/audit_personnel_identity.py",
+        "scripts/audit_player_usage.py",
+        "scripts/build_public_usage.py"
+      ],
+      "oldArtifactPreserved": false
+    }
+  ]
+}
