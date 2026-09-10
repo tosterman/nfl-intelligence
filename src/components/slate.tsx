@@ -1,6 +1,7 @@
 "use client";
 import { MarketCard } from "./market-panel";
 import { WeeklyChanges } from "./weekly-changes";
+import type { WeeklyBriefing } from "@/lib/weekly-changes";
 import type { OddsFeed } from "@/lib/odds";
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -31,8 +32,10 @@ export function Slate({
   initialStale,
   odds,
   initialNow,
+  briefings,
 }: {
   games: Game[];
+  briefings: Record<number, WeeklyBriefing>;
   odds: OddsFeed;
   initialNow: number;
   freshness: FreshnessInput[];
@@ -271,7 +274,7 @@ export function Slate({
         </Link>
       </section>
       <section className="games-section">
-        <WeeklyChanges games={weekGames} week={week} asOf={initialNow} returnTo={returnTo} />
+        <WeeklyChanges games={weekGames} week={week} asOf={initialNow} returnTo={returnTo} briefing={briefings[week]} />
         <div className="section-heading">
           <div>
             <h2>

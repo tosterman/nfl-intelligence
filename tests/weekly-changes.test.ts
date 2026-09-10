@@ -1,12 +1,26 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { weeklyChanges } from "../src/lib/weekly-changes";
+import { weeklyChanges, weeklyBriefing } from "../src/lib/weekly-changes";
 import type { Game, Snapshot } from "../src/lib/types";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { WeeklyChanges } from "../src/components/weekly-changes";
 
 const now = Date.parse("2026-09-10T16:00:00Z");
+test("server-prepared briefing preserves rendered evidence without shipping histories", () => {
+  const ready = fixture("ready");
+  const missing = fixture("missing"); missing.snapshot = null;
+  const games = [ready, missing];
+  const original = structuredClone(games);
+  const props = { games, week: 1, asOf: now, returnTo: "/?week=1&q=Rams" };
+  const before = renderToStaticMarkup(createElement(WeeklyChanges, props));
+  const briefing = weeklyBriefing(games, now);
+  const after = renderToStaticMarkup(createElement(WeeklyChanges, { ...props, games: games.map(g => ({ ...g, history: [] })), briefing }));
+  assert.equal(after, before);
+  assert.deepEqual(games, original);
+  assert.ok(!JSON.stringify(briefing).includes('"history"'));
+  assert.ok(!JSON.stringify(briefing).includes('"prediction"'));
+});
 function fixture(id = "g", change = 1): Game {
   const game: Game = { id, season: 2026, week: 1, type: "REG", home: "LA", away: "SF", kickoff: "2026-09-11T00:35:00Z", venue: "Venue", neutral: true, roof: "", status: "scheduled", actualHome: null, actualAway: null, snapshot: null, history: [], market: null, weather: null, injuries: null };
   const { season, week, type, home, away, kickoff, venue, neutral } = game;

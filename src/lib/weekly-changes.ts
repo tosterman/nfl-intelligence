@@ -11,6 +11,20 @@ export type WeeklyChange = {
   contribution?: { name: string; change: number };
 };
 
+export function weeklyBriefing(games: Game[], asOf: number) {
+  const changes = weeklyChanges(games, asOf);
+  return {
+    changes: changes.map(({ game, current, previous, ...rest }) => ({
+      ...rest,
+      game: { id: game.id, away: game.away, home: game.home, neutral: game.neutral },
+      current: { generatedAt: snapshotTime(current) },
+      previous: previous ? { generatedAt: snapshotTime(previous) } : undefined,
+    })),
+    unavailableIds: games.filter(game => changes.some(row => row.game.id === game.id && row.kind === "unavailable") || (!game.snapshot && game.history.length > 0)).map(game => game.id),
+  };
+}
+export type WeeklyBriefing = ReturnType<typeof weeklyBriefing>;
+
 function validPrediction(s: Snapshot) {
   const p = s.prediction;
   return p && [p.homeScore, p.awayScore, p.homeMargin, p.total, p.homeWinProbability].every(Number.isFinite)

@@ -1,6 +1,7 @@
 import { getOdds } from "@/lib/odds-server";
 import { site } from "@/lib/data";
 import { Slate } from "@/components/slate";
+import { weeklyBriefing } from "@/lib/weekly-changes";
 import { assessFreshness, freshnessInputs } from "@/lib/freshness";
 export default async function Home({
   searchParams,
@@ -8,6 +9,8 @@ export default async function Home({
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const params = await searchParams;
+  const now = Date.now();
+  const briefings = Object.fromEntries([...new Set(site.games.map(game => game.week))].map(week => [week, weeklyBriefing(site.games.filter(game => game.week === week), now)]));
   const requested = Number(params.week);
   const initial = {
     week: site.games.some((g) => g.week === requested) ? requested : site.week,
@@ -22,11 +25,12 @@ export default async function Home({
   return (
     <Slate
       odds={await getOdds()}
-      initialNow={Date.now()}
+      initialNow={now}
+      briefings={briefings}
       initial={initial}
       freshness={freshnessInputs(site)}
       initialStale={assessFreshness(freshnessInputs(site)).status !== "ok"}
-      games={site.games}
+      games={site.games.map(game => ({ ...game, history: [] }))}
       site={{
         week: site.week,
         season: site.season,

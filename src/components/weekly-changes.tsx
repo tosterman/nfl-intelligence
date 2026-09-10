@@ -1,16 +1,15 @@
 import Link from "next/link";
-import { weeklyChanges } from "@/lib/weekly-changes";
+import { weeklyBriefing, type WeeklyBriefing } from "@/lib/weekly-changes";
 import { date, time, teams } from "@/lib/teams";
-import { snapshotTime, type Game } from "@/lib/types";
+import { type Game } from "@/lib/types";
 const deltaText = (value: number) => `${value > 0 ? "+" : ""}${value.toFixed(3)}`;
 
-export function WeeklyChanges({ games, week, asOf, returnTo }: { games: Game[]; week: number; asOf: number; returnTo?: string }) {
-  const changes = weeklyChanges(games, asOf);
+export function WeeklyChanges({ games, week, asOf, returnTo, briefing }: { games: Game[]; week: number; asOf: number; returnTo?: string; briefing?: WeeklyBriefing }) {
+  const prepared = briefing ?? weeklyBriefing(games, asOf);
+  const changes = prepared.changes;
   const comparable = changes.filter((row) => row.kind === "revision").length;
   const available = changes.filter((row) => row.kind !== "unavailable");
-  const unavailable = games.filter((game) =>
-    changes.some((row) => row.game.id === game.id && row.kind === "unavailable") ||
-    (!game.snapshot && game.history.length > 0));
+  const unavailable = games.filter(game => prepared.unavailableIds.includes(game.id));
   const historyLink = (id: string) => `/games/${id}?from=${encodeURIComponent(returnTo ?? `/?week=${week}`)}#forecast-changes`;
   return (
     <details className="panel weekly-changes">
@@ -38,8 +37,8 @@ export function WeeklyChanges({ games, week, asOf, returnTo }: { games: Game[]; 
                 Statistical accounting, not a causal football explanation.
               </p>}
               {kind !== "unavailable" && <p className="fine">
-                Generated {previous ? `${date(snapshotTime(previous))} ${time(snapshotTime(previous))} ET → ` : ""}
-                {date(snapshotTime(current))} {time(snapshotTime(current))} ET
+                Generated {previous ? `${date(previous.generatedAt)} ${time(previous.generatedAt)} ET → ` : ""}
+                {date(current.generatedAt)} {time(current.generatedAt)} ET
               </p>}
             </li>
           ))}
