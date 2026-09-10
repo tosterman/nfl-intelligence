@@ -1,0 +1,15 @@
+# Joint-score reconciliation research
+
+The existing discrete research models a final margin. This module instead returns a probability matrix whose row is the home score and column is the away score. It preserves both supplied expected scores and a supplied total tie probability through a support-preserving exponential tilt. Tie and non-tie groups are normalized separately; zero postseason tie mass removes the diagonal. Their weighted within-group covariance provides the Newton update, with backtracking and explicit failure on invalid, boundary, degenerate or nonconvergent constraints. It never silently clips a target or invents support absent from its input prior.
+
+Six tests cover normalization, finite/nonnegative mass, both expected scores, tie mass, input immutability, structural zeros, team-swap transposition, zero postseason ties, identity for already-satisfied constraints, invalid/infeasible inputs, joint infeasibility inside coordinate bounds, near-boundary feasible targets and invariance to prior scaling. Independent review found no material defect and reported successful convergence on 300 additional randomly generated feasible targets; those ad hoc cases are not a retained regression suite.
+
+## Actual forecast feasibility check
+
+The audit constructs one explicitly experimental prior from 3,793 completed 2010–2023 games, mirroring the teams and adding a 0.000001 count to each cell of a 0–100 score grid. This pseudocount creates positive prior support before reconciliation; it is not evidence that every score pair is realistic. The illustrative regular-season tie constraint uses the historical Beta(1,99) estimate from 3,631 regular-season games, giving 0.348432%. Different overtime eras are pooled, so it is not a validated current-rule tie model.
+
+All fifteen retained current-season forecasts reconcile. Maximum absolute expected-score discrepancy is **4.85e-10 points**. The JSON retains target and recovered-moment discrepancies, snapshot identities, distribution hashes, NumPy version, prior/source/code fingerprints and explicit interpretation. Floating-point distribution hashes can vary across numerical environments; the source and tolerance-based moment checks are the portable evidence.
+
+This checks mathematical feasibility only. It does not establish out-of-sample joint log score, calibrated scores, spread/total push probabilities, tails, regulation/overtime behavior, or positive expected return. The bounded grid truncates all outcomes above 100 and does not have an overflow model. The tiny pseudocount and historical prior require evaluation, not tuning on a favorable test set. Production probabilities, intervals and forecasts remain unchanged.
+
+Next gate: freeze a joint-distribution evaluation protocol with an appropriate overdispersed reference, historical source/time controls, proper joint and marginal scoring, settlement checks and later-period uncertainty. Evaluate independently before deciding whether any prior or solver output belongs in the published engine.
