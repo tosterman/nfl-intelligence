@@ -1,0 +1,87 @@
+[
+  {
+    "venue": "Lambeau Field",
+    "pointUrl": "https://api.weather.gov/points/44.5030,-88.0611",
+    "forecastHourly": "https://api.weather.gov/gridpoints/GRB/78,31/forecast/hourly",
+    "relativeLocation": {
+      "city": "Green Bay",
+      "state": "WI",
+      "distance": {
+        "unitCode": "wmoUnit:m",
+        "value": 0
+      },
+      "bearing": {
+        "unitCode": "wmoUnit:degree_(angle)",
+        "value": 0
+      }
+    }
+  },
+  {
+    "venue": "M&T Bank Stadium",
+    "pointUrl": "https://api.weather.gov/points/39.2797,-76.6235",
+    "forecastHourly": "https://api.weather.gov/gridpoints/LWX/109,90/forecast/hourly",
+    "relativeLocation": {
+      "city": "Baltimore",
+      "state": "MD",
+      "distance": {
+        "unitCode": "wmoUnit:m",
+        "value": 0
+      },
+      "bearing": {
+        "unitCode": "wmoUnit:degree_(angle)",
+        "value": 0
+      }
+    }
+  },
+  {
+    "venue": "Empower Field at Mile High",
+    "pointUrl": "https://api.weather.gov/points/39.7459,-105.0190",
+    "forecastHourly": "https://api.weather.gov/gridpoints/BOU/62,62/forecast/hourly",
+    "relativeLocation": {
+      "city": "Denver",
+      "state": "CO",
+      "distance": {
+        "unitCode": "wmoUnit:m",
+        "value": 0
+      },
+      "bearing": {
+        "unitCode": "wmoUnit:degree_(angle)",
+        "value": 0
+      }
+    }
+  },
+  {
+    "venue": "Lumen Field",
+    "pointUrl": "https://api.weather.gov/points/47.5960,-122.3332",
+    "forecastHourly": "https://api.weather.gov/gridpoints/SEW/124,68/forecast/hourly",
+    "relativeLocation": {
+      "city": "Seattle",
+      "state": "WA",
+      "distance": {
+        "unitCode": "wmoUnit:m",
+        "value": 0
+      },
+      "bearing": {
+        "unitCode": "wmoUnit:degree_(angle)",
+        "value": 0
+      }
+    }
+  },
+  {
+    "venue": "Raymond James Stadium",
+    "pointUrl": "https://api.weather.gov/points/27.9778,-82.5054",
+    "forecastHourly": "https://api.weather.gov/gridpoints/TBW/69,99/forecast/hourly",
+    "relativeLocation": {
+      "city": "Tampa",
+      "state": "FL",
+      "distance": {
+        "unitCode": "wmoUnit:m",
+        "value": 0
+      },
+      "bearing": {
+        "unitCode": "wmoUnit:degree_(angle)",
+        "value": 0
+      }
+    }
+  }
+]

@@ -207,5 +207,217 @@
     "longitude": -94.486488590578,
     "status": "confirmed-address-geocode",
     "matchedAddress": "1 ARROWHEAD DR, KANSAS CITY, MO, 64129"
+  },
+  "Lambeau Field": {
+    "address": "1265 Lombardi Avenue, Green Bay, WI 54304",
+    "addressSource": "https://www.packers.com/lambeau-field/contact-us",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1265+Lombardi+Avenue%2C+Green+Bay%2C+WI+54304&benchmark=Public_AR_Current&format=json",
+    "retrievedAt": "2026-09-10T17:37:43.523648+00:00",
+    "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+    "geocodeBenchmark": "Public_AR_Current",
+    "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+    "geocodeMatches": [
+      {
+        "tigerLine": {
+          "side": "L",
+          "tigerLineId": "148130489"
+        },
+        "coordinates": {
+          "x": -88.061119719602,
+          "y": 44.503044903038
+        },
+        "addressComponents": {
+          "zip": "54304",
+          "streetName": "LOMBARDI",
+          "preType": "",
+          "city": "GREEN BAY",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "1201",
+          "state": "WI",
+          "suffixType": "AVE",
+          "toAddress": "1299",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "1265 LOMBARDI AVE, GREEN BAY, WI, 54304"
+      }
+    ],
+    "latitude": 44.503044903038,
+    "longitude": -88.061119719602,
+    "status": "confirmed-address-geocode",
+    "matchedAddress": "1265 LOMBARDI AVE, GREEN BAY, WI, 54304"
+  },
+  "Soldier Field": {
+    "address": "1410 S Museum Campus Drive, Chicago, IL 60605",
+    "addressSource": "https://www.soldierfield.com/stadium-info/contact-us",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1410+S+Museum+Campus+Drive%2C+Chicago%2C+IL+60605&benchmark=Public_AR_Current&format=json",
+    "retrievedAt": "2026-09-10T17:37:43.521180+00:00",
+    "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+    "geocodeBenchmark": "Public_AR_Current",
+    "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+    "geocodeMatches": [],
+    "status": "unavailable",
+    "reason": "US Census returned no unique match for the official address; coordinates withheld."
+  },
+  "M&T Bank Stadium": {
+    "address": "1101 Russell Street, Baltimore, MD 21230",
+    "addressSource": "https://www.baltimoreravens.com/stadium/information",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1101+Russell+Street%2C+Baltimore%2C+MD+21230&benchmark=Public_AR_Current&format=json",
+    "retrievedAt": "2026-09-10T17:37:43.508661+00:00",
+    "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+    "geocodeBenchmark": "Public_AR_Current",
+    "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+    "geocodeMatches": [
+      {
+        "tigerLine": {
+          "side": "R",
+          "tigerLineId": "657035290"
+        },
+        "coordinates": {
+          "x": -76.623522888555,
+          "y": 39.279653934662
+        },
+        "addressComponents": {
+          "zip": "21230",
+          "streetName": "RUSSELL",
+          "preType": "",
+          "city": "BALTIMORE",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "1199",
+          "state": "MD",
+          "suffixType": "ST",
+          "toAddress": "1101",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "1101 RUSSELL ST, BALTIMORE, MD, 21230"
+      }
+    ],
+    "latitude": 39.279653934662,
+    "longitude": -76.623522888555,
+    "status": "confirmed-address-geocode",
+    "matchedAddress": "1101 RUSSELL ST, BALTIMORE, MD, 21230"
+  },
+  "Empower Field at Mile High": {
+    "address": "1701 Bryant Street, Denver, CO 80204",
+    "addressSource": "https://www.denverbroncos.com/contact/",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1701+Bryant+Street%2C+Denver%2C+CO+80204&benchmark=Public_AR_Current&format=json",
+    "retrievedAt": "2026-09-10T17:38:21.222281+00:00",
+    "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+    "geocodeBenchmark": "Public_AR_Current",
+    "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+    "geocodeMatches": [
+      {
+        "tigerLine": {
+          "side": "L",
+          "tigerLineId": "177301812"
+        },
+        "coordinates": {
+          "x": -105.019032749489,
+          "y": 39.745912013808
+        },
+        "addressComponents": {
+          "zip": "80204",
+          "streetName": "BRYANT",
+          "preType": "",
+          "city": "DENVER",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "1701",
+          "state": "CO",
+          "suffixType": "ST",
+          "toAddress": "1899",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "1701 BRYANT ST, DENVER, CO, 80204"
+      }
+    ],
+    "latitude": 39.745912013808,
+    "longitude": -105.019032749489,
+    "status": "confirmed-address-geocode",
+    "matchedAddress": "1701 BRYANT ST, DENVER, CO, 80204"
+  },
+  "Lumen Field": {
+    "address": "800 Occidental Avenue S, Seattle, WA 98134",
+    "addressSource": "https://www.lumenfield.com/plan-your-visit/directions",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=800+Occidental+Avenue+S%2C+Seattle%2C+WA+98134&benchmark=Public_AR_Current&format=json",
+    "retrievedAt": "2026-09-10T17:38:21.494152+00:00",
+    "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+    "geocodeBenchmark": "Public_AR_Current",
+    "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+    "geocodeMatches": [
+      {
+        "tigerLine": {
+          "side": "L",
+          "tigerLineId": "186589694"
+        },
+        "coordinates": {
+          "x": -122.333188686788,
+          "y": 47.596048460998
+        },
+        "addressComponents": {
+          "zip": "98104",
+          "streetName": "OCCIDENTAL",
+          "preType": "",
+          "city": "SEATTLE",
+          "preDirection": "",
+          "suffixDirection": "S",
+          "fromAddress": "500",
+          "state": "WA",
+          "suffixType": "AVE",
+          "toAddress": "898",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "800 OCCIDENTAL AVE S, SEATTLE, WA, 98104"
+      }
+    ],
+    "latitude": 47.596048460998,
+    "longitude": -122.333188686788,
+    "status": "confirmed-address-geocode",
+    "matchedAddress": "800 OCCIDENTAL AVE S, SEATTLE, WA, 98104"
+  },
+  "Raymond James Stadium": {
+    "address": "4201 N Dale Mabry Highway, Tampa, FL 33607",
+    "addressSource": "https://raymondjamesstadium.com/gettinghere",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=4201+N+Dale+Mabry+Highway%2C+Tampa%2C+FL+33607&benchmark=Public_AR_Current&format=json",
+    "retrievedAt": "2026-09-10T17:38:21.239480+00:00",
+    "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+    "geocodeBenchmark": "Public_AR_Current",
+    "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+    "geocodeMatches": [
+      {
+        "tigerLine": {
+          "side": "R",
+          "tigerLineId": "638016874"
+        },
+        "coordinates": {
+          "x": -82.505423156281,
+          "y": 27.97783771582
+        },
+        "addressComponents": {
+          "zip": "33607",
+          "streetName": "DALE MABRY",
+          "preType": "",
+          "city": "TAMPA",
+          "preDirection": "N",
+          "suffixDirection": "",
+          "fromAddress": "4201",
+          "state": "FL",
+          "suffixType": "HWY",
+          "toAddress": "4299",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "4201 N DALE MABRY HWY, TAMPA, FL, 33607"
+      }
+    ],
+    "latitude": 27.97783771582,
+    "longitude": -82.505423156281,
+    "status": "confirmed-address-geocode",
+    "matchedAddress": "4201 N DALE MABRY HWY, TAMPA, FL, 33607"
   }
 }

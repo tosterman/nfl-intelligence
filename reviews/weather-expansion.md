@@ -1,0 +1,9 @@
+# Weather location expansion — September 10, 2026
+
+Expanded the usable location map from four to nine venues with official operator/team street addresses, unique US Census address matches and successful live NWS point lookups. Added Lambeau Field, M&T Bank Stadium, Empower Field at Mile High, Lumen Field and Raymond James Stadium. Exact address sources, acquisition timestamps and returned Census matches are retained in `data/weather-venues.json`; NWS lookup results are in `reviews/weather-expansion-points.json`.
+
+Coordinates are address-interpolated vicinity points for area forecasts, not surveyed field centers. Official sources are the [Packers](https://www.packers.com/lambeau-field/contact-us), [Ravens](https://www.baltimoreravens.com/stadium/information), [Broncos](https://www.denverbroncos.com/contact/), [Lumen Field](https://www.lumenfield.com/plan-your-visit/directions) and [Raymond James Stadium](https://raymondjamesstadium.com/gettinghere). NWS returned hourly endpoints in the expected cities and states for all five.
+
+Soldier Field's published Museum Campus Drive address returned no unique Census match, so coordinates remain withheld. The operator page also shows Special Olympics Drive in its footer; an unresolved alternate address is not a verified location.
+
+The real weather refresh completed with four eligible games. The additional mapped venues do not currently add an eligible game inside the seven-day collection window. Future scheduled refreshes can use them when eligible; this is not evidence of nine live game forecasts. Seven existing weather tests passed, including source-byte reproduction for every retained forecast, interval boundaries, stale issue times and neutral-site exclusion. No numerical forecast adjustment was introduced. International venues and remaining domestic locations still need coverage.
