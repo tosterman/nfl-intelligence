@@ -87,9 +87,9 @@ export function MarketPanel({
         Model versus market
       </h2>
       <p className="fine">
-        Timestamped pregame snapshots via The Odds API, collected five times
-        daily. Quotes older than six hours are withheld; prices can change
-        between collections.
+        Timestamped pregame snapshots via The Odds API. Collection is scheduled
+        five times daily, but runs can be delayed or missed. Quotes older than
+        six hours are withheld; prices can change between collections.
       </p>
       {!book ? (
         <p>{assessment.reason}</p>
