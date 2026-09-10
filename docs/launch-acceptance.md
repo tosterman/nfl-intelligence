@@ -4,6 +4,8 @@ Verdict: publicly deployed research edition; full operational and commercial lau
 
 ## Verified release evidence
 
+The baseline evidence below is historical. Subsequent releases verified the native refresh/publication workflow, private odds acquisition and recent sportsbook history, and consented Analytics ingestion. Current details are in `reviews/production-monitoring.md`, `reviews/market-history.md`, `reviews/analytics-ingestion.md` and `docs/measurement-plan.md`. The coverage table and external launch gates reflect those updates; early inspection notes at the end retain their original context.
+
 Application baseline: e99b1c3ce22e2095dcada6ebff31d9937e939080. [GitHub CI](https://github.com/tosterman/nfl-intelligence/actions/runs/34493114456) passed 59 Python and 20 TypeScript tests, production build and production dependency audit. This release corrects canonical URLs to the actual production alias and excludes private/source-only files from CLI uploads.
 
 Production deployment dpl_BsD9A7JTgiXZnkJRHoSpWc2ZFrc6 is verified READY through the authenticated API. [Vercel inspector](https://vercel.com/khnum/nfl-intelligence/BsD9A7JTgiXZnkJRHoSpWc2ZFrc6). Its unique hostname is https://nfl-intelligence-e6i3sbfjp-khnum.vercel.app. Anonymous HTTP checks returned 200 for the slate, performance, matchup, status, robots, sitemap, social image and both analytics SDK scripts. The live browser rendered the slate and matchup; consent loaded analytics and Speed Insights scripts. Dashboard event ingestion is not yet verified.
@@ -18,16 +20,16 @@ The exact-release verifier accommodates JavaScript integral-number serialization
 |---|---|---|
 | 1–4 Mission, promise, philosophy, constitution | Independent numerical forecasts; visible limitations, uncertainty and methodology | Sustained audience usefulness and prospective accuracy |
 | 5 Core outputs | Expected points, margin, total, conditional win probability, fair moneyline and outcome intervals | Empirical discrete score/tie and key-number distributions |
-| 6–8 Market, betting language, no edge | Real timestamped The Odds API snapshots; no-vig comparisons, expiry and missing-market handling; no unvalidated edge claim | Durable quote history, higher-frequency capacity and validated edge policy |
+| 6–8 Market, betting language, no edge | Real timestamped The Odds API snapshots; no-vig comparisons, expiry, private immutable archive and missing-market handling; no unvalidated edge claim | Higher-frequency capacity and validated edge policy |
 | 9–10 Football model and recency | Opponent-adjusted score model plus EPA, CPOE, sack, turnover and pass-share regression; symmetric neutral matchups | Improvement validated on new data, not reused development results |
 | 11 Personnel | Explicit unavailable coverage state | Current availability, starter changes, snap-weighted player value, rights and timestamps |
 | 12 Matchup | Opposing historical efficiency profiles and additive contributions | Nonlinear scheme, trench and player interactions |
 | 13 Situational | Venue identity and neutral-site adjustment | Validated rest/travel/coaching/schedule effects |
 | 14 Weather | Real NWS kickoff-hour context for four mapped US venues; issue/retrieval timestamps, stale/unknown states, compressed source archives | Broader venue/international coverage and validated numerical effects |
-| 15 Market intelligence | Closing-line benchmark separate from model | Price history, movement, CLV and executable-price evidence |
+| 15 Market intelligence | Closing-line benchmark separate from model; verified recent sportsbook observations and first-to-latest spread movement | Longer history, verified closing capture, CLV and executable-price evidence |
 | 16 Time-aware data | Source hashes/times, weekly cutoff, code/configuration identity; missing kickoff withheld | Historical vintage data and additional feed availability timestamps |
 | 17 Pipeline | Validated acquisition, fitted artifact, ledger, CI, deployment and receipt workflow | Sustained scheduled-run reliability and failure recovery drills |
-| 18 Simulation | Production normal approximation; separate discrete-distribution experiments with settlement constraints and prior-only tie estimates | Reconcile distribution moments, validate tails/key numbers and joint scores before promotion |
+| 18 Simulation | Production normal approximation; separate mean-constrained discrete-distribution experiments with settlement constraints and prior-only tie estimates | Validate tails/key numbers and joint scores before promotion; experimental gains remain inconclusive |
 | 19–20 Explanation and specific why | Contributions reconcile to margin; historical profiles provide context | Personnel/scheme explanations require missing inputs |
 | 21 What changed | Expandable generation revisions; score/margin/total/probability deltas; model, configuration and source identity changes distinguished | Verified public history and attribution to specific football inputs |
 | 22–24 Homepage, cards, detail | Slate, filters, expected/final distinctions, contextual navigation, analysis and evidence | Continued usability tests with actual fans/editorial users |
@@ -56,7 +58,7 @@ score-efficiency-v1.2.0: 570 retrospective development games, 569 decisive and o
 5. Obtain Google publisher approval and applicable certified consent configuration before enabling ad tags/ads.txt. AdSense/Ad Manager monetizes publisher inventory; Google Ads buys advertising. See monetization.md.
 6. Add the missing inputs and demonstrate their benefit before presenting this as complete football intelligence.
 
-No claim of perfect quality, Google approval, operational automation or revenue is made. The goal remains open.
+No claim of perfect quality, Google approval, sustained scheduler reliability or revenue is made. The goal remains open.
 
 ## Git integration follow-up — 2026-09-10
 
