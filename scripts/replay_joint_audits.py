@@ -34,21 +34,35 @@ def main():
             (work/'scripts'/name).write_bytes(original)
         for name in ['games.csv','site.json']:
             (work/'data'/name).write_bytes(checked_bytes((inputs/(name+'.gz')).read_bytes(),manifest['files'][name]))
+        for name in ['candidate','reference']:
+            (work/'data'/(name+'.npy')).write_bytes(checked_bytes((inputs/(name+'.npy.gz')).read_bytes(),manifest['priorFiles'][name]))
         for name in ['joint-shadow-reference.json','joint-event-audit-protocol.md','joint-settlement-protocol.md']:
             shutil.copyfile(ROOT/'reviews'/name,work/'reviews'/name)
-        diagnostic="""import sys,json,hashlib
+        runner="""import sys,json,hashlib,runpy
 from pathlib import Path
+import numpy as np
 sys.path.insert(0,'scripts')
-from evaluate_joint_scores import priors
+import evaluate_joint_scores as evaluation
 from build_data import load_rows
 f=json.loads(Path('reviews/joint-shadow-reference.json').read_text())
-c,r,fit=priors(load_rows(Path('data/games.csv')))
-print(json.dumps({'priorHashes':{n:hashlib.sha256(p.tobytes()).hexdigest() for n,p in [('candidate',c),('reference',r)]},'expectedPriorHashes':f['priorHashes'],'fit':fit,'expectedFit':f['fit'],'changedCode':[n for n,h in f['codeHashes'].items() if hashlib.sha256((Path('scripts')/n).read_bytes()).hexdigest()!=h]}),flush=True)
+c,r,fit=evaluation.priors(load_rows(Path('data/games.csv')))
+frozen=[]
+for name,derived in [('candidate',c),('reference',r)]:
+    original=np.load(Path('data')/(name+'.npy'),allow_pickle=False)
+    if hashlib.sha256(original.tobytes()).hexdigest()!=f['priorHashes'][name]:raise ValueError('Frozen prior matrix hash mismatch')
+    np.testing.assert_allclose(derived,original,rtol=1e-10,atol=1e-12)
+    frozen.append(original)
+for key in ['games','regularGames','tieProbability','referenceMean','referenceCovariance']:
+    np.testing.assert_allclose(fit[key],f['fit'][key],rtol=1e-10,atol=1e-12)
+# Explicit replay input substitution: use the exact pre-existing frozen
+# matrices after checking both their hashes and independently refitted values.
+# The original audits and their byte fingerprints remain unchanged.
+evaluation.priors=lambda rows:(frozen[0].copy(),frozen[1].copy(),f['fit'])
+runpy.run_path(str(Path('scripts')/sys.argv[1]),run_name='__main__')
 """
-        subprocess.run([sys.executable,'-c',diagnostic],cwd=work,check=True)
         verified=[]
         for script,report in [('audit_joint_events.py','joint-event-audit.json'),('audit_joint_settlement.py','joint-settlement-audit.json')]:
-            subprocess.run([sys.executable,str(work/'scripts'/script)],cwd=work,check=True,stdout=subprocess.DEVNULL)
+            subprocess.run([sys.executable,'-c',runner,script],cwd=work,check=True,stdout=subprocess.DEVNULL)
             expected=json.loads((ROOT/'reviews'/report).read_text());actual=json.loads((work/'reviews'/report).read_text())
             compare_tree(expected,actual)
             verified.append({'report':report,'games':285,'reportSha256':hashlib.sha256((ROOT/'reviews'/report).read_bytes()).hexdigest()})

@@ -47,5 +47,17 @@
       "bytes": 5059,
       "compressedSha256": "6cdd86dcda1cd8f35dcbc9e45b430440e080cd14e793d25cf2821dc01f484053"
     }
+  },
+  "priorFiles": {
+    "candidate": {
+      "sha256": "afd8ed53b4c98687ec7a87a245051df1493ec435f058e2e5aa9843bfb7a1f531",
+      "bytes": 81736,
+      "compressedSha256": "82d29fea4d308a3d27ad49d339b5cc185a078fdb77eb0746a21108b4f257367c"
+    },
+    "reference": {
+      "sha256": "b6b4d17e27e3ee7cc0684e8fe3dea56d21172f52b8b03af98a9558a13fa803d4",
+      "bytes": 81736,
+      "compressedSha256": "3d6b762c70e25ee15bb0ae1d015ab0e5892ce56a66fe51ce24d8bde4ce68001a"
+    }
   }
 }
