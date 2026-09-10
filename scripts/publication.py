@@ -1,6 +1,6 @@
 """Publication receipts are separate from generated forecasts and game results."""
 from datetime import datetime
-import hashlib,json
+import hashlib,json,math
 
 def snapshot_valid(snapshot):
     payload={k:v for k,v in snapshot.items() if k!='hash'}
@@ -28,14 +28,29 @@ def eligible_snapshot(game,ledger,receipts):
     return max(eligible,key=lambda x:(x[0],x[1]))[2] if eligible else None
 
 def grade_prospective(games,ledger,receipts):
-    records=[];missed=0;ties=0
+    records=[];score_records=[];missed=0;ties=0
     for g in games:
         if g['status']!='final':continue
         s=eligible_snapshot(g,ledger,receipts)
         if s is None:missed+=1;continue
         actual=g['actualHome']-g['actualAway'];p=s['prediction']['homeWinProbability']
+        prediction=s['prediction'];total=g['actualHome']+g['actualAway']
+        score={'gameId':g['id'],'snapshotHash':s['hash'],'generatedAt':s.get('generatedAt',s.get('publishedAt')),
+            'homeMargin':prediction['homeMargin'],'total':prediction['total'],'actualMargin':actual,'actualTotal':total,
+            'marginError':abs(prediction['homeMargin']-actual),'totalError':abs(prediction['total']-total)}
+        for field,value in [('margin',actual),('total',total)]:
+            interval=prediction.get(field+'Interval80')
+            score[field+'Covered80']=bool(interval[0]<=value<=interval[1]) if interval is not None else None
+        score_records.append(score)
         if actual==0:ties+=1;continue
         outcome=int(actual>0)
-        records.append({'gameId':g['id'],'snapshotHash':s['hash'],'probability':p,'outcome':outcome,'correct':int((p>=.5)==bool(outcome)),'brier':(p-outcome)**2})
+        bounded=min(1-1e-8,max(1e-8,p))
+        records.append({'gameId':g['id'],'snapshotHash':s['hash'],'probability':p,'outcome':outcome,'correct':int((p>=.5)==bool(outcome)),'brier':(p-outcome)**2,'logLoss':-math.log(bounded if outcome else 1-bounded)})
     n=len(records)
-    return {'games':n,'wins':sum(r['correct'] for r in records),'ties':ties,'missed':missed,'brier':sum(r['brier'] for r in records)/n if n else None,'records':records}
+    result={'games':n,'wins':sum(r['correct'] for r in records),'ties':ties,'missed':missed,'brier':sum(r['brier'] for r in records)/n if n else None,'logLoss':sum(r['logLoss'] for r in records)/n if n else None,'records':records,'scoreGames':len(score_records),'scoreRecords':score_records}
+    for field in ['margin','total']:
+        covered=[r[field+'Covered80'] for r in score_records if r[field+'Covered80'] is not None]
+        result[field+'Mae']=sum(r[field+'Error'] for r in score_records)/len(score_records) if score_records else None
+        result[field+'IntervalGames']=len(covered)
+        result[field+'IntervalCoverage']=sum(covered)/len(covered) if covered else None
+    return result

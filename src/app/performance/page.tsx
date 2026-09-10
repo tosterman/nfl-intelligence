@@ -34,6 +34,11 @@ export default function Performance() {
             {site.livePerformance.wins} / {site.livePerformance.games} decisive
             games correct · Brier {site.livePerformance.brier?.toFixed(4)}
           </p>
+        ) : site.livePerformance.scoreGames ? (
+          <p>
+            No decisive results yet. Eligible tied games are included in score
+            errors below.
+          </p>
         ) : (
           <p>
             No completed forecasts with verified pregame publication receipts
@@ -45,6 +50,78 @@ export default function Performance() {
           eligible publication receipt exists. {site.livePerformance.ties} tied
           games excluded from win-probability scoring.
         </p>
+        <p>
+          Score errors include every eligible completed game, including ties. We
+          grade the latest generated forecast verified publicly available before
+          kickoff. Later revisions cannot replace it.
+        </p>
+        {site.livePerformance.scoreGames > 0 && (
+          <>
+            <dl className="live-score-metrics">
+              <div>
+                <dt>Margin error</dt>
+                <dd>{site.livePerformance.marginMae?.toFixed(2)} points</dd>
+              </div>
+              <div>
+                <dt>Total error</dt>
+                <dd>{site.livePerformance.totalMae?.toFixed(2)} points</dd>
+              </div>
+              <div>
+                <dt>Decisive-game log loss</dt>
+                <dd>
+                  {site.livePerformance.logLoss?.toFixed(4) ??
+                    "Awaiting a decisive result"}
+                </dd>
+              </div>
+              <div>
+                <dt>80% margin interval coverage</dt>
+                <dd>
+                  {site.livePerformance.marginIntervalCoverage == null
+                    ? "Unavailable"
+                    : pct(site.livePerformance.marginIntervalCoverage)}{" "}
+                  · {site.livePerformance.marginIntervalGames} games
+                </dd>
+              </div>
+              <div>
+                <dt>80% total interval coverage</dt>
+                <dd>
+                  {site.livePerformance.totalIntervalCoverage == null
+                    ? "Unavailable"
+                    : pct(site.livePerformance.totalIntervalCoverage)}{" "}
+                  · {site.livePerformance.totalIntervalGames} games
+                </dd>
+              </div>
+            </dl>
+            <p className="fine">
+              Score errors use {site.livePerformance.scoreGames} games.
+              Probability scores use {site.livePerformance.games} decisive
+              games. A small live sample cannot establish reliability or
+              profitable edge.
+            </p>
+            <details>
+              <summary>Inspect every graded forecast</summary>
+              <ul className="live-score-audit">
+                {site.livePerformance.scoreRecords.map((record) => (
+                  <li key={record.gameId}>
+                    <Link href={`/games/${record.gameId}`}>
+                      {record.gameId.replaceAll("_", " · ")}
+                    </Link>
+                    <p>
+                      Home margin: {record.homeMargin.toFixed(2)} predicted /{" "}
+                      {record.actualMargin} actual. Total:{" "}
+                      {record.total.toFixed(2)} predicted / {record.actualTotal}{" "}
+                      actual.
+                    </p>
+                    <p className="fine">
+                      Forecast generated {record.generatedAt}. SHA-256:{" "}
+                      <code>{record.snapshotHash}</code>
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          </>
+        )}
       </section>
       <div className="kpi-grid">
         <div className="kpi">
