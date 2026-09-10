@@ -1,0 +1,11 @@
+# Shared odds acquisition reservations
+
+After checking account quota, the production collector reserves `odds/acquisition-reservation.json` in private Blob storage before calling the paid odds endpoint. Missing reservations use create-only writes; expired reservations use the exact ETag read from origin. Competing writers cannot both reserve the same active window.
+
+The 30-minute cooldown matches snapshot reuse and exceeds the collector route's 120-second execution limit. The collector checks expiry again before acquisition. Reservations are deliberately retained after provider failures, timeouts and lost storage responses: an uncertain request may already have consumed provider credits. Recovery requires a subsequent trigger after expiry. A failed acquisition may therefore delay recovery by at least 30 minutes; the routine schedule is five hours apart. Denied reservations fail the collection rather than claiming a new capture succeeded.
+
+Verification: the missing-reservation enforcement test failed before implementation. All 76 application tests pass afterward. Eight simultaneous collectors produce exactly one paid request; a provider timeout and immediate retry do not cause a second request. Storage tests also cover concurrent reservation creation and replacement at expiry, the last millisecond before expiry, malformed stored state, invalid clocks and lost write responses. Independent review passed all 20 collector/storage tests with no material defect. The underlying conditional Blob operations were verified against an isolated real private object in the prior publication-ordering review.
+
+Scope: cooperating collectors must share this Blob store and run the new code. This is not a monthly budget, a provider-wide key lock, or a limit on unrelated callers using the same API key. All deployments writing the shared store must be updated together; an older collector does not honor reservations. The change is committed on the development branch and has not yet been verified in production, where Vercel build-capacity recovery is pending.
+
+The preceding publication-ordering release passed full GitHub verification in [run 34527051818](https://github.com/tosterman/nfl-intelligence/actions/runs/34527051818). Its review's acquisition-deduplication gap is addressed here in code, with production rollout still outstanding.

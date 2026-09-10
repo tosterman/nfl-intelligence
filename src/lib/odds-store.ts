@@ -1,10 +1,12 @@
 import { get, put } from "@vercel/blob";
-import { createHash } from "node:crypto";
+import { createHash, randomUUID } from "node:crypto";
 import { gunzipSync } from "node:zlib";
 import { prepareArchive } from "./odds-archive";
 import { ODDS_MAX_AGE_MS, type OddsFeed } from "./odds";
 
 const LATEST = "odds/latest.json";
+const RESERVATION = "odds/acquisition-reservation.json";
+export const ACQUISITION_COOLDOWN_MS = 30 * 60 * 1000;
 type Reader = (path: string) => Promise<Buffer | null>;
 type Writer = (
   path: string,
@@ -41,6 +43,52 @@ const writeBlob: Writer = async (path, body, overwrite, ifMatch) => {
     abortSignal: AbortSignal.timeout(5000),
   });
 };
+
+export async function reserveOddsAcquisition(
+  now: number,
+  readVersion: VersionReader = readBlobVersion,
+  write: Writer = writeBlob,
+) {
+  if (
+    !Number.isSafeInteger(now) ||
+    now < 0 ||
+    !Number.isSafeInteger(now + ACQUISITION_COOLDOWN_MS)
+  )
+    throw new Error("Invalid acquisition clock");
+  const current = await readVersion(RESERVATION);
+  if (current) {
+    if (!current.etag || current.body.length > 4096)
+      throw new Error("Invalid acquisition reservation");
+    const reservation = JSON.parse(current.body.toString());
+    if (
+      reservation.schemaVersion !== 1 ||
+      !Number.isSafeInteger(reservation.startedAt) ||
+      reservation.startedAt < 0 ||
+      !Number.isSafeInteger(reservation.expiresAt) ||
+      reservation.expiresAt - reservation.startedAt !== ACQUISITION_COOLDOWN_MS
+    )
+      throw new Error("Invalid acquisition reservation");
+    if (now < reservation.expiresAt)
+      throw new Error("Odds acquisition already reserved");
+  }
+  const expiresAt = now + ACQUISITION_COOLDOWN_MS;
+  // Never release on failure: a timed-out provider request may have spent credits.
+  // A lost reservation response also fails closed until this cooldown expires.
+  await write(
+    RESERVATION,
+    Buffer.from(
+      JSON.stringify({
+        schemaVersion: 1,
+        startedAt: now,
+        expiresAt,
+        owner: randomUUID(),
+      }),
+    ),
+    current !== null,
+    current?.etag,
+  );
+  return expiresAt;
+}
 
 export async function publishOdds(
   feed: OddsFeed,

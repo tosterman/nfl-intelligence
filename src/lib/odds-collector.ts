@@ -1,7 +1,12 @@
 import { createHash, timingSafeEqual } from "node:crypto";
 import { normalizeOdds, type OddsFeed } from "./odds";
 import { prepareArchive } from "./odds-archive";
-import { publishOdds, readStoredOdds, oddsHealth } from "./odds-store";
+import {
+  publishOdds,
+  readStoredOdds,
+  oddsHealth,
+  reserveOddsAcquisition,
+} from "./odds-store";
 export function authorizedCollector(
   header: string | null,
   secret: string | undefined,
@@ -26,6 +31,7 @@ export async function collectOdds() {
     publish: publishOdds,
     fetcher: fetch,
     now: Date.now,
+    reserve: reserveOddsAcquisition,
   });
 }
 export async function runOddsCollection({
@@ -34,6 +40,7 @@ export async function runOddsCollection({
   publish,
   fetcher,
   now,
+  reserve,
 }: {
   key: string | undefined;
   read: () => Promise<OddsFeed | null>;
@@ -42,6 +49,7 @@ export async function runOddsCollection({
   ) => Promise<{ fetchedAt: string; sha256: string; events: number }>;
   fetcher: typeof fetch;
   now: () => number;
+  reserve: (now: number) => Promise<number>;
 }) {
   if (!key) throw new Error("Collection configuration missing");
   const existing = await read();
@@ -67,6 +75,14 @@ export async function runOddsCollection({
     Number(remaining) < 3
   )
     throw new Error("Odds quota unavailable or insufficient");
+  const reservedAt = now();
+  const expiresAt = await reserve(reservedAt);
+  if (
+    !Number.isSafeInteger(expiresAt) ||
+    now() < reservedAt ||
+    now() >= expiresAt
+  )
+    throw new Error("Odds acquisition reservation expired");
   const url = new URL(
     "https://api.the-odds-api.com/v4/sports/americanfootball_nfl/odds/",
   );

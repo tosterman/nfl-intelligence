@@ -6,6 +6,7 @@ import {
   runOddsCollection,
 } from "../src/lib/odds-collector";
 import { prepareArchive } from "../src/lib/odds-archive";
+import { reserveOddsAcquisition } from "../src/lib/odds-store";
 import type { OddsFeed } from "../src/lib/odds";
 
 function collectorFixture() {
@@ -15,6 +16,7 @@ function collectorFixture() {
   const deps = {
     key: "test-key",
     now: () => at,
+    reserve: async (now: number) => now + 30 * 60 * 1000,
     read: async () => {
       calls.read++;
       return saved;
@@ -168,4 +170,72 @@ test("manual collection cannot suppress a scheduled capture for hours", () => {
   assert.equal(canReuseSnapshot(feed, fetched + 29 * 60000), true);
   assert.equal(canReuseSnapshot(feed, fetched + 30 * 60000), false);
   assert.equal(canReuseSnapshot(feed, fetched + 2 * 3600000), false);
+});
+
+test("a denied acquisition reservation prevents a paid request", async () => {
+  const { deps, calls } = collectorFixture();
+  await assert.rejects(
+    runOddsCollection({
+      ...deps,
+      reserve: async () => {
+        throw new Error("Odds acquisition already reserved");
+      },
+    }),
+    /reserved/,
+  );
+  assert.equal(calls.fetch, 0);
+});
+
+test("an expired reservation cannot authorize a delayed paid request", async () => {
+  const { deps, calls } = collectorFixture();
+  deps.reserve = async (at) => {
+    deps.now = () => at + 30 * 60 * 1000;
+    return at + 30 * 60 * 1000;
+  };
+  // Pass a stable function that sees the updated simulated clock.
+  await assert.rejects(
+    runOddsCollection({ ...deps, now: () => deps.now() }),
+    /reservation expired/,
+  );
+  assert.equal(calls.fetch, 0);
+});
+
+test("overlapping collectors and a retry after provider timeout spend at most one request", async () => {
+  for (const providerFails of [false, true]) {
+    const { deps, calls } = collectorFixture();
+    let reservation: { body: Buffer; etag: string } | null = null;
+    let version = 0;
+    deps.reserve = (at) =>
+      reserveOddsAcquisition(
+        at,
+        async () => reservation,
+        async (_path, body, overwrite, ifMatch) => {
+          if (reservation && (!overwrite || ifMatch !== reservation.etag))
+            throw new Error("reservation conflict");
+          reservation = { body, etag: String(++version) };
+        },
+      );
+    if (providerFails) {
+      const fetcher = deps.fetcher;
+      deps.fetcher = (async (url, options) => {
+        if (new URL(String(url)).pathname === "/v4/sports/")
+          return fetcher(url, options);
+        calls.fetch++;
+        throw new Error("provider timeout after possible charge");
+      }) as typeof fetch;
+    }
+    const outcomes = await Promise.allSettled(
+      Array.from({ length: 8 }, () => runOddsCollection(deps)),
+    );
+    assert.equal(calls.fetch, 1);
+    assert.equal(
+      outcomes.filter((r) => r.status === "fulfilled").length,
+      providerFails ? 0 : 1,
+    );
+    if (providerFails)
+      await assert.rejects(runOddsCollection(deps), /reserved/);
+    else
+      assert.equal((await runOddsCollection(deps)).status, "already-current");
+    assert.equal(calls.fetch, 1);
+  }
 });

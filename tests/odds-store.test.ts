@@ -2,6 +2,10 @@ import { createHash } from "node:crypto";
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { publishOdds, readStoredOdds, oddsHealth } from "../src/lib/odds-store";
+import {
+  reserveOddsAcquisition,
+  ACQUISITION_COOLDOWN_MS,
+} from "../src/lib/odds-store";
 import type { OddsFeed } from "../src/lib/odds";
 const feed: OddsFeed = {
   state: "ready",
@@ -165,4 +169,71 @@ test("exact retries are idempotent while equal-time conflicting content is rejec
     /Conflicting/,
   );
   assert.deepEqual(await readStoredOdds(s.read), feed);
+});
+
+test("simultaneous acquisitions have one winner at creation and after expiry", async () => {
+  const s = fixture();
+  const now = Date.parse(feed.fetchedAt);
+  for (const at of [now, now + ACQUISITION_COOLDOWN_MS]) {
+    const outcomes = await Promise.allSettled(
+      Array.from({ length: 8 }, () =>
+        reserveOddsAcquisition(at, s.readVersion, s.write),
+      ),
+    );
+    assert.equal(outcomes.filter((o) => o.status === "fulfilled").length, 1);
+    assert.equal(outcomes.filter((o) => o.status === "rejected").length, 7);
+    await assert.rejects(
+      reserveOddsAcquisition(
+        at + ACQUISITION_COOLDOWN_MS - 1,
+        s.readVersion,
+        s.write,
+      ),
+      /reserved/,
+    );
+  }
+});
+
+test("a reservation whose write response was lost still blocks another acquisition", async () => {
+  const s = fixture();
+  const now = Date.parse(feed.fetchedAt);
+  const write: typeof s.write = async (...args) => {
+    await s.write(...args);
+    throw new Error("response lost");
+  };
+  await assert.rejects(
+    reserveOddsAcquisition(now, s.readVersion, write),
+    /response lost/,
+  );
+  await assert.rejects(
+    reserveOddsAcquisition(now + 1, s.readVersion, s.write),
+    /reserved/,
+  );
+  assert.equal(
+    await reserveOddsAcquisition(
+      now + ACQUISITION_COOLDOWN_MS,
+      s.readVersion,
+      s.write,
+    ),
+    now + 2 * ACQUISITION_COOLDOWN_MS,
+  );
+});
+
+test("invalid reservation storage and clocks fail closed", async () => {
+  const now = Date.parse(feed.fetchedAt);
+  for (const body of [
+    "invalid",
+    JSON.stringify({ schemaVersion: 1, startedAt: now, expiresAt: now - 1 }),
+    JSON.stringify({ schemaVersion: 1, startedAt: now, expiresAt: now + 1 }),
+  ]) {
+    const s = fixture();
+    s.files.set("odds/acquisition-reservation.json", Buffer.from(body));
+    await assert.rejects(reserveOddsAcquisition(now, s.readVersion, s.write));
+  }
+  const s = fixture();
+  for (const at of [NaN, -1, Infinity, 1.5, Number.MAX_SAFE_INTEGER])
+    await assert.rejects(
+      reserveOddsAcquisition(at, s.readVersion, s.write),
+      /clock/,
+    );
+  assert.equal(s.files.size, 0);
 });
