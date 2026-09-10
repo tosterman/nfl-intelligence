@@ -1026,5 +1026,262 @@
     },
     "modelAdjustment": false,
     "hash": "2684a3f9a60e7b3da435cde27029ef9c4c5e8c0b1dbf247490b9d89fd80074cf"
+  },
+  {
+    "status": "available",
+    "gameId": "2026_01_CHI_CAR",
+    "kickoff": "2026-09-13T17:00:00+00:00",
+    "venue": "Bank of America Stadium",
+    "issuedAt": "2026-09-10T12:13:09+00:00",
+    "periodStart": "2026-09-13T13:00:00-04:00",
+    "periodEnd": "2026-09-13T14:00:00-04:00",
+    "temperature": 86,
+    "temperatureUnit": "F",
+    "precipitationProbability": 6,
+    "windSpeed": "2 mph",
+    "windDirection": "W",
+    "summary": "Mostly Sunny",
+    "retrievedAt": "2026-09-10T17:47:08.217185+00:00",
+    "sourceUrl": "https://api.weather.gov/gridpoints/GSP/119,65/forecast/hourly",
+    "sourceHash": "bc806274278989ab1127b7c97f50a3f56028b5de5ea8442e5fdd2afbe3747eaa",
+    "pointUrl": "https://api.weather.gov/points/35.2258,-80.8509",
+    "pointHash": "ea275119f3ecddc84c39a41dbadc805a73b6584c31e8b694f35d758601ec0045",
+    "latitude": 35.225780031248,
+    "longitude": -80.850875963353,
+    "locationEvidence": {
+      "address": "800 South Mint Street, Charlotte, NC 28202",
+      "addressSource": "https://www.panthers.com/stadium/booking",
+      "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=800+South+Mint+Street%2C+Charlotte%2C+NC+28202&benchmark=Public_AR_Current&format=json",
+      "retrievedAt": "2026-09-10T14:50:37.367650+00:00",
+      "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+      "geocodeBenchmark": "Public_AR_Current",
+      "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+      "geocodeMatches": [
+        {
+          "tigerLine": {
+            "side": "R",
+            "tigerLineId": "640628025"
+          },
+          "coordinates": {
+            "x": -80.850875963353,
+            "y": 35.225780031248
+          },
+          "addressComponents": {
+            "zip": "28202",
+            "streetName": "MINT",
+            "preType": "",
+            "city": "CHARLOTTE",
+            "preDirection": "S",
+            "suffixDirection": "",
+            "fromAddress": "800",
+            "state": "NC",
+            "suffixType": "ST",
+            "toAddress": "898",
+            "suffixQualifier": "",
+            "preQualifier": ""
+          },
+          "matchedAddress": "800 S MINT ST, CHARLOTTE, NC, 28202"
+        }
+      ],
+      "latitude": 35.225780031248,
+      "longitude": -80.850875963353,
+      "status": "confirmed-address-geocode",
+      "matchedAddress": "800 S MINT ST, CHARLOTTE, NC, 28202"
+    },
+    "modelAdjustment": false,
+    "hash": "9c1687668c7cf86dd6f2c72f0e4c1f49d8f00e5707b645f7e687526f1a8b269d"
+  },
+  {
+    "status": "available",
+    "gameId": "2026_01_NYJ_TEN",
+    "kickoff": "2026-09-13T17:00:00+00:00",
+    "venue": "Nissan Stadium",
+    "issuedAt": "2026-09-10T15:36:28+00:00",
+    "periodStart": "2026-09-13T12:00:00-05:00",
+    "periodEnd": "2026-09-13T13:00:00-05:00",
+    "temperature": 88,
+    "temperatureUnit": "F",
+    "precipitationProbability": 1,
+    "windSpeed": "0 mph",
+    "windDirection": "",
+    "summary": "Sunny",
+    "retrievedAt": "2026-09-10T17:47:08.466448+00:00",
+    "sourceUrl": "https://api.weather.gov/gridpoints/OHX/50,57/forecast/hourly",
+    "sourceHash": "499f48b23949dae3fe54a9aee22fe0b5a9919a7df126ba4b4979bf00fc11fd1c",
+    "pointUrl": "https://api.weather.gov/points/36.1670,-86.7740",
+    "pointHash": "b77c6f18d1c723b356599015ccc272725f6d5d6161a69443ab3dabc74deea8bd",
+    "latitude": 36.166985485846,
+    "longitude": -86.77398727028,
+    "locationEvidence": {
+      "address": "1 Titans Way, Nashville, TN 37213",
+      "addressSource": "https://www.nashville.gov/departments/sports-authority/nissan-stadium",
+      "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1+Titans+Way%2C+Nashville%2C+TN+37213&benchmark=Public_AR_Current&format=json",
+      "retrievedAt": "2026-09-10T14:50:37.369132+00:00",
+      "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+      "geocodeBenchmark": "Public_AR_Current",
+      "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+      "geocodeMatches": [
+        {
+          "tigerLine": {
+            "side": "R",
+            "tigerLineId": "97221175"
+          },
+          "coordinates": {
+            "x": -86.77398727028,
+            "y": 36.166985485846
+          },
+          "addressComponents": {
+            "zip": "37213",
+            "streetName": "TITANS",
+            "preType": "",
+            "city": "NASHVILLE",
+            "preDirection": "",
+            "suffixDirection": "",
+            "fromAddress": "99",
+            "state": "TN",
+            "suffixType": "WAY",
+            "toAddress": "1",
+            "suffixQualifier": "",
+            "preQualifier": ""
+          },
+          "matchedAddress": "1 TITANS WAY, NASHVILLE, TN, 37213"
+        }
+      ],
+      "latitude": 36.166985485846,
+      "longitude": -86.77398727028,
+      "status": "confirmed-address-geocode",
+      "matchedAddress": "1 TITANS WAY, NASHVILLE, TN, 37213"
+    },
+    "modelAdjustment": false,
+    "hash": "a953a6ec4f7248c248abcbedf44a2e02a479356764cba5d693c55cee1e4cfed7"
+  },
+  {
+    "status": "available",
+    "gameId": "2026_01_WAS_PHI",
+    "kickoff": "2026-09-13T20:25:00+00:00",
+    "venue": "Lincoln Financial Field",
+    "issuedAt": "2026-09-10T08:09:38+00:00",
+    "periodStart": "2026-09-13T16:00:00-04:00",
+    "periodEnd": "2026-09-13T17:00:00-04:00",
+    "temperature": 83,
+    "temperatureUnit": "F",
+    "precipitationProbability": 21,
+    "windSpeed": "5 mph",
+    "windDirection": "W",
+    "summary": "Slight Chance Showers And Thunderstorms",
+    "retrievedAt": "2026-09-10T17:47:08.687558+00:00",
+    "sourceUrl": "https://api.weather.gov/gridpoints/PHI/50,77/forecast/hourly",
+    "sourceHash": "8b3980364bb9e6bb879b153cafe3c322a2bc6b07798f33476e6baade591e0cf9",
+    "pointUrl": "https://api.weather.gov/points/39.9044,-75.1667",
+    "pointHash": "8ba19a4b1138d9e91ec895ec75beaa57b5aaa8c7bf97f422afed127a4023c174",
+    "latitude": 39.904449230665,
+    "longitude": -75.166688629533,
+    "locationEvidence": {
+      "address": "1020 Pattison Avenue, Philadelphia, PA 19148",
+      "addressSource": "https://www.lincolnfinancialfield.com/faqs/",
+      "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1020+Pattison+Avenue%2C+Philadelphia%2C+PA+19148&benchmark=Public_AR_Current&format=json",
+      "retrievedAt": "2026-09-10T14:50:37.455583+00:00",
+      "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+      "geocodeBenchmark": "Public_AR_Current",
+      "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+      "geocodeMatches": [
+        {
+          "tigerLine": {
+            "side": "L",
+            "tigerLineId": "640220983"
+          },
+          "coordinates": {
+            "x": -75.166688629533,
+            "y": 39.904449230665
+          },
+          "addressComponents": {
+            "zip": "19148",
+            "streetName": "PATTISON",
+            "preType": "",
+            "city": "PHILADELPHIA",
+            "preDirection": "",
+            "suffixDirection": "",
+            "fromAddress": "822",
+            "state": "PA",
+            "suffixType": "AVE",
+            "toAddress": "1198",
+            "suffixQualifier": "",
+            "preQualifier": ""
+          },
+          "matchedAddress": "1020 PATTISON AVE, PHILADELPHIA, PA, 19148"
+        }
+      ],
+      "latitude": 39.904449230665,
+      "longitude": -75.166688629533,
+      "status": "confirmed-address-geocode",
+      "matchedAddress": "1020 PATTISON AVE, PHILADELPHIA, PA, 19148",
+      "addressNote": "The stadium operator specifically recommends 1020 Pattison Avenue for GPS/directions, rather than its mailing address."
+    },
+    "modelAdjustment": false,
+    "hash": "2883b393c4ed1162b83ad0a47e27a6ca2d45b91d050c0acff69aa282e5c5ee7f"
+  },
+  {
+    "status": "available",
+    "gameId": "2026_01_DEN_KC",
+    "kickoff": "2026-09-15T00:15:00+00:00",
+    "venue": "GEHA Field at Arrowhead Stadium",
+    "issuedAt": "2026-09-10T16:01:16+00:00",
+    "periodStart": "2026-09-14T19:00:00-05:00",
+    "periodEnd": "2026-09-14T20:00:00-05:00",
+    "temperature": 83,
+    "temperatureUnit": "F",
+    "precipitationProbability": 42,
+    "windSpeed": "12 mph",
+    "windDirection": "S",
+    "summary": "Chance Showers And Thunderstorms",
+    "retrievedAt": "2026-09-10T17:47:08.932570+00:00",
+    "sourceUrl": "https://api.weather.gov/gridpoints/EAX/47,48/forecast/hourly",
+    "sourceHash": "7ddc179fb22949fd88c81d153fbef044c14638d08dcca9b3749a5469d669aef9",
+    "pointUrl": "https://api.weather.gov/points/39.0489,-94.4865",
+    "pointHash": "19a8cef566da1b4253c26ca2c9f6be18d51d3ff17c363bdd68d353af8fed5a27",
+    "latitude": 39.048923084936,
+    "longitude": -94.486488590578,
+    "locationEvidence": {
+      "address": "1 Arrowhead Drive, Kansas City, MO 64129",
+      "addressSource": "https://www.chiefs.com/stadium/atozguide",
+      "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1+Arrowhead+Drive%2C+Kansas+City%2C+MO+64129&benchmark=Public_AR_Current&format=json",
+      "retrievedAt": "2026-09-10T14:50:37.485420+00:00",
+      "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+      "geocodeBenchmark": "Public_AR_Current",
+      "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+      "geocodeMatches": [
+        {
+          "tigerLine": {
+            "side": "R",
+            "tigerLineId": "91460449"
+          },
+          "coordinates": {
+            "x": -94.486488590578,
+            "y": 39.048923084936
+          },
+          "addressComponents": {
+            "zip": "64129",
+            "streetName": "ARROWHEAD",
+            "preType": "",
+            "city": "KANSAS CITY",
+            "preDirection": "",
+            "suffixDirection": "",
+            "fromAddress": "1",
+            "state": "MO",
+            "suffixType": "DR",
+            "toAddress": "99",
+            "suffixQualifier": "",
+            "preQualifier": ""
+          },
+          "matchedAddress": "1 ARROWHEAD DR, KANSAS CITY, MO, 64129"
+        }
+      ],
+      "latitude": 39.048923084936,
+      "longitude": -94.486488590578,
+      "status": "confirmed-address-geocode",
+      "matchedAddress": "1 ARROWHEAD DR, KANSAS CITY, MO, 64129"
+    },
+    "modelAdjustment": false,
+    "hash": "f79b0a93837cc5c6fde6404a30747f62c1289f3a67db91e9820cb5659c8be1b5"
   }
 ]
