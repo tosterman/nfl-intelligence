@@ -1,5 +1,5 @@
 import { createHash, timingSafeEqual } from "node:crypto";
-import { normalizeOdds } from "./odds";
+import { normalizeOdds, type OddsFeed } from "./odds";
 import { prepareArchive } from "./odds-archive";
 import { publishOdds, readStoredOdds, oddsHealth } from "./odds-store";
 export function authorizedCollector(
@@ -12,12 +12,19 @@ export function authorizedCollector(
     createHash("sha256").update(`Bearer ${secret}`).digest(),
   );
 }
+export function canReuseSnapshot(feed: OddsFeed | null, now = Date.now()) {
+  const health = oddsHealth(feed, now);
+  // The next scheduled job is at most five hours away; retain freshness headroom.
+  return (
+    health.status === "ok" && health.ageHours !== null && health.ageHours < 0.5
+  );
+}
 export async function collectOdds() {
   const key = process.env.ODDS_API_KEY;
   if (!key) throw new Error("Collection configuration missing");
   const existing = await readStoredOdds();
   const health = oddsHealth(existing);
-  if (health.status === "ok" && health.ageHours !== null && health.ageHours < 3)
+  if (canReuseSnapshot(existing))
     return { ...health, status: "already-current" };
   const url = new URL(
     "https://api.the-odds-api.com/v4/sports/americanfootball_nfl/odds/",

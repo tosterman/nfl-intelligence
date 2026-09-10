@@ -72,5 +72,8 @@ test("health rejects missing, future, and stale acquisitions", () => {
   assert.equal(oddsHealth(feed, now + 6 * 3600000 + 1).status, "stale");
   assert.equal(oddsHealth(feed, now - 1).status, "unavailable");
   assert.equal(oddsHealth(null, now).status, "unavailable");
-  assert.equal(oddsHealth({...feed,state:"unavailable"},now).fetchedAt,null);
+  assert.equal(
+    oddsHealth({ ...feed, state: "unavailable" }, now).fetchedAt,
+    null,
+  );
 });
