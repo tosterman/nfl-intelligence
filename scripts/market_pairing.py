@@ -79,3 +79,17 @@ def quote_at(game, captures, book, market, cutoff, max_age, exclusive=False):
         return {'status': 'stale-quote'}
     return {'status': 'matched', 'sha256': capture['sha256'], 'acquiredAt': acquired.isoformat(),
             'uploadedAt': capture['uploadedAt'], 'book': book, 'market': market, 'quote': quote}
+
+
+def pair_checkpoint(game, phase, now, ledger, receipts, captures, book, market):
+    window = checkpoint(game, phase, now)
+    result = {'gameId':game['id'], 'phase':phase, 'cutoff':window['cutoff'].isoformat(),
+              'book':book, 'market':market, 'status':window['status']}
+    if window['status'] != 'due':
+        return result
+    quote = quote_at(game, captures, book, market, window['cutoff'], window['maxAge'], exclusive=phase == 'closing')
+    result['quote'] = quote
+    if phase == 'closing':
+        return result | {'status':quote['status']}
+    forecast = forecast_at(game, ledger, receipts, window['cutoff'])
+    return result | {'forecast':forecast, 'status':'matched' if quote['status'] == forecast['status'] == 'matched' else 'incomplete'}
