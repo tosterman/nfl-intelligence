@@ -78,7 +78,9 @@ export function MarketPanel({
     away = teams[game.away].short;
   return (
     <section className="panel market-panel">
-      <h2>Model versus market</h2>
+      <h2 id="market-prices" tabIndex={-1}>
+        Model versus market
+      </h2>
       <p className="fine">
         Timestamped pregame snapshots via The Odds API, collected five times
         daily. Quotes older than six hours are withheld; prices can change

@@ -13,7 +13,9 @@ export function WeatherContext({
   return (
     <section className="panel">
       <div className="eyebrow">Conditions · Context only</div>
-      <h2>At kickoff, around the venue</h2>
+      <h2 id="kickoff-weather" tabIndex={-1}>
+        At kickoff, around the venue
+      </h2>
       {status === "available" ? (
         <WeatherExpiry
           expiresAt={

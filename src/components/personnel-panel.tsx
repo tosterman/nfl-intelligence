@@ -10,7 +10,9 @@ export function PersonnelPanel({ game }: { game: Game }) {
   return (
     <section className="panel personnel-panel">
       <div className="eyebrow">Personnel · Reported context</div>
-      <h2>Practice & game designations</h2>
+      <h2 id="personnel-reports" tabIndex={-1}>
+        Practice & game designations
+      </h2>
       <p className="fine">
         Individual report dates are unavailable. These are entries in the
         acquired weekly file, not confirmed lineups. Personnel does not adjust

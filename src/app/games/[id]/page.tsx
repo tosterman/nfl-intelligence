@@ -134,6 +134,16 @@ export default async function GamePage({
         </section>
       ) : (
         <>
+          <nav className="matchup-nav" aria-label="Matchup sections">
+            <span className="eyebrow">Explore this game</span>
+            <div>
+              <a href="#model-read">Model outlook</a>
+              <a href="#kickoff-weather">Weather</a>
+              <a href="#market-prices">Sportsbook comparison</a>
+              <a href="#personnel-reports">Personnel</a>
+              <a href="#market-history">Price history</a>
+            </div>
+          </nav>
           <div className="kpi-grid">
             <div className="kpi">
               <small>Model spread · Home team</small>
@@ -162,7 +172,9 @@ export default async function GamePage({
             <div className="detail-stack">
               <WeatherContext game={g} />
               <section className="panel">
-                <h2>The model’s read</h2>
+                <h2 id="model-read" tabIndex={-1}>
+                  The model’s read
+                </h2>
                 <p className="lead">
                   {teams[favorite!].city} has the stronger scoring profile, with
                   a {pct(probability)} chance of winning a decisive game. The

@@ -31,7 +31,9 @@ export function MarketHistoryPanel({
   return (
     <section className="panel market-panel market-history-panel">
       <div className="eyebrow">The price over time</div>
-      <h2>Recent market observations</h2>
+      <h2 id="market-history" tabIndex={-1}>
+        Recent market observations
+      </h2>
       <p className="fine">
         Saved pregame quotes. First and latest observations are not verified
         opening or closing lines. Gaps and changes between captures are
