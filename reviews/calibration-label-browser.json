@@ -1,0 +1,308 @@
+[
+  {
+    "browser": "chromium",
+    "width": 320,
+    "documentWidth": 320,
+    "textSizes": [
+      {
+        "text": "0%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "0%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "25%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "25%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "50%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "50%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "75%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "75%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "100%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "100%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "Predicted home win probability",
+        "pixels": 12.5125
+      }
+    ]
+  },
+  {
+    "browser": "chromium",
+    "width": 390,
+    "documentWidth": 390,
+    "textSizes": [
+      {
+        "text": "0%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "0%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "25%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "25%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "50%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "50%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "75%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "75%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "100%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "100%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "Predicted home win probability",
+        "pixels": 15.589583333333332
+      }
+    ]
+  },
+  {
+    "browser": "chromium",
+    "width": 1440,
+    "documentWidth": 1440,
+    "textSizes": [
+      {
+        "text": "0%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "0%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "25%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "25%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "50%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "50%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "75%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "75%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "100%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "100%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "Predicted home win probability",
+        "pixels": 13.866666666666667
+      }
+    ]
+  },
+  {
+    "browser": "webkit",
+    "width": 320,
+    "documentWidth": 320,
+    "textSizes": [
+      {
+        "text": "0%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "0%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "25%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "25%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "50%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "50%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "75%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "75%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "100%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "100%",
+        "pixels": 13.76375
+      },
+      {
+        "text": "Predicted home win probability",
+        "pixels": 12.5125
+      }
+    ]
+  },
+  {
+    "browser": "webkit",
+    "width": 390,
+    "documentWidth": 390,
+    "textSizes": [
+      {
+        "text": "0%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "0%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "25%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "25%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "50%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "50%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "75%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "75%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "100%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "100%",
+        "pixels": 17.148541666666667
+      },
+      {
+        "text": "Predicted home win probability",
+        "pixels": 15.589583333333332
+      }
+    ]
+  },
+  {
+    "browser": "webkit",
+    "width": 1440,
+    "documentWidth": 1440,
+    "textSizes": [
+      {
+        "text": "0%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "0%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "25%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "25%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "50%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "50%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "75%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "75%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "100%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "100%",
+        "pixels": 14.933333333333334
+      },
+      {
+        "text": "Predicted home win probability",
+        "pixels": 13.866666666666667
+      }
+    ]
+  }
+]

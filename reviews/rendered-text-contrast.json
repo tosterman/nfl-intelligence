@@ -1,0 +1,461 @@
+{
+  "method": "Chromium at 390 CSS pixels; original vs text-transparent screenshots identify visible glyph positions; contrast uses computed foreground and underlying rendered RGB at those pixels. Small-text threshold 4.5. No broad WCAG certification.",
+  "results": [
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "SEA",
+      "color": "rgb(160, 193, 123)",
+      "opacity": 1,
+      "glyphPixels": 136,
+      "minimumRatio": 7.835,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "LAR",
+      "color": "rgb(145, 180, 244)",
+      "opacity": 1,
+      "glyphPixels": 136,
+      "minimumRatio": 7.62,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "BUF",
+      "color": "rgb(101, 153, 245)",
+      "opacity": 1,
+      "glyphPixels": 142,
+      "minimumRatio": 5.795,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "HOU",
+      "color": "rgb(215, 130, 138)",
+      "opacity": 1,
+      "glyphPixels": 163,
+      "minimumRatio": 5.853,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "NE",
+      "color": "rgb(156, 174, 203)",
+      "opacity": 1,
+      "glyphPixels": 97,
+      "minimumRatio": 7.097,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "DET",
+      "color": "rgb(103, 181, 237)",
+      "opacity": 1,
+      "glyphPixels": 130,
+      "minimumRatio": 7.21,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "JAX",
+      "color": "rgb(114, 196, 190)",
+      "opacity": 1,
+      "glyphPixels": 132,
+      "minimumRatio": 7.819,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "PHI",
+      "color": "rgb(109, 179, 168)",
+      "opacity": 1,
+      "glyphPixels": 127,
+      "minimumRatio": 6.687,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "BAL",
+      "color": "rgb(171, 140, 241)",
+      "opacity": 1,
+      "glyphPixels": 134,
+      "minimumRatio": 6.055,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "DEN",
+      "color": "rgb(239, 162, 106)",
+      "opacity": 1,
+      "glyphPixels": 161,
+      "minimumRatio": 7.618,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "GB",
+      "color": "rgb(214, 192, 101)",
+      "opacity": 1,
+      "glyphPixels": 109,
+      "minimumRatio": 8.614,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "SF",
+      "color": "rgb(223, 150, 151)",
+      "opacity": 1,
+      "glyphPixels": 84,
+      "minimumRatio": 6.894,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "MIN",
+      "color": "rgb(184, 155, 236)",
+      "opacity": 1,
+      "glyphPixels": 148,
+      "minimumRatio": 6.843,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "KC",
+      "color": "rgb(236, 124, 137)",
+      "opacity": 1,
+      "glyphPixels": 94,
+      "minimumRatio": 6.102,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "IND",
+      "color": "rgb(123, 158, 222)",
+      "opacity": 1,
+      "glyphPixels": 145,
+      "minimumRatio": 6.053,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "LAC",
+      "color": "rgb(131, 207, 230)",
+      "opacity": 1,
+      "glyphPixels": 122,
+      "minimumRatio": 8.949,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "CHI",
+      "color": "rgb(230, 161, 109)",
+      "opacity": 1,
+      "glyphPixels": 128,
+      "minimumRatio": 7.426,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "TB",
+      "color": "rgb(223, 139, 129)",
+      "opacity": 1,
+      "glyphPixels": 93,
+      "minimumRatio": 6.339,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "PIT",
+      "color": "rgb(231, 193, 104)",
+      "opacity": 1,
+      "glyphPixels": 103,
+      "minimumRatio": 9.033,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "CIN",
+      "color": "rgb(243, 149, 87)",
+      "opacity": 1,
+      "glyphPixels": 126,
+      "minimumRatio": 7.119,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "ATL",
+      "color": "rgb(216, 102, 115)",
+      "opacity": 1,
+      "glyphPixels": 113,
+      "minimumRatio": 4.883,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "DAL",
+      "color": "rgb(158, 172, 198)",
+      "opacity": 1,
+      "glyphPixels": 133,
+      "minimumRatio": 6.983,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "MIA",
+      "color": "rgb(115, 203, 187)",
+      "opacity": 1,
+      "glyphPixels": 133,
+      "minimumRatio": 8.222,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "NO",
+      "color": "rgb(211, 195, 155)",
+      "opacity": 1,
+      "glyphPixels": 116,
+      "minimumRatio": 8.914,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "NYG",
+      "color": "rgb(124, 157, 221)",
+      "opacity": 1,
+      "glyphPixels": 148,
+      "minimumRatio": 6.003,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "WAS",
+      "color": "rgb(213, 171, 116)",
+      "opacity": 1,
+      "glyphPixels": 165,
+      "minimumRatio": 7.549,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "CAR",
+      "color": "rgb(81, 184, 232)",
+      "opacity": 1,
+      "glyphPixels": 145,
+      "minimumRatio": 7.157,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "AZ",
+      "color": "rgb(218, 103, 126)",
+      "opacity": 1,
+      "glyphPixels": 86,
+      "minimumRatio": 4.967,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "CLE",
+      "color": "rgb(232, 148, 87)",
+      "opacity": 1,
+      "glyphPixels": 121,
+      "minimumRatio": 6.798,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "TEN",
+      "color": "rgb(141, 184, 216)",
+      "opacity": 1,
+      "glyphPixels": 140,
+      "minimumRatio": 7.551,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "LV",
+      "color": "rgb(190, 199, 211)",
+      "opacity": 1,
+      "glyphPixels": 80,
+      "minimumRatio": 9.117,
+      "status": "measured"
+    },
+    {
+      "route": "/ratings",
+      "selector": ".team-mark b",
+      "text": "NYJ",
+      "color": "rgb(121, 181, 156)",
+      "opacity": 1,
+      "glyphPixels": 129,
+      "minimumRatio": 6.864,
+      "status": "measured"
+    },
+    {
+      "route": "/performance",
+      "selector": ".calibration-svg text",
+      "text": "0%",
+      "color": "rgb(184, 193, 205)",
+      "opacity": 1,
+      "glyphPixels": 169,
+      "minimumRatio": 9.591,
+      "status": "measured"
+    },
+    {
+      "route": "/performance",
+      "selector": ".calibration-svg text",
+      "text": "0%",
+      "color": "rgb(184, 193, 205)",
+      "opacity": 1,
+      "glyphPixels": 172,
+      "minimumRatio": 9.591,
+      "status": "measured"
+    },
+    {
+      "route": "/performance",
+      "selector": ".calibration-svg text",
+      "text": "25%",
+      "color": "rgb(184, 193, 205)",
+      "opacity": 1,
+      "glyphPixels": 221,
+      "minimumRatio": 9.591,
+      "status": "measured"
+    },
+    {
+      "route": "/performance",
+      "selector": ".calibration-svg text",
+      "text": "25%",
+      "color": "rgb(184, 193, 205)",
+      "opacity": 1,
+      "glyphPixels": 225,
+      "minimumRatio": 9.591,
+      "status": "measured"
+    },
+    {
+      "route": "/performance",
+      "selector": ".calibration-svg text",
+      "text": "50%",
+      "color": "rgb(184, 193, 205)",
+      "opacity": 1,
+      "glyphPixels": 236,
+      "minimumRatio": 9.591,
+      "status": "measured"
+    },
+    {
+      "route": "/performance",
+      "selector": ".calibration-svg text",
+      "text": "50%",
+      "color": "rgb(184, 193, 205)",
+      "opacity": 1,
+      "glyphPixels": 242,
+      "minimumRatio": 9.591,
+      "status": "measured"
+    },
+    {
+      "route": "/performance",
+      "selector": ".calibration-svg text",
+      "text": "75%",
+      "color": "rgb(184, 193, 205)",
+      "opacity": 1,
+      "glyphPixels": 203,
+      "minimumRatio": 9.591,
+      "status": "measured"
+    },
+    {
+      "route": "/performance",
+      "selector": ".calibration-svg text",
+      "text": "75%",
+      "color": "rgb(184, 193, 205)",
+      "opacity": 1,
+      "glyphPixels": 207,
+      "minimumRatio": 9.591,
+      "status": "measured"
+    },
+    {
+      "route": "/performance",
+      "selector": ".calibration-svg text",
+      "text": "100%",
+      "color": "rgb(184, 193, 205)",
+      "opacity": 1,
+      "glyphPixels": 293,
+      "minimumRatio": 9.591,
+      "status": "measured"
+    },
+    {
+      "route": "/performance",
+      "selector": ".calibration-svg text",
+      "text": "100%",
+      "color": "rgb(184, 193, 205)",
+      "opacity": 1,
+      "glyphPixels": 293,
+      "minimumRatio": 9.591,
+      "status": "measured"
+    },
+    {
+      "route": "/performance",
+      "selector": ".calibration-svg text",
+      "text": "Predicted home win probability",
+      "color": "rgb(184, 193, 205)",
+      "opacity": 1,
+      "glyphPixels": 1261,
+      "minimumRatio": 9.591,
+      "status": "measured"
+    },
+    {
+      "route": "/games/2026_01_SF_LA",
+      "selector": ".detail-hero-meta > span",
+      "text": "Sep 10 \u00b7 Thu 8:35 PM ET",
+      "color": "rgb(178, 192, 208)",
+      "opacity": 1,
+      "glyphPixels": 424,
+      "minimumRatio": 8.854,
+      "status": "measured"
+    },
+    {
+      "route": "/games/2026_01_SF_LA",
+      "selector": ".detail-hero-meta > span",
+      "text": "Melbourne Cricket Ground \u00b7 Neutral venue",
+      "color": "rgb(178, 192, 208)",
+      "opacity": 1,
+      "glyphPixels": 798,
+      "minimumRatio": 8.742,
+      "status": "measured"
+    }
+  ],
+  "recordedAt": "2026-09-10T21:25:05.718906+00:00",
+  "sourceHashes": {
+    "src\\app\\globals.css": "4b01aec99206ad4bbbd51e9c26267cdd62b8664cdee677657dca2b385ae74f0b",
+    "src\\app\\performance\\page.tsx": "5cafb810af4bef489291b3fa2c951397526f63a1b6abcf17359c01ee4cbe2fe2",
+    "scripts\\measure_rendered_contrast.py": "1470785a0e2d52a3f1d894176315bae4e46e0059e6342c9b273c09929e0a8edc"
+  }
+}

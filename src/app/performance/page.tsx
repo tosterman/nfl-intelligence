@@ -167,23 +167,23 @@ export default function Performance() {
             role="img"
             aria-label="Calibration plot; tabulated values follow"
           >
-            <path d="M45 20V250H365" stroke="#536071" fill="none" />
+            <path d="M60 20V250H365" stroke="#536071" fill="none" />
             {[0, 0.25, 0.5, 0.75, 1].map((v) => (
               <g key={v}>
-                <path d={`M45 ${250 - v * 220}H365`} stroke="#2e3743" />
-                <text x="33" y={254 - v * 220} textAnchor="end">
+                <path d={`M60 ${250 - v * 220}H365`} stroke="#2e3743" />
+                <text x="48" y={254 - v * 220} textAnchor="end">
                   {pct(v)}
                 </text>
-                <text x={45 + v * 320} y="271" textAnchor="middle">
+                <text x={60 + v * 305} y="271" textAnchor="middle">
                   {pct(v)}
                 </text>
               </g>
             ))}
-            <path d="M45 250L365 30" stroke="#7f8ea2" strokeDasharray="5 6" />
+            <path d="M60 250L365 30" stroke="#7f8ea2" strokeDasharray="5 6" />
             {m.calibration.map((b, i) => (
               <path
                 key={`interval-${i}`}
-                d={`M${45 + b.predicted * 320} ${250 - b.observedLow95 * 220}V${250 - b.observedHigh95 * 220}`}
+                d={`M${60 + b.predicted * 305} ${250 - b.observedLow95 * 220}V${250 - b.observedHigh95 * 220}`}
                 stroke="#acc8e8"
                 strokeWidth="2"
                 strokeOpacity=".5"
@@ -192,7 +192,7 @@ export default function Performance() {
             {m.calibration.map((b, i) => (
               <circle
                 key={i}
-                cx={45 + b.predicted * 320}
+                cx={60 + b.predicted * 305}
                 cy={250 - b.observed * 220}
                 r={Math.max(5, Math.sqrt(b.count) * 0.6)}
                 fill="#acc8e8"
