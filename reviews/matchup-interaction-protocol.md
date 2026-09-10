@@ -1,0 +1,9 @@
+# Matchup interaction feasibility protocol
+
+Declared before executing this experiment. Test three residual-margin interactions: historical offense pass EPA times opposing allowed pass EPA, rush EPA times opposing allowed rush EPA, and sack rate times opposing allowed sack rate. For each term, subtract the away offense/home defense product from the home offense/away defense product. Identical matchups give zero and swapping teams negates the correction.
+
+Reuse the established 90-day-half-life, weekly-frozen historical feature builder and the exact score-efficiency-v1.2.0 replay on the same local schedule/team-stat bytes. Fit a no-intercept ridge-10 residual correction on all 2024 games, scaling each feature by its training RMS only. Freeze coefficients and scaling for all 2025 games including postseason. No grid, threshold search or model promotion is part of this experiment. Require chronological separation between training outcome availability (kickoff plus 24-hour embargo) and the first evaluation cutoff.
+
+Report every evaluation game, mean absolute margin error, RMSE, coefficients, feature scaling, and paired MAE uncertainty using whole-week resampling (10,000 draws, seed 31025). Keep exact input and code fingerprints. Negative candidate-minus-baseline MAE favors the candidate. A confidence interval crossing zero is inconclusive. Even an improvement does not establish profitability, causal scheme effects, historical vintage availability, or prospective accuracy: both 2024 and 2025 are reused development data.
+
+This is a limited test of numerical rate interactions. It does not replace personnel, play-level scheme, trench matchups, or verified availability data required by the founding document. Production forecasts remain unchanged regardless of this feasibility result pending a separate validation decision.
