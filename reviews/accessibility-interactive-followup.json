@@ -1,0 +1,94 @@
+{
+  "fullReportSha256": "59e282c1a399f244d6686fc6e3562a3258cff72258226792b2e1dab685449267",
+  "fullReport": "accessibility-interactive-followup.json.gz",
+  "checks": [
+    {
+      "route": "/performance",
+      "width": 320,
+      "violations": [],
+      "incompleteRules": [
+        {
+          "id": "color-contrast",
+          "count": 3089,
+          "sampleTargets": [
+            [
+              "text[y=\"254\"]"
+            ],
+            [
+              "text[x=\"60\"]"
+            ],
+            [
+              "text[y=\"199\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/ratings?sort=defense",
+      "width": 320,
+      "violations": [],
+      "incompleteRules": [
+        {
+          "id": "color-contrast",
+          "count": 96,
+          "sampleTargets": [
+            [
+              "tr:nth-child(1) > td:nth-child(2) > .ratings-team > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            [
+              "tr:nth-child(1) > td:nth-child(4)"
+            ],
+            [
+              "tr:nth-child(1) > td:nth-child(5)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/performance",
+      "width": 1440,
+      "violations": [],
+      "incompleteRules": [
+        {
+          "id": "color-contrast",
+          "count": 2882,
+          "sampleTargets": [
+            [
+              "text[y=\"254\"]"
+            ],
+            [
+              "text[x=\"60\"]"
+            ],
+            [
+              "text[y=\"199\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/ratings?sort=defense",
+      "width": 1440,
+      "violations": [],
+      "incompleteRules": [
+        {
+          "id": "color-contrast",
+          "count": 32,
+          "sampleTargets": [
+            [
+              "tr:nth-child(1) > td:nth-child(2) > .ratings-team > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(2) > .ratings-team > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            [
+              "tr:nth-child(3) > td:nth-child(2) > .ratings-team > .team-mark[aria-hidden=\"true\"] > b"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

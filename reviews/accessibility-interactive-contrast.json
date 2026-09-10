@@ -1,0 +1,32 @@
+[
+  {
+    "route": "/ratings?sort=defense",
+    "selector": ".ratings-order a[aria-current]",
+    "colors": {
+      "foreground": "rgb(238, 239, 239)",
+      "background": "rgb(43, 48, 56)",
+      "backgroundImage": "none"
+    },
+    "contrast": 11.517997323072866
+  },
+  {
+    "route": "/performance",
+    "selector": ".diagnostic-band tbody tr:first-child th",
+    "colors": {
+      "foreground": "rgb(238, 239, 239)",
+      "background": "rgb(23, 26, 31)",
+      "backgroundImage": "none"
+    },
+    "contrast": 15.140201690127434
+  },
+  {
+    "route": "/performance",
+    "selector": ".diagnostic-band tbody tr:first-child td",
+    "colors": {
+      "foreground": "rgb(238, 239, 239)",
+      "background": "rgb(23, 26, 31)",
+      "backgroundImage": "none"
+    },
+    "contrast": 15.140201690127434
+  }
+]
