@@ -26,6 +26,12 @@ def main():
     with tempfile.TemporaryDirectory(prefix='nfl-joint-replay-') as folder:
         work=Path(folder);(work/'data').mkdir();(work/'reviews').mkdir()
         shutil.copytree(ROOT/'scripts',work/'scripts',ignore=shutil.ignore_patterns('__pycache__'))
+        for name,record in manifest['codeFiles'].items():
+            if Path(name).name!=name or not name.endswith('.py'):raise ValueError('Invalid source filename')
+            original=checked_bytes((inputs/(name+'.gz')).read_bytes(),record)
+            current=(ROOT/'scripts'/name).read_bytes()
+            if original.replace(b'\r\n',b'\n')!=current.replace(b'\r\n',b'\n'):raise ValueError('Research source changed')
+            (work/'scripts'/name).write_bytes(original)
         for name in ['games.csv','site.json']:
             (work/'data'/name).write_bytes(checked_bytes((inputs/(name+'.gz')).read_bytes(),manifest['files'][name]))
         for name in ['joint-shadow-reference.json','joint-event-audit-protocol.md','joint-settlement-protocol.md']:
