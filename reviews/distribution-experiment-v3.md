@@ -27,3 +27,7 @@ Ten distribution tests pass, including mean recovery, fixed tie mass, normalizat
 An independent code/math reviewer confirmed the conditional-mean derivation and identified remaining acceptance work: endpoint overflow sensitivity, wider numerical support, separate zero-probability outcome counts (the current scoring floor can mask these), paired uncertainty estimates, and prospective evaluation. The current ±100 endpoint bins aggregate overflow but their moments treat that overflow as exactly ±100. No arbitrary epsilon is added to restore numerically lost support. Exponential tilting can change variance, skewness, intervals, win chances and push probabilities. It does not create a joint integer-score model or validate football key numbers.
 
 Full records and source identities: `reviews/distribution-experiment-v3-results.json`. Production engine, forecast ledger, publication receipts and public predictions are unchanged.
+
+## Follow-up uncertainty check
+
+The paired weekly-cluster analysis in `reviews/distribution-paired-comparison.md` now provides descriptive uncertainty intervals for the v3 versus v2 changes. All six intervals include zero. Its limitations include reused development data, candidate selection and unmodeled cross-week dependence; it does not establish equivalence or justify promotion.

@@ -1,0 +1,109 @@
+{
+  "protocol": "Paired, season-stratified weekly cluster bootstrap of saved experiments.\n\nDescriptive development sensitivity only. Weeks are exchangeable within season;\nthis does not model cross-week dependence, selection, or parameter uncertainty.\n",
+  "direction": "v3 minus v2; negative favors v3 for all reported metrics",
+  "inputs": [
+    {
+      "path": "distribution-experiment-v2-results.json",
+      "sha256": "6e27837971d17a047525f0fec64055e5245e3d21e506e04920d533a154b4555d"
+    },
+    {
+      "path": "distribution-experiment-v3-results.json",
+      "sha256": "626d0a387d31718ed66e2cc57ea04bb302aa4cf1c20f4ca04956b7a6d9eaec25"
+    }
+  ],
+  "comparisons": [
+    {
+      "metric": "logScore",
+      "seasons": [
+        2021,
+        2022
+      ],
+      "games": 569,
+      "weeks": 44,
+      "meanDifference": 0.00043428195514898346,
+      "interval95": [
+        -0.0001893760865802312,
+        0.0010695471760204514
+      ],
+      "repetitions": 10000,
+      "seed": 41023
+    },
+    {
+      "metric": "crps",
+      "seasons": [
+        2021,
+        2022
+      ],
+      "games": 569,
+      "weeks": 44,
+      "meanDifference": 0.00264790229806619,
+      "interval95": [
+        -0.0020020856866598026,
+        0.007511691823277707
+      ],
+      "repetitions": 10000,
+      "seed": 41023
+    },
+    {
+      "metric": "outcomeBrier",
+      "seasons": [
+        2021,
+        2022
+      ],
+      "games": 569,
+      "weeks": 44,
+      "meanDifference": 9.589031353164759e-05,
+      "interval95": [
+        -0.00026490807697788463,
+        0.0004657950548358211
+      ],
+      "repetitions": 10000,
+      "seed": 41023
+    },
+    {
+      "metric": "logScore",
+      "seasons": [
+        2023
+      ],
+      "games": 285,
+      "weeks": 22,
+      "meanDifference": 0.0003008867967124109,
+      "interval95": [
+        -0.000436598543091235,
+        0.0010302151140492044
+      ],
+      "repetitions": 10000,
+      "seed": 41023
+    },
+    {
+      "metric": "crps",
+      "seasons": [
+        2023
+      ],
+      "games": 285,
+      "weeks": 22,
+      "meanDifference": 0.0012755589559936339,
+      "interval95": [
+        -0.004212610465398476,
+        0.006663303372261588
+      ],
+      "repetitions": 10000,
+      "seed": 41023
+    },
+    {
+      "metric": "outcomeBrier",
+      "seasons": [
+        2023
+      ],
+      "games": 285,
+      "weeks": 22,
+      "meanDifference": -0.00015663784125098936,
+      "interval95": [
+        -0.0006481011682099878,
+        0.0003142673535029785
+      ],
+      "repetitions": 10000,
+      "seed": 41023
+    }
+  ]
+}
