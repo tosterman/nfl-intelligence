@@ -33,7 +33,7 @@ def make_git_receipt(statuses,sha,artifact,ledger,expected_site,now=None):
     hashes=verified_snapshot_hashes(artifact,ledger,expected_site)
     return {'status':'ready','evidenceType':'github-status-and-public-capture',
             'publishedAt':now.isoformat(),'deploymentUrl':PUBLIC_URL,
-            'deploymentId':'dpl_'+status['target_url'].rsplit('/',1)[1],
+            'providerDeploymentRef':status['target_url'].rsplit('/',1)[1],
             'deploymentInspectorUrl':status['target_url'],'sourceCommit':sha,
             'repository':REPO,'githubStatusId':status['id'],'providerStatusAt':status['created_at'],
             'snapshotHashes':hashes,'artifactSha256':hashlib.sha256(json.dumps(artifact,sort_keys=True,separators=(',',':')).encode()).hexdigest()}
@@ -73,7 +73,7 @@ def main():
     (recovery/'git-publication.json').write_text(json.dumps({'sourceCommit':sha,'repository':REPO,'publicAlias':PUBLIC_URL,'expectedArtifactFile':'data/site.json','canonicalLedgerFile':'data/ledger.json'},indent=2)+'\n')
     receipt=capture(sha,expected,ledger)
     path=ROOT/'data/publications.json';receipts=json.loads(path.read_text())
-    if not any(r.get('deploymentId')==receipt['deploymentId'] for r in receipts):
+    if not any(r.get('evidenceType')==receipt['evidenceType'] and r.get('sourceCommit')==receipt['sourceCommit'] and r.get('githubStatusId')==receipt['githubStatusId'] for r in receipts):
         receipts.append(receipt);path.write_text(json.dumps(receipts,indent=2)+'\n')
     print('Verified native Git publication for '+sha+'; '+str(len(receipt['snapshotHashes']))+' snapshots')
 

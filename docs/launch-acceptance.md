@@ -26,7 +26,7 @@ The exact-release verifier accommodates JavaScript integral-number serialization
 | 14 Weather | Real NWS kickoff-hour context for four mapped US venues; issue/retrieval timestamps, stale/unknown states, compressed source archives | Broader venue/international coverage and validated numerical effects |
 | 15 Market intelligence | Closing-line benchmark separate from model | Price history, movement, CLV and executable-price evidence |
 | 16 Time-aware data | Source hashes/times, weekly cutoff, code/configuration identity; missing kickoff withheld | Historical vintage data and additional feed availability timestamps |
-| 17 Pipeline | Validated acquisition, fitted artifact, ledger, CI, deployment and receipt workflow | Successful unattended refresh/deploy/archive run |
+| 17 Pipeline | Validated acquisition, fitted artifact, ledger, CI, deployment and receipt workflow | Sustained scheduled-run reliability and failure recovery drills |
 | 18 Simulation | Production normal approximation; separate discrete-distribution experiments with settlement constraints and prior-only tie estimates | Reconcile distribution moments, validate tails/key numbers and joint scores before promotion |
 | 19–20 Explanation and specific why | Contributions reconcile to margin; historical profiles provide context | Personnel/scheme explanations require missing inputs |
 | 21 What changed | Expandable generation revisions; score/margin/total/probability deltas; model, configuration and source identity changes distinguished | Verified public history and attribution to specific football inputs |
@@ -50,7 +50,7 @@ score-efficiency-v1.2.0: 570 retrospective development games, 569 decisive and o
 ## External launch gates
 
 1. Public deployment and exact-artifact capture are verified. Continue production monitoring and broader device/performance verification.
-2. VERCEL_ORG_ID and VERCEL_PROJECT_ID repository secrets are configured. VERCEL_TOKEN remains missing: the authenticated CLI OAuth application returned HTTP 403, "Cannot create tokens for this app," from the documented project-scoped token endpoint. A separately issued deployment token is required before demonstrating unattended refresh/deploy/archive, recovery and failure alerting. Set branch protection with an explicit publishing-writer policy.
+2. The connected Git integration now supports the refresh/deploy/archive workflow without a separate Vercel token. The complete manually dispatched workflow succeeded (34504966362), including GitHub-token push, provider deployment, exact public capture, recovery artifact and receipt push. Sustained clock-triggered reliability, failure recovery drills and branch protection with an explicit publishing-writer policy remain.
 3. Analytics and Speed Insights project identifiers are present and consented SDK loading works on production. Verify dashboard event receipt, absent declined events and production performance.
 4. Confirm operator identity, private contact channel and final domain. The authenticated team API reports Hobby; a hosting plan permitting commercial use is required before monetization. No recurring service was purchased.
 5. Obtain Google publisher approval and applicable certified consent configuration before enabling ad tags/ads.txt. AdSense/Ad Manager monetizes publisher inventory; Google Ads buys advertising. See monetization.md.
