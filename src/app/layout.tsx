@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ||
-      "https://nfl-intelligence-khnum.vercel.app",
+      "https://nfl-intelligence-one.vercel.app",
   ),
   title: {
     default: "NFL Intelligence — Know the game",

@@ -11,3 +11,5 @@ data/raw/
 *.tsbuildinfo
 founding.docx
 .tools/
+.vercel
+.env*

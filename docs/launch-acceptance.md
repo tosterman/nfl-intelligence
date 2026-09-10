@@ -1,12 +1,14 @@
 # Launch acceptance — 2026-09-10
 
-Verdict: implemented research edition; public operational and commercial launch not accepted. Source: https://github.com/tosterman/nfl-intelligence. Vercel deployment creation succeeded, but its URLs require login and the connected account returns 404 for deployment status. No READY state, public rendering, analytics ingestion or prospective publication receipt is claimed.
+Verdict: publicly deployed research edition; full operational and commercial launch not accepted. Source: https://github.com/tosterman/nfl-intelligence. Live: https://nfl-intelligence-one.vercel.app. Vercel CLI login succeeded on September 10; production is public while previews retain authentication.
 
 ## Verified release evidence
 
-Code commit: 7c0474b5764656b4996ffe38522636203e262efb. [GitHub CI](https://github.com/tosterman/nfl-intelligence/actions/runs/34490239007) passed all 37 Python and six TypeScript tests, production build and production dependency audit. Local production build also passed; audit reported zero vulnerabilities. A final local browser pass fixed and rechecked an SVG title hydration mismatch on the calibration chart. No hosted render or load-test result is implied.
+Application baseline: e99b1c3ce22e2095dcada6ebff31d9937e939080. [GitHub CI](https://github.com/tosterman/nfl-intelligence/actions/runs/34493114456) passed 59 Python and 20 TypeScript tests, production build and production dependency audit. This release corrects canonical URLs to the actual production alias and excludes private/source-only files from CLI uploads.
 
-Latest production submission: dpl_J1BZvohQYVUqJy8eG4rmHXKtVVZk, created as INITIALIZING. [Vercel inspector](https://vercel.com/khnum/nfl-intelligence/J1BZvohQYVUqJy8eG4rmHXKtVVZk). Alias https://nfl-intelligence-khnum.vercel.app redirected to Vercel login on anonymous browser check. Deployment lookup through the connected team returned 404. The 42-file submitted release contains the verified code and current artifact. Public receipt list remains empty.
+Production deployment dpl_BsD9A7JTgiXZnkJRHoSpWc2ZFrc6 is verified READY through the authenticated API. [Vercel inspector](https://vercel.com/khnum/nfl-intelligence/BsD9A7JTgiXZnkJRHoSpWc2ZFrc6). Its unique hostname is https://nfl-intelligence-e6i3sbfjp-khnum.vercel.app. Anonymous HTTP checks returned 200 for the slate, performance, matchup, status, robots, sitemap, social image and both analytics SDK scripts. The live browser rendered the slate and matchup; consent loaded analytics and Speed Insights scripts. Dashboard event ingestion is not yet verified.
+
+The first publication receipt was captured at 2026-09-10T16:07:16.978840+00:00 after comparing the public deployment's forecast artifact with the intended local release and validating all 105 retained snapshot hashes. This proves capture at that time, not publication of earlier revisions on their generation dates. It does not retroactively qualify the completed New England game.
 
 The exact-release verifier accommodates JavaScript integral-number serialization while retaining canonical local snapshot hashes. Recovery bundles are retained for 90 days in the refresh workflow; concurrent archive pushes retry without force and fail closed on merge conflict. These are tested code paths, not a demonstrated successful production refresh.
 
@@ -24,13 +26,13 @@ The exact-release verifier accommodates JavaScript integral-number serialization
 | 14 Weather | Real NWS kickoff-hour context for four mapped US venues; issue/retrieval timestamps, stale/unknown states, compressed source archives | Broader venue/international coverage and validated numerical effects |
 | 15 Market intelligence | Closing-line benchmark separate from model | Price history, movement, CLV and executable-price evidence |
 | 16 Time-aware data | Source hashes/times, weekly cutoff, code/configuration identity; missing kickoff withheld | Historical vintage data and additional feed availability timestamps |
-| 17 Pipeline | Validated acquisition, fitted artifact, ledger, CI, deployment and receipt workflow | Authenticated production deployment and successful unattended run |
+| 17 Pipeline | Validated acquisition, fitted artifact, ledger, CI, deployment and receipt workflow | Successful unattended refresh/deploy/archive run |
 | 18 Simulation | Production normal approximation; separate discrete-distribution experiments with settlement constraints and prior-only tie estimates | Reconcile distribution moments, validate tails/key numbers and joint scores before promotion |
 | 19–20 Explanation and specific why | Contributions reconcile to margin; historical profiles provide context | Personnel/scheme explanations require missing inputs |
 | 21 What changed | Expandable generation revisions; score/margin/total/probability deltas; model, configuration and source identity changes distinguished | Verified public history and attribution to specific football inputs |
 | 22–24 Homepage, cards, detail | Slate, filters, expected/final distinctions, contextual navigation, analysis and evidence | Continued usability tests with actual fans/editorial users |
 | 25–29 Design, dark mode, visual language, motion, mobile | Original visual system, self-hosted licensed fonts, reduced-motion treatment, responsive layouts | Physical-device and broader assistive-technology evaluation |
-| 30 Accountability | All-game and REG/POST metrics, pushes/ties/no-picks, matched spread/total market benchmarks; prospective grades require receipts | Genuine public pregame predictions and results |
+| 30 Accountability | All-game and REG/POST metrics, pushes/ties/no-picks, matched spread/total market benchmarks; prospective grades require receipts | Prospective results after the first verified public pregame capture |
 | 31 Calibration | Brier/log loss, bins with counts and Wilson 95% intervals, interval coverage | Prospective calibration |
 
 ## Review reconciliation
@@ -43,14 +45,14 @@ Root browser checks used local IAB. Desktop screenshots inspected slate, game, r
 
 ## Model result
 
-score-efficiency-v1.2.0: 570 retrospective development games, 569 decisive and one tie; 361 correct winners (63.44%), Brier 0.2204, log loss 0.6309, margin MAE 10.159, total MAE 10.251 and 80% interval coverage 81.23%. Closing-market margin MAE is 9.687 on the same games. Exploratory spread selections: 126 wins, 137 losses, two pushes, 305 no-picks. This does not demonstrate profitable edge. The 2024–25 sample is no longer an untouched holdout. The live record remains empty pending public pregame evidence.
+score-efficiency-v1.2.0: 570 retrospective development games, 569 decisive and one tie; 361 correct winners (63.44%), Brier 0.2204, log loss 0.6309, margin MAE 10.159, total MAE 10.251 and 80% interval coverage 81.23%. Closing-market margin MAE is 9.687 on the same games. Exploratory spread selections: 126 wins, 137 losses, two pushes, 305 no-picks. This does not demonstrate profitable edge. The 2024–25 sample is no longer an untouched holdout. The live graded record remains empty; the first verified public pregame capture now exists, with results still pending.
 
 ## External launch gates
 
-1. Authenticate the correct Vercel project/account; verify READY and anonymously accessible pages, headers, artifact and status endpoint.
-2. Configure VERCEL_TOKEN, VERCEL_ORG_ID and VERCEL_PROJECT_ID repository secrets; demonstrate refresh/deploy/archive, recovery and failure alerting. Set branch protection with an explicit publishing-writer policy.
-3. Enable analytics and Speed Insights; verify consented event receipt, absent declined events and production performance.
-4. Confirm operator identity, private contact channel, final domain and hosting plan permitting commercial use. No recurring service was purchased.
+1. Public deployment and exact-artifact capture are verified. Continue production monitoring and broader device/performance verification.
+2. VERCEL_ORG_ID and VERCEL_PROJECT_ID repository secrets are configured. VERCEL_TOKEN remains missing: the authenticated CLI OAuth application returned HTTP 403, "Cannot create tokens for this app," from the documented project-scoped token endpoint. A separately issued deployment token is required before demonstrating unattended refresh/deploy/archive, recovery and failure alerting. Set branch protection with an explicit publishing-writer policy.
+3. Analytics and Speed Insights project identifiers are present and consented SDK loading works on production. Verify dashboard event receipt, absent declined events and production performance.
+4. Confirm operator identity, private contact channel and final domain. The authenticated team API reports Hobby; a hosting plan permitting commercial use is required before monetization. No recurring service was purchased.
 5. Obtain Google publisher approval and applicable certified consent configuration before enabling ad tags/ads.txt. AdSense/Ad Manager monetizes publisher inventory; Google Ads buys advertising. See monetization.md.
 6. Add the missing inputs and demonstrate their benefit before presenting this as complete football intelligence.
 

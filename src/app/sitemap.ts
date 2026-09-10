@@ -3,7 +3,7 @@ import { site } from "@/lib/data";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base =
     process.env.NEXT_PUBLIC_SITE_URL ||
-    "https://nfl-intelligence-khnum.vercel.app";
+    "https://nfl-intelligence-one.vercel.app";
   return [
     "",
     "/ratings",
