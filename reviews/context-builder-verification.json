@@ -1,0 +1,26 @@
+{
+  "stagingDirectory": "C:\\Users\\tyler\\Desktop\\nfl\\release-recovery\\context-builder-gb6700zj",
+  "diagnosticOnly": true,
+  "initialNewSnapshots": 15,
+  "unchangedRerunNewSnapshots": 0,
+  "syntheticVenueChangeNewSnapshots": 1,
+  "scoresUnchanged": true,
+  "originalLedgerPreserved": true,
+  "workspaceDataUnchanged": true,
+  "generatedAt": "2026-09-10T20:51:58.138285+00:00",
+  "sourceHash": "2ba81cf5c1fb3f9213ee01fc62e2e0365054403472cdd3367fd2c088b16a424f",
+  "workspaceHashes": {
+    "ledger.json": "e75e1ce399f78ddb403c7f1297deb9575ec41206541e82ee46460238feed18c2",
+    "publications.json": "d31a17ecd0a20ca4dc32ba6e14a0b28b76492aeae14a9759ccd66b69f2ff6981",
+    "site.json": "ecb5147030dd54c55646a13dd1f0cf920c8ef30419fa259132c7f985edbff067",
+    "source.json": "1c5b1ffa862200d57501f59dba5a50c9ebe2df28bc9b2c3b14a38e48b5b5e244",
+    "games.csv": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f"
+  },
+  "retainedInitialFiles": {
+    "games.csv": "2ba81cf5c1fb3f9213ee01fc62e2e0365054403472cdd3367fd2c088b16a424f",
+    "source.json": "f628cd7ef664200320bf32fb944451edae1aab619536fe8682d4662af8450dcd",
+    "site.json": "ca8c993caa78210cec4816a38af2a0ca8e31c382b76ce7a6a4f94b14f89159af",
+    "ledger.json": "9e8c6aec1af006681623ab5c8d8735599362ecce9e372921b1900864b9ad6bcb"
+  },
+  "verificationCodeHash": "dc688f32b4a5eadf8ab89788db543a89db0fbd19a691329713ea8dac47a2e41f"
+}
