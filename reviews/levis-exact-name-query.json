@@ -1,0 +1,9 @@
+{
+  "retrievedAt": "2026-09-10T21:13:04.639764+00:00",
+  "mapDataSource": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3B%28nwr%5B%22leisure%22%3D%22stadium%22%5D%5B%22name%22%3D%22Levi%27s+Stadium%22%5D%3B%29%3Bout+tags+bb%3B",
+  "mapDataHash": "e243ac361a5512d5fd9a47a3cc8832acfe42cbe3fe60d91103e43bdd9acea493",
+  "candidates": {},
+  "rejected": {
+    "Levi's Stadium": "Expected exactly one named stadium object"
+  }
+}

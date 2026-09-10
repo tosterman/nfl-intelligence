@@ -1,7 +1,7 @@
 import json,sys,unittest,gzip,hashlib,copy
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from venue_evidence import validate_venue
+from venue_evidence import validate_venue, stadium_name
 ROOT=Path(__file__).resolve().parents[1]
 
 class VenueEvidenceTests(unittest.TestCase):
@@ -17,7 +17,7 @@ class VenueEvidenceTests(unittest.TestCase):
                     self.assertEqual(payload['properties']['relativeLocation']['properties']['state'],v['pointState'])
                     self.assertEqual(payload['geometry']['type'],'Point')
                     self.assertEqual(payload['geometry']['coordinates'],[round(v['longitude'],4),round(v['latitude'],4)])
-            self.assertEqual(v['mapElement']['tags']['name'],name)
+            self.assertEqual(stadium_name(v['mapElement']['tags']['name']),stadium_name(name))
 
     def test_osm_wrong_address_or_shifted_center_is_rejected(self):
         original=json.loads((ROOT/'data/weather-osm-venues.json').read_text())['Gillette Stadium']
@@ -42,3 +42,8 @@ class VenueEvidenceTests(unittest.TestCase):
         venue=next(v for v in json.loads((ROOT/'data/weather-venues.json').read_text()).values() if v.get('status')=='confirmed-address-geocode')
         with self.assertRaisesRegex(ValueError,'coordinates'):validate_venue(venue|{'latitude':venue['latitude']+.1})
         with self.assertRaises(ValueError):validate_venue(venue|{'geocodeMatches':venue['geocodeMatches']*2})
+
+    def test_typographic_apostrophe_does_not_enable_fuzzy_matching(self):
+        self.assertEqual(stadium_name("Levi\u2019s Stadium"), "Levi's Stadium")
+        self.assertNotEqual(stadium_name("Levis Stadium"), "Levi's Stadium")
+        self.assertNotEqual(stadium_name("Old Levi's Stadium"), "Levi's Stadium")

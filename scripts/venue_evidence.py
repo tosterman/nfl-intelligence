@@ -4,6 +4,11 @@ import math,re
 ABBREVIATIONS={'STREET':'ST','AVENUE':'AVE','DRIVE':'DR','PLACE':'PL','CIRCLE':'CIR',
  'HIGHWAY':'HWY','ROAD':'RD','NORTH':'N','SOUTH':'S','EAST':'E','WEST':'W'}
 
+def stadium_name(value):
+    # Typographic apostrophe equivalence only; not fuzzy venue identity matching.
+    return value.replace('\u2019', "'")
+
+
 def words(value):
     return [ABBREVIATIONS.get(w,w) for w in re.findall(r'[A-Z0-9]+',value.upper())]
 

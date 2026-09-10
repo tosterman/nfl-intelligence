@@ -4,7 +4,7 @@ from datetime import datetime,timezone
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request,urlopen
-from venue_evidence import validate_venue
+from venue_evidence import validate_venue, stadium_name
 
 ROOT=Path(__file__).resolve().parents[1]
 AGENT='NFLIntelligence/1.0 (https://github.com/tosterman/nfl-intelligence)'
@@ -21,11 +21,12 @@ def fetch(url):
 def main(names):
     official=json.loads((ROOT/'data/weather-venues.json').read_text())
     if not names or len(set(names))!=len(names) or any(n not in official for n in names):raise ValueError('Select unique venues with recorded official addresses')
-    query='[out:json][timeout:25];('+''.join('nwr["leisure"="stadium"]["name"='+json.dumps(n)+'];' for n in names)+');out tags bb;'
+    variants = sorted({variant for name in names for variant in (name, name.replace("'", '\u2019'))})
+    query='[out:json][timeout:25];('+''.join('nwr["leisure"="stadium"]["name"='+json.dumps(n)+'];' for n in variants)+');out tags bb;'
     url='https://overpass-api.de/api/interpreter?'+urlencode({'data':query})
     response,digest=fetch(url);at=datetime.now(timezone.utc).isoformat();candidates={};rejected={}
     for name in names:
-        matches=[e for e in response['elements'] if e.get('tags',{}).get('name')==name]
+        matches=[e for e in response['elements'] if stadium_name(e.get('tags',{}).get('name',''))==stadium_name(name)]
         if len(matches)!=1:rejected[name]='Expected exactly one named stadium object';continue
         e=matches[0];bounds=e.get('bounds')
         if not bounds:rejected[name]='Stadium bounds unavailable';continue

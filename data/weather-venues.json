@@ -428,5 +428,17 @@
     "longitude": -82.505423156281,
     "status": "confirmed-address-geocode",
     "matchedAddress": "4201 N DALE MABRY HWY, TAMPA, FL, 33607"
+  },
+  "Levi's Stadium": {
+    "address": "4900 Marie P. DeBartolo Way, Santa Clara, CA 95054",
+    "addressSource": "https://levisstadium.com/contact-us/",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=4900+Marie+P.+DeBartolo+Way%2C+Santa+Clara%2C+CA+95054&benchmark=Public_AR_Current&format=json",
+    "geocodeHash": "1b1776c13646cd2aa93f6df547bb6ec7b9b3cb879fc43cd2624b38b347f72195",
+    "retrievedAt": "2026-09-10T21:12:58.403040+00:00",
+    "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+    "geocodeBenchmark": "Public_AR_Current",
+    "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+    "geocodeMatches": [],
+    "status": "unavailable"
   }
 }
