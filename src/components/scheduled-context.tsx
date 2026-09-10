@@ -54,6 +54,7 @@ export function ScheduledContext({
         <div>
           <a href="#kickoff-weather">Weather</a>
           <a href="#personnel-reports">Personnel</a>
+          <a href="#schedule-context">Schedule</a>
         </div>
         <p className="fine">
           These feeds are checked separately from the model. Missing reports do

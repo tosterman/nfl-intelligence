@@ -1,0 +1,7 @@
+# Schedule spacing context
+
+Matchup pages now show each team's preceding same-season game and elapsed days between kickoff instants when that preceding game has a recorded final result and lies strictly beyond the 24-hour verification window. This descriptive context does not alter predictions or reverse the rejected rest-adjustment experiment.
+
+Selection considers the preceding scheduled game, not merely the most recent completed game. An unfinished intervening game blocks the value rather than creating an exaggerated gap. Missing earlier kickoff timing, duplicated identity/instant, missing scores, absent same-season history and the 24-hour boundary remain unknown. The calculation does not claim days off, recovery quality, travel effects or a preserved pregame data vintage. Final-game pages describe the current corrected schedule, with that limitation visible.
+
+Four focused tests cover exact elapsed-time arithmetic, offseason exclusion, the verification boundary, unfinished and missing-time predecessors, duplicate identities, equivalent instants with different UTC offsets, and rendered unknown/available context. Independent review found the offset-equivalence ambiguity gap; it was corrected and a regression test added. Seven combined spacing/pending-context tests pass. Browser review of PIT/NE Week 2 confirmed the Schedule navigation anchor and distinct unknown reasons for the unfinished Pittsburgh game and New England's game still within the verification window. Available numerical context was fixture-tested.

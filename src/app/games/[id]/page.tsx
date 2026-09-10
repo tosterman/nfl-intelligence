@@ -12,6 +12,7 @@ import { fairMoneyline } from "@/lib/math";
 import { TeamMark } from "@/components/brand";
 import { RevisionHistory } from "@/components/revision-history";
 import { WeatherContext } from "@/components/weather-context";
+import { ScheduleContext } from "@/components/schedule-context";
 import { PersonnelPanel } from "@/components/personnel-panel";
 import {
   ScheduledContext,
@@ -150,6 +151,7 @@ export default async function GamePage({
               <a href="#market-prices">Sportsbook comparison</a>
               <a href="#personnel-reports">Personnel</a>
               <a href="#market-history">Price history</a>
+              <a href="#schedule-context">Schedule</a>
             </div>
           </nav>
           <div className="kpi-grid">
@@ -438,6 +440,7 @@ export default async function GamePage({
           />
         </>
       )}
+      <ScheduleContext game={g} games={site.games} />
     </div>
   );
 }
