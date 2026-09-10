@@ -3,6 +3,7 @@ import gzip,hashlib,json,math,urllib.request
 from datetime import datetime,timezone,timedelta
 from pathlib import Path
 from urllib.parse import urlparse
+from venue_evidence import validate_venue
 
 ROOT=Path(__file__).resolve().parents[1]
 USER_AGENT='NFLIntelligence (https://github.com/tosterman/nfl-intelligence)'
@@ -56,6 +57,7 @@ def acquire_game(game,venues,now,fetch=read_nws):
 
 def main():
     site=json.loads((ROOT/'data/site.json').read_text());venues=json.loads((ROOT/'data/weather-venues.json').read_text())
+    for venue in venues.values():validate_venue(venue)
     now=datetime.now(timezone.utc);games={};path=ROOT/'data/weather-ledger.json'
     ledger=json.loads(path.read_text()) if path.exists() else []
     hashes={s['hash'] for s in ledger}

@@ -1,0 +1,68 @@
+[
+  {
+    "venue": "Gillette Stadium",
+    "address": "1 Patriot Place, Foxborough, MA 02035",
+    "addressSource": "https://www.gillettestadium.com/a-to-z-guide/",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1+Patriot+Place%2C+Foxborough%2C+MA+02035&benchmark=Public_AR_Current&format=json",
+    "retrievedAt": "2026-09-10T18:19:29.014922+00:00",
+    "geocodeMatches": [
+      {
+        "tigerLine": {
+          "side": "R",
+          "tigerLineId": "87261631"
+        },
+        "coordinates": {
+          "x": -71.251947268622,
+          "y": 42.094503312636
+        },
+        "addressComponents": {
+          "zip": "02035",
+          "streetName": "PATRIOT",
+          "preType": "",
+          "city": "FOXBOROUGH",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "1",
+          "state": "MA",
+          "suffixType": "CIR",
+          "toAddress": "99",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "1 PATRIOT CIR, FOXBOROUGH, MA, 02035"
+      }
+    ]
+  },
+  {
+    "venue": "Paycor Stadium",
+    "address": "1 Paycor Stadium, Cincinnati, OH 45202",
+    "addressSource": "https://www.bengals.com/fans/fanguide",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1+Paycor+Stadium%2C+Cincinnati%2C+OH+45202&benchmark=Public_AR_Current&format=json",
+    "retrievedAt": "2026-09-10T18:19:29.007465+00:00",
+    "geocodeMatches": []
+  },
+  {
+    "venue": "Hard Rock Stadium",
+    "address": "347 Don Shula Drive, Miami Gardens, FL 33056",
+    "addressSource": "https://www.miamidolphins.com/legal/terms-conditions",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=347+Don+Shula+Drive%2C+Miami+Gardens%2C+FL+33056&benchmark=Public_AR_Current&format=json",
+    "retrievedAt": "2026-09-10T18:19:29.015278+00:00",
+    "geocodeMatches": []
+  },
+  {
+    "venue": "Huntington Bank Field",
+    "address": "100 Alfred Lerner Way, Cleveland, OH 44114",
+    "addressSource": "https://huntingtonbankfield.com/contact/",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=100+Alfred+Lerner+Way%2C+Cleveland%2C+OH+44114&benchmark=Public_AR_Current&format=json",
+    "retrievedAt": "2026-09-10T18:20:07.563665+00:00",
+    "geocodeMatches": []
+  },
+  {
+    "venue": "Northwest Stadium",
+    "address": "1600 Ring Road, Landover, MD 20785",
+    "addressSource": "https://www.commanders.com/stadium/stadium-guide",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1600+Ring+Road%2C+Landover%2C+MD+20785&benchmark=Public_AR_Current&format=json",
+    "retrievedAt": "2026-09-10T18:20:07.563792+00:00",
+    "geocodeMatches": []
+  }
+]
