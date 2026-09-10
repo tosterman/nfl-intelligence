@@ -1,0 +1,2386 @@
+[
+  {
+    "route": "/?week=1",
+    "width": 320,
+    "violations": [],
+    "incompleteRules": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              ".game-card:nth-child(1) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(1) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(2) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(2) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(3) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(3) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(4) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(4) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(5) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(5) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(6) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(6) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(7) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(7) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(8) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(8) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(9) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(9) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(10) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(10) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(11) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(11) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(12) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(12) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(13) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(13) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(14) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(14) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(15) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(15) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(16) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(16) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "/performance",
+    "width": 320,
+    "violations": [],
+    "incompleteRules": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              "text[y=\"254\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "16.5pt (22px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[x=\"60\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "16.5pt (22px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[y=\"199\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "16.5pt (22px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[x=\"136.25\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "16.5pt (22px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[y=\"144\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "16.5pt (22px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[x=\"212.5\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "16.5pt (22px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[y=\"89\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "16.5pt (22px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[x=\"288.75\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "16.5pt (22px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[y=\"34\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "16.5pt (22px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[x=\"365\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "16.5pt (22px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".axis-label"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "15.0pt (20px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "th[scope=\"col\"]:nth-child(6)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "6.8pt (9px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(1) > td:nth-child(6)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "tr:nth-child(2) > td:nth-child(6)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it's partially obscured by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "/teams/ne",
+    "width": 320,
+    "violations": [],
+    "incompleteRules": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              ".large > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "14.3pt (19px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".trust-banner > .team-mark > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "/teams/sf",
+    "width": 320,
+    "violations": [],
+    "incompleteRules": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              ".large > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "14.3pt (19px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".trust-banner > .team-mark > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "/?week=1",
+    "width": 1440,
+    "violations": [],
+    "incompleteRules": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              ".week-picker > div > span"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "8.3pt (11px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".left"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "52.5pt (70px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "3:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "div:nth-child(1) > .large.team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "18.0pt (24px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "3:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "div:nth-child(3) > .large.team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "18.0pt (24px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "3:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".slate-summary > div:nth-child(3) > span"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "8.3pt (11px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "a[href$=\"performance\"] > span"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.0pt (12px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "a[href$=\"performance\"] > span > small"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "8.3pt (11px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(1) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(1) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(2) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(2) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(3) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(3) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(4) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(4) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(5) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(5) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(6) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(6) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(7) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(7) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(8) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(8) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(9) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(9) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(10) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(10) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(11) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(11) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(12) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(12) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(13) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(13) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(14) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(14) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(15) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(15) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(16) > .card-teams > .team-row:nth-child(1) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".game-card:nth-child(16) > .card-teams > .team-row:nth-child(2) > .team-mark[aria-hidden=\"true\"] > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "/performance",
+    "width": 1440,
+    "violations": [],
+    "incompleteRules": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              "text[y=\"254\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[x=\"60\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[y=\"199\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[x=\"136.25\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[y=\"144\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[x=\"212.5\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[y=\"89\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[x=\"288.75\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because it is overlapped by another element",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": "bgOverlap",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[y=\"34\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "text[x=\"365\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".axis-label"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "/teams/ne",
+    "width": 1440,
+    "violations": [],
+    "incompleteRules": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              ".large > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "18.0pt (24px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "3:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".trust-banner > .team-mark > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "route": "/teams/sf",
+    "width": 1440,
+    "violations": [],
+    "incompleteRules": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              ".large > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "18.0pt (24px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "3:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".trust-banner > .team-mark > b"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "checks": [
+              {
+                "message": "Element's background color could not be determined because element contains an image node",
+                "data": {
+                  "fgColor": null,
+                  "bgColor": null,
+                  "contrastRatio": 0,
+                  "fontSize": "9.8pt (13px)",
+                  "fontWeight": "normal",
+                  "messageKey": "imgNode",
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null,
+                  "colorParse": null
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
