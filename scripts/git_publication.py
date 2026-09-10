@@ -19,11 +19,14 @@ def verified_status(statuses,now):
     creator=latest.get('creator',{})
     if creator.get('id')!=35613825 or creator.get('login')!='vercel[bot]':
         raise ValueError('Untrusted Vercel status author')
+    if latest['state'] in ['failure','error']:
+        if latest.get('target_url')=='https://vercel.com/khnum?upgradeToPro=build-rate-limit':
+            raise ValueError('Native deployment blocked by Vercel build rate limit')
+        raise ValueError('Native deployment failed')
     if not re.fullmatch(r'https://vercel\.com/khnum/nfl-intelligence/[A-Za-z0-9]+',latest.get('target_url','')):
         raise ValueError('Unexpected Vercel project status URL')
     created=datetime.fromisoformat(latest['created_at'].replace('Z','+00:00'))
     if created.tzinfo is None or created>now:raise ValueError('Invalid provider status time')
-    if latest['state'] in ['failure','error']:raise ValueError('Native deployment failed')
     return latest if latest['state']=='success' else None
 
 def make_git_receipt(statuses,sha,artifact,ledger,expected_site,now=None):

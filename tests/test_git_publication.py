@@ -9,6 +9,11 @@ import git_publication
 NOW=datetime(2026,9,10,17,tzinfo=timezone.utc)
 def status():return {'id':4,'context':'Vercel','state':'success','creator':{'id':35613825,'login':'vercel[bot]'},'target_url':'https://vercel.com/khnum/nfl-intelligence/abc123','created_at':'2026-09-10T16:45:08Z'}
 class GitPublicationTests(unittest.TestCase):
+ def test_provider_limit_is_classified_without_accepting_non_deployment_url(self):
+  limited={**status(),'state':'failure','target_url':'https://vercel.com/khnum?upgradeToPro=build-rate-limit'}
+  with self.assertRaisesRegex(ValueError,'build rate limit'):verified_status([limited],NOW)
+  with self.assertRaisesRegex(ValueError,'Untrusted'):verified_status([{**limited,'creator':{'id':1,'login':'vercel[bot]'}}],NOW)
+  with self.assertRaisesRegex(ValueError,'Unexpected'):verified_status([{**limited,'state':'success'}],NOW)
  def test_only_trusted_latest_success_with_expected_project(self):
   self.assertEqual(verified_status([status()],NOW)['id'],4)
   pending={**status(),'id':5,'state':'pending'}
