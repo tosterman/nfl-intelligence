@@ -1982,3 +1982,11 @@ summary {
   color: var(--text);
   font-weight: 500;
 }
+
+.market-selector {display:flex;flex-wrap:wrap;align-items:center;gap:12px;color:var(--muted);font-size:12px;margin:20px 0;}
+.market-selector select {max-width:100%;background:#171b21;color:var(--text);border:1px solid #424a56;border-radius:6px;padding:10px;font:inherit;}
+.quote-time {display:block;font-size:10px;line-height:1.7;color:#a7afb9;white-space:normal;}
+.market-panel .table-scroll {overflow-x:auto;}
+.market-panel table {min-width:300px;}
+.market-differences {border-top:1px solid #303640;margin-top:18px;padding-top:18px;}
+.market-differences h3 {font-size:15px;margin-bottom:12px;}

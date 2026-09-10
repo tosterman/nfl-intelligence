@@ -18,7 +18,7 @@ The exact-release verifier accommodates JavaScript integral-number serialization
 |---|---|---|
 | 1–4 Mission, promise, philosophy, constitution | Independent numerical forecasts; visible limitations, uncertainty and methodology | Sustained audience usefulness and prospective accuracy |
 | 5 Core outputs | Expected points, margin, total, conditional win probability, fair moneyline and outcome intervals | Empirical discrete score/tie and key-number distributions |
-| 6–8 Market, betting language, no edge | Tested no-vig, quote freshness and settlement contracts; unavailable differs from no edge | Licensed timestamped quotes and validated edge policy |
+| 6–8 Market, betting language, no edge | Real timestamped The Odds API snapshots; no-vig comparisons, expiry and missing-market handling; no unvalidated edge claim | Durable quote history, higher-frequency capacity and validated edge policy |
 | 9–10 Football model and recency | Opponent-adjusted score model plus EPA, CPOE, sack, turnover and pass-share regression; symmetric neutral matchups | Improvement validated on new data, not reused development results |
 | 11 Personnel | Explicit unavailable coverage state | Current availability, starter changes, snap-weighted player value, rights and timestamps |
 | 12 Matchup | Opposing historical efficiency profiles and additive contributions | Nonlinear scheme, trench and player interactions |
@@ -63,3 +63,7 @@ No claim of perfect quality, Google approval, operational automation or revenue 
 The authenticated Vercel project API now confirms a GitHub link to `tosterman/nfl-intelligence`, production branch `main`. This removes the missing repository connection. A post-link push is used to verify the native build path; connection metadata alone is not a successful deployment.
 
 At this inspection, Vercel reports no configured project environment variables and GitHub Actions exposes only the project/org identifier secret names. The odds credential location is being clarified with the owner. The existing refresh workflow still requires its deployment token; native Git deployment does not itself replace the current exact-artifact publication receipt workflow.
+
+## Odds credential resolved
+
+The key was present in ignored local environment configuration. It has now been verified against The Odds API and configured in Vercel production/preview. `reviews/odds-integration.md` records the integration, quota tradeoffs and remaining history/automation work. Prior statements about missing credentials describe the earlier inspection, not this updated state.

@@ -1,4 +1,6 @@
 "use client";
+import { MarketCard } from "./market-panel";
+import type { OddsFeed } from "@/lib/odds";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
@@ -26,8 +28,12 @@ export function Slate({
   initial,
   freshness,
   initialStale,
+  odds,
+  initialNow,
 }: {
   games: Game[];
+  odds: OddsFeed;
+  initialNow: number;
   freshness: FreshnessInput[];
   initialStale: boolean;
   initial: { week: number; query: string; filter: string; sort: string };
@@ -269,8 +275,9 @@ export function Slate({
           </Link>
         </div>
         <p className="market-context">
-          <strong>Model projections only.</strong> Live sportsbook odds are not
-          connected, so market comparisons and betting value are not assessed.
+          <strong>Model and market, side by side.</strong> Open a matchup for
+          timestamped sportsbook snapshots. Prices refresh on a limited
+          schedule; model differences are not validated betting edges.
         </p>
         <div className="toolbar">
           <div className="filters" aria-label="Filter games">
@@ -319,7 +326,13 @@ export function Slate({
         </p>
         <div className="game-grid">
           {filtered.map((g) => (
-            <GameCard key={g.id} game={g} returnTo={returnTo} />
+            <GameCard
+              key={g.id}
+              game={g}
+              returnTo={returnTo}
+              odds={odds}
+              initialNow={initialNow}
+            />
           ))}
         </div>
         {!filtered.length && (
@@ -362,7 +375,17 @@ export function Slate({
     </>
   );
 }
-function GameCard({ game: g, returnTo }: { game: Game; returnTo: string }) {
+function GameCard({
+  game: g,
+  returnTo,
+  odds,
+  initialNow,
+}: {
+  game: Game;
+  returnTo: string;
+  odds: OddsFeed;
+  initialNow: number;
+}) {
   const p = g.snapshot?.prediction;
   const fav = p ? (p.homeWinProbability >= 0.5 ? g.home : g.away) : null;
   return (
@@ -435,10 +458,7 @@ function GameCard({ game: g, returnTo }: { game: Game; returnTo: string }) {
               <small>Model total</small>
               <strong>{p.total.toFixed(1)}</strong>
             </div>
-            <div>
-              <small>Live odds</small>
-              <span>Not connected</span>
-            </div>
+            <MarketCard game={g} feed={odds} initialNow={initialNow} />
           </div>
         </>
       ) : (

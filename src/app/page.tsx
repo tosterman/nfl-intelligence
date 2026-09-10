@@ -1,3 +1,4 @@
+import { getOdds } from "@/lib/odds-server";
 import { site } from "@/lib/data";
 import { Slate } from "@/components/slate";
 import { assessFreshness, freshnessInputs } from "@/lib/freshness";
@@ -20,6 +21,8 @@ export default async function Home({
   };
   return (
     <Slate
+      odds={await getOdds()}
+      initialNow={Date.now()}
       initial={initial}
       freshness={freshnessInputs(site)}
       initialStale={assessFreshness(freshnessInputs(site)).status !== "ok"}
