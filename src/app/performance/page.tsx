@@ -467,7 +467,7 @@ export default function Performance() {
           Read the assumptions and limitations →
         </Link>
       </section>
-      <PerformanceBands records={site.performance.records} />
+      <PerformanceBands records={site.performance.records.map(({ id, season, week, homeWinProbability, homeMargin, total, actualMargin, actualTotal, marketMargin }) => ({ id, season, week, homeWinProbability, homeMargin, total, actualMargin, actualTotal, marketMargin }))} />
     </div>
   );
 }

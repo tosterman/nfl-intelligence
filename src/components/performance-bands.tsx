@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import {
   performanceBands,
   spreadDiagnostic,
@@ -15,10 +17,12 @@ function matchup(r: DiagnosticRecord) {
 }
 
 export function PerformanceBands({ records }: { records: DiagnosticRecord[] }) {
+  const [expanded, setExpanded] = useState<Set<string>>(() => new Set());
   const groups = performanceBands(records);
   return (
     <section className="panel" style={{ marginTop: 24 }}>
       <h2>Where confidence meets the result</h2>
+      <noscript><p>Band summaries are available below. Enable JavaScript to open the individual game tables.</p></noscript>
       <p>
         Retrospective development diagnostics, not the published-before-kickoff
         record. These fixed bands describe this sample; they were not selected
@@ -38,7 +42,16 @@ export function PerformanceBands({ records }: { records: DiagnosticRecord[] }) {
         <div key={group.title}>
           <h3>{group.title}</h3>
           {group.bands.map((b) => (
-            <details key={b.label} className="diagnostic-band">
+            <details key={b.label} className="diagnostic-band" onToggle={(event) => {
+              const open = event.currentTarget.open;
+              const key = `${group.title}:${b.label}`;
+              setExpanded(previous => {
+                if (previous.has(key) === open) return previous;
+                const next = new Set(previous);
+                if (open) next.add(key); else next.delete(key);
+                return next;
+              });
+            }}>
               <summary>
                 {b.label} · {b.records.length} games · {b.correct}/{b.decisive}{" "}
                 decisive winners correct
@@ -56,7 +69,7 @@ export function PerformanceBands({ records }: { records: DiagnosticRecord[] }) {
                 Scroll the table for totals and spread outcomes. At neutral
                 venues, home/away denotes the schedule designation.
               </p>
-              <div
+              {expanded.has(`${group.title}:${b.label}`) && <div
                 className="ratings-table-wrap"
                 role="region"
                 tabIndex={0}
@@ -102,7 +115,7 @@ export function PerformanceBands({ records }: { records: DiagnosticRecord[] }) {
                     ))}
                   </tbody>
                 </table>
-              </div>
+              </div>}
             </details>
           ))}
         </div>

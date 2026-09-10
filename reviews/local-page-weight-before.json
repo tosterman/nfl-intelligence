@@ -1,0 +1,46 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "bodyBytes": 882229,
+    "domNodes": 1093,
+    "domInteractiveMs": 884.6000000014901,
+    "loadMs": 929.6000000014901,
+    "htmlDecodedBytes": 882229,
+    "htmlEncodedBytes": 53912,
+    "errors": []
+  },
+  {
+    "path": "/performance",
+    "status": 200,
+    "bodyBytes": 978736,
+    "domNodes": 14210,
+    "domInteractiveMs": 140.29999999701977,
+    "loadMs": 226.5,
+    "htmlDecodedBytes": 978736,
+    "htmlEncodedBytes": 106685,
+    "errors": []
+  },
+  {
+    "path": "/ratings?sort=defense",
+    "status": 200,
+    "bodyBytes": 70183,
+    "domNodes": 656,
+    "domInteractiveMs": 43.599999994039536,
+    "loadMs": 133.19999999552965,
+    "htmlDecodedBytes": 70183,
+    "htmlEncodedBytes": 9082,
+    "errors": []
+  },
+  {
+    "path": "/games/2026_01_SF_LA",
+    "status": 200,
+    "bodyBytes": 344520,
+    "domNodes": 1010,
+    "domInteractiveMs": 703.6999999955297,
+    "loadMs": 704.2999999970198,
+    "htmlDecodedBytes": 344520,
+    "htmlEncodedBytes": 36453,
+    "errors": []
+  }
+]
