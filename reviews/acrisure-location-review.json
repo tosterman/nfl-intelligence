@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-09-10T20:01:48.865495+00:00",
+  "venue": "Acrisure Stadium",
+  "decision": "withhold-coordinates",
+  "officialStadiumAddress": {
+    "address": "100 Art Rooney Avenue, Pittsburgh, PA 15212",
+    "sources": [
+      "https://acrisurestadium.com/wp-content/uploads/guides/acrisure-stadium-parking-and-traffic-guide.pdf",
+      "https://pittsburghpanthers.com/facilities/acrisure-stadium/71"
+    ]
+  },
+  "alternateOfficialAddress": {
+    "address": "900 Art Rooney Avenue, Pittsburgh, PA 15212",
+    "meaning": "Stadium tours/museum contact address, not silently substituted for the stadium address",
+    "source": "https://acrisurestadium.com/stadium/stadium-tours-info/",
+    "censusResponseHash": "591dbfabc469af447e3b7444a5cc8a81383c0ffffb0905b10b8611252f31b8c6",
+    "matches": 0
+  },
+  "stadiumMap": {
+    "element": "way/24722790",
+    "sourceHash": "38ac440d0c34341a72d7516250be88e8ecc8eeed598fe437f7efbb2fbb33a47f",
+    "limitation": "Named stadium bounds exist, but address tags are absent."
+  },
+  "nearbyAddressCheck": {
+    "query": "[out:json][timeout:25];nwr(40.443,-80.02,40.45,-80.01)[\"addr:housenumber\"];out tags center;",
+    "sourceHash": "9cdce1062163154b83a0bb68d8730e424e6a01f9b2d81a2ba55ca20823c9b391",
+    "conclusion": "Returned address features do not establish a matching stadium address. An earlier around query returned HTTP 504."
+  },
+  "nextEvidenceNeeded": "A primary geospatial stadium reference or an independently reconciled stadium geometry/location record; do not weaken address equality to accept unrelated nearby facilities."
+}
