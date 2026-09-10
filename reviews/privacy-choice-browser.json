@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-09-10T21:40:48.209828+00:00",
+  "url": "http://localhost:3000/ratings",
+  "sourceHash": "fd75b371e37281bd19aaf69d563605ec1d640a204a1a2f66e2800c6d6811e266",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "passed": [
+        "cross-tab decline closes banner",
+        "unrelated storage preserves decline",
+        "decline survives reload",
+        "keyboard settings opens with decline focused",
+        "saving decline without reload returns focus to settings",
+        "invalid choice is undecided live and after reload",
+        "clearing storage restores choice prompt",
+        "already-open settings activation focuses decline",
+        "allow synchronizes across tabs",
+        "revoking allow reloads with decline retained"
+      ],
+      "documentWidth": 320
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "passed": [
+        "cross-tab decline closes banner",
+        "unrelated storage preserves decline",
+        "decline survives reload",
+        "keyboard settings opens with decline focused",
+        "saving decline without reload returns focus to settings",
+        "invalid choice is undecided live and after reload",
+        "clearing storage restores choice prompt",
+        "already-open settings activation focuses decline",
+        "allow synchronizes across tabs",
+        "revoking allow reloads with decline retained"
+      ],
+      "documentWidth": 320
+    }
+  ],
+  "limitations": "Local browser emulation; no real-device or human screen-reader acceptance. Does not test provider ingestion."
+}

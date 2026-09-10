@@ -2,27 +2,31 @@
 import { useEffect, useState, useRef } from "react";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-function consented() {
+function storedChoice(): "yes" | "no" | null {
   try {
-    return localStorage.getItem("nfl-analytics-consent") === "yes";
+    const value = localStorage.getItem("nfl-analytics-consent");
+    return value === "yes" || value === "no" ? value : null;
   } catch {
-    return false;
+    return null;
   }
+}
+function consented() {
+  return storedChoice() === "yes";
 }
 export function Privacy() {
   const [choice, setChoice] = useState<string | null>("loading");
   const declineRef = useRef<HTMLButtonElement>(null);
+  const settingsRef = useRef<HTMLButtonElement>(null);
   const openedByUser = useRef(false);
   useEffect(() => {
     if (choice === null && openedByUser.current) declineRef.current?.focus();
   }, [choice]);
   useEffect(() => {
-    try {
-      setChoice(localStorage.getItem("nfl-analytics-consent"));
-    } catch {
-      setChoice(null);
-    }
-    const sync = () => setChoice(consented() ? "yes" : null);
+    setChoice(storedChoice());
+    const sync = (event: StorageEvent) => {
+      if (event.key === null || event.key === "nfl-analytics-consent")
+        setChoice(storedChoice());
+    };
     window.addEventListener("storage", sync);
     return () => window.removeEventListener("storage", sync);
   }, []);
@@ -32,6 +36,10 @@ export function Privacy() {
       localStorage.setItem("nfl-analytics-consent", v);
     } catch {}
     setChoice(v);
+    if (openedByUser.current) {
+      settingsRef.current?.focus();
+      openedByUser.current = false;
+    }
     if (wasAllowed && v === "no") window.location.reload();
   };
   return (
@@ -72,9 +80,11 @@ export function Privacy() {
         </aside>
       )}
       <button
+        ref={settingsRef}
         className="privacy-settings"
         onClick={() => {
           openedByUser.current = true;
+          if (choice === null) declineRef.current?.focus();
           setChoice(null);
         }}
       >
