@@ -166,6 +166,27 @@ export default function Methodology() {
           set, that set becomes development evidence; a new untouched evaluation
           period is required before a fresh validation claim.
         </p>
+        <h2>Experiments we did not rush into production</h2>
+        <p>
+          Extra rest sounds like an obvious advantage. In our bounded test, six
+          rest adjustments failed to improve the selection result, so the model
+          kept its existing forecast.{" "}
+          <a href="https://github.com/tosterman/nfl-intelligence/blob/main/reviews/rest-experiment.md">
+            Read the rest experiment
+          </a>
+          .
+        </p>
+        <p>
+          A discrete margin model improved some probability scores, but its
+          first version predicted too many ties. A constrained version fixed
+          that problem while exposing other gaps in intervals and expected-score
+          consistency. It remains research, not a hidden change to your
+          forecast.{" "}
+          <a href="https://github.com/tosterman/nfl-intelligence/blob/main/reviews/distribution-experiment-v2.md">
+            Read the distribution experiment
+          </a>
+          .
+        </p>
         <p>
           <Link href="/performance">Inspect the full track record</Link> or{" "}
           <Link href="/contact">report a correction</Link>.

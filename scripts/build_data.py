@@ -95,6 +95,7 @@ def metrics(preds):
             center=(rate+z*z/(2*n))/den;half=z*math.sqrt(rate*(1-rate)/n+z*z/(4*n*n))/den
             calibration.append({'predicted':round(float(prob[mask].mean()),4),'observed':round(rate,4),'count':n,'lower':lo,'upper':min(hi,1),'observedLow95':round(center-half,4),'observedHigh95':round(center+half,4)})
     market=[p for p in preds if p['marketMargin'] is not None]
+    market_totals=[p for p in preds if p['marketTotal'] is not None]
     ats={'wins':0,'losses':0,'pushes':0,'noPick':0}; totals=dict(ats)
     for p in preds:
         for tally,model,line,actual in [(ats,p['homeMargin'],p['marketMargin'],p['actualMargin']),(totals,p['total'],p['marketTotal'],p['actualTotal'])]:
@@ -106,7 +107,11 @@ def metrics(preds):
        'brier':round(float(((prob-y)**2).mean()),4),'logLoss':round(float(-(y*np.log(np.clip(prob,1e-8,1-1e-8))+(1-y)*np.log(np.clip(1-prob,1e-8,1-1e-8))).mean()),4),
        'marginMae':round(float(abs(margin_errors).mean()),3),'totalMae':round(float(abs(total_errors).mean()),3),
        'homeBaselineAccuracy':round(float(y.mean()),4),'coinBrier':.25,'marketMarginMae':round(float(np.mean([abs(p['marketMargin']-p['actualMargin']) for p in market])),3) if market else None,
-       'marketGames':len(market),'ats':ats,'totals':totals,'calibration':calibration,
+       'marketGames':len(market),'marketTotalGames':len(market_totals),
+       'marketTotalMae':round(float(np.mean([abs(p['marketTotal']-p['actualTotal']) for p in market_totals])),3) if market_totals else None,
+       'matchedModelMarginMae':round(float(np.mean([abs(p['homeMargin']-p['actualMargin']) for p in market])),3) if market else None,
+       'matchedModelTotalMae':round(float(np.mean([abs(p['total']-p['actualTotal']) for p in market_totals])),3) if market_totals else None,
+       'ats':ats,'totals':totals,'calibration':calibration,
        'intervalCoverage':round(float(np.mean([p['marginInterval80'][0]<=p['actualMargin']<=p['marginInterval80'][1] for p in preds])),4)}
 
 def snapshot(r,p,now,n,last):
@@ -114,50 +119,5 @@ def snapshot(r,p,now,n,last):
     obj['hash']=hashlib.sha256(json.dumps(obj,sort_keys=True,separators=(',',':')).encode()).hexdigest()
     return obj
 
-def main():
-    now=datetime.now(timezone.utc);raw=ROOT/'data/games.csv'
-    if os.environ.get('NFL_OFFLINE')!='1':
-        with urllib.request.urlopen(SOURCE,timeout=30) as response:payload=response.read()
-        # Parse downloaded bytes before replacing the last known input.
-        if not payload.startswith(b'game_id,') or len(payload)<100000:raise ValueError('Invalid source response')
-        raw.write_bytes(payload)
-    rows=load_rows(raw)
-    # Fixed chronology: parameters selected on 2021-22, residuals on 2023;
-    # 2024-25 remain untouched until final evaluation.
-    candidates=[]
-    for param in PARAMS:
-        validation=replay(rows,[2021,2022],param)
-        score=metrics(validation)['marginMae'];candidates.append({'halfLifeDays':param[0],'ridge':param[1],'marginMae':score})
-    best=min(candidates,key=lambda p:p['marginMae']);params=(best['halfLifeDays'],best['ridge'])
-    residuals=replay(rows,[2023],params)
-    sigmas=(float(np.sqrt(np.mean([(p['homeMargin']-p['actualMargin'])**2 for p in residuals]))),float(np.sqrt(np.mean([(p['total']-p['actualTotal'])**2 for p in residuals]))))
-    heldout=replay(rows,[2024,2025],params,sigmas)
-    season=max(r['season'] for r in rows if r['gameday']<=now.date().isoformat())
-    current=[r for r in rows if r['season']==season]
-    upcoming=[r for r in current if kickoff(r)>now]
-    week=upcoming[0]['week'] if upcoming else current[-1]['week']
-    beta,n,last=fit(rows,now.date().isoformat(),*params)
-    ledger_path=ROOT/'data/ledger.json';ledger=json.loads(ledger_path.read_text()) if ledger_path.exists() else []
-    for r in current:
-        if r['week']!=week or kickoff(r)<=now:continue
-        existing=[s for s in ledger if s['gameId']==r['game_id']]
-        p=predict(beta,r,*sigmas)
-        if not existing or existing[-1]['prediction']!=p:ledger.append(snapshot(r,p,now,n,last))
-    games=[]
-    for r in current:
-        snaps=[s for s in ledger if s['gameId']==r['game_id']]
-        pre=[s for s in snaps if datetime.fromisoformat(s['publishedAt'])<kickoff(r)]
-        chosen=pre[-1] if pre else None
-        games.append({'id':r['game_id'],'season':season,'week':r['week'],'type':r['game_type'],'home':r['home_team'],'away':r['away_team'],
-          'kickoff':kickoff(r).isoformat(),'venue':r['stadium'],'neutral':r['location']=='Neutral','roof':r['roof'],
-          'status':'final' if r['home_score'] is not None else 'scheduled' if kickoff(r)>now else 'in-progress',
-          'actualHome':r['home_score'],'actualAway':r['away_score'],'snapshot':chosen,'history':pre,'market':None,'weather':None,'injuries':None})
-    ratings=[{'team':t,'offense':round(float(beta[2+IDX[t]]),2),'defense':round(float(-beta[34+IDX[t]]),2),'rating':round(float(beta[2+IDX[t]]-beta[34+IDX[t]]),2)} for t in TEAMS]
-    ratings.sort(key=lambda t:-t['rating'])
-    obj={'generatedAt':now.isoformat(),'season':season,'week':week,'modelVersion':VERSION,'source':{'url':SOURCE,'sha256':hashlib.sha256(raw.read_bytes()).hexdigest(),'retrievedAt':now.isoformat()},
-      'model':{'parameters':best,'candidates':candidates,'trainingGames':n,'trainingThrough':last,'sigmaMargin':sigmas[0],'sigmaTotal':sigmas[1],'homeField':round(float(beta[1]),3),'baselineScore':round(float(beta[0]),3)},
-      'games':games,'ratings':ratings,'performance':{'label':'Retrospective holdout','seasons':[2024,2025],'aggregate':metrics(heldout),'bySeason':[{'season':s,**metrics([p for p in heldout if p['season']==s])} for s in [2024,2025]],'records':heldout}}
-    (ROOT/'data/site.json').write_text(json.dumps(obj,separators=(',',':'))+'\n')
-    ledger_path.write_text(json.dumps(ledger,indent=2)+'\n')
-    print(json.dumps({'season':season,'week':week,'games':len(games),'snapshots':len(ledger),'parameters':best,'holdout':metrics(heldout)},indent=2))
-if __name__=='__main__':main()
+if __name__ == '__main__':
+    raise SystemExit('Use python scripts/refresh.py; this module only provides model helpers.')

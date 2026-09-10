@@ -177,14 +177,20 @@ export default function Performance() {
                 <td>0.2500 · Coin flip</td>
               </tr>
               <tr>
-                <td>Mean margin error</td>
-                <td>{m.marginMae.toFixed(2)}</td>
-                <td>{m.marketMarginMae?.toFixed(2)} · Closing line</td>
+                <td>Matched margin error</td>
+                <td>{m.matchedModelMarginMae?.toFixed(2) ?? "Unavailable"}</td>
+                <td>
+                  {m.marketMarginMae?.toFixed(2) ?? "Unavailable"} · Closing
+                  line
+                </td>
               </tr>
               <tr>
-                <td>Mean total error</td>
-                <td>{m.totalMae.toFixed(2)}</td>
-                <td>No comparison</td>
+                <td>Matched total error</td>
+                <td>{m.matchedModelTotalMae?.toFixed(2) ?? "Unavailable"}</td>
+                <td>
+                  {m.marketTotalMae?.toFixed(2) ?? "Unavailable"} · Closing
+                  total
+                </td>
               </tr>
               <tr>
                 <td>Log loss</td>
@@ -199,8 +205,9 @@ export default function Performance() {
             reliable betting advantage.
           </p>
           <p className="fine">
-            The market comparison uses {m.marketGames} games with historical
-            closing lines. Their intraday availability is not known.
+            Historical market coverage: {m.marketGames} spread lines and{" "}
+            {m.marketTotalGames} totals. Model and market errors use the same
+            games for each comparison. Their intraday availability is not known.
           </p>
         </section>
       </div>
@@ -235,6 +242,50 @@ export default function Performance() {
           <span>Closing line value</span>
           <span>Not measurable without timestamped entry prices</span>
         </div>
+      </section>
+      <section className="panel" style={{ marginTop: 24 }}>
+        <h2>Regular season and postseason</h2>
+        <p>
+          Playoff games are a different sample. Both groups remain in the full
+          record; a small postseason sample cannot establish stronger
+          reliability.
+        </p>
+        <div
+          className="ratings-table-wrap"
+          tabIndex={0}
+          role="region"
+          aria-label="Performance by season phase"
+        >
+          <table className="comparison">
+            <thead>
+              <tr>
+                <th scope="col">Phase</th>
+                <th scope="col">Games</th>
+                <th scope="col">Accuracy</th>
+                <th scope="col">Brier</th>
+                <th scope="col">Margin MAE</th>
+                <th scope="col">Total MAE</th>
+              </tr>
+            </thead>
+            <tbody>
+              {site.performance.byPhase.map((group) => (
+                <tr key={group.phase}>
+                  <th scope="row">{group.phase}</th>
+                  <td>{group.games}</td>
+                  <td>{pct(group.accuracy)}</td>
+                  <td>{group.brier.toFixed(4)}</td>
+                  <td>{group.marginMae.toFixed(2)}</td>
+                  <td>{group.totalMae.toFixed(2)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="fine">
+          Accuracy and Brier exclude ties. Error metrics include all games.
+          Postseason combines wild card, divisional, conference and championship
+          games.
+        </p>
       </section>
       <section className="panel" style={{ marginTop: 24 }}>
         <h2>Season by season</h2>

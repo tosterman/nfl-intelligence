@@ -25,12 +25,12 @@ The exact-release verifier accommodates JavaScript integral-number serialization
 | 15 Market intelligence | Closing-line benchmark separate from model | Price history, movement, CLV and executable-price evidence |
 | 16 Time-aware data | Source hashes/times, weekly cutoff, code/configuration identity; missing kickoff withheld | Historical vintage data and additional feed availability timestamps |
 | 17 Pipeline | Validated acquisition, fitted artifact, ledger, CI, deployment and receipt workflow | Authenticated production deployment and successful unattended run |
-| 18 Simulation | Analytic normal residual approximation, explicitly labeled | Discrete outcome simulation only if it improves validation |
+| 18 Simulation | Production normal approximation; separate discrete-distribution experiments with settlement constraints and prior-only tie estimates | Reconcile distribution moments, validate tails/key numbers and joint scores before promotion |
 | 19–20 Explanation and specific why | Contributions reconcile to margin; historical profiles provide context | Personnel/scheme explanations require missing inputs |
 | 21 What changed | Expandable generation revisions; score/margin/total/probability deltas; model, configuration and source identity changes distinguished | Verified public history and attribution to specific football inputs |
 | 22–24 Homepage, cards, detail | Slate, filters, expected/final distinctions, contextual navigation, analysis and evidence | Continued usability tests with actual fans/editorial users |
 | 25–29 Design, dark mode, visual language, motion, mobile | Original visual system, self-hosted licensed fonts, reduced-motion treatment, responsive layouts | Physical-device and broader assistive-technology evaluation |
-| 30 Accountability | All-game metrics, pushes/ties/no-picks, market benchmark; prospective grades require receipts | Genuine public pregame predictions and results |
+| 30 Accountability | All-game and REG/POST metrics, pushes/ties/no-picks, matched spread/total market benchmarks; prospective grades require receipts | Genuine public pregame predictions and results |
 | 31 Calibration | Brier/log loss, bins with counts and Wilson 95% intervals, interval coverage | Prospective calibration |
 
 ## Review reconciliation

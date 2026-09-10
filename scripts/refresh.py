@@ -86,7 +86,7 @@ def replay_blend(rows,statmap):
     for r in active:
         if r['season'] not in [2024,2025]:continue
         margin,total=blended[r['game_id']];p=canonical_prediction(float(margin),float(total),sigmas,[])
-        p.update({k:sc[r['game_id']][k] for k in ['id','season','week','actualMargin','actualTotal','marketMargin','marketTotal','trainingThrough']});records.append(p)
+        p.update({k:sc[r['game_id']][k] for k in ['id','season','week','actualMargin','actualTotal','marketMargin','marketTotal','trainingThrough']});p['gameType']=r['game_type'];records.append(p)
     return records,sigmas
 
 def profiles_for(r,statmap,rows,cutoff):
@@ -147,7 +147,7 @@ def main():
         games.append({'id':r['game_id'],'season':season,'week':r['week'],'type':r['game_type'],'home':r['home_team'],'away':r['away_team'],'kickoff':kick,'venue':r['stadium'],'neutral':r['location']=='Neutral','roof':r['roof'],'status':status,'actualHome':r['home_score'],'actualAway':r['away_score'],'snapshot':history[-1] if history else None,'history':history,'market':None,'weather':None,'injuries':None})
     ratings=[{'team':t,'offense':round(float(beta[2+base.IDX[t]]),2),'defense':round(float(-beta[34+base.IDX[t]]),2),'rating':round(float(beta[2+base.IDX[t]]-beta[34+base.IDX[t]]),2)} for t in base.TEAMS];ratings.sort(key=lambda t:-t['rating'])
     receipts=json.loads((ROOT/'data/publications.json').read_text())
-    output={'generatedAt':now.isoformat(),'season':season,'week':week,'modelVersion':VERSION,'source':source,'efficiencySources':[m for _,m in downloads],'model':{'parameters':{'halfLifeDays':180,'ridge':6},'configuration':CONFIG,'trainingGames':n,'trainingThrough':last,'weeklyCutoff':cutoff,'sigmaMargin':float(sigmas[0]),'sigmaTotal':float(sigmas[1]),'homeField':round(float(beta[1]),3),'baselineScore':round(float(beta[0]),3)},'games':games,'ratings':ratings,'livePerformance':grade_prospective(games,ledger,receipts),'performance':{'label':'Retrospective development evaluation','seasons':[2024,2025],'aggregate':base.metrics(records),'bySeason':[{'season':s,**base.metrics([p for p in records if p['season']==s])} for s in [2024,2025]],'records':records}}
+    output={'generatedAt':now.isoformat(),'season':season,'week':week,'modelVersion':VERSION,'source':source,'efficiencySources':[m for _,m in downloads],'model':{'parameters':{'halfLifeDays':180,'ridge':6},'configuration':CONFIG,'trainingGames':n,'trainingThrough':last,'weeklyCutoff':cutoff,'sigmaMargin':float(sigmas[0]),'sigmaTotal':float(sigmas[1]),'homeField':round(float(beta[1]),3),'baselineScore':round(float(beta[0]),3)},'games':games,'ratings':ratings,'livePerformance':grade_prospective(games,ledger,receipts),'performance':{'label':'Retrospective development evaluation','seasons':[2024,2025],'aggregate':base.metrics(records),'bySeason':[{'season':s,**base.metrics([p for p in records if p['season']==s])} for s in [2024,2025]],'byPhase':[{'phase':label,**base.metrics([p for p in records if (p['gameType']=='REG')==regular])} for label,regular in [('Regular season',True),('Postseason',False)]],'records':records}}
     # Write only after every model and ledger validation succeeds.
     ledger_path.write_text(json.dumps(ledger,indent=2)+'\n');(ROOT/'data/site.json').write_text(json.dumps(output,separators=(',',':'))+'\n')
     print(json.dumps({'model':VERSION,'games':len(games),'snapshots':len(ledger),'generatedAt':now.isoformat(),'metrics':output['performance']['aggregate']},indent=2))
