@@ -1,0 +1,141 @@
+{
+  "sourceCommit": "ca3c45b",
+  "build": "Isolated next build --webpack; successful production build",
+  "results": [
+    {
+      "browser": "chromium",
+      "width": 320,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "documentWidth": 320,
+      "errors": []
+    },
+    {
+      "browser": "chromium",
+      "width": 320,
+      "route": "/performance",
+      "status": 200,
+      "h1": 1,
+      "documentWidth": 320,
+      "errors": []
+    },
+    {
+      "browser": "chromium",
+      "width": 320,
+      "route": "/ratings",
+      "status": 200,
+      "h1": 1,
+      "documentWidth": 320,
+      "errors": []
+    },
+    {
+      "browser": "chromium",
+      "width": 320,
+      "route": "/games/2026_01_CHI_CAR",
+      "status": 200,
+      "h1": 1,
+      "documentWidth": 320,
+      "errors": []
+    },
+    {
+      "browser": "chromium",
+      "width": 320,
+      "route": "/games/2026_01_SF_LA",
+      "status": 200,
+      "h1": 1,
+      "documentWidth": 320,
+      "errors": []
+    },
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "documentWidth": 1440,
+      "errors": []
+    },
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "route": "/performance",
+      "status": 200,
+      "h1": 1,
+      "documentWidth": 1440,
+      "errors": []
+    },
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "route": "/ratings",
+      "status": 200,
+      "h1": 1,
+      "documentWidth": 1440,
+      "errors": []
+    },
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "route": "/games/2026_01_CHI_CAR",
+      "status": 200,
+      "h1": 1,
+      "documentWidth": 1440,
+      "errors": []
+    },
+    {
+      "browser": "chromium",
+      "width": 1440,
+      "route": "/games/2026_01_SF_LA",
+      "status": 200,
+      "h1": 1,
+      "documentWidth": 1440,
+      "errors": []
+    },
+    {
+      "browser": "webkit",
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "documentWidth": 390,
+      "errors": []
+    },
+    {
+      "browser": "webkit",
+      "width": 390,
+      "route": "/performance",
+      "status": 200,
+      "h1": 1,
+      "documentWidth": 390,
+      "errors": []
+    },
+    {
+      "browser": "webkit",
+      "width": 390,
+      "route": "/ratings",
+      "status": 200,
+      "h1": 1,
+      "documentWidth": 390,
+      "errors": []
+    },
+    {
+      "browser": "webkit",
+      "width": 390,
+      "route": "/games/2026_01_CHI_CAR",
+      "status": 200,
+      "h1": 1,
+      "documentWidth": 390,
+      "errors": []
+    },
+    {
+      "browser": "webkit",
+      "width": 390,
+      "route": "/games/2026_01_SF_LA",
+      "status": 200,
+      "h1": 1,
+      "documentWidth": 390,
+      "errors": []
+    }
+  ]
+}

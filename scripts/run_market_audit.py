@@ -40,16 +40,31 @@ def package_report(root, export, summary):
 
 
 def main():
-    (ROOT / 'release-recovery/market-audit-retention.json').unlink(missing_ok=True)
-    result = subprocess.run(['node', '--import', 'tsx', 'scripts/export_odds_evidence.ts'], cwd=ROOT, check=True, capture_output=True, text=True)
-    export = ROOT / json.loads(result.stdout)['folder']
-    subprocess.run([sys.executable, 'scripts/report_market_pairing.py', '--export', str(export)], cwd=ROOT, check=True, capture_output=True)
-    summary = json.loads((ROOT / 'reviews/market-pairing-report-summary.json').read_text())
-    body = package_report(ROOT, export, summary)
-    digest = hashlib.sha256(body).hexdigest()
-    destination = ROOT / 'release-recovery/market-pairing' / (digest + '.bundle.json.gz')
-    destination.write_bytes(body)
-    subprocess.run(['node', '--import', 'tsx', 'scripts/retain_market_report.ts', str(destination)], cwd=ROOT, check=True)
+    from datetime import datetime, timezone
+    recovery = ROOT / 'release-recovery'
+    recovery.mkdir(parents=True, exist_ok=True)
+    (recovery / 'market-audit-retention.json').unlink(missing_ok=True)
+    state = {'schemaVersion': 1, 'startedAt': datetime.now(timezone.utc).isoformat(),
+             'success': False, 'stage': 'export'}
+    try:
+        result = subprocess.run(['node', '--import', 'tsx', 'scripts/export_odds_evidence.ts'], cwd=ROOT, check=True, capture_output=True, text=True)
+        export = ROOT / json.loads(result.stdout)['folder']
+        state['stage'] = 'report'
+        subprocess.run([sys.executable, 'scripts/report_market_pairing.py', '--export', str(export)], cwd=ROOT, check=True, capture_output=True)
+        summary = json.loads((ROOT / 'reviews/market-pairing-report-summary.json').read_text())
+        state['stage'] = 'package'
+        body = package_report(ROOT, export, summary)
+        digest = hashlib.sha256(body).hexdigest()
+        destination = recovery / 'market-pairing' / (digest + '.bundle.json.gz')
+        destination.write_bytes(body)
+        state['stage'] = 'retention'
+        subprocess.run(['node', '--import', 'tsx', 'scripts/retain_market_report.ts', str(destination)], cwd=ROOT, check=True)
+        state['success'] = True
+        state['stage'] = 'complete'
+    finally:
+        # Never include exception text, command output, environment, or raw quotes.
+        state['completedAt'] = datetime.now(timezone.utc).isoformat()
+        (recovery / 'market-audit-run.json').write_text(json.dumps(state, indent=2)+'\n')
 
 
 if __name__ == '__main__':

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "status": "verified-private-retention",
-  "checkedAt": "2026-09-10T21:04:27.162Z",
-  "pathname": "market-audits/40e9b701771e11251490b066efe100a26ca219f6930e18e6f501d6f61f618187.json.gz",
-  "sha256": "40e9b701771e11251490b066efe100a26ca219f6930e18e6f501d6f61f618187",
-  "reportHash": "ca5f455f5e439c37f7ec86716a39e0b8abe368f10aebd348ce42a4aaa42852c0",
-  "bytes": 229206,
-  "uploadedAt": "2026-09-10T21:04:27.000Z",
-  "coverageThrough": "2026-09-10T21:04:24.455000+00:00",
+  "checkedAt": "2026-09-10T21:18:01.996Z",
+  "pathname": "market-audits/8a8469ead3855e1b219e192d4a9d7f3b2f72497b913fc5e2dd765cac83023eb6.json.gz",
+  "sha256": "8a8469ead3855e1b219e192d4a9d7f3b2f72497b913fc5e2dd765cac83023eb6",
+  "reportHash": "97afa8bb8b6f641bcdef076e5e959e4baf14032499db1d21be0e43dfc6e46b0e",
+  "bytes": 229189,
+  "uploadedAt": "2026-09-10T21:18:02.000Z",
+  "coverageThrough": "2026-09-10T21:17:59.349000+00:00",
   "checkpointCounts": {
     "excluded-before-protocol": 3,
     "pending": 541

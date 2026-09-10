@@ -12,7 +12,6 @@ concurrency:
   cancel-in-progress: false
 jobs:
   audit:
-    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -33,10 +32,13 @@ jobs:
       - run: python scripts/run_market_audit.py
         env:
           BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
-      - name: Retain public-safe storage receipt
+      - name: Retain sanitized audit outcome and storage receipt
+        if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: market-audit-${{ github.run_id }}-${{ github.run_attempt }}
           retention-days: 90
-          path: release-recovery/market-audit-retention.json
+          path: |
+            release-recovery/market-audit-run.json
+            release-recovery/market-audit-retention.json
           if-no-files-found: error

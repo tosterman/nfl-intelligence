@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-09-10T21:04:25.637087+00:00",
-  "coverageThrough": "2026-09-10T21:04:24.455000+00:00",
+  "checkedAt": "2026-09-10T21:18:00.785224+00:00",
+  "coverageThrough": "2026-09-10T21:17:59.349000+00:00",
   "games": 272,
   "checkpointCounts": {
     "excluded-before-protocol": 3,
@@ -13,7 +13,7 @@
     "312a736d5dcfdb7b77eb7dcb8a8ab05d92947c0921649b41dfd05d15f3515955"
   ],
   "protocolHash": "4ca687906dbac977669ae19bf3a61dad523a12334a6e6ad231e2ccd650219621",
-  "reportHash": "ca5f455f5e439c37f7ec86716a39e0b8abe368f10aebd348ce42a4aaa42852c0",
-  "reportPath": "C:\\Users\\tyler\\Desktop\\nfl\\release-recovery\\market-pairing\\ca5f455f5e439c37f7ec86716a39e0b8abe368f10aebd348ce42a4aaa42852c0.json",
+  "reportHash": "97afa8bb8b6f641bcdef076e5e959e4baf14032499db1d21be0e43dfc6e46b0e",
+  "reportPath": "C:\\Users\\tyler\\Desktop\\nfl\\release-recovery\\market-pairing\\97afa8bb8b6f641bcdef076e5e959e4baf14032499db1d21be0e43dfc6e46b0e.json",
   "productionWorkflow": false
 }
