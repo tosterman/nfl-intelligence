@@ -34,7 +34,7 @@ The exact-release verifier accommodates JavaScript integral-number serialization
 | 21 What changed | Expandable generation revisions; score/margin/total/probability deltas; model, configuration and source identity changes distinguished | Verified public history and attribution to specific football inputs |
 | 22–24 Homepage, cards, detail | Slate, filters, expected/final distinctions, contextual navigation, analysis and evidence | Continued usability tests with actual fans/editorial users |
 | 25–29 Design, dark mode, visual language, motion, mobile | Original visual system, self-hosted licensed fonts, reduced-motion treatment, responsive layouts | Physical-device and broader assistive-technology evaluation |
-| 30 Accountability | All-game and REG/POST metrics, pushes/ties/no-picks, matched spread/total market benchmarks; prospective grades require receipts | Prospective results after the first verified public pregame capture |
+| 30 Accountability | All-game and REG/POST metrics, pushes/ties/no-picks, matched spread/total market benchmarks; separate season-stratified weekly uncertainty audit; prospective grades require receipts | Prospective results after the first verified public pregame capture |
 | 31 Calibration | Historical and receipt-qualified prospective Brier/log loss, fixed bins with counts and Wilson 95% intervals, separate live margin/total interval coverage | Actual prospective calibration evidence after eligible results; dependence-aware evaluation as the sample grows |
 
 ## Review reconciliation
