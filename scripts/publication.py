@@ -25,12 +25,24 @@ def verify_append_only(previous,current):
     hashes=[s['hash'] for s in current]
     if len(hashes)!=len(set(hashes)):raise ValueError('Duplicate snapshot hash')
 
+CONTEXT_FIELDS=('season','week','type','home','away','kickoff','venue','neutral')
+
+def context_matches(snapshot,game):
+    context=snapshot.get('gameContext')
+    if not isinstance(context,dict) or any(k not in context or k not in game or context[k] is None or game[k] is None for k in CONTEXT_FIELDS):return False
+    if any(context[k]!=game[k] for k in CONTEXT_FIELDS if k!='kickoff'):return False
+    try:
+        original=datetime.fromisoformat(context['kickoff']);current=datetime.fromisoformat(game['kickoff'])
+        return original.tzinfo is not None and current.tzinfo is not None and original==current
+    except (ValueError,TypeError):return False
+
 def eligible_snapshot(game,ledger,receipts):
     if not game.get('kickoff'):return None
     cutoff=datetime.fromisoformat(game['kickoff'])
     eligible=[]
     for s in ledger:
         if s['gameId']!=game['id']:continue
+        if not context_matches(s,game):continue
         if not snapshot_valid(s):continue
         created=datetime.fromisoformat(s.get('generatedAt',s.get('publishedAt')))
         if created>=cutoff:continue

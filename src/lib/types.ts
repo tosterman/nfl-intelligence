@@ -24,6 +24,17 @@ export type Prediction = {
 };
 export type Snapshot = {
   gameId: string;
+  gameContext?: Pick<
+    Game,
+    | "season"
+    | "week"
+    | "type"
+    | "home"
+    | "away"
+    | "kickoff"
+    | "venue"
+    | "neutral"
+  >;
   modelVersion: string;
   generatedAt?: string;
   publishedAt?: string;

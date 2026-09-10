@@ -103,7 +103,9 @@ export default async function GamePage({
               <span>
                 {p
                   ? `${pct(i ? p.homeWinProbability : 1 - p.homeWinProbability)} pregame win probability`
-                  : "No pregame forecast"}
+                  : g.history.length
+                    ? "No forecast verified for this matchup context"
+                    : "No pregame forecast"}
               </span>
               {g.status === "final" && p && (
                 <span>
@@ -397,11 +399,6 @@ export default async function GamePage({
                   of full health, calm weather, or market agreement.
                 </p>
               </section>
-              <RevisionHistory
-                history={g.history}
-                home={teams[g.home].short}
-                away={teams[g.away].short}
-              />
               <section className="panel">
                 <h2>Under the hood</h2>
                 <p className="fine">
@@ -446,6 +443,7 @@ export default async function GamePage({
           />
         </>
       )}
+      {g.history.length > 0 && <RevisionHistory history={g.history} />}
       <ScheduleContext game={g} games={site.games} />
     </div>
   );

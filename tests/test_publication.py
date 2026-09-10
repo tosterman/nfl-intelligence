@@ -9,7 +9,24 @@ class PublicationTests(unittest.TestCase):
     def setUp(self):
         self.game={'id':'g','kickoff':'2026-09-10T20:00:00+00:00','status':'final','actualHome':24,'actualAway':21}
         self.snap={'gameId':'g','hash':'a','generatedAt':'2026-09-10T10:00:00+00:00','prediction':{'homeWinProbability':.6,'homeMargin':3,'total':45}}
+        self.game.update(season=2026,week=1,type='REG',home='PHI',away='DAL',venue='Example stadium',neutral=False)
+        self.snap['gameContext']={k:self.game[k] for k in ('season','week','type','home','away','kickoff','venue','neutral')}
         self.snap['hash']=digest({k:v for k,v in self.snap.items() if k!='hash'})
+    def test_changed_kickoff_cannot_reuse_receipt(self):
+        receipt={'status':'ready','publishedAt':'2026-09-10T11:00:00+00:00','snapshotHashes':[self.snap['hash']],'deploymentUrl':'https://example.vercel.app'}
+        self.assertIsNone(eligible_snapshot(self.game | {'kickoff':'2026-09-11T20:00:00+00:00'},[self.snap],[receipt]))
+
+    def test_missing_or_changed_context_cannot_qualify(self):
+        receipt={'status':'ready','publishedAt':'2026-09-10T11:00:00+00:00','snapshotHashes':[self.snap['hash']],'deploymentUrl':'https://example.vercel.app'}
+        for field,value in [('venue','Other stadium'),('neutral',True),('home','DAL'),('away','PHI'),('week',2),('season',2027),('type','POST')]:
+            with self.subTest(field=field):
+                self.assertIsNone(eligible_snapshot(self.game | {field:value},[self.snap],[receipt]))
+        legacy={k:v for k,v in self.snap.items() if k not in ('gameContext','hash')}
+        legacy['hash']=digest(legacy)
+        self.assertIsNone(eligible_snapshot(self.game,[legacy],[receipt | {'snapshotHashes':[legacy['hash']]}]))
+        equivalent=self.game | {'kickoff':'2026-09-10T16:00:00-04:00'}
+        self.assertEqual(eligible_snapshot(equivalent,[self.snap],[receipt]),self.snap)
+
     def test_local_generation_is_not_publication(self):
         self.assertIsNone(eligible_snapshot(self.game,[self.snap],[]))
     def test_failed_or_postkickoff_publication_not_eligible(self):

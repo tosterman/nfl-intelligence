@@ -32,19 +32,23 @@ export default function Performance() {
           </p>
         ) : (
           <p>
-            No completed forecasts with verified pregame publication receipts
-            yet. The record starts here, without backfilled results.
+            No completed forecasts with verified pregame publication and
+            matching game context yet. The record starts here, without
+            backfilled results.
           </p>
         )}
         <p className="fine">
           {site.livePerformance.missed} completed games excluded because no
-          eligible publication receipt exists. {site.livePerformance.ties} tied
-          games excluded from win-probability scoring.
+          eligible publication with matching game context exists.{" "}
+          {site.livePerformance.ties} tied games excluded from win-probability
+          scoring.
         </p>
         <p>
           Score errors include every eligible completed game, including ties. We
           grade the latest generated forecast verified publicly available before
-          kickoff. Later revisions cannot replace it.
+          kickoff, with the same teams, kickoff, venue and neutral-site status.
+          Later revisions cannot replace it. Older archives without that context
+          remain in history but do not qualify for this record.
         </p>
         {site.livePerformance.scoreGames > 0 && (
           <>

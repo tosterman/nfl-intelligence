@@ -41,6 +41,8 @@ class RefreshIntegrityTests(unittest.TestCase):
     def setUp(self):
         self.game = {'id':'g', 'kickoff':'2026-09-10T20:00:00+00:00', 'status':'final', 'actualHome':24, 'actualAway':21}
         self.snap = {'gameId':'g', 'generatedAt':'2026-09-10T10:00:00+00:00', 'prediction':{'homeWinProbability':.6,'homeMargin':3,'total':45}}
+        self.game.update(season=2026,week=1,type='REG',home='PHI',away='DAL',venue='Example stadium',neutral=False)
+        self.snap['gameContext']={k:self.game[k] for k in ('season','week','type','home','away','kickoff','venue','neutral')}
         self.snap['hash'] = refresh.digest(self.snap)
         self.receipt = {'status':'ready','publishedAt':'2026-09-10T11:00:00+00:00','snapshotHashes':[self.snap['hash']],'deploymentUrl':'https://example.vercel.app','deploymentId':'dpl_fixture'}
 

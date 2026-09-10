@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 import build_data as base
 import experiment_model as efficiency
-from publication import verify_append_only,grade_prospective
+from publication import verify_append_only,grade_prospective,context_matches
 
 ROOT=base.ROOT
 SOURCE='https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv'
@@ -135,8 +135,9 @@ def main():
         if base.kickoff(r)<=now:continue
         blend=predictions[r['game_id']];p=canonical_prediction(blend['homeMargin'],blend['total'],sigmas,evidence(blend),profiles_for(r,statmap,rows,cutoff))
         existing=[s for s in ledger if s['gameId']==r['game_id']]
-        if existing and existing[-1]['modelVersion']==VERSION and existing[-1]['prediction']==p and existing[-1].get('modelCodeHash')==model_digest:continue
-        snap={'gameId':r['game_id'],'modelVersion':VERSION,'generatedAt':now.isoformat(),'trainingGames':n,'trainingThrough':last,'prediction':p,'sourceHash':source['sha256'],'sourceRetrievedAt':source['retrievedAt'],'efficiencyRetrievedAt':max(m['retrievedAt'] for _,m in downloads),'efficiencySourceHashes':[m['sha256'] for _,m in downloads],'modelCodeHash':model_digest,'configuration':CONFIG}
+        context={'season':season,'week':r['week'],'type':r['game_type'],'home':r['home_team'],'away':r['away_team'],'kickoff':base.kickoff(r).isoformat(),'venue':r['stadium'],'neutral':r['location']=='Neutral'}
+        if existing and existing[-1]['modelVersion']==VERSION and existing[-1]['prediction']==p and existing[-1].get('modelCodeHash')==model_digest and context_matches(existing[-1],context):continue
+        snap={'gameId':r['game_id'],'gameContext':context,'modelVersion':VERSION,'generatedAt':now.isoformat(),'trainingGames':n,'trainingThrough':last,'prediction':p,'sourceHash':source['sha256'],'sourceRetrievedAt':source['retrievedAt'],'efficiencyRetrievedAt':max(m['retrievedAt'] for _,m in downloads),'efficiencySourceHashes':[m['sha256'] for _,m in downloads],'modelCodeHash':model_digest,'configuration':CONFIG}
         snap['hash']=digest(snap);ledger.append(snap)
     verify_append_only(previous,ledger)
     games=[]
@@ -144,7 +145,7 @@ def main():
         kick=base.kickoff(r).isoformat() if r['gametime'] else None
         history=[s for s in ledger if s['gameId']==r['game_id'] and kick and datetime.fromisoformat(s.get('generatedAt',s.get('publishedAt')))<datetime.fromisoformat(kick)]
         status='final' if r['home_score'] is not None and r['away_score'] is not None else 'scheduled' if not kick or datetime.fromisoformat(kick)>now else 'in-progress'
-        games.append({'id':r['game_id'],'season':season,'week':r['week'],'type':r['game_type'],'home':r['home_team'],'away':r['away_team'],'kickoff':kick,'venue':r['stadium'],'neutral':r['location']=='Neutral','roof':r['roof'],'status':status,'actualHome':r['home_score'],'actualAway':r['away_score'],'snapshot':history[-1] if history else None,'history':history,'market':None,'weather':None,'injuries':None})
+        games.append({'id':r['game_id'],'season':season,'week':r['week'],'type':r['game_type'],'home':r['home_team'],'away':r['away_team'],'kickoff':kick,'venue':r['stadium'],'neutral':r['location']=='Neutral','roof':r['roof'],'status':status,'actualHome':r['home_score'],'actualAway':r['away_score'],'snapshot':next((s for s in reversed(history) if context_matches(s,{'season':season,'week':r['week'],'type':r['game_type'],'home':r['home_team'],'away':r['away_team'],'kickoff':kick,'venue':r['stadium'],'neutral':r['location']=='Neutral'})),None),'history':history,'market':None,'weather':None,'injuries':None})
     ratings=[{'team':t,'offense':round(float(beta[2+base.IDX[t]]),2),'defense':round(float(-beta[34+base.IDX[t]]),2),'rating':round(float(beta[2+base.IDX[t]]-beta[34+base.IDX[t]]),2)} for t in base.TEAMS];ratings.sort(key=lambda t:-t['rating'])
     receipts=json.loads((ROOT/'data/publications.json').read_text())
     output={'generatedAt':now.isoformat(),'season':season,'week':week,'modelVersion':VERSION,'source':source,'efficiencySources':[m for _,m in downloads],'model':{'parameters':{'halfLifeDays':180,'ridge':6},'configuration':CONFIG,'trainingGames':n,'trainingThrough':last,'weeklyCutoff':cutoff,'sigmaMargin':float(sigmas[0]),'sigmaTotal':float(sigmas[1]),'homeField':round(float(beta[1]),3),'baselineScore':round(float(beta[0]),3)},'games':games,'ratings':ratings,'livePerformance':grade_prospective(games,ledger,receipts),'performance':{'label':'Retrospective development evaluation','seasons':[2024,2025],'aggregate':base.metrics(records),'bySeason':[{'season':s,**base.metrics([p for p in records if p['season']==s])} for s in [2024,2025]],'byPhase':[{'phase':label,**base.metrics([p for p in records if (p['gameType']=='REG')==regular])} for label,regular in [('Regular season',True),('Postseason',False)]],'records':records}}

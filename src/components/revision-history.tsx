@@ -1,16 +1,8 @@
 import { snapshotTime, type Snapshot } from "@/lib/types";
-import { compareRevisions } from "@/lib/revisions";
+import { compareRevisions, sameRevisionContext } from "@/lib/revisions";
 import { date, time, signed, pct } from "@/lib/teams";
 
-export function RevisionHistory({
-  history,
-  home,
-  away,
-}: {
-  history: Snapshot[];
-  home: string;
-  away: string;
-}) {
+export function RevisionHistory({ history }: { history: Snapshot[] }) {
   return (
     <section className="panel">
       <h2 id="forecast-changes" tabIndex={-1}>
@@ -24,7 +16,12 @@ export function RevisionHistory({
       {[...history].reverse().map((snapshot, reverseIndex) => {
         const index = history.length - 1 - reverseIndex;
         const previous = history[index - 1];
-        const diff = previous ? compareRevisions(previous, snapshot) : null;
+        const diff =
+          previous && sameRevisionContext(previous, snapshot)
+            ? compareRevisions(previous, snapshot)
+            : null;
+        const home = snapshot.gameContext?.home ?? "Recorded home side";
+        const away = snapshot.gameContext?.away ?? "Recorded away side";
         return (
           <details
             className="revision"
@@ -35,6 +32,11 @@ export function RevisionHistory({
               {reverseIndex === 0 ? "Latest" : `Revision ${index + 1}`} ·{" "}
               {date(snapshotTime(snapshot))} · {time(snapshotTime(snapshot))} ET
             </summary>
+            <p className="fine">
+              {snapshot.gameContext
+                ? `${away} at ${home} · ${snapshot.gameContext.venue} · ${date(snapshot.gameContext.kickoff!)} ${time(snapshot.gameContext.kickoff!)} ET · ${snapshot.gameContext.neutral ? "Neutral venue" : "Home venue"}`
+                : "Legacy archive: original matchup context was not recorded. Excluded from the verified record."}
+            </p>
             <p>
               {home} {pct(snapshot.prediction.homeWinProbability)} · Expected
               margin {signed(snapshot.prediction.homeMargin)}
@@ -85,7 +87,9 @@ export function RevisionHistory({
               </>
             ) : (
               <p className="fine">
-                Initial model snapshot. No earlier prediction is available.
+                {previous
+                  ? "Not compared: original matchup context is missing or changed."
+                  : "Initial model snapshot. No earlier prediction is available."}
               </p>
             )}
             <p className="fine">

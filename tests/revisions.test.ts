@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { compareRevisions } from "../src/lib/revisions";
+import { compareRevisions, sameRevisionContext } from "../src/lib/revisions";
 import type { Snapshot } from "../src/lib/types";
 
 const original: Snapshot = {
@@ -82,4 +82,40 @@ test("revision comparison refuses unrelated games", () => {
   assert.throws(() =>
     compareRevisions(original, { ...original, gameId: "other" }),
   );
+});
+
+test("revision comparisons require matching recorded matchup context", () => {
+  const gameContext = {
+    season: 2026,
+    week: 1,
+    type: "REG",
+    home: "PHI",
+    away: "DAL",
+    kickoff: "2026-09-10T20:00:00Z",
+    venue: "Example",
+    neutral: false,
+  };
+  const snap = { ...original, gameContext };
+  assert.equal(sameRevisionContext(original, original), false);
+  assert.equal(
+    sameRevisionContext(snap, {
+      ...snap,
+      gameContext: { ...gameContext, kickoff: "2026-09-10T16:00:00-04:00" },
+    }),
+    true,
+  );
+  for (const change of [
+    { kickoff: "2026-09-11T20:00:00Z" },
+    { venue: "Other" },
+    { neutral: true },
+    { home: "DAL" },
+    { week: 2 },
+  ])
+    assert.equal(
+      sameRevisionContext(snap, {
+        ...snap,
+        gameContext: { ...gameContext, ...change },
+      }),
+      false,
+    );
 });

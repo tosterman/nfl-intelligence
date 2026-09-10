@@ -1,5 +1,20 @@
 import type { Snapshot } from "./types";
 
+export function sameRevisionContext(a: Snapshot, b: Snapshot) {
+  const x = a.gameContext,
+    y = b.gameContext;
+  if (!x || !y || a.gameId !== b.gameId) return false;
+  return (
+    ["season", "week", "type", "home", "away", "venue", "neutral"].every(
+      (key) =>
+        x[key as keyof typeof x] != null &&
+        x[key as keyof typeof x] === y[key as keyof typeof y],
+    ) &&
+    Number.isFinite(Date.parse(x.kickoff ?? "")) &&
+    Date.parse(x.kickoff!) === Date.parse(y.kickoff ?? "")
+  );
+}
+
 function stable(value: unknown): string {
   if (Array.isArray(value)) return `[${value.map(stable).join(",")}]`;
   if (value !== null && typeof value === "object")
