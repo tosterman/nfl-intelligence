@@ -42,7 +42,7 @@ GitHub Actions verifies ordinary pushes and provides a daily refresh workflow. S
 
 ## Analytics and advertising
 
-Enable Vercel Web Analytics and Speed Insights in the project dashboard. Both are opt-in, with consent gates at load and send time. Product events are bounded names, never arbitrary search strings. Revenue activation requires the owner’s publisher account, production domain, appropriate commercial hosting plan, Google eligibility review, and applicable certified consent configuration. No ad script or fake publisher ID is shipped enabled.
+Web Analytics is enabled and production pageview receipt is verified. Speed Insights reports received data. Both are opt-in, with consent gates at load and send time. Product events are bounded names, never arbitrary search strings; their reporting requires Pro/Enterprise and is currently plan-restricted. Run `python scripts/analytics_report.py` with an authenticated Vercel CLI for a private aggregate readership report. Definitions and caveats are in `docs/measurement-plan.md`. Revenue activation requires the owner’s publisher account, production domain, appropriate commercial hosting plan, Google eligibility review, and applicable certified consent configuration. No ad script or fake publisher ID is shipped enabled.
 
 The source founding document is excluded from the repository. `docs/design.md`, implementation notes, and review reports describe the implementation and remaining operational requirements.
 
