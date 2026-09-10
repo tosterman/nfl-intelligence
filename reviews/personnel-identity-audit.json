@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-10T19:12:36.906876+00:00",
-  "cutoff": "2026-09-10T18:57:34.215384+00:00",
+  "generatedAt": "2026-09-10T21:57:25.520244+00:00",
+  "cutoff": "2026-09-10T20:24:20.855806+00:00",
   "season": 2026,
   "reportScope": {
     "season": 2026,
@@ -17,8 +17,8 @@
   "depthSourceHash": "db0a09454965e6fcd4d7378a19381fa53f251432f80f09ebdcc45f78f5e1bc9f",
   "personnelSourceHash": "96dcc98e297a38ecb8edcc7ab8864260b2899e24604f60c2a9514498ea53c2fb",
   "inputHashes": {
-    "personnel": "93efae94f88ccfeb574f5837529953955204f96728425a332cc43fcee8369ae4",
-    "quarterbacks": "0ba418820a94d8cbc7f3e85be4a98631f25661ecefdbd94a5d1f1da4c2e9ca28"
+    "personnel": "c09a41625e884270e9e0469cd40d802d45b9045e3e350f023f71d1d2ef0db5f8",
+    "quarterbacks": "211dbb4a8798f4f81abf66683987c025f6aa1de57409915fcb3b0e03f7d02a35"
   },
   "codeHash": "c665de4327671efbc5618fa986ed6423383ec0c70868df34e7d3ea061ac1eace",
   "records": [
