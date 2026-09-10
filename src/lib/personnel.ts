@@ -45,7 +45,7 @@ export function personnelForGame(
     return unavailable("Personnel snapshot unavailable.");
   if (game.status === "final" || now >= kickoff || acquired >= kickoff)
     return unavailable("Pregame personnel context is closed for this game.");
-  if (acquired > now || updated > now || now >= expiresAt)
+  if (updated > acquired || acquired > now || updated > now || now >= expiresAt)
     return unavailable(
       "Personnel snapshot is outdated or awaiting a verified refresh.",
     );

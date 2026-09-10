@@ -32,6 +32,8 @@ def validate_health(kind,http_status,payload,now):
             raise ValueError('Personnel season mismatch')
         if any(not 0<=age(payload.get(k),now)<30 for k in ['checkedAt','retrievedAt','assetUpdatedAt']):
             raise ValueError('Personnel acquisition or source is stale')
+        if age(payload['assetUpdatedAt'],now)<age(payload['retrievedAt'],now):
+            raise ValueError('Personnel source postdates acquisition')
         if type(payload.get('rowCount')) is not int or payload['rowCount']<=0 or not re.fullmatch(r'[a-f0-9]{64}',payload.get('sourceHash','')):
             raise ValueError('Personnel source identity missing')
     elif kind=='quarterbacks':

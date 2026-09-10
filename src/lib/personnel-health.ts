@@ -16,6 +16,7 @@ export function personnelHealth(
   const valid =
     snapshot.status === "available" &&
     collection.status === "ok" &&
+    Date.parse(snapshot.assetUpdatedAt) <= Date.parse(snapshot.retrievedAt) &&
     snapshot.season === season &&
     snapshot.players.length > 0 &&
     /^[a-f0-9]{64}$/.test(snapshot.sourceHash);

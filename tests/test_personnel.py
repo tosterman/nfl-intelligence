@@ -42,6 +42,14 @@ class PersonnelTests(unittest.TestCase):
         snap['assetUpdatedAt'] = (self.now - timedelta(hours=31)).isoformat()
         self.assertEqual(for_game(snap, self.game, self.now)['status'], 'unavailable')
 
+    def test_source_must_predate_acquisition_and_expire_at_thirty_hours(self):
+        snap = self.snapshot()
+        snap['retrievedAt'] = (self.now - timedelta(hours=1)).isoformat()
+        self.assertEqual(for_game(snap, self.game, self.now)['status'], 'unavailable')
+        snap = self.snapshot()
+        snap['retrievedAt'] = snap['assetUpdatedAt'] = (self.now - timedelta(hours=30)).isoformat()
+        self.assertEqual(for_game(snap, self.game, self.now)['status'], 'unavailable')
+
     def test_postseason_schedule_phases_match_post_reports(self):
         for phase, week in [('WC', 19), ('DIV', 20), ('CON', 21), ('SB', 22)]:
             snap = self.snapshot()

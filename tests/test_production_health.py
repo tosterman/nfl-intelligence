@@ -60,6 +60,7 @@ class ProductionHealthTests(unittest.TestCase):
     def test_personnel_failure_and_old_asset_override_claimed_health(self):
         good={'status':'ok','collectionStatus':'ok','season':2026,'expectedSeason':2026,'checkedAt':self.at,'retrievedAt':self.at,'assetUpdatedAt':self.at,'sourceHash':'a'*64,'rowCount':1,'maximumAgeHours':30}
         validate_health('personnel',200,good,self.now)
+        with self.assertRaises(ValueError):validate_health('personnel',200,good|{'retrievedAt':(self.now-timedelta(hours=1)).isoformat()},self.now)
         for change in [{'collectionStatus':'unavailable'},{'season':2025},{'rowCount':0},{'assetUpdatedAt':(self.now-timedelta(hours=30)).isoformat()},{'checkedAt':(self.now+timedelta(seconds=1)).isoformat()}]:
             with self.assertRaises(ValueError):validate_health('personnel',200,good|change,self.now)
 

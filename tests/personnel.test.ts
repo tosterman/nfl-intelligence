@@ -35,6 +35,23 @@ const snapshot = {
   ],
 };
 const now = Date.parse(snapshot.retrievedAt);
+test("source updates after acquisition are withheld even when both dates are fresh", () => {
+  const data = {
+    ...snapshot,
+    season: 2026,
+    retrievedAt: new Date(now - 2 * 3600000).toISOString(),
+  };
+  assert.equal(
+    personnelHealth(
+      data,
+      { status: "ok", checkedAt: data.retrievedAt },
+      2026,
+      now,
+    ).status,
+    "unavailable",
+  );
+  assert.equal(personnelForGame(data, game, now).players.length, 0);
+});
 test("personnel health distinguishes failed collection and stale sources from fresh downloads", () => {
   const data = { ...snapshot, season: 2026 };
   const collection = { status: "ok", checkedAt: snapshot.retrievedAt };

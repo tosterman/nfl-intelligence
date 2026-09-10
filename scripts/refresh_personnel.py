@@ -58,7 +58,7 @@ def for_game(snapshot, game, now):
     kickoff = timestamp(game['kickoff'])
     if acquired >= kickoff or now >= kickoff:
         return unknown | {'reason': 'Pregame collection closed'}
-    if not timedelta(0) <= now - acquired <= timedelta(hours=30) or not timedelta(0) <= now - updated <= timedelta(hours=30):
+    if updated > acquired or not timedelta(0) <= now - acquired < timedelta(hours=30) or not timedelta(0) <= now - updated < timedelta(hours=30):
         return unknown | {'reason': 'Snapshot stale or future-dated'}
     game_type = 'POST' if game['type'] in {'WC', 'DIV', 'CON', 'SB'} else game['type']
     players = [r for r in snapshot['players'] if r['season'] == game['season'] and r['type'] == game_type and r['week'] == game['week'] and r['team'] in (game['home'], game['away'])]
