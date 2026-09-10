@@ -57,6 +57,7 @@ test("pointer cannot request external or unrelated objects", async () => {
     "odds/latest.json",
     Buffer.from(
       JSON.stringify({
+        schemaVersion: 1,
         pathname: "https://example.org/file",
         sha256: "a".repeat(64),
         fetchedAt: feed.fetchedAt,
@@ -71,4 +72,5 @@ test("health rejects missing, future, and stale acquisitions", () => {
   assert.equal(oddsHealth(feed, now + 6 * 3600000 + 1).status, "stale");
   assert.equal(oddsHealth(feed, now - 1).status, "unavailable");
   assert.equal(oddsHealth(null, now).status, "unavailable");
+  assert.equal(oddsHealth({...feed,state:"unavailable"},now).fetchedAt,null);
 });

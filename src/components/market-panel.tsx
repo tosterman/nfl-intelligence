@@ -80,8 +80,9 @@ export function MarketPanel({
     <section className="panel market-panel">
       <h2>Model versus market</h2>
       <p className="fine">
-        Timestamped pregame snapshots via The Odds API. Cached for up to six
-        hours; prices can change before the next refresh.
+        Timestamped pregame snapshots via The Odds API, collected five times
+        daily. Quotes older than six hours are withheld; prices can change
+        between collections.
       </p>
       {!book ? (
         <p>

@@ -98,6 +98,7 @@ export async function readStoredOdds(
 }
 
 export function oddsHealth(feed: OddsFeed | null, now = Date.now()) {
+  if (feed?.state !== "ready") feed = null;
   const ageMs = feed ? now - Date.parse(feed.fetchedAt) : NaN;
   const status =
     !feed || feed.state !== "ready" || !Number.isFinite(ageMs) || ageMs < 0
