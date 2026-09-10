@@ -268,6 +268,10 @@ export function Slate({
             How to read the slate <ArrowUpRight size={14} />
           </Link>
         </div>
+        <p className="market-context">
+          <strong>Model projections only.</strong> Live sportsbook odds are not
+          connected, so market comparisons and betting value are not assessed.
+        </p>
         <div className="toolbar">
           <div className="filters" aria-label="Filter games">
             {[
@@ -432,8 +436,8 @@ function GameCard({ game: g, returnTo }: { game: Game; returnTo: string }) {
               <strong>{p.total.toFixed(1)}</strong>
             </div>
             <div>
-              <small>Market edge</small>
-              <span>Unavailable</span>
+              <small>Live odds</small>
+              <span>Not connected</span>
             </div>
           </div>
         </>

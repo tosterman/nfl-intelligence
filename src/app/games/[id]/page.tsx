@@ -307,31 +307,33 @@ export default async function GamePage({
                     <tr>
                       <th scope="col">Measure</th>
                       <th scope="col">Our model</th>
-                      <th scope="col">Verified market</th>
+                      <th scope="col">Live sportsbook</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>{teams[g.home].short} spread</td>
                       <td>{signed(-p.homeMargin)}</td>
-                      <td>Unavailable</td>
+                      <td>Not connected</td>
                     </tr>
                     <tr>
                       <td>Total points</td>
                       <td>{p.total.toFixed(1)}</td>
-                      <td>Unavailable</td>
+                      <td>Not connected</td>
                     </tr>
                     <tr>
                       <td>{teams[g.home].short} moneyline</td>
                       <td>{signed(fairMoneyline(p.homeWinProbability), 0)}</td>
-                      <td>Unavailable</td>
+                      <td>Not connected</td>
                     </tr>
                   </tbody>
                 </table>
                 <p>
-                  No timestamped live price is connected. We cannot determine an
-                  edge. Historical closing lines are used only on the
-                  retrospective evaluation page.
+                  Live sportsbook odds are not connected. These are model
+                  estimates, not prices available to bet. Betting value has not
+                  been assessed; a difference from a sportsbook alone would not
+                  establish an advantage. Historical closing lines are used only
+                  in the retrospective evaluation.
                 </p>
               </section>
             </div>
