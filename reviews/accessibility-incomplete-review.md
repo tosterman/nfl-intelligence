@@ -16,3 +16,10 @@ A subsequent local Chromium pass measured 45 visible text elements: all 32 ratin
 Independent UX review also identified the chart's scaled labels as too small. Enlarged tick/caption fonts and adjusted plot margins now keep the smallest label at approximately 12.5 CSS pixels at320, 15.6 at390, and13.9 at1440. Chromium and WebKit verified these sizes and no document overflow at all three widths. The320 layout was visually inspected. The accessible values table remains available. Evidence: `calibration-label-browser.json`.
 
 This closes the tested badge/chart-label/gradient contrast uncertainty. Partially obscured numeric cells, consent-overlay states, chart non-text contrast, keyboard/screen-reader and real-device acceptance remain separate checks. No contrast rule was disabled, and no user-visible text was removed to obtain passing measurements.
+
+
+## Performance table navigation
+
+The season-by-season table now has a keyboard-focusable region named by its heading. Performance tables explicitly mark column headers and row identities, including historical calibration bins and baseline metrics. The season-phase table already supplied this structure.
+
+Chromium and WebKit verified keyboard reachability via Shift+Tab/Tab, with all four tables exposing one row header for each data row. Opening the calibration values at320 kept document width320. A scoped enlarged-text stress check made the season table overflow, and ArrowRight moved its container40px in both engines. This is not a full browser zoom or human screen-reader acceptance test. Evidence: `performance-table-accessibility.json`. TypeScript checking passed.

@@ -1,0 +1,68 @@
+[
+  {
+    "browser": "chromium",
+    "width": 320,
+    "expandedDocumentWidth": 320,
+    "keyboardReachable": true,
+    "tables": [
+      {
+        "columns": 3,
+        "rows": 5,
+        "rowHeaders": 5
+      },
+      {
+        "columns": 3,
+        "rows": 5,
+        "rowHeaders": 5
+      },
+      {
+        "columns": 6,
+        "rows": 2,
+        "rowHeaders": 2
+      },
+      {
+        "columns": 5,
+        "rows": 2,
+        "rowHeaders": 2
+      }
+    ],
+    "enlargedSeasonTextArrowScroll": {
+      "before": 0,
+      "after": 40
+    },
+    "note": "Enlarged-text check applies a scoped CSS size override; not a full browser zoom acceptance test."
+  },
+  {
+    "browser": "webkit",
+    "width": 320,
+    "expandedDocumentWidth": 320,
+    "keyboardReachable": true,
+    "tables": [
+      {
+        "columns": 3,
+        "rows": 5,
+        "rowHeaders": 5
+      },
+      {
+        "columns": 3,
+        "rows": 5,
+        "rowHeaders": 5
+      },
+      {
+        "columns": 6,
+        "rows": 2,
+        "rowHeaders": 2
+      },
+      {
+        "columns": 5,
+        "rows": 2,
+        "rowHeaders": 2
+      }
+    ],
+    "enlargedSeasonTextArrowScroll": {
+      "before": 0,
+      "after": 40
+    },
+    "note": "Enlarged-text check applies a scoped CSS size override; not a full browser zoom acceptance test."
+  }
+]

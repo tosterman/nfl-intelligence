@@ -212,15 +212,15 @@ export default function Performance() {
             <table className="comparison">
               <thead>
                 <tr>
-                  <th>Predicted</th>
-                  <th>Observed</th>
-                  <th>Games</th>
+                  <th scope="col">Predicted</th>
+                  <th scope="col">Observed</th>
+                  <th scope="col">Games</th>
                 </tr>
               </thead>
               <tbody>
                 {m.calibration.map((b, i) => (
                   <tr key={i}>
-                    <td>{pct(b.predicted)}</td>
+                    <th scope="row">{pct(b.predicted)}</th>
                     <td>
                       {pct(b.observed)}{" "}
                       <small>
@@ -244,24 +244,24 @@ export default function Performance() {
           <table className="comparison">
             <thead>
               <tr>
-                <th>Metric</th>
-                <th>Model</th>
-                <th>Baseline</th>
+                <th scope="col">Metric</th>
+                <th scope="col">Model</th>
+                <th scope="col">Baseline</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Winner accuracy</td>
+                <th scope="row">Winner accuracy</th>
                 <td>{pct(m.accuracy)}</td>
                 <td>{pct(m.homeBaselineAccuracy)} · Home team</td>
               </tr>
               <tr>
-                <td>Brier score</td>
+                <th scope="row">Brier score</th>
                 <td>{m.brier.toFixed(4)}</td>
                 <td>0.2500 · Coin flip</td>
               </tr>
               <tr>
-                <td>Matched margin error</td>
+                <th scope="row">Matched margin error</th>
                 <td>{m.matchedModelMarginMae?.toFixed(2) ?? "Unavailable"}</td>
                 <td>
                   {m.marketMarginMae?.toFixed(2) ?? "Unavailable"} · Closing
@@ -269,7 +269,7 @@ export default function Performance() {
                 </td>
               </tr>
               <tr>
-                <td>Matched total error</td>
+                <th scope="row">Matched total error</th>
                 <td>{m.matchedModelTotalMae?.toFixed(2) ?? "Unavailable"}</td>
                 <td>
                   {m.marketTotalMae?.toFixed(2) ?? "Unavailable"} · Closing
@@ -277,7 +277,7 @@ export default function Performance() {
                 </td>
               </tr>
               <tr>
-                <td>Log loss</td>
+                <th scope="row">Log loss</th>
                 <td>{m.logLoss.toFixed(4)}</td>
                 <td>0.6931 · Coin flip</td>
               </tr>
@@ -372,22 +372,27 @@ export default function Performance() {
         </p>
       </section>
       <section className="panel" style={{ marginTop: 24 }}>
-        <h2>Season by season</h2>
-        <div className="ratings-table-wrap">
+        <h2 id="season-performance-heading">Season by season</h2>
+        <div
+          className="ratings-table-wrap"
+          tabIndex={0}
+          role="region"
+          aria-labelledby="season-performance-heading"
+        >
           <table className="comparison">
             <thead>
               <tr>
-                <th>Season</th>
-                <th>Games</th>
-                <th>Accuracy</th>
-                <th>Brier</th>
-                <th>Margin MAE</th>
+                <th scope="col">Season</th>
+                <th scope="col">Games</th>
+                <th scope="col">Accuracy</th>
+                <th scope="col">Brier</th>
+                <th scope="col">Margin MAE</th>
               </tr>
             </thead>
             <tbody>
               {site.performance.bySeason.map((s) => (
                 <tr key={s.season}>
-                  <td>{s.season}</td>
+                  <th scope="row">{s.season}</th>
                   <td>{s.games}</td>
                   <td>{pct(s.accuracy)}</td>
                   <td>{s.brier.toFixed(4)}</td>
