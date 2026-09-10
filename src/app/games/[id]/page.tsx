@@ -147,6 +147,10 @@ export default async function GamePage({
             <span className="eyebrow">Explore this game</span>
             <div>
               <a href="#model-read">Model outlook</a>
+              {!!p.profiles?.length && (
+                <a href="#team-profiles">Team profiles</a>
+              )}
+              <a href="#forecast-changes">Forecast changes</a>
               <a href="#kickoff-weather">Weather</a>
               <a href="#market-prices">Sportsbook comparison</a>
               <a href="#personnel-reports">Personnel</a>
@@ -180,7 +184,6 @@ export default async function GamePage({
           </div>
           <div className="detail-grid">
             <div className="detail-stack">
-              <WeatherContext game={g} />
               <section className="panel">
                 <h2 id="model-read" tabIndex={-1}>
                   The model’s read
@@ -220,6 +223,7 @@ export default async function GamePage({
                   narrative.
                 </p>
               </section>
+              <WeatherContext game={g} />
               <section className="panel">
                 <h2>What moves the projection</h2>
                 <p className="fine">
@@ -256,7 +260,9 @@ export default async function GamePage({
               </section>
               {!!p.profiles?.length && (
                 <section className="panel">
-                  <h2>The matchup, beneath the score</h2>
+                  <h2 id="team-profiles" tabIndex={-1}>
+                    The matchup, beneath the score
+                  </h2>
                   <p>
                     Recent passing and rushing profiles, weighted over time.
                     Each offense is shown alongside what the opponent has

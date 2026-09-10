@@ -13,7 +13,9 @@ export function RevisionHistory({
 }) {
   return (
     <section className="panel">
-      <h2>What changed</h2>
+      <h2 id="forecast-changes" tabIndex={-1}>
+        What changed
+      </h2>
       <p className="fine">
         Compare each run with its predecessor. Source changes identify revised
         data files; they do not establish a player, injury or weather
