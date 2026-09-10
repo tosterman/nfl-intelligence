@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { personnelForGame } from "../src/lib/personnel";
+import { personnelForGame, orderPersonnelReports } from "../src/lib/personnel";
 import { personnelHealth } from "../src/lib/personnel-health";
 import type { Game } from "../src/lib/types";
 const game = {
@@ -35,6 +35,22 @@ const snapshot = {
   ],
 };
 const now = Date.parse(snapshot.retrievedAt);
+test("game designations precede practice-only entries without changing source records", () => {
+  const base = snapshot.players[0];
+  const players = [
+    { ...base, name: "Practice only", reportStatus: null },
+    { ...base, name: "Questionable", reportStatus: "Questionable" },
+    { ...base, name: "Out", reportStatus: "Out" },
+    { ...base, name: "Doubtful", reportStatus: "Doubtful" },
+    { ...base, name: "Another unreported", reportStatus: null },
+  ];
+  const original = structuredClone(players);
+  assert.deepEqual(
+    orderPersonnelReports(players).map((p) => p.name),
+    ["Out", "Doubtful", "Questionable", "Practice only", "Another unreported"],
+  );
+  assert.deepEqual(players, original);
+});
 test("source updates after acquisition are withheld even when both dates are fresh", () => {
   const data = {
     ...snapshot,

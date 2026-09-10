@@ -1,6 +1,6 @@
 import snapshot from "../../data/personnel.json";
 import collection from "../../data/personnel-collection.json";
-import { personnelForGame } from "@/lib/personnel";
+import { personnelForGame, orderPersonnelReports } from "@/lib/personnel";
 import type { Game } from "@/lib/types";
 import { teams, date, time } from "@/lib/teams";
 import { PersonnelExpiry } from "./personnel-expiry";
@@ -37,12 +37,23 @@ export function PersonnelPanel({ game }: { game: Game }) {
           </p>
           <div className="personnel-teams">
             {[game.away, game.home].map((team) => {
-              const players = selected.players.filter((r) => r.team === team);
+              const players = orderPersonnelReports(
+                selected.players.filter((r) => r.team === team),
+              );
               return (
                 <div key={team}>
                   <h3>
                     {teams[team].city} {teams[team].name}
                   </h3>
+                  {players.length > 0 && (
+                    <p className="fine">
+                      {players.filter((p) => p.reportStatus !== null).length}{" "}
+                      with a reported game designation ·{" "}
+                      {players.filter((p) => p.reportStatus === null).length}{" "}
+                      unreported. Out, doubtful and questionable entries appear
+                      first. Unreported does not mean available.
+                    </p>
+                  )}
                   {!players.length ? (
                     <p>
                       No matching reports in this snapshot. Availability is

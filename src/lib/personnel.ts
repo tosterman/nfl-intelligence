@@ -20,6 +20,20 @@ export type PersonnelSnapshot = {
   sourceHash: string;
   players: PlayerReport[];
 };
+export function orderPersonnelReports(players: PlayerReport[]) {
+  const priority: Record<string, number> = {
+    Out: 0,
+    Doubtful: 1,
+    Questionable: 2,
+  };
+  // Preserve source order within a designation; practice participation does
+  // not establish game availability or a player's importance to the model.
+  return [...players].sort(
+    (a, b) =>
+      (priority[a.reportStatus ?? ""] ?? 3) -
+      (priority[b.reportStatus ?? ""] ?? 3),
+  );
+}
 export function personnelForGame(
   snapshot: PersonnelSnapshot,
   game: Game,
