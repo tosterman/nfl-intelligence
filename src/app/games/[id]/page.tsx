@@ -1,0 +1,441 @@
+import { snapshotTime } from "@/lib/types";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { site, teams, pct, signed, time, date } from "@/lib/data";
+import { fairMoneyline } from "@/lib/math";
+import { TeamMark } from "@/components/brand";
+export function generateStaticParams() {
+  return site.games.map((g) => ({ id: g.id }));
+}
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const g = site.games.find((g) => g.id === id);
+  return {
+    title: g
+      ? `${teams[g.away].name} at ${teams[g.home].name} — Week ${g.week}`
+      : "Game not found",
+  };
+}
+export default async function GamePage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ from?: string }>;
+}) {
+  const { id } = await params;
+  const g = site.games.find((g) => g.id === id);
+  if (!g) notFound();
+  const { from } = await searchParams;
+  const returnTo =
+    from?.startsWith("/?week=") && !from.includes("\\")
+      ? from
+      : `/?week=${g.week}`;
+  const p = g.snapshot?.prediction;
+  const favorite = p ? (p.homeWinProbability >= 0.5 ? g.home : g.away) : null;
+  const probability = p
+    ? Math.max(p.homeWinProbability, 1 - p.homeWinProbability)
+    : 0;
+  return (
+    <div className="subpage">
+      <Link className="breadcrumb" href={returnTo}>
+        <ArrowLeft size={14} /> Back to the slate <span>/</span> Week {g.week}
+      </Link>
+      <section className="detail-hero">
+        <div className="detail-hero-meta">
+          <span>
+            {date(g.kickoff)} · {time(g.kickoff)} ET
+          </span>
+          <span>
+            {g.venue}
+            {g.neutral ? " · Neutral venue" : ""}
+          </span>
+        </div>
+        <div className="detail-scoreboard">
+          {[g.away, g.home].map((code, i) => (
+            <div className="detail-team" key={code}>
+              <TeamMark code={code} large />
+              <small>
+                {teams[code].city} · {i ? "Home" : "Away"}
+              </small>
+              {i ? <h2>{teams[code].name}</h2> : <h1>{teams[code].name}</h1>}
+              <strong>
+                {g.status === "final"
+                  ? i
+                    ? g.actualHome
+                    : g.actualAway
+                  : p
+                    ? (i ? p.homeScore : p.awayScore).toFixed(1)
+                    : "—"}
+              </strong>
+              <span>
+                {p
+                  ? `${pct(i ? p.homeWinProbability : 1 - p.homeWinProbability)} win probability`
+                  : "No pregame forecast"}
+              </span>
+            </div>
+          ))}
+        </div>
+        <div className="detail-prob">
+          {p && (
+            <div className="prob-track">
+              <i
+                style={{
+                  width: pct(1 - p.homeWinProbability),
+                  background: teams[g.away].color,
+                }}
+              />
+              <i style={{ flex: 1, background: teams[g.home].color }} />
+            </div>
+          )}
+          <p>
+            {g.status === "final"
+              ? "Final score"
+              : "Expected points · Not an exact-score prediction"}
+            {p ? " · Probability conditional on a decisive result" : ""}
+          </p>
+        </div>
+      </section>
+      {!p ? (
+        <section className="panel" style={{ marginTop: 24 }}>
+          <h2>
+            {g.status === "final"
+              ? "A result, without a rewritten prediction."
+              : "The forecast is still ahead."}
+          </h2>
+          <p>
+            {g.status === "final"
+              ? "No forecast was recorded before this game. We show the final score and exclude this game from the prospective record."
+              : "This game is on the schedule. A versioned projection will appear during game week, before kickoff."}
+          </p>
+          <Link href="/methodology" className="text-link">
+            Read our forecasting policy <ArrowUpRight size={15} />
+          </Link>
+        </section>
+      ) : (
+        <>
+          <div className="kpi-grid">
+            <div className="kpi">
+              <small>Model spread · Home team</small>
+              <strong>
+                {teams[g.home].short} {signed(-p.homeMargin)}
+              </strong>
+              <span>Independent of sportsbook lines</span>
+            </div>
+            <div className="kpi">
+              <small>Expected total</small>
+              <strong>{p.total.toFixed(1)}</strong>
+              <span>Combined points</span>
+            </div>
+            <div className="kpi">
+              <small>{teams[favorite!].name} fair moneyline</small>
+              <strong>{signed(fairMoneyline(probability), 0)}</strong>
+              <span>Conditional on no tie</span>
+            </div>
+            <div className="kpi">
+              <small>Model confidence</small>
+              <strong>Limited</strong>
+              <span>Personnel & weather unavailable</span>
+            </div>
+          </div>
+          <div className="detail-grid">
+            <div className="detail-stack">
+              <section className="panel">
+                <h2>The model’s read</h2>
+                <p className="lead">
+                  {teams[favorite!].city} has the stronger scoring profile, with
+                  a {pct(probability)} chance of winning a decisive game. The
+                  expected margin is {Math.abs(p.homeMargin).toFixed(1)} points.
+                </p>
+                <p>
+                  {p.contributions
+                    .filter((c) => Math.abs(c.points) > 0.05)
+                    .sort((a, b) => Math.abs(b.points) - Math.abs(a.points))
+                    .slice(0, 3)
+                    .map(
+                      (c) =>
+                        `${c.name} contributes ${Math.abs(c.points).toFixed(1)} points toward ${teams[c.points > 0 ? g.home : g.away].name}.`,
+                    )
+                    .join(" ")}{" "}
+                  These are model contributions from prior scoring and
+                  efficiency, not player-specific matchup findings.
+                </p>
+                <div className="notice">
+                  The middle 80% of modeled home-team margins run from{" "}
+                  {signed(p.marginInterval80[0])} to{" "}
+                  {signed(p.marginInterval80[1])} points. This is outcome
+                  variability, not a confidence interval on the estimated mean.
+                </div>
+                <p className="fine">
+                  Explanation generated deterministically from the structured
+                  model output. No unsupported injury, weather, or lineup
+                  narrative.
+                </p>
+              </section>
+              <section className="panel">
+                <h2>What moves the projection</h2>
+                <p className="fine">
+                  Points toward {teams[g.away].name} ← → Points toward{" "}
+                  {teams[g.home].name}
+                </p>
+                {p.contributions.map((c) => (
+                  <div key={c.name}>
+                    <div className="chart-row">
+                      <span>{c.name}</span>
+                      <div className="bar-axis">
+                        <div
+                          className="bar-fill"
+                          style={{
+                            left:
+                              c.points >= 0
+                                ? "50%"
+                                : `${50 - Math.min(48, Math.abs(c.points) * 8)}%`,
+                            width: `${Math.min(48, Math.abs(c.points) * 8)}%`,
+                            background:
+                              teams[c.points > 0 ? g.home : g.away].color,
+                          }}
+                        />
+                      </div>
+                      <strong>{signed(c.points)}</strong>
+                    </div>
+                  </div>
+                ))}
+                <p className="fine">
+                  Contributions sum to the {signed(p.homeMargin)} home margin.
+                  The offense and defense terms account for opponent strength
+                  and recency.
+                </p>
+              </section>
+              {!!p.profiles?.length && (
+                <section className="panel">
+                  <h2>The matchup, beneath the score</h2>
+                  <p>
+                    Recent passing and rushing profiles, weighted over time.
+                    Each offense is shown alongside what the opponent has
+                    allowed.
+                  </p>
+                  <table className="comparison">
+                    <thead>
+                      <tr>
+                        <th scope="col">Historical profile</th>
+                        {p.profiles.map((t) => (
+                          <th scope="col" key={t.team}>
+                            {teams[t.team].short}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Passing EPA / dropback</td>
+                        {p.profiles.map((t) => (
+                          <td key={t.team}>{signed(t.passEpa, 3)}</td>
+                        ))}
+                      </tr>
+                      <tr>
+                        <td>Pass EPA allowed</td>
+                        {p.profiles.map((t) => (
+                          <td key={t.team}>{signed(t.passEpaAllowed, 3)}</td>
+                        ))}
+                      </tr>
+                      <tr>
+                        <td>Rushing EPA / carry</td>
+                        {p.profiles.map((t) => (
+                          <td key={t.team}>{signed(t.rushEpa, 3)}</td>
+                        ))}
+                      </tr>
+                      <tr>
+                        <td>Rush EPA allowed</td>
+                        {p.profiles.map((t) => (
+                          <td key={t.team}>{signed(t.rushEpaAllowed, 3)}</td>
+                        ))}
+                      </tr>
+                      <tr>
+                        <td>Sacks / dropback</td>
+                        {p.profiles.map((t) => (
+                          <td key={t.team}>{(t.sackRate * 100).toFixed(1)}%</td>
+                        ))}
+                      </tr>
+                      <tr>
+                        <td>Completion over expected</td>
+                        {p.profiles.map((t) => (
+                          <td key={t.team}>{signed(t.cpoe)} pp</td>
+                        ))}
+                      </tr>
+                    </tbody>
+                  </table>
+                  <details>
+                    <summary>What do these numbers mean?</summary>
+                    <p>
+                      EPA means expected points added: how much a play changes
+                      the scoring outlook. Positive is better for offense;
+                      negative is better for defense. CPOE compares completion
+                      rate with expected completion difficulty. These are
+                      historical team profiles, not today’s player or scheme
+                      scouting.
+                    </p>
+                  </details>
+                  <p className="fine">
+                    90-day half-life ·{" "}
+                    {p.profiles
+                      .map(
+                        (t) =>
+                          `${teams[t.team].short}: ${t.games} prior games through ${t.through}`,
+                      )
+                      .join(" · ")}
+                    . Displayed profiles are unshrunk summaries; regression
+                    features also include shrinkage and standardization.
+                  </p>
+                </section>
+              )}
+              <section className="panel">
+                <h2>Model versus market</h2>
+                <table className="comparison">
+                  <thead>
+                    <tr>
+                      <th scope="col">Measure</th>
+                      <th scope="col">Our model</th>
+                      <th scope="col">Verified market</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{teams[g.home].short} spread</td>
+                      <td>{signed(-p.homeMargin)}</td>
+                      <td>Unavailable</td>
+                    </tr>
+                    <tr>
+                      <td>Total points</td>
+                      <td>{p.total.toFixed(1)}</td>
+                      <td>Unavailable</td>
+                    </tr>
+                    <tr>
+                      <td>{teams[g.home].short} moneyline</td>
+                      <td>{signed(fairMoneyline(p.homeWinProbability), 0)}</td>
+                      <td>Unavailable</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>
+                  No timestamped live price is connected. We cannot determine an
+                  edge. Historical closing lines are used only on the
+                  retrospective evaluation page.
+                </p>
+              </section>
+            </div>
+            <div className="detail-stack">
+              <section className="panel">
+                <h2>Evidence coverage</h2>
+                <div className="availability">
+                  <span>Scoring offense & defense</span>
+                  <span>Included</span>
+                </div>
+                <div className="availability">
+                  <span>Opponent strength</span>
+                  <span>Adjusted</span>
+                </div>
+                <div className="availability">
+                  <span>Passing & rushing efficiency</span>
+                  <span>
+                    {p.profiles?.length ? "Included" : "Not in this version"}
+                  </span>
+                </div>
+                <div className="availability">
+                  <span>Home field</span>
+                  <span>{g.neutral ? "Neutral · 0 points" : "Included"}</span>
+                </div>
+                <div className="availability">
+                  <span>Player availability</span>
+                  <span>Unknown</span>
+                </div>
+                <div className="availability">
+                  <span>Trench & scheme matchup</span>
+                  <span>Not modeled</span>
+                </div>
+                <div className="availability">
+                  <span>Kickoff weather</span>
+                  <span>Unknown</span>
+                </div>
+                <div className="availability">
+                  <span>Live market</span>
+                  <span>Unavailable</span>
+                </div>
+                <p className="fine">
+                  Missing features receive no adjustment. They are not evidence
+                  of full health, calm weather, or market agreement.
+                </p>
+              </section>
+              <section className="panel">
+                <h2>What changed</h2>
+                {g.history.map((s, snapshotIndex) => (
+                  <div className="timeline-item" key={s.hash}>
+                    <strong>
+                      {date(snapshotTime(s))} · {time(snapshotTime(s))} ET
+                    </strong>
+                    <p>
+                      {teams[g.home].short}{" "}
+                      {pct(s.prediction.homeWinProbability)} · Expected margin{" "}
+                      {signed(s.prediction.homeMargin)}
+                    </p>
+                    <p className="fine">
+                      {snapshotIndex === 0
+                        ? "Initial model snapshot. No earlier prediction is available."
+                        : s.modelVersion !==
+                            g.history[snapshotIndex - 1].modelVersion
+                          ? `Model upgraded from ${g.history[snapshotIndex - 1].modelVersion} to ${s.modelVersion}.`
+                          : "Input refresh; earlier snapshots are retained."}
+                    </p>
+                  </div>
+                ))}
+                <p className="fine">
+                  Every snapshot is retained. A new model run never replaces a
+                  pregame record. Times above are generation times; verified
+                  public availability is recorded separately.
+                </p>
+              </section>
+              <section className="panel">
+                <h2>Under the hood</h2>
+                <p className="fine">
+                  Version {g.snapshot!.modelVersion}
+                  <br />
+                  {g.snapshot!.trainingGames.toLocaleString()} prior games ·
+                  Training through {g.snapshot!.trainingThrough}
+                </p>
+                <details>
+                  <summary>Prediction interval & assumptions</summary>
+                  <p>
+                    Margin standard deviation: {p.sigmaMargin.toFixed(2)}{" "}
+                    points. Total standard deviation: {p.sigmaTotal.toFixed(2)}{" "}
+                    points. Both are estimated from 2023 out-of-sample
+                    residuals.
+                  </p>
+                  <p>
+                    The normal approximation smooths over football’s discrete
+                    scoring and does not estimate ties. Moneyline probabilities
+                    are conditional on a decisive result.
+                  </p>
+                </details>
+                <details>
+                  <summary>Snapshot fingerprint</summary>
+                  <p className="hash">{g.snapshot!.hash}</p>
+                  <p className="fine">
+                    SHA-256 of the canonical snapshot. The data repository
+                    preserves the history.
+                  </p>
+                </details>
+                <Link className="text-link" href="/methodology">
+                  Full methodology <ArrowUpRight size={14} />
+                </Link>
+              </section>
+            </div>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}

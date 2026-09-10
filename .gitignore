@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.vercel/
+.env*
+!.env.example
+__pycache__/
+test-results/
+playwright-report/
+data/games.csv
+data/raw/
+*.tsbuildinfo
+founding.docx

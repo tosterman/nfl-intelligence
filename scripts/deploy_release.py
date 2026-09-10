@@ -1,0 +1,33 @@
+"""Deploy through Vercel REST, wait for READY, verify endpoint, archive receipt."""
+import base64,json,os,time,urllib.request
+from pathlib import Path
+from record_publication import make_receipt
+ROOT=Path(__file__).resolve().parents[1]
+ALLOW_ROOT={'package.json','package-lock.json','next.config.ts','tsconfig.json','next-env.d.ts','vercel.json'}
+def release_files():
+    files=[]
+    paths=[p for p in ROOT.iterdir() if p.name in ALLOW_ROOT]
+    for folder in ['src','public']:
+        paths.extend(p for p in (ROOT/folder).rglob('*') if p.is_file())
+    paths.append(ROOT/'data/site.json')
+    for p in paths:
+        binary=p.suffix in ['.ttf','.woff','.woff2','.png','.jpg','.ico']
+        files.append({'file':p.relative_to(ROOT).as_posix(),'data':base64.b64encode(p.read_bytes()).decode() if binary else p.read_text(encoding='utf-8-sig'),'encoding':'base64' if binary else 'utf-8'})
+    return files
+def request(path,body=None):
+    token=os.environ['VERCEL_TOKEN'];team=os.environ['VERCEL_ORG_ID']
+    req=urllib.request.Request('https://api.vercel.com'+path+('?' if '?' not in path else '&')+'teamId='+team,data=json.dumps(body).encode() if body else None,headers={'Authorization':'Bearer '+token,'Content-Type':'application/json'})
+    return json.load(urllib.request.urlopen(req,timeout=60))
+def main():
+    result=request('/v13/deployments',{'name':'nfl-intelligence','project':os.environ['VERCEL_PROJECT_ID'],'target':'production','files':release_files(),'projectSettings':{'framework':'nextjs','nodeVersion':'22.x'}})
+    for _ in range(90):
+        meta=request('/v13/deployments/'+result['id'])
+        if meta['readyState']=='READY':break
+        if meta['readyState'] in ['ERROR','CANCELED']:raise RuntimeError('Deployment failed: '+meta['readyState'])
+        time.sleep(5)
+    else:raise TimeoutError('Deployment did not become ready')
+    url='https://'+meta['url'];artifact=json.load(urllib.request.urlopen(url+'/api/forecasts',timeout=30))
+    ledger=json.loads((ROOT/'data/ledger.json').read_text());receipt=make_receipt(meta,artifact,ledger)
+    path=ROOT/'data/publications.json';receipts=json.loads(path.read_text());receipts.append(receipt);path.write_text(json.dumps(receipts,indent=2)+'\n')
+    print('Verified '+url+'; archived '+str(len(receipt['snapshotHashes']))+' forecast versions')
+if __name__=='__main__':main()

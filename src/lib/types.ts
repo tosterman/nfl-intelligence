@@ -1,0 +1,56 @@
+export type Profile = {
+  team: string;
+  games: number;
+  through: string;
+  passEpa: number;
+  rushEpa: number;
+  cpoe: number;
+  sackRate: number;
+  passEpaAllowed: number;
+  rushEpaAllowed: number;
+};
+export type Prediction = {
+  homeScore: number;
+  awayScore: number;
+  homeMargin: number;
+  total: number;
+  homeWinProbability: number;
+  marginInterval80: number[];
+  totalInterval80: number[];
+  sigmaMargin: number;
+  sigmaTotal: number;
+  contributions: { name: string; points: number; detail: string }[];
+  profiles?: Profile[];
+};
+export type Snapshot = {
+  gameId: string;
+  modelVersion: string;
+  generatedAt?: string;
+  publishedAt?: string;
+  trainingGames: number;
+  trainingThrough: string;
+  prediction: Prediction;
+  hash: string;
+};
+export type Game = {
+  id: string;
+  season: number;
+  week: number;
+  type: string;
+  home: string;
+  away: string;
+  kickoff: string | null;
+  venue: string;
+  neutral: boolean;
+  roof: string;
+  status: string;
+  actualHome: number | null;
+  actualAway: number | null;
+  snapshot: Snapshot | null;
+  history: Snapshot[];
+  market: null;
+  weather: null;
+  injuries: null;
+};
+export const snapshotTime = (s: Snapshot) =>
+  s.generatedAt ?? s.publishedAt ?? "";

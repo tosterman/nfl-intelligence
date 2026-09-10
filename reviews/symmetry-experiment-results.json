@@ -1,0 +1,754 @@
+{
+  "score_grid": [
+    {
+      "family": "score",
+      "half": 90,
+      "ridge": 1,
+      "margin_mae": 10.293,
+      "total_mae": 11.236
+    },
+    {
+      "family": "score",
+      "half": 90,
+      "ridge": 3,
+      "margin_mae": 10.135,
+      "total_mae": 11.086
+    },
+    {
+      "family": "score",
+      "half": 90,
+      "ridge": 6,
+      "margin_mae": 10.13,
+      "total_mae": 11.006
+    },
+    {
+      "family": "score",
+      "half": 90,
+      "ridge": 12,
+      "margin_mae": 10.236,
+      "total_mae": 10.973
+    },
+    {
+      "family": "score",
+      "half": 90,
+      "ridge": 20,
+      "margin_mae": 10.363,
+      "total_mae": 10.973
+    },
+    {
+      "family": "score",
+      "half": 90,
+      "ridge": 60,
+      "margin_mae": 10.616,
+      "total_mae": 11.021
+    },
+    {
+      "family": "score",
+      "half": 180,
+      "ridge": 1,
+      "margin_mae": 10.192,
+      "total_mae": 11.12
+    },
+    {
+      "family": "score",
+      "half": 180,
+      "ridge": 3,
+      "margin_mae": 10.11,
+      "total_mae": 11.064
+    },
+    {
+      "family": "score",
+      "half": 180,
+      "ridge": 6,
+      "margin_mae": 10.081,
+      "total_mae": 11.023
+    },
+    {
+      "family": "score",
+      "half": 180,
+      "ridge": 12,
+      "margin_mae": 10.117,
+      "total_mae": 10.998
+    },
+    {
+      "family": "score",
+      "half": 180,
+      "ridge": 20,
+      "margin_mae": 10.217,
+      "total_mae": 11.011
+    },
+    {
+      "family": "score",
+      "half": 180,
+      "ridge": 60,
+      "margin_mae": 10.503,
+      "total_mae": 11.068
+    },
+    {
+      "family": "score",
+      "half": 270,
+      "ridge": 1,
+      "margin_mae": 10.293,
+      "total_mae": 11.063
+    },
+    {
+      "family": "score",
+      "half": 270,
+      "ridge": 3,
+      "margin_mae": 10.217,
+      "total_mae": 11.031
+    },
+    {
+      "family": "score",
+      "half": 270,
+      "ridge": 6,
+      "margin_mae": 10.166,
+      "total_mae": 11.01
+    },
+    {
+      "family": "score",
+      "half": 270,
+      "ridge": 12,
+      "margin_mae": 10.157,
+      "total_mae": 11.004
+    },
+    {
+      "family": "score",
+      "half": 270,
+      "ridge": 20,
+      "margin_mae": 10.202,
+      "total_mae": 11.022
+    },
+    {
+      "family": "score",
+      "half": 270,
+      "ridge": 60,
+      "margin_mae": 10.446,
+      "total_mae": 11.092
+    },
+    {
+      "family": "score",
+      "half": 365,
+      "ridge": 1,
+      "margin_mae": 10.401,
+      "total_mae": 11.031
+    },
+    {
+      "family": "score",
+      "half": 365,
+      "ridge": 3,
+      "margin_mae": 10.333,
+      "total_mae": 11.016
+    },
+    {
+      "family": "score",
+      "half": 365,
+      "ridge": 6,
+      "margin_mae": 10.277,
+      "total_mae": 11.006
+    },
+    {
+      "family": "score",
+      "half": 365,
+      "ridge": 12,
+      "margin_mae": 10.239,
+      "total_mae": 11.004
+    },
+    {
+      "family": "score",
+      "half": 365,
+      "ridge": 20,
+      "margin_mae": 10.248,
+      "total_mae": 11.026
+    },
+    {
+      "family": "score",
+      "half": 365,
+      "ridge": 60,
+      "margin_mae": 10.423,
+      "total_mae": 11.1
+    },
+    {
+      "family": "score",
+      "half": 540,
+      "ridge": 1,
+      "margin_mae": 10.548,
+      "total_mae": 11.025
+    },
+    {
+      "family": "score",
+      "half": 540,
+      "ridge": 3,
+      "margin_mae": 10.495,
+      "total_mae": 11.017
+    },
+    {
+      "family": "score",
+      "half": 540,
+      "ridge": 6,
+      "margin_mae": 10.437,
+      "total_mae": 11.012
+    },
+    {
+      "family": "score",
+      "half": 540,
+      "ridge": 12,
+      "margin_mae": 10.371,
+      "total_mae": 11.012
+    },
+    {
+      "family": "score",
+      "half": 540,
+      "ridge": 20,
+      "margin_mae": 10.34,
+      "total_mae": 11.025
+    },
+    {
+      "family": "score",
+      "half": 540,
+      "ridge": 60,
+      "margin_mae": 10.425,
+      "total_mae": 11.1
+    }
+  ],
+  "epa_grid": [
+    {
+      "family": "epa",
+      "half": 90,
+      "ridge": 10,
+      "games": 569,
+      "margin_mae": 10.120853275762943,
+      "total_mae": 10.8790197303026,
+      "brier": 0.22801561753820615,
+      "accuracy": 0.6166077738515902,
+      "margin_rmse": 12.99313935219549,
+      "coverage80": 0.836555360281195
+    },
+    {
+      "family": "epa",
+      "half": 90,
+      "ridge": 100,
+      "games": 569,
+      "margin_mae": 10.121362591787577,
+      "total_mae": 10.895375860272075,
+      "brier": 0.22812544234144722,
+      "accuracy": 0.6113074204946997,
+      "margin_rmse": 12.999580691379045,
+      "coverage80": 0.8347978910369068
+    },
+    {
+      "family": "epa",
+      "half": 90,
+      "ridge": 1000,
+      "games": 569,
+      "margin_mae": 10.146313413801078,
+      "total_mae": 10.94115419179618,
+      "brier": 0.2293738849559873,
+      "accuracy": 0.6183745583038869,
+      "margin_rmse": 13.067907841546093,
+      "coverage80": 0.8330404217926186
+    },
+    {
+      "family": "epa",
+      "half": 180,
+      "ridge": 10,
+      "games": 569,
+      "margin_mae": 10.152479276962024,
+      "total_mae": 10.88886219744102,
+      "brier": 0.22690656192850647,
+      "accuracy": 0.6148409893992933,
+      "margin_rmse": 13.050275458035198,
+      "coverage80": 0.8330404217926186
+    },
+    {
+      "family": "epa",
+      "half": 180,
+      "ridge": 100,
+      "games": 569,
+      "margin_mae": 10.153664901439514,
+      "total_mae": 10.902741452407522,
+      "brier": 0.22708147211353177,
+      "accuracy": 0.6148409893992933,
+      "margin_rmse": 13.058416431467068,
+      "coverage80": 0.827768014059754
+    },
+    {
+      "family": "epa",
+      "half": 180,
+      "ridge": 1000,
+      "games": 569,
+      "margin_mae": 10.154526006837738,
+      "total_mae": 10.936959009895473,
+      "brier": 0.22828704257664628,
+      "accuracy": 0.6219081272084805,
+      "margin_rmse": 13.107231251341444,
+      "coverage80": 0.820738137082601
+    },
+    {
+      "family": "epa",
+      "half": 365,
+      "ridge": 10,
+      "games": 569,
+      "margin_mae": 10.347069748721601,
+      "total_mae": 10.91711010347441,
+      "brier": 0.23012512919804048,
+      "accuracy": 0.6219081272084805,
+      "margin_rmse": 13.218166688193703,
+      "coverage80": 0.827768014059754
+    },
+    {
+      "family": "epa",
+      "half": 365,
+      "ridge": 100,
+      "games": 569,
+      "margin_mae": 10.346390544091829,
+      "total_mae": 10.931191122470066,
+      "brier": 0.23039182249256082,
+      "accuracy": 0.627208480565371,
+      "margin_rmse": 13.229040940810888,
+      "coverage80": 0.8224956063268892
+    },
+    {
+      "family": "epa",
+      "half": 365,
+      "ridge": 1000,
+      "games": 569,
+      "margin_mae": 10.309891001801534,
+      "total_mae": 10.979967351725923,
+      "brier": 0.2315722537873252,
+      "accuracy": 0.6236749116607774,
+      "margin_rmse": 13.270314357615408,
+      "coverage80": 0.8189806678383128
+    }
+  ],
+  "blend_grid": [
+    {
+      "epa_weight": 0,
+      "games": 569,
+      "margin_mae": 10.081101933216168,
+      "total_mae": 11.023151142355008,
+      "brier": 0.22723622101771948,
+      "accuracy": 0.6378091872791519,
+      "margin_rmse": 12.980029586988087,
+      "coverage80": 0.820738137082601
+    },
+    {
+      "epa_weight": 0.25,
+      "games": 569,
+      "margin_mae": 10.04296153570423,
+      "total_mae": 10.948961201572054,
+      "brier": 0.226406654765545,
+      "accuracy": 0.6307420494699647,
+      "margin_rmse": 12.92991120329307,
+      "coverage80": 0.8242530755711776
+    },
+    {
+      "epa_weight": 0.5,
+      "games": 569,
+      "margin_mae": 10.046127563364912,
+      "total_mae": 10.904976107809976,
+      "brier": 0.2262680123514472,
+      "accuracy": 0.6183745583038869,
+      "margin_rmse": 12.91535904642648,
+      "coverage80": 0.8295254833040422
+    },
+    {
+      "epa_weight": 0.75,
+      "games": 569,
+      "margin_mae": 10.073306960145773,
+      "total_mae": 10.884674417358566,
+      "brier": 0.22681235573509018,
+      "accuracy": 0.6219081272084805,
+      "margin_rmse": 12.936493141430798,
+      "coverage80": 0.8312829525483304
+    },
+    {
+      "epa_weight": 1,
+      "games": 569,
+      "margin_mae": 10.120853275762943,
+      "total_mae": 10.8790197303026,
+      "brier": 0.22801561753820615,
+      "accuracy": 0.6166077738515902,
+      "margin_rmse": 12.99313935219549,
+      "coverage80": 0.836555360281195
+    }
+  ],
+  "selected_score": {
+    "family": "score",
+    "half": 180,
+    "ridge": 6,
+    "margin_mae": 10.081,
+    "total_mae": 11.023
+  },
+  "selected_epa": {
+    "family": "epa",
+    "half": 90,
+    "ridge": 10,
+    "games": 569,
+    "margin_mae": 10.120853275762943,
+    "total_mae": 10.8790197303026,
+    "brier": 0.22801561753820615,
+    "accuracy": 0.6166077738515902,
+    "margin_rmse": 12.99313935219549,
+    "coverage80": 0.836555360281195
+  },
+  "selected_blend_weight": 0.25,
+  "evaluations": {
+    "score_selected": {
+      "sigma_2023": [
+        13.51423133394454,
+        13.435022132667402
+      ],
+      "validation": {
+        "games": 569,
+        "margin_mae": 10.081101933216168,
+        "total_mae": 11.023151142355008,
+        "brier": 0.22723622101771948,
+        "accuracy": 0.6378091872791519,
+        "margin_rmse": 12.980029586988087,
+        "coverage80": 0.820738137082601
+      },
+      "development": {
+        "games": 570,
+        "margin_mae": 10.253317543859648,
+        "total_mae": 10.309564912280702,
+        "brier": 0.22266446675737464,
+        "accuracy": 0.6449912126537786,
+        "margin_rmse": 13.165954253233817,
+        "coverage80": 0.8070175438596491
+      },
+      "seasons": {
+        "2024": {
+          "games": 285,
+          "margin_mae": 10.281301754385966,
+          "total_mae": 10.030863157894737,
+          "brier": 0.22028676159375826,
+          "accuracy": 0.656140350877193,
+          "margin_rmse": 13.335845263865144,
+          "coverage80": 0.7929824561403509
+        },
+        "2025": {
+          "games": 285,
+          "margin_mae": 10.225333333333333,
+          "total_mae": 10.588266666666666,
+          "brier": 0.22505054412227138,
+          "accuracy": 0.6338028169014085,
+          "margin_rmse": 12.99384215290985,
+          "coverage80": 0.8210526315789474
+        }
+      }
+    },
+    "epa_selected": {
+      "sigma_2023": [
+        13.789260960926548,
+        13.543176623205095
+      ],
+      "validation": {
+        "games": 569,
+        "margin_mae": 10.120853275762943,
+        "total_mae": 10.8790197303026,
+        "brier": 0.22801561753820615,
+        "accuracy": 0.6166077738515902,
+        "margin_rmse": 12.99313935219549,
+        "coverage80": 0.836555360281195
+      },
+      "development": {
+        "games": 570,
+        "margin_mae": 10.066216010968839,
+        "total_mae": 10.304650803998022,
+        "brier": 0.21827504965449526,
+        "accuracy": 0.664323374340949,
+        "margin_rmse": 12.942367291552497,
+        "coverage80": 0.8175438596491228
+      },
+      "seasons": {
+        "2024": {
+          "games": 285,
+          "margin_mae": 9.973586344331512,
+          "total_mae": 9.883371894159358,
+          "brier": 0.21396363222130751,
+          "accuracy": 0.6771929824561403,
+          "margin_rmse": 12.863527561970212,
+          "coverage80": 0.8105263157894737
+        },
+        "2025": {
+          "games": 285,
+          "margin_mae": 10.158845677606164,
+          "total_mae": 10.725929713836686,
+          "brier": 0.22260164813498293,
+          "accuracy": 0.6514084507042254,
+          "margin_rmse": 13.02072966009695,
+          "coverage80": 0.8245614035087719
+        }
+      }
+    },
+    "blend_selected": {
+      "sigma_2023": [
+        13.537864904930167,
+        13.400742577616185
+      ],
+      "validation": {
+        "games": 569,
+        "margin_mae": 10.04296153570423,
+        "total_mae": 10.948961201572054,
+        "brier": 0.226406654765545,
+        "accuracy": 0.6307420494699647,
+        "margin_rmse": 12.92991120329307,
+        "coverage80": 0.8242530755711776
+      },
+      "development": {
+        "games": 570,
+        "margin_mae": 10.15890565867785,
+        "total_mae": 10.25096193719269,
+        "brier": 0.2203648435740752,
+        "accuracy": 0.6344463971880492,
+        "margin_rmse": 13.050551414436624,
+        "coverage80": 0.8105263157894737
+      },
+      "seasons": {
+        "2024": {
+          "games": 285,
+          "margin_mae": 10.152395190698524,
+          "total_mae": 9.952264331741825,
+          "brier": 0.21761608224766446,
+          "accuracy": 0.6631578947368421,
+          "margin_rmse": 13.16573961707352,
+          "coverage80": 0.8035087719298246
+        },
+        "2025": {
+          "games": 285,
+          "margin_mae": 10.165416126657176,
+          "total_mae": 10.549659542643555,
+          "brier": 0.22312328363755077,
+          "accuracy": 0.6056338028169014,
+          "margin_rmse": 12.934337430928895,
+          "coverage80": 0.8175438596491228
+        }
+      }
+    },
+    "original_180_20": {
+      "sigma_2023": [
+        13.71494318003465,
+        13.459981088853011
+      ],
+      "validation": {
+        "games": 569,
+        "margin_mae": 10.216994727592267,
+        "total_mae": 11.011404217926186,
+        "brier": 0.2317844025019464,
+        "accuracy": 0.6289752650176679,
+        "margin_rmse": 13.19306388238037,
+        "coverage80": 0.8172231985940246
+      },
+      "development": {
+        "games": 570,
+        "margin_mae": 10.472194736842106,
+        "total_mae": 10.338521052631577,
+        "brier": 0.2300944653276779,
+        "accuracy": 0.616871704745167,
+        "margin_rmse": 13.46795915607946,
+        "coverage80": 0.787719298245614
+      },
+      "seasons": {
+        "2024": {
+          "games": 285,
+          "margin_mae": 10.544259649122807,
+          "total_mae": 9.995694736842104,
+          "brier": 0.22871057703989453,
+          "accuracy": 0.631578947368421,
+          "margin_rmse": 13.65332440694952,
+          "coverage80": 0.7824561403508772
+        },
+        "2025": {
+          "games": 285,
+          "margin_mae": 10.400129824561402,
+          "total_mae": 10.681347368421052,
+          "brier": 0.23148322646154496,
+          "accuracy": 0.602112676056338,
+          "margin_rmse": 13.280006788335825,
+          "coverage80": 0.7929824561403509
+        }
+      }
+    }
+  },
+  "sources": [
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2010.csv",
+      "sha256": "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "retrievedAt": "2026-09-10T14:07:54.896998+00:00",
+      "season": 2010,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2011.csv",
+      "sha256": "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "retrievedAt": "2026-09-10T14:07:54.927186+00:00",
+      "season": 2011,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2012.csv",
+      "sha256": "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "retrievedAt": "2026-09-10T14:07:54.928216+00:00",
+      "season": 2012,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2013.csv",
+      "sha256": "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "retrievedAt": "2026-09-10T14:07:54.925755+00:00",
+      "season": 2013,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2014.csv",
+      "sha256": "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "retrievedAt": "2026-09-10T14:07:54.909574+00:00",
+      "season": 2014,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2015.csv",
+      "sha256": "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "retrievedAt": "2026-09-10T14:07:54.923279+00:00",
+      "season": 2015,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2016.csv",
+      "sha256": "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "retrievedAt": "2026-09-10T14:07:55.231634+00:00",
+      "season": 2016,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2017.csv",
+      "sha256": "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "retrievedAt": "2026-09-10T14:07:55.181929+00:00",
+      "season": 2017,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2018.csv",
+      "sha256": "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "retrievedAt": "2026-09-10T14:07:55.295615+00:00",
+      "season": 2018,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2019.csv",
+      "sha256": "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "retrievedAt": "2026-09-10T14:07:55.248741+00:00",
+      "season": 2019,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2020.csv",
+      "sha256": "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "retrievedAt": "2026-09-10T14:07:55.291363+00:00",
+      "season": 2020,
+      "rows": 538,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2021.csv",
+      "sha256": "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "retrievedAt": "2026-09-10T14:07:55.251724+00:00",
+      "season": 2021,
+      "rows": 570,
+      "latestWeek": 22,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2022.csv",
+      "sha256": "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "retrievedAt": "2026-09-10T14:07:55.449495+00:00",
+      "season": 2022,
+      "rows": 568,
+      "latestWeek": 22,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2023.csv",
+      "sha256": "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "retrievedAt": "2026-09-10T14:07:55.522642+00:00",
+      "season": 2023,
+      "rows": 570,
+      "latestWeek": 22,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2024.csv",
+      "sha256": "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "retrievedAt": "2026-09-10T14:07:55.527942+00:00",
+      "season": 2024,
+      "rows": 570,
+      "latestWeek": 22,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2025.csv",
+      "sha256": "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "retrievedAt": "2026-09-10T14:13:14.883098+00:00",
+      "season": 2025,
+      "rows": 570,
+      "latestWeek": 22,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    }
+  ],
+  "stats_rows": 8726,
+  "structure": "symmetric-v2: margin venue+differences without intercept; total intercept+venue+sums"
+}
