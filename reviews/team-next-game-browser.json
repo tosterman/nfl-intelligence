@@ -1,0 +1,30 @@
+[
+  {
+    "engine": "chromium",
+    "team": "ne",
+    "card": "PIT\nNext scheduled: vs. Steelers\n\nWeek 2 \u00b7 Sep 20 \u00b7 Sun 1:00 PM ET \u00b7 Forecast not yet available\n\nSchedule as of Sep 10 \u00b7 Thu 4:24 PM ET.",
+    "target": "/games/2026_02_PIT_NE",
+    "overflow": false
+  },
+  {
+    "engine": "chromium",
+    "team": "sf",
+    "card": "LAR\nNext scheduled: vs. Rams\n\nWeek 1 \u00b7 Sep 10 \u00b7 Thu 8:35 PM ET \u00b7 Neutral site \u00b7 Model win probability 41%\n\nSchedule as of Sep 10 \u00b7 Thu 4:24 PM ET.",
+    "target": "/games/2026_01_SF_LA",
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "team": "ne",
+    "card": "PIT\nNext scheduled: vs. Steelers\n\nWeek 2 \u00b7 Sep 20 \u00b7 Sun 1:00 PM ET \u00b7 Forecast not yet available\n\nSchedule as of Sep 10 \u00b7 Thu 4:24 PM ET.",
+    "target": "/games/2026_02_PIT_NE",
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "team": "sf",
+    "card": "LAR\nNext scheduled: vs. Rams\n\nWeek 1 \u00b7 Sep 10 \u00b7 Thu 8:35 PM ET \u00b7 Neutral site \u00b7 Model win probability 41%\n\nSchedule as of Sep 10 \u00b7 Thu 4:24 PM ET.",
+    "target": "/games/2026_01_SF_LA",
+    "overflow": false
+  }
+]

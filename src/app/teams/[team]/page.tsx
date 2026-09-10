@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { site, teams, signed, pct, time, date } from "@/lib/data";
 import { TeamMark } from "@/components/brand";
+import { nextScheduledGame } from "@/lib/team-schedule";
 export function generateStaticParams() {
   return Object.keys(teams).map((team) => ({ team: team.toLowerCase() }));
 }
@@ -28,7 +29,7 @@ export default async function TeamPage({
   if (!t) notFound();
   const rating = site.ratings.find((r) => r.team === code)!;
   const games = site.games.filter((g) => g.home === code || g.away === code);
-  const next = games.find((g) => g.snapshot && g.status === "scheduled");
+  const next = nextScheduledGame(games, code);
   return (
     <div className="subpage">
       <Link className="breadcrumb" href="/ratings">
@@ -74,17 +75,20 @@ export default async function TeamPage({
           <TeamMark code={next.home === code ? next.away : next.home} />
           <div>
             <h3>
-              Up next: {next.home === code ? "vs." : "at"}{" "}
+              Next scheduled: {next.neutral || next.home === code ? "vs." : "at"}{" "}
               {teams[next.home === code ? next.away : next.home].name}
             </h3>
             <p>
-              {date(next.kickoff)} · {time(next.kickoff)} ET · Model win
-              probability{" "}
-              {pct(
-                next.home === code
-                  ? next.snapshot!.prediction.homeWinProbability
-                  : 1 - next.snapshot!.prediction.homeWinProbability,
-              )}
+              Week {next.week} · {date(next.kickoff)} · {time(next.kickoff)} ET
+              {next.neutral ? " · Neutral site" : ""}
+              {next.snapshot ? (
+                <> · Model win probability {pct(next.home === code
+                  ? next.snapshot.prediction.homeWinProbability
+                  : 1 - next.snapshot.prediction.homeWinProbability)}</>
+              ) : " · Forecast not yet available"}
+            </p>
+            <p className="fine">
+              Schedule as of {date(site.generatedAt)} · {time(site.generatedAt)} ET.
             </p>
           </div>
           <ArrowUpRight size={20} />
@@ -117,8 +121,9 @@ export default async function TeamPage({
                 <tr key={g.id}>
                   <th scope="row">{g.week}</th>
                   <td>
-                    {g.home === code ? "vs." : "at"}{" "}
+                    {g.neutral || g.home === code ? "vs." : "at"}{" "}
                     {teams[g.home === code ? g.away : g.home].name}
+                    {g.neutral ? " · Neutral site" : ""}
                   </td>
                   <td>
                     {date(g.kickoff)} · {time(g.kickoff)}
