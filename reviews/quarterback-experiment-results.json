@@ -1,0 +1,4244 @@
+{
+  "protocol": "Fixed ridge10, no intercept; net passing rate difference and 10x opposite sack-rate difference. Fit2025weeks1-8; evaluateweek9onward including playoffs. Existing2025development data reused; not untouched holdout.",
+  "baselineModelVersion": "score-efficiency-v1.2.0",
+  "baselineReplayScheduleHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+  "teamStatSources": [
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2010.csv",
+      "sha256": "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "retrievedAt": "2026-09-10T14:07:54.896998+00:00",
+      "season": 2010,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2011.csv",
+      "sha256": "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "retrievedAt": "2026-09-10T14:07:54.927186+00:00",
+      "season": 2011,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2012.csv",
+      "sha256": "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "retrievedAt": "2026-09-10T14:07:54.928216+00:00",
+      "season": 2012,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2013.csv",
+      "sha256": "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "retrievedAt": "2026-09-10T14:07:54.925755+00:00",
+      "season": 2013,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2014.csv",
+      "sha256": "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "retrievedAt": "2026-09-10T14:07:54.909574+00:00",
+      "season": 2014,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2015.csv",
+      "sha256": "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "retrievedAt": "2026-09-10T14:07:54.923279+00:00",
+      "season": 2015,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2016.csv",
+      "sha256": "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "retrievedAt": "2026-09-10T14:07:55.231634+00:00",
+      "season": 2016,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2017.csv",
+      "sha256": "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "retrievedAt": "2026-09-10T14:07:55.181929+00:00",
+      "season": 2017,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2018.csv",
+      "sha256": "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "retrievedAt": "2026-09-10T14:07:55.295615+00:00",
+      "season": 2018,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2019.csv",
+      "sha256": "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "retrievedAt": "2026-09-10T14:07:55.248741+00:00",
+      "season": 2019,
+      "rows": 534,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2020.csv",
+      "sha256": "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "retrievedAt": "2026-09-10T14:07:55.291363+00:00",
+      "season": 2020,
+      "rows": 538,
+      "latestWeek": 21,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2021.csv",
+      "sha256": "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "retrievedAt": "2026-09-10T14:07:55.251724+00:00",
+      "season": 2021,
+      "rows": 570,
+      "latestWeek": 22,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2022.csv",
+      "sha256": "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "retrievedAt": "2026-09-10T14:07:55.449495+00:00",
+      "season": 2022,
+      "rows": 568,
+      "latestWeek": 22,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2023.csv",
+      "sha256": "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "retrievedAt": "2026-09-10T14:07:55.522642+00:00",
+      "season": 2023,
+      "rows": 570,
+      "latestWeek": 22,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2024.csv",
+      "sha256": "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "retrievedAt": "2026-09-10T14:07:55.527942+00:00",
+      "season": 2024,
+      "rows": 570,
+      "latestWeek": 22,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    },
+    {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/stats_team/stats_team_week_2025.csv",
+      "sha256": "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "retrievedAt": "2026-09-10T14:28:45.571456+00:00",
+      "season": 2025,
+      "rows": 570,
+      "latestWeek": 22,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+      "timestampMeaning": "Local acquisition time; upstream publication and vintage availability unverified."
+    }
+  ],
+  "featureArtifactHash": "5351e5d745f66bad0e7d81fc6c70d50bd4e79c40815d6c92589a1c8632c2af9f",
+  "fitGames": 118,
+  "coefficients": [
+    2.559785102317412,
+    2.6867359432531073
+  ],
+  "evaluation": {
+    "baseline": {
+      "games": 164,
+      "marginMae": 10.04160975609756,
+      "marginRmse": 12.60357535510092
+    },
+    "candidate": {
+      "games": 164,
+      "marginMae": 9.98281575854795,
+      "marginRmse": 12.524788148783163
+    },
+    "withBothFeatures": 149,
+    "fallbackGames": 15
+  },
+  "trainingLabelEmbargoThrough": "2025-10-29T00:15:00+00:00",
+  "firstEvaluationCutoff": "2025-10-30T00:15:00+00:00",
+  "codeHashes": {
+    "experiment_quarterback.py": "d2f8808c0cced473f444243840a9aed640c6a3644d55fed1a1818eefd40901a7",
+    "refresh.py": "8633a468e67ad1efdf3fc1666621863703f2896950cdb836a3810e3799d3c827",
+    "build_data.py": "1137dbd0f57c6d0b913dc10439172b5a742d77c9cac0229a0d1fb7e26064bba5",
+    "experiment_model.py": "ee86851c45057e16b2db0629cbb20b1484936ae8ea661de69e4f2ec05a9d9ecd"
+  },
+  "pairedWeeklyUncertainty": {
+    "direction": "candidate minus baseline; negative favors candidate",
+    "clusters": 14,
+    "draws": 10000,
+    "seed": 31025,
+    "maeDelta": -0.058793997549609296,
+    "percentile95": [
+      -0.3138709558024282,
+      0.19788045822062453
+    ],
+    "weeks": [
+      {
+        "week": 9,
+        "games": 14,
+        "maeDelta": 0.3985586561845532
+      },
+      {
+        "week": 10,
+        "games": 14,
+        "maeDelta": -0.08124356555604662
+      },
+      {
+        "week": 11,
+        "games": 15,
+        "maeDelta": -0.39256317626202003
+      },
+      {
+        "week": 12,
+        "games": 14,
+        "maeDelta": 0.19901014650887086
+      },
+      {
+        "week": 13,
+        "games": 16,
+        "maeDelta": -0.5582359223689777
+      },
+      {
+        "week": 14,
+        "games": 14,
+        "maeDelta": 0.6902753889287004
+      },
+      {
+        "week": 15,
+        "games": 16,
+        "maeDelta": -0.05683782591573383
+      },
+      {
+        "week": 16,
+        "games": 16,
+        "maeDelta": 0.46718952740875835
+      },
+      {
+        "week": 17,
+        "games": 16,
+        "maeDelta": -0.7282083643200504
+      },
+      {
+        "week": 18,
+        "games": 16,
+        "maeDelta": -0.277345625385392
+      },
+      {
+        "week": 19,
+        "games": 6,
+        "maeDelta": -0.29834143687705
+      },
+      {
+        "week": 20,
+        "games": 4,
+        "maeDelta": 0.03209344034284034
+      },
+      {
+        "week": 21,
+        "games": 2,
+        "maeDelta": 0.3047390499025542
+      },
+      {
+        "week": 22,
+        "games": 1,
+        "maeDelta": -1.1389685897425554
+      }
+    ]
+  },
+  "comparableEvaluation": {
+    "baseline": {
+      "games": 149,
+      "marginMae": 10.080174496644295,
+      "marginRmse": 12.667350432504257
+    },
+    "candidate": {
+      "games": 149,
+      "marginMae": 10.015461640280966,
+      "marginRmse": 12.5810438892632
+    }
+  },
+  "records": [
+    {
+      "gameId": "2025_01_DAL_PHI",
+      "week": 1,
+      "cutoff": "2025-09-04T00:20:00+00:00",
+      "baselineMargin": 9.09,
+      "actualMargin": 4.0,
+      "feature": [
+        0.06591222834391353,
+        -0.3653796890324079
+      ],
+      "split": "fit",
+      "adjustment": -0.8129576032827202,
+      "candidateMargin": 8.27704239671728
+    },
+    {
+      "gameId": "2025_01_KC_LAC",
+      "week": 1,
+      "cutoff": "2025-09-05T00:00:00+00:00",
+      "baselineMargin": -0.424,
+      "actualMargin": 6.0,
+      "feature": [
+        0.15864762543139221,
+        -0.06074470486658004
+      ],
+      "split": "fit",
+      "adjustment": 0.24289884616996824,
+      "candidateMargin": -0.18110115383003175
+    },
+    {
+      "gameId": "2025_01_ARI_NO",
+      "week": 1,
+      "cutoff": "2025-09-06T17:00:00+00:00",
+      "baselineMargin": 0.38,
+      "actualMargin": -7.0,
+      "feature": [
+        -0.20324627374065773,
+        -0.2873874547509677
+      ],
+      "split": "fit",
+      "adjustment": -1.292400987942313,
+      "candidateMargin": -0.9124009879423131
+    },
+    {
+      "gameId": "2025_01_BAL_BUF",
+      "week": 1,
+      "cutoff": "2025-09-07T00:20:00+00:00",
+      "baselineMargin": 1.235,
+      "actualMargin": 1.0,
+      "feature": [
+        -0.14742798972357196,
+        0.1654998651182279
+      ],
+      "split": "fit",
+      "adjustment": 0.06727046445768003,
+      "candidateMargin": 1.3022704644576801
+    },
+    {
+      "gameId": "2025_01_CAR_JAX",
+      "week": 1,
+      "cutoff": "2025-09-06T17:00:00+00:00",
+      "baselineMargin": 4.391,
+      "actualMargin": 16.0,
+      "feature": [
+        0.13867910715246623,
+        0.1471205779044886
+      ],
+      "split": "fit",
+      "adjustment": 0.7502628571397215,
+      "candidateMargin": 5.141262857139721
+    },
+    {
+      "gameId": "2025_01_CIN_CLE",
+      "week": 1,
+      "cutoff": "2025-09-06T17:00:00+00:00",
+      "baselineMargin": -3.402,
+      "actualMargin": -1.0,
+      "feature": [
+        -0.09089268556876107,
+        0.03587773573052552
+      ],
+      "split": "fit",
+      "adjustment": -0.1362717402787962,
+      "candidateMargin": -3.5382717402787964
+    },
+    {
+      "gameId": "2025_01_DET_GB",
+      "week": 1,
+      "cutoff": "2025-09-06T20:25:00+00:00",
+      "baselineMargin": 0.542,
+      "actualMargin": 14.0,
+      "feature": [
+        -0.15248908487568436,
+        0.16528401365637033
+      ],
+      "split": "fit",
+      "adjustment": 0.05373521260491537,
+      "candidateMargin": 0.5957352126049154
+    },
+    {
+      "gameId": "2025_01_HOU_LA",
+      "week": 1,
+      "cutoff": "2025-09-06T20:25:00+00:00",
+      "baselineMargin": 2.645,
+      "actualMargin": 5.0,
+      "feature": [
+        0.2108217493973079,
+        0.4655682436036376
+      ],
+      "split": "fit",
+      "adjustment": 1.7905173074788352,
+      "candidateMargin": 4.435517307478835
+    },
+    {
+      "gameId": "2025_01_LV_NE",
+      "week": 1,
+      "cutoff": "2025-09-06T17:00:00+00:00",
+      "baselineMargin": 1.125,
+      "actualMargin": -7.0,
+      "feature": [
+        -0.1453440525542442,
+        -0.11730154399921117
+      ],
+      "split": "fit",
+      "adjustment": -0.6872078149005598,
+      "candidateMargin": 0.4377921850994402
+    },
+    {
+      "gameId": "2025_01_MIA_IND",
+      "week": 1,
+      "cutoff": "2025-09-06T17:00:00+00:00",
+      "baselineMargin": 0.146,
+      "actualMargin": 25.0,
+      "feature": [
+        -0.17167076782793433,
+        -0.31089112015098835
+      ],
+      "split": "fit",
+      "adjustment": -1.2747226209372184,
+      "candidateMargin": -1.1287226209372185
+    },
+    {
+      "gameId": "2025_01_NYG_WAS",
+      "week": 1,
+      "cutoff": "2025-09-06T17:00:00+00:00",
+      "baselineMargin": 7.083,
+      "actualMargin": 15.0,
+      "feature": [
+        0.025383703504921584,
+        0.1598104690713928
+      ],
+      "split": "fit",
+      "adjustment": 0.4943453574357906,
+      "candidateMargin": 7.5773453574357905
+    },
+    {
+      "gameId": "2025_01_PIT_NYJ",
+      "week": 1,
+      "cutoff": "2025-09-06T17:00:00+00:00",
+      "baselineMargin": 0.067,
+      "actualMargin": -2.0,
+      "feature": [
+        0.04354636610500773,
+        -0.2487669181737777
+      ],
+      "split": "fit",
+      "adjustment": -0.5569016813341344,
+      "candidateMargin": -0.4899016813341344
+    },
+    {
+      "gameId": "2025_01_SF_SEA",
+      "week": 1,
+      "cutoff": "2025-09-06T20:05:00+00:00",
+      "baselineMargin": 1.87,
+      "actualMargin": -4.0,
+      "feature": [
+        -0.25912245582245585,
+        -0.24975919660971568
+      ],
+      "split": "fit",
+      "adjustment": -1.334334812779567,
+      "candidateMargin": 0.5356651872204332
+    },
+    {
+      "gameId": "2025_01_TB_ATL",
+      "week": 1,
+      "cutoff": "2025-09-06T17:00:00+00:00",
+      "baselineMargin": -2.172,
+      "actualMargin": -3.0,
+      "feature": [
+        -0.18977294481803675,
+        0.28086239645057887
+      ],
+      "split": "fit",
+      "adjustment": 0.2688251386838593,
+      "candidateMargin": -1.9031748613161408
+    },
+    {
+      "gameId": "2025_01_TEN_DEN",
+      "week": 1,
+      "cutoff": "2025-09-06T20:05:00+00:00",
+      "baselineMargin": 8.1,
+      "actualMargin": 8.0,
+      "feature": null,
+      "split": "fit",
+      "adjustment": 0.0,
+      "candidateMargin": 8.1
+    },
+    {
+      "gameId": "2025_01_MIN_CHI",
+      "week": 1,
+      "cutoff": "2025-09-08T00:15:00+00:00",
+      "baselineMargin": -1.307,
+      "actualMargin": -3.0,
+      "feature": null,
+      "split": "fit",
+      "adjustment": 0.0,
+      "candidateMargin": -1.307
+    },
+    {
+      "gameId": "2025_02_WAS_GB",
+      "week": 2,
+      "cutoff": "2025-09-11T00:15:00+00:00",
+      "baselineMargin": 4.856,
+      "actualMargin": 9.0,
+      "feature": [
+        0.3410585345486634,
+        0.576726727072811
+      ],
+      "split": "fit",
+      "adjustment": 2.4225489828171236,
+      "candidateMargin": 7.2785489828171235
+    },
+    {
+      "gameId": "2025_02_ATL_MIN",
+      "week": 2,
+      "cutoff": "2025-09-14T00:20:00+00:00",
+      "baselineMargin": 4.563,
+      "actualMargin": -16.0,
+      "feature": [
+        -0.1799212590899799,
+        -1.0405677591623832
+      ],
+      "split": "fit",
+      "adjustment": -3.25629055854064,
+      "candidateMargin": 1.3067094414593599
+    },
+    {
+      "gameId": "2025_02_BUF_NYJ",
+      "week": 2,
+      "cutoff": "2025-09-13T17:00:00+00:00",
+      "baselineMargin": -3.998,
+      "actualMargin": -20.0,
+      "feature": [
+        -0.30922682353137354,
+        -0.3249116698696124
+      ],
+      "split": "fit",
+      "adjustment": -1.6645060779336207,
+      "candidateMargin": -5.662506077933621
+    },
+    {
+      "gameId": "2025_02_CAR_ARI",
+      "week": 2,
+      "cutoff": "2025-09-13T20:05:00+00:00",
+      "baselineMargin": 8.491,
+      "actualMargin": 5.0,
+      "feature": [
+        0.13847822058922432,
+        -0.3480784602123102
+      ],
+      "split": "fit",
+      "adjustment": -0.5807204240648897,
+      "candidateMargin": 7.91027957593511
+    },
+    {
+      "gameId": "2025_02_CHI_DET",
+      "week": 2,
+      "cutoff": "2025-09-13T17:00:00+00:00",
+      "baselineMargin": 7.187,
+      "actualMargin": 31.0,
+      "feature": [
+        0.4651447742747479,
+        0.20078378379197417
+      ],
+      "split": "fit",
+      "adjustment": 1.7301236723455526,
+      "candidateMargin": 8.917123672345554
+    },
+    {
+      "gameId": "2025_02_CLE_BAL",
+      "week": 2,
+      "cutoff": "2025-09-13T17:00:00+00:00",
+      "baselineMargin": 12.122,
+      "actualMargin": 24.0,
+      "feature": [
+        0.636197591974935,
+        -0.09586761618951077
+      ],
+      "split": "fit",
+      "adjustment": 1.3709581478572979,
+      "candidateMargin": 13.492958147857298
+    },
+    {
+      "gameId": "2025_02_DEN_IND",
+      "week": 2,
+      "cutoff": "2025-09-13T20:05:00+00:00",
+      "baselineMargin": 0.309,
+      "actualMargin": 1.0,
+      "feature": [
+        0.42646896608459706,
+        -0.2090392391357386
+      ],
+      "split": "fit",
+      "adjustment": 0.5300356686477907,
+      "candidateMargin": 0.8390356686477907
+    },
+    {
+      "gameId": "2025_02_JAX_CIN",
+      "week": 2,
+      "cutoff": "2025-09-13T17:00:00+00:00",
+      "baselineMargin": 4.266,
+      "actualMargin": 4.0,
+      "feature": [
+        -0.07409073215577688,
+        -0.5912792241200164
+      ],
+      "split": "fit",
+      "adjustment": -1.7782674963342051,
+      "candidateMargin": 2.4877325036657947
+    },
+    {
+      "gameId": "2025_02_LA_TEN",
+      "week": 2,
+      "cutoff": "2025-09-13T17:00:00+00:00",
+      "baselineMargin": -3.026,
+      "actualMargin": -14.0,
+      "feature": [
+        -0.7835232334750488,
+        -1.0894736891693382
+      ],
+      "split": "fit",
+      "adjustment": -4.932779220288822,
+      "candidateMargin": -7.958779220288822
+    },
+    {
+      "gameId": "2025_02_NE_MIA",
+      "week": 2,
+      "cutoff": "2025-09-13T17:00:00+00:00",
+      "baselineMargin": 4.18,
+      "actualMargin": -6.0,
+      "feature": [
+        0.008061787599075387,
+        0.12034787468793787
+      ],
+      "split": "fit",
+      "adjustment": 0.3439794044123639,
+      "candidateMargin": 4.523979404412364
+    },
+    {
+      "gameId": "2025_02_NYG_DAL",
+      "week": 2,
+      "cutoff": "2025-09-13T17:00:00+00:00",
+      "baselineMargin": 5.438,
+      "actualMargin": 3.0,
+      "feature": [
+        0.19667330070106548,
+        0.46809570398459943
+      ],
+      "split": "fit",
+      "adjustment": 1.76109093793597,
+      "candidateMargin": 7.19909093793597
+    },
+    {
+      "gameId": "2025_02_PHI_KC",
+      "week": 2,
+      "cutoff": "2025-09-13T20:25:00+00:00",
+      "baselineMargin": -1.228,
+      "actualMargin": -3.0,
+      "feature": [
+        -0.06909918790472425,
+        0.23390875597124078
+      ],
+      "split": "fit",
+      "adjustment": 0.45157199032880785,
+      "candidateMargin": -0.7764280096711922
+    },
+    {
+      "gameId": "2025_02_SEA_PIT",
+      "week": 2,
+      "cutoff": "2025-09-13T17:00:00+00:00",
+      "baselineMargin": 2.715,
+      "actualMargin": -14.0,
+      "feature": [
+        -0.04973385062247271,
+        -0.06993306437412652
+      ],
+      "split": "fit",
+      "adjustment": -0.3151996475800843,
+      "candidateMargin": 2.3998003524199154
+    },
+    {
+      "gameId": "2025_02_SF_NO",
+      "week": 2,
+      "cutoff": "2025-09-13T17:00:00+00:00",
+      "baselineMargin": -0.416,
+      "actualMargin": -5.0,
+      "feature": [
+        -0.8033391673020729,
+        0.046932079720433326
+      ],
+      "split": "fit",
+      "adjustment": -1.9302815270914127,
+      "candidateMargin": -2.3462815270914126
+    },
+    {
+      "gameId": "2025_02_LAC_LV",
+      "week": 2,
+      "cutoff": "2025-09-15T02:00:00+00:00",
+      "baselineMargin": -1.27,
+      "actualMargin": -11.0,
+      "feature": [
+        0.012578899945855149,
+        -0.12034983221247325
+      ],
+      "split": "fit",
+      "adjustment": -0.2911489392847912,
+      "candidateMargin": -1.5611489392847913
+    },
+    {
+      "gameId": "2025_02_TB_HOU",
+      "week": 2,
+      "cutoff": "2025-09-14T23:00:00+00:00",
+      "baselineMargin": -0.742,
+      "actualMargin": -1.0,
+      "feature": [
+        -0.28978043667852393,
+        -0.48822464817007394
+      ],
+      "split": "fit",
+      "adjustment": -2.0535063553733597,
+      "candidateMargin": -2.7955063553733597
+    },
+    {
+      "gameId": "2025_03_MIA_BUF",
+      "week": 3,
+      "cutoff": "2025-09-18T00:15:00+00:00",
+      "baselineMargin": 10.499,
+      "actualMargin": 10.0,
+      "feature": [
+        0.38189565936257,
+        0.6595972910094507
+      ],
+      "split": "fit",
+      "adjustment": 2.7497345693034627,
+      "candidateMargin": 13.248734569303464
+    },
+    {
+      "gameId": "2025_03_ARI_SF",
+      "week": 3,
+      "cutoff": "2025-09-20T20:25:00+00:00",
+      "baselineMargin": 2.377,
+      "actualMargin": 1.0,
+      "feature": [
+        0.40793466386499677,
+        0.2709172881018621
+      ],
+      "split": "fit",
+      "adjustment": 1.77210829087241,
+      "candidateMargin": 4.14910829087241
+    },
+    {
+      "gameId": "2025_03_ATL_CAR",
+      "week": 3,
+      "cutoff": "2025-09-20T17:00:00+00:00",
+      "baselineMargin": -4.278,
+      "actualMargin": 30.0,
+      "feature": [
+        -0.42963953999637994,
+        0.04677453551289998
+      ],
+      "split": "fit",
+      "adjustment": -0.9741140680577621,
+      "candidateMargin": -5.252114068057762
+    },
+    {
+      "gameId": "2025_03_CIN_MIN",
+      "week": 3,
+      "cutoff": "2025-09-20T17:00:00+00:00",
+      "baselineMargin": 0.157,
+      "actualMargin": 38.0,
+      "feature": [
+        -0.33147342785936207,
+        -1.507490299590652
+      ],
+      "split": "fit",
+      "adjustment": -4.89872911446408,
+      "candidateMargin": -4.74172911446408
+    },
+    {
+      "gameId": "2025_03_DAL_CHI",
+      "week": 3,
+      "cutoff": "2025-09-20T20:25:00+00:00",
+      "baselineMargin": -0.489,
+      "actualMargin": 17.0,
+      "feature": [
+        -0.34153191134259675,
+        -0.5433272604580165
+      ],
+      "split": "fit",
+      "adjustment": -2.334025178242566,
+      "candidateMargin": -2.823025178242566
+    },
+    {
+      "gameId": "2025_03_DEN_LAC",
+      "week": 3,
+      "cutoff": "2025-09-20T20:05:00+00:00",
+      "baselineMargin": 1.884,
+      "actualMargin": 3.0,
+      "feature": [
+        0.6441772903942633,
+        -0.4918497582396347
+      ],
+      "split": "fit",
+      "adjustment": 0.3274850070596549,
+      "candidateMargin": 2.211485007059655
+    },
+    {
+      "gameId": "2025_03_GB_CLE",
+      "week": 3,
+      "cutoff": "2025-09-20T17:00:00+00:00",
+      "baselineMargin": -7.393,
+      "actualMargin": 3.0,
+      "feature": [
+        -0.8668223151925378,
+        -0.12026194066295307
+      ],
+      "split": "fit",
+      "adjustment": -2.5419909273706747,
+      "candidateMargin": -9.934990927370674
+    },
+    {
+      "gameId": "2025_03_HOU_JAX",
+      "week": 3,
+      "cutoff": "2025-09-20T17:00:00+00:00",
+      "baselineMargin": 1.419,
+      "actualMargin": 7.0,
+      "feature": [
+        0.10068591439927044,
+        0.7952697883766041
+      ],
+      "split": "fit",
+      "adjustment": 2.3944142287071735,
+      "candidateMargin": 3.8134142287071735
+    },
+    {
+      "gameId": "2025_03_IND_TEN",
+      "week": 3,
+      "cutoff": "2025-09-20T17:00:00+00:00",
+      "baselineMargin": -3.845,
+      "actualMargin": -21.0,
+      "feature": [
+        -1.2777453610816458,
+        -1.068473020970808
+      ],
+      "split": "fit",
+      "adjustment": -6.141458409690481,
+      "candidateMargin": -9.986458409690481
+    },
+    {
+      "gameId": "2025_03_KC_NYG",
+      "week": 3,
+      "cutoff": "2025-09-21T00:20:00+00:00",
+      "baselineMargin": -3.408,
+      "actualMargin": -13.0,
+      "feature": [
+        0.2859319617188172,
+        -0.0923282641897516
+      ],
+      "split": "fit",
+      "adjustment": 0.4838627099074464,
+      "candidateMargin": -2.9241372900925535
+    },
+    {
+      "gameId": "2025_03_LA_PHI",
+      "week": 3,
+      "cutoff": "2025-09-20T17:00:00+00:00",
+      "baselineMargin": 4.986,
+      "actualMargin": 7.0,
+      "feature": [
+        -0.5281737905221604,
+        -0.284292198698316
+      ],
+      "split": "fit",
+      "adjustment": -2.115829469042364,
+      "candidateMargin": 2.870170530957636
+    },
+    {
+      "gameId": "2025_03_LV_WAS",
+      "week": 3,
+      "cutoff": "2025-09-20T17:00:00+00:00",
+      "baselineMargin": 5.638,
+      "actualMargin": 17.0,
+      "feature": [
+        -0.16870390873361618,
+        -0.01673373687550342
+      ],
+      "split": "fit",
+      "adjustment": -0.476804884607382,
+      "candidateMargin": 5.161195115392617
+    },
+    {
+      "gameId": "2025_03_NO_SEA",
+      "week": 3,
+      "cutoff": "2025-09-20T20:05:00+00:00",
+      "baselineMargin": 4.28,
+      "actualMargin": 31.0,
+      "feature": [
+        0.6887755615520534,
+        -0.14982548548670238
+      ],
+      "split": "fit",
+      "adjustment": 1.3605759042287862,
+      "candidateMargin": 5.640575904228786
+    },
+    {
+      "gameId": "2025_03_NYJ_TB",
+      "week": 3,
+      "cutoff": "2025-09-20T17:00:00+00:00",
+      "baselineMargin": 8.352,
+      "actualMargin": 2.0,
+      "feature": [
+        -0.0662645652287317,
+        0.20435565651539658
+      ],
+      "split": "fit",
+      "adjustment": 0.3794266406829542,
+      "candidateMargin": 8.731426640682955
+    },
+    {
+      "gameId": "2025_03_PIT_NE",
+      "week": 3,
+      "cutoff": "2025-09-20T17:00:00+00:00",
+      "baselineMargin": 0.668,
+      "actualMargin": -7.0,
+      "feature": [
+        0.13951595240990144,
+        -0.08786574478982234
+      ],
+      "split": "fit",
+      "adjustment": 0.12105880180697065,
+      "candidateMargin": 0.7890588018069706
+    },
+    {
+      "gameId": "2025_03_DET_BAL",
+      "week": 3,
+      "cutoff": "2025-09-22T00:15:00+00:00",
+      "baselineMargin": 2.756,
+      "actualMargin": -8.0,
+      "feature": [
+        -0.04742314695710803,
+        -0.17727699452675494
+      ],
+      "split": "fit",
+      "adjustment": -0.5976895381927313,
+      "candidateMargin": 2.1583104618072686
+    },
+    {
+      "gameId": "2025_04_SEA_ARI",
+      "week": 4,
+      "cutoff": "2025-09-25T00:15:00+00:00",
+      "baselineMargin": 0.627,
+      "actualMargin": -3.0,
+      "feature": [
+        -0.7321123544234442,
+        -0.016269559242677797
+      ],
+      "split": "fit",
+      "adjustment": -1.917762307673846,
+      "candidateMargin": -1.290762307673846
+    },
+    {
+      "gameId": "2025_04_BAL_KC",
+      "week": 4,
+      "cutoff": "2025-09-27T20:25:00+00:00",
+      "baselineMargin": -0.726,
+      "actualMargin": 17.0,
+      "feature": [
+        -0.6898625006018744,
+        0.45197830204774797
+      ],
+      "split": "fit",
+      "adjustment": -0.5515534020059207,
+      "candidateMargin": -1.2775534020059207
+    },
+    {
+      "gameId": "2025_04_CAR_NE",
+      "week": 4,
+      "cutoff": "2025-09-27T17:00:00+00:00",
+      "baselineMargin": 2.749,
+      "actualMargin": 29.0,
+      "feature": [
+        0.48585994694818346,
+        -0.5041428276382297
+      ],
+      "split": "fit",
+      "adjustment": -0.11080160153819962,
+      "candidateMargin": 2.6381983984618005
+    },
+    {
+      "gameId": "2025_04_CHI_LV",
+      "week": 4,
+      "cutoff": "2025-09-27T20:25:00+00:00",
+      "baselineMargin": 0.444,
+      "actualMargin": -1.0,
+      "feature": [
+        0.07480726835895624,
+        -0.1719412167434274
+      ],
+      "split": "fit",
+      "adjustment": -0.2704701160609225,
+      "candidateMargin": 0.17352988393907748
+    },
+    {
+      "gameId": "2025_04_CLE_DET",
+      "week": 4,
+      "cutoff": "2025-09-27T17:00:00+00:00",
+      "baselineMargin": 13.287,
+      "actualMargin": 24.0,
+      "feature": [
+        1.1817661537870245,
+        0.05622972942746725
+      ],
+      "split": "fit",
+      "adjustment": 3.1761418300191466,
+      "candidateMargin": 16.463141830019147
+    },
+    {
+      "gameId": "2025_04_GB_DAL",
+      "week": 4,
+      "cutoff": "2025-09-28T00:20:00+00:00",
+      "baselineMargin": -4.023,
+      "actualMargin": 0.0,
+      "feature": [
+        -0.4762088553385322,
+        0.2424639763381517
+      ],
+      "split": "fit",
+      "adjustment": -0.5675556533154192,
+      "candidateMargin": -4.590555653315419
+    },
+    {
+      "gameId": "2025_04_IND_LA",
+      "week": 4,
+      "cutoff": "2025-09-27T20:05:00+00:00",
+      "baselineMargin": 2.256,
+      "actualMargin": 7.0,
+      "feature": [
+        -0.32059465605032056,
+        -0.1589495883580918
+      ],
+      "split": "fit",
+      "adjustment": -1.2477089966471562,
+      "candidateMargin": 1.0082910033528436
+    },
+    {
+      "gameId": "2025_04_JAX_SF",
+      "week": 4,
+      "cutoff": "2025-09-27T20:05:00+00:00",
+      "baselineMargin": 3.914,
+      "actualMargin": -5.0,
+      "feature": [
+        0.5225325892324557,
+        -0.16965739112564548
+      ],
+      "split": "fit",
+      "adjustment": 0.8817465266167613,
+      "candidateMargin": 4.795746526616761
+    },
+    {
+      "gameId": "2025_04_LAC_NYG",
+      "week": 4,
+      "cutoff": "2025-09-27T17:00:00+00:00",
+      "baselineMargin": -4.477,
+      "actualMargin": 3.0,
+      "feature": null,
+      "split": "fit",
+      "adjustment": 0.0,
+      "candidateMargin": -4.477
+    },
+    {
+      "gameId": "2025_04_MIN_PIT",
+      "week": 4,
+      "cutoff": "2025-09-27T13:30:00+00:00",
+      "baselineMargin": -2.026,
+      "actualMargin": 3.0,
+      "feature": [
+        0.0870281242961708,
+        1.1084615696789137
+      ],
+      "split": "fit",
+      "adjustment": 3.200916837027062,
+      "candidateMargin": 1.1749168370270624
+    },
+    {
+      "gameId": "2025_04_NO_BUF",
+      "week": 4,
+      "cutoff": "2025-09-27T17:00:00+00:00",
+      "baselineMargin": 11.677,
+      "actualMargin": 12.0,
+      "feature": [
+        1.0008773953178949,
+        0.1738535649368804
+      ],
+      "split": "fit",
+      "adjustment": 3.029129667559607,
+      "candidateMargin": 14.706129667559606
+    },
+    {
+      "gameId": "2025_04_PHI_TB",
+      "week": 4,
+      "cutoff": "2025-09-27T17:00:00+00:00",
+      "baselineMargin": 0.496,
+      "actualMargin": -6.0,
+      "feature": [
+        0.17715322883836482,
+        0.33302526930021314
+      ],
+      "split": "fit",
+      "adjustment": 1.348225157048302,
+      "candidateMargin": 1.844225157048302
+    },
+    {
+      "gameId": "2025_04_TEN_HOU",
+      "week": 4,
+      "cutoff": "2025-09-27T17:00:00+00:00",
+      "baselineMargin": 7.911,
+      "actualMargin": 26.0,
+      "feature": [
+        0.6019997465521358,
+        0.4092251788403338
+      ],
+      "split": "fit",
+      "adjustment": 2.640469979697521,
+      "candidateMargin": 10.55146997969752
+    },
+    {
+      "gameId": "2025_04_WAS_ATL",
+      "week": 4,
+      "cutoff": "2025-09-27T17:00:00+00:00",
+      "baselineMargin": -1.05,
+      "actualMargin": 7.0,
+      "feature": [
+        0.07061952828457319,
+        0.4547776950551191
+      ],
+      "split": "fit",
+      "adjustment": 1.402638395929923,
+      "candidateMargin": 0.35263839592992285
+    },
+    {
+      "gameId": "2025_04_CIN_DEN",
+      "week": 4,
+      "cutoff": "2025-09-29T00:15:00+00:00",
+      "baselineMargin": 6.367,
+      "actualMargin": 25.0,
+      "feature": [
+        -0.0446279194172412,
+        0.29029508733205733
+      ],
+      "split": "fit",
+      "adjustment": 0.6657083620131623,
+      "candidateMargin": 7.032708362013162
+    },
+    {
+      "gameId": "2025_04_NYJ_MIA",
+      "week": 4,
+      "cutoff": "2025-09-28T23:15:00+00:00",
+      "baselineMargin": 3.063,
+      "actualMargin": 6.0,
+      "feature": [
+        -0.038319973858695455,
+        0.14797095043788136
+      ],
+      "split": "fit",
+      "adjustment": 0.29946797289409866,
+      "candidateMargin": 3.3624679728940987
+    },
+    {
+      "gameId": "2025_05_SF_LA",
+      "week": 5,
+      "cutoff": "2025-10-02T00:15:00+00:00",
+      "baselineMargin": 4.496,
+      "actualMargin": -3.0,
+      "feature": [
+        -0.010673632839352187,
+        -0.14850923757050258
+      ],
+      "split": "fit",
+      "adjustment": -0.42632731281556363,
+      "candidateMargin": 4.069672687184437
+    },
+    {
+      "gameId": "2025_05_DAL_NYJ",
+      "week": 5,
+      "cutoff": "2025-10-04T17:00:00+00:00",
+      "baselineMargin": 1.517,
+      "actualMargin": -15.0,
+      "feature": [
+        -0.026190784392261968,
+        -0.4009643298247946
+      ],
+      "split": "fit",
+      "adjustment": -1.1443280566079892,
+      "candidateMargin": 0.3726719433920107
+    },
+    {
+      "gameId": "2025_05_DEN_PHI",
+      "week": 5,
+      "cutoff": "2025-10-04T17:00:00+00:00",
+      "baselineMargin": 4.351,
+      "actualMargin": -4.0,
+      "feature": [
+        -0.29878529306863477,
+        -0.6280283750759376
+      ],
+      "split": "fit",
+      "adjustment": -2.4521725506879983,
+      "candidateMargin": 1.8988274493120016
+    },
+    {
+      "gameId": "2025_05_DET_CIN",
+      "week": 5,
+      "cutoff": "2025-10-04T20:25:00+00:00",
+      "baselineMargin": -7.684,
+      "actualMargin": -13.0,
+      "feature": [
+        -0.886100496953893,
+        -0.4164583988580449
+      ],
+      "split": "fit",
+      "adjustment": -3.387140600340179,
+      "candidateMargin": -11.071140600340179
+    },
+    {
+      "gameId": "2025_05_HOU_BAL",
+      "week": 5,
+      "cutoff": "2025-10-04T17:00:00+00:00",
+      "baselineMargin": 6.0,
+      "actualMargin": -34.0,
+      "feature": [
+        0.633628004137825,
+        -0.2424525305050984
+      ],
+      "split": "fit",
+      "adjustment": 0.9705455971624017,
+      "candidateMargin": 6.970545597162402
+    },
+    {
+      "gameId": "2025_05_LV_IND",
+      "week": 5,
+      "cutoff": "2025-10-04T17:00:00+00:00",
+      "baselineMargin": 8.05,
+      "actualMargin": 34.0,
+      "feature": [
+        0.6105224497708903,
+        0.4334735639465325
+      ],
+      "split": "fit",
+      "adjustment": 2.727435276259029,
+      "candidateMargin": 10.77743527625903
+    },
+    {
+      "gameId": "2025_05_MIA_CAR",
+      "week": 5,
+      "cutoff": "2025-10-04T17:00:00+00:00",
+      "baselineMargin": -0.541,
+      "actualMargin": 3.0,
+      "feature": [
+        -0.5505418172547065,
+        0.12617366150952097
+      ],
+      "split": "fit",
+      "adjustment": -1.070273430541872,
+      "candidateMargin": -1.611273430541872
+    },
+    {
+      "gameId": "2025_05_MIN_CLE",
+      "week": 5,
+      "cutoff": "2025-10-04T13:30:00+00:00",
+      "baselineMargin": -6.016,
+      "actualMargin": -4.0,
+      "feature": [
+        0.15323769174623614,
+        1.810520602620955
+      ],
+      "split": "fit",
+      "adjustment": 5.256646339507519,
+      "candidateMargin": -0.7593536604924811
+    },
+    {
+      "gameId": "2025_05_NE_BUF",
+      "week": 5,
+      "cutoff": "2025-10-05T00:20:00+00:00",
+      "baselineMargin": 10.012,
+      "actualMargin": -3.0,
+      "feature": [
+        0.27924229454267735,
+        0.4594673204284432
+      ],
+      "split": "fit",
+      "adjustment": 1.9492676300525673,
+      "candidateMargin": 11.961267630052568
+    },
+    {
+      "gameId": "2025_05_NYG_NO",
+      "week": 5,
+      "cutoff": "2025-10-04T17:00:00+00:00",
+      "baselineMargin": 4.111,
+      "actualMargin": 12.0,
+      "feature": [
+        -0.382069606497911,
+        1.375928270853994
+      ],
+      "split": "fit",
+      "adjustment": 2.718739853879894,
+      "candidateMargin": 6.829739853879894
+    },
+    {
+      "gameId": "2025_05_TB_SEA",
+      "week": 5,
+      "cutoff": "2025-10-04T20:05:00+00:00",
+      "baselineMargin": 3.361,
+      "actualMargin": -3.0,
+      "feature": [
+        0.544059714542314,
+        -0.12494356524162233
+      ],
+      "split": "fit",
+      "adjustment": 1.056985584443623,
+      "candidateMargin": 4.417985584443623
+    },
+    {
+      "gameId": "2025_05_TEN_ARI",
+      "week": 5,
+      "cutoff": "2025-10-04T20:05:00+00:00",
+      "baselineMargin": 10.336,
+      "actualMargin": -1.0,
+      "feature": [
+        0.5084937651605719,
+        0.3796903839291842
+      ],
+      "split": "fit",
+      "adjustment": 2.321762566489432,
+      "candidateMargin": 12.657762566489431
+    },
+    {
+      "gameId": "2025_05_WAS_LAC",
+      "week": 5,
+      "cutoff": "2025-10-04T20:25:00+00:00",
+      "baselineMargin": 3.406,
+      "actualMargin": -17.0,
+      "feature": [
+        0.2858521885575529,
+        0.08908245654452321
+      ],
+      "split": "fit",
+      "adjustment": 0.9710612116459052,
+      "candidateMargin": 4.377061211645906
+    },
+    {
+      "gameId": "2025_05_KC_JAX",
+      "week": 5,
+      "cutoff": "2025-10-06T00:15:00+00:00",
+      "baselineMargin": -0.196,
+      "actualMargin": 3.0,
+      "feature": [
+        -0.13616585950385485,
+        0.292164134571
+      ],
+      "split": "fit",
+      "adjustment": 0.43641254307913,
+      "candidateMargin": 0.24041254307913001
+    },
+    {
+      "gameId": "2025_06_PHI_NYG",
+      "week": 6,
+      "cutoff": "2025-10-09T00:15:00+00:00",
+      "baselineMargin": -7.243,
+      "actualMargin": 17.0,
+      "feature": [
+        -0.14166051696053117,
+        0.1235875090919901
+      ],
+      "split": "fit",
+      "adjustment": -0.030573478087580763,
+      "candidateMargin": -7.273573478087581
+    },
+    {
+      "gameId": "2025_06_ARI_IND",
+      "week": 6,
+      "cutoff": "2025-10-11T17:00:00+00:00",
+      "baselineMargin": 5.911,
+      "actualMargin": 4.0,
+      "feature": [
+        1.161854151103709,
+        0.4769210340517533
+      ],
+      "split": "fit",
+      "adjustment": 4.255457831341203,
+      "candidateMargin": 10.166457831341202
+    },
+    {
+      "gameId": "2025_06_CIN_GB",
+      "week": 6,
+      "cutoff": "2025-10-11T20:25:00+00:00",
+      "baselineMargin": 9.832,
+      "actualMargin": 9.0,
+      "feature": [
+        1.0889605935921143,
+        0.004945277231648906
+      ],
+      "split": "fit",
+      "adjustment": 2.8007917585754423,
+      "candidateMargin": 12.632791758575443
+    },
+    {
+      "gameId": "2025_06_CLE_PIT",
+      "week": 6,
+      "cutoff": "2025-10-11T17:00:00+00:00",
+      "baselineMargin": 7.017,
+      "actualMargin": 14.0,
+      "feature": [
+        0.11700558807398842,
+        -0.20238573344210253
+      ],
+      "split": "fit",
+      "adjustment": -0.2442478632008559,
+      "candidateMargin": 6.772752136799144
+    },
+    {
+      "gameId": "2025_06_DAL_CAR",
+      "week": 6,
+      "cutoff": "2025-10-11T17:00:00+00:00",
+      "baselineMargin": -1.465,
+      "actualMargin": 3.0,
+      "feature": [
+        -0.7792574574566524,
+        -0.15823684504573116
+      ],
+      "split": "fit",
+      "adjustment": -2.4198722495986216,
+      "candidateMargin": -3.8848722495986214
+    },
+    {
+      "gameId": "2025_06_DEN_NYJ",
+      "week": 6,
+      "cutoff": "2025-10-11T13:30:00+00:00",
+      "baselineMargin": -7.41,
+      "actualMargin": -2.0,
+      "feature": [
+        -0.13731903081909191,
+        -0.5590147688570081
+      ],
+      "split": "fit",
+      "adjustment": -1.8534322816528284,
+      "candidateMargin": -9.263432281652829
+    },
+    {
+      "gameId": "2025_06_DET_KC",
+      "week": 6,
+      "cutoff": "2025-10-12T00:20:00+00:00",
+      "baselineMargin": -2.249,
+      "actualMargin": 13.0,
+      "feature": [
+        -0.6022834736398828,
+        0.0795112433629596
+      ],
+      "split": "fit",
+      "adjustment": -1.328090547759345,
+      "candidateMargin": -3.577090547759345
+    },
+    {
+      "gameId": "2025_06_LAC_MIA",
+      "week": 6,
+      "cutoff": "2025-10-11T17:00:00+00:00",
+      "baselineMargin": -0.372,
+      "actualMargin": -2.0,
+      "feature": [
+        0.039284003496325326,
+        0.1841259532794888
+      ],
+      "split": "fit",
+      "adjustment": 0.5952564236710236,
+      "candidateMargin": 0.2232564236710236
+    },
+    {
+      "gameId": "2025_06_LA_BAL",
+      "week": 6,
+      "cutoff": "2025-10-11T17:00:00+00:00",
+      "baselineMargin": 2.213,
+      "actualMargin": -14.0,
+      "feature": [
+        -0.139515136493773,
+        -0.61704051529781
+      ],
+      "split": "fit",
+      "adjustment": -2.0149536988385854,
+      "candidateMargin": 0.19804630116141464
+    },
+    {
+      "gameId": "2025_06_NE_NO",
+      "week": 6,
+      "cutoff": "2025-10-11T17:00:00+00:00",
+      "baselineMargin": 0.426,
+      "actualMargin": -6.0,
+      "feature": [
+        -0.8800402317092422,
+        0.4703005842812509
+      ],
+      "split": "fit",
+      "adjustment": -0.9891403906479073,
+      "candidateMargin": -0.5631403906479073
+    },
+    {
+      "gameId": "2025_06_SEA_JAX",
+      "week": 6,
+      "cutoff": "2025-10-11T17:00:00+00:00",
+      "baselineMargin": -0.377,
+      "actualMargin": -8.0,
+      "feature": [
+        -0.9367337591476188,
+        0.18174311208981336
+      ],
+      "split": "fit",
+      "adjustment": -1.9095413698134818,
+      "candidateMargin": -2.2865413698134818
+    },
+    {
+      "gameId": "2025_06_SF_TB",
+      "week": 6,
+      "cutoff": "2025-10-11T20:25:00+00:00",
+      "baselineMargin": 4.365,
+      "actualMargin": 11.0,
+      "feature": [
+        -0.08567257774508619,
+        -0.12328535286151764
+      ],
+      "split": "fit",
+      "adjustment": -0.5505385769986837,
+      "candidateMargin": 3.8144614230013163
+    },
+    {
+      "gameId": "2025_06_TEN_LV",
+      "week": 6,
+      "cutoff": "2025-10-11T20:05:00+00:00",
+      "baselineMargin": 3.443,
+      "actualMargin": 10.0,
+      "feature": [
+        0.7712366465331311,
+        0.13439942192683504
+      ],
+      "split": "fit",
+      "adjustment": 2.335295835800016,
+      "candidateMargin": 5.778295835800016
+    },
+    {
+      "gameId": "2025_06_BUF_ATL",
+      "week": 6,
+      "cutoff": "2025-10-12T23:15:00+00:00",
+      "baselineMargin": -3.677,
+      "actualMargin": 10.0,
+      "feature": [
+        -0.31075550202595803,
+        0.08234538925810109
+      ],
+      "split": "fit",
+      "adjustment": -0.5742269874683072,
+      "candidateMargin": -4.251226987468307
+    },
+    {
+      "gameId": "2025_06_CHI_WAS",
+      "week": 6,
+      "cutoff": "2025-10-13T00:15:00+00:00",
+      "baselineMargin": 6.168,
+      "actualMargin": -1.0,
+      "feature": [
+        0.040718808763374525,
+        -0.08091122322038277
+      ],
+      "split": "fit",
+      "adjustment": -0.11315569158218002,
+      "candidateMargin": 6.05484430841782
+    },
+    {
+      "gameId": "2025_07_PIT_CIN",
+      "week": 7,
+      "cutoff": "2025-10-16T00:15:00+00:00",
+      "baselineMargin": -1.487,
+      "actualMargin": 2.0,
+      "feature": [
+        -0.8381728449284358,
+        0.1142793999406553
+      ],
+      "split": "fit",
+      "adjustment": -1.838503790220857,
+      "candidateMargin": -3.325503790220857
+    },
+    {
+      "gameId": "2025_07_ATL_SF",
+      "week": 7,
+      "cutoff": "2025-10-19T00:20:00+00:00",
+      "baselineMargin": 2.598,
+      "actualMargin": 10.0,
+      "feature": [
+        0.1824206365452623,
+        0.023688796929556694
+      ],
+      "split": "fit",
+      "adjustment": 0.5306031699468855,
+      "candidateMargin": 3.1286031699468855
+    },
+    {
+      "gameId": "2025_07_CAR_NYJ",
+      "week": 7,
+      "cutoff": "2025-10-18T17:00:00+00:00",
+      "baselineMargin": 1.898,
+      "actualMargin": -7.0,
+      "feature": [
+        -0.20276469966028632,
+        -0.8380951483481689
+      ],
+      "split": "fit",
+      "adjustment": -2.7707744163993357,
+      "candidateMargin": -0.8727744163993358
+    },
+    {
+      "gameId": "2025_07_GB_ARI",
+      "week": 7,
+      "cutoff": "2025-10-18T20:25:00+00:00",
+      "baselineMargin": -1.458,
+      "actualMargin": -4.0,
+      "feature": [
+        -1.118579870976463,
+        -0.28555940902753396
+      ],
+      "split": "fit",
+      "adjustment": -3.630546817646074,
+      "candidateMargin": -5.0885468176460735
+    },
+    {
+      "gameId": "2025_07_IND_LAC",
+      "week": 7,
+      "cutoff": "2025-10-18T20:05:00+00:00",
+      "baselineMargin": 0.373,
+      "actualMargin": -14.0,
+      "feature": [
+        -0.6719673196289477,
+        -0.39660260459823304
+      ],
+      "split": "fit",
+      "adjustment": -2.7856584069922157,
+      "candidateMargin": -2.4126584069922155
+    },
+    {
+      "gameId": "2025_07_LA_JAX",
+      "week": 7,
+      "cutoff": "2025-10-18T13:30:00+00:00",
+      "baselineMargin": -2.612,
+      "actualMargin": -28.0,
+      "feature": [
+        -0.8251443961102689,
+        -0.11394707689404447
+      ],
+      "split": "fit",
+      "adjustment": -2.418338039543619,
+      "candidateMargin": -5.030338039543619
+    },
+    {
+      "gameId": "2025_07_LV_KC",
+      "week": 7,
+      "cutoff": "2025-10-18T17:00:00+00:00",
+      "baselineMargin": 10.321,
+      "actualMargin": 31.0,
+      "feature": [
+        0.24791178436411432,
+        0.3559211545555293
+      ],
+      "split": "fit",
+      "adjustment": 1.5908670512126717,
+      "candidateMargin": 11.91186705121267
+    },
+    {
+      "gameId": "2025_07_MIA_CLE",
+      "week": 7,
+      "cutoff": "2025-10-18T17:00:00+00:00",
+      "baselineMargin": -0.837,
+      "actualMargin": 25.0,
+      "feature": [
+        -0.5980307756891836,
+        -0.21236855065515758
+      ],
+      "split": "fit",
+      "adjustment": -2.1014084885982784,
+      "candidateMargin": -2.938408488598278
+    },
+    {
+      "gameId": "2025_07_NE_TEN",
+      "week": 7,
+      "cutoff": "2025-10-18T17:00:00+00:00",
+      "baselineMargin": -3.679,
+      "actualMargin": -18.0,
+      "feature": [
+        -1.5781224360026513,
+        -0.175422230955153
+      ],
+      "split": "fit",
+      "adjustment": -4.510967514465308,
+      "candidateMargin": -8.189967514465307
+    },
+    {
+      "gameId": "2025_07_NO_CHI",
+      "week": 7,
+      "cutoff": "2025-10-18T17:00:00+00:00",
+      "baselineMargin": 4.677,
+      "actualMargin": 12.0,
+      "feature": [
+        0.3837582217956772,
+        -0.16754044279955144
+      ],
+      "split": "fit",
+      "adjustment": 0.5322016494262996,
+      "candidateMargin": 5.2092016494263
+    },
+    {
+      "gameId": "2025_07_NYG_DEN",
+      "week": 7,
+      "cutoff": "2025-10-18T20:05:00+00:00",
+      "baselineMargin": 9.974,
+      "actualMargin": 1.0,
+      "feature": [
+        0.17348977451747682,
+        0.5285154265372906
+      ],
+      "split": "fit",
+      "adjustment": 1.86407793325573,
+      "candidateMargin": 11.83807793325573
+    },
+    {
+      "gameId": "2025_07_PHI_MIN",
+      "week": 7,
+      "cutoff": "2025-10-18T17:00:00+00:00",
+      "baselineMargin": 0.235,
+      "actualMargin": -6.0,
+      "feature": [
+        -0.00986068168968135,
+        -0.8297579703201668
+      ],
+      "split": "fit",
+      "adjustment": -2.2545817891478777,
+      "candidateMargin": -2.019581789147878
+    },
+    {
+      "gameId": "2025_07_WAS_DAL",
+      "week": 7,
+      "cutoff": "2025-10-18T20:25:00+00:00",
+      "baselineMargin": -0.118,
+      "actualMargin": 22.0,
+      "feature": [
+        0.2580736917099591,
+        0.4772972879935835
+      ],
+      "split": "fit",
+      "adjustment": 1.9429849706088005,
+      "candidateMargin": 1.8249849706088006
+    },
+    {
+      "gameId": "2025_07_HOU_SEA",
+      "week": 7,
+      "cutoff": "2025-10-20T02:00:00+00:00",
+      "baselineMargin": 2.572,
+      "actualMargin": 8.0,
+      "feature": [
+        1.0575990804037962,
+        0.29399812268960746
+      ],
+      "split": "fit",
+      "adjustment": 3.4971216937213376,
+      "candidateMargin": 6.069121693721337
+    },
+    {
+      "gameId": "2025_07_TB_DET",
+      "week": 7,
+      "cutoff": "2025-10-19T23:00:00+00:00",
+      "baselineMargin": 5.617,
+      "actualMargin": 15.0,
+      "feature": [
+        0.047753774216817035,
+        0.014887375527362912
+      ],
+      "split": "fit",
+      "adjustment": 0.1622378467497102,
+      "candidateMargin": 5.7792378467497105
+    },
+    {
+      "gameId": "2025_08_MIN_LAC",
+      "week": 8,
+      "cutoff": "2025-10-23T00:15:00+00:00",
+      "baselineMargin": 2.363,
+      "actualMargin": 27.0,
+      "feature": [
+        0.2062260086983132,
+        1.1235264889104783
+      ],
+      "split": "fit",
+      "adjustment": 3.546513265729069,
+      "candidateMargin": 5.909513265729069
+    },
+    {
+      "gameId": "2025_08_BUF_CAR",
+      "week": 8,
+      "cutoff": "2025-10-25T17:00:00+00:00",
+      "baselineMargin": -4.391,
+      "actualMargin": -31.0,
+      "feature": [
+        -0.9315710780692186,
+        0.0796643359445684
+      ],
+      "split": "fit",
+      "adjustment": -2.170584732613694,
+      "candidateMargin": -6.561584732613694
+    },
+    {
+      "gameId": "2025_08_CHI_BAL",
+      "week": 8,
+      "cutoff": "2025-10-25T17:00:00+00:00",
+      "baselineMargin": 3.076,
+      "actualMargin": 14.0,
+      "feature": [
+        0.41649396907716607,
+        -0.4249801726483231
+      ],
+      "split": "fit",
+      "adjustment": -0.07567444777538213,
+      "candidateMargin": 3.000325552224618
+    },
+    {
+      "gameId": "2025_08_CLE_NE",
+      "week": 8,
+      "cutoff": "2025-10-25T17:00:00+00:00",
+      "baselineMargin": 7.098,
+      "actualMargin": 19.0,
+      "feature": [
+        1.2692742082783859,
+        -0.11382074411868018
+      ],
+      "split": "fit",
+      "adjustment": 2.9432629247952677,
+      "candidateMargin": 10.041262924795268
+    },
+    {
+      "gameId": "2025_08_DAL_DEN",
+      "week": 8,
+      "cutoff": "2025-10-25T20:25:00+00:00",
+      "baselineMargin": 5.397,
+      "actualMargin": 20.0,
+      "feature": [
+        -0.6119722562596639,
+        -0.005124336255453582
+      ],
+      "split": "fit",
+      "adjustment": -1.5802852030079033,
+      "candidateMargin": 3.816714796992097
+    },
+    {
+      "gameId": "2025_08_GB_PIT",
+      "week": 8,
+      "cutoff": "2025-10-26T00:20:00+00:00",
+      "baselineMargin": -0.802,
+      "actualMargin": -10.0,
+      "feature": [
+        -0.34110973653013943,
+        -0.0007961181889185737
+      ],
+      "split": "fit",
+      "adjustment": -0.8753065811785136,
+      "candidateMargin": -1.6773065811785135
+    },
+    {
+      "gameId": "2025_08_MIA_ATL",
+      "week": 8,
+      "cutoff": "2025-10-25T17:00:00+00:00",
+      "baselineMargin": 5.773,
+      "actualMargin": -24.0,
+      "feature": [
+        0.44733752870513577,
+        0.2020114055809722
+      ],
+      "split": "fit",
+      "adjustment": 1.6878392460083735,
+      "candidateMargin": 7.460839246008373
+    },
+    {
+      "gameId": "2025_08_NYG_PHI",
+      "week": 8,
+      "cutoff": "2025-10-25T17:00:00+00:00",
+      "baselineMargin": 9.898,
+      "actualMargin": 18.0,
+      "feature": [
+        0.34241444607761906,
+        -0.08448298713763763
+      ],
+      "split": "fit",
+      "adjustment": 0.6495239197516771,
+      "candidateMargin": 10.547523919751677
+    },
+    {
+      "gameId": "2025_08_NYJ_CIN",
+      "week": 8,
+      "cutoff": "2025-10-25T17:00:00+00:00",
+      "baselineMargin": 4.87,
+      "actualMargin": -1.0,
+      "feature": [
+        0.23290359978770692,
+        0.956736566531059
+      ],
+      "split": "fit",
+      "adjustment": 3.166681686536233,
+      "candidateMargin": 8.036681686536234
+    },
+    {
+      "gameId": "2025_08_SF_HOU",
+      "week": 8,
+      "cutoff": "2025-10-25T17:00:00+00:00",
+      "baselineMargin": 4.387,
+      "actualMargin": 11.0,
+      "feature": [
+        -0.7481879787485539,
+        -0.36931066442202787
+      ],
+      "split": "fit",
+      "adjustment": -2.9074406780628737,
+      "candidateMargin": 1.479559321937126
+    },
+    {
+      "gameId": "2025_08_TB_NO",
+      "week": 8,
+      "cutoff": "2025-10-25T20:05:00+00:00",
+      "baselineMargin": -3.792,
+      "actualMargin": -20.0,
+      "feature": [
+        -0.6137896542685128,
+        -0.0756918100128904
+      ],
+      "split": "fit",
+      "adjustment": -1.7745335195246121,
+      "candidateMargin": -5.5665335195246115
+    },
+    {
+      "gameId": "2025_08_TEN_IND",
+      "week": 8,
+      "cutoff": "2025-10-25T20:25:00+00:00",
+      "baselineMargin": 14.075,
+      "actualMargin": 24.0,
+      "feature": [
+        1.6864176937570177,
+        0.7934985192269479
+      ],
+      "split": "fit",
+      "adjustment": 6.44878788128886,
+      "candidateMargin": 20.52378788128886
+    },
+    {
+      "gameId": "2025_08_WAS_KC",
+      "week": 8,
+      "cutoff": "2025-10-27T00:15:00+00:00",
+      "baselineMargin": 6.421,
+      "actualMargin": 21.0,
+      "feature": [
+        0.23206869159084498,
+        0.3272513661824862
+      ],
+      "split": "fit",
+      "adjustment": 1.473283987449709,
+      "candidateMargin": 7.894283987449709
+    },
+    {
+      "gameId": "2025_09_BAL_MIA",
+      "week": 9,
+      "cutoff": "2025-10-30T00:15:00+00:00",
+      "baselineMargin": -0.261,
+      "actualMargin": -22.0,
+      "feature": [
+        -0.5742876755277386,
+        0.48402409235966704
+      ],
+      "split": "evaluate",
+      "adjustment": -0.16960810991722197,
+      "candidateMargin": -0.430608109917222
+    },
+    {
+      "gameId": "2025_09_ATL_NE",
+      "week": 9,
+      "cutoff": "2025-11-01T18:00:00+00:00",
+      "baselineMargin": 6.18,
+      "actualMargin": 1.0,
+      "feature": [
+        0.4520562159617967,
+        -0.6680212984630727
+      ],
+      "split": "evaluate",
+      "adjustment": -0.6376300664103594,
+      "candidateMargin": 5.54236993358964
+    },
+    {
+      "gameId": "2025_09_CAR_GB",
+      "week": 9,
+      "cutoff": "2025-11-01T18:00:00+00:00",
+      "baselineMargin": 12.291,
+      "actualMargin": -3.0,
+      "feature": [
+        1.2615358098998675,
+        0.09332488988664463
+      ],
+      "split": "evaluate",
+      "adjustment": 3.479999908280198,
+      "candidateMargin": 15.7709999082802
+    },
+    {
+      "gameId": "2025_09_CHI_CIN",
+      "week": 9,
+      "cutoff": "2025-11-01T18:00:00+00:00",
+      "baselineMargin": 0.496,
+      "actualMargin": -5.0,
+      "feature": [
+        -0.6086360068073393,
+        0.15970349627113445
+      ],
+      "split": "evaluate",
+      "adjustment": -1.1288962592645406,
+      "candidateMargin": -0.6328962592645406
+    },
+    {
+      "gameId": "2025_09_DEN_HOU",
+      "week": 9,
+      "cutoff": "2025-11-01T18:00:00+00:00",
+      "baselineMargin": 1.358,
+      "actualMargin": -3.0,
+      "feature": [
+        -0.051683551710833164,
+        -0.3581806493727292
+      ],
+      "split": "evaluate",
+      "adjustment": -1.0946356105516923,
+      "candidateMargin": 0.26336438944830776
+    },
+    {
+      "gameId": "2025_09_IND_PIT",
+      "week": 9,
+      "cutoff": "2025-11-01T18:00:00+00:00",
+      "baselineMargin": -2.11,
+      "actualMargin": 7.0,
+      "feature": [
+        -0.7025305183876522,
+        -0.13402710553538477
+      ],
+      "split": "evaluate",
+      "adjustment": -2.1584225967041366,
+      "candidateMargin": -4.268422596704136
+    },
+    {
+      "gameId": "2025_09_JAX_LV",
+      "week": 9,
+      "cutoff": "2025-11-01T21:05:00+00:00",
+      "baselineMargin": -1.591,
+      "actualMargin": -1.0,
+      "feature": [
+        0.215829455676662,
+        -0.0835427159132654
+      ],
+      "split": "evaluate",
+      "adjustment": 0.32801980764124217,
+      "candidateMargin": -1.2629801923587578
+    },
+    {
+      "gameId": "2025_09_KC_BUF",
+      "week": 9,
+      "cutoff": "2025-11-01T21:25:00+00:00",
+      "baselineMargin": 2.949,
+      "actualMargin": 7.0,
+      "feature": [
+        0.08269713761624953,
+        -0.10271636679887501
+      ],
+      "split": "evaluate",
+      "adjustment": -0.06428485376453921,
+      "candidateMargin": 2.8847151462354605
+    },
+    {
+      "gameId": "2025_09_LAC_TEN",
+      "week": 9,
+      "cutoff": "2025-11-01T18:00:00+00:00",
+      "baselineMargin": -6.907,
+      "actualMargin": -7.0,
+      "feature": [
+        -1.042411874699063,
+        -0.3990336237066819
+      ],
+      "split": "evaluate",
+      "adjustment": -3.7404483667127035,
+      "candidateMargin": -10.647448366712704
+    },
+    {
+      "gameId": "2025_09_MIN_DET",
+      "week": 9,
+      "cutoff": "2025-11-01T18:00:00+00:00",
+      "baselineMargin": 10.612,
+      "actualMargin": -3.0,
+      "feature": [
+        0.7511864388315947,
+        1.2095608779172224
+      ],
+      "split": "evaluate",
+      "adjustment": 5.172646541436972,
+      "candidateMargin": 15.784646541436972
+    },
+    {
+      "gameId": "2025_09_NO_LA",
+      "week": 9,
+      "cutoff": "2025-11-01T21:05:00+00:00",
+      "baselineMargin": 10.409,
+      "actualMargin": 24.0,
+      "feature": [
+        0.8290028216495982,
+        0.15385169503726975
+      ],
+      "split": "evaluate",
+      "adjustment": 2.535427951624788,
+      "candidateMargin": 12.944427951624789
+    },
+    {
+      "gameId": "2025_09_SEA_WAS",
+      "week": 9,
+      "cutoff": "2025-11-02T01:20:00+00:00",
+      "baselineMargin": -0.556,
+      "actualMargin": -24.0,
+      "feature": [
+        -0.8634806695244013,
+        -0.258398544995963
+      ],
+      "split": "evaluate",
+      "adjustment": -2.904573612512586,
+      "candidateMargin": -3.460573612512586
+    },
+    {
+      "gameId": "2025_09_SF_NYG",
+      "week": 9,
+      "cutoff": "2025-11-01T18:00:00+00:00",
+      "baselineMargin": -1.293,
+      "actualMargin": -10.0,
+      "feature": [
+        -0.5424961287766932,
+        -0.6786069826855584
+      ],
+      "split": "evaluate",
+      "adjustment": -3.211911280231276,
+      "candidateMargin": -4.504911280231276
+    },
+    {
+      "gameId": "2025_09_ARI_DAL",
+      "week": 9,
+      "cutoff": "2025-11-03T01:15:00+00:00",
+      "baselineMargin": 2.702,
+      "actualMargin": -10.0,
+      "feature": [
+        0.7603469056672632,
+        0.45199713026070926
+      ],
+      "split": "evaluate",
+      "adjustment": 3.1607216178389073,
+      "candidateMargin": 5.862721617838908
+    },
+    {
+      "gameId": "2025_10_LV_DEN",
+      "week": 10,
+      "cutoff": "2025-11-06T01:15:00+00:00",
+      "baselineMargin": 12.426,
+      "actualMargin": 3.0,
+      "feature": [
+        -0.05652024247525844,
+        0.4921630029582264
+      ],
+      "split": "evaluate",
+      "adjustment": 1.1776323553197179,
+      "candidateMargin": 13.603632355319718
+    },
+    {
+      "gameId": "2025_10_ARI_SEA",
+      "week": 10,
+      "cutoff": "2025-11-08T21:05:00+00:00",
+      "baselineMargin": 6.593,
+      "actualMargin": 22.0,
+      "feature": [
+        1.30530517438602,
+        0.5710564811060139
+      ],
+      "split": "evaluate",
+      "adjustment": 4.875578712786332,
+      "candidateMargin": 11.468578712786332
+    },
+    {
+      "gameId": "2025_10_ATL_IND",
+      "week": 10,
+      "cutoff": "2025-11-08T14:30:00+00:00",
+      "baselineMargin": 6.239,
+      "actualMargin": 6.0,
+      "feature": [
+        0.48119562977311325,
+        -0.1013351302956849
+      ],
+      "split": "evaluate",
+      "adjustment": 0.9594966675138068,
+      "candidateMargin": 7.1984966675138065
+    },
+    {
+      "gameId": "2025_10_BAL_MIN",
+      "week": 10,
+      "cutoff": "2025-11-08T18:00:00+00:00",
+      "baselineMargin": -0.757,
+      "actualMargin": -8.0,
+      "feature": [
+        -0.856497058908797,
+        -0.6988132058769326
+      ],
+      "split": "evaluate",
+      "adjustment": -4.069974969422906,
+      "candidateMargin": -4.826974969422905
+    },
+    {
+      "gameId": "2025_10_BUF_MIA",
+      "week": 10,
+      "cutoff": "2025-11-08T18:00:00+00:00",
+      "baselineMargin": -6.21,
+      "actualMargin": 17.0,
+      "feature": [
+        -0.747631547276697,
+        0.08241121274857925
+      ],
+      "split": "evaluate",
+      "adjustment": -1.6923589293227184,
+      "candidateMargin": -7.902358929322718
+    },
+    {
+      "gameId": "2025_10_CLE_NYJ",
+      "week": 10,
+      "cutoff": "2025-11-08T18:00:00+00:00",
+      "baselineMargin": 2.373,
+      "actualMargin": 7.0,
+      "feature": [
+        0.21885825119367475,
+        -0.4425834110093636
+      ],
+      "split": "evaluate",
+      "adjustment": -0.6288746673216097,
+      "candidateMargin": 1.7441253326783905
+    },
+    {
+      "gameId": "2025_10_DET_WAS",
+      "week": 10,
+      "cutoff": "2025-11-08T21:25:00+00:00",
+      "baselineMargin": -5.077,
+      "actualMargin": -22.0,
+      "feature": [
+        -0.4493288414839274,
+        -0.04978287267554726
+      ],
+      "split": "evaluate",
+      "adjustment": -1.2839387078478852,
+      "candidateMargin": -6.360938707847885
+    },
+    {
+      "gameId": "2025_10_JAX_HOU",
+      "week": 10,
+      "cutoff": "2025-11-08T18:00:00+00:00",
+      "baselineMargin": 6.37,
+      "actualMargin": 7.0,
+      "feature": [
+        0.25063595950875683,
+        -0.004299242687481747
+      ],
+      "split": "evaluate",
+      "adjustment": 0.6300232653983205,
+      "candidateMargin": 7.000023265398321
+    },
+    {
+      "gameId": "2025_10_LA_SF",
+      "week": 10,
+      "cutoff": "2025-11-08T21:25:00+00:00",
+      "baselineMargin": -1.315,
+      "actualMargin": -16.0,
+      "feature": [
+        -0.09473429830334101,
+        0.059374957226055944
+      ],
+      "split": "evaluate",
+      "adjustment": -0.0829746137670257,
+      "candidateMargin": -1.3979746137670257
+    },
+    {
+      "gameId": "2025_10_NE_TB",
+      "week": 10,
+      "cutoff": "2025-11-08T18:00:00+00:00",
+      "baselineMargin": 4.875,
+      "actualMargin": -5.0,
+      "feature": [
+        -0.45220358300831265,
+        0.5794299178385974
+      ],
+      "split": "evaluate",
+      "adjustment": 0.39923119185392064,
+      "candidateMargin": 5.274231191853921
+    },
+    {
+      "gameId": "2025_10_NO_CAR",
+      "week": 10,
+      "cutoff": "2025-11-08T18:00:00+00:00",
+      "baselineMargin": 3.436,
+      "actualMargin": -10.0,
+      "feature": [
+        -0.21939665883318238,
+        0.007528589313818557
+      ],
+      "split": "evaluate",
+      "adjustment": -0.5413809672679686,
+      "candidateMargin": 2.8946190327320314
+    },
+    {
+      "gameId": "2025_10_NYG_CHI",
+      "week": 10,
+      "cutoff": "2025-11-08T18:00:00+00:00",
+      "baselineMargin": 6.31,
+      "actualMargin": 4.0,
+      "feature": [
+        0.37793584725427465,
+        0.37882401883755223
+      ],
+      "split": "evaluate",
+      "adjustment": 1.985234659011645,
+      "candidateMargin": 8.295234659011644
+    },
+    {
+      "gameId": "2025_10_PIT_LAC",
+      "week": 10,
+      "cutoff": "2025-11-09T01:20:00+00:00",
+      "baselineMargin": 3.805,
+      "actualMargin": 15.0,
+      "feature": [
+        0.131196663926878,
+        -0.22085685873040045
+      ],
+      "split": "evaluate",
+      "adjustment": -0.2575487948711742,
+      "candidateMargin": 3.547451205128826
+    },
+    {
+      "gameId": "2025_10_PHI_GB",
+      "week": 10,
+      "cutoff": "2025-11-10T01:15:00+00:00",
+      "baselineMargin": 2.249,
+      "actualMargin": -3.0,
+      "feature": [
+        0.5550668393027145,
+        0.6793319980850512
+      ],
+      "split": "evaluate",
+      "adjustment": 3.24603752269456,
+      "candidateMargin": 5.49503752269456
+    },
+    {
+      "gameId": "2025_11_NYJ_NE",
+      "week": 11,
+      "cutoff": "2025-11-13T01:15:00+00:00",
+      "baselineMargin": 7.998,
+      "actualMargin": 13.0,
+      "feature": [
+        1.3640743267497637,
+        0.1497488743101781
+      ],
+      "split": "evaluate",
+      "adjustment": 3.894072823138546,
+      "candidateMargin": 11.892072823138546
+    },
+    {
+      "gameId": "2025_11_BAL_CLE",
+      "week": 11,
+      "cutoff": "2025-11-15T21:25:00+00:00",
+      "baselineMargin": -4.703,
+      "actualMargin": -7.0,
+      "feature": [
+        -1.36986467161885,
+        -0.0034334817323943
+      ],
+      "split": "evaluate",
+      "adjustment": -3.515784037381793,
+      "candidateMargin": -8.218784037381793
+    },
+    {
+      "gameId": "2025_11_CAR_ATL",
+      "week": 11,
+      "cutoff": "2025-11-15T18:00:00+00:00",
+      "baselineMargin": 5.325,
+      "actualMargin": -3.0,
+      "feature": [
+        0.6420400269761286,
+        0.04350446541182405
+      ],
+      "split": "evaluate",
+      "adjustment": 1.7603695070589225,
+      "candidateMargin": 7.085369507058923
+    },
+    {
+      "gameId": "2025_11_CHI_MIN",
+      "week": 11,
+      "cutoff": "2025-11-15T18:00:00+00:00",
+      "baselineMargin": 1.432,
+      "actualMargin": -2.0,
+      "feature": [
+        -0.548706054981202,
+        -0.5926768111746316
+      ],
+      "split": "evaluate",
+      "adjustment": -2.996935676407757,
+      "candidateMargin": -1.564935676407757
+    },
+    {
+      "gameId": "2025_11_CIN_PIT",
+      "week": 11,
+      "cutoff": "2025-11-15T18:00:00+00:00",
+      "baselineMargin": 5.294,
+      "actualMargin": 22.0,
+      "feature": [
+        0.017357088911359675,
+        -0.14838339384636703
+      ],
+      "split": "evaluate",
+      "adjustment": -0.354236580014019,
+      "candidateMargin": 4.93976341998598
+    },
+    {
+      "gameId": "2025_11_DET_PHI",
+      "week": 11,
+      "cutoff": "2025-11-16T01:20:00+00:00",
+      "baselineMargin": -0.241,
+      "actualMargin": 7.0,
+      "feature": [
+        -0.44583208244645967,
+        -0.33651687511700423
+      ],
+      "split": "evaluate",
+      "adjustment": -2.0453663066696683,
+      "candidateMargin": -2.2863663066696684
+    },
+    {
+      "gameId": "2025_11_GB_NYG",
+      "week": 11,
+      "cutoff": "2025-11-15T18:00:00+00:00",
+      "baselineMargin": -5.153,
+      "actualMargin": -7.0,
+      "feature": [
+        -0.5815941474748136,
+        -0.47872108831228916
+      ],
+      "split": "evaluate",
+      "adjustment": -2.774953189062896,
+      "candidateMargin": -7.927953189062896
+    },
+    {
+      "gameId": "2025_11_HOU_TEN",
+      "week": 11,
+      "cutoff": "2025-11-15T18:00:00+00:00",
+      "baselineMargin": -8.233,
+      "actualMargin": -3.0,
+      "feature": [
+        -0.8085575128922109,
+        -0.43681111219872226
+      ],
+      "split": "evaluate",
+      "adjustment": -3.243329591424973,
+      "candidateMargin": -11.476329591424975
+    },
+    {
+      "gameId": "2025_11_KC_DEN",
+      "week": 11,
+      "cutoff": "2025-11-15T21:25:00+00:00",
+      "baselineMargin": 1.179,
+      "actualMargin": 3.0,
+      "feature": [
+        -0.5322352234152152,
+        0.25643025728146357
+      ],
+      "split": "evaluate",
+      "adjustment": -0.6734474066510975,
+      "candidateMargin": 0.5055525933489026
+    },
+    {
+      "gameId": "2025_11_LAC_JAX",
+      "week": 11,
+      "cutoff": "2025-11-15T18:00:00+00:00",
+      "baselineMargin": -1.88,
+      "actualMargin": 29.0,
+      "feature": [
+        -0.4629549528424972,
+        0.05260817913152471
+      ],
+      "split": "evaluate",
+      "adjustment": -1.0437209055485188,
+      "candidateMargin": -2.9237209055485187
+    },
+    {
+      "gameId": "2025_11_SEA_LA",
+      "week": 11,
+      "cutoff": "2025-11-15T21:05:00+00:00",
+      "baselineMargin": 2.209,
+      "actualMargin": 2.0,
+      "feature": [
+        -0.8343778159579536,
+        0.06675968259548394
+      ],
+      "split": "evaluate",
+      "adjustment": -1.9564622642038534,
+      "candidateMargin": 0.2525377357961467
+    },
+    {
+      "gameId": "2025_11_SF_ARI",
+      "week": 11,
+      "cutoff": "2025-11-15T21:05:00+00:00",
+      "baselineMargin": 1.453,
+      "actualMargin": -19.0,
+      "feature": [
+        -0.7077239396809212,
+        -0.6454868530536252
+      ],
+      "split": "evaluate",
+      "adjustment": -3.54587392634512,
+      "candidateMargin": -2.0928739263451197
+    },
+    {
+      "gameId": "2025_11_TB_BUF",
+      "week": 11,
+      "cutoff": "2025-11-15T18:00:00+00:00",
+      "baselineMargin": 4.087,
+      "actualMargin": 12.0,
+      "feature": [
+        0.4741954622022879,
+        -0.09043403599206017
+      ],
+      "split": "evaluate",
+      "adjustment": 0.9708661047386229,
+      "candidateMargin": 5.057866104738623
+    },
+    {
+      "gameId": "2025_11_WAS_MIA",
+      "week": 11,
+      "cutoff": "2025-11-15T14:30:00+00:00",
+      "baselineMargin": 0.612,
+      "actualMargin": 3.0,
+      "feature": [
+        -0.02311579487864801,
+        0.3578689567957006
+      ],
+      "split": "evaluate",
+      "adjustment": 0.9023279218389137,
+      "candidateMargin": 1.5143279218389138
+    },
+    {
+      "gameId": "2025_11_DAL_LV",
+      "week": 11,
+      "cutoff": "2025-11-17T01:15:00+00:00",
+      "baselineMargin": -2.214,
+      "actualMargin": -17.0,
+      "feature": [
+        -0.41765688736854045,
+        -0.43581845259161206
+      ],
+      "split": "evaluate",
+      "adjustment": -2.2400409794770857,
+      "candidateMargin": -4.454040979477085
+    },
+    {
+      "gameId": "2025_12_BUF_HOU",
+      "week": 12,
+      "cutoff": "2025-11-20T01:15:00+00:00",
+      "baselineMargin": 0.205,
+      "actualMargin": 4.0,
+      "feature": [
+        -0.9032050338236974,
+        -0.096912262053118
+      ],
+      "split": "evaluate",
+      "adjustment": -2.5723884477200714,
+      "candidateMargin": -2.3673884477200713
+    },
+    {
+      "gameId": "2025_12_ATL_NO",
+      "week": 12,
+      "cutoff": "2025-11-22T21:25:00+00:00",
+      "baselineMargin": 0.079,
+      "actualMargin": -14.0,
+      "feature": [
+        0.23873774668041303,
+        -0.24289862780148824
+      ],
+      "split": "evaluate",
+      "adjustment": -0.04148714656776753,
+      "candidateMargin": 0.03751285343223247
+    },
+    {
+      "gameId": "2025_12_CLE_LV",
+      "week": 12,
+      "cutoff": "2025-11-22T21:05:00+00:00",
+      "baselineMargin": 0.661,
+      "actualMargin": -14.0,
+      "feature": [
+        0.5664618389631535,
+        0.00924376521690598
+      ],
+      "split": "evaluate",
+      "adjustment": 1.4748561326684595,
+      "candidateMargin": 2.1358561326684598
+    },
+    {
+      "gameId": "2025_12_IND_KC",
+      "week": 12,
+      "cutoff": "2025-11-22T18:00:00+00:00",
+      "baselineMargin": 2.69,
+      "actualMargin": 3.0,
+      "feature": [
+        -0.3467333301037252,
+        0.12909109128522944
+      ],
+      "split": "evaluate",
+      "adjustment": -0.5407291379666274,
+      "candidateMargin": 2.1492708620333727
+    },
+    {
+      "gameId": "2025_12_JAX_ARI",
+      "week": 12,
+      "cutoff": "2025-11-22T21:05:00+00:00",
+      "baselineMargin": 1.598,
+      "actualMargin": -3.0,
+      "feature": [
+        0.3523951500668039,
+        -0.02356187957845271
+      ],
+      "split": "evaluate",
+      "adjustment": 0.8387513065158831,
+      "candidateMargin": 2.436751306515883
+    },
+    {
+      "gameId": "2025_12_MIN_GB",
+      "week": 12,
+      "cutoff": "2025-11-22T18:00:00+00:00",
+      "baselineMargin": 7.276,
+      "actualMargin": 17.0,
+      "feature": [
+        0.9503545010062577,
+        0.3661433994947537
+      ],
+      "split": "evaluate",
+      "adjustment": 3.4164339254035525,
+      "candidateMargin": 10.692433925403552
+    },
+    {
+      "gameId": "2025_12_NE_CIN",
+      "week": 12,
+      "cutoff": "2025-11-22T18:00:00+00:00",
+      "baselineMargin": -3.116,
+      "actualMargin": -6.0,
+      "feature": [
+        -1.0159552782837142,
+        0.556829926362413
+      ],
+      "split": "evaluate",
+      "adjustment": -1.1045722085345162,
+      "candidateMargin": -4.2205722085345165
+    },
+    {
+      "gameId": "2025_12_NYG_DET",
+      "week": 12,
+      "cutoff": "2025-11-22T18:00:00+00:00",
+      "baselineMargin": 12.122,
+      "actualMargin": 7.0,
+      "feature": [
+        0.6965562375075578,
+        0.3215889871442504
+      ],
+      "split": "evaluate",
+      "adjustment": 2.6470589704129344,
+      "candidateMargin": 14.769058970412935
+    },
+    {
+      "gameId": "2025_12_NYJ_BAL",
+      "week": 12,
+      "cutoff": "2025-11-22T18:00:00+00:00",
+      "baselineMargin": 9.829,
+      "actualMargin": 13.0,
+      "feature": [
+        0.6926745927643987,
+        0.08802555187000849
+      ],
+      "split": "evaluate",
+      "adjustment": 2.0095995174459307,
+      "candidateMargin": 11.838599517445932
+    },
+    {
+      "gameId": "2025_12_PHI_DAL",
+      "week": 12,
+      "cutoff": "2025-11-22T21:25:00+00:00",
+      "baselineMargin": -2.458,
+      "actualMargin": 3.0,
+      "feature": [
+        0.14925777825070874,
+        0.4263994671646232
+      ],
+      "split": "evaluate",
+      "adjustment": 1.5276906117863263,
+      "candidateMargin": -0.9303093882136739
+    },
+    {
+      "gameId": "2025_12_PIT_CHI",
+      "week": 12,
+      "cutoff": "2025-11-22T18:00:00+00:00",
+      "baselineMargin": 1.813,
+      "actualMargin": 3.0,
+      "feature": [
+        0.23036901695098067,
+        0.08955933038168398
+      ],
+      "split": "evaluate",
+      "adjustment": 0.8303174496167781,
+      "candidateMargin": 2.643317449616778
+    },
+    {
+      "gameId": "2025_12_SEA_TEN",
+      "week": 12,
+      "cutoff": "2025-11-22T18:00:00+00:00",
+      "baselineMargin": -9.839,
+      "actualMargin": -6.0,
+      "feature": [
+        -2.2159984307065406,
+        -0.665126061236106
+      ],
+      "split": "evaluate",
+      "adjustment": -7.45949786519878,
+      "candidateMargin": -17.29849786519878
+    },
+    {
+      "gameId": "2025_12_TB_LA",
+      "week": 12,
+      "cutoff": "2025-11-23T01:20:00+00:00",
+      "baselineMargin": 5.024,
+      "actualMargin": 27.0,
+      "feature": [
+        0.3699654502704002,
+        0.1676298071631016
+      ],
+      "split": "evaluate",
+      "adjustment": 1.397409076040016,
+      "candidateMargin": 6.421409076040016
+    },
+    {
+      "gameId": "2025_12_CAR_SF",
+      "week": 12,
+      "cutoff": "2025-11-24T01:15:00+00:00",
+      "baselineMargin": 8.198,
+      "actualMargin": 11.0,
+      "feature": [
+        0.7145350957360161,
+        0.21981080139219386
+      ],
+      "split": "evaluate",
+      "adjustment": 2.419629873963677,
+      "candidateMargin": 10.617629873963677
+    },
+    {
+      "gameId": "2025_13_CIN_BAL",
+      "week": 13,
+      "cutoff": "2025-11-27T01:20:00+00:00",
+      "baselineMargin": 9.436,
+      "actualMargin": -18.0,
+      "feature": [
+        0.3897200761125914,
+        -0.060382230553341215
+      ],
+      "split": "evaluate",
+      "adjustment": 0.8353685357455617,
+      "candidateMargin": 10.271368535745562
+    },
+    {
+      "gameId": "2025_13_GB_DET",
+      "week": 13,
+      "cutoff": "2025-11-26T18:00:00+00:00",
+      "baselineMargin": 3.67,
+      "actualMargin": -7.0,
+      "feature": [
+        0.07910886873396095,
+        -0.13796499589535438
+      ],
+      "split": "evaluate",
+      "adjustment": -0.16817380973643908,
+      "candidateMargin": 3.501826190263561
+    },
+    {
+      "gameId": "2025_13_KC_DAL",
+      "week": 13,
+      "cutoff": "2025-11-26T21:30:00+00:00",
+      "baselineMargin": -2.09,
+      "actualMargin": 3.0,
+      "feature": [
+        0.21835521902688892,
+        0.16065214137907907
+      ],
+      "split": "evaluate",
+      "adjustment": 0.9905723192820374,
+      "candidateMargin": -1.0994276807179624
+    },
+    {
+      "gameId": "2025_13_CHI_PHI",
+      "week": 13,
+      "cutoff": "2025-11-27T20:00:00+00:00",
+      "baselineMargin": 6.709,
+      "actualMargin": -9.0,
+      "feature": [
+        0.0497524896248267,
+        -0.291207630311076
+      ],
+      "split": "evaluate",
+      "adjustment": -0.6550423255614979,
+      "candidateMargin": 6.053957674438502
+    },
+    {
+      "gameId": "2025_13_ARI_TB",
+      "week": 13,
+      "cutoff": "2025-11-29T18:00:00+00:00",
+      "baselineMargin": 4.614,
+      "actualMargin": 3.0,
+      "feature": [
+        0.025187728646478114,
+        0.24630822577953085
+      ],
+      "split": "evaluate",
+      "adjustment": 0.7262403358712354,
+      "candidateMargin": 5.340240335871235
+    },
+    {
+      "gameId": "2025_13_ATL_NYJ",
+      "week": 13,
+      "cutoff": "2025-11-29T18:00:00+00:00",
+      "baselineMargin": -0.939,
+      "actualMargin": 3.0,
+      "feature": [
+        -0.1920292521381608,
+        -0.5052401394645789
+      ],
+      "split": "evaluate",
+      "adjustment": -1.849000461506115,
+      "candidateMargin": -2.788000461506115
+    },
+    {
+      "gameId": "2025_13_BUF_PIT",
+      "week": 13,
+      "cutoff": "2025-11-29T21:25:00+00:00",
+      "baselineMargin": -1.581,
+      "actualMargin": -19.0,
+      "feature": [
+        -0.7023888751717342,
+        0.16165160871699003
+      ],
+      "split": "evaluate",
+      "adjustment": -1.363649391273465,
+      "candidateMargin": -2.9446493912734653
+    },
+    {
+      "gameId": "2025_13_DEN_WAS",
+      "week": 13,
+      "cutoff": "2025-11-30T01:20:00+00:00",
+      "baselineMargin": -3.068,
+      "actualMargin": -1.0,
+      "feature": [
+        0.08591385261039441,
+        -0.5826922526231542
+      ],
+      "split": "evaluate",
+      "adjustment": -1.3456192189829663,
+      "candidateMargin": -4.413619218982967
+    },
+    {
+      "gameId": "2025_13_HOU_IND",
+      "week": 13,
+      "cutoff": "2025-11-29T18:00:00+00:00",
+      "baselineMargin": 3.394,
+      "actualMargin": -4.0,
+      "feature": [
+        0.5722878975007264,
+        0.08252356378576138
+      ],
+      "split": "evaluate",
+      "adjustment": 1.6866530592474591,
+      "candidateMargin": 5.080653059247459
+    },
+    {
+      "gameId": "2025_13_JAX_TEN",
+      "week": 13,
+      "cutoff": "2025-11-29T18:00:00+00:00",
+      "baselineMargin": -4.298,
+      "actualMargin": -22.0,
+      "feature": [
+        -0.6871193881457138,
+        -0.2901628637725434
+      ],
+      "split": "evaluate",
+      "adjustment": -2.538468968783801,
+      "candidateMargin": -6.836468968783802
+    },
+    {
+      "gameId": "2025_13_LA_CAR",
+      "week": 13,
+      "cutoff": "2025-11-29T18:00:00+00:00",
+      "baselineMargin": -8.353,
+      "actualMargin": 3.0,
+      "feature": [
+        -0.8032745203025646,
+        -0.20092617676894006
+      ],
+      "split": "evaluate",
+      "adjustment": -2.596045731207209,
+      "candidateMargin": -10.949045731207208
+    },
+    {
+      "gameId": "2025_13_LV_LAC",
+      "week": 13,
+      "cutoff": "2025-11-29T21:25:00+00:00",
+      "baselineMargin": 9.612,
+      "actualMargin": 17.0,
+      "feature": [
+        0.4909028223663583,
+        0.19236100649921026
+      ],
+      "split": "evaluate",
+      "adjustment": 1.7734289616207477,
+      "candidateMargin": 11.385428961620748
+    },
+    {
+      "gameId": "2025_13_MIN_SEA",
+      "week": 13,
+      "cutoff": "2025-11-29T21:05:00+00:00",
+      "baselineMargin": 9.384,
+      "actualMargin": 26.0,
+      "feature": [
+        1.9962003537150244,
+        0.6295133929913923
+      ],
+      "split": "evaluate",
+      "adjustment": 6.801180186389661,
+      "candidateMargin": 16.185180186389662
+    },
+    {
+      "gameId": "2025_13_NO_MIA",
+      "week": 13,
+      "cutoff": "2025-11-29T18:00:00+00:00",
+      "baselineMargin": 5.892,
+      "actualMargin": 4.0,
+      "feature": [
+        0.1593401759939379,
+        0.1494246205391001
+      ],
+      "split": "evaluate",
+      "adjustment": 0.8093411075192736,
+      "candidateMargin": 6.701341107519274
+    },
+    {
+      "gameId": "2025_13_SF_CLE",
+      "week": 13,
+      "cutoff": "2025-11-29T18:00:00+00:00",
+      "baselineMargin": -2.586,
+      "actualMargin": -18.0,
+      "feature": [
+        -0.39142159584484215,
+        -0.465908185321926
+      ],
+      "split": "evaluate",
+      "adjustment": -2.2537274375291823,
+      "candidateMargin": -4.8397274375291826
+    },
+    {
+      "gameId": "2025_13_NYG_NE",
+      "week": 13,
+      "cutoff": "2025-12-01T01:15:00+00:00",
+      "baselineMargin": 7.663,
+      "actualMargin": 18.0,
+      "feature": [
+        0.8657081422035695,
+        0.0073594885603499305
+      ],
+      "split": "evaluate",
+      "adjustment": 2.2357998078066332,
+      "candidateMargin": 9.898799807806633
+    },
+    {
+      "gameId": "2025_14_DAL_DET",
+      "week": 14,
+      "cutoff": "2025-12-04T01:15:00+00:00",
+      "baselineMargin": 7.149,
+      "actualMargin": 14.0,
+      "feature": [
+        0.024099466764745614,
+        -0.2605579980561987
+      ],
+      "split": "evaluate",
+      "adjustment": -0.638361082681473,
+      "candidateMargin": 6.510638917318527
+    },
+    {
+      "gameId": "2025_14_CHI_GB",
+      "week": 14,
+      "cutoff": "2025-12-06T21:25:00+00:00",
+      "baselineMargin": 6.52,
+      "actualMargin": 7.0,
+      "feature": [
+        0.5678651570711741,
+        0.07693487244477382
+      ],
+      "split": "evaluate",
+      "adjustment": 1.6603164562828958,
+      "candidateMargin": 8.180316456282895
+    },
+    {
+      "gameId": "2025_14_CIN_BUF",
+      "week": 14,
+      "cutoff": "2025-12-06T18:00:00+00:00",
+      "baselineMargin": 10.245,
+      "actualMargin": 5.0,
+      "feature": [
+        0.7194389914785626,
+        -0.12281574026543556
+      ],
+      "split": "evaluate",
+      "adjustment": 1.5116357486447045,
+      "candidateMargin": 11.756635748644705
+    },
+    {
+      "gameId": "2025_14_DEN_LV",
+      "week": 14,
+      "cutoff": "2025-12-06T21:05:00+00:00",
+      "baselineMargin": -8.265,
+      "actualMargin": -7.0,
+      "feature": [
+        -0.5630260720047726,
+        -0.8101455795293799
+      ],
+      "split": "evaluate",
+      "adjustment": -3.6178729991233114,
+      "candidateMargin": -11.882872999123311
+    },
+    {
+      "gameId": "2025_14_HOU_KC",
+      "week": 14,
+      "cutoff": "2025-12-07T01:20:00+00:00",
+      "baselineMargin": 2.989,
+      "actualMargin": -10.0,
+      "feature": [
+        0.27253350323908787,
+        0.061497856441884644
+      ],
+      "split": "evaluate",
+      "adjustment": 0.8628557028092224,
+      "candidateMargin": 3.8518557028092224
+    },
+    {
+      "gameId": "2025_14_IND_JAX",
+      "week": 14,
+      "cutoff": "2025-12-06T18:00:00+00:00",
+      "baselineMargin": -0.943,
+      "actualMargin": 17.0,
+      "feature": [
+        -0.7022882141189859,
+        -0.18926665165236556
+      ],
+      "split": "evaluate",
+      "adjustment": -2.3062164238884564,
+      "candidateMargin": -3.2492164238884564
+    },
+    {
+      "gameId": "2025_14_LA_ARI",
+      "week": 14,
+      "cutoff": "2025-12-06T21:25:00+00:00",
+      "baselineMargin": -4.221,
+      "actualMargin": -28.0,
+      "feature": [
+        -0.5905860159326526,
+        -0.3748415471729935
+      ],
+      "split": "evaluate",
+      "adjustment": -2.518873543035685,
+      "candidateMargin": -6.739873543035685
+    },
+    {
+      "gameId": "2025_14_MIA_NYJ",
+      "week": 14,
+      "cutoff": "2025-12-06T18:00:00+00:00",
+      "baselineMargin": -0.974,
+      "actualMargin": -24.0,
+      "feature": [
+        -0.3218093016361694,
+        -0.22206220642673732
+      ],
+      "split": "evaluate",
+      "adjustment": -1.420385167760243,
+      "candidateMargin": -2.394385167760243
+    },
+    {
+      "gameId": "2025_14_NO_TB",
+      "week": 14,
+      "cutoff": "2025-12-06T18:00:00+00:00",
+      "baselineMargin": 7.956,
+      "actualMargin": -4.0,
+      "feature": [
+        0.18968613954570568,
+        0.21174796617482616
+      ],
+      "split": "evaluate",
+      "adjustment": 1.0544666257578479,
+      "candidateMargin": 9.010466625757848
+    },
+    {
+      "gameId": "2025_14_PIT_BAL",
+      "week": 14,
+      "cutoff": "2025-12-06T18:00:00+00:00",
+      "baselineMargin": 4.761,
+      "actualMargin": -5.0,
+      "feature": [
+        0.4240345045332745,
+        -0.3394837210469815
+      ],
+      "split": "evaluate",
+      "adjustment": 0.17333409208658457,
+      "candidateMargin": 4.934334092086584
+    },
+    {
+      "gameId": "2025_14_SEA_ATL",
+      "week": 14,
+      "cutoff": "2025-12-06T18:00:00+00:00",
+      "baselineMargin": -4.822,
+      "actualMargin": -28.0,
+      "feature": [
+        -1.0876870949393052,
+        -0.0545759204230916
+      ],
+      "split": "evaluate",
+      "adjustment": -2.9308763086453795,
+      "candidateMargin": -7.75287630864538
+    },
+    {
+      "gameId": "2025_14_TEN_CLE",
+      "week": 14,
+      "cutoff": "2025-12-06T18:00:00+00:00",
+      "baselineMargin": 5.269,
+      "actualMargin": -2.0,
+      "feature": [
+        0.8498900376387306,
+        0.11637066254115924
+      ],
+      "split": "evaluate",
+      "adjustment": 2.4881930987451177,
+      "candidateMargin": 7.757193098745118
+    },
+    {
+      "gameId": "2025_14_WAS_MIN",
+      "week": 14,
+      "cutoff": "2025-12-06T18:00:00+00:00",
+      "baselineMargin": 1.042,
+      "actualMargin": 31.0,
+      "feature": [
+        -0.6413899199819841,
+        -0.13968411197125885
+      ],
+      "split": "evaluate",
+      "adjustment": -2.0171146862810128,
+      "candidateMargin": -0.9751146862810127
+    },
+    {
+      "gameId": "2025_14_PHI_LAC",
+      "week": 14,
+      "cutoff": "2025-12-08T01:15:00+00:00",
+      "baselineMargin": -0.324,
+      "actualMargin": 3.0,
+      "feature": [
+        -0.25330399115328195,
+        -0.19176419868301042
+      ],
+      "split": "evaluate",
+      "adjustment": -1.1636235481424868,
+      "candidateMargin": -1.4876235481424869
+    },
+    {
+      "gameId": "2025_15_ATL_TB",
+      "week": 15,
+      "cutoff": "2025-12-11T01:15:00+00:00",
+      "baselineMargin": 5.212,
+      "actualMargin": -1.0,
+      "feature": [
+        -0.048761601581956526,
+        -0.03176600518248862
+      ],
+      "split": "evaluate",
+      "adjustment": -0.21016608919198612,
+      "candidateMargin": 5.001833910808013
+    },
+    {
+      "gameId": "2025_15_ARI_HOU",
+      "week": 15,
+      "cutoff": "2025-12-13T18:00:00+00:00",
+      "baselineMargin": 7.62,
+      "actualMargin": 20.0,
+      "feature": null,
+      "split": "evaluate",
+      "adjustment": 0.0,
+      "candidateMargin": 7.62
+    },
+    {
+      "gameId": "2025_15_BAL_CIN",
+      "week": 15,
+      "cutoff": "2025-12-13T18:00:00+00:00",
+      "baselineMargin": -2.113,
+      "actualMargin": -24.0,
+      "feature": null,
+      "split": "evaluate",
+      "adjustment": 0.0,
+      "candidateMargin": -2.113
+    },
+    {
+      "gameId": "2025_15_BUF_NE",
+      "week": 15,
+      "cutoff": "2025-12-13T18:00:00+00:00",
+      "baselineMargin": -1.02,
+      "actualMargin": -4.0,
+      "feature": null,
+      "split": "evaluate",
+      "adjustment": 0.0,
+      "candidateMargin": -1.02
+    },
+    {
+      "gameId": "2025_15_CAR_NO",
+      "week": 15,
+      "cutoff": "2025-12-13T21:25:00+00:00",
+      "baselineMargin": 1.746,
+      "actualMargin": 3.0,
+      "feature": null,
+      "split": "evaluate",
+      "adjustment": 0.0,
+      "candidateMargin": 1.746
+    },
+    {
+      "gameId": "2025_15_CLE_CHI",
+      "week": 15,
+      "cutoff": "2025-12-13T18:00:00+00:00",
+      "baselineMargin": 6.894,
+      "actualMargin": 28.0,
+      "feature": null,
+      "split": "evaluate",
+      "adjustment": 0.0,
+      "candidateMargin": 6.894
+    },
+    {
+      "gameId": "2025_15_DET_LA",
+      "week": 15,
+      "cutoff": "2025-12-13T21:25:00+00:00",
+      "baselineMargin": 3.208,
+      "actualMargin": 7.0,
+      "feature": null,
+      "split": "evaluate",
+      "adjustment": 0.0,
+      "candidateMargin": 3.208
+    },
+    {
+      "gameId": "2025_15_GB_DEN",
+      "week": 15,
+      "cutoff": "2025-12-13T21:25:00+00:00",
+      "baselineMargin": 0.521,
+      "actualMargin": 8.0,
+      "feature": null,
+      "split": "evaluate",
+      "adjustment": 0.0,
+      "candidateMargin": 0.521
+    },
+    {
+      "gameId": "2025_15_IND_SEA",
+      "week": 15,
+      "cutoff": "2025-12-13T21:25:00+00:00",
+      "baselineMargin": 5.795,
+      "actualMargin": 2.0,
+      "feature": null,
+      "split": "evaluate",
+      "adjustment": 0.0,
+      "candidateMargin": 5.795
+    },
+    {
+      "gameId": "2025_15_LAC_KC",
+      "week": 15,
+      "cutoff": "2025-12-13T18:00:00+00:00",
+      "baselineMargin": 4.302,
+      "actualMargin": -3.0,
+      "feature": null,
+      "split": "evaluate",
+      "adjustment": 0.0,
+      "candidateMargin": 4.302
+    },
+    {
+      "gameId": "2025_15_LV_PHI",
+      "week": 15,
+      "cutoff": "2025-12-13T18:00:00+00:00",
+      "baselineMargin": 12.486,
+      "actualMargin": 31.0,
+      "feature": null,
+      "split": "evaluate",
+      "adjustment": 0.0,
+      "candidateMargin": 12.486
+    },
+    {
+      "gameId": "2025_15_MIN_DAL",
+      "week": 15,
+      "cutoff": "2025-12-14T01:20:00+00:00",
+      "baselineMargin": 2.942,
+      "actualMargin": -8.0,
+      "feature": null,
+      "split": "evaluate",
+      "adjustment": 0.0,
+      "candidateMargin": 2.942
+    },
+    {
+      "gameId": "2025_15_NYJ_JAX",
+      "week": 15,
+      "cutoff": "2025-12-13T18:00:00+00:00",
+      "baselineMargin": 9.172,
+      "actualMargin": 28.0,
+      "feature": null,
+      "split": "evaluate",
+      "adjustment": 0.0,
+      "candidateMargin": 9.172
+    },
+    {
+      "gameId": "2025_15_TEN_SF",
+      "week": 15,
+      "cutoff": "2025-12-13T21:25:00+00:00",
+      "baselineMargin": 11.095,
+      "actualMargin": 13.0,
+      "feature": null,
+      "split": "evaluate",
+      "adjustment": 0.0,
+      "candidateMargin": 11.095
+    },
+    {
+      "gameId": "2025_15_WAS_NYG",
+      "week": 15,
+      "cutoff": "2025-12-13T18:00:00+00:00",
+      "baselineMargin": 1.088,
+      "actualMargin": -8.0,
+      "feature": null,
+      "split": "evaluate",
+      "adjustment": 0.0,
+      "candidateMargin": 1.088
+    },
+    {
+      "gameId": "2025_15_MIA_PIT",
+      "week": 15,
+      "cutoff": "2025-12-15T01:15:00+00:00",
+      "baselineMargin": 2.348,
+      "actualMargin": 13.0,
+      "feature": [
+        0.12580863426836153,
+        0.14039193492903979
+      ],
+      "split": "evaluate",
+      "adjustment": 0.6992391254597543,
+      "candidateMargin": 3.047239125459754
+    },
+    {
+      "gameId": "2025_16_LA_SEA",
+      "week": 16,
+      "cutoff": "2025-12-18T01:15:00+00:00",
+      "baselineMargin": 1.637,
+      "actualMargin": 1.0,
+      "feature": [
+        0.2035723584807405,
+        -0.10652014460761187
+      ],
+      "split": "evaluate",
+      "adjustment": 0.23490998928482976,
+      "candidateMargin": 1.8719099892848297
+    },
+    {
+      "gameId": "2025_16_GB_CHI",
+      "week": 16,
+      "cutoff": "2025-12-20T01:20:00+00:00",
+      "baselineMargin": -0.878,
+      "actualMargin": 6.0,
+      "feature": [
+        -0.5746636494564008,
+        -0.06373567822243062
+      ],
+      "split": "evaluate",
+      "adjustment": -1.6422563862696689,
+      "candidateMargin": -2.520256386269669
+    },
+    {
+      "gameId": "2025_16_PHI_WAS",
+      "week": 16,
+      "cutoff": "2025-12-19T22:00:00+00:00",
+      "baselineMargin": -5.212,
+      "actualMargin": -11.0,
+      "feature": [
+        -0.059300108127553486,
+        -0.013917814335884238
+      ],
+      "split": "evaluate",
+      "adjustment": -0.18918902537846666,
+      "candidateMargin": -5.401189025378466
+    },
+    {
+      "gameId": "2025_16_ATL_ARI",
+      "week": 16,
+      "cutoff": "2025-12-20T21:05:00+00:00",
+      "baselineMargin": 1.85,
+      "actualMargin": -7.0,
+      "feature": [
+        -0.22539161437916633,
+        -0.28362774574920646
+      ],
+      "split": "evaluate",
+      "adjustment": -1.3389869556833076,
+      "candidateMargin": 0.5110130443166925
+    },
+    {
+      "gameId": "2025_16_BUF_CLE",
+      "week": 16,
+      "cutoff": "2025-12-20T18:00:00+00:00",
+      "baselineMargin": -8.529,
+      "actualMargin": -3.0,
+      "feature": [
+        -0.7422098104640984,
+        -0.12701690931383014
+      ],
+      "split": "evaluate",
+      "adjustment": -2.2411585112742167,
+      "candidateMargin": -10.770158511274216
+    },
+    {
+      "gameId": "2025_16_CIN_MIA",
+      "week": 16,
+      "cutoff": "2025-12-20T18:00:00+00:00",
+      "baselineMargin": 4.525,
+      "actualMargin": -24.0,
+      "feature": [
+        0.10760732244525695,
+        -1.4396634304690656
+      ],
+      "split": "evaluate",
+      "adjustment": -3.5925438639326743,
+      "candidateMargin": 0.932456136067326
+    },
+    {
+      "gameId": "2025_16_JAX_DEN",
+      "week": 16,
+      "cutoff": "2025-12-20T21:05:00+00:00",
+      "baselineMargin": 3.256,
+      "actualMargin": -14.0,
+      "feature": [
+        -0.11846547292164811,
+        0.3254252309885311
+      ],
+      "split": "evaluate",
+      "adjustment": 0.5710855122145098,
+      "candidateMargin": 3.8270855122145093
+    },
+    {
+      "gameId": "2025_16_KC_TEN",
+      "week": 16,
+      "cutoff": "2025-12-20T18:00:00+00:00",
+      "baselineMargin": -7.379,
+      "actualMargin": 17.0,
+      "feature": [
+        -1.011400254724835,
+        -0.2730804673242384
+      ],
+      "split": "evaluate",
+      "adjustment": -3.322662411485055,
+      "candidateMargin": -10.701662411485055
+    },
+    {
+      "gameId": "2025_16_LAC_DAL",
+      "week": 16,
+      "cutoff": "2025-12-20T18:00:00+00:00",
+      "baselineMargin": 0.075,
+      "actualMargin": -17.0,
+      "feature": [
+        0.7598882453771267,
+        0.5620761856697751
+      ],
+      "split": "evaluate",
+      "adjustment": 3.455300900828079,
+      "candidateMargin": 3.5303009008280792
+    },
+    {
+      "gameId": "2025_16_LV_HOU",
+      "week": 16,
+      "cutoff": "2025-12-20T21:25:00+00:00",
+      "baselineMargin": 14.503,
+      "actualMargin": 2.0,
+      "feature": [
+        0.7355155019895667,
+        0.46281189294568537
+      ],
+      "split": "evaluate",
+      "adjustment": 3.126214972258588,
+      "candidateMargin": 17.629214972258588
+    },
+    {
+      "gameId": "2025_16_MIN_NYG",
+      "week": 16,
+      "cutoff": "2025-12-20T18:00:00+00:00",
+      "baselineMargin": -1.319,
+      "actualMargin": -3.0,
+      "feature": [
+        0.21979905915491393,
+        0.17453877314230176
+      ],
+      "split": "evaluate",
+      "adjustment": 1.0315779524208546,
+      "candidateMargin": -0.28742204757914536
+    },
+    {
+      "gameId": "2025_16_NE_BAL",
+      "week": 16,
+      "cutoff": "2025-12-21T01:20:00+00:00",
+      "baselineMargin": 2.583,
+      "actualMargin": -4.0,
+      "feature": [
+        -0.5190728623255225,
+        -0.05639923822733206
+      ],
+      "split": "evaluate",
+      "adjustment": -1.4802448405155975,
+      "candidateMargin": 1.1027551594844027
+    },
+    {
+      "gameId": "2025_16_NYJ_NO",
+      "week": 16,
+      "cutoff": "2025-12-20T18:00:00+00:00",
+      "baselineMargin": 4.564,
+      "actualMargin": 23.0,
+      "feature": [
+        0.3098642211268645,
+        0.27597305771998804
+      ],
+      "split": "evaluate",
+      "adjustment": 1.5346525505274924,
+      "candidateMargin": 6.0986525505274924
+    },
+    {
+      "gameId": "2025_16_PIT_DET",
+      "week": 16,
+      "cutoff": "2025-12-20T21:25:00+00:00",
+      "baselineMargin": 6.721,
+      "actualMargin": -5.0,
+      "feature": [
+        0.7131979480836357,
+        0.01108996197042203
+      ],
+      "split": "evaluate",
+      "adjustment": 1.8554292819430807,
+      "candidateMargin": 8.576429281943081
+    },
+    {
+      "gameId": "2025_16_TB_CAR",
+      "week": 16,
+      "cutoff": "2025-12-20T18:00:00+00:00",
+      "baselineMargin": -1.805,
+      "actualMargin": 3.0,
+      "feature": [
+        0.014551517621409715,
+        0.03187728776399626
+      ],
+      "split": "evaluate",
+      "adjustment": 0.12289461283234511,
+      "candidateMargin": -1.6821053871676548
+    },
+    {
+      "gameId": "2025_16_SF_IND",
+      "week": 16,
+      "cutoff": "2025-12-22T01:15:00+00:00",
+      "baselineMargin": 2.697,
+      "actualMargin": -21.0,
+      "feature": [
+        -0.6893532304395675,
+        0.006530042146038195
+      ],
+      "split": "evaluate",
+      "adjustment": -1.7470516305688686,
+      "candidateMargin": 0.9499483694311315
+    },
+    {
+      "gameId": "2025_17_DAL_WAS",
+      "week": 17,
+      "cutoff": "2025-12-24T18:00:00+00:00",
+      "baselineMargin": 0.219,
+      "actualMargin": -7.0,
+      "feature": [
+        -0.3900897127316121,
+        -0.20269504688474832
+      ],
+      "split": "evaluate",
+      "adjustment": -1.5431339032022866,
+      "candidateMargin": -1.3241339032022865
+    },
+    {
+      "gameId": "2025_17_DEN_KC",
+      "week": 17,
+      "cutoff": "2025-12-25T01:15:00+00:00",
+      "baselineMargin": 0.787,
+      "actualMargin": -7.0,
+      "feature": [
+        -0.3609504155796799,
+        -1.7176377515096088
+      ],
+      "split": "evaluate",
+      "adjustment": -5.538794580945458,
+      "candidateMargin": -4.751794580945458
+    },
+    {
+      "gameId": "2025_17_DET_MIN",
+      "week": 17,
+      "cutoff": "2025-12-24T21:30:00+00:00",
+      "baselineMargin": -3.123,
+      "actualMargin": 13.0,
+      "feature": [
+        -1.0054152465544615,
+        -0.4746881389288044
+      ],
+      "split": "evaluate",
+      "adjustment": -3.8490086544688413,
+      "candidateMargin": -6.9720086544688415
+    },
+    {
+      "gameId": "2025_17_BAL_GB",
+      "week": 17,
+      "cutoff": "2025-12-27T01:00:00+00:00",
+      "baselineMargin": 3.644,
+      "actualMargin": -17.0,
+      "feature": [
+        0.1683100570750744,
+        0.5070483940155156
+      ],
+      "split": "evaluate",
+      "adjustment": 1.7931427218412184,
+      "candidateMargin": 5.4371427218412185
+    },
+    {
+      "gameId": "2025_17_HOU_LAC",
+      "week": 17,
+      "cutoff": "2025-12-26T21:30:00+00:00",
+      "baselineMargin": 0.263,
+      "actualMargin": -4.0,
+      "feature": [
+        -0.02615344400779751,
+        -0.364793189066755
+      ],
+      "split": "evaluate",
+      "adjustment": -1.0470501692650298,
+      "candidateMargin": -0.7840501692650298
+    },
+    {
+      "gameId": "2025_17_ARI_CIN",
+      "week": 17,
+      "cutoff": "2025-12-27T18:00:00+00:00",
+      "baselineMargin": 2.559,
+      "actualMargin": 23.0,
+      "feature": [
+        0.2039982337403261,
+        0.15070965771267314
+      ],
+      "split": "evaluate",
+      "adjustment": 0.9271086939995639,
+      "candidateMargin": 3.4861086939995642
+    },
+    {
+      "gameId": "2025_17_CHI_SF",
+      "week": 17,
+      "cutoff": "2025-12-28T01:20:00+00:00",
+      "baselineMargin": 3.587,
+      "actualMargin": 4.0,
+      "feature": [
+        0.6119383074146327,
+        0.1265701852689538
+      ],
+      "split": "evaluate",
+      "adjustment": 1.906491228963613,
+      "candidateMargin": 5.493491228963613
+    },
+    {
+      "gameId": "2025_17_JAX_IND",
+      "week": 17,
+      "cutoff": "2025-12-27T18:00:00+00:00",
+      "baselineMargin": 0.84,
+      "actualMargin": -6.0,
+      "feature": [
+        -0.26142436839927097,
+        0.24666941817427637
+      ],
+      "split": "evaluate",
+      "adjustment": -0.006454611701033008,
+      "candidateMargin": 0.833545388298967
+    },
+    {
+      "gameId": "2025_17_NE_NYJ",
+      "week": 17,
+      "cutoff": "2025-12-27T18:00:00+00:00",
+      "baselineMargin": -7.275,
+      "actualMargin": -32.0,
+      "feature": [
+        -1.68227163063787,
+        -0.5907425952624262
+      ],
+      "split": "evaluate",
+      "adjustment": -5.893423222060223,
+      "candidateMargin": -13.168423222060223
+    },
+    {
+      "gameId": "2025_17_NO_TEN",
+      "week": 17,
+      "cutoff": "2025-12-27T18:00:00+00:00",
+      "baselineMargin": -0.328,
+      "actualMargin": -8.0,
+      "feature": [
+        -0.7055584704545508,
+        0.016914581202161078
+      ],
+      "split": "evaluate",
+      "adjustment": -1.7606330482024997,
+      "candidateMargin": -2.0886330482024995
+    },
+    {
+      "gameId": "2025_17_NYG_LV",
+      "week": 17,
+      "cutoff": "2025-12-27T21:05:00+00:00",
+      "baselineMargin": -0.753,
+      "actualMargin": -24.0,
+      "feature": [
+        -0.2669850351101415,
+        -0.17262819468426865
+      ],
+      "split": "evaluate",
+      "adjustment": -1.147230690893751,
+      "candidateMargin": -1.9002306908937512
+    },
+    {
+      "gameId": "2025_17_PHI_BUF",
+      "week": 17,
+      "cutoff": "2025-12-27T21:25:00+00:00",
+      "baselineMargin": 2.051,
+      "actualMargin": -1.0,
+      "feature": [
+        0.20379672505755586,
+        -0.1090897661074107
+      ],
+      "split": "evaluate",
+      "adjustment": 0.22858042506155418,
+      "candidateMargin": 2.279580425061554
+    },
+    {
+      "gameId": "2025_17_PIT_CLE",
+      "week": 17,
+      "cutoff": "2025-12-27T18:00:00+00:00",
+      "baselineMargin": -4.611,
+      "actualMargin": 7.0,
+      "feature": [
+        -0.36694303443850185,
+        -0.2585062004400902
+      ],
+      "split": "evaluate",
+      "adjustment": -1.6338332132310047,
+      "candidateMargin": -6.244833213231004
+    },
+    {
+      "gameId": "2025_17_SEA_CAR",
+      "week": 17,
+      "cutoff": "2025-12-27T18:00:00+00:00",
+      "baselineMargin": -7.44,
+      "actualMargin": -17.0,
+      "feature": [
+        -1.1405563534817862,
+        -0.037219118700158524
+      ],
+      "split": "evaluate",
+      "adjustment": -3.0195771059840686,
+      "candidateMargin": -10.459577105984069
+    },
+    {
+      "gameId": "2025_17_TB_MIA",
+      "week": 17,
+      "cutoff": "2025-12-27T18:00:00+00:00",
+      "baselineMargin": -0.092,
+      "actualMargin": 3.0,
+      "feature": [
+        0.47817226846453664,
+        0.2889120521936378
+      ],
+      "split": "evaluate",
+      "adjustment": 2.0002486442245075,
+      "candidateMargin": 1.9082486442245075
+    },
+    {
+      "gameId": "2025_17_LA_ATL",
+      "week": 17,
+      "cutoff": "2025-12-29T01:15:00+00:00",
+      "baselineMargin": -6.618,
+      "actualMargin": 3.0,
+      "feature": [
+        -0.9555145687942437,
+        -0.07494321875965007
+      ],
+      "split": "evaluate",
+      "adjustment": -2.6472645977913833,
+      "candidateMargin": -9.265264597791383
+    },
+    {
+      "gameId": "2025_18_CAR_TB",
+      "week": 18,
+      "cutoff": "2026-01-02T21:30:00+00:00",
+      "baselineMargin": 5.668,
+      "actualMargin": 2.0,
+      "feature": [
+        0.2695531736700687,
+        -0.02573216413958898
+      ],
+      "split": "evaluate",
+      "adjustment": 0.6208626679514976,
+      "candidateMargin": 6.288862667951498
+    },
+    {
+      "gameId": "2025_18_SEA_SF",
+      "week": 18,
+      "cutoff": "2026-01-03T01:00:00+00:00",
+      "baselineMargin": -1.241,
+      "actualMargin": -10.0,
+      "feature": [
+        0.004413255472393907,
+        0.2496508675207546
+      ],
+      "split": "evaluate",
+      "adjustment": 0.6820429446432859,
+      "candidateMargin": -0.5589570553567142
+    },
+    {
+      "gameId": "2025_18_ARI_LA",
+      "week": 18,
+      "cutoff": "2026-01-03T21:25:00+00:00",
+      "baselineMargin": 11.199,
+      "actualMargin": 17.0,
+      "feature": [
+        1.1174825104127981,
+        0.3653362967490375
+      ],
+      "split": "evaluate",
+      "adjustment": 3.842077242105565,
+      "candidateMargin": 15.041077242105565
+    },
+    {
+      "gameId": "2025_18_BAL_PIT",
+      "week": 18,
+      "cutoff": "2026-01-04T01:20:00+00:00",
+      "baselineMargin": -0.518,
+      "actualMargin": 2.0,
+      "feature": [
+        -0.45818347416538785,
+        0.39102559438847284
+      ],
+      "split": "evaluate",
+      "adjustment": -0.12226871212117407,
+      "candidateMargin": -0.6402687121211741
+    },
+    {
+      "gameId": "2025_18_CLE_CIN",
+      "week": 18,
+      "cutoff": "2026-01-03T18:00:00+00:00",
+      "baselineMargin": 5.787,
+      "actualMargin": -2.0,
+      "feature": [
+        0.47664945556994454,
+        0.20630972291415361
+      ],
+      "split": "evaluate",
+      "adjustment": 1.774419923391695,
+      "candidateMargin": 7.5614199233916946
+    },
+    {
+      "gameId": "2025_18_DAL_NYG",
+      "week": 18,
+      "cutoff": "2026-01-03T18:00:00+00:00",
+      "baselineMargin": -0.195,
+      "actualMargin": 17.0,
+      "feature": [
+        -0.8429658987914497,
+        -0.36123568547359397
+      ],
+      "split": "evaluate",
+      "adjustment": -3.1283564496355396,
+      "candidateMargin": -3.3233564496355394
+    },
+    {
+      "gameId": "2025_18_DET_CHI",
+      "week": 18,
+      "cutoff": "2026-01-03T21:25:00+00:00",
+      "baselineMargin": -0.254,
+      "actualMargin": -3.0,
+      "feature": [
+        -0.42080676093625247,
+        0.2069688097661923
+      ],
+      "split": "evaluate",
+      "adjustment": -0.5211043372679202,
+      "candidateMargin": -0.7751043372679202
+    },
+    {
+      "gameId": "2025_18_GB_MIN",
+      "week": 18,
+      "cutoff": "2026-01-03T18:00:00+00:00",
+      "baselineMargin": -1.3,
+      "actualMargin": 13.0,
+      "feature": [
+        -0.7986499369694329,
+        -0.5976570509596626
+      ],
+      "split": "evaluate",
+      "adjustment": -3.650118891173074,
+      "candidateMargin": -4.950118891173074
+    },
+    {
+      "gameId": "2025_18_IND_HOU",
+      "week": 18,
+      "cutoff": "2026-01-03T18:00:00+00:00",
+      "baselineMargin": 4.243,
+      "actualMargin": 8.0,
+      "feature": [
+        0.41859888541571166,
+        -0.23694805926186974
+      ],
+      "split": "evaluate",
+      "adjustment": 0.4349063232308793,
+      "candidateMargin": 4.6779063232308795
+    },
+    {
+      "gameId": "2025_18_KC_LV",
+      "week": 18,
+      "cutoff": "2026-01-03T21:25:00+00:00",
+      "baselineMargin": -7.625,
+      "actualMargin": 2.0,
+      "feature": [
+        -0.06410689177773854,
+        0.04936627590744702
+      ],
+      "split": "evaluate",
+      "adjustment": -0.03146571866344189,
+      "candidateMargin": -7.6564657186634415
+    },
+    {
+      "gameId": "2025_18_LAC_DEN",
+      "week": 18,
+      "cutoff": "2026-01-03T21:25:00+00:00",
+      "baselineMargin": 3.038,
+      "actualMargin": 16.0,
+      "feature": [
+        0.05218144262687918,
+        0.6831560310884568
+      ],
+      "split": "evaluate",
+      "adjustment": 1.96903314302921,
+      "candidateMargin": 5.00703314302921
+    },
+    {
+      "gameId": "2025_18_MIA_NE",
+      "week": 18,
+      "cutoff": "2026-01-03T21:25:00+00:00",
+      "baselineMargin": 6.689,
+      "actualMargin": 28.0,
+      "feature": [
+        0.7606826947485947,
+        -0.32204744828086745
+      ],
+      "split": "evaluate",
+      "adjustment": 1.0819277748789635,
+      "candidateMargin": 7.770927774878963
+    },
+    {
+      "gameId": "2025_18_NO_ATL",
+      "week": 18,
+      "cutoff": "2026-01-03T18:00:00+00:00",
+      "baselineMargin": 3.181,
+      "actualMargin": 2.0,
+      "feature": [
+        -0.06507193697549152,
+        0.48175853559905135
+      ],
+      "split": "evaluate",
+      "adjustment": 1.1277877987141522,
+      "candidateMargin": 4.308787798714152
+    },
+    {
+      "gameId": "2025_18_NYJ_BUF",
+      "week": 18,
+      "cutoff": "2026-01-03T21:25:00+00:00",
+      "baselineMargin": 14.411,
+      "actualMargin": 27.0,
+      "feature": [
+        1.2555121225817487,
+        0.382826830595214
+      ],
+      "split": "evaluate",
+      "adjustment": 4.242395832965503,
+      "candidateMargin": 18.6533958329655
+    },
+    {
+      "gameId": "2025_18_TEN_JAX",
+      "week": 18,
+      "cutoff": "2026-01-03T18:00:00+00:00",
+      "baselineMargin": 10.77,
+      "actualMargin": 34.0,
+      "feature": [
+        1.110440878870782,
+        0.17691135876715072
+      ],
+      "split": "evaluate",
+      "adjustment": 3.3178041251071315,
+      "candidateMargin": 14.08780412510713
+    },
+    {
+      "gameId": "2025_18_WAS_PHI",
+      "week": 18,
+      "cutoff": "2026-01-03T21:25:00+00:00",
+      "baselineMargin": 9.773,
+      "actualMargin": -7.0,
+      "feature": [
+        -0.10592139476203322,
+        0.03927876675733008
+      ],
+      "split": "evaluate",
+      "adjustment": -0.16560433387496015,
+      "candidateMargin": 9.60739566612504
+    },
+    {
+      "gameId": "2025_19_GB_CHI",
+      "week": 19,
+      "cutoff": "2026-01-10T01:00:00+00:00",
+      "baselineMargin": 1.413,
+      "actualMargin": 4.0,
+      "feature": [
+        -0.3470563328543639,
+        0.02373546500176231
+      ],
+      "split": "evaluate",
+      "adjustment": -0.8246187035554526,
+      "candidateMargin": 0.5883812964445474
+    },
+    {
+      "gameId": "2025_19_LA_CAR",
+      "week": 19,
+      "cutoff": "2026-01-09T21:30:00+00:00",
+      "baselineMargin": -7.98,
+      "actualMargin": -3.0,
+      "feature": [
+        -1.1116400044506856,
+        -0.1771310165498307
+      ],
+      "split": "evaluate",
+      "adjustment": -3.3214637913623175,
+      "candidateMargin": -11.301463791362318
+    },
+    {
+      "gameId": "2025_19_BUF_JAX",
+      "week": 19,
+      "cutoff": "2026-01-10T18:00:00+00:00",
+      "baselineMargin": 0.729,
+      "actualMargin": -3.0,
+      "feature": [
+        -0.07561483590584572,
+        0.12068507356122915
+      ],
+      "split": "evaluate",
+      "adjustment": 0.13069119448514002,
+      "candidateMargin": 0.85969119448514
+    },
+    {
+      "gameId": "2025_19_LAC_NE",
+      "week": 19,
+      "cutoff": "2026-01-11T01:00:00+00:00",
+      "baselineMargin": 5.12,
+      "actualMargin": 13.0,
+      "feature": [
+        1.1175243165402833,
+        0.1657668253595264
+      ],
+      "split": "evaluate",
+      "adjustment": 3.305993784849665,
+      "candidateMargin": 8.425993784849666
+    },
+    {
+      "gameId": "2025_19_SF_PHI",
+      "week": 19,
+      "cutoff": "2026-01-10T21:30:00+00:00",
+      "baselineMargin": 3.472,
+      "actualMargin": -4.0,
+      "feature": [
+        -0.46371308982964177,
+        -0.19611247992569317
+      ],
+      "split": "evaluate",
+      "adjustment": -1.713908307832356,
+      "candidateMargin": 1.758091692167644
+    },
+    {
+      "gameId": "2025_19_HOU_PIT",
+      "week": 19,
+      "cutoff": "2026-01-12T01:00:00+00:00",
+      "baselineMargin": -0.719,
+      "actualMargin": -24.0,
+      "feature": [
+        -0.3641646376331531,
+        -0.042704979649061114
+      ],
+      "split": "evaluate",
+      "adjustment": -1.046920217983189,
+      "candidateMargin": -1.7659202179831888
+    },
+    {
+      "gameId": "2025_20_BUF_DEN",
+      "week": 20,
+      "cutoff": "2026-01-16T21:30:00+00:00",
+      "baselineMargin": -0.372,
+      "actualMargin": 3.0,
+      "feature": [
+        -0.4037679616833625,
+        0.37722128041368824
+      ],
+      "split": "evaluate",
+      "adjustment": -0.02006524046272351,
+      "candidateMargin": -0.3920652404627235
+    },
+    {
+      "gameId": "2025_20_SF_SEA",
+      "week": 20,
+      "cutoff": "2026-01-17T01:00:00+00:00",
+      "baselineMargin": 5.752,
+      "actualMargin": 35.0,
+      "feature": [
+        0.08217045768955167,
+        -0.1900894545597414
+      ],
+      "split": "evaluate",
+      "adjustment": -0.3003814565547179,
+      "candidateMargin": 5.4516185434452815
+    },
+    {
+      "gameId": "2025_20_HOU_NE",
+      "week": 20,
+      "cutoff": "2026-01-17T20:00:00+00:00",
+      "baselineMargin": 1.811,
+      "actualMargin": 12.0,
+      "feature": [
+        0.799963692807359,
+        -0.3484073185929906
+      ],
+      "split": "evaluate",
+      "adjustment": 1.111656677486876,
+      "candidateMargin": 2.922656677486876
+    },
+    {
+      "gameId": "2025_20_LA_CHI",
+      "week": 20,
+      "cutoff": "2026-01-17T23:30:00+00:00",
+      "baselineMargin": -2.618,
+      "actualMargin": -3.0,
+      "feature": [
+        -0.6158651918299611,
+        -0.039862941882159025
+      ],
+      "split": "evaluate",
+      "adjustment": -1.683583741840796,
+      "candidateMargin": -4.301583741840796
+    },
+    {
+      "gameId": "2025_21_LA_SEA",
+      "week": 21,
+      "cutoff": "2026-01-24T23:30:00+00:00",
+      "baselineMargin": 3.673,
+      "actualMargin": 4.0,
+      "feature": [
+        -0.00546075722729622,
+        -0.22164431019085218
+      ],
+      "split": "evaluate",
+      "adjustment": -0.6094780998051086,
+      "candidateMargin": 3.0635219001948917
+    },
+    {
+      "gameId": "2025_21_NE_DEN",
+      "week": 21,
+      "cutoff": "2026-01-24T20:00:00+00:00",
+      "baselineMargin": 0.626,
+      "actualMargin": -3.0,
+      "feature": null,
+      "split": "evaluate",
+      "adjustment": 0.0,
+      "candidateMargin": 0.626
+    },
+    {
+      "gameId": "2025_22_SEA_NE",
+      "week": 22,
+      "cutoff": "2026-02-07T23:30:00+00:00",
+      "baselineMargin": -2.84,
+      "actualMargin": -16.0,
+      "feature": [
+        -0.06382624755945887,
+        -0.36311239091169706
+      ],
+      "split": "evaluate",
+      "adjustment": -1.1389685897425552,
+      "candidateMargin": -3.9789685897425553
+    }
+  ]
+}
