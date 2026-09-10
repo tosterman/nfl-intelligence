@@ -1,0 +1,11 @@
+# Matchup interaction result: reject this candidate
+
+The fixed three-term interaction correction increased 2025 margin MAE from **10.1654 to 10.3553 points**, and RMSE from **12.9343 to 13.1230** across all 285 games. Candidate-minus-baseline MAE was **+0.1899 points**; the paired whole-week bootstrap interval was **[+0.0242, +0.3552]** (22 weeks, 10,000 draws, seed 31025). This is evidence against this specific candidate in the reused development sample. It is not proof that football matchup interactions generally lack value.
+
+The experiment was specified and committed before execution. It fit three no-intercept ridge-10 terms on 285 games from 2024: pass EPA, rush EPA and sack-rate offense/opposing-defense products, differenced between home and away. Training RMS scaling and coefficients were frozen for evaluation. The latest training result's 24-hour embargo ended 2025-02-10T23:30Z; the earliest evaluation date was 2025-09-04. Underlying rolling features update using earlier weeks only. Sources are current revised historical files, not vintage availability snapshots.
+
+Tests verify exact offense-defense pairing, team-swap antisymmetry, identical-side zero corrections, training-only scaling and fixed penalty, and that poisoning current-week stats cannot alter current-week features. Independent review reproduced the scales, coefficients, summary metrics and bootstrap interval and found no material defect.
+
+The JSON companion retains all 570 fit/evaluation game rows, exact source/code/protocol hashes, baseline version/configuration, scales and coefficients. Its baseline was replayed from the same local schedule and team-stat bytes as the candidate, rather than compared with a differently refreshed site artifact. A rerun after adding explicit baseline-version/configuration metadata reproduced the same result. No hyperparameter search or sign reversal followed the rejection.
+
+Production predictions are unchanged. The next useful matchup research needs better identified inputs such as verified personnel roles or play-level scheme/pressure context; adding generic rate products did not earn a place in this engine. Any future candidate still needs a declared protocol and later, genuinely prospective evidence. The full founding-document matchup requirement remains incomplete.

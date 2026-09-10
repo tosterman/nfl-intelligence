@@ -3,6 +3,7 @@ from pathlib import Path
 import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from experiment_matchup import interactions,fit_correction
+from experiment_model import features
 
 class MatchupInteractionTests(unittest.TestCase):
     def test_pairing_and_swap_symmetry(self):
@@ -18,5 +19,14 @@ class MatchupInteractionTests(unittest.TestCase):
         np.testing.assert_allclose(x@beta,[3.,6.,9.])
         zero,_=fit_correction(np.zeros((3,3)),np.ones(3))
         np.testing.assert_allclose(zero,np.zeros(3))
+    def test_current_week_stats_cannot_change_current_week_interactions(self):
+        rows=[{'game_id':str(i),'season':2024,'week':week,'game_type':'REG','gameday':day,'home_team':'DEN','away_team':'KC','location':'Neutral'} for i,week,day in [(1,1,'2024-09-01'),(2,2,'2024-09-08'),(3,2,'2024-09-09')]]
+        stats={(r['game_id'],team):np.arange(1,8,dtype=float)*(1 if team=='DEN' else 2) for r in rows for team in ['DEN','KC']}
+        before,_=features(rows,stats,90)
+        stats[('2','DEN')]=np.ones(7)*10000
+        stats[('3','KC')]=np.ones(7)*-10000
+        after,_=features(rows,stats,90)
+        np.testing.assert_allclose(before,after)
+        np.testing.assert_allclose(interactions(before[1]),interactions(after[1]))
 
 if __name__=='__main__':unittest.main()

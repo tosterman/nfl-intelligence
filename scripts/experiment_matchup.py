@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np
 import build_data as base
 import experiment_model as efficiency
-from refresh import replay_blend
+from refresh import replay_blend,VERSION,CONFIG
 from experiment_quarterback import paired_weeks,summary
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -22,6 +22,7 @@ def fit_correction(x,residual):
     return beta/scale,scale
 
 def main():
+    if VERSION!='score-efficiency-v1.2.0':raise ValueError('Re-specify experiment for changed baseline')
     schedule=ROOT/'data/games.csv'
     if not all((ROOT/f'data/raw/stats_team_week_{year}.csv').exists() for year in range(2010,2026)):
         raise ValueError('Acquire source files before this offline experiment')
@@ -45,6 +46,7 @@ def main():
         r['candidateMargin']=r['baselineMargin']+r['adjustment']
     files=['experiment_matchup.py','experiment_quarterback.py','refresh.py','build_data.py','experiment_model.py']
     report={'protocol':'matchup-interaction-protocol.md; fit2024; evaluate2025; development data reused; no production promotion',
+        'baselineModelVersion':VERSION,'baselineConfiguration':CONFIG,
         'scheduleHash':hashlib.sha256(schedule.read_bytes()).hexdigest(),'teamStatSources':[meta for _,meta in downloads],
         'codeHashes':{name:hashlib.sha256((ROOT/'scripts'/name).read_bytes()).hexdigest() for name in files},
         'protocolHash':hashlib.sha256((ROOT/'reviews/matchup-interaction-protocol.md').read_bytes()).hexdigest(),
