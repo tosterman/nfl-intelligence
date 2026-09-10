@@ -22,3 +22,7 @@ Historical ledger entries remain intact. Final games without an eligible forecas
 4. Recheck production edition parity, source health, public desktop/mobile flows, and receipt eligibility. Retain failures without inventing backdated publication evidence.
 
 No deployment or paid provider request was made for this change. Hosting capacity, live cutover verification, and the remaining commercial/product gates are still outstanding.
+
+## REST fallback parity
+
+The older REST helper now invokes the same preflight before its first deployment request and uses the shared atomic receipt writer after exact public verification. Regression tests first reproduced an invalid edition reaching deployment and a direct receipt write bypassing simulated atomic-replace failure. After the correction, both tests pass: invalid input makes no deployment request and receipt-write failure preserves prior bytes. The runtime packaging test and all ten native publisher tests also pass. These tests use isolated files and mocked provider responses; no actual deployment was attempted.

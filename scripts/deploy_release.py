@@ -2,6 +2,8 @@
 import base64,json,os,time,urllib.request
 from pathlib import Path
 from record_publication import make_receipt
+from publication import write_receipts
+from publication_preflight import validate_forecast_edition
 ROOT=Path(__file__).resolve().parents[1]
 ALLOW_ROOT={'package.json','package-lock.json','next.config.ts','tsconfig.json','next-env.d.ts','vercel.json'}
 def release_files():
@@ -28,6 +30,8 @@ def save_recovery_metadata(meta):
     (folder/'deployment.json').write_text(json.dumps(value,indent=2)+'\n')
 def main():
     expected=json.loads((ROOT/'data/site.json').read_text())
+    ledger=json.loads((ROOT/'data/ledger.json').read_text())
+    validate_forecast_edition(expected,ledger)
     result=request('/v13/deployments',{'name':'nfl-intelligence','project':os.environ['VERCEL_PROJECT_ID'],'target':'production','files':release_files(),'projectSettings':{'framework':'nextjs','nodeVersion':'22.x'}})
     save_recovery_metadata(result)
     for _ in range(90):
@@ -38,7 +42,7 @@ def main():
         time.sleep(5)
     else:raise TimeoutError('Deployment did not become ready')
     url='https://'+meta['url'];artifact=json.load(urllib.request.urlopen(url+'/api/forecasts',timeout=30))
-    ledger=json.loads((ROOT/'data/ledger.json').read_text());receipt=make_receipt(meta,artifact,ledger,expected_site=expected)
-    path=ROOT/'data/publications.json';receipts=json.loads(path.read_text());receipts.append(receipt);path.write_text(json.dumps(receipts,indent=2)+'\n')
+    receipt=make_receipt(meta,artifact,ledger,expected_site=expected)
+    path=ROOT/'data/publications.json';receipts=json.loads(path.read_text());receipts.append(receipt);write_receipts(path,receipts)
     print('Verified '+url+'; archived '+str(len(receipt['snapshotHashes']))+' forecast versions')
 if __name__=='__main__':main()
