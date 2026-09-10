@@ -84,7 +84,7 @@ def main():
                'inputHashes':{n:hashlib.sha256(raw).hexdigest() for n,raw in inputs.items()},
                'exportManifestHash':hashlib.sha256((args.export / 'manifest.json').read_bytes()).hexdigest(),
                'captureHashes':[c['sha256'] for c in captures],
-               'codeHashes':{n:hashlib.sha256((ROOT / 'scripts' / n).read_bytes().replace(b'\r\n',b'\n')).hexdigest() for n in ['report_market_pairing.py','market_capture.py','market_pairing.py','publication.py']},
+               'codeHashes':{n:hashlib.sha256((ROOT / 'scripts' / n).read_bytes().replace(b'\r\n',b'\n')).hexdigest() for n in ['report_market_pairing.py','market_capture.py','market_pairing.py','publication.py','calibration.py']},
                'interpretation':'Checkpoint evidence audit only; closing means sampled near kickoff. No betting return or CLV calculation.'}
     payload = (json.dumps(report,sort_keys=True,separators=(',',':'),allow_nan=False)+'\n').encode()
     digest = hashlib.sha256(payload).hexdigest()
