@@ -6,8 +6,16 @@ import { ODDS_MAX_AGE_MS, type OddsFeed } from "./odds";
 
 const LATEST = "odds/latest.json";
 type Reader = (path: string) => Promise<Buffer | null>;
-type Writer = (path: string, body: Buffer, overwrite: boolean) => Promise<void>;
-export const readBlob: Reader = async (path) => {
+type Writer = (
+  path: string,
+  body: Buffer,
+  overwrite: boolean,
+  ifMatch?: string,
+) => Promise<void>;
+type VersionReader = (
+  path: string,
+) => Promise<{ body: Buffer; etag: string } | null>;
+const readBlobVersion: VersionReader = async (path) => {
   const result = await get(path, {
     access: "private",
     useCache: false,
@@ -16,12 +24,18 @@ export const readBlob: Reader = async (path) => {
   if (!result) return null;
   if (result.statusCode !== 200 || result.blob.size > 2_000_000)
     throw new Error("Invalid stored odds object");
-  return Buffer.from(await new Response(result.stream).arrayBuffer());
+  return {
+    body: Buffer.from(await new Response(result.stream).arrayBuffer()),
+    etag: result.blob.etag,
+  };
 };
-const writeBlob: Writer = async (path, body, overwrite) => {
+export const readBlob: Reader = async (path) =>
+  (await readBlobVersion(path))?.body ?? null;
+const writeBlob: Writer = async (path, body, overwrite, ifMatch) => {
   await put(path, body, {
     access: "private",
     allowOverwrite: overwrite,
+    ifMatch,
     addRandomSuffix: false,
     contentType: path.endsWith(".gz") ? "application/gzip" : "application/json",
     abortSignal: AbortSignal.timeout(5000),
@@ -32,6 +46,7 @@ export async function publishOdds(
   feed: OddsFeed,
   write: Writer = writeBlob,
   read: Reader = readBlob,
+  readVersion: VersionReader = readBlobVersion,
 ) {
   const archive = prepareArchive(feed);
   try {
@@ -41,6 +56,26 @@ export async function publishOdds(
     const existing = await read(archive.pathname);
     if (!existing || !existing.equals(archive.body)) throw error;
   }
+  const current = await readVersion(LATEST);
+  if (current) {
+    if (!current.etag) throw new Error("Odds pointer version missing");
+    const ref = parsePointer(current.body);
+    const previousTime = Date.parse(ref.fetchedAt);
+    const nextTime = Date.parse(feed.fetchedAt);
+    if (previousTime > nextTime)
+      throw new Error("Odds publication superseded by newer snapshot");
+    if (previousTime === nextTime) {
+      if (ref.sha256 !== archive.sha256)
+        throw new Error("Conflicting odds acquisition timestamp");
+      return {
+        fetchedAt: feed.fetchedAt,
+        sha256: archive.sha256,
+        events: feed.events.length,
+      };
+    }
+  }
+  // Missing pointers use create-only; existing pointers require the exact read
+  // version. A competing writer must never be overwritten without a fresh read.
   await write(
     LATEST,
     Buffer.from(
@@ -51,7 +86,8 @@ export async function publishOdds(
         fetchedAt: feed.fetchedAt,
       }),
     ),
-    true,
+    current !== null,
+    current?.etag,
   );
   return {
     fetchedAt: feed.fetchedAt,
@@ -60,15 +96,13 @@ export async function publishOdds(
   };
 }
 
-export async function readStoredOdds(
-  read: Reader = readBlob,
-): Promise<OddsFeed | null> {
-  const pointer = await read(LATEST);
-  if (!pointer) return null;
+function parsePointer(pointer: Buffer) {
   if (pointer.length > 16384) throw new Error("Invalid odds pointer");
   const ref = JSON.parse(pointer.toString());
   if (
     ref.schemaVersion !== 1 ||
+    typeof ref.fetchedAt !== "string" ||
+    !Number.isFinite(Date.parse(ref.fetchedAt)) ||
     typeof ref.sha256 !== "string" ||
     !/^[a-f0-9]{64}$/.test(ref.sha256) ||
     typeof ref.pathname !== "string" ||
@@ -78,6 +112,15 @@ export async function readStoredOdds(
     !ref.pathname.endsWith(`-${ref.sha256}.json.gz`)
   )
     throw new Error("Invalid odds pointer");
+  return ref;
+}
+
+export async function readStoredOdds(
+  read: Reader = readBlob,
+): Promise<OddsFeed | null> {
+  const pointer = await read(LATEST);
+  if (!pointer) return null;
+  const ref = parsePointer(pointer);
   const compressed = await read(ref.pathname);
   if (!compressed) throw new Error("Odds snapshot missing");
   const content = gunzipSync(compressed, { maxOutputLength: 10_000_000 });
