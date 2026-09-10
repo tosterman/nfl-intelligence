@@ -1,14 +1,27 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { gunzipSync } from "node:zlib";
+import { gunzipSync, gzipSync } from "node:zlib";
 import { createHash } from "node:crypto";
-import { prepareArchive, archiveOdds } from "../src/lib/odds-archive";
+import {
+  prepareArchive,
+  archiveOdds,
+  decodeArchive,
+} from "../src/lib/odds-archive";
 import type { OddsFeed } from "../src/lib/odds";
 const feed: OddsFeed = {
   state: "ready",
   fetchedAt: "2026-09-10T17:00:00Z",
   events: [],
 };
+test("archive reader rejects modified envelope bytes even when the feed is unchanged", () => {
+  const a = prepareArchive(feed);
+  assert.deepEqual(decodeArchive(a.body, a.pathname), feed);
+  const envelope = JSON.parse(gunzipSync(a.body).toString());
+  envelope.extra = "modified";
+  assert.throws(() =>
+    decodeArchive(gzipSync(JSON.stringify(envelope)), a.pathname),
+  );
+});
 test("archive has verifiable contents and bounded deterministic path", () => {
   const a = prepareArchive(feed),
     b = prepareArchive(structuredClone(feed));

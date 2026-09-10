@@ -1,6 +1,8 @@
 import { freshnessInputs } from "@/lib/freshness";
 import { getOdds } from "@/lib/odds-server";
 import { MarketPanel } from "@/components/market-panel";
+import { MarketHistoryPanel } from "@/components/market-history";
+import { getMarketHistory } from "@/lib/odds-history-server";
 import { snapshotTime } from "@/lib/types";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -42,6 +44,9 @@ export default async function GamePage({
       ? from
       : `/?week=${g.week}`;
   const p = g.snapshot?.prediction;
+  const marketData = p
+    ? await Promise.all([getOdds(), getMarketHistory(g)])
+    : null;
   const favorite = p ? (p.homeWinProbability >= 0.5 ? g.home : g.away) : null;
   const probability = p
     ? Math.max(p.homeWinProbability, 1 - p.homeWinProbability)
@@ -312,7 +317,7 @@ export default async function GamePage({
                   status: g.status,
                 }}
                 prediction={p}
-                feed={await getOdds()}
+                feed={marketData![0]}
                 initialNow={Date.now()}
               />
             </div>
@@ -399,6 +404,11 @@ export default async function GamePage({
               </section>
             </div>
           </div>
+          <MarketHistoryPanel
+            history={marketData![1]}
+            home={g.home}
+            away={g.away}
+          />
         </>
       )}
     </div>

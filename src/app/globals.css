@@ -1988,5 +1988,9 @@ summary {
 .quote-time {display:block;font-size:10px;line-height:1.7;color:#a7afb9;white-space:normal;}
 .market-panel .table-scroll {overflow-x:auto;}
 .market-panel table {min-width:300px;}
+.market-history-panel {margin-top:24px;}
+.market-history-panel .history-table {min-width:540px;}
+.history-table caption {text-align:left;color:#a7afb9;padding:12px 0;}
+.history-table tbody th {font-size:12px;font-weight:500;white-space:normal;}
 .market-differences {border-top:1px solid #303640;margin-top:18px;padding-top:18px;}
 .market-differences h3 {font-size:15px;margin-bottom:12px;}
