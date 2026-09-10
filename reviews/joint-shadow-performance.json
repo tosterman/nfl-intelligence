@@ -1,0 +1,154 @@
+{
+  "graded": 0,
+  "pending": 15,
+  "excluded": 0,
+  "pairedJointLogScore": null,
+  "summary": null,
+  "records": [
+    {
+      "gameId": "2026_01_SF_LA",
+      "archiveHash": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+      "publishedAt": "2026-09-10T19:51:08.667371+00:00",
+      "season": 2026,
+      "week": 1,
+      "status": "pending",
+      "reason": "Verified final score unavailable"
+    },
+    {
+      "gameId": "2026_01_ARI_LAC",
+      "archiveHash": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+      "publishedAt": "2026-09-10T19:51:08.667371+00:00",
+      "season": 2026,
+      "week": 1,
+      "status": "pending",
+      "reason": "Verified final score unavailable"
+    },
+    {
+      "gameId": "2026_01_ATL_PIT",
+      "archiveHash": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+      "publishedAt": "2026-09-10T19:51:08.667371+00:00",
+      "season": 2026,
+      "week": 1,
+      "status": "pending",
+      "reason": "Verified final score unavailable"
+    },
+    {
+      "gameId": "2026_01_BAL_IND",
+      "archiveHash": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+      "publishedAt": "2026-09-10T19:51:08.667371+00:00",
+      "season": 2026,
+      "week": 1,
+      "status": "pending",
+      "reason": "Verified final score unavailable"
+    },
+    {
+      "gameId": "2026_01_BUF_HOU",
+      "archiveHash": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+      "publishedAt": "2026-09-10T19:51:08.667371+00:00",
+      "season": 2026,
+      "week": 1,
+      "status": "pending",
+      "reason": "Verified final score unavailable"
+    },
+    {
+      "gameId": "2026_01_CHI_CAR",
+      "archiveHash": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+      "publishedAt": "2026-09-10T19:51:08.667371+00:00",
+      "season": 2026,
+      "week": 1,
+      "status": "pending",
+      "reason": "Verified final score unavailable"
+    },
+    {
+      "gameId": "2026_01_CLE_JAX",
+      "archiveHash": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+      "publishedAt": "2026-09-10T19:51:08.667371+00:00",
+      "season": 2026,
+      "week": 1,
+      "status": "pending",
+      "reason": "Verified final score unavailable"
+    },
+    {
+      "gameId": "2026_01_DAL_NYG",
+      "archiveHash": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+      "publishedAt": "2026-09-10T19:51:08.667371+00:00",
+      "season": 2026,
+      "week": 1,
+      "status": "pending",
+      "reason": "Verified final score unavailable"
+    },
+    {
+      "gameId": "2026_01_GB_MIN",
+      "archiveHash": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+      "publishedAt": "2026-09-10T19:51:08.667371+00:00",
+      "season": 2026,
+      "week": 1,
+      "status": "pending",
+      "reason": "Verified final score unavailable"
+    },
+    {
+      "gameId": "2026_01_MIA_LV",
+      "archiveHash": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+      "publishedAt": "2026-09-10T19:51:08.667371+00:00",
+      "season": 2026,
+      "week": 1,
+      "status": "pending",
+      "reason": "Verified final score unavailable"
+    },
+    {
+      "gameId": "2026_01_NO_DET",
+      "archiveHash": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+      "publishedAt": "2026-09-10T19:51:08.667371+00:00",
+      "season": 2026,
+      "week": 1,
+      "status": "pending",
+      "reason": "Verified final score unavailable"
+    },
+    {
+      "gameId": "2026_01_NYJ_TEN",
+      "archiveHash": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+      "publishedAt": "2026-09-10T19:51:08.667371+00:00",
+      "season": 2026,
+      "week": 1,
+      "status": "pending",
+      "reason": "Verified final score unavailable"
+    },
+    {
+      "gameId": "2026_01_TB_CIN",
+      "archiveHash": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+      "publishedAt": "2026-09-10T19:51:08.667371+00:00",
+      "season": 2026,
+      "week": 1,
+      "status": "pending",
+      "reason": "Verified final score unavailable"
+    },
+    {
+      "gameId": "2026_01_WAS_PHI",
+      "archiveHash": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+      "publishedAt": "2026-09-10T19:51:08.667371+00:00",
+      "season": 2026,
+      "week": 1,
+      "status": "pending",
+      "reason": "Verified final score unavailable"
+    },
+    {
+      "gameId": "2026_01_DEN_KC",
+      "archiveHash": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+      "publishedAt": "2026-09-10T19:51:08.667371+00:00",
+      "season": 2026,
+      "week": 1,
+      "status": "pending",
+      "reason": "Verified final score unavailable"
+    }
+  ],
+  "checkedAt": "2026-09-10T19:54:01.845958+00:00",
+  "resultArtifactHash": "9b861c65a3a63abc7dca0bba0055eab69aafb02206297a929e98a275b542f5bf",
+  "meaning": "Separate prospective research track. First verified capture per game; archived probabilities only. Missing results are pending, changed identities excluded, zero graded games are not zero error.",
+  "codeHashes": {
+    "grade_joint_shadow.py": "b11dae4bb2ef7c1b7ad0a0d188d815e89d3e60a475052d33258c67291bb1c32b",
+    "verify_joint_shadow.py": "09b66ce3f2c87cae7324598b77a7bb4be5efb15e8a28dc12d101cad43f9f63ef",
+    "capture_joint_shadow.py": "5394a3082a677acf622bc986eacf1a01773b8e407c034355ea74b4c94cc8c871",
+    "evaluate_joint_scores.py": "c8f9ecdbcea8f85561cab91c716b5b1b80a02a8e3819a748e67d643e3da727e0",
+    "benchmark_uncertainty.py": "b9fbd5ed3f27c47539312530c2095ef29d1447a645482383d825961aa8b2bacc"
+  }
+}
