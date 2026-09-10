@@ -13,6 +13,10 @@ import { TeamMark } from "@/components/brand";
 import { RevisionHistory } from "@/components/revision-history";
 import { WeatherContext } from "@/components/weather-context";
 import { PersonnelPanel } from "@/components/personnel-panel";
+import {
+  ScheduledContext,
+  ForecastPendingNotice,
+} from "@/components/scheduled-context";
 export function generateStaticParams() {
   return site.games.map((g) => ({ id: g.id }));
 }
@@ -124,27 +128,18 @@ export default async function GamePage({
           <p>
             {g.status === "final"
               ? "Final score"
-              : "Expected points · Not an exact-score prediction"}
+              : p
+                ? "Expected points · Not an exact-score prediction"
+                : "No model forecast available"}
             {p ? " · Probability conditional on a decisive result" : ""}
           </p>
         </div>
       </section>
       {!p ? (
-        <section className="panel" style={{ marginTop: 24 }}>
-          <h2>
-            {g.status === "final"
-              ? "A result, without a rewritten prediction."
-              : "The forecast is still ahead."}
-          </h2>
-          <p>
-            {g.status === "final"
-              ? "No forecast was recorded before this game. We show the final score and exclude this game from the prospective record."
-              : "This game is on the schedule. A versioned projection will appear during game week, before kickoff."}
-          </p>
-          <Link href="/methodology" className="text-link">
-            Read our forecasting policy <ArrowUpRight size={15} />
-          </Link>
-        </section>
+        <>
+          <ForecastPendingNotice game={g} />
+          <ScheduledContext game={g} />
+        </>
       ) : (
         <>
           <nav className="matchup-nav" aria-label="Matchup sections">

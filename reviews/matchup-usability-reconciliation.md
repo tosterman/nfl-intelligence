@@ -13,6 +13,8 @@ Two independent source-review passes used constructive NFL fan/editorial and ske
 
 Weather/personnel context is still gated behind model snapshot availability. Decoupling useful independently verified context for future scheduled games remains open; completed pages should continue withholding ineligible pregame context. This was not silently marked complete or implemented as a blanket display of stale reports.
 
+Follow-up: `reviews/pending-game-context.md` records implementation of independently checked context for future scheduled games, with final/started/unknown-kickoff gates and boundary tests. The paragraph above describes the original review finding.
+
 ## Verification scope
 
 All 52 application tests and the production build pass. The new server-rendering regression exercises quote price/time, a FanDuel-without-spread fallback shared across card/detail, and expiration. Its first expectation used the internal LA code; it was corrected to the established public LAR label and passed. Local browser inspection verified neutral metadata/designations and pregame labels. The slate's rendered quote fields were inspected, with no document overflow at 1265 CSS pixels and no overflowing quote cells. This is a desktop check, not a new physical-device test. Final games with retained forecasts were source-reviewed; production has no such eligible completed result yet, so no real-result rendering claim is made.
