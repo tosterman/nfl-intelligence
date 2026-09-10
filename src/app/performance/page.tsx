@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { site, pct } from "@/lib/data";
 import { LiveCalibration } from "@/components/live-calibration";
+import { marginComparisonSummary } from "@/lib/performance-summary";
 export const metadata = { title: "Track record — Every result counts" };
 export default function Performance() {
   const m = site.performance.aggregate;
@@ -339,9 +340,8 @@ export default function Performance() {
             </tbody>
           </table>
           <p>
-            The model improves on simple winner baselines. The closing market
-            still estimates margins more accurately. We have not demonstrated a
-            reliable betting advantage.
+            {marginComparisonSummary(m)} A lower sample error alone does not
+            establish a reliable betting advantage.
           </p>
           <p className="fine">
             Historical market coverage: {m.marketGames} spread lines and{" "}
