@@ -1,0 +1,13 @@
+{
+  "evaluationProtocolHash": "bf1ffccbc95fa583d0af8832ed8331b9ebffe171f59be6501b84311f95e4ae93",
+  "priorHashes": {
+    "candidate": "c6333a25d3f3ca38531a4dc7d0c1b939bceb2f010ab726b0fb21949537bb54b2",
+    "reference": "e36600aa67a87ebfeff4882012fc56c2f3b63cae7d49caab7c8f57769cf3802d"
+  },
+  "codeHashes": {
+    "evaluate_joint_scores.py": "c8f9ecdbcea8f85561cab91c716b5b1b80a02a8e3819a748e67d643e3da727e0",
+    "joint_scores.py": "1279680b6e2df70f1a38a9bbb76962482a026f8f6f42c8790672af6b45e0a150",
+    "build_data.py": "1137dbd0f57c6d0b913dc10439172b5a742d77c9cac0229a0d1fb7e26064bba5"
+  },
+  "evidence": "Recomputed with identical evaluation schedule, prior-construction code and solver; verified fit equality before freezing."
+}

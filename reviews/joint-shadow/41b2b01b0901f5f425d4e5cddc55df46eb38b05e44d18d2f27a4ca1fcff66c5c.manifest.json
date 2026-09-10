@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-09-10T19:50:28.489614+00:00",
+  "archive": "reviews/joint-shadow/41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c.json.gz",
+  "sha256": "41b2b01b0901f5f425d4e5cddc55df46eb38b05e44d18d2f27a4ca1fcff66c5c",
+  "compressedHash": "e9bae300fa7a50188636fc3e43826a63dc0be99791ee3da38f86ffe4f121de86",
+  "compressedBytes": 2990452,
+  "games": 15,
+  "earliestKickoff": "2026-09-11T00:35:00+00:00",
+  "status": "awaiting-publication-verification"
+}
