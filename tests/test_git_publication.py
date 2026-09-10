@@ -6,6 +6,7 @@ from datetime import datetime,timezone
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from git_publication import verified_status,make_git_receipt,capture,PUBLIC_URL
 import git_publication
+from test_publication_preflight import fixture
 NOW=datetime(2026,9,10,17,tzinfo=timezone.utc)
 def status():return {'id':4,'context':'Vercel','state':'success','creator':{'id':35613825,'login':'vercel[bot]'},'target_url':'https://vercel.com/khnum/nfl-intelligence/abc123','created_at':'2026-09-10T16:45:08Z'}
 class GitPublicationTests(unittest.TestCase):
@@ -55,13 +56,23 @@ class GitPublicationTests(unittest.TestCase):
   for failure in [ValueError('Native deployment failed'),TimeoutError('Alias remained mismatched')]:
    with self.subTest(failure=type(failure).__name__),tempfile.TemporaryDirectory() as folder:
     root=Path(folder);(root/'data').mkdir()
-    for name,value in [('site',{}),('ledger',[]),('publications',[{'existing':'receipt'}])]:
+    site,ledger=fixture()
+    for name,value in [('site',site),('ledger',ledger),('publications',[{'existing':'receipt'}])]:
      (root/f'data/{name}.json').write_text(json.dumps(value))
     path=root/'data/publications.json';before=path.read_bytes()
     with patch.object(git_publication,'ROOT',root),patch('git_publication.subprocess.check_output',side_effect=['main','a'*40]),patch('git_publication.subprocess.run',return_value=SimpleNamespace(returncode=0)),patch('git_publication.capture',side_effect=failure):
      with self.assertRaises(type(failure)):git_publication.main()
     self.assertEqual(path.read_bytes(),before)
     self.assertEqual(json.loads((root/'release-recovery/git-publication.json').read_text())['sourceCommit'],'a'*40)
+ def test_invalid_edition_fails_before_git_mutation_or_capture(self):
+  with tempfile.TemporaryDirectory() as folder:
+   root=Path(folder);(root/'data').mkdir();site,ledger=fixture()
+   site['games'][0]['venue']='Changed venue'
+   for name,value in [('site',site),('ledger',ledger)]:
+    (root/f'data/{name}.json').write_text(json.dumps(value))
+   with patch.object(git_publication,'ROOT',root),patch('git_publication.subprocess.check_output',return_value='main'),patch('git_publication.subprocess.run') as command,patch('git_publication.capture') as capture:
+    with self.assertRaises(ValueError):git_publication.main()
+   command.assert_not_called();capture.assert_not_called()
  def test_atomic_receipt_write_failure_preserves_old_bytes_and_cleans_temporary_file(self):
   with tempfile.TemporaryDirectory() as folder:
    path=Path(folder)/'publications.json';path.write_text('[{"old":true}]');before=path.read_bytes()
