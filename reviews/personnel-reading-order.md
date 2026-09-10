@@ -1,0 +1,7 @@
+# Personnel reading order
+
+Live matchup review found that explicit game designations were buried beneath practice-only rows. The panel now orders Out, Doubtful and Questionable before entries without a game designation, preserving source order within each group and leaving source records unchanged. Each team's counts distinguish reported and unreported game designations; absence is explicitly not confirmation of availability. No model weighting, inferred player importance or lineup claim is introduced.
+
+All 67 application tests and the production build pass, including a regression for ordering, stable source ordering and non-mutation. Production browser inspection of SF/LAR verified SF's first rows are Alfred Collins, James Thompson Jr. and Kyle Juszczyk, with 2 reported / 9 unreported; LAR shows Aaron Donald first with 1 reported / 6 unreported. [Vercel release](https://vercel.com/khnum/nfl-intelligence/74Vz9VDBWWNC14cksJsEA3Co6qVA) succeeded for `53972742ea3ddde9abd5b54cfc8c6c3e06b68ed0`.
+
+The review also checked an apparent name conflict. A 49ers article headline used James Thomas Jr., but its indexed body, the [official injury report](https://www.49ers.com/team/injury-report/) and [roster](https://www.49ers.com/team/players-roster/) use James Thompson Jr. The app's name was retained. That corroboration does not repair the separately documented cross-feed identifier collision or validate every personnel record. This was a bounded browser review, not an actual fan interview or full accessibility audit.
