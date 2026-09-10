@@ -1,0 +1,225 @@
+{
+  "checkedAt": "2026-09-10T22:04:24.357723+00:00",
+  "sourceCommit": "edef55a4fe19c15b88b42048c90209e64ce81aea",
+  "buildId": "gthlRGrHArGKdSPX0EjzI",
+  "environment": "Isolated local production build without provider credentials",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 320,
+        "document": 320,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/ratings",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 320,
+        "document": 320,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/performance",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 320,
+        "document": 320,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/games/2026_01_SF_LA",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 320,
+        "document": 320,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/teams/phi",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 320,
+        "document": 320,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/privacy",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 320,
+        "document": 320,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/ratings",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/performance",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/games/2026_01_SF_LA",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/teams/phi",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/privacy",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "document": 390,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/ratings",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "document": 390,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/performance",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "document": 390,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/games/2026_01_SF_LA",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "document": 390,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/teams/phi",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "document": 390,
+        "h1": 1
+      }
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/privacy",
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "viewport": 390,
+        "document": 390,
+        "h1": 1
+      }
+    }
+  ],
+  "limitations": "Route and interaction checks, not production rollout, full accessibility or real-device acceptance. Live market details verified separately on the development server."
+}
