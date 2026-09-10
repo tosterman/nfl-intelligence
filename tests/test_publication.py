@@ -31,6 +31,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIsNone(result['brier']);self.assertIsNone(result['logLoss'])
         self.assertEqual(result['marginMae'],3);self.assertEqual(result['totalMae'],5)
         self.assertEqual(result['scoreRecords'][0]['snapshotHash'],self.snap['hash'])
+        self.assertEqual(result['calibration'],[])
     def test_last_eligible_forecast_and_interval_boundaries(self):
         newer={**self.snap,'generatedAt':'2026-09-10T12:00:00+00:00','prediction':{'homeWinProbability':.75,'homeMargin':1,'total':48,'marginInterval80':[3,10],'totalInterval80':[40,45]}}
         newer['hash']=digest({k:v for k,v in newer.items() if k!='hash'})
@@ -40,6 +41,10 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(result['marginMae'],2);self.assertEqual(result['totalMae'],3)
         self.assertEqual(result['marginIntervalCoverage'],1);self.assertEqual(result['totalIntervalCoverage'],1)
         self.assertAlmostEqual(result['logLoss'],0.2876820724517809)
+        self.assertEqual(result['calibration'][0]['count'],1)
+        self.assertEqual(result['calibration'][0]['predicted'],.75)
+        self.assertEqual(result['calibration'][0]['observed'],1)
         empty=grade_prospective([self.game],[self.snap],[])
         self.assertEqual(empty['scoreGames'],0);self.assertIsNone(empty['marginMae']);self.assertEqual(empty['missed'],1)
+        self.assertEqual(empty['calibration'],[])
 if __name__=='__main__':unittest.main()

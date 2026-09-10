@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site, pct } from "@/lib/data";
+import { LiveCalibration } from "@/components/live-calibration";
 export const metadata = { title: "Track record — Every result counts" };
 export default function Performance() {
   const m = site.performance.aggregate;
@@ -122,6 +123,7 @@ export default function Performance() {
             </details>
           </>
         )}
+        <LiveCalibration bins={site.livePerformance.calibration} />
       </section>
       <div className="kpi-grid">
         <div className="kpi">

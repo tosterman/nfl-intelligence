@@ -11,6 +11,15 @@ export const site = {
     brier: number | null;
     logLoss: number | null;
     scoreGames: number;
+    calibration: {
+      lower: number;
+      upper: number;
+      count: number;
+      predicted: number;
+      observed: number;
+      observedLow95: number;
+      observedHigh95: number;
+    }[];
     marginMae: number | null;
     totalMae: number | null;
     marginIntervalCoverage: number | null;

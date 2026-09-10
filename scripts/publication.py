@@ -1,6 +1,7 @@
 """Publication receipts are separate from generated forecasts and game results."""
 from datetime import datetime
 import hashlib,json,math
+from calibration import calibration_bins
 
 def snapshot_valid(snapshot):
     payload={k:v for k,v in snapshot.items() if k!='hash'}
@@ -53,4 +54,5 @@ def grade_prospective(games,ledger,receipts):
         result[field+'Mae']=sum(r[field+'Error'] for r in score_records)/len(score_records) if score_records else None
         result[field+'IntervalGames']=len(covered)
         result[field+'IntervalCoverage']=sum(covered)/len(covered) if covered else None
+    result['calibration']=calibration_bins(records)
     return result
