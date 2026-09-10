@@ -2,7 +2,10 @@ import { site, teams, signed } from "@/lib/data";
 import { TeamMark } from "@/components/brand";
 import Link from "next/link";
 import { orderRatings, ratingMetric } from "@/lib/ratings-order";
-export const metadata = { title: "NFL power ratings" };
+export const metadata = {
+  title: "NFL power ratings",
+  alternates: { canonical: "/ratings" },
+};
 export default async function Ratings({ searchParams }: { searchParams: Promise<{ sort?: string | string[] }> }) {
   const params = await searchParams;
   const metric = ratingMetric(typeof params.sort === "string" ? params.sort : undefined);

@@ -1,0 +1,14 @@
+[
+  {
+    "path": "/ratings",
+    "canonical": "https://nfl-intelligence-one.vercel.app/ratings"
+  },
+  {
+    "path": "/ratings?sort=offense",
+    "canonical": "https://nfl-intelligence-one.vercel.app/ratings"
+  },
+  {
+    "path": "/ratings?sort=defense",
+    "canonical": "https://nfl-intelligence-one.vercel.app/ratings"
+  }
+]
