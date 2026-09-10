@@ -10,6 +10,29 @@ from test_publication_preflight import fixture
 NOW=datetime(2026,9,10,17,tzinfo=timezone.utc)
 def status():return {'id':4,'context':'Vercel','state':'success','creator':{'id':35613825,'login':'vercel[bot]'},'target_url':'https://vercel.com/khnum/nfl-intelligence/abc123','created_at':'2026-09-10T16:45:08Z'}
 class GitPublicationTests(unittest.TestCase):
+ def test_cooldown_requires_trusted_latest_limit_and_expires_without_claiming_capacity(self):
+  limited={**status(),'state':'failure','target_url':'https://vercel.com/khnum?upgradeToPro=build-rate-limit'}
+  deadline=git_publication.provider_cooldown([limited],NOW)
+  self.assertEqual(deadline.isoformat(),'2026-09-11T16:45:08+00:00')
+  self.assertIsNone(git_publication.provider_cooldown([limited],deadline))
+  self.assertIsNone(git_publication.provider_cooldown([limited,{**status(),'id':5}],NOW))
+  for state in ['success','pending','failure']:
+   with self.assertRaisesRegex(ValueError,'Untrusted'):
+    git_publication.provider_cooldown([limited,{**status(),'id':5,'state':state,'creator':{'id':1,'login':'spoof'}}],NOW)
+  with self.assertRaisesRegex(ValueError,'Untrusted'):
+   git_publication.provider_cooldown([{**limited,'creator':{'id':1,'login':'vercel[bot]'}}],NOW)
+  with self.assertRaisesRegex(ValueError,'time'):
+   git_publication.provider_cooldown([{**limited,'created_at':'2027-01-01T00:00:00Z'}],NOW)
+ def test_active_cooldown_preserves_intent_without_push_or_capture(self):
+  with tempfile.TemporaryDirectory() as folder:
+   root=Path(folder);(root/'data').mkdir();site,ledger=fixture()
+   for name,value in [('site',site),('ledger',ledger)]:
+    (root/f'data/{name}.json').write_text(json.dumps(value))
+   with patch.object(git_publication,'ROOT',root),patch('git_publication.subprocess.check_output',side_effect=['main','a'*40]),patch('git_publication.subprocess.run',return_value=SimpleNamespace(returncode=0,stdout='[]')) as command,patch('git_publication.check_provider_cooldown',side_effect=ValueError('cooldown active')),patch('git_publication.capture') as capture:
+    with self.assertRaisesRegex(ValueError,'cooldown active'):git_publication.main()
+   self.assertFalse(any(call.args[0][1]=='push' for call in command.call_args_list))
+   capture.assert_not_called()
+   self.assertEqual(json.loads((root/'release-recovery/git-publication.json').read_text())['sourceCommit'],'a'*40)
  def test_rejected_push_retains_intended_commit_without_receipt_or_capture(self):
   with tempfile.TemporaryDirectory() as folder:
    root=Path(folder);(root/'data').mkdir();site,ledger=fixture()
@@ -18,7 +41,7 @@ class GitPublicationTests(unittest.TestCase):
    before=(root/'data/publications.json').read_bytes()
    def command(args,**kwargs):
     if args[1]=='push':raise git_publication.subprocess.CalledProcessError(1,args)
-    return SimpleNamespace(returncode=0)
+    return SimpleNamespace(returncode=0,stdout='[]')
    with patch.object(git_publication,'ROOT',root),patch('git_publication.subprocess.check_output',side_effect=['main','a'*40]),patch('git_publication.subprocess.run',side_effect=command),patch('git_publication.capture') as capture:
     with self.assertRaises(git_publication.subprocess.CalledProcessError):git_publication.main()
    capture.assert_not_called()
@@ -31,7 +54,7 @@ class GitPublicationTests(unittest.TestCase):
    root=Path(folder);(root/'data').mkdir();site,ledger=fixture()
    for name,value in [('site',site),('ledger',ledger)]:
     (root/f'data/{name}.json').write_text(json.dumps(value))
-   with patch.object(git_publication,'ROOT',root),patch('git_publication.subprocess.check_output',side_effect=['main','a'*40]),patch('git_publication.subprocess.run',return_value=SimpleNamespace(returncode=0)) as command,patch('git_publication.write_receipts',side_effect=OSError('Simulated disk failure')),patch('git_publication.capture') as capture:
+   with patch.object(git_publication,'ROOT',root),patch('git_publication.subprocess.check_output',side_effect=['main','a'*40]),patch('git_publication.subprocess.run',return_value=SimpleNamespace(returncode=0,stdout='[]')) as command,patch('git_publication.write_receipts',side_effect=OSError('Simulated disk failure')),patch('git_publication.capture') as capture:
     with self.assertRaises(OSError):git_publication.main()
    self.assertFalse(any(call.args[0][1]=='push' for call in command.call_args_list))
    capture.assert_not_called()
@@ -85,7 +108,7 @@ class GitPublicationTests(unittest.TestCase):
     for name,value in [('site',site),('ledger',ledger),('publications',[{'existing':'receipt'}])]:
      (root/f'data/{name}.json').write_text(json.dumps(value))
     path=root/'data/publications.json';before=path.read_bytes()
-    with patch.object(git_publication,'ROOT',root),patch('git_publication.subprocess.check_output',side_effect=['main','a'*40]),patch('git_publication.subprocess.run',return_value=SimpleNamespace(returncode=0)),patch('git_publication.capture',side_effect=failure):
+    with patch.object(git_publication,'ROOT',root),patch('git_publication.subprocess.check_output',side_effect=['main','a'*40]),patch('git_publication.subprocess.run',return_value=SimpleNamespace(returncode=0,stdout='[]')),patch('git_publication.capture',side_effect=failure):
      with self.assertRaises(type(failure)):git_publication.main()
     self.assertEqual(path.read_bytes(),before)
     self.assertEqual(json.loads((root/'release-recovery/git-publication.json').read_text())['sourceCommit'],'a'*40)

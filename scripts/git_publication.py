@@ -4,7 +4,7 @@ Trusts GitHub's authenticated attribution to the installed Vercel bot and an
 exact public artifact capture. The production alias is mutable, not notarized.
 """
 import hashlib,json,re,subprocess,time,urllib.request
-from datetime import datetime,timezone
+from datetime import datetime,timezone,timedelta
 from pathlib import Path
 from record_publication import verified_snapshot_hashes
 from publication import write_receipts
@@ -12,6 +12,24 @@ from publication_preflight import validate_forecast_edition
 ROOT=Path(__file__).resolve().parents[1]
 REPO='tosterman/nfl-intelligence'
 PUBLIC_URL='https://nfl-intelligence-one.vercel.app'
+
+def provider_cooldown(statuses,now):
+    candidates=[s for s in statuses if s.get('context')=='Vercel']
+    if not candidates:return None
+    latest=max(candidates,key=lambda s:s['id'])
+    creator=latest.get('creator',{})
+    if creator.get('id')!=35613825 or creator.get('login')!='vercel[bot]':raise ValueError('Untrusted Vercel cooldown author')
+    if latest.get('state') not in ['failure','error'] or latest.get('target_url')!='https://vercel.com/khnum?upgradeToPro=build-rate-limit':return None
+    observed=datetime.fromisoformat(latest['created_at'].replace('Z','+00:00'))
+    if observed.tzinfo is None or observed>now:raise ValueError('Invalid provider cooldown time')
+    retry_after=observed+timedelta(hours=24)
+    return retry_after if now<retry_after else None
+
+def check_provider_cooldown():
+    result=subprocess.run(['gh','api',f'repos/{REPO}/commits/main/statuses?per_page=100'],capture_output=True,text=True)
+    if result.returncode:raise RuntimeError('Cannot verify production deployment cooldown')
+    retry_after=provider_cooldown(json.loads(result.stdout),datetime.now(timezone.utc))
+    if retry_after:raise ValueError('Native deployment cooldown remains active until '+retry_after.isoformat()+'; retry eligibility does not guarantee restored capacity')
 
 def verified_status(statuses,now):
     candidates=[s for s in statuses if s.get('context')=='Vercel']
@@ -77,6 +95,7 @@ def main():
     # Retain intent before the remote mutation, including when push is rejected.
     # This record never proves a successful push, deployment or public capture.
     write_receipts(recovery/'git-publication.json',{'evidenceType':'publication-intent-only','sourceCommit':sha,'repository':REPO,'publicAlias':PUBLIC_URL,'expectedArtifactFile':'data/site.json','canonicalLedgerFile':'data/ledger.json'})
+    check_provider_cooldown()
     # Fail closed on concurrent updates; do not silently rebase a tested release.
     subprocess.run(['git','push','origin','HEAD:refs/heads/main'],check=True)
     receipt=capture(sha,expected,ledger)

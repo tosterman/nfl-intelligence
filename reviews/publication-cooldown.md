@@ -1,0 +1,11 @@
+# Avoid retrying a known native-deployment cooldown
+
+Independent review caught a trust bypass in the initial implementation: a newer untrusted status could clear a trusted cooldown. The selected status author is now validated before any state can clear it. Regression cases cover spoofed success, pending and failure statuses; all fourteen publisher tests pass after the correction.
+
+The native publisher now checks the authenticated current-main Vercel commit status before remote push, after retaining its local intent. A latest failure/error with the known build-rate-limit URL and verified Vercel bot identity blocks attempts for 24 hours from the status timestamp. Missing/failed status lookup fails closed. Expiry permits an attempt; it does not assert that quota has reset or that deployment will succeed. A newer status supersedes an older cooldown. This is not a distributed quota lock and cannot prevent concurrent external deployments.
+
+Fourteen publisher tests and five edition-preflight tests pass. New cases cover trusted attribution, future timestamps, a newer status, the exact expiry boundary and an active-cooldown failure retaining intent without pushing or capturing. The read-only real-main check at 22:42 UTC confirmed the existing retry boundary of September 11 at 20:25:03 UTC; `publication-cooldown-check.json` records that observation. No deployment was attempted.
+
+Operational context at 22:41 UTC: all five production feed checks passed their freshness criteria, but the public forecast identity remains the 20:09 edition rather than intended 20:24. Odds were last acquired at 20:04 UTC. GitHub still reports no scheduled odds runs, no scheduled forecast runs, and one earlier successful scheduled health run. Healthy current data does not establish scheduler reliability.
+
+This guard is staged on `internal-development`. The existing workflow on main does not acquire it until rollout; its next nominal daily refresh is earlier than the known retry boundary. The rollout/operations follow-up must account for that schedule rather than assume this source change already protects production. Preserving current freshness, avoiding premature deployment retries and obtaining a verified new public edition remain open operational requirements.

@@ -1,0 +1,6 @@
+{
+  "blocked": true,
+  "reason": "Native deployment cooldown remains active until 2026-09-11T20:25:03+00:00; retry eligibility does not guarantee restored capacity",
+  "checkedAt": "2026-09-10T22:42:41.079136+00:00",
+  "operation": "Read-only current-main cooldown check; no Git mutation"
+}
