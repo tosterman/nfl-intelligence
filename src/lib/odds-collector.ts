@@ -48,6 +48,25 @@ export async function runOddsCollection({
   const health = oddsHealth(existing, now());
   if (canReuseSnapshot(existing, now()))
     return { ...health, status: "already-current" };
+  // /sports is quota-free and reports current account credits. Do not guess
+  // availability from a previous snapshot or assume a calendar reset date.
+  const quotaUrl = new URL("https://api.the-odds-api.com/v4/sports/");
+  quotaUrl.search = new URLSearchParams({ apiKey: key }).toString();
+  const quotaResponse = await fetcher(quotaUrl, {
+    cache: "no-store",
+    redirect: "error",
+    signal: AbortSignal.timeout(10000),
+  });
+  const remaining = quotaResponse.headers.get("x-requests-remaining");
+  await quotaResponse.body?.cancel();
+  if (
+    !quotaResponse.ok ||
+    remaining === null ||
+    !/^\d+$/.test(remaining) ||
+    !Number.isSafeInteger(Number(remaining)) ||
+    Number(remaining) < 3
+  )
+    throw new Error("Odds quota unavailable or insufficient");
   const url = new URL(
     "https://api.the-odds-api.com/v4/sports/americanfootball_nfl/odds/",
   );
@@ -59,6 +78,7 @@ export async function runOddsCollection({
   }).toString();
   const response = await fetcher(url, {
     cache: "no-store",
+    redirect: "error",
     signal: AbortSignal.timeout(10000),
   });
   if (!response.ok) throw new Error("Odds acquisition failed");

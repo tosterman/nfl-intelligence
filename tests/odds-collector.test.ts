@@ -28,7 +28,9 @@ function collectorFixture() {
         events: feed.events.length,
       };
     },
-    fetcher: (async () => {
+    fetcher: (async (url) => {
+      if (new URL(String(url)).pathname === "/v4/sports/")
+        return Response.json([], { headers: { "x-requests-remaining": "12" } });
       calls.fetch++;
       return Response.json([], { headers: { "x-requests-remaining": "12" } });
     }) as typeof fetch,
@@ -66,7 +68,10 @@ test("persistent storage failure and rejected provider response do not reacquire
   assert.equal(attempts, 3);
   assert.equal(calls.fetch, 1);
   const failed = collectorFixture();
-  failed.deps.fetcher = (async () => {
+  const originalFetch = failed.deps.fetcher;
+  failed.deps.fetcher = (async (url, options) => {
+    if (new URL(String(url)).pathname === "/v4/sports/")
+      return originalFetch(url, options);
     failed.calls.fetch++;
     return new Response("quota exceeded", { status: 429 });
   }) as typeof fetch;
@@ -75,6 +80,55 @@ test("persistent storage failure and rejected provider response do not reacquire
     /Odds acquisition failed/,
   );
   assert.equal(failed.calls.fetch, 1);
+  assert.equal(failed.calls.publish, 0);
+});
+test("unknown or insufficient quota blocks paid acquisition", async () => {
+  for (const remaining of [
+    null,
+    "",
+    "2",
+    "0",
+    "-1",
+    "3.5",
+    "3x",
+    "9007199254740992",
+  ]) {
+    const { deps, calls } = collectorFixture();
+    const original = deps.fetcher;
+    deps.fetcher = (async (url, options) => {
+      if (new URL(String(url)).pathname !== "/v4/sports/")
+        return original(url, options);
+      return Response.json([], {
+        headers:
+          remaining === null ? {} : { "x-requests-remaining": remaining },
+      });
+    }) as typeof fetch;
+    await assert.rejects(runOddsCollection(deps), /quota/);
+    assert.equal(calls.fetch, 0);
+    assert.equal(calls.publish, 0);
+  }
+});
+test("quota check is free, precedes acquisition, and is skipped for fresh storage", async () => {
+  const { deps, calls } = collectorFixture();
+  const original = deps.fetcher;
+  const paths: string[] = [];
+  deps.fetcher = (async (url, options) => {
+    paths.push(new URL(String(url)).pathname);
+    if (paths.at(-1) === "/v4/sports/")
+      return Response.json([], { headers: { "x-requests-remaining": "3" } });
+    return original(url, options);
+  }) as typeof fetch;
+  await runOddsCollection(deps);
+  await runOddsCollection(deps);
+  assert.deepEqual(paths, [
+    "/v4/sports/",
+    "/v4/sports/americanfootball_nfl/odds/",
+  ]);
+  assert.equal(calls.fetch, 1);
+  const failed = collectorFixture();
+  failed.deps.fetcher = (async () =>
+    new Response(null, { status: 503 })) as typeof fetch;
+  await assert.rejects(runOddsCollection(failed.deps), /quota/);
   assert.equal(failed.calls.publish, 0);
 });
 test("unreadable storage prevents acquisition and wrong readback cannot report success", async () => {
