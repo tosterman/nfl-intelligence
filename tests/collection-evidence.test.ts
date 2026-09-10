@@ -45,9 +45,23 @@ test("unproven capture, invalid quota, and stale or future acquisition are rejec
       {
         ...captured,
         status: "already-current",
-        fetchedAt: new Date(now - 1800001).toISOString(),
+        fetchedAt: new Date(now - 1920001).toISOString(),
       },
       now,
     ),
+  );
+});
+
+test("reuse evidence allows bounded response transit beyond the server reuse cutoff", () => {
+  assert.equal(
+    collectionResult(
+      {
+        ...captured,
+        status: "already-current",
+        fetchedAt: new Date(now - 1801000).toISOString(),
+      },
+      now,
+    ).status,
+    "already-current",
   );
 });

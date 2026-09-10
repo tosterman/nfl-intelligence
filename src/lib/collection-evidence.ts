@@ -10,7 +10,9 @@ export function collectionResult(value: unknown, now = Date.now()) {
   )
     throw new Error("Missing collection time");
   const age = now - Date.parse(r.fetchedAt);
-  if (age < 0 || age > (r.status === "captured" ? 120000 : 30 * 60000))
+  // Reuse is decided at the server before transmission. Allow at most the
+  // caller's two-minute request timeout beyond that thirty-minute boundary.
+  if (age < 0 || age > (r.status === "captured" ? 120000 : 32 * 60000))
     throw new Error("Invalid collection age");
   if (r.status === "already-current")
     return { status: r.status, fetchedAt: r.fetchedAt };
