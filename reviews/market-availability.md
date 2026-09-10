@@ -1,0 +1,7 @@
+# Market availability explanations
+
+The slate and matchup comparison now derive quote eligibility and explanations from the same assessment. Visitors can distinguish a disconnected feed, unavailable collection, invalid timing, expired acquisition, no exact event match, duplicate matches, an event without eligible prices, and pregame closure. A book with a moneyline or total but no spread displays "Spread not quoted" on the slate.
+
+The six-hour acquisition and per-market rules, exact team/kickoff identity match, and kickoff closure remain intact. `quotesForGame` delegates to the assessment so existing consumers retain the same quote array interface. Missing events are described as absent from this snapshot, not absent from every sportsbook. None of these states means no betting edge; valid comparisons still disclose that differences are not validated edges.
+
+Validation: all 57 application tests and the production build passed. Rendered fixtures checked five principal unavailable states on both card and panel, comparison suppression, and missing/ambiguous event identity. Existing odds tests retain stale/future/start boundaries and malformed-market handling. Local browser inspection of SF/LAR confirmed nine eligible books and timestamped spread, total and moneyline comparisons. Unavailable states were fixture-tested, not induced in the production feed. Independent read-only UX review found no actionable defect and did not independently execute tests.

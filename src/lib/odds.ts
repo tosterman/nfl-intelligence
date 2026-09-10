@@ -148,35 +148,61 @@ export function normalizeOdds(raw: unknown, fetchedAt: string): OddsFeed {
   }
   return { state: "ready", fetchedAt, events };
 }
-export function quotesForGame(
+export function assessGameOdds(
   feed: OddsFeed,
   game: { home: string; away: string; kickoff: string | null; status: string },
   now: number,
-): BookQuote[] {
-  if (
-    feed.state !== "ready" ||
-    game.status === "final" ||
-    !game.kickoff ||
-    !Number.isFinite(now)
-  )
-    return [];
-  const kickoff = Date.parse(game.kickoff),
+): { books: BookQuote[]; label: string; reason: string | null } {
+  const unavailable = (label: string, reason: string) => ({
+    books: [] as BookQuote[],
+    label,
+    reason,
+  });
+  const kickoff = Date.parse(game.kickoff ?? ""),
     age = now - Date.parse(feed.fetchedAt);
-  if (
-    !Number.isFinite(kickoff) ||
-    now >= kickoff ||
-    !Number.isFinite(age) ||
-    age < 0 ||
-    age > ODDS_MAX_AGE_MS
-  )
-    return [];
+  if (game.status === "final" || (Number.isFinite(kickoff) && now >= kickoff))
+    return unavailable(
+      "Pregame closed",
+      "Pregame comparisons close at kickoff. In-play odds are not shown.",
+    );
+  if (!Number.isFinite(kickoff) || !Number.isFinite(now))
+    return unavailable(
+      "Timing unverified",
+      "A verified kickoff and current time are required before showing prices.",
+    );
+  if (feed.state === "not-configured")
+    return unavailable("Not connected", "The odds feed is not configured.");
+  if (feed.state !== "ready")
+    return unavailable(
+      "Feed unavailable",
+      "The latest odds feed could not be verified. Prices are withheld until collection recovers.",
+    );
+  if (!Number.isFinite(age) || age < 0)
+    return unavailable(
+      "Timing unverified",
+      "The odds acquisition timestamp could not be verified. Prices are withheld.",
+    );
+  if (age > ODDS_MAX_AGE_MS)
+    return unavailable(
+      "Snapshot expired",
+      "The odds snapshot is more than six hours old. A fresh collection is needed before comparing prices.",
+    );
   const matches = feed.events.filter(
     (e) =>
       e.home === game.home &&
       e.away === game.away &&
       Date.parse(e.kickoff) === kickoff,
   );
-  if (matches.length !== 1) return [];
+  if (matches.length === 0)
+    return unavailable(
+      "Matchup not quoted",
+      "No event matches these teams and this exact kickoff in the latest snapshot. This does not mean no sportsbook offers a market.",
+    );
+  if (matches.length !== 1)
+    return unavailable(
+      "Matchup unverified",
+      "Multiple events match this matchup. Prices are withheld until the event identity is resolved.",
+    );
   const fresh = <T extends { observedAt: string }>(
     market: T | null,
   ): T | null =>
@@ -185,7 +211,7 @@ export function quotesForGame(
     now - Date.parse(market.observedAt) <= ODDS_MAX_AGE_MS
       ? market
       : null;
-  return matches[0].books
+  const books = matches[0].books
     .map((b) => ({
       ...b,
       spread: fresh(b.spread),
@@ -193,4 +219,17 @@ export function quotesForGame(
       moneyline: fresh(b.moneyline),
     }))
     .filter((b) => b.spread || b.total || b.moneyline);
+  return books.length
+    ? { books, label: "Available", reason: null }
+    : unavailable(
+        "No eligible prices",
+        "The matched event has no verified prices within the six-hour limit. Prices may be missing, expired or invalid.",
+      );
+}
+export function quotesForGame(
+  feed: OddsFeed,
+  game: { home: string; away: string; kickoff: string | null; status: string },
+  now: number,
+): BookQuote[] {
+  return assessGameOdds(feed, game, now).books;
 }

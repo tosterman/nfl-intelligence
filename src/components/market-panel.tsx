@@ -2,7 +2,7 @@
 import { assessFreshness, type FreshnessInput } from "@/lib/freshness";
 import { track } from "@vercel/analytics";
 import { useEffect, useState } from "react";
-import { quotesForGame, type OddsFeed, type BookQuote } from "@/lib/odds";
+import { assessGameOdds, type OddsFeed, type BookQuote } from "@/lib/odds";
 import { fairMoneyline, noVig } from "@/lib/math";
 import { teams, signed, pct, time, date } from "@/lib/teams";
 import type { Prediction } from "@/lib/types";
@@ -41,7 +41,8 @@ export function MarketCard({
   initialNow: number;
 }) {
   const now = useClock(initialNow),
-    books = quotesForGame(feed, game, now);
+    assessment = assessGameOdds(feed, game, now),
+    books = assessment.books;
   const book = defaultBook(books);
   return (
     <div>
@@ -49,9 +50,9 @@ export function MarketCard({
       <span>
         {book?.spread
           ? `${teams[game.home].short} ${signed(book.spread.homePoint)} (${signed(book.spread.homePrice, 0)})`
-          : feed.state === "not-configured"
-            ? "Not connected"
-            : "No current quote"}
+          : book
+            ? "Spread not quoted"
+            : assessment.label}
       </span>
       {book && <small>{book.name}</small>}
       {book?.spread && <small>As of {stamp(book.spread.observedAt)}</small>}
@@ -72,10 +73,10 @@ export function MarketPanel({
   initialNow: number;
 }) {
   const now = useClock(initialNow),
-    books = quotesForGame(feed, game, now);
+    assessment = assessGameOdds(feed, game, now),
+    books = assessment.books;
   const [selected, setSelected] = useState<string | null>(null);
   const book = books.find((b) => b.book === selected) ?? defaultBook(books);
-  const expired = !!game.kickoff && now >= Date.parse(game.kickoff);
   const modelFresh = assessFreshness(freshness, now).status === "ok";
   const home = teams[game.home].short,
     away = teams[game.away].short;
@@ -90,13 +91,7 @@ export function MarketPanel({
         between collections.
       </p>
       {!book ? (
-        <p>
-          {expired
-            ? "Pregame comparisons close at kickoff. In-play odds are not shown."
-            : feed.state === "not-configured"
-              ? "The odds feed is not configured."
-              : "No current, verified quote is available for this matchup. Stale or unmatched prices are withheld."}
-        </p>
+        <p>{assessment.reason}</p>
       ) : (
         <>
           <label className="market-selector">
