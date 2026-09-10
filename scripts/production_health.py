@@ -79,6 +79,37 @@ def validate_health(kind,http_status,payload,now):
             raise ValueError('Forecast identity is incomplete or inconsistent')
     else:raise ValueError('Unknown probe')
 
+def health_evidence(kind, payload):
+    keys = {
+        'forecasts': ('generatedAt','modelVersion','sourceHash'),
+        'odds': ('fetchedAt','maximumAgeHours'),
+        'personnel': ('retrievedAt','assetUpdatedAt','sourceHash','rowCount','collectionStatus'),
+        'quarterbacks': ('retrievedAt','assetUpdatedAt','sourceHash','collectionStatus'),
+        'weather': ('collectionStartedAt','generatedAt','eligibleGames','availableGames'),
+    }[kind]
+    return {key:payload[key] for key in keys}
+
+
+def edition_parity(expected, observed):
+    try:
+        intended = {'generatedAt':expected['generatedAt'], 'modelVersion':expected['modelVersion'], 'sourceHash':expected['source']['sha256']}
+        if not isinstance(observed,dict) or any(key not in observed for key in intended):
+            raise ValueError('Missing published identity')
+        if not all(isinstance(value,str) and value for value in intended.values()):
+            raise ValueError('Invalid intended identity')
+        if not re.fullmatch(r'[a-f0-9]{64}',intended['sourceHash']):raise ValueError('Invalid source identity')
+        checked=datetime.now(timezone.utc)
+        expected_age=age(intended['generatedAt'],checked)
+        observed_age=age(observed['generatedAt'],checked)
+        # Compare instants directly: equivalent timezone spellings are one edition.
+        same_time=datetime.fromisoformat(intended['generatedAt'].replace('Z','+00:00')) == datetime.fromisoformat(observed['generatedAt'].replace('Z','+00:00'))
+        matches=same_time and all(intended[k]==observed[k] for k in ['modelVersion','sourceHash'])
+        status='matching' if matches else 'behind-intended' if observed_age > expected_age and not same_time else 'different-identity'
+        return {'status':status,'intended':intended,'observed':{k:observed[k] for k in intended}}
+    except (KeyError,TypeError,ValueError):
+        return {'status':'unverified'}
+
+
 class NoRedirect(HTTPRedirectHandler):
     def redirect_request(self,req,fp,code,msg,headers,newurl):return None
 
@@ -94,7 +125,7 @@ def probe(kind):
                 if len(raw)>100000:raise ValueError('Health response exceeded limit')
                 payload=json.loads(raw)
                 validate_health(kind,response.status,payload,datetime.now(timezone.utc))
-                result.update(healthy=True,reason='Verified status and acquisition times')
+                result.update(healthy=True,reason='Verified status and acquisition times',evidence=health_evidence(kind,payload))
         except HTTPError as error:
             result.update(httpStatus=error.code,reason='Unhealthy HTTP response or redirect')
         except (URLError,TimeoutError,OSError):result['reason']='Network request failed'
@@ -107,7 +138,13 @@ def probe(kind):
 def main():
     with ThreadPoolExecutor(max_workers=3) as executor:
         results=dict(zip(ENDPOINTS,executor.map(probe,ENDPOINTS)))
-    report={'checkedAt':datetime.now(timezone.utc).isoformat(),'healthy':all(r['healthy'] for r in results.values()),'checks':results}
+    try:
+        expected=json.loads((ROOT/'data/site.json').read_text())
+    except (OSError,ValueError):expected={}
+    parity=edition_parity(expected,results['forecasts']['attempts'][-1].get('evidence'))
+    feeds_healthy=all(r['healthy'] for r in results.values())
+    report={'checkedAt':datetime.now(timezone.utc).isoformat(),'healthy':feeds_healthy and parity['status']=='matching',
+            'feedsHealthy':feeds_healthy,'editionParity':parity,'checks':results}
     output=ROOT/'release-recovery'/'health-report.json'
     output.parent.mkdir(exist_ok=True)
     output.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')

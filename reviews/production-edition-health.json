@@ -1,0 +1,108 @@
+{
+  "checkedAt": "2026-09-10T21:26:57.468125+00:00",
+  "healthy": false,
+  "feedsHealthy": true,
+  "editionParity": {
+    "status": "behind-intended",
+    "intended": {
+      "generatedAt": "2026-09-10T20:24:19.332829+00:00",
+      "modelVersion": "score-efficiency-v1.2.0",
+      "sourceHash": "0461a4e0cedc2d5732d5cebe9f0287a4f5cefcdf298704a0e35575ec23278d92"
+    },
+    "observed": {
+      "generatedAt": "2026-09-10T20:09:04.084122+00:00",
+      "modelVersion": "score-efficiency-v1.2.0",
+      "sourceHash": "75b777ae632bb3a1d65d123cc8e1b945867085833057caf2c574463653f5008d"
+    }
+  },
+  "checks": {
+    "forecasts": {
+      "endpoint": "/api/status",
+      "healthy": true,
+      "attempts": [
+        {
+          "observedAt": "2026-09-10T21:26:54.389954+00:00",
+          "httpStatus": 200,
+          "healthy": true,
+          "reason": "Verified status and acquisition times",
+          "evidence": {
+            "generatedAt": "2026-09-10T20:09:04.084122+00:00",
+            "modelVersion": "score-efficiency-v1.2.0",
+            "sourceHash": "75b777ae632bb3a1d65d123cc8e1b945867085833057caf2c574463653f5008d"
+          }
+        }
+      ]
+    },
+    "odds": {
+      "endpoint": "/api/odds-status",
+      "healthy": true,
+      "attempts": [
+        {
+          "observedAt": "2026-09-10T21:26:54.397444+00:00",
+          "httpStatus": 200,
+          "healthy": true,
+          "reason": "Verified status and acquisition times",
+          "evidence": {
+            "fetchedAt": "2026-09-10T20:04:37.283Z",
+            "maximumAgeHours": 6
+          }
+        }
+      ]
+    },
+    "personnel": {
+      "endpoint": "/api/personnel-status",
+      "healthy": true,
+      "attempts": [
+        {
+          "observedAt": "2026-09-10T21:26:54.401929+00:00",
+          "httpStatus": 200,
+          "healthy": true,
+          "reason": "Verified status and acquisition times",
+          "evidence": {
+            "retrievedAt": "2026-09-10T20:09:09.897337+00:00",
+            "assetUpdatedAt": "2026-09-10T12:03:24Z",
+            "sourceHash": "96dcc98e297a38ecb8edcc7ab8864260b2899e24604f60c2a9514498ea53c2fb",
+            "rowCount": 139,
+            "collectionStatus": "ok"
+          }
+        }
+      ]
+    },
+    "weather": {
+      "endpoint": "/api/weather-status",
+      "healthy": true,
+      "attempts": [
+        {
+          "observedAt": "2026-09-10T21:26:56.751304+00:00",
+          "httpStatus": 200,
+          "healthy": true,
+          "reason": "Verified status and acquisition times",
+          "evidence": {
+            "collectionStartedAt": "2026-09-10T20:09:04.331031+00:00",
+            "generatedAt": "2026-09-10T20:09:05.031413+00:00",
+            "eligibleGames": 7,
+            "availableGames": 7
+          }
+        }
+      ]
+    },
+    "quarterbacks": {
+      "endpoint": "/api/quarterback-status",
+      "healthy": true,
+      "attempts": [
+        {
+          "observedAt": "2026-09-10T21:26:56.884929+00:00",
+          "httpStatus": 200,
+          "healthy": true,
+          "reason": "Verified status and acquisition times",
+          "evidence": {
+            "retrievedAt": "2026-09-10T20:09:05.776440+00:00",
+            "assetUpdatedAt": "2026-09-10T12:01:54Z",
+            "sourceHash": "db0a09454965e6fcd4d7378a19381fa53f251432f80f09ebdcc45f78f5e1bc9f",
+            "collectionStatus": "ok"
+          }
+        }
+      ]
+    }
+  }
+}
