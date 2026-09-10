@@ -2,6 +2,7 @@ import "server-only";
 import { unstable_cache } from "next/cache";
 import { createHash } from "node:crypto";
 import { normalizeOdds, type OddsFeed } from "./odds";
+import { archiveOdds } from "./odds-archive";
 export async function getOdds(): Promise<OddsFeed> {
   const key = process.env.ODDS_API_KEY;
   if (!key)
@@ -30,12 +31,24 @@ export async function getOdds(): Promise<OddsFeed> {
           signal: AbortSignal.timeout(10000),
         });
         if (!response.ok) throw new Error("Provider unavailable");
-        return normalizeOdds(await response.json(), new Date().toISOString());
+        const feed = normalizeOdds(
+          await response.json(),
+          new Date().toISOString(),
+        );
+        if (process.env.VERCEL_ENV === "production") {
+          try {
+            await archiveOdds(feed);
+          } catch {
+            // Preserve available quotes; never log provider payloads or credentials.
+            console.error("Odds history archive failed");
+          }
+        }
+        return feed;
       } catch {
         return { state: "unavailable", fetchedAt, events: [] } as OddsFeed;
       }
     },
-    ["nfl-odds-v1", fingerprint],
+    ["nfl-odds-archive-v2", fingerprint],
     { revalidate: 21600 },
   )();
 }
