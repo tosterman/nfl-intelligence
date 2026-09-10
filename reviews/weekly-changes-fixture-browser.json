@@ -1,0 +1,30 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "fixtureOnly": true,
+    "comparisonFirstAndModelCards": true,
+    "overflow": false
+  },
+  {
+    "engine": "chromium",
+    "width": 1440,
+    "fixtureOnly": true,
+    "comparisonFirstAndModelCards": true,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "fixtureOnly": true,
+    "comparisonFirstAndModelCards": true,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "fixtureOnly": true,
+    "comparisonFirstAndModelCards": true,
+    "overflow": false
+  }
+]

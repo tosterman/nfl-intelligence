@@ -2045,6 +2045,12 @@ summary {
 .metric-guide dl { display: grid; gap: 24px; margin: 24px 0 0; max-width: 76ch; }
 .metric-guide dt { font-weight: 600; }
 .metric-guide dd { margin: 8px 0 0; color: var(--muted); line-height: 1.7; }
+.weekly-changes { margin-bottom: 32px; }
+.weekly-changes summary { min-height: 44px; align-content: center; }
+.weekly-changes summary span { display: block; color: var(--muted); font-size: 12px; margin-top: 8px; }
+.weekly-change-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.weekly-change-list li { padding: 20px 0; border-top: 1px solid var(--line); }
+.weekly-change-list a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
 
 .scheduled-context{display:grid;gap:24px;margin-top:24px}.scheduled-context .personnel-panel{margin-top:0}
 
