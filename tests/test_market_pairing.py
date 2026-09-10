@@ -44,3 +44,12 @@ class MarketPairingTests(unittest.TestCase):
         self.assertEqual(forecast_at(game,[snapshot],[receipt | {'publishedAt':'2026-09-12T12:00:01Z'}],self.cutoff)['status'],'missing-forecast')
         self.assertEqual(forecast_at(game,[snapshot | {'prediction':{'homeMargin':10}}],[receipt],self.cutoff)['status'],'missing-forecast')
         self.assertEqual(forecast_at(game | {'venue':'Other'},[snapshot],[receipt],self.cutoff)['status'],'missing-forecast')
+    def test_forecast_timestamp_ties_are_input_order_independent(self):
+        game=self.game|{'id':'g','season':2026,'week':1,'type':'REG','venue':'Example','neutral':False}
+        a={'gameId':'g','gameContext':{k:v for k,v in game.items() if k!='id'},'generatedAt':'2026-09-12T11:00:00Z','prediction':{'homeMargin':3}}
+        a['hash']=digest(a)
+        b={k:v for k,v in a.items() if k!='hash'}; b['prediction']={'homeMargin':4}; b['hash']=digest(b)
+        receipt={'status':'ready','publishedAt':'2026-09-12T11:30:00Z','deploymentUrl':'https://example.vercel.app','snapshotHashes':[a['hash'],b['hash']]}
+        expected=max(a['hash'],b['hash'])
+        for ledger in [[a,b],[b,a]]:
+            self.assertEqual(forecast_at(game,ledger,[receipt],self.cutoff)['snapshot']['hash'],expected)

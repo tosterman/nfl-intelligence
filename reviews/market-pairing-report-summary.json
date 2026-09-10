@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-09-10T21:02:18.432032+00:00",
+  "coverageThrough": "2026-09-10T20:56:20.614000+00:00",
+  "games": 272,
+  "checkpointCounts": {
+    "excluded-before-protocol": 3,
+    "pending": 541
+  },
+  "marketCounts": {},
+  "captureHashes": [
+    "d2f226f35e5a75a0d8a0fb5d77ccb7904f46741a6ce9e40b14ef0e492b5cdee8",
+    "0beaa696497b3c3e4e474b2f494f3afdb83ab9cb42dcdff16f186a355d29cfc8",
+    "312a736d5dcfdb7b77eb7dcb8a8ab05d92947c0921649b41dfd05d15f3515955"
+  ],
+  "protocolHash": "4ca687906dbac977669ae19bf3a61dad523a12334a6e6ad231e2ccd650219621",
+  "reportHash": "46d5651b96315ce46d67c638e100765d8d1caededbb43ccd903bf9250fe5a105",
+  "reportPath": "C:\\Users\\tyler\\Desktop\\nfl\\release-recovery\\market-pairing\\46d5651b96315ce46d67c638e100765d8d1caededbb43ccd903bf9250fe5a105.json",
+  "productionWorkflow": false
+}
