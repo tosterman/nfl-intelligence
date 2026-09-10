@@ -1,0 +1,2332 @@
+{
+  "alpha": 1.2393131116182963,
+  "fitGames": 285,
+  "evaluation": {
+    "games": 285,
+    "excludedGames": 0,
+    "difference": 0.05102716719021556,
+    "interval95": [
+      -0.12169114576199148,
+      0.22024927048340967
+    ],
+    "clustersBySeason": {
+      "2025": 22
+    },
+    "draws": 10000,
+    "seed": 20260910,
+    "records": [
+      {
+        "id": "2025_01_DAL_PHI",
+        "season": 2025,
+        "week": 1,
+        "actualMargin": 4.0,
+        "baselineMargin": 9.09,
+        "candidateMargin": 11.265356184610313
+      },
+      {
+        "id": "2025_01_KC_LAC",
+        "season": 2025,
+        "week": 1,
+        "actualMargin": 6.0,
+        "baselineMargin": -0.424,
+        "candidateMargin": -0.5254687593261576
+      },
+      {
+        "id": "2025_01_ARI_NO",
+        "season": 2025,
+        "week": 1,
+        "actualMargin": -7.0,
+        "baselineMargin": 0.38,
+        "candidateMargin": 0.4709389824149526
+      },
+      {
+        "id": "2025_01_BAL_BUF",
+        "season": 2025,
+        "week": 1,
+        "actualMargin": 1.0,
+        "baselineMargin": 1.235,
+        "candidateMargin": 1.530551692848596
+      },
+      {
+        "id": "2025_01_CAR_JAX",
+        "season": 2025,
+        "week": 1,
+        "actualMargin": 16.0,
+        "baselineMargin": 4.391,
+        "candidateMargin": 5.441823873115939
+      },
+      {
+        "id": "2025_01_CIN_CLE",
+        "season": 2025,
+        "week": 1,
+        "actualMargin": -1.0,
+        "baselineMargin": -3.402,
+        "candidateMargin": -4.216143205725444
+      },
+      {
+        "id": "2025_01_DET_GB",
+        "season": 2025,
+        "week": 1,
+        "actualMargin": 14.0,
+        "baselineMargin": 0.542,
+        "candidateMargin": 0.6717077064971166
+      },
+      {
+        "id": "2025_01_HOU_LA",
+        "season": 2025,
+        "week": 1,
+        "actualMargin": 5.0,
+        "baselineMargin": 2.645,
+        "candidateMargin": 3.2779831802303936
+      },
+      {
+        "id": "2025_01_LV_NE",
+        "season": 2025,
+        "week": 1,
+        "actualMargin": -7.0,
+        "baselineMargin": 1.125,
+        "candidateMargin": 1.3942272505705833
+      },
+      {
+        "id": "2025_01_MIA_IND",
+        "season": 2025,
+        "week": 1,
+        "actualMargin": 25.0,
+        "baselineMargin": 0.146,
+        "candidateMargin": 0.18093971429627123
+      },
+      {
+        "id": "2025_01_NYG_WAS",
+        "season": 2025,
+        "week": 1,
+        "actualMargin": 15.0,
+        "baselineMargin": 7.083,
+        "candidateMargin": 8.778054769592393
+      },
+      {
+        "id": "2025_01_PIT_NYJ",
+        "season": 2025,
+        "week": 1,
+        "actualMargin": -2.0,
+        "baselineMargin": 0.067,
+        "candidateMargin": 0.08303397847842585
+      },
+      {
+        "id": "2025_01_SF_SEA",
+        "season": 2025,
+        "week": 1,
+        "actualMargin": -4.0,
+        "baselineMargin": 1.87,
+        "candidateMargin": 2.317515518726214
+      },
+      {
+        "id": "2025_01_TB_ATL",
+        "season": 2025,
+        "week": 1,
+        "actualMargin": -3.0,
+        "baselineMargin": -2.172,
+        "candidateMargin": -2.6917880784349397
+      },
+      {
+        "id": "2025_01_TEN_DEN",
+        "season": 2025,
+        "week": 1,
+        "actualMargin": 8.0,
+        "baselineMargin": 8.1,
+        "candidateMargin": 10.0384362041082
+      },
+      {
+        "id": "2025_01_MIN_CHI",
+        "season": 2025,
+        "week": 1,
+        "actualMargin": -3.0,
+        "baselineMargin": -1.307,
+        "candidateMargin": -1.6197822368851131
+      },
+      {
+        "id": "2025_02_WAS_GB",
+        "season": 2025,
+        "week": 2,
+        "actualMargin": 9.0,
+        "baselineMargin": 4.856,
+        "candidateMargin": 6.0181044700184465
+      },
+      {
+        "id": "2025_02_ATL_MIN",
+        "season": 2025,
+        "week": 2,
+        "actualMargin": -16.0,
+        "baselineMargin": 4.563,
+        "candidateMargin": 5.654985728314285
+      },
+      {
+        "id": "2025_02_BUF_NYJ",
+        "season": 2025,
+        "week": 2,
+        "actualMargin": -20.0,
+        "baselineMargin": -3.998,
+        "candidateMargin": -4.954773820249949
+      },
+      {
+        "id": "2025_02_CAR_ARI",
+        "season": 2025,
+        "week": 2,
+        "actualMargin": 5.0,
+        "baselineMargin": 8.491,
+        "candidateMargin": 10.523007630750953
+      },
+      {
+        "id": "2025_02_CHI_DET",
+        "season": 2025,
+        "week": 2,
+        "actualMargin": 31.0,
+        "baselineMargin": 7.187,
+        "candidateMargin": 8.906943333200696
+      },
+      {
+        "id": "2025_02_CLE_BAL",
+        "season": 2025,
+        "week": 2,
+        "actualMargin": 24.0,
+        "baselineMargin": 12.122,
+        "candidateMargin": 15.022953539036987
+      },
+      {
+        "id": "2025_02_DEN_IND",
+        "season": 2025,
+        "week": 2,
+        "actualMargin": 1.0,
+        "baselineMargin": 0.309,
+        "candidateMargin": 0.38294775149005356
+      },
+      {
+        "id": "2025_02_JAX_CIN",
+        "season": 2025,
+        "week": 2,
+        "actualMargin": 4.0,
+        "baselineMargin": 4.266,
+        "candidateMargin": 5.286909734163652
+      },
+      {
+        "id": "2025_02_LA_TEN",
+        "season": 2025,
+        "week": 2,
+        "actualMargin": -14.0,
+        "baselineMargin": -3.026,
+        "candidateMargin": -3.7501614757569643
+      },
+      {
+        "id": "2025_02_NE_MIA",
+        "season": 2025,
+        "week": 2,
+        "actualMargin": -6.0,
+        "baselineMargin": 4.18,
+        "candidateMargin": 5.180328806564478
+      },
+      {
+        "id": "2025_02_NYG_DAL",
+        "season": 2025,
+        "week": 2,
+        "actualMargin": 3.0,
+        "baselineMargin": 5.438,
+        "candidateMargin": 6.7393847009802945
+      },
+      {
+        "id": "2025_02_PHI_KC",
+        "season": 2025,
+        "week": 2,
+        "actualMargin": -3.0,
+        "baselineMargin": -1.228,
+        "candidateMargin": -1.521876501067268
+      },
+      {
+        "id": "2025_02_SEA_PIT",
+        "season": 2025,
+        "week": 2,
+        "actualMargin": -14.0,
+        "baselineMargin": 2.715,
+        "candidateMargin": 3.364735098043674
+      },
+      {
+        "id": "2025_02_SF_NO",
+        "season": 2025,
+        "week": 2,
+        "actualMargin": -5.0,
+        "baselineMargin": -0.416,
+        "candidateMargin": -0.5155542544332112
+      },
+      {
+        "id": "2025_02_LAC_LV",
+        "season": 2025,
+        "week": 2,
+        "actualMargin": -11.0,
+        "baselineMargin": -1.27,
+        "candidateMargin": -1.5739276517552363
+      },
+      {
+        "id": "2025_02_TB_HOU",
+        "season": 2025,
+        "week": 2,
+        "actualMargin": -1.0,
+        "baselineMargin": -0.742,
+        "candidateMargin": -0.9195703288207758
+      },
+      {
+        "id": "2025_03_MIA_BUF",
+        "season": 2025,
+        "week": 3,
+        "actualMargin": 10.0,
+        "baselineMargin": 10.499,
+        "candidateMargin": 13.011548358880493
+      },
+      {
+        "id": "2025_03_ARI_SF",
+        "season": 2025,
+        "week": 3,
+        "actualMargin": 1.0,
+        "baselineMargin": 2.377,
+        "candidateMargin": 2.94584726631669
+      },
+      {
+        "id": "2025_03_ATL_CAR",
+        "season": 2025,
+        "week": 3,
+        "actualMargin": 30.0,
+        "baselineMargin": -4.278,
+        "candidateMargin": -5.301781491503071
+      },
+      {
+        "id": "2025_03_CIN_MIN",
+        "season": 2025,
+        "week": 3,
+        "actualMargin": 38.0,
+        "baselineMargin": 0.157,
+        "candidateMargin": 0.1945721585240725
+      },
+      {
+        "id": "2025_03_DAL_CHI",
+        "season": 2025,
+        "week": 3,
+        "actualMargin": 17.0,
+        "baselineMargin": -0.489,
+        "candidateMargin": -0.6060241115813468
+      },
+      {
+        "id": "2025_03_DEN_LAC",
+        "season": 2025,
+        "week": 3,
+        "actualMargin": 3.0,
+        "baselineMargin": 1.884,
+        "candidateMargin": 2.33486590228887
+      },
+      {
+        "id": "2025_03_GB_CLE",
+        "season": 2025,
+        "week": 3,
+        "actualMargin": 3.0,
+        "baselineMargin": -7.393,
+        "candidateMargin": -9.162241834194065
+      },
+      {
+        "id": "2025_03_HOU_JAX",
+        "season": 2025,
+        "week": 3,
+        "actualMargin": 7.0,
+        "baselineMargin": 1.419,
+        "candidateMargin": 1.7585853053863625
+      },
+      {
+        "id": "2025_03_IND_TEN",
+        "season": 2025,
+        "week": 3,
+        "actualMargin": -21.0,
+        "baselineMargin": -3.845,
+        "candidateMargin": -4.76515891417235
+      },
+      {
+        "id": "2025_03_KC_NYG",
+        "season": 2025,
+        "week": 3,
+        "actualMargin": -13.0,
+        "baselineMargin": -3.408,
+        "candidateMargin": -4.223579084395154
+      },
+      {
+        "id": "2025_03_LA_PHI",
+        "season": 2025,
+        "week": 3,
+        "actualMargin": 7.0,
+        "baselineMargin": 4.986,
+        "candidateMargin": 6.179215174528825
+      },
+      {
+        "id": "2025_03_LV_WAS",
+        "season": 2025,
+        "week": 3,
+        "actualMargin": 17.0,
+        "baselineMargin": 5.638,
+        "candidateMargin": 6.987247323303954
+      },
+      {
+        "id": "2025_03_NO_SEA",
+        "season": 2025,
+        "week": 3,
+        "actualMargin": 31.0,
+        "baselineMargin": 4.28,
+        "candidateMargin": 5.304260117726308
+      },
+      {
+        "id": "2025_03_NYJ_TB",
+        "season": 2025,
+        "week": 3,
+        "actualMargin": 2.0,
+        "baselineMargin": 8.352,
+        "candidateMargin": 10.35074310823601
+      },
+      {
+        "id": "2025_03_PIT_NE",
+        "season": 2025,
+        "week": 3,
+        "actualMargin": -7.0,
+        "baselineMargin": 0.668,
+        "candidateMargin": 0.8278611585610219
+      },
+      {
+        "id": "2025_03_DET_BAL",
+        "season": 2025,
+        "week": 3,
+        "actualMargin": -8.0,
+        "baselineMargin": 2.756,
+        "candidateMargin": 3.415546935620024
+      },
+      {
+        "id": "2025_04_SEA_ARI",
+        "season": 2025,
+        "week": 4,
+        "actualMargin": -3.0,
+        "baselineMargin": 0.627,
+        "candidateMargin": 0.7770493209846717
+      },
+      {
+        "id": "2025_04_BAL_KC",
+        "season": 2025,
+        "week": 4,
+        "actualMargin": 17.0,
+        "baselineMargin": -0.726,
+        "candidateMargin": -0.8997413190348831
+      },
+      {
+        "id": "2025_04_CAR_NE",
+        "season": 2025,
+        "week": 4,
+        "actualMargin": 29.0,
+        "baselineMargin": 2.749,
+        "candidateMargin": 3.4068717438386966
+      },
+      {
+        "id": "2025_04_CHI_LV",
+        "season": 2025,
+        "week": 4,
+        "actualMargin": -1.0,
+        "baselineMargin": 0.444,
+        "candidateMargin": 0.5502550215585236
+      },
+      {
+        "id": "2025_04_CLE_DET",
+        "season": 2025,
+        "week": 4,
+        "actualMargin": 24.0,
+        "baselineMargin": 13.287,
+        "candidateMargin": 16.466753314072303
+      },
+      {
+        "id": "2025_04_GB_DAL",
+        "season": 2025,
+        "week": 4,
+        "actualMargin": 0.0,
+        "baselineMargin": -4.023,
+        "candidateMargin": -4.985756648040406
+      },
+      {
+        "id": "2025_04_IND_LA",
+        "season": 2025,
+        "week": 4,
+        "actualMargin": 7.0,
+        "baselineMargin": 2.256,
+        "candidateMargin": 2.795890379810876
+      },
+      {
+        "id": "2025_04_JAX_SF",
+        "season": 2025,
+        "week": 4,
+        "actualMargin": -5.0,
+        "baselineMargin": 3.914,
+        "candidateMargin": 4.8506715188740115
+      },
+      {
+        "id": "2025_04_LAC_NYG",
+        "season": 2025,
+        "week": 4,
+        "actualMargin": 3.0,
+        "baselineMargin": -4.477,
+        "candidateMargin": -5.5484048007151126
+      },
+      {
+        "id": "2025_04_MIN_PIT",
+        "season": 2025,
+        "week": 4,
+        "actualMargin": 3.0,
+        "baselineMargin": -2.026,
+        "candidateMargin": -2.510848364138668
+      },
+      {
+        "id": "2025_04_NO_BUF",
+        "season": 2025,
+        "week": 4,
+        "actualMargin": 12.0,
+        "baselineMargin": 11.677,
+        "candidateMargin": 14.471459204366845
+      },
+      {
+        "id": "2025_04_PHI_TB",
+        "season": 2025,
+        "week": 4,
+        "actualMargin": -6.0,
+        "baselineMargin": 0.496,
+        "candidateMargin": 0.614699303362675
+      },
+      {
+        "id": "2025_04_TEN_HOU",
+        "season": 2025,
+        "week": 4,
+        "actualMargin": 26.0,
+        "baselineMargin": 7.911,
+        "candidateMargin": 9.804206026012341
+      },
+      {
+        "id": "2025_04_WAS_ATL",
+        "season": 2025,
+        "week": 4,
+        "actualMargin": 7.0,
+        "baselineMargin": -1.05,
+        "candidateMargin": -1.3012787671992112
+      },
+      {
+        "id": "2025_04_CIN_DEN",
+        "season": 2025,
+        "week": 4,
+        "actualMargin": 25.0,
+        "baselineMargin": 6.367,
+        "candidateMargin": 7.890706581673692
+      },
+      {
+        "id": "2025_04_NYJ_MIA",
+        "season": 2025,
+        "week": 4,
+        "actualMargin": 6.0,
+        "baselineMargin": 3.063,
+        "candidateMargin": 3.7960160608868416
+      },
+      {
+        "id": "2025_05_SF_LA",
+        "season": 2025,
+        "week": 5,
+        "actualMargin": -3.0,
+        "baselineMargin": 4.496,
+        "candidateMargin": 5.57195174983586
+      },
+      {
+        "id": "2025_05_DAL_NYJ",
+        "season": 2025,
+        "week": 5,
+        "actualMargin": -15.0,
+        "baselineMargin": 1.517,
+        "candidateMargin": 1.8800379903249553
+      },
+      {
+        "id": "2025_05_DEN_PHI",
+        "season": 2025,
+        "week": 5,
+        "actualMargin": -4.0,
+        "baselineMargin": 4.351,
+        "candidateMargin": 5.392251348651207
+      },
+      {
+        "id": "2025_05_DET_CIN",
+        "season": 2025,
+        "week": 5,
+        "actualMargin": -13.0,
+        "baselineMargin": -7.684,
+        "candidateMargin": -9.52288194967499
+      },
+      {
+        "id": "2025_05_HOU_BAL",
+        "season": 2025,
+        "week": 5,
+        "actualMargin": -34.0,
+        "baselineMargin": 6.0,
+        "candidateMargin": 7.435878669709778
+      },
+      {
+        "id": "2025_05_LV_IND",
+        "season": 2025,
+        "week": 5,
+        "actualMargin": 34.0,
+        "baselineMargin": 8.05,
+        "candidateMargin": 9.976470548527287
+      },
+      {
+        "id": "2025_05_MIA_CAR",
+        "season": 2025,
+        "week": 5,
+        "actualMargin": 3.0,
+        "baselineMargin": -0.541,
+        "candidateMargin": -0.6704683933854984
+      },
+      {
+        "id": "2025_05_MIN_CLE",
+        "season": 2025,
+        "week": 5,
+        "actualMargin": -4.0,
+        "baselineMargin": -6.016,
+        "candidateMargin": -7.455707679495671
+      },
+      {
+        "id": "2025_05_NE_BUF",
+        "season": 2025,
+        "week": 5,
+        "actualMargin": -3.0,
+        "baselineMargin": 10.012,
+        "candidateMargin": 12.408002873522383
+      },
+      {
+        "id": "2025_05_NYG_NO",
+        "season": 2025,
+        "week": 5,
+        "actualMargin": 12.0,
+        "baselineMargin": 4.111,
+        "candidateMargin": 5.094816201862816
+      },
+      {
+        "id": "2025_05_TB_SEA",
+        "season": 2025,
+        "week": 5,
+        "actualMargin": -3.0,
+        "baselineMargin": 3.361,
+        "candidateMargin": 4.165331368149094
+      },
+      {
+        "id": "2025_05_TEN_ARI",
+        "season": 2025,
+        "week": 5,
+        "actualMargin": -1.0,
+        "baselineMargin": 10.336,
+        "candidateMargin": 12.809540321686711
+      },
+      {
+        "id": "2025_05_WAS_LAC",
+        "season": 2025,
+        "week": 5,
+        "actualMargin": -17.0,
+        "baselineMargin": 3.406,
+        "candidateMargin": 4.221100458171917
+      },
+      {
+        "id": "2025_05_KC_JAX",
+        "season": 2025,
+        "week": 5,
+        "actualMargin": 3.0,
+        "baselineMargin": -0.196,
+        "candidateMargin": -0.24290536987718608
+      },
+      {
+        "id": "2025_06_PHI_NYG",
+        "season": 2025,
+        "week": 6,
+        "actualMargin": 17.0,
+        "baselineMargin": -7.243,
+        "candidateMargin": -8.97634486745132
+      },
+      {
+        "id": "2025_06_ARI_IND",
+        "season": 2025,
+        "week": 6,
+        "actualMargin": 4.0,
+        "baselineMargin": 5.911,
+        "candidateMargin": 7.325579802775748
+      },
+      {
+        "id": "2025_06_CIN_GB",
+        "season": 2025,
+        "week": 6,
+        "actualMargin": 9.0,
+        "baselineMargin": 9.832,
+        "candidateMargin": 12.18492651343109
+      },
+      {
+        "id": "2025_06_CLE_PIT",
+        "season": 2025,
+        "week": 6,
+        "actualMargin": 14.0,
+        "baselineMargin": 7.017,
+        "candidateMargin": 8.696260104225585
+      },
+      {
+        "id": "2025_06_DAL_CAR",
+        "season": 2025,
+        "week": 6,
+        "actualMargin": 3.0,
+        "baselineMargin": -1.465,
+        "candidateMargin": -1.815593708520804
+      },
+      {
+        "id": "2025_06_DEN_NYJ",
+        "season": 2025,
+        "week": 6,
+        "actualMargin": -2.0,
+        "baselineMargin": -7.41,
+        "candidateMargin": -9.183310157091576
+      },
+      {
+        "id": "2025_06_DET_KC",
+        "season": 2025,
+        "week": 6,
+        "actualMargin": 13.0,
+        "baselineMargin": -2.249,
+        "candidateMargin": -2.7872151880295486
+      },
+      {
+        "id": "2025_06_LAC_MIA",
+        "season": 2025,
+        "week": 6,
+        "actualMargin": -2.0,
+        "baselineMargin": -0.372,
+        "candidateMargin": -0.4610244775220062
+      },
+      {
+        "id": "2025_06_LA_BAL",
+        "season": 2025,
+        "week": 6,
+        "actualMargin": -14.0,
+        "baselineMargin": 2.213,
+        "candidateMargin": 2.7425999160112897
+      },
+      {
+        "id": "2025_06_NE_NO",
+        "season": 2025,
+        "week": 6,
+        "actualMargin": -6.0,
+        "baselineMargin": 0.426,
+        "candidateMargin": 0.5279473855493942
+      },
+      {
+        "id": "2025_06_SEA_JAX",
+        "season": 2025,
+        "week": 6,
+        "actualMargin": -8.0,
+        "baselineMargin": -0.377,
+        "candidateMargin": -0.4672210430800977
+      },
+      {
+        "id": "2025_06_SF_TB",
+        "season": 2025,
+        "week": 6,
+        "actualMargin": 11.0,
+        "baselineMargin": 4.365,
+        "candidateMargin": 5.409601732213863
+      },
+      {
+        "id": "2025_06_TEN_LV",
+        "season": 2025,
+        "week": 6,
+        "actualMargin": 10.0,
+        "baselineMargin": 3.443,
+        "candidateMargin": 4.266955043301794
+      },
+      {
+        "id": "2025_06_BUF_ATL",
+        "season": 2025,
+        "week": 6,
+        "actualMargin": 10.0,
+        "baselineMargin": -3.677,
+        "candidateMargin": -4.556954311420475
+      },
+      {
+        "id": "2025_06_CHI_WAS",
+        "season": 2025,
+        "week": 6,
+        "actualMargin": -1.0,
+        "baselineMargin": 6.168,
+        "candidateMargin": 7.644083272461652
+      },
+      {
+        "id": "2025_07_PIT_CIN",
+        "season": 2025,
+        "week": 7,
+        "actualMargin": 2.0,
+        "baselineMargin": -1.487,
+        "candidateMargin": -1.8428585969764066
+      },
+      {
+        "id": "2025_07_ATL_SF",
+        "season": 2025,
+        "week": 7,
+        "actualMargin": 10.0,
+        "baselineMargin": 2.598,
+        "candidateMargin": 3.2197354639843336
+      },
+      {
+        "id": "2025_07_CAR_NYJ",
+        "season": 2025,
+        "week": 7,
+        "actualMargin": -7.0,
+        "baselineMargin": 1.898,
+        "candidateMargin": 2.3522162858515263
+      },
+      {
+        "id": "2025_07_GB_ARI",
+        "season": 2025,
+        "week": 7,
+        "actualMargin": -4.0,
+        "baselineMargin": -1.458,
+        "candidateMargin": -1.806918516739476
+      },
+      {
+        "id": "2025_07_IND_LAC",
+        "season": 2025,
+        "week": 7,
+        "actualMargin": -14.0,
+        "baselineMargin": 0.373,
+        "candidateMargin": 0.4622637906336245
+      },
+      {
+        "id": "2025_07_LA_JAX",
+        "season": 2025,
+        "week": 7,
+        "actualMargin": -28.0,
+        "baselineMargin": -2.612,
+        "candidateMargin": -3.23708584754699
+      },
+      {
+        "id": "2025_07_LV_KC",
+        "season": 2025,
+        "week": 7,
+        "actualMargin": 31.0,
+        "baselineMargin": 10.321,
+        "candidateMargin": 12.790950625012435
+      },
+      {
+        "id": "2025_07_MIA_CLE",
+        "season": 2025,
+        "week": 7,
+        "actualMargin": 25.0,
+        "baselineMargin": -0.837,
+        "candidateMargin": -1.037305074424514
+      },
+      {
+        "id": "2025_07_NE_TEN",
+        "season": 2025,
+        "week": 7,
+        "actualMargin": -18.0,
+        "baselineMargin": -3.679,
+        "candidateMargin": -4.559432937643712
+      },
+      {
+        "id": "2025_07_NO_CHI",
+        "season": 2025,
+        "week": 7,
+        "actualMargin": 12.0,
+        "baselineMargin": 4.677,
+        "candidateMargin": 5.796267423038771
+      },
+      {
+        "id": "2025_07_NYG_DEN",
+        "season": 2025,
+        "week": 7,
+        "actualMargin": 1.0,
+        "baselineMargin": 9.974,
+        "candidateMargin": 12.360908975280887
+      },
+      {
+        "id": "2025_07_PHI_MIN",
+        "season": 2025,
+        "week": 7,
+        "actualMargin": -6.0,
+        "baselineMargin": 0.235,
+        "candidateMargin": 0.2912385812302996
+      },
+      {
+        "id": "2025_07_WAS_DAL",
+        "season": 2025,
+        "week": 7,
+        "actualMargin": 22.0,
+        "baselineMargin": -0.118,
+        "candidateMargin": -0.14623894717095895
+      },
+      {
+        "id": "2025_07_HOU_SEA",
+        "season": 2025,
+        "week": 7,
+        "actualMargin": 8.0,
+        "baselineMargin": 2.572,
+        "candidateMargin": 3.187513323082258
+      },
+      {
+        "id": "2025_07_TB_DET",
+        "season": 2025,
+        "week": 7,
+        "actualMargin": 15.0,
+        "baselineMargin": 5.617,
+        "candidateMargin": 6.9612217479599705
+      },
+      {
+        "id": "2025_08_MIN_LAC",
+        "season": 2025,
+        "week": 8,
+        "actualMargin": 27.0,
+        "baselineMargin": 2.363,
+        "candidateMargin": 2.928496882754034
+      },
+      {
+        "id": "2025_08_BUF_CAR",
+        "season": 2025,
+        "week": 8,
+        "actualMargin": -31.0,
+        "baselineMargin": -4.391,
+        "candidateMargin": -5.441823873115939
+      },
+      {
+        "id": "2025_08_CHI_BAL",
+        "season": 2025,
+        "week": 8,
+        "actualMargin": 14.0,
+        "baselineMargin": 3.076,
+        "candidateMargin": 3.8121271313378795
+      },
+      {
+        "id": "2025_08_CLE_NE",
+        "season": 2025,
+        "week": 8,
+        "actualMargin": 19.0,
+        "baselineMargin": 7.098,
+        "candidateMargin": 8.796644466266667
+      },
+      {
+        "id": "2025_08_DAL_DEN",
+        "season": 2025,
+        "week": 8,
+        "actualMargin": 20.0,
+        "baselineMargin": 5.397,
+        "candidateMargin": 6.688572863403945
+      },
+      {
+        "id": "2025_08_GB_PIT",
+        "season": 2025,
+        "week": 8,
+        "actualMargin": -10.0,
+        "baselineMargin": -0.802,
+        "candidateMargin": -0.9939291155178737
+      },
+      {
+        "id": "2025_08_MIA_ATL",
+        "season": 2025,
+        "week": 8,
+        "actualMargin": -24.0,
+        "baselineMargin": 5.773,
+        "candidateMargin": 7.154554593372424
+      },
+      {
+        "id": "2025_08_NYG_PHI",
+        "season": 2025,
+        "week": 8,
+        "actualMargin": 18.0,
+        "baselineMargin": 9.898,
+        "candidateMargin": 12.266721178797896
+      },
+      {
+        "id": "2025_08_NYJ_CIN",
+        "season": 2025,
+        "week": 8,
+        "actualMargin": -1.0,
+        "baselineMargin": 4.87,
+        "candidateMargin": 6.035454853581103
+      },
+      {
+        "id": "2025_08_SF_HOU",
+        "season": 2025,
+        "week": 8,
+        "actualMargin": 11.0,
+        "baselineMargin": 4.387,
+        "candidateMargin": 5.436866620669465
+      },
+      {
+        "id": "2025_08_TB_NO",
+        "season": 2025,
+        "week": 8,
+        "actualMargin": -20.0,
+        "baselineMargin": -3.792,
+        "candidateMargin": -4.699475319256579
+      },
+      {
+        "id": "2025_08_TEN_IND",
+        "season": 2025,
+        "week": 8,
+        "actualMargin": 24.0,
+        "baselineMargin": 14.075,
+        "candidateMargin": 17.443332046027518
+      },
+      {
+        "id": "2025_08_WAS_KC",
+        "season": 2025,
+        "week": 8,
+        "actualMargin": 21.0,
+        "baselineMargin": 6.421,
+        "candidateMargin": 7.95762948970108
+      },
+      {
+        "id": "2025_09_BAL_MIA",
+        "season": 2025,
+        "week": 9,
+        "actualMargin": -22.0,
+        "baselineMargin": -0.261,
+        "candidateMargin": -0.3234607221323753
+      },
+      {
+        "id": "2025_09_ATL_NE",
+        "season": 2025,
+        "week": 9,
+        "actualMargin": 1.0,
+        "baselineMargin": 6.18,
+        "candidateMargin": 7.658955029801071
+      },
+      {
+        "id": "2025_09_CAR_GB",
+        "season": 2025,
+        "week": 9,
+        "actualMargin": -3.0,
+        "baselineMargin": 12.291,
+        "candidateMargin": 15.23239745490048
+      },
+      {
+        "id": "2025_09_CHI_CIN",
+        "season": 2025,
+        "week": 9,
+        "actualMargin": -5.0,
+        "baselineMargin": 0.496,
+        "candidateMargin": 0.614699303362675
+      },
+      {
+        "id": "2025_09_DEN_HOU",
+        "season": 2025,
+        "week": 9,
+        "actualMargin": -3.0,
+        "baselineMargin": 1.358,
+        "candidateMargin": 1.6829872055776465
+      },
+      {
+        "id": "2025_09_IND_PIT",
+        "season": 2025,
+        "week": 9,
+        "actualMargin": 7.0,
+        "baselineMargin": -2.11,
+        "candidateMargin": -2.614950665514605
+      },
+      {
+        "id": "2025_09_JAX_LV",
+        "season": 2025,
+        "week": 9,
+        "actualMargin": -1.0,
+        "baselineMargin": -1.591,
+        "candidateMargin": -1.9717471605847092
+      },
+      {
+        "id": "2025_09_KC_BUF",
+        "season": 2025,
+        "week": 9,
+        "actualMargin": 7.0,
+        "baselineMargin": 2.949,
+        "candidateMargin": 3.6547343661623555
+      },
+      {
+        "id": "2025_09_LAC_TEN",
+        "season": 2025,
+        "week": 9,
+        "actualMargin": -7.0,
+        "baselineMargin": -6.907,
+        "candidateMargin": -8.559935661947572
+      },
+      {
+        "id": "2025_09_MIN_DET",
+        "season": 2025,
+        "week": 9,
+        "actualMargin": -3.0,
+        "baselineMargin": 10.612,
+        "candidateMargin": 13.15159074049336
+      },
+      {
+        "id": "2025_09_NO_LA",
+        "season": 2025,
+        "week": 9,
+        "actualMargin": 24.0,
+        "baselineMargin": 10.409,
+        "candidateMargin": 12.900010178834847
+      },
+      {
+        "id": "2025_09_SEA_WAS",
+        "season": 2025,
+        "week": 9,
+        "actualMargin": -24.0,
+        "baselineMargin": -0.556,
+        "candidateMargin": -0.6890580900597728
+      },
+      {
+        "id": "2025_09_SF_NYG",
+        "season": 2025,
+        "week": 9,
+        "actualMargin": -10.0,
+        "baselineMargin": -1.293,
+        "candidateMargin": -1.602431853322457
+      },
+      {
+        "id": "2025_09_ARI_DAL",
+        "season": 2025,
+        "week": 9,
+        "actualMargin": -10.0,
+        "baselineMargin": 2.702,
+        "candidateMargin": 3.3486240275926367
+      },
+      {
+        "id": "2025_10_LV_DEN",
+        "season": 2025,
+        "week": 10,
+        "actualMargin": 3.0,
+        "baselineMargin": 12.426,
+        "candidateMargin": 15.39970472496895
+      },
+      {
+        "id": "2025_10_ARI_SEA",
+        "season": 2025,
+        "week": 10,
+        "actualMargin": 22.0,
+        "baselineMargin": 6.593,
+        "candidateMargin": 8.170791344899428
+      },
+      {
+        "id": "2025_10_ATL_IND",
+        "season": 2025,
+        "week": 10,
+        "actualMargin": 6.0,
+        "baselineMargin": 6.239,
+        "candidateMargin": 7.73207450338655
+      },
+      {
+        "id": "2025_10_BAL_MIN",
+        "season": 2025,
+        "week": 10,
+        "actualMargin": -8.0,
+        "baselineMargin": -0.757,
+        "candidateMargin": -0.9381600254950503
+      },
+      {
+        "id": "2025_10_BUF_MIA",
+        "season": 2025,
+        "week": 10,
+        "actualMargin": 17.0,
+        "baselineMargin": -6.21,
+        "candidateMargin": -7.69613442314962
+      },
+      {
+        "id": "2025_10_CLE_NYJ",
+        "season": 2025,
+        "week": 10,
+        "actualMargin": 7.0,
+        "baselineMargin": 2.373,
+        "candidateMargin": 2.9408900138702174
+      },
+      {
+        "id": "2025_10_DET_WAS",
+        "season": 2025,
+        "week": 10,
+        "actualMargin": -22.0,
+        "baselineMargin": -5.077,
+        "candidateMargin": -6.29199266768609
+      },
+      {
+        "id": "2025_10_JAX_HOU",
+        "season": 2025,
+        "week": 10,
+        "actualMargin": 7.0,
+        "baselineMargin": 6.37,
+        "candidateMargin": 7.894424521008547
+      },
+      {
+        "id": "2025_10_LA_SF",
+        "season": 2025,
+        "week": 10,
+        "actualMargin": -16.0,
+        "baselineMargin": -1.315,
+        "candidateMargin": -1.6296967417780595
+      },
+      {
+        "id": "2025_10_NE_TB",
+        "season": 2025,
+        "week": 10,
+        "actualMargin": -5.0,
+        "baselineMargin": 4.875,
+        "candidateMargin": 6.041651419139194
+      },
+      {
+        "id": "2025_10_NO_CAR",
+        "season": 2025,
+        "week": 10,
+        "actualMargin": -10.0,
+        "baselineMargin": 3.436,
+        "candidateMargin": 4.258279851520466
+      },
+      {
+        "id": "2025_10_NYG_CHI",
+        "season": 2025,
+        "week": 10,
+        "actualMargin": 4.0,
+        "baselineMargin": 6.31,
+        "candidateMargin": 7.820065734311449
+      },
+      {
+        "id": "2025_10_PIT_LAC",
+        "season": 2025,
+        "week": 10,
+        "actualMargin": 15.0,
+        "baselineMargin": 3.805,
+        "candidateMargin": 4.715586389707617
+      },
+      {
+        "id": "2025_10_PHI_GB",
+        "season": 2025,
+        "week": 10,
+        "actualMargin": -3.0,
+        "baselineMargin": 2.249,
+        "candidateMargin": 2.7872151880295486
+      },
+      {
+        "id": "2025_11_NYJ_NE",
+        "season": 2025,
+        "week": 11,
+        "actualMargin": 13.0,
+        "baselineMargin": 7.998,
+        "candidateMargin": 9.912026266723133
+      },
+      {
+        "id": "2025_11_BAL_CLE",
+        "season": 2025,
+        "week": 11,
+        "actualMargin": -7.0,
+        "baselineMargin": -4.703,
+        "candidateMargin": -5.828489563940848
+      },
+      {
+        "id": "2025_11_CAR_ATL",
+        "season": 2025,
+        "week": 11,
+        "actualMargin": -3.0,
+        "baselineMargin": 5.325,
+        "candidateMargin": 6.599342319367428
+      },
+      {
+        "id": "2025_11_CHI_MIN",
+        "season": 2025,
+        "week": 11,
+        "actualMargin": -2.0,
+        "baselineMargin": 1.432,
+        "candidateMargin": 1.7746963758374001
+      },
+      {
+        "id": "2025_11_CIN_PIT",
+        "season": 2025,
+        "week": 11,
+        "actualMargin": 22.0,
+        "baselineMargin": 5.294,
+        "candidateMargin": 6.56092361290726
+      },
+      {
+        "id": "2025_11_DET_PHI",
+        "season": 2025,
+        "week": 11,
+        "actualMargin": 7.0,
+        "baselineMargin": -0.241,
+        "candidateMargin": -0.2986744599000094
+      },
+      {
+        "id": "2025_11_GB_NYG",
+        "season": 2025,
+        "week": 11,
+        "actualMargin": -7.0,
+        "baselineMargin": -5.153,
+        "candidateMargin": -6.3861804641690805
+      },
+      {
+        "id": "2025_11_HOU_TEN",
+        "season": 2025,
+        "week": 11,
+        "actualMargin": -3.0,
+        "baselineMargin": -8.233,
+        "candidateMargin": -10.203264847953434
+      },
+      {
+        "id": "2025_11_KC_DEN",
+        "season": 2025,
+        "week": 11,
+        "actualMargin": 3.0,
+        "baselineMargin": 1.179,
+        "candidateMargin": 1.4611501585979714
+      },
+      {
+        "id": "2025_11_LAC_JAX",
+        "season": 2025,
+        "week": 11,
+        "actualMargin": 29.0,
+        "baselineMargin": -1.88,
+        "candidateMargin": -2.329908649842397
+      },
+      {
+        "id": "2025_11_SEA_LA",
+        "season": 2025,
+        "week": 11,
+        "actualMargin": 2.0,
+        "baselineMargin": 2.209,
+        "candidateMargin": 2.7376426635648166
+      },
+      {
+        "id": "2025_11_SF_ARI",
+        "season": 2025,
+        "week": 11,
+        "actualMargin": -19.0,
+        "baselineMargin": 1.453,
+        "candidateMargin": 1.8007219511813846
+      },
+      {
+        "id": "2025_11_TB_BUF",
+        "season": 2025,
+        "week": 11,
+        "actualMargin": 12.0,
+        "baselineMargin": 4.087,
+        "candidateMargin": 5.065072687183976
+      },
+      {
+        "id": "2025_11_WAS_MIA",
+        "season": 2025,
+        "week": 11,
+        "actualMargin": 3.0,
+        "baselineMargin": 0.612,
+        "candidateMargin": 0.7584596243103973
+      },
+      {
+        "id": "2025_11_DAL_LV",
+        "season": 2025,
+        "week": 11,
+        "actualMargin": -17.0,
+        "baselineMargin": -2.214,
+        "candidateMargin": -2.743839229122908
+      },
+      {
+        "id": "2025_12_BUF_HOU",
+        "season": 2025,
+        "week": 12,
+        "actualMargin": 4.0,
+        "baselineMargin": 0.205,
+        "candidateMargin": 0.25405918788175075
+      },
+      {
+        "id": "2025_12_ATL_NO",
+        "season": 2025,
+        "week": 12,
+        "actualMargin": -14.0,
+        "baselineMargin": 0.079,
+        "candidateMargin": 0.09790573581784541
+      },
+      {
+        "id": "2025_12_CLE_LV",
+        "season": 2025,
+        "week": 12,
+        "actualMargin": -14.0,
+        "baselineMargin": 0.661,
+        "candidateMargin": 0.8191859667796939
+      },
+      {
+        "id": "2025_12_IND_KC",
+        "season": 2025,
+        "week": 12,
+        "actualMargin": 3.0,
+        "baselineMargin": 2.69,
+        "candidateMargin": 3.3337522702532167
+      },
+      {
+        "id": "2025_12_JAX_ARI",
+        "season": 2025,
+        "week": 12,
+        "actualMargin": -3.0,
+        "baselineMargin": 1.598,
+        "candidateMargin": 1.9804223523660376
+      },
+      {
+        "id": "2025_12_MIN_GB",
+        "season": 2025,
+        "week": 12,
+        "actualMargin": 17.0,
+        "baselineMargin": 7.276,
+        "candidateMargin": 9.017242200134723
+      },
+      {
+        "id": "2025_12_NE_CIN",
+        "season": 2025,
+        "week": 12,
+        "actualMargin": -6.0,
+        "baselineMargin": -3.116,
+        "candidateMargin": -3.861699655802611
+      },
+      {
+        "id": "2025_12_NYG_DET",
+        "season": 2025,
+        "week": 12,
+        "actualMargin": 7.0,
+        "baselineMargin": 12.122,
+        "candidateMargin": 15.022953539036987
+      },
+      {
+        "id": "2025_12_NYJ_BAL",
+        "season": 2025,
+        "week": 12,
+        "actualMargin": 13.0,
+        "baselineMargin": 9.829,
+        "candidateMargin": 12.181208574096235
+      },
+      {
+        "id": "2025_12_PHI_DAL",
+        "season": 2025,
+        "week": 12,
+        "actualMargin": 3.0,
+        "baselineMargin": -2.458,
+        "candidateMargin": -3.0462316283577726
+      },
+      {
+        "id": "2025_12_PIT_CHI",
+        "season": 2025,
+        "week": 12,
+        "actualMargin": 3.0,
+        "baselineMargin": 1.813,
+        "candidateMargin": 2.246874671363971
+      },
+      {
+        "id": "2025_12_SEA_TEN",
+        "season": 2025,
+        "week": 12,
+        "actualMargin": -6.0,
+        "baselineMargin": -9.839,
+        "candidateMargin": -12.193601705212417
+      },
+      {
+        "id": "2025_12_TB_LA",
+        "season": 2025,
+        "week": 12,
+        "actualMargin": 27.0,
+        "baselineMargin": 5.024,
+        "candidateMargin": 6.22630907277032
+      },
+      {
+        "id": "2025_12_CAR_SF",
+        "season": 2025,
+        "week": 12,
+        "actualMargin": 11.0,
+        "baselineMargin": 8.198,
+        "candidateMargin": 10.159888889046794
+      },
+      {
+        "id": "2025_13_CIN_BAL",
+        "season": 2025,
+        "week": 13,
+        "actualMargin": -18.0,
+        "baselineMargin": 9.436,
+        "candidateMargin": 11.694158521230243
+      },
+      {
+        "id": "2025_13_GB_DET",
+        "season": 2025,
+        "week": 13,
+        "actualMargin": -7.0,
+        "baselineMargin": 3.67,
+        "candidateMargin": 4.548279119639147
+      },
+      {
+        "id": "2025_13_KC_DAL",
+        "season": 2025,
+        "week": 13,
+        "actualMargin": 3.0,
+        "baselineMargin": -2.09,
+        "candidateMargin": -2.590164403282239
+      },
+      {
+        "id": "2025_13_CHI_PHI",
+        "season": 2025,
+        "week": 13,
+        "actualMargin": -9.0,
+        "baselineMargin": 6.709,
+        "candidateMargin": 8.31455166584715
+      },
+      {
+        "id": "2025_13_ARI_TB",
+        "season": 2025,
+        "week": 13,
+        "actualMargin": 3.0,
+        "baselineMargin": 4.614,
+        "candidateMargin": 5.718190697006819
+      },
+      {
+        "id": "2025_13_ATL_NYJ",
+        "season": 2025,
+        "week": 13,
+        "actualMargin": 3.0,
+        "baselineMargin": -0.939,
+        "candidateMargin": -1.16371501180958
+      },
+      {
+        "id": "2025_13_BUF_PIT",
+        "season": 2025,
+        "week": 13,
+        "actualMargin": -19.0,
+        "baselineMargin": -1.581,
+        "candidateMargin": -1.9593540294685263
+      },
+      {
+        "id": "2025_13_DEN_WAS",
+        "season": 2025,
+        "week": 13,
+        "actualMargin": -1.0,
+        "baselineMargin": -3.068,
+        "candidateMargin": -3.802212626444933
+      },
+      {
+        "id": "2025_13_HOU_IND",
+        "season": 2025,
+        "week": 13,
+        "actualMargin": -4.0,
+        "baselineMargin": 3.394,
+        "candidateMargin": 4.206228700832498
+      },
+      {
+        "id": "2025_13_JAX_TEN",
+        "season": 2025,
+        "week": 13,
+        "actualMargin": -22.0,
+        "baselineMargin": -4.298,
+        "candidateMargin": -5.3265677537354374
+      },
+      {
+        "id": "2025_13_LA_CAR",
+        "season": 2025,
+        "week": 13,
+        "actualMargin": 3.0,
+        "baselineMargin": -8.353,
+        "candidateMargin": -10.351982421347628
+      },
+      {
+        "id": "2025_13_LV_LAC",
+        "season": 2025,
+        "week": 13,
+        "actualMargin": 17.0,
+        "baselineMargin": 9.612,
+        "candidateMargin": 11.912277628875064
+      },
+      {
+        "id": "2025_13_MIN_SEA",
+        "season": 2025,
+        "week": 13,
+        "actualMargin": 26.0,
+        "baselineMargin": 9.384,
+        "candidateMargin": 11.629714239426093
+      },
+      {
+        "id": "2025_13_NO_MIA",
+        "season": 2025,
+        "week": 13,
+        "actualMargin": 4.0,
+        "baselineMargin": 5.892,
+        "candidateMargin": 7.302032853655002
+      },
+      {
+        "id": "2025_13_SF_CLE",
+        "season": 2025,
+        "week": 13,
+        "actualMargin": -18.0,
+        "baselineMargin": -2.586,
+        "candidateMargin": -3.204863706644914
+      },
+      {
+        "id": "2025_13_NYG_NE",
+        "season": 2025,
+        "week": 13,
+        "actualMargin": 18.0,
+        "baselineMargin": 7.663,
+        "candidateMargin": 9.496856374331005
+      },
+      {
+        "id": "2025_14_DAL_DET",
+        "season": 2025,
+        "week": 14,
+        "actualMargin": 14.0,
+        "baselineMargin": 7.149,
+        "candidateMargin": 8.8598494349592
+      },
+      {
+        "id": "2025_14_CHI_GB",
+        "season": 2025,
+        "week": 14,
+        "actualMargin": 7.0,
+        "baselineMargin": 6.52,
+        "candidateMargin": 8.080321487751291
+      },
+      {
+        "id": "2025_14_CIN_BUF",
+        "season": 2025,
+        "week": 14,
+        "actualMargin": 5.0,
+        "baselineMargin": 10.245,
+        "candidateMargin": 12.696762828529444
+      },
+      {
+        "id": "2025_14_DEN_LV",
+        "season": 2025,
+        "week": 14,
+        "actualMargin": -7.0,
+        "baselineMargin": -8.265,
+        "candidateMargin": -10.24292286752522
+      },
+      {
+        "id": "2025_14_HOU_KC",
+        "season": 2025,
+        "week": 14,
+        "actualMargin": -10.0,
+        "baselineMargin": 2.989,
+        "candidateMargin": 3.7043068906270875
+      },
+      {
+        "id": "2025_14_IND_JAX",
+        "season": 2025,
+        "week": 14,
+        "actualMargin": 17.0,
+        "baselineMargin": -0.943,
+        "candidateMargin": -1.1686722642560534
+      },
+      {
+        "id": "2025_14_LA_ARI",
+        "season": 2025,
+        "week": 14,
+        "actualMargin": -28.0,
+        "baselineMargin": -4.221,
+        "candidateMargin": -5.231140644140829
+      },
+      {
+        "id": "2025_14_MIA_NYJ",
+        "season": 2025,
+        "week": 14,
+        "actualMargin": -24.0,
+        "baselineMargin": -0.974,
+        "candidateMargin": -1.2070909707162205
+      },
+      {
+        "id": "2025_14_NO_TB",
+        "season": 2025,
+        "week": 14,
+        "actualMargin": -4.0,
+        "baselineMargin": 7.956,
+        "candidateMargin": 9.859975116035166
+      },
+      {
+        "id": "2025_14_PIT_BAL",
+        "season": 2025,
+        "week": 14,
+        "actualMargin": -5.0,
+        "baselineMargin": 4.761,
+        "candidateMargin": 5.900369724414709
+      },
+      {
+        "id": "2025_14_SEA_ATL",
+        "season": 2025,
+        "week": 14,
+        "actualMargin": -28.0,
+        "baselineMargin": -4.822,
+        "candidateMargin": -5.975967824223424
+      },
+      {
+        "id": "2025_14_TEN_CLE",
+        "season": 2025,
+        "week": 14,
+        "actualMargin": -2.0,
+        "baselineMargin": 5.269,
+        "candidateMargin": 6.529940785116803
+      },
+      {
+        "id": "2025_14_WAS_MIN",
+        "season": 2025,
+        "week": 14,
+        "actualMargin": 31.0,
+        "baselineMargin": 1.042,
+        "candidateMargin": 1.2913642623062647
+      },
+      {
+        "id": "2025_14_PHI_LAC",
+        "season": 2025,
+        "week": 14,
+        "actualMargin": 3.0,
+        "baselineMargin": -0.324,
+        "candidateMargin": -0.401537448164328
+      },
+      {
+        "id": "2025_15_ATL_TB",
+        "season": 2025,
+        "week": 15,
+        "actualMargin": -1.0,
+        "baselineMargin": 5.212,
+        "candidateMargin": 6.45929993775456
+      },
+      {
+        "id": "2025_15_ARI_HOU",
+        "season": 2025,
+        "week": 15,
+        "actualMargin": 20.0,
+        "baselineMargin": 7.62,
+        "candidateMargin": 9.443565910531417
+      },
+      {
+        "id": "2025_15_BAL_CIN",
+        "season": 2025,
+        "week": 15,
+        "actualMargin": -24.0,
+        "baselineMargin": -2.113,
+        "candidateMargin": -2.61866860484946
+      },
+      {
+        "id": "2025_15_BUF_NE",
+        "season": 2025,
+        "week": 15,
+        "actualMargin": -4.0,
+        "baselineMargin": -1.02,
+        "candidateMargin": -1.2640993738506623
+      },
+      {
+        "id": "2025_15_CAR_NO",
+        "season": 2025,
+        "week": 15,
+        "actualMargin": 3.0,
+        "baselineMargin": 1.746,
+        "candidateMargin": 2.1638406928855454
+      },
+      {
+        "id": "2025_15_CLE_CHI",
+        "season": 2025,
+        "week": 15,
+        "actualMargin": 28.0,
+        "baselineMargin": 6.894,
+        "candidateMargin": 8.543824591496534
+      },
+      {
+        "id": "2025_15_DET_LA",
+        "season": 2025,
+        "week": 15,
+        "actualMargin": 7.0,
+        "baselineMargin": 3.208,
+        "candidateMargin": 3.9757164620714947
+      },
+      {
+        "id": "2025_15_GB_DEN",
+        "season": 2025,
+        "week": 15,
+        "actualMargin": 8.0,
+        "baselineMargin": 0.521,
+        "candidateMargin": 0.6456821311531323
+      },
+      {
+        "id": "2025_15_IND_SEA",
+        "season": 2025,
+        "week": 15,
+        "actualMargin": 2.0,
+        "baselineMargin": 5.795,
+        "candidateMargin": 7.181819481828027
+      },
+      {
+        "id": "2025_15_LAC_KC",
+        "season": 2025,
+        "week": 15,
+        "actualMargin": -3.0,
+        "baselineMargin": 4.302,
+        "candidateMargin": 5.33152500618191
+      },
+      {
+        "id": "2025_15_LV_PHI",
+        "season": 2025,
+        "week": 15,
+        "actualMargin": 31.0,
+        "baselineMargin": 12.486,
+        "candidateMargin": 15.474063511666047
+      },
+      {
+        "id": "2025_15_MIN_DAL",
+        "season": 2025,
+        "week": 15,
+        "actualMargin": -8.0,
+        "baselineMargin": 2.942,
+        "candidateMargin": 3.646059174381028
+      },
+      {
+        "id": "2025_15_NYJ_JAX",
+        "season": 2025,
+        "week": 15,
+        "actualMargin": 28.0,
+        "baselineMargin": 9.172,
+        "candidateMargin": 11.366979859763013
+      },
+      {
+        "id": "2025_15_TEN_SF",
+        "season": 2025,
+        "week": 15,
+        "actualMargin": 13.0,
+        "baselineMargin": 11.095,
+        "candidateMargin": 13.750178973404998
+      },
+      {
+        "id": "2025_15_WAS_NYG",
+        "season": 2025,
+        "week": 15,
+        "actualMargin": -8.0,
+        "baselineMargin": 1.088,
+        "candidateMargin": 1.3483726654407064
+      },
+      {
+        "id": "2025_15_MIA_PIT",
+        "season": 2025,
+        "week": 15,
+        "actualMargin": 13.0,
+        "baselineMargin": 2.348,
+        "candidateMargin": 2.9099071860797596
+      },
+      {
+        "id": "2025_16_LA_SEA",
+        "season": 2025,
+        "week": 16,
+        "actualMargin": 1.0,
+        "baselineMargin": 1.637,
+        "candidateMargin": 2.0287555637191512
+      },
+      {
+        "id": "2025_16_GB_CHI",
+        "season": 2025,
+        "week": 16,
+        "actualMargin": 6.0,
+        "baselineMargin": -0.878,
+        "candidateMargin": -1.088116912000864
+      },
+      {
+        "id": "2025_16_PHI_WAS",
+        "season": 2025,
+        "week": 16,
+        "actualMargin": -11.0,
+        "baselineMargin": -5.212,
+        "candidateMargin": -6.45929993775456
+      },
+      {
+        "id": "2025_16_ATL_ARI",
+        "season": 2025,
+        "week": 16,
+        "actualMargin": -7.0,
+        "baselineMargin": 1.85,
+        "candidateMargin": 2.2927292564938484
+      },
+      {
+        "id": "2025_16_BUF_CLE",
+        "season": 2025,
+        "week": 16,
+        "actualMargin": -3.0,
+        "baselineMargin": -8.529,
+        "candidateMargin": -10.57010152899245
+      },
+      {
+        "id": "2025_16_CIN_MIA",
+        "season": 2025,
+        "week": 16,
+        "actualMargin": -24.0,
+        "baselineMargin": 4.525,
+        "candidateMargin": 5.607891830072791
+      },
+      {
+        "id": "2025_16_JAX_DEN",
+        "season": 2025,
+        "week": 16,
+        "actualMargin": -14.0,
+        "baselineMargin": 3.256,
+        "candidateMargin": 4.035203491429172
+      },
+      {
+        "id": "2025_16_KC_TEN",
+        "season": 2025,
+        "week": 16,
+        "actualMargin": 17.0,
+        "baselineMargin": -7.379,
+        "candidateMargin": -9.144891450631407
+      },
+      {
+        "id": "2025_16_LAC_DAL",
+        "season": 2025,
+        "week": 16,
+        "actualMargin": -17.0,
+        "baselineMargin": 0.075,
+        "candidateMargin": 0.09294848337137222
+      },
+      {
+        "id": "2025_16_LV_HOU",
+        "season": 2025,
+        "week": 16,
+        "actualMargin": 2.0,
+        "baselineMargin": 14.503,
+        "candidateMargin": 17.97375805780015
+      },
+      {
+        "id": "2025_16_MIN_NYG",
+        "season": 2025,
+        "week": 16,
+        "actualMargin": -3.0,
+        "baselineMargin": -1.319,
+        "candidateMargin": -1.6346539942245326
+      },
+      {
+        "id": "2025_16_NE_BAL",
+        "season": 2025,
+        "week": 16,
+        "actualMargin": -4.0,
+        "baselineMargin": 2.583,
+        "candidateMargin": 3.2011457673100594
+      },
+      {
+        "id": "2025_16_NYJ_NO",
+        "season": 2025,
+        "week": 16,
+        "actualMargin": 23.0,
+        "baselineMargin": 4.564,
+        "candidateMargin": 5.6562250414259045
+      },
+      {
+        "id": "2025_16_PIT_DET",
+        "season": 2025,
+        "week": 16,
+        "actualMargin": -5.0,
+        "baselineMargin": 6.721,
+        "candidateMargin": 8.329423423186569
+      },
+      {
+        "id": "2025_16_TB_CAR",
+        "season": 2025,
+        "week": 16,
+        "actualMargin": 3.0,
+        "baselineMargin": -1.805,
+        "candidateMargin": -2.236960166471025
+      },
+      {
+        "id": "2025_16_SF_IND",
+        "season": 2025,
+        "week": 16,
+        "actualMargin": -21.0,
+        "baselineMargin": 2.697,
+        "candidateMargin": 3.342427462034545
+      },
+      {
+        "id": "2025_17_DAL_WAS",
+        "season": 2025,
+        "week": 17,
+        "actualMargin": -7.0,
+        "baselineMargin": 0.219,
+        "candidateMargin": 0.27140957144440686
+      },
+      {
+        "id": "2025_17_DEN_KC",
+        "season": 2025,
+        "week": 17,
+        "actualMargin": -7.0,
+        "baselineMargin": 0.787,
+        "candidateMargin": 0.9753394188435992
+      },
+      {
+        "id": "2025_17_DET_MIN",
+        "season": 2025,
+        "week": 17,
+        "actualMargin": 13.0,
+        "baselineMargin": -3.123,
+        "candidateMargin": -3.8703748475839395
+      },
+      {
+        "id": "2025_17_BAL_GB",
+        "season": 2025,
+        "week": 17,
+        "actualMargin": -17.0,
+        "baselineMargin": 3.644,
+        "candidateMargin": 4.516056978737072
+      },
+      {
+        "id": "2025_17_HOU_LAC",
+        "season": 2025,
+        "week": 17,
+        "actualMargin": -4.0,
+        "baselineMargin": 0.263,
+        "candidateMargin": 0.32593934835561195
+      },
+      {
+        "id": "2025_17_ARI_CIN",
+        "season": 2025,
+        "week": 17,
+        "actualMargin": 23.0,
+        "baselineMargin": 2.559,
+        "candidateMargin": 3.1714022526312204
+      },
+      {
+        "id": "2025_17_CHI_SF",
+        "season": 2025,
+        "week": 17,
+        "actualMargin": 4.0,
+        "baselineMargin": 3.587,
+        "candidateMargin": 4.445416131374829
+      },
+      {
+        "id": "2025_17_JAX_IND",
+        "season": 2025,
+        "week": 17,
+        "actualMargin": -6.0,
+        "baselineMargin": 0.84,
+        "candidateMargin": 1.0410230137593688
+      },
+      {
+        "id": "2025_17_NE_NYJ",
+        "season": 2025,
+        "week": 17,
+        "actualMargin": -32.0,
+        "baselineMargin": -7.275,
+        "candidateMargin": -9.016002887023106
+      },
+      {
+        "id": "2025_17_NO_TEN",
+        "season": 2025,
+        "week": 17,
+        "actualMargin": -8.0,
+        "baselineMargin": -0.328,
+        "candidateMargin": -0.4064947006108012
+      },
+      {
+        "id": "2025_17_NYG_LV",
+        "season": 2025,
+        "week": 17,
+        "actualMargin": -24.0,
+        "baselineMargin": -0.753,
+        "candidateMargin": -0.9332027730485771
+      },
+      {
+        "id": "2025_17_PHI_BUF",
+        "season": 2025,
+        "week": 17,
+        "actualMargin": -1.0,
+        "baselineMargin": 2.051,
+        "candidateMargin": 2.5418311919291257
+      },
+      {
+        "id": "2025_17_PIT_CLE",
+        "season": 2025,
+        "week": 17,
+        "actualMargin": 7.0,
+        "baselineMargin": -4.611,
+        "candidateMargin": -5.714472757671964
+      },
+      {
+        "id": "2025_17_SEA_CAR",
+        "season": 2025,
+        "week": 17,
+        "actualMargin": -17.0,
+        "baselineMargin": -7.44,
+        "candidateMargin": -9.220489550440124
+      },
+      {
+        "id": "2025_17_TB_MIA",
+        "season": 2025,
+        "week": 17,
+        "actualMargin": 3.0,
+        "baselineMargin": -0.092,
+        "candidateMargin": -0.11401680626888326
+      },
+      {
+        "id": "2025_17_LA_ATL",
+        "season": 2025,
+        "week": 17,
+        "actualMargin": 3.0,
+        "baselineMargin": -6.618,
+        "candidateMargin": -8.201774172689886
+      },
+      {
+        "id": "2025_18_CAR_TB",
+        "season": 2025,
+        "week": 18,
+        "actualMargin": 2.0,
+        "baselineMargin": 5.668,
+        "candidateMargin": 7.024426716652504
+      },
+      {
+        "id": "2025_18_SEA_SF",
+        "season": 2025,
+        "week": 18,
+        "actualMargin": -10.0,
+        "baselineMargin": -1.241,
+        "candidateMargin": -1.5379875715183058
+      },
+      {
+        "id": "2025_18_ARI_LA",
+        "season": 2025,
+        "week": 18,
+        "actualMargin": 17.0,
+        "baselineMargin": 11.199,
+        "candidateMargin": 13.8790675370133
+      },
+      {
+        "id": "2025_18_BAL_PIT",
+        "season": 2025,
+        "week": 18,
+        "actualMargin": 2.0,
+        "baselineMargin": -0.518,
+        "candidateMargin": -0.6419641918182775
+      },
+      {
+        "id": "2025_18_CLE_CIN",
+        "season": 2025,
+        "week": 18,
+        "actualMargin": -2.0,
+        "baselineMargin": 5.787,
+        "candidateMargin": 7.17190497693508
+      },
+      {
+        "id": "2025_18_DAL_NYG",
+        "season": 2025,
+        "week": 18,
+        "actualMargin": 17.0,
+        "baselineMargin": -0.195,
+        "candidateMargin": -0.2416660567655678
+      },
+      {
+        "id": "2025_18_DET_CHI",
+        "season": 2025,
+        "week": 18,
+        "actualMargin": -3.0,
+        "baselineMargin": -0.254,
+        "candidateMargin": -0.3147855303510473
+      },
+      {
+        "id": "2025_18_GB_MIN",
+        "season": 2025,
+        "week": 18,
+        "actualMargin": 13.0,
+        "baselineMargin": -1.3,
+        "candidateMargin": -1.6111070451037852
+      },
+      {
+        "id": "2025_18_IND_HOU",
+        "season": 2025,
+        "week": 18,
+        "actualMargin": 8.0,
+        "baselineMargin": 4.243,
+        "candidateMargin": 5.258405532596432
+      },
+      {
+        "id": "2025_18_KC_LV",
+        "season": 2025,
+        "week": 18,
+        "actualMargin": 2.0,
+        "baselineMargin": -7.625,
+        "candidateMargin": -9.449762476089509
+      },
+      {
+        "id": "2025_18_LAC_DEN",
+        "season": 2025,
+        "week": 18,
+        "actualMargin": 16.0,
+        "baselineMargin": 3.038,
+        "candidateMargin": 3.765033233096384
+      },
+      {
+        "id": "2025_18_MIA_NE",
+        "season": 2025,
+        "week": 18,
+        "actualMargin": 28.0,
+        "baselineMargin": 6.689,
+        "candidateMargin": 8.289765403614783
+      },
+      {
+        "id": "2025_18_NO_ATL",
+        "season": 2025,
+        "week": 18,
+        "actualMargin": 2.0,
+        "baselineMargin": 3.181,
+        "candidateMargin": 3.9422550080578005
+      },
+      {
+        "id": "2025_18_NYJ_BUF",
+        "season": 2025,
+        "week": 18,
+        "actualMargin": 27.0,
+        "baselineMargin": 14.411,
+        "candidateMargin": 17.85974125153127
+      },
+      {
+        "id": "2025_18_TEN_JAX",
+        "season": 2025,
+        "week": 18,
+        "actualMargin": 34.0,
+        "baselineMargin": 10.77,
+        "candidateMargin": 13.347402212129051
+      },
+      {
+        "id": "2025_18_WAS_PHI",
+        "season": 2025,
+        "week": 18,
+        "actualMargin": -7.0,
+        "baselineMargin": 9.773,
+        "candidateMargin": 12.111807039845608
+      },
+      {
+        "id": "2025_19_GB_CHI",
+        "season": 2025,
+        "week": 19,
+        "actualMargin": 4.0,
+        "baselineMargin": 1.413,
+        "candidateMargin": 1.7511494267166527
+      },
+      {
+        "id": "2025_19_LA_CAR",
+        "season": 2025,
+        "week": 19,
+        "actualMargin": -3.0,
+        "baselineMargin": -7.98,
+        "candidateMargin": -9.889718630714004
+      },
+      {
+        "id": "2025_19_BUF_JAX",
+        "season": 2025,
+        "week": 19,
+        "actualMargin": -3.0,
+        "baselineMargin": 0.729,
+        "candidateMargin": 0.903459258369738
+      },
+      {
+        "id": "2025_19_LAC_NE",
+        "season": 2025,
+        "week": 19,
+        "actualMargin": 13.0,
+        "baselineMargin": 5.12,
+        "candidateMargin": 6.345283131485677
+      },
+      {
+        "id": "2025_19_SF_PHI",
+        "season": 2025,
+        "week": 19,
+        "actualMargin": -4.0,
+        "baselineMargin": 3.472,
+        "candidateMargin": 4.3028951235387245
+      },
+      {
+        "id": "2025_19_HOU_PIT",
+        "season": 2025,
+        "week": 19,
+        "actualMargin": -24.0,
+        "baselineMargin": -0.719,
+        "candidateMargin": -0.8910661272535549
+      },
+      {
+        "id": "2025_20_BUF_DEN",
+        "season": 2025,
+        "week": 20,
+        "actualMargin": 3.0,
+        "baselineMargin": -0.372,
+        "candidateMargin": -0.4610244775220062
+      },
+      {
+        "id": "2025_20_SF_SEA",
+        "season": 2025,
+        "week": 20,
+        "actualMargin": 35.0,
+        "baselineMargin": 5.752,
+        "candidateMargin": 7.1285290180284395
+      },
+      {
+        "id": "2025_20_HOU_NE",
+        "season": 2025,
+        "week": 20,
+        "actualMargin": 12.0,
+        "baselineMargin": 1.811,
+        "candidateMargin": 2.2443960451407343
+      },
+      {
+        "id": "2025_20_LA_CHI",
+        "season": 2025,
+        "week": 20,
+        "actualMargin": -3.0,
+        "baselineMargin": -2.618,
+        "candidateMargin": -3.2445217262166994
+      },
+      {
+        "id": "2025_21_LA_SEA",
+        "season": 2025,
+        "week": 21,
+        "actualMargin": 4.0,
+        "baselineMargin": 3.673,
+        "candidateMargin": 4.551997058974003
+      },
+      {
+        "id": "2025_21_NE_DEN",
+        "season": 2025,
+        "week": 21,
+        "actualMargin": -3.0,
+        "baselineMargin": 0.626,
+        "candidateMargin": 0.7758100078730534
+      },
+      {
+        "id": "2025_22_SEA_NE",
+        "season": 2025,
+        "week": 22,
+        "actualMargin": -16.0,
+        "baselineMargin": -2.84,
+        "candidateMargin": -3.5196492369959613
+      }
+    ],
+    "candidateMae": 10.216416640874426,
+    "baselineMae": 10.16538947368421,
+    "candidateRmse": 12.925297817228257,
+    "baselineRmse": 12.934310514449951
+  },
+  "modelVersion": "score-efficiency-v1.2.0",
+  "siteArtifactHash": "9b861c65a3a63abc7dca0bba0055eab69aafb02206297a929e98a275b542f5bf",
+  "scheduleHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+  "trainingLabelEmbargoThrough": "2025-02-10T23:30:00+00:00",
+  "firstEvaluationKickoff": "2025-09-05T00:20:00+00:00",
+  "protocolHash": "61df5e56f9387fcdb073de8c5123df1bf5ceaaf9afda3f0f4691ebd6db2058f2",
+  "codeHashes": {
+    "experiment_margin_scale.py": "06d1a19c43e82e0e60d1a34b32610668ef2430898adc6dc92f7b3237c2c68b0c",
+    "benchmark_uncertainty.py": "b9fbd5ed3f27c47539312530c2095ef29d1447a645482383d825961aa8b2bacc",
+    "build_data.py": "1137dbd0f57c6d0b913dc10439172b5a742d77c9cac0229a0d1fb7e26064bba5"
+  },
+  "limitations": "Reused development seasons; current revised inputs; no independent holdout or production promotion. Week resampling does not capture cross-week dependence or model selection uncertainty.",
+  "closingMarketBenchmark": {
+    "games": 285,
+    "excludedGames": 0,
+    "modelMae": 10.16538947368421,
+    "marketMae": 9.670175438596491,
+    "difference": 0.4952140350877193,
+    "interval95": [
+      0.21615058194400757,
+      0.8055560194970451
+    ],
+    "clustersBySeason": {
+      "2025": 22
+    },
+    "draws": 10000,
+    "seed": 20260910
+  }
+}
