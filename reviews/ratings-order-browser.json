@@ -1,0 +1,18 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "allThreeOrdersCorrect": true,
+    "keyboardLinks": true,
+    "reloadPreserved": true,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "allThreeOrdersCorrect": true,
+    "keyboardLinks": true,
+    "reloadPreserved": true,
+    "overflow": false
+  }
+]

@@ -1,8 +1,13 @@
 import { site, teams, signed } from "@/lib/data";
 import { TeamMark } from "@/components/brand";
 import Link from "next/link";
+import { orderRatings, ratingMetric } from "@/lib/ratings-order";
 export const metadata = { title: "NFL power ratings" };
-export default function Ratings() {
+export default async function Ratings({ searchParams }: { searchParams: Promise<{ sort?: string | string[] }> }) {
+  const params = await searchParams;
+  const metric = ratingMetric(typeof params.sort === "string" ? params.sort : undefined);
+  const label = metric === "rating" ? "Combined" : metric === "offense" ? "Offense" : "Defense";
+  const ratings = orderRatings(site.ratings, metric);
   return (
     <div className="subpage">
       <div className="page-heading">
@@ -23,6 +28,12 @@ export default function Ratings() {
         recency. Personnel changes and play-level efficiency are not yet
         included.
       </div>
+      <nav className="ratings-order" aria-label="Rank teams by">
+        {([['rating', 'Combined'], ['offense', 'Offense'], ['defense', 'Defense']] as const).map(([key, name]) => (
+          <Link key={key} href={`/ratings?sort=${key}`} aria-current={metric === key ? "page" : undefined}>{name}</Link>
+        ))}
+      </nav>
+      <p className="fine">{label} order · Strongest first. Positions follow the selected metric; exact ties use team code order. Values are rounded for display.</p>
       <div
         className="ratings-table-wrap"
         role="region"
@@ -32,15 +43,15 @@ export default function Ratings() {
         <table className="ratings-table">
           <thead>
             <tr>
-              <th scope="col">Rank</th>
+              <th scope="col">Position</th>
               <th scope="col">Team</th>
-              <th scope="col">Combined</th>
-              <th scope="col">Offense</th>
-              <th scope="col">Defense</th>
+              <th scope="col" aria-sort={metric === "rating" ? "descending" : undefined}>Combined</th>
+              <th scope="col" aria-sort={metric === "offense" ? "descending" : undefined}>Offense</th>
+              <th scope="col" aria-sort={metric === "defense" ? "descending" : undefined}>Defense</th>
             </tr>
           </thead>
           <tbody>
-            {site.ratings.map((r, i) => (
+            {ratings.map((r, i) => (
               <tr key={r.team}>
                 <td className="muted">{String(i + 1).padStart(2, "0")}</td>
                 <td>

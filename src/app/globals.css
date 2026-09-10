@@ -2072,3 +2072,6 @@ summary {
 }
 .diagnostic-band table { min-width: 1040px; }
 .diagnostic-band tbody th { min-width: 170px; }
+.ratings-order { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 12px; }
+.ratings-order a { border: 1px solid var(--line); border-radius: 6px; padding: 12px 18px; }
+.ratings-order a[aria-current="page"] { background: var(--line); font-weight: 600; }
