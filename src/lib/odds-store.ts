@@ -7,6 +7,9 @@ import { ODDS_MAX_AGE_MS, type OddsFeed } from "./odds";
 const LATEST = "odds/latest.json";
 const RESERVATION = "odds/acquisition-reservation.json";
 export const ACQUISITION_COOLDOWN_MS = 30 * 60 * 1000;
+export const ACQUISITION_WINDOW_MS = 31 * 24 * 60 * 60 * 1000;
+// Three markets in one region: at most 465 reserved credits per rolling window.
+export const ACQUISITION_MAX_ATTEMPTS = 155;
 type Reader = (path: string) => Promise<Buffer | null>;
 type Writer = (
   path: string,
@@ -56,21 +59,46 @@ export async function reserveOddsAcquisition(
   )
     throw new Error("Invalid acquisition clock");
   const current = await readVersion(RESERVATION);
+  let attempts: number[] = [];
   if (current) {
     if (!current.etag || current.body.length > 4096)
       throw new Error("Invalid acquisition reservation");
     const reservation = JSON.parse(current.body.toString());
     if (
-      reservation.schemaVersion !== 1 ||
+      ![1, 2].includes(reservation.schemaVersion) ||
       !Number.isSafeInteger(reservation.startedAt) ||
       reservation.startedAt < 0 ||
       !Number.isSafeInteger(reservation.expiresAt) ||
       reservation.expiresAt - reservation.startedAt !== ACQUISITION_COOLDOWN_MS
     )
       throw new Error("Invalid acquisition reservation");
+    if (reservation.schemaVersion === 2) {
+      const history = reservation.attempts;
+      if (
+        !Array.isArray(history) ||
+        history.length === 0 ||
+        history.length > ACQUISITION_MAX_ATTEMPTS ||
+        history.some(
+          (at: unknown, i: number) =>
+            !Number.isSafeInteger(at) ||
+            typeof at !== "number" ||
+            at < 0 ||
+            (i > 0 && at <= history[i - 1]),
+        ) ||
+        history[history.length - 1] !== reservation.startedAt
+      )
+        throw new Error("Invalid acquisition reservation history");
+      attempts = history;
+    } else {
+      // Earlier schema retained only its latest attempt; do not invent older usage.
+      attempts = [reservation.startedAt];
+    }
     if (now < reservation.expiresAt)
       throw new Error("Odds acquisition already reserved");
   }
+  attempts = attempts.filter((at) => at > now - ACQUISITION_WINDOW_MS);
+  if (attempts.length >= ACQUISITION_MAX_ATTEMPTS)
+    throw new Error("Odds acquisition rolling budget exhausted");
   const expiresAt = now + ACQUISITION_COOLDOWN_MS;
   // Never release on failure: a timed-out provider request may have spent credits.
   // A lost reservation response also fails closed until this cooldown expires.
@@ -78,7 +106,8 @@ export async function reserveOddsAcquisition(
     RESERVATION,
     Buffer.from(
       JSON.stringify({
-        schemaVersion: 1,
+        schemaVersion: 2,
+        attempts: [...attempts, now],
         startedAt: now,
         expiresAt,
         owner: randomUUID(),

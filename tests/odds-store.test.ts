@@ -5,6 +5,8 @@ import { publishOdds, readStoredOdds, oddsHealth } from "../src/lib/odds-store";
 import {
   reserveOddsAcquisition,
   ACQUISITION_COOLDOWN_MS,
+  ACQUISITION_WINDOW_MS,
+  ACQUISITION_MAX_ATTEMPTS,
 } from "../src/lib/odds-store";
 import type { OddsFeed } from "../src/lib/odds";
 const feed: OddsFeed = {
@@ -236,4 +238,99 @@ test("invalid reservation storage and clocks fail closed", async () => {
       /clock/,
     );
   assert.equal(s.files.size, 0);
+});
+
+test("rolling budget caps attempts atomically and recovers only expired capacity", async () => {
+  const s = fixture();
+  const start = Date.parse(feed.fetchedAt);
+  for (let i = 0; i < ACQUISITION_MAX_ATTEMPTS - 1; i++)
+    await reserveOddsAcquisition(
+      start + i * ACQUISITION_COOLDOWN_MS,
+      s.readVersion,
+      s.write,
+    );
+  const last = start + (ACQUISITION_MAX_ATTEMPTS - 1) * ACQUISITION_COOLDOWN_MS;
+  const race = await Promise.allSettled(
+    Array.from({ length: 8 }, () =>
+      reserveOddsAcquisition(last, s.readVersion, s.write),
+    ),
+  );
+  assert.equal(race.filter((r) => r.status === "fulfilled").length, 1);
+  await assert.rejects(
+    reserveOddsAcquisition(
+      last + ACQUISITION_COOLDOWN_MS,
+      s.readVersion,
+      s.write,
+    ),
+    /budget/,
+  );
+  await reserveOddsAcquisition(
+    start + ACQUISITION_WINDOW_MS,
+    s.readVersion,
+    s.write,
+  );
+  const state = JSON.parse(
+    s.files.get("odds/acquisition-reservation.json")!.toString(),
+  );
+  assert.equal(state.attempts.length, ACQUISITION_MAX_ATTEMPTS);
+  assert.equal(state.attempts[0], start + ACQUISITION_COOLDOWN_MS);
+});
+
+test("legacy reservation migration counts its retained attempt", async () => {
+  const s = fixture();
+  const start = Date.parse(feed.fetchedAt);
+  s.files.set(
+    "odds/acquisition-reservation.json",
+    Buffer.from(
+      JSON.stringify({
+        schemaVersion: 1,
+        startedAt: start,
+        expiresAt: start + ACQUISITION_COOLDOWN_MS,
+      }),
+    ),
+  );
+  await reserveOddsAcquisition(
+    start + ACQUISITION_COOLDOWN_MS,
+    s.readVersion,
+    s.write,
+  );
+  const state = JSON.parse(
+    s.files.get("odds/acquisition-reservation.json")!.toString(),
+  );
+  assert.equal(state.schemaVersion, 2);
+  assert.deepEqual(state.attempts, [start, start + ACQUISITION_COOLDOWN_MS]);
+});
+
+test("damaged or inconsistent budget history fails closed", async () => {
+  const start = Date.parse(feed.fetchedAt);
+  for (const attempts of [
+    [],
+    [start - 1],
+    [start, start],
+    [start + 1, start],
+    [-1, start],
+    [true, start],
+    Array(156).fill(start),
+  ]) {
+    const s = fixture();
+    s.files.set(
+      "odds/acquisition-reservation.json",
+      Buffer.from(
+        JSON.stringify({
+          schemaVersion: 2,
+          startedAt: start,
+          expiresAt: start + ACQUISITION_COOLDOWN_MS,
+          attempts,
+        }),
+      ),
+    );
+    await assert.rejects(
+      reserveOddsAcquisition(
+        start + ACQUISITION_COOLDOWN_MS,
+        s.readVersion,
+        s.write,
+      ),
+      /reservation/,
+    );
+  }
 });

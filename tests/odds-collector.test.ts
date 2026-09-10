@@ -6,7 +6,11 @@ import {
   runOddsCollection,
 } from "../src/lib/odds-collector";
 import { prepareArchive } from "../src/lib/odds-archive";
-import { reserveOddsAcquisition } from "../src/lib/odds-store";
+import {
+  reserveOddsAcquisition,
+  ACQUISITION_COOLDOWN_MS,
+  ACQUISITION_MAX_ATTEMPTS,
+} from "../src/lib/odds-store";
 import type { OddsFeed } from "../src/lib/odds";
 
 function collectorFixture() {
@@ -238,4 +242,32 @@ test("overlapping collectors and a retry after provider timeout spend at most on
       assert.equal((await runOddsCollection(deps)).status, "already-current");
     assert.equal(calls.fetch, 1);
   }
+});
+
+test("exhausted rolling budget prevents provider acquisition even with available quota", async () => {
+  const { deps, calls } = collectorFixture();
+  const last = deps.now() - ACQUISITION_COOLDOWN_MS;
+  const body = Buffer.from(
+    JSON.stringify({
+      schemaVersion: 2,
+      startedAt: last,
+      expiresAt: deps.now(),
+      attempts: Array.from(
+        { length: ACQUISITION_MAX_ATTEMPTS },
+        (_, i) =>
+          last - (ACQUISITION_MAX_ATTEMPTS - 1 - i) * ACQUISITION_COOLDOWN_MS,
+      ),
+    }),
+  );
+  deps.reserve = (at) =>
+    reserveOddsAcquisition(
+      at,
+      async () => ({ body, etag: "v1" }),
+      async () => {
+        throw new Error("unexpected write");
+      },
+    );
+  await assert.rejects(runOddsCollection(deps), /budget/);
+  assert.equal(calls.fetch, 0);
+  assert.equal(calls.publish, 0);
 });
