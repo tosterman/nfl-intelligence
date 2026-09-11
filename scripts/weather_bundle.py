@@ -63,9 +63,14 @@ def build(root=ROOT):
     return {'manifest': manifest, 'payload': payload}
 
 
+def transport(bundle):
+    # Preserve Python's exact float/Unicode serialization for JavaScript hashing.
+    return encode({'manifest': bundle['manifest'], 'payloadJson': encode(bundle['payload']).decode()})
+
+
 if __name__ == '__main__':
     result = build()
     output = ROOT / 'release-recovery/weather-bundle.json'
     output.parent.mkdir(exist_ok=True)
-    output.write_bytes(encode(result) + b'\n')
+    output.write_bytes(transport(result))
     print(json.dumps(result['manifest'], indent=2))
