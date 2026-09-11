@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 from datetime import datetime, timezone
 import build_data as base
-from season_usage import season_usage
+from season_usage import season_usage, season_phase
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -27,7 +27,7 @@ def audit(root=ROOT):
     personnel = json.loads(personnel_raw)
     schedule_raw = (root / 'data/games.csv').read_bytes()
     rows = base.load_rows(root / 'data/games.csv')
-    games = {r['game_id']: {'season': r['season'], 'week': r['week'], 'type': r['game_type'],
+    games = {r['game_id']: {'season': r['season'], 'week': r['week'], 'type': season_phase(r['game_type']),
         'kickoff': base.kickoff(r), 'teams': [r['home_team'], r['away_team']],
         'completed': r['home_score'] is not None and r['away_score'] is not None}
         for r in rows if r['gametime']}

@@ -1,6 +1,9 @@
 """Season-scoped participation; separate from accepted prior-season calculations."""
 from player_usage import prior_usage
 
+def season_phase(kind):
+    return 'POST' if kind in {'WC', 'DIV', 'CON', 'SB'} else kind
+
 def season_usage(gsis_id, registry, snaps, games, cutoff, season, kind, week, current_team):
     """Appearance evidence for earlier weeks of one season, split by team tenure."""
     phases = {'REG': 1, 'POST': 2}
@@ -10,6 +13,7 @@ def season_usage(gsis_id, registry, snaps, games, cutoff, season, kind, week, cu
         raise ValueError('Invalid participation context')
     eligible_games = {}
     for identity, game in games.items():
+        game = {**game, 'type': season_phase(game.get('type'))}
         if game.get('season') != season or game.get('type') not in phases:
             continue
         prior_week = game.get('week')

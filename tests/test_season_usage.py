@@ -54,3 +54,8 @@ class SeasonUsage(unittest.TestCase):
         self.registry.append({'gsis_id': 'other', 'pfr_id': 'p'})
         result = self.usage()
         self.assertTrue(all(result[k]['status'] == 'unavailable' for k in ('overall','currentTeam','formerTeams')))
+
+    def test_named_postseason_round_matches_post_source(self):
+        self.games['week1']['type'] = 'WC'
+        result = self.usage([{**self.row, 'game_type': 'POST'}], kind='POST', week=2)
+        self.assertEqual(result['overall']['appearances'], 1)

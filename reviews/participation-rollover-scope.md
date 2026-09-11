@@ -35,7 +35,13 @@ source produces no eligible current-season appearances for all 139 Week 1
 reports, as required: the first two games cannot enter those earlier weekly
 contexts. `season-usage-rehearsal.json` retains that negative result.
 
-Acquisition automation, corroborated identity binding and the public selector/UI
+`refresh_participation.py` now acquires and retains season-specific raw CSV and
+source metadata, with a separate collection outcome. Live acquisition returned
+the same verified 187 rows. Two collector tests cover malformed/empty/wrong-season
+data, duplicate identities and invalid shares, including preservation of prior
+source bytes on failure. Six scope tests now include named postseason rounds.
+
+Scheduled wiring, corroborated identity binding and the public selector/UI
 remain unfinished. This rehearsal does not replace the accepted public usage
 artifact. It must not change numerical forecasts, claim player quality or infer
 expected availability from observed participation.
