@@ -209,3 +209,30 @@ candidate decoded successfully with 167 reports and 272 contexts; evidence is in
 `reviews/personnel-reader-candidate.json`. This decoder is not yet wired to the
 live page. Storage transaction, archive retention and runtime health integration
 remain required before replacing the static adapter.
+
+## Storage transaction
+
+The personnel transaction now validates its immutable root/presentation and all
+declared archive objects before any write. New roots link the accepted previous
+root. The writer verifies immutable readback before an ETag-conditional pointer
+switch, preserves competing writers, and accepts uncertain responses only after
+readback. An identical retry performs no writes. Acquisitions cannot regress;
+equivalent timestamp representations cannot conceal a different source hash at
+the same acquisition time. The reader fetches only pointer, root and presentation.
+
+Five transaction tests pass, including upload interruption, missing evidence,
+lost responses, concurrency, predecessor linkage and equivalent time formats.
+The private Blob adapter restricts writes to the personnel namespace and applies
+the existing bounded-stream/timeout behavior. Independent review confirmed the
+timestamp correction and adapter rules; its path regression and type checking
+also pass. An actual read-only Blob check found no personnel publication.
+
+The transaction bounds a candidate to 64 MB, 5,002 provided objects, 10 MB per
+object, a 1 MB root and 5,000 archive references. These are rejection limits,
+not evidence that recurring collection fits indefinitely. The complete archive
+selector, source replay integration, fresh-worker restore and initial real
+publication still need implementation. The transaction cannot infer whether a
+caller omitted a required source; source/archive closure remains a publisher
+responsibility. No real personnel storage writes have occurred.
+
+All 242 application tests passed locally after the storage/reader batch.
