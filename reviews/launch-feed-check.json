@@ -1,0 +1,295 @@
+{
+  "checkedAt": "2026-09-11T20:04:10.157052+00:00",
+  "scope": "Read-only feed checks; no acquisition or deployment",
+  "origins": {
+    "http://localhost:3000": {
+      "editionParity": {
+        "status": "matching",
+        "intended": {
+          "generatedAt": "2026-09-11T16:17:34.782950+00:00",
+          "modelVersion": "score-efficiency-v1.2.0",
+          "sourceHash": "664dd4abffd99b29efc5cf875a800c25631c190cb4e4522fb5354e61781369bf"
+        },
+        "observed": {
+          "generatedAt": "2026-09-11T16:17:34.782950+00:00",
+          "modelVersion": "score-efficiency-v1.2.0",
+          "sourceHash": "664dd4abffd99b29efc5cf875a800c25631c190cb4e4522fb5354e61781369bf"
+        }
+      },
+      "checks": {
+        "forecasts": {
+          "endpoint": "/api/status",
+          "healthy": true,
+          "attempts": [
+            {
+              "observedAt": "2026-09-11T20:04:10.174933+00:00",
+              "httpStatus": 200,
+              "healthy": true,
+              "reason": "Verified status and acquisition times",
+              "evidence": {
+                "generatedAt": "2026-09-11T16:17:34.782950+00:00",
+                "modelVersion": "score-efficiency-v1.2.0",
+                "sourceHash": "664dd4abffd99b29efc5cf875a800c25631c190cb4e4522fb5354e61781369bf"
+              }
+            }
+          ]
+        },
+        "odds": {
+          "endpoint": "/api/odds-status",
+          "healthy": true,
+          "attempts": [
+            {
+              "observedAt": "2026-09-11T20:04:10.175845+00:00",
+              "httpStatus": 200,
+              "healthy": true,
+              "reason": "Verified status and acquisition times",
+              "evidence": {
+                "fetchedAt": "2026-09-11T19:10:04.631Z",
+                "maximumAgeHours": 6
+              }
+            }
+          ]
+        },
+        "personnel": {
+          "endpoint": "/api/personnel-status",
+          "healthy": true,
+          "attempts": [
+            {
+              "observedAt": "2026-09-11T20:04:10.176580+00:00",
+              "httpStatus": 200,
+              "healthy": true,
+              "reason": "Verified status and acquisition times",
+              "evidence": {
+                "retrievedAt": "2026-09-11T19:11:02.944464+00:00",
+                "assetUpdatedAt": "2026-09-11T12:12:00Z",
+                "sourceHash": "cd7338473dd852d02c6986663addb31431609946fa8756d0460bf2e98d3501a9",
+                "rowCount": 167,
+                "collectionStatus": "ok"
+              }
+            }
+          ]
+        },
+        "weather": {
+          "endpoint": "/api/weather-status",
+          "healthy": true,
+          "attempts": [
+            {
+              "observedAt": "2026-09-11T20:04:10.335143+00:00",
+              "httpStatus": 200,
+              "healthy": true,
+              "reason": "Verified status and acquisition times",
+              "evidence": {
+                "collectionStartedAt": "2026-09-11T18:05:49.288553+00:00",
+                "generatedAt": "2026-09-11T18:05:54.258885+00:00",
+                "eligibleGames": 14,
+                "availableGames": 14
+              }
+            }
+          ]
+        },
+        "quarterbacks": {
+          "endpoint": "/api/quarterback-status",
+          "healthy": true,
+          "attempts": [
+            {
+              "observedAt": "2026-09-11T20:04:10.588950+00:00",
+              "httpStatus": 200,
+              "healthy": true,
+              "reason": "Verified status and acquisition times",
+              "evidence": {
+                "retrievedAt": "2026-09-11T19:11:06.062845+00:00",
+                "assetUpdatedAt": "2026-09-11T12:22:01Z",
+                "sourceHash": "bd431f6c551c64e4d0cfe8d816fed35c160637e1bcd0d3dba5898adecffc5e78",
+                "collectionStatus": "ok"
+              }
+            }
+          ]
+        },
+        "matchup": {
+          "endpoint": "/api/matchup-status",
+          "healthy": true,
+          "attempts": [
+            {
+              "observedAt": "2026-09-11T20:04:10.729484+00:00",
+              "httpStatus": 200,
+              "healthy": true,
+              "reason": "Verified status and acquisition times",
+              "evidence": {
+                "season": 2026,
+                "week": 1,
+                "gameType": "REG",
+                "cutoff": "2026-09-09",
+                "sourceObservedAt": "2026-09-11T14:40:52.100621+00:00",
+                "expiresAt": "2026-09-12T20:01:43.000Z",
+                "sourceHash": "d9e442ae17ba88e70c6df6ed15e4f0ce54c9ff63a607de54f62cb7ed4f016e39",
+                "scheduleHash": "aaf609d395ba813c53566fd2ab87decc8732b0303aac83586fe014b8a9ac0ca6",
+                "sampleStatus": "no-eligible-games",
+                "gameCount": 0
+              }
+            }
+          ]
+        },
+        "participation": {
+          "endpoint": "/api/participation-status",
+          "healthy": true,
+          "attempts": [
+            {
+              "observedAt": "2026-09-11T20:04:10.792213+00:00",
+              "httpStatus": 200,
+              "healthy": true,
+              "reason": "Verified status and acquisition times",
+              "evidence": {
+                "retrievedAt": "2026-09-11T19:11:15.102604+00:00",
+                "calculatedAt": "2026-09-11T19:11:32.755657+00:00",
+                "personnelRetrievedAt": "2026-09-11T19:11:02.944464+00:00",
+                "sourceHash": "f4dfe061f01ab8153f4bb2e8cc7ecf23c7d8c7f6d03f62be2f156365952c4445",
+                "rowCount": 187,
+                "collectionStatus": "collected"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "https://nfl-intelligence-one.vercel.app": {
+      "editionParity": {
+        "status": "behind-intended",
+        "intended": {
+          "generatedAt": "2026-09-11T16:17:34.782950+00:00",
+          "modelVersion": "score-efficiency-v1.2.0",
+          "sourceHash": "664dd4abffd99b29efc5cf875a800c25631c190cb4e4522fb5354e61781369bf"
+        },
+        "observed": {
+          "generatedAt": "2026-09-10T20:09:04.084122+00:00",
+          "modelVersion": "score-efficiency-v1.2.0",
+          "sourceHash": "75b777ae632bb3a1d65d123cc8e1b945867085833057caf2c574463653f5008d"
+        }
+      },
+      "checks": {
+        "forecasts": {
+          "endpoint": "/api/status",
+          "healthy": true,
+          "attempts": [
+            {
+              "observedAt": "2026-09-11T20:04:11.147399+00:00",
+              "httpStatus": 200,
+              "healthy": true,
+              "reason": "Verified status and acquisition times",
+              "evidence": {
+                "generatedAt": "2026-09-10T20:09:04.084122+00:00",
+                "modelVersion": "score-efficiency-v1.2.0",
+                "sourceHash": "75b777ae632bb3a1d65d123cc8e1b945867085833057caf2c574463653f5008d"
+              }
+            }
+          ]
+        },
+        "odds": {
+          "endpoint": "/api/odds-status",
+          "healthy": true,
+          "attempts": [
+            {
+              "observedAt": "2026-09-11T20:04:11.148607+00:00",
+              "httpStatus": 200,
+              "healthy": true,
+              "reason": "Verified status and acquisition times",
+              "evidence": {
+                "fetchedAt": "2026-09-11T19:10:04.631Z",
+                "maximumAgeHours": 6
+              }
+            }
+          ]
+        },
+        "personnel": {
+          "endpoint": "/api/personnel-status",
+          "healthy": false,
+          "attempts": [
+            {
+              "observedAt": "2026-09-11T20:04:11.179835+00:00",
+              "httpStatus": 503,
+              "healthy": false,
+              "reason": "Unhealthy HTTP response or redirect"
+            },
+            {
+              "observedAt": "2026-09-11T20:04:14.292355+00:00",
+              "httpStatus": 503,
+              "healthy": false,
+              "reason": "Unhealthy HTTP response or redirect"
+            }
+          ]
+        },
+        "weather": {
+          "endpoint": "/api/weather-status",
+          "healthy": false,
+          "attempts": [
+            {
+              "observedAt": "2026-09-11T20:04:12.467875+00:00",
+              "httpStatus": 503,
+              "healthy": false,
+              "reason": "Unhealthy HTTP response or redirect"
+            },
+            {
+              "observedAt": "2026-09-11T20:04:14.600880+00:00",
+              "httpStatus": 503,
+              "healthy": false,
+              "reason": "Unhealthy HTTP response or redirect"
+            }
+          ]
+        },
+        "quarterbacks": {
+          "endpoint": "/api/quarterback-status",
+          "healthy": false,
+          "attempts": [
+            {
+              "observedAt": "2026-09-11T20:04:12.835420+00:00",
+              "httpStatus": 503,
+              "healthy": false,
+              "reason": "Unhealthy HTTP response or redirect"
+            },
+            {
+              "observedAt": "2026-09-11T20:04:14.963027+00:00",
+              "httpStatus": 503,
+              "healthy": false,
+              "reason": "Unhealthy HTTP response or redirect"
+            }
+          ]
+        },
+        "matchup": {
+          "endpoint": "/api/matchup-status",
+          "healthy": false,
+          "attempts": [
+            {
+              "observedAt": "2026-09-11T20:04:14.433007+00:00",
+              "httpStatus": 404,
+              "healthy": false,
+              "reason": "Unhealthy HTTP response or redirect"
+            },
+            {
+              "observedAt": "2026-09-11T20:04:16.707479+00:00",
+              "httpStatus": 404,
+              "healthy": false,
+              "reason": "Unhealthy HTTP response or redirect"
+            }
+          ]
+        },
+        "participation": {
+          "endpoint": "/api/participation-status",
+          "healthy": false,
+          "attempts": [
+            {
+              "observedAt": "2026-09-11T20:04:14.725309+00:00",
+              "httpStatus": 404,
+              "healthy": false,
+              "reason": "Unhealthy HTTP response or redirect"
+            },
+            {
+              "observedAt": "2026-09-11T20:04:16.843928+00:00",
+              "httpStatus": 404,
+              "healthy": false,
+              "reason": "Unhealthy HTTP response or redirect"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

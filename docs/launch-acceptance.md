@@ -11,6 +11,12 @@ https://nfl-intelligence-one.vercel.app.
   generated September 10 at 20:09 UTC and the local edition generated September
   11 at 16:17 UTC. The public deployment has not caught up with development.
   Exact responses are in `reviews/launch-current-state.json`.
+- A later read-only comparison in `reviews/launch-feed-check.json` verified all
+  seven local feed checks and the intended edition identity. The older public
+  site still served a different, earlier edition: forecast and odds checks
+  passed, while personnel, weather, quarterback, matchup and participation
+  checks failed. Public release acceptance requires resolving those failures;
+  local health does not resolve the public incident.
 - Personnel runtime restore, real acquisition, independent replay, immutable
   incremental publication and local readback are verified. The combined run
   selected publication `99096b70eaf7bd295b9dbb180efd06b421bd69cb2e92449f5d9752d065f92b28`
