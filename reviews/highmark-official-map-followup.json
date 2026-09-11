@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-09-11T16:00:31.637985+00:00",
+  "sources": [
+    {
+      "url": "https://www.buffalobills.com/stadium/",
+      "finalUrl": "https://www.buffalobills.com/stadium/",
+      "sha256": "ca0dfc8a1f4c49ef4f4ea558a6a8e286000aed728e0ad3dbee33d5600585fceb",
+      "file": "data/weather-location-sources/ca0dfc8a1f4c49ef4f4ea558a6a8e286000aed728e0ad3dbee33d5600585fceb.html.gz"
+    },
+    {
+      "url": "https://360mapsapi.concept3d.com/2167",
+      "finalUrl": "https://360mapsapi.concept3d.com/2167",
+      "sha256": "10342e95781c971eb280dbb106d78139ccc94313a536931572146a101cf52a65",
+      "file": "data/weather-location-sources/10342e95781c971eb280dbb106d78139ccc94313a536931572146a101cf52a65.json.gz"
+    }
+  ],
+  "officialMapUrl": "https://map.concept3d.com/?id=2167",
+  "defaultView": {
+    "lat": 42.773216227733144,
+    "lng": -78.79235100536874,
+    "zoom": 16.0512924512989,
+    "pitch": 46.50000000000002,
+    "bearing": 0
+  },
+  "defaultViewInsidePreviouslyRetainedNewStadiumBounds": true,
+  "priorMapDataHash": "754a2f6270056b7e294c9ff4a3dddea60611a3eb8920a07c4f6b0c24f0b2008a",
+  "productionMapChanged": false,
+  "decision": "New primary map lead, not accepted coordinates: default viewport is not a named field point; address discrepancy remains unresolved."
+}
