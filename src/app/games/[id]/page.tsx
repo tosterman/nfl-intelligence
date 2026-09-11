@@ -154,8 +154,8 @@ export default async function GamePage({
           <ForecastPendingNotice game={g} />
           <ScheduledContext game={g} />
           <div className="two-column" style={{ marginTop: 24 }}>
-            <ExplosiveMatchup away={g.away} home={g.home} season={g.season} kickoff={g.kickoff} />
-            <RedZoneMatchup away={g.away} home={g.home} season={g.season} kickoff={g.kickoff} />
+            <ExplosiveMatchup away={g.away} home={g.home} season={g.season} kickoff={g.kickoff} week={g.week} type={g.type} />
+            <RedZoneMatchup away={g.away} home={g.home} season={g.season} kickoff={g.kickoff} week={g.week} type={g.type} />
           </div>
         </>
       ) : (
@@ -362,8 +362,8 @@ export default async function GamePage({
                   </p>
                 </section>
               )}
-              <ExplosiveMatchup away={g.away} home={g.home} season={g.season} kickoff={g.kickoff} />
-              <RedZoneMatchup away={g.away} home={g.home} season={g.season} kickoff={g.kickoff} />
+              <ExplosiveMatchup away={g.away} home={g.home} season={g.season} kickoff={g.kickoff} week={g.week} type={g.type} />
+              <RedZoneMatchup away={g.away} home={g.home} season={g.season} kickoff={g.kickoff} week={g.week} type={g.type} />
               <MarketPanel
                 freshness={freshnessInputs(site)}
                 game={{

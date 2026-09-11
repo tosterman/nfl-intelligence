@@ -41,9 +41,10 @@ older snapshot artifacts must not be silently overwritten.
 3. The shared refresh, recovery artifact paths, Git publication paths and runtime
    allowlist are wired in the development branch. The production refresh remains
    disabled pending the existing release recovery; no hosted weekly run is claimed.
-4. Update both panels to show clearly separated prior/current-season samples,
-   game counts, cutoffs and source observation times. Missing current data must
-   leave dated historical evidence available without presenting it as current.
+4. Both panels now show separated prior/current-season samples, game counts,
+   cutoffs and source observation times. Missing or expired current data leaves
+   dated historical evidence visible. See `reviews/weekly-matchup-ui.md` for the
+   tested empty state and limitations of fixture-only positive samples.
 5. Exercise refresh failure/recovery and mobile/desktop browser behavior before
    publishing. Model integration remains a separate evaluation decision.
 
@@ -64,7 +65,8 @@ Acquisition has four additional tests: immutable repeat capture/corrupt existing
 object rejection; bad digest/stale/future metadata rejection; and failed refresh
 preserving earlier archives while replacing current state with unavailable; and
 reproducing the current artifact from its retained manifest and source bytes.
-An independent acquisition review found no material defect. UI integration is
-still pending and must validate scope and source freshness before display.
+An independent acquisition review found no material defect. UI integration now
+validates scope and source freshness before display; positive live samples remain
+unavailable at the current Week 1 cutoff.
 The full Python suite passed 295 tests before the final artifact-replay test was
 added; all four targeted acquisition tests then passed.

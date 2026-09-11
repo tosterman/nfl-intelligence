@@ -2091,6 +2091,9 @@ summary {
   .matchup-nav + .kpi-grid .kpi strong { margin: 7px 0; }
 }
 .explosive-matchups { display: grid; gap: 24px; margin: 24px 0; }
+.weekly-matchup { border-left: 3px solid var(--line); padding: 8px 16px; margin: 20px 0 28px; }
+.weekly-matchup h3 { margin-top: 0; }
+.weekly-matchup .explosive-pair { margin: 20px 0; }
 .explosive-pair h3 { font-size: 16px; margin-bottom: 12px; }
 .explosive-pair h3 span { font-weight: 400; opacity: .6; padding: 0 6px; }
 .explosive-pair .comparison { width: 100%; table-layout: fixed; }

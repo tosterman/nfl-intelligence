@@ -1,7 +1,8 @@
 import React from "react";
 import evidence from "../../data/explosive-plays.json";
+import { WeeklyMatchup } from './weekly-matchup';
 
-type Props = { away: string; home: string; season: number; kickoff: string | null };
+type Props = { away: string; home: string; season: number; kickoff: string | null; week?: number; type?: string };
 type Counts = { plays: number; explosive: number };
 
 function Rate({ counts }: { counts: Counts }) {
@@ -11,7 +12,7 @@ function Rate({ counts }: { counts: Counts }) {
   </span>;
 }
 
-export function ExplosiveMatchup({ away, home, season, kickoff }: Props) {
+export function ExplosiveMatchup({ away, home, season, kickoff, week, type }: Props) {
   const valid = season === evidence.season + 1 && away !== home &&
     Object.hasOwn(evidence.teams, away) && Object.hasOwn(evidence.teams, home) &&
     kickoff !== null && Number.isFinite(Date.parse(kickoff)) &&
@@ -20,8 +21,10 @@ export function ExplosiveMatchup({ away, home, season, kickoff }: Props) {
     <p>Compatible prior-season big-play evidence is not available for this matchup.</p></section>;
   const rows = evidence.teams as Record<string, typeof evidence.teams.BUF>;
   return <section className="panel explosive-panel" aria-labelledby="explosive-heading">
-    <div className="eyebrow">BIG-PLAY HISTORY · {evidence.season}</div>
+    <div className="eyebrow">BIG-PLAY MATCHUP</div>
     <h2 id="explosive-heading" tabIndex={-1}>Who created the big plays?</h2>
+    <WeeklyMatchup game={{ away, home, season, kickoff, week, type }} kind="big-play" />
+    <h3>Last season · {evidence.season}</h3>
     <p>{evidence.season} regular season and playoffs. Compare what each offense produced with what the opposing defense allowed.</p>
     <div className="explosive-matchups">
       {[[away, home], [home, away]].map(([offense, defense]) => <div key={offense} className="explosive-pair">

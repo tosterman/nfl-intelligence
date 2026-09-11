@@ -1,7 +1,8 @@
 import React from "react";
 import evidence from "../../data/red-zone.json";
+import { WeeklyMatchup } from './weekly-matchup';
 
-type Props = { away: string; home: string; season: number; kickoff: string | null };
+type Props = { away: string; home: string; season: number; kickoff: string | null; week?: number; type?: string };
 function Rate({ counts }: { counts: { possessions: number; touchdowns: number } }) {
   return <span className="explosive-rate">
     <strong>{counts.possessions ? `${(100 * counts.touchdowns / counts.possessions).toFixed(1)}%` : "Unavailable"}</strong>
@@ -9,7 +10,7 @@ function Rate({ counts }: { counts: { possessions: number; touchdowns: number } 
   </span>;
 }
 
-export function RedZoneMatchup({ away, home, season, kickoff }: Props) {
+export function RedZoneMatchup({ away, home, season, kickoff, week, type }: Props) {
   const valid = season === evidence.season + 1 && away !== home &&
     Object.hasOwn(evidence.teams, away) && Object.hasOwn(evidence.teams, home) &&
     kickoff !== null && Number.isFinite(Date.parse(kickoff)) &&
@@ -18,8 +19,10 @@ export function RedZoneMatchup({ away, home, season, kickoff }: Props) {
     <p>Compatible prior-season possession evidence is not available for this matchup.</p></section>;
   const rows = evidence.teams as Record<string, typeof evidence.teams.SF>;
   return <section className="panel red-zone-panel" aria-labelledby="red-zone-heading">
-    <div className="eyebrow">INSIDE THE 20 · {evidence.season}</div>
+    <div className="eyebrow">INSIDE THE 20 · MATCHUP</div>
     <h2 id="red-zone-heading" tabIndex={-1}>Who finished the drive?</h2>
+    <WeeklyMatchup game={{ away, home, season, kickoff, week, type }} kind="inside20" />
+    <h3>Last season · {evidence.season}</h3>
     <p>{evidence.season} regular season and playoffs. Offensive touchdowns from possessions with a snap or pre-snap situation strictly inside the opponent’s 20-yard line.</p>
     <div className="explosive-matchups">
       {[[away, home], [home, away]].map(([offense, defense]) => <div className="explosive-pair" key={offense}>

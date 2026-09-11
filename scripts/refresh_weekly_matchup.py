@@ -108,7 +108,10 @@ def run(root=ROOT, read=fetch, now=lambda: datetime.now(timezone.utc)):
         result = from_retained(root, manifest, corrections, scope['week'], phases.pop())
         if result['cutoff'] > checked[:10]:
             raise ValueError('Weekly boundary has not occurred')
-        save_current(root, {**base, 'status': 'ok', 'manifestHash': identity, 'currentSeason': result})
+        fresh_until = min(datetime.fromisoformat(manifest[key]['assetUpdatedAt'].replace('Z', '+00:00')).timestamp()
+                          for key in ('plays', 'schedule')) + 30 * 3600
+        save_current(root, {**base, 'status': 'ok', 'freshUntil': int(fresh_until * 1000),
+                            'manifestHash': identity, 'currentSeason': result})
         return 0
     except Exception:
         # Prior immutable snapshots remain retained. Current failure cannot masquerade

@@ -1,0 +1,98 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "gameId": "2026_01_ATL_PIT",
+    "emptySample": true,
+    "expiry": true,
+    "overflow": false
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "gameId": "2026_01_NE_SEA",
+    "emptySample": true,
+    "expiry": true,
+    "overflow": false
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "gameId": "2026_01_ATL_PIT",
+    "emptySample": true,
+    "expiry": true,
+    "overflow": false
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "gameId": "2026_01_NE_SEA",
+    "emptySample": true,
+    "expiry": true,
+    "overflow": false
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "gameId": "2026_01_ATL_PIT",
+    "emptySample": true,
+    "expiry": true,
+    "overflow": false
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "gameId": "2026_01_NE_SEA",
+    "emptySample": true,
+    "expiry": true,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "gameId": "2026_01_ATL_PIT",
+    "emptySample": true,
+    "expiry": true,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "gameId": "2026_01_NE_SEA",
+    "emptySample": true,
+    "expiry": true,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "gameId": "2026_01_ATL_PIT",
+    "emptySample": true,
+    "expiry": true,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "gameId": "2026_01_NE_SEA",
+    "emptySample": true,
+    "expiry": true,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "gameId": "2026_01_ATL_PIT",
+    "emptySample": true,
+    "expiry": true,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "gameId": "2026_01_NE_SEA",
+    "emptySample": true,
+    "expiry": true,
+    "overflow": false
+  }
+]
