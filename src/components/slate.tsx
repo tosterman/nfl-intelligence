@@ -93,6 +93,10 @@ export function Slate({
         : (a.kickoff ?? "z").localeCompare(b.kickoff ?? "z"),
     );
   const featured = featuredGame(weekGames, now);
+  const featuredPrediction = featured?.snapshot?.prediction;
+  const featuredFavorite = featured && featuredPrediction
+    ? teams[featuredPrediction.homeMargin >= 0 ? featured.home : featured.away].name
+    : null;
   const forecasts = weekGames.filter((g) => g.snapshot);
   const close = forecasts.filter(
     (g) => Math.abs(g.snapshot!.prediction.homeWinProbability - 0.5) < 0.08,
@@ -162,14 +166,17 @@ export function Slate({
         <section className="spotlight">
           <div className="spotlight-copy">
             <div className="eyebrow">
-              In focus <span className="slash">/</span> {time(featured.kickoff)}{" "}
+              Next up <span className="slash">/</span> {time(featured.kickoff)}{" "}
               ET
             </div>
-            <h2>A game of margins.</h2>
+            <h2>{Math.abs(featuredPrediction!.homeMargin) < 0.05
+              ? "Too close to separate."
+              : `${featuredFavorite} by ${Math.abs(featuredPrediction!.homeMargin).toFixed(1)}.`}</h2>
             <p>
               {teams[featured.away].name} {featured.neutral ? "vs" : "at"}{" "}
-              {teams[featured.home].name}. See what separates the teams, and how
-              much room the model leaves for a different result.
+              {teams[featured.home].name}. The next scheduled matchup with a
+              forecast. Explore the projected margin, the strongest counterargument,
+              and the range of possible outcomes.
             </p>
             {featured.neutral && (
               <p className="neutral-venue">

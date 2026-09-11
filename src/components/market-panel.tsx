@@ -98,6 +98,7 @@ export function MarketCard({
             ? "Spread not quoted"
             : assessment.label}
       </span>
+      {!book && <small>{assessment.reason}</small>}
       {book && <small>{book.name}</small>}
       {book?.spread && <small>As of {stamp(book.spread.observedAt)}</small>}
       {book && <span>Market total {book.total ? book.total.point.toFixed(1) : 'not quoted'}</span>}
