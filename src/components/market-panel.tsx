@@ -104,6 +104,17 @@ export function MarketPanel({
       <h2 id="market-prices" tabIndex={-1}>
         Model versus market
       </h2>
+      <div
+        className="sr-only"
+        role="status"
+        aria-label="Current market availability"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        {book
+          ? `${book.name}: spread ${book.spread ? "available" : "unavailable"}, total ${book.total ? "available" : "unavailable"}, moneyline ${book.moneyline ? "available" : "unavailable"}.${modelFresh ? "" : " Model comparisons withheld because the model inputs are stale."}`
+          : assessment.reason}
+      </div>
       <p className="fine">
         Timestamped pregame snapshots via The Odds API. Collection is scheduled
         five times daily, but runs can be delayed or missed. Quotes older than

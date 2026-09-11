@@ -19,6 +19,9 @@ with sync_playwright() as p:
   page.clock.install(time=start);page.clock.pause_at(start+timedelta(seconds=1))
   page.goto((folder/'market-clock-fixture.html').as_uri(),wait_until='load')
   expect(page.get_by_label('Compare sportsbook')).to_have_count(1)
+  live=page.get_by_role('status',name='Current market availability')
+  assert live.count()==1,'Market changes need a persistent status region'
+  expect(live).to_contain_text('spread available')
   row=page.get_by_role('row').filter(has_text='LAR spread').first
   expect(row.locator('td').last).to_contain_text('-3.5')
   page.clock.run_for(10000)
@@ -26,7 +29,9 @@ with sync_playwright() as p:
   page.clock.run_for(1)
   expect(row.locator('td').last).to_contain_text('Not quoted')
   expect(page.locator('#card')).to_contain_text('Spread not quoted')
-  expect(page.get_by_text('The model inputs are stale.',exact=False)).to_have_count(1)
+  expect(live).to_contain_text('spread unavailable')
+  expect(live).to_contain_text('Model comparisons withheld')
+  expect(page.locator('p').filter(has_text='The model inputs are stale.')).to_have_count(1)
   expect(page.get_by_role('row').filter(has_text='Total').first.locator('td').last).to_contain_text('48.5')
   page.clock.run_for(20000)
   expect(page.get_by_label('Compare sportsbook')).to_have_count(0)
@@ -35,8 +40,9 @@ with sync_playwright() as p:
   expect(page.locator('#card')).to_contain_text('Snapshot expired')
   page.clock.fast_forward(2*3600000)
   expect(page.locator('#card')).to_contain_text('Pregame closed')
+  expect(live).to_contain_text('Pregame comparisons close at kickoff')
   assert not errors,errors
-  out.append({'engine':engine,'inclusiveSixHourBoundary':True,'individualSpreadExpiry':True,'independentTotalExpiry':True,'modelFreshnessBoundary':True,'feedExpiry':True,'kickoffClosure':True,'pageErrors':errors})
+  out.append({'engine':engine,'inclusiveSixHourBoundary':True,'individualSpreadExpiry':True,'independentTotalExpiry':True,'modelFreshnessBoundary':True,'feedExpiry':True,'kickoffClosure':True,'persistentAvailabilityStatus':True,'pageErrors':errors})
   b.close()
 (root/'reviews/market-clock-fixture-browser.json').write_text(json.dumps(out,indent=2)+'\n')
 print(json.dumps(out))
