@@ -22,7 +22,20 @@ Acceptance criteria:
 - Reported absences, unresolved availability and observed participation can be
   read without opening every player's disclosure.
 
-This is the next implementation target, not completed work or human testing.
+Implemented locally with grouped game designations, a compact highest-share
+prior-season fact, independent current-season evidence, and expandable full
+reports. Shared empty-season wording appears once per team only when every
+player has a verified empty sample. Missing and conflicting identities remain
+visible. Full breakdowns preserve all three snap-share channels.
+
+Independent audience review prompted shorter repeated text. Independent code
+review caught a historical-conflict early return that could hide a valid newer
+current-season sample; separate evidence paths and a mixed-evidence regression
+correct it. Three briefing tests pass. The prior full application run passed
+193 tests, and the post-correction production build passes. Four Chromium/WebKit
+checks cover nested report disclosures at 320/1280px; a 390px real-page check
+verifies grouping, keyboard expansion, no overflow and zero scoped axe issues.
+These are bounded automated/source reviews, not human comprehension studies.
 
 Separately, a local mobile-load diagnostic of the existing production build
 measured one cold browser navigation each for slate, matchup and performance.

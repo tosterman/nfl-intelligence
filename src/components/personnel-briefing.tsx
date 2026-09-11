@@ -8,17 +8,24 @@ import type { PersonnelSnapshot, PlayerReport } from '../lib/personnel';
 import { pct, date } from '../lib/teams';
 
 function ParticipationFact({snapshot, player, sharedEmpty}: {snapshot: PersonnelSnapshot; player: PlayerReport; sharedEmpty: boolean}) {
-  if (hasUsageIdentityConflict(historical, snapshot, player)) return <p className="fine">Identity unresolved · participation withheld.</p>;
   const season = seasonParticipation(current, snapshot, player);
   const prior = usageForPlayer(historical, snapshot, player);
+  return <ParticipationFactView season={season} prior={prior} historicalConflict={hasUsageIdentityConflict(historical, snapshot, player)} sharedEmpty={sharedEmpty} year={player.season} />;
+}
+
+export function ParticipationFactView({season, prior, historicalConflict, sharedEmpty, year}: {
+  season: ReturnType<typeof seasonParticipation>; prior: ReturnType<typeof usageForPlayer>;
+  historicalConflict: boolean; sharedEmpty: boolean; year: number;
+}) {
   const leading = prior ? Object.entries({offense:prior.shares.offense_pct, defense:prior.shares.defense_pct, 'special teams':prior.shares.st_pct}).sort((a,b)=>b[1]-a[1])[0] : null;
   return <>
+    {historicalConflict && <p className="fine">Prior-season identity unresolved · historical participation withheld.</p>}
     {!sharedEmpty && <p className="fine">{season?.shares
-      ? `${player.season} earlier weeks: offense ${pct(season.shares.offense)}, defense ${pct(season.shares.defense)}, special teams ${pct(season.shares.specialTeams)} · ${season.appearances} appearances (${season.currentTeamAppearances} current team, ${season.formerTeamAppearances} former teams).`
-      : `${player.season} earlier-week participation ${season ? 'has no verified sample' : 'is not verified'}.`}</p>}
+      ? `${year} earlier weeks: offense ${pct(season.shares.offense)}, defense ${pct(season.shares.defense)}, special teams ${pct(season.shares.specialTeams)} · ${season.appearances} appearances (${season.currentTeamAppearances} current team, ${season.formerTeamAppearances} former teams).`
+      : `${year} earlier-week participation ${season ? 'has no verified sample' : 'is not verified'}.`}</p>}
     {season?.shares && <p className="fine">{season.retained ? 'Retained source collected' : 'Source collected'} {date(season.sourceRetrievedAt)}.</p>}
     {!season?.shares && prior && leading && <p className="fine">{prior.season} highest snap share: {leading[0]} {pct(leading[1])} · {prior.appearances} appearances · Teams: {prior.historicalTeams.join(', ')}.</p>}
-    {!season?.shares && !prior && <p className="fine">No verified prior-season participation. Missing history does not mean zero.</p>}
+    {!season?.shares && !prior && !historicalConflict && <p className="fine">No verified prior-season participation. Missing history does not mean zero.</p>}
   </>;
 }
 
