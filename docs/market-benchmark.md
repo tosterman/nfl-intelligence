@@ -46,3 +46,11 @@ against that real page. The checker also compares paired error values when
 present; this real zero-pair report does not exercise those positive rows.
 Use the public origin described in `docs/publication-resume.md` after deployment;
 local success does not establish public acceptance.
+
+Independent release review found that Python optimization could remove the
+browser checker's plain assertions. Reproduced this against the real local page
+by injecting a browser error under `python -O`; the original checker wrongly
+returned success. HTTP, redirect, numeric-display and browser/accessibility
+gates now raise explicit exceptions. The same optimized failure exercise now
+rejects the injected error, and the healthy optimized invocation passed both
+browsers at 20:09 UTC. The earlier normal-mode observations remain valid.

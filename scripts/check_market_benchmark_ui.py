@@ -22,8 +22,10 @@ def check(origin, expected):
                 errors = []
                 page.on('pageerror', lambda error: errors.append(str(error)))
                 response = page.goto(origin + '/performance', wait_until='networkidle')
-                assert response and response.status == 200, 'Performance page did not return HTTP 200'
-                assert page.url == origin + '/performance', 'Unexpected redirect'
+                if not response or response.status != 200:
+                    raise ValueError('Performance page did not return HTTP 200')
+                if page.url != origin + '/performance':
+                    raise ValueError('Unexpected redirect')
                 section = page.locator('.market-benchmark')
                 expect(section).to_have_count(1)
                 identity = section.locator('details').last
@@ -45,7 +47,8 @@ def check(origin, expected):
                     for column, key in ((1, 'modelMae'), (2, 'marketMae')):
                         # Compare the numerical display with its two-decimal tolerance.
                         displayed = float(cells.nth(column).inner_text())
-                        assert abs(displayed - row[key]) <= .005000001, 'Displayed error differs from report'
+                        if not abs(displayed - row[key]) <= .005000001:
+                            raise ValueError('Displayed error differs from report')
                 excluded = expected['excludedBookMarketCount']
                 if excluded:
                     games = expected['excludedGameCount']
@@ -62,7 +65,8 @@ def check(origin, expected):
                 page.add_script_tag(path=str(ROOT / 'node_modules/axe-core/axe.min.js'))
                 axe = page.evaluate("async()=>{const r=await axe.run(document.querySelector('.market-benchmark'));return {violations:r.violations.map(x=>({id:x.id,nodes:x.nodes.length})),incomplete:r.incomplete.map(x=>x.id)}}")
                 overflow = page.evaluate('document.documentElement.scrollWidth>innerWidth')
-                assert not overflow and not errors and not axe['violations'], 'Browser or accessibility check failed'
+                if overflow or errors or axe['violations']:
+                    raise ValueError('Browser or accessibility check failed')
                 results.append({'engine': engine, 'status': response.status,
                                 'overflow': overflow, 'errors': errors, 'axe': axe})
             finally:
