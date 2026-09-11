@@ -2049,6 +2049,10 @@ summary {
 .market-differences h3 {font-size:15px;margin-bottom:12px;}
 
 .personnel-teams{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}.personnel-list{list-style:none;padding:0}.personnel-list li{padding:1rem 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}.personnel-panel{margin-top:1.5rem}@media(max-width:700px){.personnel-teams{grid-template-columns:1fr;gap:1rem}}
+.personnel-briefing .personnel-list li{padding:.75rem 0}
+.personnel-briefing .personnel-list p{margin:.35rem 0 0;line-height:1.6}
+.personnel-briefing h4{margin:1.25rem 0 .5rem}
+.personnel-full-reports{margin-top:1rem}
 
 .matchup-nav{margin-top:24px;padding:18px 0;border-bottom:1px solid var(--line)}.matchup-nav>div{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.matchup-nav a{display:inline-flex;align-items:center;min-height:44px;padding:9px 16px;border:1px solid var(--line);border-radius:6px;font-size:13px;text-decoration:none;background:var(--panel)}.matchup-nav a:hover{background:var(--panel-2);border-color:var(--muted)}.panel h2[id]{scroll-margin-top:24px}.panel h2[id]:focus-visible{outline:2px solid currentColor;outline-offset:6px}
 

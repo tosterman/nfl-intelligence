@@ -4,7 +4,17 @@ Verdict: publicly deployed research edition; full operational and commercial lau
 
 ## Verified release evidence
 
-Latest completed checkpoint: `b898d2e` passed hosted run
+Current development checkpoint: `308a894` adds the reviewed personnel briefing,
+preserves independent current/historical identity evidence, and passes a local
+production build. The preceding full local application run passed 193 tests;
+the final identity correction passed three focused tests. Hosted run
+[34625656787](https://github.com/tosterman/nfl-intelligence/actions/runs/34625656787)
+is still in progress at this update. The previous hosted checkpoint `5989a3a`
+passed run 34625052770. None of these development changes is established as
+publicly deployed. A subsequent local spacing adjustment reduces the six-player
+mobile briefing from approximately 1096px to 889px without hiding reports.
+
+Earlier completed checkpoint: `b898d2e` passed hosted run
 [34623432915](https://github.com/tosterman/nfl-intelligence/actions/runs/34623432915):
 188 application tests, 341 Python tests, current-edition explanation verification,
 retained-input replay, browser deadline checks, production build and dependency
