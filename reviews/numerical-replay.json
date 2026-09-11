@@ -1,0 +1,127 @@
+{
+  "editionGeneratedAt": "2026-09-10T23:29:01.710181+00:00",
+  "siteSha256": "dc79461c5cf0c6fed3131f66c45f6d6b38d98ef491ed9f4a13a0445eaaee9a41",
+  "modelCodeHash": "08495229d4ed0202c1abbe941005ca259d0dd190b6c7442206f24f52b1470ad9",
+  "inputFiles": 18,
+  "matched": 15,
+  "mismatches": 0,
+  "unreplayable": 0,
+  "comparison": "Exact equality of full rounded prediction objects and training metadata; no numerical tolerance.",
+  "scope": "Current snapshots only. Numerical reproducibility is not vintage-data, publication or predictive-accuracy evidence.",
+  "records": [
+    {
+      "gameId": "2026_01_SF_LA",
+      "snapshotHash": "b054ae945a18dd5aadc844fa3400df7cb30c0b8cad3758ebf22e07271818d4c6",
+      "status": "matched",
+      "weeklyCutoff": "2026-09-09",
+      "recomputedPredictionHash": "b6a052e0b6bf26c6b4ee84c71c6a096c36c688affe1c695f452a54c071fbff8d"
+    },
+    {
+      "gameId": "2026_01_ARI_LAC",
+      "snapshotHash": "d7d97b8c48a5b4bd37d02eb6c63da4d44efd4318568e3b879f78549a9ff80e99",
+      "status": "matched",
+      "weeklyCutoff": "2026-09-09",
+      "recomputedPredictionHash": "60a3726f665c83452f3683aa6425c5e64bdf79cb4aca50841d7225dc631be4d3"
+    },
+    {
+      "gameId": "2026_01_ATL_PIT",
+      "snapshotHash": "4a7989642ffc06ff9ee9fc8a2f250261e7de5aceea352ffdc70e8fdd20cb6d08",
+      "status": "matched",
+      "weeklyCutoff": "2026-09-09",
+      "recomputedPredictionHash": "f83b907817c16ec8e817b854f68a010ce9c2dbd29c4f2973df20b0888086ca6f"
+    },
+    {
+      "gameId": "2026_01_BAL_IND",
+      "snapshotHash": "66ddabcf0e30da13173927a2a98dc292346490c5551e103347d38fc3b5d566e5",
+      "status": "matched",
+      "weeklyCutoff": "2026-09-09",
+      "recomputedPredictionHash": "5d0a7c389e0bdc9bbd26cc792d4050aac87c84dcb119e34e23d0bad75872edcb"
+    },
+    {
+      "gameId": "2026_01_BUF_HOU",
+      "snapshotHash": "b041c4664a6821d432bd93bece09b5732bc90b118565566c1e4fe734f0cf87b6",
+      "status": "matched",
+      "weeklyCutoff": "2026-09-09",
+      "recomputedPredictionHash": "30752d731ad852ca334745af76d4fae8da1a5aea3e8b960e328ded65595c468c"
+    },
+    {
+      "gameId": "2026_01_CHI_CAR",
+      "snapshotHash": "a2a858806da2091f0c702398ec70405785bd9c0a67480505584decc41028dd1b",
+      "status": "matched",
+      "weeklyCutoff": "2026-09-09",
+      "recomputedPredictionHash": "40887a18021bffa57fe757e664abaa57fa2da5960a447891488c42fe0f78aa33"
+    },
+    {
+      "gameId": "2026_01_CLE_JAX",
+      "snapshotHash": "9f2b602abcd070f057dae4d3d6fd3bcc0192c23d0ee3f74bc0a6157831fdb241",
+      "status": "matched",
+      "weeklyCutoff": "2026-09-09",
+      "recomputedPredictionHash": "d3cac4c026add58e354205ed220574b2e49926c6f5b4adae8fd16f6553a6c8dc"
+    },
+    {
+      "gameId": "2026_01_DAL_NYG",
+      "snapshotHash": "1abe373c1f2ee3905828959a8a9b1cbbc9c79a40b273a8507c5061642b541c01",
+      "status": "matched",
+      "weeklyCutoff": "2026-09-09",
+      "recomputedPredictionHash": "1ae53b9bb62e6f369616b46c9fa54f9e5874fc32c1602191a09f7a021c02b3d1"
+    },
+    {
+      "gameId": "2026_01_GB_MIN",
+      "snapshotHash": "89bc815ef17febf2775e8f4b5814548b0c5755b7d5234c12be983c19e552ff0d",
+      "status": "matched",
+      "weeklyCutoff": "2026-09-09",
+      "recomputedPredictionHash": "bb1bf93a38a0d07fb27d346f739ce424f58d471a55cf06283af5b36bc2c66af4"
+    },
+    {
+      "gameId": "2026_01_MIA_LV",
+      "snapshotHash": "4e315c43c9288085bc6f885ac29c8b6b6e8d0b715ebd578c6b09d5137df8769f",
+      "status": "matched",
+      "weeklyCutoff": "2026-09-09",
+      "recomputedPredictionHash": "0ca18771dcef2b81ffbc13491276a19eaec2e118b6dd18360cd8ac6c58d450df"
+    },
+    {
+      "gameId": "2026_01_NO_DET",
+      "snapshotHash": "d3578ab4272537289173f02e432ee0aadd2cd282d701f8bedb5c3ec87c71c486",
+      "status": "matched",
+      "weeklyCutoff": "2026-09-09",
+      "recomputedPredictionHash": "3697eb37cebaf2ad4d7bc9b384c90061113306aae0ed9eee81bed34d5aea42f3"
+    },
+    {
+      "gameId": "2026_01_NYJ_TEN",
+      "snapshotHash": "1ea205f4fa98f28be15d870ec9261977cc709318614199ba51274286c2517a1d",
+      "status": "matched",
+      "weeklyCutoff": "2026-09-09",
+      "recomputedPredictionHash": "50a15cea8492e1aab176cd3b144bd7d477fb3d204154e7cd9d9c883361543e50"
+    },
+    {
+      "gameId": "2026_01_TB_CIN",
+      "snapshotHash": "4685be8b46065cf180453b32e8493ba6ffe04cd7aacb9d03fbfc1bac5c37e823",
+      "status": "matched",
+      "weeklyCutoff": "2026-09-09",
+      "recomputedPredictionHash": "492b5415bd8fa557ca1e365604fb802e709e34564fd4c23c887d0dd813904725"
+    },
+    {
+      "gameId": "2026_01_WAS_PHI",
+      "snapshotHash": "b8bd1338b4059e9755708126264385dfd74d48f4952f7279db4f4427b1b2fa55",
+      "status": "matched",
+      "weeklyCutoff": "2026-09-09",
+      "recomputedPredictionHash": "a8dcff512518b3ace8a3ab51f986a4a94db35e999800ab001d102dd3c6826e7f"
+    },
+    {
+      "gameId": "2026_01_DEN_KC",
+      "snapshotHash": "1aad24d260a62e3fe0ccc8db11cf9cea8ebd72e62c51ca7acd8af2fb9fe5c051",
+      "status": "matched",
+      "weeklyCutoff": "2026-09-09",
+      "recomputedPredictionHash": "71cb21296707a54cff93368e5b836919a5a4eb6e5b8884576f35e084b4142d87"
+    }
+  ],
+  "verification": {
+    "networkBlocked": true,
+    "originalFilesUnchanged": true,
+    "validHashNumericalTamperingDetected": true,
+    "configurationMismatchRejected": true,
+    "contextMismatchRejected": true,
+    "missingScheduleRejected": true,
+    "sameWeekFutureResultPerturbationUnchanged": true
+  }
+}
