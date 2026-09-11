@@ -2,9 +2,13 @@ import Link from "next/link";
 import { weeklyBriefing, type WeeklyBriefing } from "@/lib/weekly-changes";
 import { date, time, teams } from "@/lib/teams";
 import { type Game } from "@/lib/types";
+import type { ContextBrief } from '@/lib/context-briefing';
+import { useClock } from './market-panel';
 const deltaText = (value: number) => `${value > 0 ? "+" : ""}${value.toFixed(3)}`;
 
-export function WeeklyChanges({ games, week, asOf, returnTo, briefing }: { games: Game[]; week: number; asOf: number; returnTo?: string; briefing?: WeeklyBriefing }) {
+export function WeeklyChanges({ games, week, asOf, returnTo, briefing, contextBriefs=[] }: { games: Game[]; week: number; asOf: number; returnTo?: string; briefing?: WeeklyBriefing; contextBriefs?: ContextBrief[] }) {
+  const now=useClock(asOf,contextBriefs.map(row=>row.expiresAt));
+  const context=contextBriefs.filter(row=>row.expiresAt>now && games.some(game=>game.id===row.gameId));
   const prepared = briefing ?? weeklyBriefing(games, asOf);
   const changes = prepared.changes;
   const comparable = changes.filter((row) => row.kind === "revision").length;
@@ -14,6 +18,21 @@ export function WeeklyChanges({ games, week, asOf, returnTo, briefing }: { games
   return (
     <details className="panel weekly-changes">
       <summary>What changed this week? <span>Week {week} · {comparable} comparable {comparable === 1 ? "revision" : "revisions"}</span></summary>
+      <h3>Reported personnel & weather changes</h3>
+      <p className="fine">Latest retained comparisons for upcoming games. These observations do not adjust the model. Unchanged or expired comparisons are omitted; no listed update does not establish that conditions are unchanged.</p>
+      {!context.length && <p>No fresh, verified personnel or weather changes to summarize.</p>}
+      {context.length>0 && <ul className="weekly-change-list">{context.map(row=>{
+        const game=games.find(game=>game.id===row.gameId)!;
+        const anchor=row.kind==='personnel'?'personnel-reports':'weather-history';
+        return <li key={`${row.kind}-${row.gameId}`}>
+          <Link href={`/games/${game.id}?from=${encodeURIComponent(returnTo??`/?week=${week}`)}#${anchor}`}>
+            {teams[game.away].name} {game.neutral?'vs.':'at'} {teams[game.home].name} · {row.kind==='personnel'?'Player reports':'Weather'} →
+          </Link>
+          <p>{row.text}</p>
+          <p className="fine">{row.kind==='personnel'?'Collected':'Forecast issued'} {date(row.previousAt)} {time(row.previousAt)} ET → {date(row.currentAt)} {time(row.currentAt)} ET{row.kind==='personnel'?'. Underlying report times are unknown.':''}</p>
+        </li>;
+      })}</ul>}
+      <h3>Model changes</h3>
       <p>
         Each matchup’s latest retained forecast versus its preceding run,
         ordered by largest absolute margin change, then win-chance change.

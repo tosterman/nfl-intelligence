@@ -5,6 +5,7 @@ import type { SlateWeather } from "@/lib/slate-weather";
 import { featuredGame, slateGameStatus } from "@/lib/slate-timing";
 import { WeeklyChanges } from "./weekly-changes";
 import type { WeeklyBriefing } from "@/lib/weekly-changes";
+import type { ContextBrief } from '@/lib/context-briefing';
 import type { OddsFeed } from "@/lib/odds";
 import { useState, useEffect, type ReactNode } from "react";
 import Link from "next/link";
@@ -36,6 +37,7 @@ export function Slate({
   odds,
   initialNow,
   briefings,
+  contextBriefs = [],
   weather = {},
   liveRecord,
 }: {
@@ -43,6 +45,7 @@ export function Slate({
   weather?: Record<string, SlateWeather>;
   games: Game[];
   briefings: Record<number, WeeklyBriefing>;
+  contextBriefs?: ContextBrief[];
   odds: OddsFeed;
   initialNow: number;
   freshness: FreshnessInput[];
@@ -281,7 +284,7 @@ export function Slate({
       </section>
       {liveRecord}
       <section className="games-section">
-        <WeeklyChanges games={weekGames} week={week} asOf={initialNow} returnTo={returnTo} briefing={briefings[week]} />
+        <WeeklyChanges games={weekGames} week={week} asOf={initialNow} returnTo={returnTo} briefing={briefings[week]} contextBriefs={contextBriefs} />
         <div className="section-heading">
           <div>
             <h2>

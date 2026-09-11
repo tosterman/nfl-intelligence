@@ -1,0 +1,8 @@
+{
+  "status": 200,
+  "weatherRows": 10,
+  "destination": "http://localhost:3000/games/2026_01_ATL_PIT?from=%2F%3Fweek%3D1%26q%3D%26filter%3Dall%26sort%3Dkickoff#weather-history",
+  "anchorExists": 1,
+  "overflow": false,
+  "pageErrors": []
+}

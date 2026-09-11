@@ -1,0 +1,9 @@
+# Weekly context briefing — local verification
+
+Implemented founding §21 personnel and weather comparisons in the existing weekly briefing. The client receives compact summaries, timestamps and expiry deadlines, not personnel or weather histories. Personnel changes use the exact game-bound publication and require successful collection; removed entries explicitly do not establish recovery. Weather comparisons use distinct retained issues from a single selected publication. Unchanged, mismatched, future, expired and closed-game comparisons are omitted.
+
+Independent code review identified repeated private storage reads. Fixed with one cached index and immutable-root/ref-keyed history caches, with freshness evaluated outside the cache on every render. Reads are limited to upcoming seven-day games and four concurrent requests.
+
+Validation: TypeScript passed. Full application suite passed 252 tests before adding the final render/navigation test; the context suite then passed all three tests. Real Chromium at 390px rendered ten current weather comparisons, followed the first link to its actual weather-history anchor with slate return parameters, and reported no page errors or horizontal overflow. See weekly-context-browser.json. Player source comparisons were unchanged in the current publication, so no synthetic personnel update was introduced.
+
+Scope: local implementation and verification only. Public deployment, scheduled worker acceptance and commercial launch gates remain outstanding. Broader browser/assistive-technology coverage is not established by this check.

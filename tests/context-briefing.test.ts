@@ -1,0 +1,45 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {personnelBrief,weatherBrief} from '../src/lib/context-briefing';
+import type {Game} from '../src/lib/types';
+import type {PersonnelEvidence} from '../src/lib/personnel-evidence';
+import type {WeatherObservation} from '../src/lib/weather-history';
+import {createElement} from 'react';
+import {renderToStaticMarkup} from 'react-dom/server';
+import {WeeklyChanges} from '../src/components/weekly-changes';
+const now=Date.parse('2026-09-11T14:00:00Z');
+const game={id:'game',season:2026,week:1,type:'REG',home:'CAR',away:'CHI',status:'scheduled',venue:'Venue',kickoff:'2026-09-13T17:00:00Z'} as Game;
+const evidence={quarterback:{season:2026,retrievedAt:'',assetUpdatedAt:'',sourceUrl:'',sourceHash:'',teams:{}},quarterbackCollection:{status:'ok'},participationCollection:{status:'ok'},historical:null,current:null,collection:{status:'ok'},snapshot:{status:'available',retrievedAt:'2026-09-11T13:00:00Z',assetUpdatedAt:'2026-09-11T12:00:00Z',sourceHash:'hash',players:[]},history:{schemaVersion:1,sourceHash:'hash',retrievedAt:'2026-09-11T13:00:00Z',previousRetrievedAt:'2026-09-11T10:00:00Z',changes:[{season:2026,week:1,type:'REG',team:'CHI',playerId:'id',playerName:'Player',position:'QB',kind:'changed',observedAfter:'2026-09-11T10:00:00Z',observedBy:'2026-09-11T13:00:00Z',eventTime:null,fields:{reportStatus:{before:'Questionable',after:'Out'}}}]}} as PersonnelEvidence;
+test('personnel summary requires fresh, successful, bound comparison and actual changes',()=>{
+  assert.match(personnelBrief(evidence,game,now)!.text,/1 player entry changed/);
+  assert.equal(personnelBrief(evidence,{...game,week:2},now),null);
+  assert.equal(personnelBrief(evidence,game,now+31*3600000),null);
+  assert.equal(personnelBrief(evidence,game,now-2*3600000),null);
+  assert.equal(personnelBrief({...evidence,collection:{status:'failed'}},game,now),null);
+  const unchanged=structuredClone(evidence);
+  unchanged.history.changes[0].fields.reportStatus.after='Questionable';
+  assert.equal(personnelBrief(unchanged,game,now),null);
+  unchanged.history.changes[0].kind='no-longer-present';
+  assert.match(personnelBrief(unchanged,game,now)!.text,/does not establish recovery or availability/);
+});
+const first:WeatherObservation={gameId:game.id,venue:game.venue,kickoff:game.kickoff,status:'available',issuedAt:'2026-09-11T10:00:00Z',retrievedAt:'2026-09-11T11:00:00Z',periodStart:'2026-09-13T17:00:00Z',periodEnd:'2026-09-13T18:00:00Z',temperature:70,temperatureUnit:'F',hash:'one',sourceHash:'one',locationHash:'location'};
+const current={...first,issuedAt:'2026-09-11T12:00:00Z',retrievedAt:'2026-09-11T13:00:00Z',temperature:73,hash:'two',sourceHash:'two'};
+test('weather summary compares issued forecasts, excludes repeated values, closes on expiry and kickoff',()=>{
+  const history={schemaVersion:1,records:[first,current]};
+  assert.match(weatherBrief(history,current,game,now)!.text,/temperature/);
+  assert.equal(weatherBrief(history,current,game,now+31*3600000),null);
+  assert.equal(weatherBrief(history,current,game,now-2*3600000),null);
+  assert.equal(weatherBrief(history,current,{...game,venue:'Other'},now),null);
+  assert.equal(weatherBrief(history,current,{...game,status:'final'},now),null);
+  const same={...current,temperature:70};
+  assert.equal(weatherBrief({schemaVersion:1,records:[first,same]},same,game,now),null);
+  assert.equal(weatherBrief({schemaVersion:1,records:[current,{...current,retrievedAt:'2026-09-11T13:30:00Z'}]},current,game,now),null);
+});
+test('briefing links retain slate state and expired rows cannot render as current changes',()=>{
+  const row=personnelBrief(evidence,game,now)!;
+  const returnTo='/?week=1&q=CHI&filter=all&sort=kickoff';
+  const render=(asOf:number)=>renderToStaticMarkup(createElement(WeeklyChanges,{games:[game],week:1,asOf,returnTo,contextBriefs:[row],briefing:{changes:[],unavailableIds:[]}}));
+  assert.ok(render(now).includes(`${encodeURIComponent(returnTo)}#personnel-reports`));
+  assert.match(render(now),/Underlying report times are unknown/);
+  assert.doesNotMatch(render(row.expiresAt),/1 player entry changed/);
+});
