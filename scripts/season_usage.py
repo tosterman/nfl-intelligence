@@ -32,7 +32,10 @@ def season_usage(gsis_id, registry, snaps, games, cutoff, season, kind, week, cu
         eligible_rows.append(row)
     def summarize(rows):
         return prior_usage(gsis_id, registry, rows, eligible_games, cutoff)
+    overall = summarize(eligible_rows)
+    selected = {g['gameId'] for g in overall.get('games', [])}
+    partition_rows = [r for r in eligible_rows if r['game_id'] in selected]
     return {'season': season, 'type': kind, 'week': week, 'cutoff': cutoff.isoformat(),
-            'overall': summarize(eligible_rows),
-            'currentTeam': summarize([r for r in eligible_rows if r['team'] == current_team]),
-            'formerTeams': summarize([r for r in eligible_rows if r['team'] != current_team])}
+            'overall': overall,
+            'currentTeam': summarize([r for r in partition_rows if r['team'] == current_team]),
+            'formerTeams': summarize([r for r in partition_rows if r['team'] != current_team])}

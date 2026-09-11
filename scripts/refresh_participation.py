@@ -18,7 +18,10 @@ FIELDS = {'game_id', 'season', 'week', 'game_type', 'pfr_player_id', 'team', 'op
 
 def validate(raw, season):
     reader = csv.DictReader(io.StringIO(raw.decode('utf-8-sig')))
-    if not FIELDS.issubset(reader.fieldnames or []):
+    headers = reader.fieldnames or []
+    if len(headers) != len(set(headers)) or any(not name.strip() for name in headers):
+        raise ValueError('Duplicate or blank participation columns')
+    if not FIELDS.issubset(headers):
         raise ValueError('Missing participation columns')
     rows, seen = [], set()
     for row in reader:

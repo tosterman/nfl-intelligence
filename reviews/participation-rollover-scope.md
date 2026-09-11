@@ -41,7 +41,17 @@ the same verified 187 rows. Two collector tests cover malformed/empty/wrong-seas
 data, duplicate identities and invalid shares, including preservation of prior
 source bytes on failure. Six scope tests now include named postseason rounds.
 
-Scheduled wiring, corroborated identity binding and the public selector/UI
-remain unfinished. This rehearsal does not replace the accepted public usage
+`build_season_participation.py` now binds the exact current personnel and QB
+inputs to the identity audit, validates retained source and registry bytes, and
+uses the earliest of weekly kickoff, report acquisition and participation
+acquisition as the cutoff. The initial artifact has 139 reports: 134 matched
+identities and five withheld. A real-source binding test verifies the empty
+Week 1 sample, withheld identities, failure/retained-source labeling and rejection
+of an audit for different personnel inputs. Duplicate/blank CSV headers now fail
+validation following independent review. Team partitions use the same overall
+eight-appearance sample.
+
+Scheduled wiring and the public selector/UI remain unfinished. The new artifact
+does not yet replace the accepted public usage
 artifact. It must not change numerical forecasts, claim player quality or infer
 expected availability from observed participation.

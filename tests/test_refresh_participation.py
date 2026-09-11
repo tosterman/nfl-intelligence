@@ -26,6 +26,10 @@ class ParticipationCollection(unittest.TestCase):
 
     def test_duplicate_and_bad_values_fail(self):
         lines = self.raw.splitlines()
+        with self.assertRaisesRegex(ValueError, 'Duplicate or blank'):
+            validate(lines[0]+b',offense_pct\n'+lines[1]+b',1\n', 2026)
+        with self.assertRaisesRegex(ValueError, 'Duplicate or blank'):
+            validate(lines[0]+b',\n'+lines[1]+b',1\n', 2026)
         with self.assertRaises(ValueError): validate(self.raw+b'\n'+lines[1], 2026)
         import csv, io
         rows = list(csv.DictReader(io.StringIO(self.raw.decode())))

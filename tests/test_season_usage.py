@@ -59,3 +59,13 @@ class SeasonUsage(unittest.TestCase):
         self.games['week1']['type'] = 'WC'
         result = self.usage([{**self.row, 'game_type': 'POST'}], kind='POST', week=2)
         self.assertEqual(result['overall']['appearances'], 1)
+
+    def test_team_partitions_share_one_eight_appearance_sample(self):
+        template = self.games['week1']
+        self.games = {str(i): {**template, 'kickoff': self.cutoff-timedelta(days=i+2)} for i in range(10)}
+        rows = [{**self.row, 'game_id': str(i), 'team': 'B' if i < 5 else 'A',
+                 'opponent': 'A' if i < 5 else 'B'} for i in range(10)]
+        result = self.usage(rows)
+        self.assertEqual(result['overall']['appearances'], 8)
+        self.assertEqual(result['currentTeam']['appearances'], 5)
+        self.assertEqual(result['formerTeams']['appearances'], 3)
