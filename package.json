@@ -8,7 +8,7 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
-    "data:refresh": "python scripts/refresh.py"
+    "data:refresh": "python scripts/refresh_edition.py"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",

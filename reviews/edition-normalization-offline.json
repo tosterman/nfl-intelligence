@@ -1,0 +1,9 @@
+{
+  "scope": "Isolated offline full engine refresh using retained real inputs; no public edition or provider requests.",
+  "inputManifest": "05c6bbe901c8f646d0faf488384827b27afcf161084de8ef2b0c72a269268582",
+  "editionSha256": "abe2bf32338dac4c5a3f74e9b8d9a71e99125348a3607add695ad40f8c98b9e6",
+  "gitBytesMatch": true,
+  "predictionsPreserved": true,
+  "ledgerBytesPreserved": true,
+  "games": 272
+}
