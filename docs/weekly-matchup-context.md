@@ -33,8 +33,8 @@ older snapshot artifacts must not be silently overwritten.
    `refresh_weekly_matchup.py`. Provider asset URL, size, SHA-256 and update time
    are checked; files older than 30 hours fail. Collection completion time is
    retained separately from its start. A local real 2026 capture succeeded with
-   a Week 1 `no-eligible-games` result. Prior-season rotation remains to be built;
-   the existing dated 2025 panels still use their pinned archive.
+   a Week 1 `no-eligible-games` result. Prior-season acquisition now derives its
+   scope from the site season and preserves the accepted sample on failure.
 2. Content-addressed weekly artifacts and manifests are retained. First public
    publication identities remain separate work; local retention proves no public
    pregame availability.
@@ -68,7 +68,7 @@ excludes the Super Bowl at the February 8 boundary. All three regular-season
 artifact hashes remain unchanged. Earlier synthetic POST-only tests had missed
 this source vocabulary mismatch; a regression now uses the actual round codes.
 
-Prior-season rotation remains open. The provider's 2025 compressed source still
+Prior-season hosted rotation remains unverified. The provider's 2025 compressed source still
 matches the retained hash, but its asset update is August 13, 2026. A historical
 archive's age must be treated separately from the 30-hour current-feed freshness
 rule; immutable source identity and complete-season validation remain required.
@@ -94,9 +94,10 @@ panels now consume this artifact through `selectPriorContext`, which validates
 the forecast/prior-season relationship, teams, source hashes, and dates. It does
 not apply current-feed expiry to historical evidence. The runtime release copy
 includes the artifact. Two additional TypeScript tests cover selection, a
-synthetic following-season transition, and every historical count. Automatic
-historical acquisition still remains pending; UI consumption alone is not a
-complete season-rollover implementation.
+synthetic following-season transition, and every historical count. Historical
+acquisition and workflow integration are now implemented on the development
+branch. The real local capture replayed exactly; a scheduled hosted run and a
+real following-season transition remain unverified.
 
 Acquisition has four additional tests: immutable repeat capture/corrupt existing
 object rejection; bad digest/stale/future metadata rejection; and failed refresh

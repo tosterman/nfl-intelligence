@@ -1,9 +1,9 @@
 import React from "react";
-import evidence from "../../data/prior-matchup-context.json";
-import { selectPriorContext } from '../lib/prior-matchup';
+import retainedEvidence from "../../data/prior-matchup-context.json";
+import { selectPriorContext, type PriorMatchup } from '../lib/prior-matchup';
 import { WeeklyMatchup } from './weekly-matchup';
 
-type Props = { away: string; home: string; season: number; kickoff: string | null; week?: number; type?: string };
+type Props = { away: string; home: string; season: number; kickoff: string | null; week?: number; type?: string; evidence?: PriorMatchup };
 function Rate({ counts }: { counts: { possessions: number; touchdowns: number } }) {
   return <span className="explosive-rate">
     <strong>{counts.possessions ? `${(100 * counts.touchdowns / counts.possessions).toFixed(1)}%` : "Unavailable"}</strong>
@@ -11,12 +11,12 @@ function Rate({ counts }: { counts: { possessions: number; touchdowns: number } 
   </span>;
 }
 
-export function RedZoneMatchup({ away, home, season, kickoff, week, type }: Props) {
+export function RedZoneMatchup({ away, home, season, kickoff, week, type, evidence = retainedEvidence }: Props) {
   const valid = selectPriorContext(evidence, { away, home, season, kickoff });
   if (!valid) return <section className="panel"><h2 id="red-zone-heading" tabIndex={-1}>Inside-20 history unavailable</h2>
     <WeeklyMatchup game={{ away, home, season, kickoff, week, type }} kind="inside20" />
     <p>Compatible prior-season possession evidence is not available for this matchup.</p></section>;
-  const rows = evidence.teams as Record<string, typeof evidence.teams.SF>;
+  const rows = evidence.teams;
   return <section className="panel red-zone-panel" aria-labelledby="red-zone-heading">
     <div className="eyebrow">INSIDE THE 20 · MATCHUP</div>
     <h2 id="red-zone-heading" tabIndex={-1}>Who finished the drive?</h2>

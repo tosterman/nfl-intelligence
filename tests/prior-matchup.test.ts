@@ -1,6 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import evidence from '../data/prior-matchup-context.json';
+// Fixed-vintage regression. Live artifacts are replayed against their own
+// source manifest in test_prior_matchup_refresh.py, allowing future revisions.
+import evidence from '../data/weekly-matchup-sources/a8cb653e80978bbbca5dac9aedd37839756b4700c4be09298c40cf0a54e27a16.snapshot.json';
 import big from '../data/explosive-plays.json';
 import red from '../data/red-zone.json';
 import { selectPriorContext } from '../src/lib/prior-matchup';

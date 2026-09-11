@@ -1,9 +1,9 @@
 import React from "react";
-import evidence from "../../data/prior-matchup-context.json";
-import { selectPriorContext } from '../lib/prior-matchup';
+import retainedEvidence from "../../data/prior-matchup-context.json";
+import { selectPriorContext, type PriorMatchup } from '../lib/prior-matchup';
 import { WeeklyMatchup } from './weekly-matchup';
 
-type Props = { away: string; home: string; season: number; kickoff: string | null; week?: number; type?: string };
+type Props = { away: string; home: string; season: number; kickoff: string | null; week?: number; type?: string; evidence?: PriorMatchup };
 type Counts = { plays: number; explosive: number };
 
 function Rate({ counts }: { counts: Counts }) {
@@ -13,12 +13,12 @@ function Rate({ counts }: { counts: Counts }) {
   </span>;
 }
 
-export function ExplosiveMatchup({ away, home, season, kickoff, week, type }: Props) {
+export function ExplosiveMatchup({ away, home, season, kickoff, week, type, evidence = retainedEvidence }: Props) {
   const valid = selectPriorContext(evidence, { away, home, season, kickoff });
   if (!valid) return <section className="panel"><h2 id="explosive-heading" tabIndex={-1}>Historical comparison unavailable</h2>
     <WeeklyMatchup game={{ away, home, season, kickoff, week, type }} kind="big-play" />
     <p>Compatible prior-season big-play evidence is not available for this matchup.</p></section>;
-  const rows = evidence.teams as Record<string, typeof evidence.teams.BUF>;
+  const rows = evidence.teams;
   return <section className="panel explosive-panel" aria-labelledby="explosive-heading">
     <div className="eyebrow">BIG-PLAY MATCHUP</div>
     <h2 id="explosive-heading" tabIndex={-1}>Who created the big plays?</h2>

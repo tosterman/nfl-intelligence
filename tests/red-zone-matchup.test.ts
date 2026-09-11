@@ -1,3 +1,4 @@
+import evidence from '../data/weekly-matchup-sources/a8cb653e80978bbbca5dac9aedd37839756b4700c4be09298c40cf0a54e27a16.snapshot.json';
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import React from "react";
@@ -5,7 +6,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { RedZoneMatchup } from "../src/components/red-zone-matchup";
 
 test("red-zone comparison labels historical possessions and the strict boundary", () => {
-  const html = renderToStaticMarkup(React.createElement(RedZoneMatchup, {away: "SF", home: "LA", season: 2026, kickoff: "2026-09-11T00:35:00Z"}));
+  const html = renderToStaticMarkup(React.createElement(RedZoneMatchup, {evidence, away: "SF", home: "LA", season: 2026, kickoff: "2026-09-11T00:35:00Z"}));
   assert.match(html, /SF offense/);
   assert.match(html, /LA defense/);
   assert.match(html, /strictly inside/);
@@ -15,8 +16,8 @@ test("red-zone comparison labels historical possessions and the strict boundary"
 });
 
 test("red-zone evidence is unavailable for missing dates and incompatible seasons", () => {
-  for (const changes of [{season: 2025}, {season: 2027}, {away: "constructor"}, {kickoff: null}, {kickoff: "bad"}]) {
-    const html = renderToStaticMarkup(React.createElement(RedZoneMatchup, {away: "SF", home: "LA", season: 2026, kickoff: "2026-09-11T00:35:00Z", ...changes}));
+  for (const changes of [{season: 2025}, {season: 2027}, {evidence, away: "constructor"}, {kickoff: null}, {kickoff: "bad"}]) {
+    const html = renderToStaticMarkup(React.createElement(RedZoneMatchup, {evidence, away: "SF", home: "LA", season: 2026, kickoff: "2026-09-11T00:35:00Z", ...changes}));
     assert.match(html, /Inside-20 history unavailable/);
     assert.doesNotMatch(html, /touchdowns from/);
   }

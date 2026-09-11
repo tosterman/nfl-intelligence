@@ -86,7 +86,7 @@ def main():
     if branch!='main':raise ValueError('Native publication requires main checkout')
     expected=json.loads((ROOT/'data/site.json').read_text());ledger=json.loads((ROOT/'data/ledger.json').read_text())
     validate_forecast_edition(expected,ledger)
-    subprocess.run(['git','add','data/weekly-matchup-context.json','data/weekly-matchup-sources/','data/source-record-changes.json','data/forecast-input-archive/','data/player-usage.json','data/personnel-changes.json','data/site.json','data/ledger.json','data/source.json','data/weather.json','data/weather-ledger.json','data/weather-sources/','data/quarterbacks.json','data/quarterback-collection.json','data/quarterback-sources/','data/personnel.json','data/personnel-collection.json','data/personnel-sources/'],check=True)
+    subprocess.run(['git','add','data/prior-matchup-context.json','data/prior-matchup-collection.json','data/weekly-matchup-context.json','data/weekly-matchup-sources/','data/source-record-changes.json','data/forecast-input-archive/','data/player-usage.json','data/personnel-changes.json','data/site.json','data/ledger.json','data/source.json','data/weather.json','data/weather-ledger.json','data/weather-sources/','data/quarterbacks.json','data/quarterback-collection.json','data/quarterback-sources/','data/personnel.json','data/personnel-collection.json','data/personnel-sources/'],check=True)
     changed=subprocess.run(['git','diff','--cached','--quiet']).returncode
     if changed==1:subprocess.run(['git','commit','-m','data: publish refreshed forecast edition'],check=True)
     elif changed!=0:raise RuntimeError('Cannot inspect staged publication')

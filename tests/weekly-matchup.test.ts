@@ -6,6 +6,7 @@ import { selectWeeklyContext, type WeeklySnapshot } from '../src/lib/weekly-matc
 import { WeeklyMatchup } from '../src/components/weekly-matchup';
 import { ExplosiveMatchup } from '../src/components/explosive-matchup';
 import { RedZoneMatchup } from '../src/components/red-zone-matchup';
+import priorEvidence from '../data/weekly-matchup-sources/a8cb653e80978bbbca5dac9aedd37839756b4700c4be09298c40cf0a54e27a16.snapshot.json';
 
 const now = Date.now();
 const game = { away: 'BUF', home: 'NYJ', season: 2026, week: 2, type: 'REG', kickoff: new Date(now + 3600000).toISOString() };
@@ -48,7 +49,7 @@ test('no qualifying inside-20 possessions are unavailable, not zero percent', ()
 
 test('missing prior-season evidence cannot suppress the independent current-season panel', () => {
   for (const Component of [ExplosiveMatchup, RedZoneMatchup]) {
-    const html = renderToStaticMarkup(React.createElement(Component, {...game, season: 2027}));
+    const html = renderToStaticMarkup(React.createElement(Component, {...game, season: 2027, evidence: priorEvidence}));
     assert.match(html, /This season · 2027/);
     assert.match(html, /Compatible prior-season/);
     assert.doesNotMatch(html, /history remains below/);

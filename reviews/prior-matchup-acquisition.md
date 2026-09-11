@@ -21,8 +21,19 @@ The original four current-season acquisition tests pass after the shared
 collector change. Historical tests cover cache reuse, stale schedule rejection,
 corrupt cached bytes, preservation after failure and exact retained-input replay.
 
-Scheduled integration is pending. Before wiring it, update fixed-vintage UI
-regression tests so legitimate future source revisions are checked against their
-own retained evidence, rather than required to reproduce a superseded vintage.
-Also retain the new artifact and collection record in publication/recovery paths.
-No hosted refresh or deployment was performed in this checkpoint.
+The development workflow now invokes the historical collector independently of
+weekly collection. Git publication and recovery artifacts retain both the
+accepted sample and collection outcome. Fixed-vintage UI regression tests use an
+immutable archived snapshot; current captures are replayed against their own
+source manifest rather than required to match a superseded vintage. The panel
+components accept evidence explicitly for these tests and use retained current
+evidence by default in the application.
+
+The production workflow remains disabled pending release recovery. No actual
+scheduled historical refresh or hosted deployment has been verified.
+
+Integration validation: all 304 Python tests passed. All 168 TypeScript tests
+passed before the final fixture-injection edits, followed by all 11 affected
+panel/selector tests passing. TypeScript checking also passed after component
+fixture injection. Expected simulated acquisition failures in the Python test
+output are part of failure-path coverage, not successful live collections.
