@@ -346,7 +346,7 @@ export function Slate({
               game={g}
               returnTo={returnTo}
               odds={odds}
-              initialNow={now}
+              initialNow={now} freshness={freshness}
             />
           ))}
         </div>
@@ -394,12 +394,12 @@ function GameCard({
   game: g,
   returnTo,
   odds,
-  initialNow,
+  initialNow, freshness,
 }: {
   game: Game;
   returnTo: string;
   odds: OddsFeed;
-  initialNow: number;
+  initialNow: number; freshness: FreshnessInput[];
 }) {
   const p = g.snapshot?.prediction;
   const fav = p ? (p.homeWinProbability >= 0.5 ? g.home : g.away) : null;
@@ -478,7 +478,7 @@ function GameCard({
               <small>Model total</small>
               <strong>{p.total.toFixed(1)}</strong>
             </div>
-            <MarketCard game={g} feed={odds} initialNow={initialNow} />
+            <MarketCard game={g} feed={odds} initialNow={initialNow} prediction={p} freshness={freshness} />
           </div>
         </>
       ) : (

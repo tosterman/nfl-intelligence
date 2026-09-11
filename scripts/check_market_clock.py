@@ -22,6 +22,7 @@ with sync_playwright() as p:
   live=page.get_by_role('status',name='Current market availability')
   assert live.count()==1,'Market changes need a persistent status region'
   expect(live).to_contain_text('spread available')
+  expect(page.locator('#card')).to_contain_text('Model total:')
   row=page.get_by_role('row').filter(has_text='LAR spread').first
   expect(row.locator('td').last).to_contain_text('-3.5')
   expect(page.locator('#weather')).to_have_text('Weather fixture')
@@ -38,6 +39,7 @@ with sync_playwright() as p:
   expect(page.locator('#card')).to_contain_text('Spread not quoted')
   expect(live).to_contain_text('spread unavailable')
   expect(live).to_contain_text('Model comparisons withheld')
+  expect(page.locator('#card')).not_to_contain_text('Model total:')
   expect(page.locator('p').filter(has_text='The model inputs are stale.')).to_have_count(1)
   expect(page.get_by_role('row').filter(has_text='Total').first.locator('td').last).to_contain_text('48.5')
   page.clock.run_for(20000)

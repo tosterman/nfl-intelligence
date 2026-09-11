@@ -741,7 +741,7 @@ select:focus-visible {
 }
 .card-stats {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   padding: 18px 21px 19px;
   gap: 5px;
 }
@@ -907,6 +907,12 @@ select:focus-visible {
   border-radius: 8px;
   width: max-content;
   max-width: calc(100% - 32px);
+}
+.card-stats .card-market {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  margin-top: 8px;
 }
 .book-snapshot {
   margin-top: 24px;

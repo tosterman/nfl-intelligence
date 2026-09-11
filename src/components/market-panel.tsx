@@ -54,17 +54,24 @@ export function MarketCard({
   game,
   feed,
   initialNow,
+  prediction,
+  freshness,
 }: {
   game: Match;
   feed: OddsFeed;
   initialNow: number;
+  prediction?: Prediction;
+  freshness?: FreshnessInput[];
 }) {
-  const now = useClock(initialNow, marketDeadlines(feed, game)),
+  const now = useClock(initialNow, marketDeadlines(feed, game, freshness)),
     assessment = assessGameOdds(feed, game, now),
     books = assessment.books;
   const book = defaultBook(books);
+  const compare = prediction && freshness && assessFreshness(freshness, now).status === 'ok';
+  const spreadDifference = prediction && book?.spread ? prediction.homeMargin + book.spread.homePoint : null;
+  const totalDifference = prediction && book?.total ? prediction.total - book.total.point : null;
   return (
-    <div>
+    <div className="card-market">
       <small>Market snapshot</small>
       <span>
         {book?.spread
@@ -75,6 +82,12 @@ export function MarketCard({
       </span>
       {book && <small>{book.name}</small>}
       {book?.spread && <small>As of {stamp(book.spread.observedAt)}</small>}
+      {book && <span>Market total {book.total ? book.total.point.toFixed(1) : 'not quoted'}</span>}
+      {book?.total && <small>Over {signed(book.total.overPrice, 0)} / Under {signed(book.total.underPrice, 0)} · As of {stamp(book.total.observedAt)}</small>}
+      {compare && spreadDifference !== null && <span>Model: {teams[game.home].short} {Math.abs(spreadDifference).toFixed(1)} pts {Math.abs(spreadDifference) < 0.05 ? 'difference' : spreadDifference > 0 ? 'stronger' : 'weaker'} than spread</span>}
+      {compare && totalDifference !== null && <span>Model total: {Math.abs(totalDifference).toFixed(1)} pts {Math.abs(totalDifference) < 0.05 ? 'difference' : totalDifference > 0 ? 'higher' : 'lower'}</span>}
+      {prediction && book && !compare && <small>Model comparison awaiting fresh inputs</small>}
+      {compare && book && <small>Model differences, not proven betting edges</small>}
     </div>
   );
 }

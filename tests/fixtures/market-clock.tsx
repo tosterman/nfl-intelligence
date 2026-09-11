@@ -10,5 +10,5 @@ const prediction=site.games.find(g=>g.snapshot)!.snapshot!.prediction;
 const contextRoot=document.createElement('div');document.body.append(contextRoot);
 const expiry=Date.parse('2026-09-10T15:59:59.500Z');
 createRoot(contextRoot).render(<><div id='weather'><WeatherExpiry expiresAt={expiry}>Weather fixture</WeatherExpiry></div><div id='personnel'><PersonnelExpiry expiresAt={expiry}>Personnel fixture</PersonnelExpiry></div></>);
-createRoot(document.getElementById('root')!).render(<><div id='card'><MarketCard game={game} feed={feed} initialNow={Date.now()}/></div><MarketPanel game={game} feed={feed} prediction={prediction} freshness={[{name:'Model',retrievedAt:'2026-09-09T10:00:00Z'}]} initialNow={Date.now()}/></>);
+createRoot(document.getElementById('root')!).render(<><div id='card'><MarketCard game={game} feed={feed} initialNow={Date.now()} prediction={prediction} freshness={[{name:"Model",retrievedAt:"2026-09-09T10:00:00Z"}]}/></div><MarketPanel game={game} feed={feed} prediction={prediction} freshness={[{name:'Model',retrievedAt:'2026-09-09T10:00:00Z'}]} initialNow={Date.now()}/></>);
 

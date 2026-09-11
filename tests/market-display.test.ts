@@ -13,6 +13,23 @@ const game = {
   status: "scheduled",
   kickoff: "2026-09-11T00:35:00Z",
 };
+test('slate comparisons use the selected book and suppress stale model or quotes', () => {
+  const prediction = {...site.games.find(g => g.snapshot)!.snapshot!.prediction, homeMargin: 5.5, total: 47};
+  const book = {book: 'fanduel', name: 'FanDuel', spread: {observedAt: at, homePoint: -3.5, homePrice: -110, awayPrice: -110},
+    total: {observedAt: at, point: 45, overPrice: -105, underPrice: -115}, moneyline: null};
+  const feed: OddsFeed = {state: 'ready', fetchedAt: at, events: [{...game, id: 'g', books: [book]}]};
+  const render = (p = prediction, initialNow = Date.parse(at), freshness = [{name: 'model', retrievedAt: at}]) =>
+    renderToStaticMarkup(createElement(MarketCard, {game, feed, initialNow, prediction: p, freshness}));
+  assert.match(render(), /2.0 pts stronger than spread/);
+  assert.match(render(), /Market total 45.0/);
+  assert.match(render(), /2.0 pts higher/);
+  assert.match(render({...prediction, homeMargin: -1.5, total: 42}), /5.0 pts weaker/);
+  assert.match(render({...prediction, total: 42}), /3.0 pts lower/);
+  assert.match(render({...prediction, homeMargin: 3.5, total: 45}), /0.0 pts difference/);
+  assert.doesNotMatch(render(prediction, Date.parse(at) + 21600001), /pts stronger|pts higher/);
+  assert.doesNotMatch(render(prediction, Date.parse(game.kickoff)), /pts stronger|pts higher/);
+  assert.doesNotMatch(render(prediction, Date.parse(at), []), /pts stronger|pts higher/);
+});
 test("cross-book snapshot preserves distinct quotes and excludes expired books", () => {
   const pair = { observedAt: at, homePrice: -110, awayPrice: -110 };
   const feed: OddsFeed = {
