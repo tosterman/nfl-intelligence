@@ -15,6 +15,7 @@ import { fairMoneyline } from "@/lib/math";
 import { TeamMark } from "@/components/brand";
 import { RevisionHistory } from "@/components/revision-history";
 import { WeatherContext } from "@/components/weather-context";
+import { WeatherRevisionBrief } from "@/components/weather-history";
 import { ScheduleContext } from "@/components/schedule-context";
 import { PersonnelPanel } from "@/components/personnel-panel";
 import { ExplosiveMatchup } from "@/components/explosive-matchup";
@@ -224,6 +225,7 @@ export default async function GamePage({
                 <ModelBrief prediction={p} home={teams[g.home].name} away={teams[g.away].name} />
                 <MarketBrief game={g} feed={marketData![0]} prediction={p} freshness={freshnessInputs(site)} initialNow={Date.now()} />
                 {g.history.length > 0 && <RevisionBrief game={g} asOf={Date.now()} />}
+                <WeatherRevisionBrief game={g} />
                 <div className="notice">
                   <strong>Room for a different result</strong>
                   <p>The middle 80% of modeled margins span {marginRange(p.marginInterval80, teams[g.home].name, teams[g.away].name) ?? "an unavailable range"}.</p>

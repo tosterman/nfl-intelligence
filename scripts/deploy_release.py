@@ -13,7 +13,7 @@ def release_files():
     paths=[p for p in ROOT.iterdir() if p.name in ALLOW_ROOT]
     for folder in ['src','public']:
         paths.extend(p for p in (ROOT/folder).rglob('*') if p.is_file())
-    for name in ['site.json','weather.json','weather-venues.json','weather-osm-venues.json',
+    for name in ['site.json','weather.json','weather-history.json','weather-venues.json','weather-osm-venues.json',
                  'personnel.json','personnel-collection.json','personnel-changes.json','player-usage.json',
                    'quarterbacks.json','quarterback-collection.json','explosive-plays.json','red-zone.json','source-record-changes.json','weekly-matchup-context.json','prior-matchup-context.json','total-explanations.json']:
         paths.append(ROOT/'data'/name)
@@ -36,6 +36,7 @@ def main():
     validate_forecast_edition(expected,ledger)
     subprocess.run([sys.executable, '-m', 'scripts.verify_prior_matchup'], cwd=ROOT, check=True)
     subprocess.run([sys.executable, str(ROOT / 'scripts/verify_total_explanations.py')], cwd=ROOT, check=True)
+    subprocess.run([sys.executable, str(ROOT / 'scripts/weather_history.py'), '--check'], cwd=ROOT, check=True)
     result=request('/v13/deployments',{'name':'nfl-intelligence','project':os.environ['VERCEL_PROJECT_ID'],'target':'production','files':release_files(),'projectSettings':{'framework':'nextjs','nodeVersion':'22.x'}})
     save_recovery_metadata(result)
     for _ in range(90):

@@ -1,0 +1,98 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "gameId": "2026_01_ATL_PIT",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "gameId": "2026_01_DAL_NYG",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "gameId": "2026_01_ATL_PIT",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "gameId": "2026_01_DAL_NYG",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "gameId": "2026_01_ATL_PIT",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "gameId": "2026_01_DAL_NYG",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "gameId": "2026_01_ATL_PIT",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "gameId": "2026_01_DAL_NYG",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "gameId": "2026_01_ATL_PIT",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "gameId": "2026_01_DAL_NYG",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "gameId": "2026_01_ATL_PIT",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "gameId": "2026_01_DAL_NYG",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0
+  }
+]

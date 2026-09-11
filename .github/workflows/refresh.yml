@@ -45,6 +45,8 @@ jobs:
       - name: Build and retain verified total explanations
         run: python scripts/retain_total_explanations.py
       - run: python scripts/refresh_weather.py
+      - name: Replay retained weather history
+        run: python scripts/weather_history.py
       - name: Refresh weekly descriptive matchup context
         continue-on-error: true
         run: python -m scripts.refresh_weekly_matchup
@@ -98,6 +100,7 @@ jobs:
             data/forecast-input-archive/
             data/publications.json
             data/weather.json
+            data/weather-history.json
             data/weather-ledger.json
             data/weather-sources/
             data/personnel-changes.json
@@ -120,7 +123,7 @@ jobs:
         run: |
           git config user.name 'NFL Intelligence publisher'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/player-usage.json data/personnel-changes.json data/quarterbacks.json data/quarterback-collection.json data/quarterback-sources/ data/site.json data/ledger.json data/source.json data/publications.json data/weather.json data/weather-ledger.json data/weather-sources/ data/personnel.json data/personnel-collection.json data/personnel-sources/
+          git add data/player-usage.json data/personnel-changes.json data/quarterbacks.json data/quarterback-collection.json data/quarterback-sources/ data/site.json data/ledger.json data/source.json data/publications.json data/weather.json data/weather-history.json data/weather-ledger.json data/weather-sources/ data/personnel.json data/personnel-collection.json data/personnel-sources/
           git diff --cached --quiet && exit 0
           git commit -m 'data: archive verified forecast publication'
           python scripts/push_publication.py

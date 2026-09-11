@@ -4,14 +4,16 @@ Verdict: publicly deployed research edition; full operational and commercial lau
 
 ## Verified release evidence
 
-Current development checkpoint: `19eaa79` passed GitHub verification
-[34614670157](https://github.com/tosterman/nfl-intelligence/actions/runs/34614670157).
-The local production build generated 319 pages. Weekly and prior-season matchup
-acquisition, separate historical/current panels, source replay and preserved
-failure states are implemented. Local commit `901fdf5` additionally requires
-historical evidence verification before publication; its 33 publication tests
-passed, but that commit has not yet received its own hosted CI result. These
-changes are not deployed to the public edition.
+Latest completed development verification: `415d719` passed GitHub run
+[34617162673](https://github.com/tosterman/nfl-intelligence/actions/runs/34617162673).
+It includes weekly/prior-season matchup acquisition and replay, prepublication
+historical verification, reconciled retained total explanations, and the opening
+model/market/revision brief. The subsequent weather-card checkpoint `fb3ec6d`
+passed local selector tests, TypeScript checking, the 319-page production build,
+and Chromium/WebKit layout and timing checks. Its hosted run
+[34617737812](https://github.com/tosterman/nfl-intelligence/actions/runs/34617737812)
+has now completed successfully. These development changes are not deployed
+to the public edition.
 
 The older checkpoints below are historical evidence, not the current head.
 
@@ -47,9 +49,9 @@ The exact-release verifier accommodates JavaScript integral-number serialization
 | 16 Time-aware data | Source hashes/times, weekly cutoff, code/configuration identity; missing kickoff withheld | Historical vintage data and additional feed availability timestamps |
 | 17 Pipeline | Validated acquisition, fitted artifact, ledger, CI, deployment and receipt workflow; atomic receipt storage, pre-push intent retention, known-cooldown guard, retained input bytes with edition-hash checks, and isolated failure drills (latest safeguards staged) | Sustained scheduled-run reliability and operational recovery from a real provider failure |
 | 18 Simulation | Production normal approximation; separate joint-score experiments, key-margin/tail diagnostics and completed signed-spread/total settlement audit over 285 games | All four settlement comparison intervals include zero; sparse spread pushes and no integer totals cannot establish push calibration. Prospective evidence remains required before promotion |
-| 19–20 Explanation and specific why | Contributions reconcile to margin; historical and weekly profiles provide separate descriptive context | Personnel/scheme explanations require missing inputs; structured evidence drives current explanations rather than a deployed generative explanation layer |
+| 19–20 Explanation and specific why | Contributions reconcile to margin; retained total accounting replays the exact frozen engine and input bundle; opening brief identifies leading/opposing terms and market differences; historical and weekly profiles provide separate descriptive context | Personnel/scheme explanations require missing inputs; structured evidence drives current explanations rather than a deployed generative explanation layer |
 | 21 What changed | Expandable generation revisions; score/margin/total/probability deltas; staged contribution accounting with compatible definitions and reconciliation; model and source identity changes distinguished; staged weekly revision briefing with retained-history links and preserved slate navigation | Verified public history and attribution to specific football inputs |
-| 22–24 Homepage, cards, detail | Slate, filters, expected/final distinctions, contextual navigation, analysis and evidence; staged next-scheduled team cards independent of forecast availability | Continued usability tests with actual fans/editorial users |
+| 22–24 Homepage, cards, detail | Slate, filters, expected/final distinctions, contextual navigation, analysis and evidence; next-scheduled team cards; selected-book spread/total differences; kickoff weather with expiry and explicit outdoor scope | Continued usability tests with actual fans/editorial users |
 | 25–29 Design, dark mode, visual language, motion, mobile | Original visual system, self-hosted licensed fonts, reduced-motion treatment, responsive layouts; eight axe page/width checks with no reported violations, plus bounded chart-contrast and table-keyboard follow-up | Physical-device and broader assistive-technology evaluation |
 | 30 Accountability | All-game and REG/POST metrics, pushes/ties/no-picks, matched spread/total market benchmarks; separate season-stratified weekly uncertainty audit; prospective grades require receipts; staged plain-language metric guide and data-bound matched-error conclusion | Prospective results after the first verified public pregame capture |
 | 31 Calibration | Historical and receipt-qualified prospective Brier/log loss, fixed bins with counts and Wilson 95% intervals, separate live margin/total interval coverage | Actual prospective calibration evidence after eligible results; dependence-aware evaluation as the sample grows |

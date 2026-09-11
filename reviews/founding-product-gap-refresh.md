@@ -1,5 +1,12 @@
 # Founding product gap review
 
+Follow-up: the three implementation priorities below and slate weather are now
+implemented on `internal-development`. Evidence: `reviews/slate-market-comparisons.md`,
+`reviews/model-brief.md`, `reviews/total-explanation-ui.md`,
+`reviews/total-explanation-browser.json`, and `reviews/slate-weather.md`.
+This preserves the original gap analysis; it is not a claim of complete founding
+coverage or verified human comprehension. Public deployment remains outstanding.
+
 Re-read the founding DOCX and compared the current implementation with sections
 1–31. An independent read-only founding reviewer identified the following
 locally actionable priorities. This is a source review, not timed human testing.

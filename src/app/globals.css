@@ -770,6 +770,8 @@ select:focus-visible {
   line-height: 1.5;
 }
 .slate-weather p { margin: 4px 0; }
+.weather-history { margin-top: 24px; }
+.weather-history-issue { padding: 12px 0; border-top: 1px solid var(--line); }
 .slate-weather small { color: var(--muted); }
 .card-bottom {
   margin-top: auto;
