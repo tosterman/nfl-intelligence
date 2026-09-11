@@ -544,6 +544,21 @@ select:focus-visible {
 .slate-summary > a > svg:last-child {
   margin-left: 8px;
 }
+.live-record-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px 30px;
+  padding: 22px;
+  margin-bottom: 32px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.live-record-summary > div { flex: 1 1 420px; min-width: 0; }
+.live-record-summary h2 { font-size: 19px; margin: 10px 0; }
+.live-record-summary p { line-height: 1.6; }
+.live-record-summary > a { font-size: 12px; text-decoration: underline; text-underline-offset: 4px; }
 .section-heading {
   display: flex;
   justify-content: space-between;

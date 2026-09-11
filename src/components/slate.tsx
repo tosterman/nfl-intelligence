@@ -6,7 +6,7 @@ import { featuredGame, slateGameStatus } from "@/lib/slate-timing";
 import { WeeklyChanges } from "./weekly-changes";
 import type { WeeklyBriefing } from "@/lib/weekly-changes";
 import type { OddsFeed } from "@/lib/odds";
-import { useState, useEffect } from "react";
+import { useState, useEffect, type ReactNode } from "react";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -37,7 +37,9 @@ export function Slate({
   initialNow,
   briefings,
   weather = {},
+  liveRecord,
 }: {
+  liveRecord?: ReactNode;
   weather?: Record<string, SlateWeather>;
   games: Game[];
   briefings: Record<number, WeeklyBriefing>;
@@ -277,6 +279,7 @@ export function Slate({
           <ArrowUpRight size={17} />
         </Link>
       </section>
+      {liveRecord}
       <section className="games-section">
         <WeeklyChanges games={weekGames} week={week} asOf={initialNow} returnTo={returnTo} briefing={briefings[week]} />
         <div className="section-heading">

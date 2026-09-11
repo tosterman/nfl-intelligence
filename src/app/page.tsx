@@ -1,6 +1,7 @@
 import { getOdds } from "@/lib/odds-server";
 import { site } from "@/lib/data";
 import { Slate } from "@/components/slate";
+import { LiveRecordSummary } from "@/components/live-record-summary";
 import { weeklyBriefing } from "@/lib/weekly-changes";
 import { assessFreshness, freshnessInputs } from "@/lib/freshness";
 import { getWeather } from '@/lib/weather-server';
@@ -27,6 +28,7 @@ export default async function Home({
   };
   return (
     <Slate
+      liveRecord={<LiveRecordSummary record={site.livePerformance} />}
       weather={Object.fromEntries(site.games.map(game => [game.id, slateWeather(weather.games[game.id], game, now)]))}
       odds={await getOdds()}
       initialNow={now}
