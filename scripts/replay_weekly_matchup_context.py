@@ -17,11 +17,13 @@ def main():
     results = []
     for week, phase in ((2, 'REG'), (10, 'REG'), (18, 'REG'), (22, 'POST')):
         result = from_retained(root, manifest, adjudications, week, phase)
-        assert result['status'] == 'available'
+        if result['status'] != 'available':
+            raise ValueError('Expected historical sample unavailable')
         for kind, fields in [('passing', ['plays', 'explosive']), ('rushing', ['plays', 'explosive']),
                              ('inside20', ['possessions', 'touchdowns'])]:
             for field in fields:
-                assert sum(t['offense'][kind][field] for t in result['teams'].values()) == sum(t['defense'][kind][field] for t in result['teams'].values())
+                if sum(t['offense'][kind][field] for t in result['teams'].values()) != sum(t['defense'][kind][field] for t in result['teams'].values()):
+                    raise ValueError('Offense and defense totals differ')
         canonical = json.dumps(result, sort_keys=True, separators=(',', ':')).encode()
         row = {'week': week, 'gameType': phase, 'cutoff': result['cutoff'], 'games': len(result['gameIds']),
                'teams': len(result['teams']), 'sha256': hashlib.sha256(canonical).hexdigest(),

@@ -1,0 +1,2531 @@
+{
+  "schemaVersion": 1,
+  "season": 2025,
+  "cutoff": "2026-09-09",
+  "status": "available",
+  "gameIds": [
+    "2025_01_ARI_NO",
+    "2025_01_BAL_BUF",
+    "2025_01_CAR_JAX",
+    "2025_01_CIN_CLE",
+    "2025_01_DAL_PHI",
+    "2025_01_DET_GB",
+    "2025_01_HOU_LA",
+    "2025_01_KC_LAC",
+    "2025_01_LV_NE",
+    "2025_01_MIA_IND",
+    "2025_01_MIN_CHI",
+    "2025_01_NYG_WAS",
+    "2025_01_PIT_NYJ",
+    "2025_01_SF_SEA",
+    "2025_01_TB_ATL",
+    "2025_01_TEN_DEN",
+    "2025_02_ATL_MIN",
+    "2025_02_BUF_NYJ",
+    "2025_02_CAR_ARI",
+    "2025_02_CHI_DET",
+    "2025_02_CLE_BAL",
+    "2025_02_DEN_IND",
+    "2025_02_JAX_CIN",
+    "2025_02_LAC_LV",
+    "2025_02_LA_TEN",
+    "2025_02_NE_MIA",
+    "2025_02_NYG_DAL",
+    "2025_02_PHI_KC",
+    "2025_02_SEA_PIT",
+    "2025_02_SF_NO",
+    "2025_02_TB_HOU",
+    "2025_02_WAS_GB",
+    "2025_03_ARI_SF",
+    "2025_03_ATL_CAR",
+    "2025_03_CIN_MIN",
+    "2025_03_DAL_CHI",
+    "2025_03_DEN_LAC",
+    "2025_03_DET_BAL",
+    "2025_03_GB_CLE",
+    "2025_03_HOU_JAX",
+    "2025_03_IND_TEN",
+    "2025_03_KC_NYG",
+    "2025_03_LA_PHI",
+    "2025_03_LV_WAS",
+    "2025_03_MIA_BUF",
+    "2025_03_NO_SEA",
+    "2025_03_NYJ_TB",
+    "2025_03_PIT_NE",
+    "2025_04_BAL_KC",
+    "2025_04_CAR_NE",
+    "2025_04_CHI_LV",
+    "2025_04_CIN_DEN",
+    "2025_04_CLE_DET",
+    "2025_04_GB_DAL",
+    "2025_04_IND_LA",
+    "2025_04_JAX_SF",
+    "2025_04_LAC_NYG",
+    "2025_04_MIN_PIT",
+    "2025_04_NO_BUF",
+    "2025_04_NYJ_MIA",
+    "2025_04_PHI_TB",
+    "2025_04_SEA_ARI",
+    "2025_04_TEN_HOU",
+    "2025_04_WAS_ATL",
+    "2025_05_DAL_NYJ",
+    "2025_05_DEN_PHI",
+    "2025_05_DET_CIN",
+    "2025_05_HOU_BAL",
+    "2025_05_KC_JAX",
+    "2025_05_LV_IND",
+    "2025_05_MIA_CAR",
+    "2025_05_MIN_CLE",
+    "2025_05_NE_BUF",
+    "2025_05_NYG_NO",
+    "2025_05_SF_LA",
+    "2025_05_TB_SEA",
+    "2025_05_TEN_ARI",
+    "2025_05_WAS_LAC",
+    "2025_06_ARI_IND",
+    "2025_06_BUF_ATL",
+    "2025_06_CHI_WAS",
+    "2025_06_CIN_GB",
+    "2025_06_CLE_PIT",
+    "2025_06_DAL_CAR",
+    "2025_06_DEN_NYJ",
+    "2025_06_DET_KC",
+    "2025_06_LAC_MIA",
+    "2025_06_LA_BAL",
+    "2025_06_NE_NO",
+    "2025_06_PHI_NYG",
+    "2025_06_SEA_JAX",
+    "2025_06_SF_TB",
+    "2025_06_TEN_LV",
+    "2025_07_ATL_SF",
+    "2025_07_CAR_NYJ",
+    "2025_07_GB_ARI",
+    "2025_07_HOU_SEA",
+    "2025_07_IND_LAC",
+    "2025_07_LA_JAX",
+    "2025_07_LV_KC",
+    "2025_07_MIA_CLE",
+    "2025_07_NE_TEN",
+    "2025_07_NO_CHI",
+    "2025_07_NYG_DEN",
+    "2025_07_PHI_MIN",
+    "2025_07_PIT_CIN",
+    "2025_07_TB_DET",
+    "2025_07_WAS_DAL",
+    "2025_08_BUF_CAR",
+    "2025_08_CHI_BAL",
+    "2025_08_CLE_NE",
+    "2025_08_DAL_DEN",
+    "2025_08_GB_PIT",
+    "2025_08_MIA_ATL",
+    "2025_08_MIN_LAC",
+    "2025_08_NYG_PHI",
+    "2025_08_NYJ_CIN",
+    "2025_08_SF_HOU",
+    "2025_08_TB_NO",
+    "2025_08_TEN_IND",
+    "2025_08_WAS_KC",
+    "2025_09_ARI_DAL",
+    "2025_09_ATL_NE",
+    "2025_09_BAL_MIA",
+    "2025_09_CAR_GB",
+    "2025_09_CHI_CIN",
+    "2025_09_DEN_HOU",
+    "2025_09_IND_PIT",
+    "2025_09_JAX_LV",
+    "2025_09_KC_BUF",
+    "2025_09_LAC_TEN",
+    "2025_09_MIN_DET",
+    "2025_09_NO_LA",
+    "2025_09_SEA_WAS",
+    "2025_09_SF_NYG",
+    "2025_10_ARI_SEA",
+    "2025_10_ATL_IND",
+    "2025_10_BAL_MIN",
+    "2025_10_BUF_MIA",
+    "2025_10_CLE_NYJ",
+    "2025_10_DET_WAS",
+    "2025_10_JAX_HOU",
+    "2025_10_LA_SF",
+    "2025_10_LV_DEN",
+    "2025_10_NE_TB",
+    "2025_10_NO_CAR",
+    "2025_10_NYG_CHI",
+    "2025_10_PHI_GB",
+    "2025_10_PIT_LAC",
+    "2025_11_BAL_CLE",
+    "2025_11_CAR_ATL",
+    "2025_11_CHI_MIN",
+    "2025_11_CIN_PIT",
+    "2025_11_DAL_LV",
+    "2025_11_DET_PHI",
+    "2025_11_GB_NYG",
+    "2025_11_HOU_TEN",
+    "2025_11_KC_DEN",
+    "2025_11_LAC_JAX",
+    "2025_11_NYJ_NE",
+    "2025_11_SEA_LA",
+    "2025_11_SF_ARI",
+    "2025_11_TB_BUF",
+    "2025_11_WAS_MIA",
+    "2025_12_ATL_NO",
+    "2025_12_BUF_HOU",
+    "2025_12_CAR_SF",
+    "2025_12_CLE_LV",
+    "2025_12_IND_KC",
+    "2025_12_JAX_ARI",
+    "2025_12_MIN_GB",
+    "2025_12_NE_CIN",
+    "2025_12_NYG_DET",
+    "2025_12_NYJ_BAL",
+    "2025_12_PHI_DAL",
+    "2025_12_PIT_CHI",
+    "2025_12_SEA_TEN",
+    "2025_12_TB_LA",
+    "2025_13_ARI_TB",
+    "2025_13_ATL_NYJ",
+    "2025_13_BUF_PIT",
+    "2025_13_CHI_PHI",
+    "2025_13_CIN_BAL",
+    "2025_13_DEN_WAS",
+    "2025_13_GB_DET",
+    "2025_13_HOU_IND",
+    "2025_13_JAX_TEN",
+    "2025_13_KC_DAL",
+    "2025_13_LA_CAR",
+    "2025_13_LV_LAC",
+    "2025_13_MIN_SEA",
+    "2025_13_NO_MIA",
+    "2025_13_NYG_NE",
+    "2025_13_SF_CLE",
+    "2025_14_CHI_GB",
+    "2025_14_CIN_BUF",
+    "2025_14_DAL_DET",
+    "2025_14_DEN_LV",
+    "2025_14_HOU_KC",
+    "2025_14_IND_JAX",
+    "2025_14_LA_ARI",
+    "2025_14_MIA_NYJ",
+    "2025_14_NO_TB",
+    "2025_14_PHI_LAC",
+    "2025_14_PIT_BAL",
+    "2025_14_SEA_ATL",
+    "2025_14_TEN_CLE",
+    "2025_14_WAS_MIN",
+    "2025_15_ARI_HOU",
+    "2025_15_ATL_TB",
+    "2025_15_BAL_CIN",
+    "2025_15_BUF_NE",
+    "2025_15_CAR_NO",
+    "2025_15_CLE_CHI",
+    "2025_15_DET_LA",
+    "2025_15_GB_DEN",
+    "2025_15_IND_SEA",
+    "2025_15_LAC_KC",
+    "2025_15_LV_PHI",
+    "2025_15_MIA_PIT",
+    "2025_15_MIN_DAL",
+    "2025_15_NYJ_JAX",
+    "2025_15_TEN_SF",
+    "2025_15_WAS_NYG",
+    "2025_16_ATL_ARI",
+    "2025_16_BUF_CLE",
+    "2025_16_CIN_MIA",
+    "2025_16_GB_CHI",
+    "2025_16_JAX_DEN",
+    "2025_16_KC_TEN",
+    "2025_16_LAC_DAL",
+    "2025_16_LA_SEA",
+    "2025_16_LV_HOU",
+    "2025_16_MIN_NYG",
+    "2025_16_NE_BAL",
+    "2025_16_NYJ_NO",
+    "2025_16_PHI_WAS",
+    "2025_16_PIT_DET",
+    "2025_16_SF_IND",
+    "2025_16_TB_CAR",
+    "2025_17_ARI_CIN",
+    "2025_17_BAL_GB",
+    "2025_17_CHI_SF",
+    "2025_17_DAL_WAS",
+    "2025_17_DEN_KC",
+    "2025_17_DET_MIN",
+    "2025_17_HOU_LAC",
+    "2025_17_JAX_IND",
+    "2025_17_LA_ATL",
+    "2025_17_NE_NYJ",
+    "2025_17_NO_TEN",
+    "2025_17_NYG_LV",
+    "2025_17_PHI_BUF",
+    "2025_17_PIT_CLE",
+    "2025_17_SEA_CAR",
+    "2025_17_TB_MIA",
+    "2025_18_ARI_LA",
+    "2025_18_BAL_PIT",
+    "2025_18_CAR_TB",
+    "2025_18_CLE_CIN",
+    "2025_18_DAL_NYG",
+    "2025_18_DET_CHI",
+    "2025_18_GB_MIN",
+    "2025_18_IND_HOU",
+    "2025_18_KC_LV",
+    "2025_18_LAC_DEN",
+    "2025_18_MIA_NE",
+    "2025_18_NO_ATL",
+    "2025_18_NYJ_BUF",
+    "2025_18_SEA_SF",
+    "2025_18_TEN_JAX",
+    "2025_18_WAS_PHI",
+    "2025_19_BUF_JAX",
+    "2025_19_GB_CHI",
+    "2025_19_HOU_PIT",
+    "2025_19_LAC_NE",
+    "2025_19_LA_CAR",
+    "2025_19_SF_PHI",
+    "2025_20_BUF_DEN",
+    "2025_20_HOU_NE",
+    "2025_20_LA_CHI",
+    "2025_20_SF_SEA",
+    "2025_21_LA_SEA",
+    "2025_21_NE_DEN",
+    "2025_22_SEA_NE"
+  ],
+  "teams": {
+    "ARI": {
+      "offense": {
+        "gameIds": [
+          "2025_01_ARI_NO",
+          "2025_02_CAR_ARI",
+          "2025_03_ARI_SF",
+          "2025_04_SEA_ARI",
+          "2025_05_TEN_ARI",
+          "2025_06_ARI_IND",
+          "2025_07_GB_ARI",
+          "2025_09_ARI_DAL",
+          "2025_10_ARI_SEA",
+          "2025_11_SF_ARI",
+          "2025_12_JAX_ARI",
+          "2025_13_ARI_TB",
+          "2025_14_LA_ARI",
+          "2025_15_ARI_HOU",
+          "2025_16_ATL_ARI",
+          "2025_17_ARI_CIN",
+          "2025_18_ARI_LA"
+        ],
+        "passing": {
+          "plays": 707,
+          "explosive": 49
+        },
+        "rushing": {
+          "plays": 363,
+          "explosive": 35
+        },
+        "inside20": {
+          "possessions": 61,
+          "touchdowns": 33
+        }
+      },
+      "defense": {
+        "gameIds": [
+          "2025_01_ARI_NO",
+          "2025_02_CAR_ARI",
+          "2025_03_ARI_SF",
+          "2025_04_SEA_ARI",
+          "2025_05_TEN_ARI",
+          "2025_06_ARI_IND",
+          "2025_07_GB_ARI",
+          "2025_09_ARI_DAL",
+          "2025_10_ARI_SEA",
+          "2025_11_SF_ARI",
+          "2025_12_JAX_ARI",
+          "2025_13_ARI_TB",
+          "2025_14_LA_ARI",
+          "2025_15_ARI_HOU",
+          "2025_16_ATL_ARI",
+          "2025_17_ARI_CIN",
+          "2025_18_ARI_LA"
+        ],
+        "passing": {
+          "plays": 596,
+          "explosive": 52
+        },
+        "rushing": {
+          "plays": 454,
+          "explosive": 62
+        },
+        "inside20": {
+          "possessions": 68,
+          "touchdowns": 43
+        }
+      }
+    },
+    "ATL": {
+      "offense": {
+        "gameIds": [
+          "2025_01_TB_ATL",
+          "2025_02_ATL_MIN",
+          "2025_03_ATL_CAR",
+          "2025_04_WAS_ATL",
+          "2025_06_BUF_ATL",
+          "2025_07_ATL_SF",
+          "2025_08_MIA_ATL",
+          "2025_09_ATL_NE",
+          "2025_10_ATL_IND",
+          "2025_11_CAR_ATL",
+          "2025_12_ATL_NO",
+          "2025_13_ATL_NYJ",
+          "2025_14_SEA_ATL",
+          "2025_15_ATL_TB",
+          "2025_16_ATL_ARI",
+          "2025_17_LA_ATL",
+          "2025_18_NO_ATL"
+        ],
+        "passing": {
+          "plays": 568,
+          "explosive": 47
+        },
+        "rushing": {
+          "plays": 464,
+          "explosive": 54
+        },
+        "inside20": {
+          "possessions": 50,
+          "touchdowns": 31
+        }
+      },
+      "defense": {
+        "gameIds": [
+          "2025_01_TB_ATL",
+          "2025_02_ATL_MIN",
+          "2025_03_ATL_CAR",
+          "2025_04_WAS_ATL",
+          "2025_06_BUF_ATL",
+          "2025_07_ATL_SF",
+          "2025_08_MIA_ATL",
+          "2025_09_ATL_NE",
+          "2025_10_ATL_IND",
+          "2025_11_CAR_ATL",
+          "2025_12_ATL_NO",
+          "2025_13_ATL_NYJ",
+          "2025_14_SEA_ATL",
+          "2025_15_ATL_TB",
+          "2025_16_ATL_ARI",
+          "2025_17_LA_ATL",
+          "2025_18_NO_ATL"
+        ],
+        "passing": {
+          "plays": 585,
+          "explosive": 49
+        },
+        "rushing": {
+          "plays": 457,
+          "explosive": 51
+        },
+        "inside20": {
+          "possessions": 51,
+          "touchdowns": 28
+        }
+      }
+    },
+    "BAL": {
+      "offense": {
+        "gameIds": [
+          "2025_01_BAL_BUF",
+          "2025_02_CLE_BAL",
+          "2025_03_DET_BAL",
+          "2025_04_BAL_KC",
+          "2025_05_HOU_BAL",
+          "2025_06_LA_BAL",
+          "2025_08_CHI_BAL",
+          "2025_09_BAL_MIA",
+          "2025_10_BAL_MIN",
+          "2025_11_BAL_CLE",
+          "2025_12_NYJ_BAL",
+          "2025_13_CIN_BAL",
+          "2025_14_PIT_BAL",
+          "2025_15_BAL_CIN",
+          "2025_16_NE_BAL",
+          "2025_17_BAL_GB",
+          "2025_18_BAL_PIT"
+        ],
+        "passing": {
+          "plays": 464,
+          "explosive": 43
+        },
+        "rushing": {
+          "plays": 490,
+          "explosive": 71
+        },
+        "inside20": {
+          "possessions": 59,
+          "touchdowns": 28
+        }
+      },
+      "defense": {
+        "gameIds": [
+          "2025_01_BAL_BUF",
+          "2025_02_CLE_BAL",
+          "2025_03_DET_BAL",
+          "2025_04_BAL_KC",
+          "2025_05_HOU_BAL",
+          "2025_06_LA_BAL",
+          "2025_08_CHI_BAL",
+          "2025_09_BAL_MIA",
+          "2025_10_BAL_MIN",
+          "2025_11_BAL_CLE",
+          "2025_12_NYJ_BAL",
+          "2025_13_CIN_BAL",
+          "2025_14_PIT_BAL",
+          "2025_15_BAL_CIN",
+          "2025_16_NE_BAL",
+          "2025_17_BAL_GB",
+          "2025_18_BAL_PIT"
+        ],
+        "passing": {
+          "plays": 653,
+          "explosive": 64
+        },
+        "rushing": {
+          "plays": 419,
+          "explosive": 47
+        },
+        "inside20": {
+          "possessions": 63,
+          "touchdowns": 32
+        }
+      }
+    },
+    "BUF": {
+      "defense": {
+        "gameIds": [
+          "2025_01_BAL_BUF",
+          "2025_02_BUF_NYJ",
+          "2025_03_MIA_BUF",
+          "2025_04_NO_BUF",
+          "2025_05_NE_BUF",
+          "2025_06_BUF_ATL",
+          "2025_08_BUF_CAR",
+          "2025_09_KC_BUF",
+          "2025_10_BUF_MIA",
+          "2025_11_TB_BUF",
+          "2025_12_BUF_HOU",
+          "2025_13_BUF_PIT",
+          "2025_14_CIN_BUF",
+          "2025_15_BUF_NE",
+          "2025_16_BUF_CLE",
+          "2025_17_PHI_BUF",
+          "2025_18_NYJ_BUF",
+          "2025_19_BUF_JAX",
+          "2025_20_BUF_DEN"
+        ],
+        "passing": {
+          "plays": 577,
+          "explosive": 45
+        },
+        "rushing": {
+          "plays": 487,
+          "explosive": 75
+        },
+        "inside20": {
+          "possessions": 55,
+          "touchdowns": 32
+        }
+      },
+      "offense": {
+        "gameIds": [
+          "2025_01_BAL_BUF",
+          "2025_02_BUF_NYJ",
+          "2025_03_MIA_BUF",
+          "2025_04_NO_BUF",
+          "2025_05_NE_BUF",
+          "2025_06_BUF_ATL",
+          "2025_08_BUF_CAR",
+          "2025_09_KC_BUF",
+          "2025_10_BUF_MIA",
+          "2025_11_TB_BUF",
+          "2025_12_BUF_HOU",
+          "2025_13_BUF_PIT",
+          "2025_14_CIN_BUF",
+          "2025_15_BUF_NE",
+          "2025_16_BUF_CLE",
+          "2025_17_PHI_BUF",
+          "2025_18_NYJ_BUF",
+          "2025_19_BUF_JAX",
+          "2025_20_BUF_DEN"
+        ],
+        "passing": {
+          "plays": 612,
+          "explosive": 68
+        },
+        "rushing": {
+          "plays": 582,
+          "explosive": 76
+        },
+        "inside20": {
+          "possessions": 73,
+          "touchdowns": 49
+        }
+      }
+    },
+    "CAR": {
+      "offense": {
+        "gameIds": [
+          "2025_01_CAR_JAX",
+          "2025_02_CAR_ARI",
+          "2025_03_ATL_CAR",
+          "2025_04_CAR_NE",
+          "2025_05_MIA_CAR",
+          "2025_06_DAL_CAR",
+          "2025_07_CAR_NYJ",
+          "2025_08_BUF_CAR",
+          "2025_09_CAR_GB",
+          "2025_10_NO_CAR",
+          "2025_11_CAR_ATL",
+          "2025_12_CAR_SF",
+          "2025_13_LA_CAR",
+          "2025_15_CAR_NO",
+          "2025_16_TB_CAR",
+          "2025_17_SEA_CAR",
+          "2025_18_CAR_TB",
+          "2025_19_LA_CAR"
+        ],
+        "passing": {
+          "plays": 590,
+          "explosive": 46
+        },
+        "rushing": {
+          "plays": 464,
+          "explosive": 46
+        },
+        "inside20": {
+          "possessions": 49,
+          "touchdowns": 28
+        }
+      },
+      "defense": {
+        "gameIds": [
+          "2025_01_CAR_JAX",
+          "2025_02_CAR_ARI",
+          "2025_03_ATL_CAR",
+          "2025_04_CAR_NE",
+          "2025_05_MIA_CAR",
+          "2025_06_DAL_CAR",
+          "2025_07_CAR_NYJ",
+          "2025_08_BUF_CAR",
+          "2025_09_CAR_GB",
+          "2025_10_NO_CAR",
+          "2025_11_CAR_ATL",
+          "2025_12_CAR_SF",
+          "2025_13_LA_CAR",
+          "2025_15_CAR_NO",
+          "2025_16_TB_CAR",
+          "2025_17_SEA_CAR",
+          "2025_18_CAR_TB",
+          "2025_19_LA_CAR"
+        ],
+        "passing": {
+          "plays": 578,
+          "explosive": 44
+        },
+        "rushing": {
+          "plays": 491,
+          "explosive": 47
+        },
+        "inside20": {
+          "possessions": 63,
+          "touchdowns": 36
+        }
+      }
+    },
+    "CHI": {
+      "offense": {
+        "gameIds": [
+          "2025_01_MIN_CHI",
+          "2025_02_CHI_DET",
+          "2025_03_DAL_CHI",
+          "2025_04_CHI_LV",
+          "2025_06_CHI_WAS",
+          "2025_07_NO_CHI",
+          "2025_08_CHI_BAL",
+          "2025_09_CHI_CIN",
+          "2025_10_NYG_CHI",
+          "2025_11_CHI_MIN",
+          "2025_12_PIT_CHI",
+          "2025_13_CHI_PHI",
+          "2025_14_CHI_GB",
+          "2025_15_CLE_CHI",
+          "2025_16_GB_CHI",
+          "2025_17_CHI_SF",
+          "2025_18_DET_CHI",
+          "2025_19_GB_CHI",
+          "2025_20_LA_CHI"
+        ],
+        "passing": {
+          "plays": 687,
+          "explosive": 72
+        },
+        "rushing": {
+          "plays": 561,
+          "explosive": 72
+        },
+        "inside20": {
+          "possessions": 63,
+          "touchdowns": 36
+        }
+      },
+      "defense": {
+        "gameIds": [
+          "2025_01_MIN_CHI",
+          "2025_02_CHI_DET",
+          "2025_03_DAL_CHI",
+          "2025_04_CHI_LV",
+          "2025_06_CHI_WAS",
+          "2025_07_NO_CHI",
+          "2025_08_CHI_BAL",
+          "2025_09_CHI_CIN",
+          "2025_10_NYG_CHI",
+          "2025_11_CHI_MIN",
+          "2025_12_PIT_CHI",
+          "2025_13_CHI_PHI",
+          "2025_14_CHI_GB",
+          "2025_15_CLE_CHI",
+          "2025_16_GB_CHI",
+          "2025_17_CHI_SF",
+          "2025_18_DET_CHI",
+          "2025_19_GB_CHI",
+          "2025_20_LA_CHI"
+        ],
+        "passing": {
+          "plays": 658,
+          "explosive": 71
+        },
+        "rushing": {
+          "plays": 505,
+          "explosive": 65
+        },
+        "inside20": {
+          "possessions": 63,
+          "touchdowns": 37
+        }
+      }
+    },
+    "CIN": {
+      "offense": {
+        "gameIds": [
+          "2025_01_CIN_CLE",
+          "2025_02_JAX_CIN",
+          "2025_03_CIN_MIN",
+          "2025_04_CIN_DEN",
+          "2025_05_DET_CIN",
+          "2025_06_CIN_GB",
+          "2025_07_PIT_CIN",
+          "2025_08_NYJ_CIN",
+          "2025_09_CHI_CIN",
+          "2025_11_CIN_PIT",
+          "2025_12_NE_CIN",
+          "2025_13_CIN_BAL",
+          "2025_14_CIN_BUF",
+          "2025_15_BAL_CIN",
+          "2025_16_CIN_MIA",
+          "2025_17_ARI_CIN",
+          "2025_18_CLE_CIN"
+        ],
+        "passing": {
+          "plays": 673,
+          "explosive": 47
+        },
+        "rushing": {
+          "plays": 371,
+          "explosive": 37
+        },
+        "inside20": {
+          "possessions": 54,
+          "touchdowns": 36
+        }
+      },
+      "defense": {
+        "gameIds": [
+          "2025_01_CIN_CLE",
+          "2025_02_JAX_CIN",
+          "2025_03_CIN_MIN",
+          "2025_04_CIN_DEN",
+          "2025_05_DET_CIN",
+          "2025_06_CIN_GB",
+          "2025_07_PIT_CIN",
+          "2025_08_NYJ_CIN",
+          "2025_09_CHI_CIN",
+          "2025_11_CIN_PIT",
+          "2025_12_NE_CIN",
+          "2025_13_CIN_BAL",
+          "2025_14_CIN_BUF",
+          "2025_15_BAL_CIN",
+          "2025_16_CIN_MIA",
+          "2025_17_ARI_CIN",
+          "2025_18_CLE_CIN"
+        ],
+        "passing": {
+          "plays": 568,
+          "explosive": 60
+        },
+        "rushing": {
+          "plays": 463,
+          "explosive": 62
+        },
+        "inside20": {
+          "possessions": 62,
+          "touchdowns": 39
+        }
+      }
+    },
+    "CLE": {
+      "defense": {
+        "gameIds": [
+          "2025_01_CIN_CLE",
+          "2025_02_CLE_BAL",
+          "2025_03_GB_CLE",
+          "2025_04_CLE_DET",
+          "2025_05_MIN_CLE",
+          "2025_06_CLE_PIT",
+          "2025_07_MIA_CLE",
+          "2025_08_CLE_NE",
+          "2025_10_CLE_NYJ",
+          "2025_11_BAL_CLE",
+          "2025_12_CLE_LV",
+          "2025_13_SF_CLE",
+          "2025_14_TEN_CLE",
+          "2025_15_CLE_CHI",
+          "2025_16_BUF_CLE",
+          "2025_17_PIT_CLE",
+          "2025_18_CLE_CIN"
+        ],
+        "passing": {
+          "plays": 538,
+          "explosive": 43
+        },
+        "rushing": {
+          "plays": 454,
+          "explosive": 46
+        },
+        "inside20": {
+          "possessions": 50,
+          "touchdowns": 29
+        }
+      },
+      "offense": {
+        "gameIds": [
+          "2025_01_CIN_CLE",
+          "2025_02_CLE_BAL",
+          "2025_03_GB_CLE",
+          "2025_04_CLE_DET",
+          "2025_05_MIN_CLE",
+          "2025_06_CLE_PIT",
+          "2025_07_MIA_CLE",
+          "2025_08_CLE_NE",
+          "2025_10_CLE_NYJ",
+          "2025_11_BAL_CLE",
+          "2025_12_CLE_LV",
+          "2025_13_SF_CLE",
+          "2025_14_TEN_CLE",
+          "2025_15_CLE_CHI",
+          "2025_16_BUF_CLE",
+          "2025_17_PIT_CLE",
+          "2025_18_CLE_CIN"
+        ],
+        "passing": {
+          "plays": 607,
+          "explosive": 35
+        },
+        "rushing": {
+          "plays": 417,
+          "explosive": 41
+        },
+        "inside20": {
+          "possessions": 38,
+          "touchdowns": 20
+        }
+      }
+    },
+    "DAL": {
+      "offense": {
+        "gameIds": [
+          "2025_01_DAL_PHI",
+          "2025_02_NYG_DAL",
+          "2025_03_DAL_CHI",
+          "2025_04_GB_DAL",
+          "2025_05_DAL_NYJ",
+          "2025_06_DAL_CAR",
+          "2025_07_WAS_DAL",
+          "2025_08_DAL_DEN",
+          "2025_09_ARI_DAL",
+          "2025_11_DAL_LV",
+          "2025_12_PHI_DAL",
+          "2025_13_KC_DAL",
+          "2025_14_DAL_DET",
+          "2025_15_MIN_DAL",
+          "2025_16_LAC_DAL",
+          "2025_17_DAL_WAS",
+          "2025_18_DAL_NYG"
+        ],
+        "passing": {
+          "plays": 652,
+          "explosive": 56
+        },
+        "rushing": {
+          "plays": 449,
+          "explosive": 46
+        },
+        "inside20": {
+          "possessions": 65,
+          "touchdowns": 37
+        }
+      },
+      "defense": {
+        "gameIds": [
+          "2025_01_DAL_PHI",
+          "2025_02_NYG_DAL",
+          "2025_03_DAL_CHI",
+          "2025_04_GB_DAL",
+          "2025_05_DAL_NYJ",
+          "2025_06_DAL_CAR",
+          "2025_07_WAS_DAL",
+          "2025_08_DAL_DEN",
+          "2025_09_ARI_DAL",
+          "2025_11_DAL_LV",
+          "2025_12_PHI_DAL",
+          "2025_13_KC_DAL",
+          "2025_14_DAL_DET",
+          "2025_15_MIN_DAL",
+          "2025_16_LAC_DAL",
+          "2025_17_DAL_WAS",
+          "2025_18_DAL_NYG"
+        ],
+        "passing": {
+          "plays": 589,
+          "explosive": 58
+        },
+        "rushing": {
+          "plays": 433,
+          "explosive": 64
+        },
+        "inside20": {
+          "possessions": 66,
+          "touchdowns": 44
+        }
+      }
+    },
+    "DEN": {
+      "offense": {
+        "gameIds": [
+          "2025_01_TEN_DEN",
+          "2025_02_DEN_IND",
+          "2025_03_DEN_LAC",
+          "2025_04_CIN_DEN",
+          "2025_05_DEN_PHI",
+          "2025_06_DEN_NYJ",
+          "2025_07_NYG_DEN",
+          "2025_08_DAL_DEN",
+          "2025_09_DEN_HOU",
+          "2025_10_LV_DEN",
+          "2025_11_KC_DEN",
+          "2025_13_DEN_WAS",
+          "2025_14_DEN_LV",
+          "2025_15_GB_DEN",
+          "2025_16_JAX_DEN",
+          "2025_17_DEN_KC",
+          "2025_18_LAC_DEN",
+          "2025_20_BUF_DEN",
+          "2025_21_NE_DEN"
+        ],
+        "passing": {
+          "plays": 715,
+          "explosive": 53
+        },
+        "rushing": {
+          "plays": 482,
+          "explosive": 54
+        },
+        "inside20": {
+          "possessions": 63,
+          "touchdowns": 35
+        }
+      },
+      "defense": {
+        "gameIds": [
+          "2025_01_TEN_DEN",
+          "2025_02_DEN_IND",
+          "2025_03_DEN_LAC",
+          "2025_04_CIN_DEN",
+          "2025_05_DEN_PHI",
+          "2025_06_DEN_NYJ",
+          "2025_07_NYG_DEN",
+          "2025_08_DAL_DEN",
+          "2025_09_DEN_HOU",
+          "2025_10_LV_DEN",
+          "2025_11_KC_DEN",
+          "2025_13_DEN_WAS",
+          "2025_14_DEN_LV",
+          "2025_15_GB_DEN",
+          "2025_16_JAX_DEN",
+          "2025_17_DEN_KC",
+          "2025_18_LAC_DEN",
+          "2025_20_BUF_DEN",
+          "2025_21_NE_DEN"
+        ],
+        "passing": {
+          "plays": 724,
+          "explosive": 46
+        },
+        "rushing": {
+          "plays": 468,
+          "explosive": 41
+        },
+        "inside20": {
+          "possessions": 54,
+          "touchdowns": 24
+        }
+      }
+    },
+    "DET": {
+      "offense": {
+        "gameIds": [
+          "2025_01_DET_GB",
+          "2025_02_CHI_DET",
+          "2025_03_DET_BAL",
+          "2025_04_CLE_DET",
+          "2025_05_DET_CIN",
+          "2025_06_DET_KC",
+          "2025_07_TB_DET",
+          "2025_09_MIN_DET",
+          "2025_10_DET_WAS",
+          "2025_11_DET_PHI",
+          "2025_12_NYG_DET",
+          "2025_13_GB_DET",
+          "2025_14_DAL_DET",
+          "2025_15_DET_LA",
+          "2025_16_PIT_DET",
+          "2025_17_DET_MIN",
+          "2025_18_DET_CHI"
+        ],
+        "passing": {
+          "plays": 619,
+          "explosive": 66
+        },
+        "rushing": {
+          "plays": 431,
+          "explosive": 44
+        },
+        "inside20": {
+          "possessions": 64,
+          "touchdowns": 40
+        }
+      },
+      "defense": {
+        "gameIds": [
+          "2025_01_DET_GB",
+          "2025_02_CHI_DET",
+          "2025_03_DET_BAL",
+          "2025_04_CLE_DET",
+          "2025_05_DET_CIN",
+          "2025_06_DET_KC",
+          "2025_07_TB_DET",
+          "2025_09_MIN_DET",
+          "2025_10_DET_WAS",
+          "2025_11_DET_PHI",
+          "2025_12_NYG_DET",
+          "2025_13_GB_DET",
+          "2025_14_DAL_DET",
+          "2025_15_DET_LA",
+          "2025_16_PIT_DET",
+          "2025_17_DET_MIN",
+          "2025_18_DET_CHI"
+        ],
+        "passing": {
+          "plays": 604,
+          "explosive": 58
+        },
+        "rushing": {
+          "plays": 429,
+          "explosive": 54
+        },
+        "inside20": {
+          "possessions": 52,
+          "touchdowns": 31
+        }
+      }
+    },
+    "GB": {
+      "defense": {
+        "gameIds": [
+          "2025_01_DET_GB",
+          "2025_02_WAS_GB",
+          "2025_03_GB_CLE",
+          "2025_04_GB_DAL",
+          "2025_06_CIN_GB",
+          "2025_07_GB_ARI",
+          "2025_08_GB_PIT",
+          "2025_09_CAR_GB",
+          "2025_10_PHI_GB",
+          "2025_11_GB_NYG",
+          "2025_12_MIN_GB",
+          "2025_13_GB_DET",
+          "2025_14_CHI_GB",
+          "2025_15_GB_DEN",
+          "2025_16_GB_CHI",
+          "2025_17_BAL_GB",
+          "2025_18_GB_MIN",
+          "2025_19_GB_CHI"
+        ],
+        "passing": {
+          "plays": 630,
+          "explosive": 50
+        },
+        "rushing": {
+          "plays": 499,
+          "explosive": 41
+        },
+        "inside20": {
+          "possessions": 57,
+          "touchdowns": 33
+        }
+      },
+      "offense": {
+        "gameIds": [
+          "2025_01_DET_GB",
+          "2025_02_WAS_GB",
+          "2025_03_GB_CLE",
+          "2025_04_GB_DAL",
+          "2025_06_CIN_GB",
+          "2025_07_GB_ARI",
+          "2025_08_GB_PIT",
+          "2025_09_CAR_GB",
+          "2025_10_PHI_GB",
+          "2025_11_GB_NYG",
+          "2025_12_MIN_GB",
+          "2025_13_GB_DET",
+          "2025_14_CHI_GB",
+          "2025_15_GB_DEN",
+          "2025_16_GB_CHI",
+          "2025_17_BAL_GB",
+          "2025_18_GB_MIN",
+          "2025_19_GB_CHI"
+        ],
+        "passing": {
+          "plays": 564,
+          "explosive": 65
+        },
+        "rushing": {
+          "plays": 497,
+          "explosive": 61
+        },
+        "inside20": {
+          "possessions": 62,
+          "touchdowns": 37
+        }
+      }
+    },
+    "HOU": {
+      "offense": {
+        "gameIds": [
+          "2025_01_HOU_LA",
+          "2025_02_TB_HOU",
+          "2025_03_HOU_JAX",
+          "2025_04_TEN_HOU",
+          "2025_05_HOU_BAL",
+          "2025_07_HOU_SEA",
+          "2025_08_SF_HOU",
+          "2025_09_DEN_HOU",
+          "2025_10_JAX_HOU",
+          "2025_11_HOU_TEN",
+          "2025_12_BUF_HOU",
+          "2025_13_HOU_IND",
+          "2025_14_HOU_KC",
+          "2025_15_ARI_HOU",
+          "2025_16_LV_HOU",
+          "2025_17_HOU_LAC",
+          "2025_18_IND_HOU",
+          "2025_19_HOU_PIT",
+          "2025_20_HOU_NE"
+        ],
+        "passing": {
+          "plays": 695,
+          "explosive": 53
+        },
+        "rushing": {
+          "plays": 515,
+          "explosive": 47
+        },
+        "inside20": {
+          "possessions": 61,
+          "touchdowns": 28
+        }
+      },
+      "defense": {
+        "gameIds": [
+          "2025_01_HOU_LA",
+          "2025_02_TB_HOU",
+          "2025_03_HOU_JAX",
+          "2025_04_TEN_HOU",
+          "2025_05_HOU_BAL",
+          "2025_07_HOU_SEA",
+          "2025_08_SF_HOU",
+          "2025_09_DEN_HOU",
+          "2025_10_JAX_HOU",
+          "2025_11_HOU_TEN",
+          "2025_12_BUF_HOU",
+          "2025_13_HOU_IND",
+          "2025_14_HOU_KC",
+          "2025_15_ARI_HOU",
+          "2025_16_LV_HOU",
+          "2025_17_HOU_LAC",
+          "2025_18_IND_HOU",
+          "2025_19_HOU_PIT",
+          "2025_20_HOU_NE"
+        ],
+        "passing": {
+          "plays": 653,
+          "explosive": 52
+        },
+        "rushing": {
+          "plays": 442,
+          "explosive": 39
+        },
+        "inside20": {
+          "possessions": 47,
+          "touchdowns": 26
+        }
+      }
+    },
+    "IND": {
+      "offense": {
+        "gameIds": [
+          "2025_01_MIA_IND",
+          "2025_02_DEN_IND",
+          "2025_03_IND_TEN",
+          "2025_04_IND_LA",
+          "2025_05_LV_IND",
+          "2025_06_ARI_IND",
+          "2025_07_IND_LAC",
+          "2025_08_TEN_IND",
+          "2025_09_IND_PIT",
+          "2025_10_ATL_IND",
+          "2025_12_IND_KC",
+          "2025_13_HOU_IND",
+          "2025_14_IND_JAX",
+          "2025_15_IND_SEA",
+          "2025_16_SF_IND",
+          "2025_17_JAX_IND",
+          "2025_18_IND_HOU"
+        ],
+        "passing": {
+          "plays": 574,
+          "explosive": 44
+        },
+        "rushing": {
+          "plays": 430,
+          "explosive": 48
+        },
+        "inside20": {
+          "possessions": 66,
+          "touchdowns": 43
+        }
+      },
+      "defense": {
+        "gameIds": [
+          "2025_01_MIA_IND",
+          "2025_02_DEN_IND",
+          "2025_03_IND_TEN",
+          "2025_04_IND_LA",
+          "2025_05_LV_IND",
+          "2025_06_ARI_IND",
+          "2025_07_IND_LAC",
+          "2025_08_TEN_IND",
+          "2025_09_IND_PIT",
+          "2025_10_ATL_IND",
+          "2025_12_IND_KC",
+          "2025_13_HOU_IND",
+          "2025_14_IND_JAX",
+          "2025_15_IND_SEA",
+          "2025_16_SF_IND",
+          "2025_17_JAX_IND",
+          "2025_18_IND_HOU"
+        ],
+        "passing": {
+          "plays": 661,
+          "explosive": 57
+        },
+        "rushing": {
+          "plays": 437,
+          "explosive": 43
+        },
+        "inside20": {
+          "possessions": 67,
+          "touchdowns": 36
+        }
+      }
+    },
+    "JAX": {
+      "defense": {
+        "gameIds": [
+          "2025_01_CAR_JAX",
+          "2025_02_JAX_CIN",
+          "2025_03_HOU_JAX",
+          "2025_04_JAX_SF",
+          "2025_05_KC_JAX",
+          "2025_06_SEA_JAX",
+          "2025_07_LA_JAX",
+          "2025_09_JAX_LV",
+          "2025_10_JAX_HOU",
+          "2025_11_LAC_JAX",
+          "2025_12_JAX_ARI",
+          "2025_13_JAX_TEN",
+          "2025_14_IND_JAX",
+          "2025_15_NYJ_JAX",
+          "2025_16_JAX_DEN",
+          "2025_17_JAX_IND",
+          "2025_18_TEN_JAX",
+          "2025_19_BUF_JAX"
+        ],
+        "passing": {
+          "plays": 702,
+          "explosive": 49
+        },
+        "rushing": {
+          "plays": 382,
+          "explosive": 36
+        },
+        "inside20": {
+          "possessions": 50,
+          "touchdowns": 31
+        }
+      },
+      "offense": {
+        "gameIds": [
+          "2025_01_CAR_JAX",
+          "2025_02_JAX_CIN",
+          "2025_03_HOU_JAX",
+          "2025_04_JAX_SF",
+          "2025_05_KC_JAX",
+          "2025_06_SEA_JAX",
+          "2025_07_LA_JAX",
+          "2025_09_JAX_LV",
+          "2025_10_JAX_HOU",
+          "2025_11_LAC_JAX",
+          "2025_12_JAX_ARI",
+          "2025_13_JAX_TEN",
+          "2025_14_IND_JAX",
+          "2025_15_NYJ_JAX",
+          "2025_16_JAX_DEN",
+          "2025_17_JAX_IND",
+          "2025_18_TEN_JAX",
+          "2025_19_BUF_JAX"
+        ],
+        "passing": {
+          "plays": 632,
+          "explosive": 59
+        },
+        "rushing": {
+          "plays": 492,
+          "explosive": 55
+        },
+        "inside20": {
+          "possessions": 72,
+          "touchdowns": 45
+        }
+      }
+    },
+    "KC": {
+      "offense": {
+        "gameIds": [
+          "2025_01_KC_LAC",
+          "2025_02_PHI_KC",
+          "2025_03_KC_NYG",
+          "2025_04_BAL_KC",
+          "2025_05_KC_JAX",
+          "2025_06_DET_KC",
+          "2025_07_LV_KC",
+          "2025_08_WAS_KC",
+          "2025_09_KC_BUF",
+          "2025_11_KC_DEN",
+          "2025_12_IND_KC",
+          "2025_13_KC_DAL",
+          "2025_14_HOU_KC",
+          "2025_15_LAC_KC",
+          "2025_16_KC_TEN",
+          "2025_17_DEN_KC",
+          "2025_18_KC_LV"
+        ],
+        "passing": {
+          "plays": 628,
+          "explosive": 52
+        },
+        "rushing": {
+          "plays": 417,
+          "explosive": 44
+        },
+        "inside20": {
+          "possessions": 59,
+          "touchdowns": 34
+        }
+      },
+      "defense": {
+        "gameIds": [
+          "2025_01_KC_LAC",
+          "2025_02_PHI_KC",
+          "2025_03_KC_NYG",
+          "2025_04_BAL_KC",
+          "2025_05_KC_JAX",
+          "2025_06_DET_KC",
+          "2025_07_LV_KC",
+          "2025_08_WAS_KC",
+          "2025_09_KC_BUF",
+          "2025_11_KC_DEN",
+          "2025_12_IND_KC",
+          "2025_13_KC_DAL",
+          "2025_14_HOU_KC",
+          "2025_15_LAC_KC",
+          "2025_16_KC_TEN",
+          "2025_17_DEN_KC",
+          "2025_18_KC_LV"
+        ],
+        "passing": {
+          "plays": 544,
+          "explosive": 45
+        },
+        "rushing": {
+          "plays": 433,
+          "explosive": 41
+        },
+        "inside20": {
+          "possessions": 51,
+          "touchdowns": 27
+        }
+      }
+    },
+    "LA": {
+      "defense": {
+        "gameIds": [
+          "2025_01_HOU_LA",
+          "2025_02_LA_TEN",
+          "2025_03_LA_PHI",
+          "2025_04_IND_LA",
+          "2025_05_SF_LA",
+          "2025_06_LA_BAL",
+          "2025_07_LA_JAX",
+          "2025_09_NO_LA",
+          "2025_10_LA_SF",
+          "2025_11_SEA_LA",
+          "2025_12_TB_LA",
+          "2025_13_LA_CAR",
+          "2025_14_LA_ARI",
+          "2025_15_DET_LA",
+          "2025_16_LA_SEA",
+          "2025_17_LA_ATL",
+          "2025_18_ARI_LA",
+          "2025_19_LA_CAR",
+          "2025_20_LA_CHI",
+          "2025_21_LA_SEA"
+        ],
+        "passing": {
+          "plays": 755,
+          "explosive": 61
+        },
+        "rushing": {
+          "plays": 517,
+          "explosive": 46
+        },
+        "inside20": {
+          "possessions": 64,
+          "touchdowns": 34
+        }
+      },
+      "offense": {
+        "gameIds": [
+          "2025_01_HOU_LA",
+          "2025_02_LA_TEN",
+          "2025_03_LA_PHI",
+          "2025_04_IND_LA",
+          "2025_05_SF_LA",
+          "2025_06_LA_BAL",
+          "2025_07_LA_JAX",
+          "2025_09_NO_LA",
+          "2025_10_LA_SF",
+          "2025_11_SEA_LA",
+          "2025_12_TB_LA",
+          "2025_13_LA_CAR",
+          "2025_14_LA_ARI",
+          "2025_15_DET_LA",
+          "2025_16_LA_SEA",
+          "2025_17_LA_ATL",
+          "2025_18_ARI_LA",
+          "2025_19_LA_CAR",
+          "2025_20_LA_CHI",
+          "2025_21_LA_SEA"
+        ],
+        "passing": {
+          "plays": 741,
+          "explosive": 86
+        },
+        "rushing": {
+          "plays": 519,
+          "explosive": 59
+        },
+        "inside20": {
+          "possessions": 87,
+          "touchdowns": 56
+        }
+      }
+    },
+    "LAC": {
+      "defense": {
+        "gameIds": [
+          "2025_01_KC_LAC",
+          "2025_02_LAC_LV",
+          "2025_03_DEN_LAC",
+          "2025_04_LAC_NYG",
+          "2025_05_WAS_LAC",
+          "2025_06_LAC_MIA",
+          "2025_07_IND_LAC",
+          "2025_08_MIN_LAC",
+          "2025_09_LAC_TEN",
+          "2025_10_PIT_LAC",
+          "2025_11_LAC_JAX",
+          "2025_13_LV_LAC",
+          "2025_14_PHI_LAC",
+          "2025_15_LAC_KC",
+          "2025_16_LAC_DAL",
+          "2025_17_HOU_LAC",
+          "2025_18_LAC_DEN",
+          "2025_19_LAC_NE"
+        ],
+        "passing": {
+          "plays": 582,
+          "explosive": 41
+        },
+        "rushing": {
+          "plays": 431,
+          "explosive": 55
+        },
+        "inside20": {
+          "possessions": 52,
+          "touchdowns": 23
+        }
+      },
+      "offense": {
+        "gameIds": [
+          "2025_01_KC_LAC",
+          "2025_02_LAC_LV",
+          "2025_03_DEN_LAC",
+          "2025_04_LAC_NYG",
+          "2025_05_WAS_LAC",
+          "2025_06_LAC_MIA",
+          "2025_07_IND_LAC",
+          "2025_08_MIN_LAC",
+          "2025_09_LAC_TEN",
+          "2025_10_PIT_LAC",
+          "2025_11_LAC_JAX",
+          "2025_13_LV_LAC",
+          "2025_14_PHI_LAC",
+          "2025_15_LAC_KC",
+          "2025_16_LAC_DAL",
+          "2025_17_HOU_LAC",
+          "2025_18_LAC_DEN",
+          "2025_19_LAC_NE"
+        ],
+        "passing": {
+          "plays": 662,
+          "explosive": 46
+        },
+        "rushing": {
+          "plays": 476,
+          "explosive": 54
+        },
+        "inside20": {
+          "possessions": 59,
+          "touchdowns": 27
+        }
+      }
+    },
+    "LV": {
+      "offense": {
+        "gameIds": [
+          "2025_01_LV_NE",
+          "2025_02_LAC_LV",
+          "2025_03_LV_WAS",
+          "2025_04_CHI_LV",
+          "2025_05_LV_IND",
+          "2025_06_TEN_LV",
+          "2025_07_LV_KC",
+          "2025_09_JAX_LV",
+          "2025_10_LV_DEN",
+          "2025_11_DAL_LV",
+          "2025_12_CLE_LV",
+          "2025_13_LV_LAC",
+          "2025_14_DEN_LV",
+          "2025_15_LV_PHI",
+          "2025_16_LV_HOU",
+          "2025_17_NYG_LV",
+          "2025_18_KC_LV"
+        ],
+        "passing": {
+          "plays": 576,
+          "explosive": 37
+        },
+        "rushing": {
+          "plays": 363,
+          "explosive": 31
+        },
+        "inside20": {
+          "possessions": 36,
+          "touchdowns": 18
+        }
+      },
+      "defense": {
+        "gameIds": [
+          "2025_01_LV_NE",
+          "2025_02_LAC_LV",
+          "2025_03_LV_WAS",
+          "2025_04_CHI_LV",
+          "2025_05_LV_IND",
+          "2025_06_TEN_LV",
+          "2025_07_LV_KC",
+          "2025_09_JAX_LV",
+          "2025_10_LV_DEN",
+          "2025_11_DAL_LV",
+          "2025_12_CLE_LV",
+          "2025_13_LV_LAC",
+          "2025_14_DEN_LV",
+          "2025_15_LV_PHI",
+          "2025_16_LV_HOU",
+          "2025_17_NYG_LV",
+          "2025_18_KC_LV"
+        ],
+        "passing": {
+          "plays": 558,
+          "explosive": 37
+        },
+        "rushing": {
+          "plays": 491,
+          "explosive": 50
+        },
+        "inside20": {
+          "possessions": 64,
+          "touchdowns": 37
+        }
+      }
+    },
+    "MIA": {
+      "defense": {
+        "gameIds": [
+          "2025_01_MIA_IND",
+          "2025_02_NE_MIA",
+          "2025_03_MIA_BUF",
+          "2025_04_NYJ_MIA",
+          "2025_05_MIA_CAR",
+          "2025_06_LAC_MIA",
+          "2025_07_MIA_CLE",
+          "2025_08_MIA_ATL",
+          "2025_09_BAL_MIA",
+          "2025_10_BUF_MIA",
+          "2025_11_WAS_MIA",
+          "2025_13_NO_MIA",
+          "2025_14_MIA_NYJ",
+          "2025_15_MIA_PIT",
+          "2025_16_CIN_MIA",
+          "2025_17_TB_MIA",
+          "2025_18_MIA_NE"
+        ],
+        "passing": {
+          "plays": 553,
+          "explosive": 50
+        },
+        "rushing": {
+          "plays": 458,
+          "explosive": 60
+        },
+        "inside20": {
+          "possessions": 62,
+          "touchdowns": 37
+        }
+      },
+      "offense": {
+        "gameIds": [
+          "2025_01_MIA_IND",
+          "2025_02_NE_MIA",
+          "2025_03_MIA_BUF",
+          "2025_04_NYJ_MIA",
+          "2025_05_MIA_CAR",
+          "2025_06_LAC_MIA",
+          "2025_07_MIA_CLE",
+          "2025_08_MIA_ATL",
+          "2025_09_BAL_MIA",
+          "2025_10_BUF_MIA",
+          "2025_11_WAS_MIA",
+          "2025_13_NO_MIA",
+          "2025_14_MIA_NYJ",
+          "2025_15_MIA_PIT",
+          "2025_16_CIN_MIA",
+          "2025_17_TB_MIA",
+          "2025_18_MIA_NE"
+        ],
+        "passing": {
+          "plays": 515,
+          "explosive": 43
+        },
+        "rushing": {
+          "plays": 424,
+          "explosive": 55
+        },
+        "inside20": {
+          "possessions": 48,
+          "touchdowns": 27
+        }
+      }
+    },
+    "MIN": {
+      "defense": {
+        "gameIds": [
+          "2025_01_MIN_CHI",
+          "2025_02_ATL_MIN",
+          "2025_03_CIN_MIN",
+          "2025_04_MIN_PIT",
+          "2025_05_MIN_CLE",
+          "2025_07_PHI_MIN",
+          "2025_08_MIN_LAC",
+          "2025_09_MIN_DET",
+          "2025_10_BAL_MIN",
+          "2025_11_CHI_MIN",
+          "2025_12_MIN_GB",
+          "2025_13_MIN_SEA",
+          "2025_14_WAS_MIN",
+          "2025_15_MIN_DAL",
+          "2025_16_MIN_NYG",
+          "2025_17_DET_MIN",
+          "2025_18_GB_MIN"
+        ],
+        "passing": {
+          "plays": 495,
+          "explosive": 32
+        },
+        "rushing": {
+          "plays": 521,
+          "explosive": 55
+        },
+        "inside20": {
+          "possessions": 49,
+          "touchdowns": 21
+        }
+      },
+      "offense": {
+        "gameIds": [
+          "2025_01_MIN_CHI",
+          "2025_02_ATL_MIN",
+          "2025_03_CIN_MIN",
+          "2025_04_MIN_PIT",
+          "2025_05_MIN_CLE",
+          "2025_07_PHI_MIN",
+          "2025_08_MIN_LAC",
+          "2025_09_MIN_DET",
+          "2025_10_BAL_MIN",
+          "2025_11_CHI_MIN",
+          "2025_12_MIN_GB",
+          "2025_13_MIN_SEA",
+          "2025_14_WAS_MIN",
+          "2025_15_MIN_DAL",
+          "2025_16_MIN_NYG",
+          "2025_17_DET_MIN",
+          "2025_18_GB_MIN"
+        ],
+        "passing": {
+          "plays": 543,
+          "explosive": 39
+        },
+        "rushing": {
+          "plays": 396,
+          "explosive": 53
+        },
+        "inside20": {
+          "possessions": 51,
+          "touchdowns": 29
+        }
+      }
+    },
+    "NE": {
+      "defense": {
+        "gameIds": [
+          "2025_01_LV_NE",
+          "2025_02_NE_MIA",
+          "2025_03_PIT_NE",
+          "2025_04_CAR_NE",
+          "2025_05_NE_BUF",
+          "2025_06_NE_NO",
+          "2025_07_NE_TEN",
+          "2025_08_CLE_NE",
+          "2025_09_ATL_NE",
+          "2025_10_NE_TB",
+          "2025_11_NYJ_NE",
+          "2025_12_NE_CIN",
+          "2025_13_NYG_NE",
+          "2025_15_BUF_NE",
+          "2025_16_NE_BAL",
+          "2025_17_NE_NYJ",
+          "2025_18_MIA_NE",
+          "2025_19_LAC_NE",
+          "2025_20_HOU_NE",
+          "2025_21_NE_DEN",
+          "2025_22_SEA_NE"
+        ],
+        "passing": {
+          "plays": 720,
+          "explosive": 48
+        },
+        "rushing": {
+          "plays": 503,
+          "explosive": 52
+        },
+        "inside20": {
+          "possessions": 52,
+          "touchdowns": 30
+        }
+      },
+      "offense": {
+        "gameIds": [
+          "2025_01_LV_NE",
+          "2025_02_NE_MIA",
+          "2025_03_PIT_NE",
+          "2025_04_CAR_NE",
+          "2025_05_NE_BUF",
+          "2025_06_NE_NO",
+          "2025_07_NE_TEN",
+          "2025_08_CLE_NE",
+          "2025_09_ATL_NE",
+          "2025_10_NE_TB",
+          "2025_11_NYJ_NE",
+          "2025_12_NE_CIN",
+          "2025_13_NYG_NE",
+          "2025_15_BUF_NE",
+          "2025_16_NE_BAL",
+          "2025_17_NE_NYJ",
+          "2025_18_MIA_NE",
+          "2025_19_LAC_NE",
+          "2025_20_HOU_NE",
+          "2025_21_NE_DEN",
+          "2025_22_SEA_NE"
+        ],
+        "passing": {
+          "plays": 692,
+          "explosive": 83
+        },
+        "rushing": {
+          "plays": 572,
+          "explosive": 65
+        },
+        "inside20": {
+          "possessions": 70,
+          "touchdowns": 39
+        }
+      }
+    },
+    "NO": {
+      "defense": {
+        "gameIds": [
+          "2025_01_ARI_NO",
+          "2025_02_SF_NO",
+          "2025_03_NO_SEA",
+          "2025_04_NO_BUF",
+          "2025_05_NYG_NO",
+          "2025_06_NE_NO",
+          "2025_07_NO_CHI",
+          "2025_08_TB_NO",
+          "2025_09_NO_LA",
+          "2025_10_NO_CAR",
+          "2025_12_ATL_NO",
+          "2025_13_NO_MIA",
+          "2025_14_NO_TB",
+          "2025_15_CAR_NO",
+          "2025_16_NYJ_NO",
+          "2025_17_NO_TEN",
+          "2025_18_NO_ATL"
+        ],
+        "passing": {
+          "plays": 531,
+          "explosive": 44
+        },
+        "rushing": {
+          "plays": 496,
+          "explosive": 52
+        },
+        "inside20": {
+          "possessions": 47,
+          "touchdowns": 25
+        }
+      },
+      "offense": {
+        "gameIds": [
+          "2025_01_ARI_NO",
+          "2025_02_SF_NO",
+          "2025_03_NO_SEA",
+          "2025_04_NO_BUF",
+          "2025_05_NYG_NO",
+          "2025_06_NE_NO",
+          "2025_07_NO_CHI",
+          "2025_08_TB_NO",
+          "2025_09_NO_LA",
+          "2025_10_NO_CAR",
+          "2025_12_ATL_NO",
+          "2025_13_NO_MIA",
+          "2025_14_NO_TB",
+          "2025_15_CAR_NO",
+          "2025_16_NYJ_NO",
+          "2025_17_NO_TEN",
+          "2025_18_NO_ATL"
+        ],
+        "passing": {
+          "plays": 634,
+          "explosive": 33
+        },
+        "rushing": {
+          "plays": 427,
+          "explosive": 34
+        },
+        "inside20": {
+          "possessions": 45,
+          "touchdowns": 20
+        }
+      }
+    },
+    "NYG": {
+      "offense": {
+        "gameIds": [
+          "2025_01_NYG_WAS",
+          "2025_02_NYG_DAL",
+          "2025_03_KC_NYG",
+          "2025_04_LAC_NYG",
+          "2025_05_NYG_NO",
+          "2025_06_PHI_NYG",
+          "2025_07_NYG_DEN",
+          "2025_08_NYG_PHI",
+          "2025_09_SF_NYG",
+          "2025_10_NYG_CHI",
+          "2025_11_GB_NYG",
+          "2025_12_NYG_DET",
+          "2025_13_NYG_NE",
+          "2025_15_WAS_NYG",
+          "2025_16_MIN_NYG",
+          "2025_17_NYG_LV",
+          "2025_18_DAL_NYG"
+        ],
+        "passing": {
+          "plays": 573,
+          "explosive": 52
+        },
+        "rushing": {
+          "plays": 502,
+          "explosive": 59
+        },
+        "inside20": {
+          "possessions": 59,
+          "touchdowns": 28
+        }
+      },
+      "defense": {
+        "gameIds": [
+          "2025_01_NYG_WAS",
+          "2025_02_NYG_DAL",
+          "2025_03_KC_NYG",
+          "2025_04_LAC_NYG",
+          "2025_05_NYG_NO",
+          "2025_06_PHI_NYG",
+          "2025_07_NYG_DEN",
+          "2025_08_NYG_PHI",
+          "2025_09_SF_NYG",
+          "2025_10_NYG_CHI",
+          "2025_11_GB_NYG",
+          "2025_12_NYG_DET",
+          "2025_13_NYG_NE",
+          "2025_15_WAS_NYG",
+          "2025_16_MIN_NYG",
+          "2025_17_NYG_LV",
+          "2025_18_DAL_NYG"
+        ],
+        "passing": {
+          "plays": 586,
+          "explosive": 49
+        },
+        "rushing": {
+          "plays": 442,
+          "explosive": 75
+        },
+        "inside20": {
+          "possessions": 57,
+          "touchdowns": 36
+        }
+      }
+    },
+    "NYJ": {
+      "offense": {
+        "gameIds": [
+          "2025_01_PIT_NYJ",
+          "2025_02_BUF_NYJ",
+          "2025_03_NYJ_TB",
+          "2025_04_NYJ_MIA",
+          "2025_05_DAL_NYJ",
+          "2025_06_DEN_NYJ",
+          "2025_07_CAR_NYJ",
+          "2025_08_NYJ_CIN",
+          "2025_10_CLE_NYJ",
+          "2025_11_NYJ_NE",
+          "2025_12_NYJ_BAL",
+          "2025_13_ATL_NYJ",
+          "2025_14_MIA_NYJ",
+          "2025_15_NYJ_JAX",
+          "2025_16_NYJ_NO",
+          "2025_17_NE_NYJ",
+          "2025_18_NYJ_BUF"
+        ],
+        "passing": {
+          "plays": 551,
+          "explosive": 26
+        },
+        "rushing": {
+          "plays": 450,
+          "explosive": 53
+        },
+        "inside20": {
+          "possessions": 38,
+          "touchdowns": 17
+        }
+      },
+      "defense": {
+        "gameIds": [
+          "2025_01_PIT_NYJ",
+          "2025_02_BUF_NYJ",
+          "2025_03_NYJ_TB",
+          "2025_04_NYJ_MIA",
+          "2025_05_DAL_NYJ",
+          "2025_06_DEN_NYJ",
+          "2025_07_CAR_NYJ",
+          "2025_08_NYJ_CIN",
+          "2025_10_CLE_NYJ",
+          "2025_11_NYJ_NE",
+          "2025_12_NYJ_BAL",
+          "2025_13_ATL_NYJ",
+          "2025_14_MIA_NYJ",
+          "2025_15_NYJ_JAX",
+          "2025_16_NYJ_NO",
+          "2025_17_NE_NYJ",
+          "2025_18_NYJ_BUF"
+        ],
+        "passing": {
+          "plays": 540,
+          "explosive": 57
+        },
+        "rushing": {
+          "plays": 511,
+          "explosive": 65
+        },
+        "inside20": {
+          "possessions": 68,
+          "touchdowns": 44
+        }
+      }
+    },
+    "PHI": {
+      "defense": {
+        "gameIds": [
+          "2025_01_DAL_PHI",
+          "2025_02_PHI_KC",
+          "2025_03_LA_PHI",
+          "2025_04_PHI_TB",
+          "2025_05_DEN_PHI",
+          "2025_06_PHI_NYG",
+          "2025_07_PHI_MIN",
+          "2025_08_NYG_PHI",
+          "2025_10_PHI_GB",
+          "2025_11_DET_PHI",
+          "2025_12_PHI_DAL",
+          "2025_13_CHI_PHI",
+          "2025_14_PHI_LAC",
+          "2025_15_LV_PHI",
+          "2025_16_PHI_WAS",
+          "2025_17_PHI_BUF",
+          "2025_18_WAS_PHI",
+          "2025_19_SF_PHI"
+        ],
+        "passing": {
+          "plays": 613,
+          "explosive": 50
+        },
+        "rushing": {
+          "plays": 505,
+          "explosive": 56
+        },
+        "inside20": {
+          "possessions": 52,
+          "touchdowns": 28
+        }
+      },
+      "offense": {
+        "gameIds": [
+          "2025_01_DAL_PHI",
+          "2025_02_PHI_KC",
+          "2025_03_LA_PHI",
+          "2025_04_PHI_TB",
+          "2025_05_DEN_PHI",
+          "2025_06_PHI_NYG",
+          "2025_07_PHI_MIN",
+          "2025_08_NYG_PHI",
+          "2025_10_PHI_GB",
+          "2025_11_DET_PHI",
+          "2025_12_PHI_DAL",
+          "2025_13_CHI_PHI",
+          "2025_14_PHI_LAC",
+          "2025_15_LV_PHI",
+          "2025_16_PHI_WAS",
+          "2025_17_PHI_BUF",
+          "2025_18_WAS_PHI",
+          "2025_19_SF_PHI"
+        ],
+        "passing": {
+          "plays": 566,
+          "explosive": 43
+        },
+        "rushing": {
+          "plays": 498,
+          "explosive": 56
+        },
+        "inside20": {
+          "possessions": 47,
+          "touchdowns": 33
+        }
+      }
+    },
+    "PIT": {
+      "defense": {
+        "gameIds": [
+          "2025_01_PIT_NYJ",
+          "2025_02_SEA_PIT",
+          "2025_03_PIT_NE",
+          "2025_04_MIN_PIT",
+          "2025_06_CLE_PIT",
+          "2025_07_PIT_CIN",
+          "2025_08_GB_PIT",
+          "2025_09_IND_PIT",
+          "2025_10_PIT_LAC",
+          "2025_11_CIN_PIT",
+          "2025_12_PIT_CHI",
+          "2025_13_BUF_PIT",
+          "2025_14_PIT_BAL",
+          "2025_15_MIA_PIT",
+          "2025_16_PIT_DET",
+          "2025_17_PIT_CLE",
+          "2025_18_BAL_PIT",
+          "2025_19_HOU_PIT"
+        ],
+        "passing": {
+          "plays": 691,
+          "explosive": 56
+        },
+        "rushing": {
+          "plays": 472,
+          "explosive": 50
+        },
+        "inside20": {
+          "possessions": 58,
+          "touchdowns": 30
+        }
+      },
+      "offense": {
+        "gameIds": [
+          "2025_01_PIT_NYJ",
+          "2025_02_SEA_PIT",
+          "2025_03_PIT_NE",
+          "2025_04_MIN_PIT",
+          "2025_06_CLE_PIT",
+          "2025_07_PIT_CIN",
+          "2025_08_GB_PIT",
+          "2025_09_IND_PIT",
+          "2025_10_PIT_LAC",
+          "2025_11_CIN_PIT",
+          "2025_12_PIT_CHI",
+          "2025_13_BUF_PIT",
+          "2025_14_PIT_BAL",
+          "2025_15_MIA_PIT",
+          "2025_16_PIT_DET",
+          "2025_17_PIT_CLE",
+          "2025_18_BAL_PIT",
+          "2025_19_HOU_PIT"
+        ],
+        "passing": {
+          "plays": 616,
+          "explosive": 43
+        },
+        "rushing": {
+          "plays": 413,
+          "explosive": 47
+        },
+        "inside20": {
+          "possessions": 53,
+          "touchdowns": 30
+        }
+      }
+    },
+    "SEA": {
+      "offense": {
+        "gameIds": [
+          "2025_01_SF_SEA",
+          "2025_02_SEA_PIT",
+          "2025_03_NO_SEA",
+          "2025_04_SEA_ARI",
+          "2025_05_TB_SEA",
+          "2025_06_SEA_JAX",
+          "2025_07_HOU_SEA",
+          "2025_09_SEA_WAS",
+          "2025_10_ARI_SEA",
+          "2025_11_SEA_LA",
+          "2025_12_SEA_TEN",
+          "2025_13_MIN_SEA",
+          "2025_14_SEA_ATL",
+          "2025_15_IND_SEA",
+          "2025_16_LA_SEA",
+          "2025_17_SEA_CAR",
+          "2025_18_SEA_SF",
+          "2025_20_SF_SEA",
+          "2025_21_LA_SEA",
+          "2025_22_SEA_NE"
+        ],
+        "passing": {
+          "plays": 601,
+          "explosive": 62
+        },
+        "rushing": {
+          "plays": 581,
+          "explosive": 68
+        },
+        "inside20": {
+          "possessions": 74,
+          "touchdowns": 41
+        }
+      },
+      "defense": {
+        "gameIds": [
+          "2025_01_SF_SEA",
+          "2025_02_SEA_PIT",
+          "2025_03_NO_SEA",
+          "2025_04_SEA_ARI",
+          "2025_05_TB_SEA",
+          "2025_06_SEA_JAX",
+          "2025_07_HOU_SEA",
+          "2025_09_SEA_WAS",
+          "2025_10_ARI_SEA",
+          "2025_11_SEA_LA",
+          "2025_12_SEA_TEN",
+          "2025_13_MIN_SEA",
+          "2025_14_SEA_ATL",
+          "2025_15_IND_SEA",
+          "2025_16_LA_SEA",
+          "2025_17_SEA_CAR",
+          "2025_18_SEA_SF",
+          "2025_20_SF_SEA",
+          "2025_21_LA_SEA",
+          "2025_22_SEA_NE"
+        ],
+        "passing": {
+          "plays": 763,
+          "explosive": 58
+        },
+        "rushing": {
+          "plays": 476,
+          "explosive": 35
+        },
+        "inside20": {
+          "possessions": 56,
+          "touchdowns": 29
+        }
+      }
+    },
+    "SF": {
+      "defense": {
+        "gameIds": [
+          "2025_01_SF_SEA",
+          "2025_02_SF_NO",
+          "2025_03_ARI_SF",
+          "2025_04_JAX_SF",
+          "2025_05_SF_LA",
+          "2025_06_SF_TB",
+          "2025_07_ATL_SF",
+          "2025_08_SF_HOU",
+          "2025_09_SF_NYG",
+          "2025_10_LA_SF",
+          "2025_11_SF_ARI",
+          "2025_12_CAR_SF",
+          "2025_13_SF_CLE",
+          "2025_15_TEN_SF",
+          "2025_16_SF_IND",
+          "2025_17_CHI_SF",
+          "2025_18_SEA_SF",
+          "2025_19_SF_PHI",
+          "2025_20_SF_SEA"
+        ],
+        "passing": {
+          "plays": 655,
+          "explosive": 47
+        },
+        "rushing": {
+          "plays": 482,
+          "explosive": 43
+        },
+        "inside20": {
+          "possessions": 61,
+          "touchdowns": 34
+        }
+      },
+      "offense": {
+        "gameIds": [
+          "2025_01_SF_SEA",
+          "2025_02_SF_NO",
+          "2025_03_ARI_SF",
+          "2025_04_JAX_SF",
+          "2025_05_SF_LA",
+          "2025_06_SF_TB",
+          "2025_07_ATL_SF",
+          "2025_08_SF_HOU",
+          "2025_09_SF_NYG",
+          "2025_10_LA_SF",
+          "2025_11_SF_ARI",
+          "2025_12_CAR_SF",
+          "2025_13_SF_CLE",
+          "2025_15_TEN_SF",
+          "2025_16_SF_IND",
+          "2025_17_CHI_SF",
+          "2025_18_SEA_SF",
+          "2025_19_SF_PHI",
+          "2025_20_SF_SEA"
+        ],
+        "passing": {
+          "plays": 664,
+          "explosive": 55
+        },
+        "rushing": {
+          "plays": 511,
+          "explosive": 48
+        },
+        "inside20": {
+          "possessions": 69,
+          "touchdowns": 45
+        }
+      }
+    },
+    "TB": {
+      "defense": {
+        "gameIds": [
+          "2025_01_TB_ATL",
+          "2025_02_TB_HOU",
+          "2025_03_NYJ_TB",
+          "2025_04_PHI_TB",
+          "2025_05_TB_SEA",
+          "2025_06_SF_TB",
+          "2025_07_TB_DET",
+          "2025_08_TB_NO",
+          "2025_10_NE_TB",
+          "2025_11_TB_BUF",
+          "2025_12_TB_LA",
+          "2025_13_ARI_TB",
+          "2025_14_NO_TB",
+          "2025_15_ATL_TB",
+          "2025_16_TB_CAR",
+          "2025_17_TB_MIA",
+          "2025_18_CAR_TB"
+        ],
+        "passing": {
+          "plays": 600,
+          "explosive": 55
+        },
+        "rushing": {
+          "plays": 386,
+          "explosive": 39
+        },
+        "inside20": {
+          "possessions": 43,
+          "touchdowns": 30
+        }
+      },
+      "offense": {
+        "gameIds": [
+          "2025_01_TB_ATL",
+          "2025_02_TB_HOU",
+          "2025_03_NYJ_TB",
+          "2025_04_PHI_TB",
+          "2025_05_TB_SEA",
+          "2025_06_SF_TB",
+          "2025_07_TB_DET",
+          "2025_08_TB_NO",
+          "2025_10_NE_TB",
+          "2025_11_TB_BUF",
+          "2025_12_TB_LA",
+          "2025_13_ARI_TB",
+          "2025_14_NO_TB",
+          "2025_15_ATL_TB",
+          "2025_16_TB_CAR",
+          "2025_17_TB_MIA",
+          "2025_18_CAR_TB"
+        ],
+        "passing": {
+          "plays": 595,
+          "explosive": 55
+        },
+        "rushing": {
+          "plays": 462,
+          "explosive": 48
+        },
+        "inside20": {
+          "possessions": 50,
+          "touchdowns": 27
+        }
+      }
+    },
+    "TEN": {
+      "defense": {
+        "gameIds": [
+          "2025_01_TEN_DEN",
+          "2025_02_LA_TEN",
+          "2025_03_IND_TEN",
+          "2025_04_TEN_HOU",
+          "2025_05_TEN_ARI",
+          "2025_06_TEN_LV",
+          "2025_07_NE_TEN",
+          "2025_08_TEN_IND",
+          "2025_09_LAC_TEN",
+          "2025_11_HOU_TEN",
+          "2025_12_SEA_TEN",
+          "2025_13_JAX_TEN",
+          "2025_14_TEN_CLE",
+          "2025_15_TEN_SF",
+          "2025_16_KC_TEN",
+          "2025_17_NO_TEN",
+          "2025_18_TEN_JAX"
+        ],
+        "passing": {
+          "plays": 556,
+          "explosive": 58
+        },
+        "rushing": {
+          "plays": 432,
+          "explosive": 49
+        },
+        "inside20": {
+          "possessions": 58,
+          "touchdowns": 38
+        }
+      },
+      "offense": {
+        "gameIds": [
+          "2025_01_TEN_DEN",
+          "2025_02_LA_TEN",
+          "2025_03_IND_TEN",
+          "2025_04_TEN_HOU",
+          "2025_05_TEN_ARI",
+          "2025_06_TEN_LV",
+          "2025_07_NE_TEN",
+          "2025_08_TEN_IND",
+          "2025_09_LAC_TEN",
+          "2025_11_HOU_TEN",
+          "2025_12_SEA_TEN",
+          "2025_13_JAX_TEN",
+          "2025_14_TEN_CLE",
+          "2025_15_TEN_SF",
+          "2025_16_KC_TEN",
+          "2025_17_NO_TEN",
+          "2025_18_TEN_JAX"
+        ],
+        "passing": {
+          "plays": 623,
+          "explosive": 41
+        },
+        "rushing": {
+          "plays": 372,
+          "explosive": 40
+        },
+        "inside20": {
+          "possessions": 33,
+          "touchdowns": 19
+        }
+      }
+    },
+    "WAS": {
+      "defense": {
+        "gameIds": [
+          "2025_01_NYG_WAS",
+          "2025_02_WAS_GB",
+          "2025_03_LV_WAS",
+          "2025_04_WAS_ATL",
+          "2025_05_WAS_LAC",
+          "2025_06_CHI_WAS",
+          "2025_07_WAS_DAL",
+          "2025_08_WAS_KC",
+          "2025_09_SEA_WAS",
+          "2025_10_DET_WAS",
+          "2025_11_WAS_MIA",
+          "2025_13_DEN_WAS",
+          "2025_14_WAS_MIN",
+          "2025_15_WAS_NYG",
+          "2025_16_PHI_WAS",
+          "2025_17_DAL_WAS",
+          "2025_18_WAS_PHI"
+        ],
+        "passing": {
+          "plays": 581,
+          "explosive": 53
+        },
+        "rushing": {
+          "plays": 487,
+          "explosive": 65
+        },
+        "inside20": {
+          "possessions": 62,
+          "touchdowns": 42
+        }
+      },
+      "offense": {
+        "gameIds": [
+          "2025_01_NYG_WAS",
+          "2025_02_WAS_GB",
+          "2025_03_LV_WAS",
+          "2025_04_WAS_ATL",
+          "2025_05_WAS_LAC",
+          "2025_06_CHI_WAS",
+          "2025_07_WAS_DAL",
+          "2025_08_WAS_KC",
+          "2025_09_SEA_WAS",
+          "2025_10_DET_WAS",
+          "2025_11_WAS_MIA",
+          "2025_13_DEN_WAS",
+          "2025_14_WAS_MIN",
+          "2025_15_WAS_NYG",
+          "2025_16_PHI_WAS",
+          "2025_17_DAL_WAS",
+          "2025_18_WAS_PHI"
+        ],
+        "passing": {
+          "plays": 500,
+          "explosive": 40
+        },
+        "rushing": {
+          "plays": 472,
+          "explosive": 60
+        },
+        "inside20": {
+          "possessions": 46,
+          "touchdowns": 30
+        }
+      }
+    }
+  },
+  "forecastSeason": 2026,
+  "sample": "prior-season",
+  "includesPostseason": true,
+  "sourceObservedAt": "2026-09-11T13:02:54.997256+00:00",
+  "sourceSha256": "2f135887790a013fd004e609e37096bb4816d5cc80b9f19122e1bad478961978",
+  "scheduleSha256": "00c1e3896ee5c8b1d929ef738ed301ca08b5b030056cd3f0879c4246ff86f22e",
+  "adjudicationHash": "dfb0247be1b350025dc3d8b04b40190eca8ecfed91de9dd3a6ef8503cbbb9cba",
+  "limitations": "Historical source vintage. Cutoff restricts game eligibility, not original data availability. No forecast adjustment."
+}

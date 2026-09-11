@@ -1,0 +1,12 @@
+{
+  "season": 2025,
+  "forecastSeason": 2026,
+  "cutoff": "2026-09-09",
+  "games": 285,
+  "teams": 32,
+  "artifactSha256": "7d1830183d335ff670d04f3924add153f655def9deaada965941542709e41413",
+  "sourceSha256": "2f135887790a013fd004e609e37096bb4816d5cc80b9f19122e1bad478961978",
+  "scheduleSha256": "00c1e3896ee5c8b1d929ef738ed301ca08b5b030056cd3f0879c4246ff86f22e",
+  "allPriorCountsMatch": true,
+  "limitations": "Retained historical vintage. Acquisition rollover and UI consumption remain separate integration steps."
+}

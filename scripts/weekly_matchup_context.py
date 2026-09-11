@@ -30,6 +30,29 @@ def weekly_context(plays, schedule, season, week, game_type):
                 or (phase(g) == 'POST' == game_type and int(g['week']) < week))
     eligible = {g['game_id'] for g in selected if prior(g) and g['gameday'] < cutoff
                 and all(g.get(k) not in ('', None, 'NA') for k in ('home_score', 'away_score'))}
+    return aggregate_context(plays, selected, season, cutoff, eligible) | {'week': week, 'gameType': game_type}
+
+
+def prior_season_context(plays, schedule, forecast_season):
+    """A completed prior season, kept separate from current-season samples."""
+    if type(forecast_season) is not int:
+        raise ValueError('Invalid forecast season')
+    season = forecast_season - 1
+    selected = [g for g in schedule if g['season'] == str(season)]
+    opening = [g for g in schedule if g['season'] == str(forecast_season) and g['game_type'] == 'REG']
+    if not selected or not opening:
+        raise ValueError('Prior season or opening schedule missing')
+    cutoff = min(date.fromisoformat(g['gameday']) for g in opening).isoformat()
+    if sum(g['game_type'] == 'SB' for g in selected) != 1 or not any(g['game_type'] == 'REG' for g in selected):
+        raise ValueError('Prior season final or regular-season scope missing')
+    for game in selected:
+        if game['game_type'] not in ('REG', 'WC', 'DIV', 'CON', 'SB') or date.fromisoformat(game['gameday']).isoformat() >= cutoff or any(game.get(k) in ('', None, 'NA') for k in ('home_score', 'away_score')):
+            raise ValueError('Prior season has unsupported, unfinished or out-of-cutoff games')
+    return aggregate_context(plays, selected, season, cutoff, {g['game_id'] for g in selected}) | {
+        'forecastSeason': forecast_season, 'sample': 'prior-season', 'includesPostseason': True}
+
+
+def aggregate_context(plays, selected, season, cutoff, eligible):
     gated = [g if g['game_id'] in eligible else {**g, 'home_score': '', 'away_score': ''} for g in selected]
     for game in selected:
         if game['game_id'] not in eligible:
@@ -69,12 +92,12 @@ def weekly_context(plays, schedule, season, week, game_type):
                 counts = teams[team][side]['inside20']
                 counts['possessions'] += 1
                 counts['touchdowns'] += int(drive['offensiveTouchdown'])
-    return {'season': season, 'week': week, 'gameType': game_type, 'cutoff': cutoff,
+    return {'season': season, 'cutoff': cutoff,
             'status': 'available' if eligible else 'no-eligible-games',
             'gameIds': sorted(eligible), 'teams': dict(sorted(teams.items()))}
 
 
-def from_retained(root, manifest, adjudications, week, game_type='REG'):
+def from_retained(root, manifest, adjudications, week=None, game_type='REG', *, forecast_season=None):
     retained = datetime.fromisoformat(manifest['retainedAt'].replace('Z', '+00:00'))
     if retained.tzinfo is None:
         raise ValueError('Source observation must include timezone')
@@ -85,7 +108,12 @@ def from_retained(root, manifest, adjudications, week, game_type='REG'):
         return list(csv.DictReader(io.StringIO(gzip.decompress(raw).decode('utf-8-sig'))))
     schedule = read('schedule')
     plays = apply_adjudications(read('plays'), manifest['plays']['sha256'], adjudications)
-    result = weekly_context(plays, schedule, manifest['season'], week, game_type)
+    if forecast_season is not None:
+        if manifest['season'] != forecast_season - 1 or week is not None:
+            raise ValueError('Prior-season manifest or scope mismatch')
+        result = prior_season_context(plays, schedule, forecast_season)
+    else:
+        result = weekly_context(plays, schedule, manifest['season'], week, game_type)
     return {'schemaVersion': 1, **result, 'sourceObservedAt': manifest['retainedAt'],
             'sourceSha256': manifest['plays']['sha256'], 'scheduleSha256': manifest['schedule']['sha256'],
             'adjudicationHash': hashlib.sha256(json.dumps(adjudications, sort_keys=True).encode()).hexdigest(),

@@ -73,6 +73,24 @@ matches the retained hash, but its asset update is August 13, 2026. A historical
 archive's age must be treated separately from the 30-hour current-feed freshness
 rule; immutable source identity and complete-season validation remain required.
 
+The shared builder now also creates `data/prior-matchup-context.json` for a
+forecast season's preceding season. It requires a scheduled following-season
+opener, completed prior-season rows, one Super Bowl, regular-season coverage,
+matching terminal scores and both offensive samples for every supplied game.
+This validates completeness against the supplied schedule; it cannot establish
+that the schedule itself omits no games. Prior-season and weekly samples remain
+separate, and neither changes numerical forecasts.
+
+`python -O -m scripts.replay_prior_matchup_context` reconciles every team's
+offensive and defensive passing, rushing and inside-20 counts, and all game
+sets, against the retained historical panels: 285 games, 32 teams. The result is
+recorded in `reviews/prior-matchup-replay.json`. Validation uses explicit errors
+so Python optimization cannot skip comparisons. Three targeted tests cover prior
+scope and deliberate reconciliation failures; all eight weekly builder tests
+also pass. The shared aggregation refactor preserves the four recorded weekly
+replay hashes. Automatic historical acquisition and UI consumption of this new
+artifact remain pending; it is not yet a season-rollover implementation.
+
 Acquisition has four additional tests: immutable repeat capture/corrupt existing
 object rejection; bad digest/stale/future metadata rejection; and failed refresh
 preserving earlier archives while replacing current state with unavailable; and
