@@ -1,3 +1,4 @@
+import { TotalExplanation } from '@/components/total-explanation';
 import { RevisionBrief } from '@/components/revision-brief';
 import { ModelBrief } from '@/components/model-brief';
 import { freshnessInputs } from "@/lib/freshness";
@@ -235,6 +236,7 @@ export default async function GamePage({
                   narrative.
                 </p>
               </section>
+              <TotalExplanation snapshot={g.snapshot!} />
               <WeatherContext game={g} />
               <section className="panel">
                 <h2 id="model-contributions" tabIndex={-1}>What moves the projection</h2>
