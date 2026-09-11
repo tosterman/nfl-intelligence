@@ -1,6 +1,7 @@
 import io
 import json
 import sys
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -12,6 +13,21 @@ from test_publication_preflight import fixture
 
 
 class RestPublicationTests(unittest.TestCase):
+    def test_historical_verification_failure_prevents_deployment(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'data').mkdir()
+            site, ledger = fixture()
+            for name, value in [('site', site), ('ledger', ledger)]:
+                (root / f'data/{name}.json').write_text(json.dumps(value))
+            with patch.object(deploy_release, 'ROOT', root), \
+                 patch('deploy_release.subprocess.run', side_effect=subprocess.CalledProcessError(1, 'verify')) as check, \
+                 patch.object(deploy_release, 'request') as request:
+                with self.assertRaises(subprocess.CalledProcessError):
+                    deploy_release.main()
+            request.assert_not_called()
+            check.assert_called_once_with([sys.executable, '-m', 'scripts.verify_prior_matchup'], cwd=root, check=True)
+
     def test_invalid_edition_never_requests_deployment(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
@@ -40,6 +56,7 @@ class RestPublicationTests(unittest.TestCase):
             with patch.object(deploy_release, 'ROOT', root), patch.dict('os.environ', {'VERCEL_PROJECT_ID': 'test'}), \
                     patch.object(deploy_release, 'release_files', return_value=[]), \
                     patch.object(deploy_release, 'request', return_value=meta), \
+                    patch('deploy_release.subprocess.run'), \
                     patch.object(deploy_release, 'make_receipt', return_value={'snapshotHashes': ['hash']}), \
                     patch('deploy_release.urllib.request.urlopen', return_value=io.BytesIO(b'{}')), \
                     patch('publication.os.replace', side_effect=OSError('disk failure')):

@@ -20,3 +20,16 @@ The sample and collection pointer are separate writes, not a single transaction.
 A process termination between them may leave a mismatched receipt. Successful
 capture replay checks reject that mismatch; this review does not claim crash
 atomicity or hosted verification. A live scheduled run remains pending release.
+
+The release paths now run `python -m scripts.verify_prior_matchup` before Git
+publication or a direct deployment request. The verifier checks accepted archive
+bytes, the collection receipt, its manifest digest, and exact numerical replay.
+On a failed refresh, it requires an archived successful receipt for the preserved
+sample. A newly written sample without that receipt is rejected. This detects
+the interrupted-write mismatch without claiming the writes are transactional.
+
+The real accepted artifact passed verification. A fault test covers normal
+success, preserved fallback, an unreceipted replacement, receipt mismatch and
+changed replay output. All 33 publication tests passed, including a test proving
+that verifier failure prevents a direct deployment request. No deployment was
+attempted.

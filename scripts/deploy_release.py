@@ -1,3 +1,5 @@
+import subprocess
+import sys
 """Deploy through Vercel REST, wait for READY, verify endpoint, archive receipt."""
 import base64,json,os,time,urllib.request
 from pathlib import Path
@@ -32,6 +34,7 @@ def main():
     expected=json.loads((ROOT/'data/site.json').read_text())
     ledger=json.loads((ROOT/'data/ledger.json').read_text())
     validate_forecast_edition(expected,ledger)
+    subprocess.run([sys.executable, '-m', 'scripts.verify_prior_matchup'], cwd=ROOT, check=True)
     result=request('/v13/deployments',{'name':'nfl-intelligence','project':os.environ['VERCEL_PROJECT_ID'],'target':'production','files':release_files(),'projectSettings':{'framework':'nextjs','nodeVersion':'22.x'}})
     save_recovery_metadata(result)
     for _ in range(90):
