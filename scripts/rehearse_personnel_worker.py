@@ -1,4 +1,5 @@
-"""Offline worker rehearsal using retained sources; never publishes or collects."""
+"""Isolated personnel rehearsal; --collect acquires sources, never publishes."""
+import argparse
 import hashlib
 import json
 import shutil
@@ -22,7 +23,7 @@ STEPS = ('personnel_changes.py', 'audit_personnel_identity.py', 'audit_player_us
          'build_public_usage.py', 'build_season_participation.py')
 
 
-def main():
+def main(collect=False):
     parent = ROOT / 'release-recovery'
     parent.mkdir(exist_ok=True)
     worker = Path(tempfile.mkdtemp(prefix='personnel-worker-', dir=parent))
@@ -42,6 +43,14 @@ def main():
     } for path in files}
     contexts = verify_schedule(json.loads((worker / 'data/site.json').read_bytes()),
                                (worker / 'data/games.csv').read_bytes())
+    acquisitions = []
+    if collect:
+        for step in ('refresh_personnel.py', 'refresh_quarterbacks.py', 'refresh_participation.py'):
+            run = subprocess.run([sys.executable, str(worker / 'scripts' / step)], cwd=worker,
+                                 capture_output=True, timeout=240)
+            (worker / 'reviews' / (step + '.log')).write_bytes(run.stdout + run.stderr)
+            acquisitions.append({'step': step, 'exitCode': run.returncode})
+        (worker / 'reviews/acquisition-results.json').write_text(json.dumps(acquisitions, indent=2)+'\n')
     quarterback = json.loads((worker / 'data/quarterbacks.json').read_bytes())
     raw = reconstruct(worker / 'data/quarterback-sources', quarterback['sourceHash'])
     if normalize(raw, set(quarterback['teams']), instant(quarterback['retrievedAt'])) != quarterback['teams']:
@@ -61,21 +70,30 @@ def main():
         outputs[name] = {'bytes': path.stat().st_size,
                          'sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
                          'records': len(value.get('records', value.get('changes', [])))}
+    mutable = {f'data/{name}' for name in DATA if name not in ('site.json', 'games.csv')} if collect else set()
     unchanged = all(hashlib.sha256((worker / name).read_bytes()).hexdigest() == meta['sha256']
-                    for name, meta in inputs.items())
+                    for name, meta in inputs.items() if name not in mutable)
     if not unchanged:
         raise ValueError('Rehearsal changed copied input evidence')
     report = {'checkedAt': datetime.now(timezone.utc).isoformat(),
-              'scope': 'Offline isolated reconstruction from retained sources; no collection or publication',
+              'scope': 'Isolated real acquisition and reconstruction; no publication' if collect else 'Offline isolated reconstruction from retained sources; no collection or publication',
+              'acquisitions': acquisitions,
+              'workerDirectory': worker.relative_to(ROOT).as_posix(),
               'steps': completed, 'inputsUnchanged': unchanged,
               'quarterbackRolesReplayed': True,
               'scheduleContextsVerified': len(contexts),
               'inputFiles': len(inputs), 'inputBytes': sum(v['bytes'] for v in inputs.values()),
               'outputs': outputs, 'inputs': inputs}
-    target = ROOT / 'reviews/personnel-worker-rehearsal.json'
+    if collect:
+        report['sourceStates'] = {name: {key: value for key, value in json.loads((worker / 'data' / name).read_bytes()).items()
+                                 if key in ('status', 'retrievedAt', 'assetUpdatedAt', 'sourceHash', 'rows')}
+                                 for name in DATA if name not in ('site.json', 'games.csv')}
+    target = ROOT / ('reviews/personnel-collection-rehearsal.json' if collect else 'reviews/personnel-worker-rehearsal.json')
     target.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
     print(json.dumps({k: v for k, v in report.items() if k != 'inputs'}))
 
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--collect', action='store_true', help='Acquire real source updates in the isolated worker')
+    main(parser.parse_args().collect)

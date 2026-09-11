@@ -24,6 +24,12 @@ export function PersonnelPanel({ game, evidence = staticPersonnelEvidence }: { g
         this model’s forecast.
       </p>
       <QuarterbackContext game={game} snapshot={quarterback} collection={quarterbackCollection} />
+      {evidence.participationCollection.status !== 'collected' && (
+        <p role="status">
+          Latest participation collection failed. Any participation shown uses
+          an earlier source with its original collection date.
+        </p>
+      )}
       {collection.status !== "ok" && (
         <p role="status">
           Latest collection failed. Any entries below come from the previous

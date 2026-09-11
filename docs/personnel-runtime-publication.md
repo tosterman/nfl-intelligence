@@ -129,3 +129,26 @@ render tests. Fresh collection and runtime publication remain outstanding.
 Hosted verification 34632254746 passed on `a1f6643` (the homepage and earlier
 offline rehearsal checkpoint). The schedule/transition and view-injection work
 above came afterward and needs its own hosted verification.
+
+## First fresh collection candidate
+
+The isolated `--collect` rehearsal succeeded on September 11 at 18:23 UTC.
+All three collectors exited successfully. The injury asset was updated at
+12:12 UTC and the depth-chart asset at 12:22 UTC that day; both were acquired
+after 18:22 UTC. Reconstructed quarterback roles matched their source bytes.
+The derived artifacts cover 167 reports and 49 observed report changes; the
+participation source still has 187 rows. All 272 edition game contexts matched.
+See `reviews/personnel-collection-rehearsal.json` for source identities and
+the retained candidate directory.
+
+The copied model/schedule and existing archive files remained unchanged. Current
+source pointers and collection states were intentionally refreshed only inside
+the isolated directory. The report's `inputsUnchanged` checks pinned and archived
+inputs, excluding those mutable pointers during collection. No candidate files
+were promoted to the site and no storage publication occurred. This rehearsal
+still uses cumulative bootstrap history and does not implement failed-derivation
+publication.
+
+The panel now also exposes failed participation collection outside report expiry
+wrappers, so that failure remains visible when the reports are already outdated.
+A regression explicitly supplies expired reports and a failed participation state.

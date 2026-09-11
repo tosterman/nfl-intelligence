@@ -6,6 +6,7 @@ import { PersonnelBriefing } from '../src/components/personnel-briefing';
 import { PlayerUsage } from '../src/components/player-usage';
 import { PersonnelPanel } from '../src/components/personnel-panel';
 import type { Game } from '../src/lib/types';
+import { staticPersonnelEvidence } from '../src/lib/personnel-static';
 
 function fixture() {
   const acquired = new Date(Date.now() - 60000).toISOString();
@@ -64,4 +65,14 @@ test('complete panel passes its selected evidence to nested views', () => {
   assert.match(html, /Injected quarterback/);
   assert.match(html, /No verified 2026 earlier-week sample for these players/);
   assert.match(html, /No verified earlier-week appearances in this season/);
+});
+
+test('participation collection failure stays visible even when reports have expired', () => {
+  const game = {id:'2026_01_ATL_PIT', season:2026, type:'REG', week:1,
+    home:'PIT', away:'ATL', kickoff:new Date(Date.now()+3600000).toISOString(), status:'scheduled'} as Game;
+  const evidence = {...staticPersonnelEvidence, participationCollection:{status:'failed'},
+    snapshot:{...staticPersonnelEvidence.snapshot, retrievedAt:'2020-01-01T00:00:00Z', assetUpdatedAt:'2020-01-01T00:00:00Z'}};
+  const html = renderToStaticMarkup(createElement(PersonnelPanel, {game, evidence}));
+  assert.match(html, /Latest participation collection failed/);
+  assert.match(html, /original collection date/);
 });
