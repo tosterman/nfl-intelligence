@@ -1,0 +1,98 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "gameId": "2026_01_NE_SEA",
+    "historicalPanels": 2,
+    "modelForecast": false,
+    "overflow": false
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "gameId": "2026_02_DET_BUF",
+    "historicalPanels": 2,
+    "modelForecast": false,
+    "overflow": false
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "gameId": "2026_18_ATL_CAR",
+    "historicalPanels": 2,
+    "modelForecast": false,
+    "overflow": false
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "gameId": "2026_01_NE_SEA",
+    "historicalPanels": 2,
+    "modelForecast": false,
+    "overflow": false
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "gameId": "2026_02_DET_BUF",
+    "historicalPanels": 2,
+    "modelForecast": false,
+    "overflow": false
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "gameId": "2026_18_ATL_CAR",
+    "historicalPanels": 2,
+    "modelForecast": false,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "gameId": "2026_01_NE_SEA",
+    "historicalPanels": 2,
+    "modelForecast": false,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "gameId": "2026_02_DET_BUF",
+    "historicalPanels": 2,
+    "modelForecast": false,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "gameId": "2026_18_ATL_CAR",
+    "historicalPanels": 2,
+    "modelForecast": false,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "gameId": "2026_01_NE_SEA",
+    "historicalPanels": 2,
+    "modelForecast": false,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "gameId": "2026_02_DET_BUF",
+    "historicalPanels": 2,
+    "modelForecast": false,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "gameId": "2026_18_ATL_CAR",
+    "historicalPanels": 2,
+    "modelForecast": false,
+    "overflow": false
+  }
+]

@@ -28,6 +28,12 @@ const game: Game = {
   injuries: null,
 };
 const now = Date.parse("2026-09-10T12:00:00Z");
+
+test("pending context navigation exposes both historical comparisons", () => {
+  const html = renderToStaticMarkup(createElement(ScheduledContext, { game, now }));
+  assert.match(html, /href="#explosive-heading"/);
+  assert.match(html, /href="#red-zone-heading"/);
+});
 test("pending notice never promises a pregame publication after kickoff or with unknown timing", () => {
   const started = renderToStaticMarkup(
     createElement(ForecastPendingNotice, {
