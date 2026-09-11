@@ -162,6 +162,7 @@ export default async function GamePage({
         <>
           <nav className="matchup-nav" aria-label="Matchup sections">
             <span className="eyebrow">Explore this game</span>
+            <span className="matchup-nav-hint">Swipe or tab for more sections →</span>
             <div>
               <a href="#model-read">Model outlook</a>
               {!!p.profiles?.length && (

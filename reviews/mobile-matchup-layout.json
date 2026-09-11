@@ -1,0 +1,86 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "gameId": "2026_01_ATL_PIT",
+    "modelReadY": 1028,
+    "pixelsEarlier": 329
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "gameId": "2026_01_SF_LA",
+    "modelReadY": 1055,
+    "pixelsEarlier": 329
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "gameId": "2026_01_ATL_PIT",
+    "modelReadY": 978,
+    "pixelsEarlier": 361
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "gameId": "2026_01_SF_LA",
+    "modelReadY": 978,
+    "pixelsEarlier": 361
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "gameId": "2026_01_ATL_PIT",
+    "modelReadY": 1071,
+    "pixelsEarlier": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "gameId": "2026_01_SF_LA",
+    "modelReadY": 1071,
+    "pixelsEarlier": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "gameId": "2026_01_ATL_PIT",
+    "modelReadY": 1028,
+    "pixelsEarlier": 329
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "gameId": "2026_01_SF_LA",
+    "modelReadY": 1055,
+    "pixelsEarlier": 329
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "gameId": "2026_01_ATL_PIT",
+    "modelReadY": 978,
+    "pixelsEarlier": 361
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "gameId": "2026_01_SF_LA",
+    "modelReadY": 978,
+    "pixelsEarlier": 361
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "gameId": "2026_01_ATL_PIT",
+    "modelReadY": 1071,
+    "pixelsEarlier": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "gameId": "2026_01_SF_LA",
+    "modelReadY": 1071,
+    "pixelsEarlier": 0
+  }
+]

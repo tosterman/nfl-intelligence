@@ -2075,6 +2075,21 @@ summary {
 .ratings-order { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 12px; }
 .ratings-order a { border: 1px solid var(--line); border-radius: 6px; padding: 12px 18px; }
 .ratings-order a[aria-current="page"] { background: var(--line); font-weight: 600; }
+.matchup-nav-hint { display: none; }
+@media (max-width: 600px) {
+  .detail-hero { padding: 16px; }
+  .detail-scoreboard { padding: 14px 0; gap: 12px; }
+  .detail-team { gap: 6px; }
+  .detail-team .team-mark.large { width: 52px; height: 52px; }
+  .detail-team > strong { font-size: 48px; margin: 3px 0; }
+  .matchup-nav { margin-top: 16px; padding: 12px 0; }
+  .matchup-nav-hint { display: block; color: var(--muted); font-size: 11px; margin-top: 4px; }
+  .matchup-nav > div { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; }
+  .matchup-nav a { flex-shrink: 0; white-space: nowrap; }
+  .matchup-nav + .kpi-grid { gap: 8px; margin: 16px 0; }
+  .matchup-nav + .kpi-grid .kpi { padding: 12px; }
+  .matchup-nav + .kpi-grid .kpi strong { margin: 7px 0; }
+}
 .explosive-matchups { display: grid; gap: 24px; margin: 24px 0; }
 .explosive-pair h3 { font-size: 16px; margin-bottom: 12px; }
 .explosive-pair h3 span { font-weight: 400; opacity: .6; padding: 0 6px; }

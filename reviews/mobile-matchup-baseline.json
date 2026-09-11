@@ -1,0 +1,74 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "gameId": "2026_01_ATL_PIT",
+    "modelReadY": 1357
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "gameId": "2026_01_SF_LA",
+    "modelReadY": 1384
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "gameId": "2026_01_ATL_PIT",
+    "modelReadY": 1339
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "gameId": "2026_01_SF_LA",
+    "modelReadY": 1339
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "gameId": "2026_01_ATL_PIT",
+    "modelReadY": 1071
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "gameId": "2026_01_SF_LA",
+    "modelReadY": 1071
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "gameId": "2026_01_ATL_PIT",
+    "modelReadY": 1357
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "gameId": "2026_01_SF_LA",
+    "modelReadY": 1384
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "gameId": "2026_01_ATL_PIT",
+    "modelReadY": 1339
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "gameId": "2026_01_SF_LA",
+    "modelReadY": 1339
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "gameId": "2026_01_ATL_PIT",
+    "modelReadY": 1071
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "gameId": "2026_01_SF_LA",
+    "modelReadY": 1071
+  }
+]
