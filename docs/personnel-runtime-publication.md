@@ -409,3 +409,11 @@ requires `PERSONNEL_RUNTIME_ENABLED=true`; this variable remains unset. Enable
 only after deployment of the matching public reader and exact public readback,
 then observe an actual scheduled execution. A committed gated workflow is not
 evidence that scheduling has run.
+
+The updated wrapper's failure handling is now exercised by an actual child
+process in a temporary workspace with no restore script or service access.
+The regression verifies removal of old success evidence, a current failed-stage
+record, release of its own lock and preservation of unrelated files. A second
+invocation with another owner's lock verifies that neither the lock nor its
+report is touched. This is isolated operational verification, not a provider
+outage or scheduled-run result.
