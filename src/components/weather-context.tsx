@@ -2,6 +2,7 @@ import raw from "../../data/weather.json";
 import { weatherStatus, type WeatherRecord } from "@/lib/weather";
 import { date, time } from "@/lib/teams";
 import { WeatherExpiry } from "./weather-expiry";
+import { VenueConditions } from "./venue-conditions";
 
 export function WeatherContext({
   game,
@@ -115,6 +116,7 @@ export function WeatherContext({
       ) : (
         <p>{status}.</p>
       )}
+      <VenueConditions venue={game.venue} />
       <p className="fine">
         Weather has no numerical adjustment in this model. This context cannot
         establish a betting edge.

@@ -1,0 +1,34 @@
+[
+  {
+    "engine": "chromium",
+    "game": "2026_01_SF_LA",
+    "width": 320,
+    "source": "https://www.mcg.org.au/plan-a-visit/seating-and-ticket-information/seating-maps",
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "game": "2026_01_ARI_LAC",
+    "width": 320,
+    "source": "https://www.sofistadium.com/plan-your-visit/a-z-guide",
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "game": "2026_01_SF_LA",
+    "width": 320,
+    "source": "https://www.mcg.org.au/plan-a-visit/seating-and-ticket-information/seating-maps",
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "game": "2026_01_ARI_LAC",
+    "width": 320,
+    "source": "https://www.sofistadium.com/plan-your-visit/a-z-guide",
+    "overflow": false,
+    "pageErrors": []
+  }
+]

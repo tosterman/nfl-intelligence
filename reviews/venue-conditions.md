@@ -1,0 +1,7 @@
+# Venue conditions context
+
+The local seven-day weather gap consists of Melbourne and six US stadiums with indoor/covered/retractable-roof considerations. A verified outdoor coordinate alone would not establish conditions on their fields. The schedule's Melbourne row also carries a `dome` label, which must not be accepted as a verified enclosure classification. Production numerical inference does not consume that field.
+
+Two official pages were read on September 11 UTC: [MCG seating guidance](https://www.mcg.org.au/plan-a-visit/seating-and-ticket-information/seating-maps) describes partial seating roof cover and warns that protection from weather is not guaranteed; [SoFi's official guide](https://www.sofistadium.com/plan-your-visit/a-z-guide) describes a fixed roof. The UI paraphrases these limited building facts with direct source links and distinguishes them from field conditions. It does not invent wind suppression, indoor temperature, a retractable-roof decision or a numerical adjustment. It also does not relabel archived schedule bytes or forecast context.
+
+Venue notes are selected by exact venue name; no team-name inference or unknown-venue default is introduced. Existing weather status continues to determine availability dynamically. Type checking passed. Chromium/WebKit checks of both matchup pages at 320px verified the notes and official links, no document overflow and no page errors. See venue-conditions-browser.json. This adds explanatory context, not additional weather-feed coverage.
