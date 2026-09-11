@@ -17,15 +17,17 @@ def weekly_context(plays, schedule, season, week, game_type):
     if type(season) is not int or type(week) is not int or week < 1 or game_type not in ('REG', 'POST'):
         raise ValueError('Invalid weekly scope')
     selected = [g for g in schedule if g['season'] == str(season)]
-    scope = [g for g in selected if g['game_type'] == game_type and g['week'] == str(week)]
+    def phase(g):
+        return 'POST' if g['game_type'] in ('WC', 'DIV', 'CON', 'SB') else g['game_type']
+    scope = [g for g in selected if phase(g) == game_type and g['week'] == str(week)]
     if not scope:
         raise ValueError('Weekly schedule scope missing')
     cutoff = min(date.fromisoformat(g['gameday']) for g in scope).isoformat()
     # Date alone is insufficient if a postponed game from this week is recorded
     # anomalously before the boundary. Explicit week/type eligibility is retained.
     def prior(g):
-        return ((g['game_type'] == 'REG' and (game_type == 'POST' or int(g['week']) < week))
-                or (g['game_type'] == 'POST' == game_type and int(g['week']) < week))
+        return ((phase(g) == 'REG' and (game_type == 'POST' or int(g['week']) < week))
+                or (phase(g) == 'POST' == game_type and int(g['week']) < week))
     eligible = {g['game_id'] for g in selected if prior(g) and g['gameday'] < cutoff
                 and all(g.get(k) not in ('', None, 'NA') for k in ('home_score', 'away_score'))}
     gated = [g if g['game_id'] in eligible else {**g, 'home_score': '', 'away_score': ''} for g in selected]

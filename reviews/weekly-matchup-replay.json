@@ -4,6 +4,7 @@
   "results": [
     {
       "week": 2,
+      "gameType": "REG",
       "cutoff": "2025-09-11",
       "games": 16,
       "teams": 32,
@@ -25,6 +26,7 @@
     },
     {
       "week": 10,
+      "gameType": "REG",
       "cutoff": "2025-11-06",
       "games": 135,
       "teams": 32,
@@ -46,6 +48,7 @@
     },
     {
       "week": 18,
+      "gameType": "REG",
       "cutoff": "2026-01-03",
       "games": 256,
       "teams": 32,
@@ -62,6 +65,28 @@
         "inside20": {
           "possessions": 1649,
           "touchdowns": 952
+        }
+      }
+    },
+    {
+      "week": 22,
+      "gameType": "POST",
+      "cutoff": "2026-02-08",
+      "games": 284,
+      "teams": 32,
+      "sha256": "35797698fea376a4db9e13f6c17738c05ca11e35b2794ef48bf85d6f5deebb56",
+      "offenseTotals": {
+        "passing": {
+          "plays": 19551,
+          "explosive": 1632
+        },
+        "rushing": {
+          "plays": 14814,
+          "explosive": 1653
+        },
+        "inside20": {
+          "possessions": 1819,
+          "touchdowns": 1044
         }
       }
     }

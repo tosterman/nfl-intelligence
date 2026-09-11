@@ -50,16 +50,28 @@ older snapshot artifacts must not be silently overwritten.
 
 ## Evidence
 
-Seven targeted tests cover week boundaries, same/later-week changes, anomalously
+Eight targeted tests cover week boundaries, same/later-week changes, anomalously
 dated later weeks, missing coverage, unfinished games, postseason transition,
 partial terminal records, score disagreement and nonchronological play IDs. A
 real replay caught inserted timeout IDs exceeding END GAME in KC/JAX and NE/BAL;
 the check uses retained row order, not ID magnitude. Historical offline builds at
-2025 Weeks 2, 10 and 18 are recorded in `reviews/weekly-matchup-replay.json`.
+2025 Weeks 2, 10, 18 and postseason Week 22 are recorded in `reviews/weekly-matchup-replay.json`.
 The pre-terminal-check and corrected post-terminal-check results share the same
 artifact digests at all three boundaries (16, 135 and 256 eligible games). The
 independent review is scoped to the builder, not the
 unimplemented refresh or UI integration.
+
+Postseason source review found that schedule rows use WC/DIV/CON/SB rather than
+POST. The builder now normalizes those round codes for weekly phase matching and
+earlier-round eligibility. The real Week 22 replay includes 284 prior games and
+excludes the Super Bowl at the February 8 boundary. All three regular-season
+artifact hashes remain unchanged. Earlier synthetic POST-only tests had missed
+this source vocabulary mismatch; a regression now uses the actual round codes.
+
+Prior-season rotation remains open. The provider's 2025 compressed source still
+matches the retained hash, but its asset update is August 13, 2026. A historical
+archive's age must be treated separately from the 30-hour current-feed freshness
+rule; immutable source identity and complete-season validation remain required.
 
 Acquisition has four additional tests: immutable repeat capture/corrupt existing
 object rejection; bad digest/stale/future metadata rejection; and failed refresh

@@ -82,6 +82,17 @@ class WeeklyMatchupContext(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'terminal play ordering'):
             weekly_context(rows, schedule, 2025, 2, 'REG')
 
+    def test_source_round_codes_map_to_postseason_without_losing_earlier_rounds(self):
+        for round_code in ('WC', 'DIV', 'CON', 'SB'):
+            schedule, rows = fixture()
+            schedule[1]['game_type'] = 'WC'
+            schedule[1]['week'] = '19'
+            schedule[2]['game_type'] = round_code
+            schedule[2]['week'] = '20'
+            result = weekly_context(rows, schedule, 2025, 20, 'POST')
+            self.assertEqual(result['gameType'], 'POST')
+            self.assertEqual(result['gameIds'], [schedule[0]['game_id'], schedule[1]['game_id']])
+
 
 if __name__ == '__main__':
     unittest.main()
