@@ -1,0 +1,135 @@
+{
+  "checkedAt": "2026-09-11T19:37:49.774614+00:00",
+  "baseUrl": "http://localhost:3001",
+  "kind": "local-production-candidate",
+  "pages": [
+    {
+      "engine": "chromium",
+      "path": "/?week=1",
+      "status": 200,
+      "elapsedSeconds": 1.761,
+      "overflow": false,
+      "pageErrors": []
+    },
+    {
+      "engine": "chromium",
+      "path": "/games/2026_01_ATL_PIT",
+      "status": 200,
+      "elapsedSeconds": 0.968,
+      "overflow": false,
+      "pageErrors": []
+    },
+    {
+      "engine": "chromium",
+      "path": "/performance",
+      "status": 200,
+      "elapsedSeconds": 0.62,
+      "overflow": false,
+      "pageErrors": []
+    },
+    {
+      "engine": "chromium",
+      "path": "/ratings",
+      "status": 200,
+      "elapsedSeconds": 0.691,
+      "overflow": false,
+      "pageErrors": []
+    },
+    {
+      "engine": "webkit",
+      "path": "/?week=1",
+      "status": 200,
+      "elapsedSeconds": 1.667,
+      "overflow": false,
+      "pageErrors": []
+    },
+    {
+      "engine": "webkit",
+      "path": "/games/2026_01_ATL_PIT",
+      "status": 200,
+      "elapsedSeconds": 1.146,
+      "overflow": false,
+      "pageErrors": []
+    },
+    {
+      "engine": "webkit",
+      "path": "/performance",
+      "status": 200,
+      "elapsedSeconds": 0.772,
+      "overflow": false,
+      "pageErrors": []
+    },
+    {
+      "engine": "webkit",
+      "path": "/ratings",
+      "status": 200,
+      "elapsedSeconds": 0.8,
+      "overflow": false,
+      "pageErrors": []
+    }
+  ],
+  "feeds": [
+    {
+      "path": "/api/status",
+      "status": 200,
+      "developmentStatus": 200,
+      "identityParity": true,
+      "identities": {
+        "generatedAt": "2026-09-11T16:17:34.782950+00:00"
+      }
+    },
+    {
+      "path": "/api/personnel-status",
+      "status": 200,
+      "developmentStatus": 200,
+      "identityParity": true,
+      "identities": {
+        "publicationHash": "99096b70eaf7bd295b9dbb180efd06b421bd69cb2e92449f5d9752d065f92b28"
+      }
+    },
+    {
+      "path": "/api/quarterback-status",
+      "status": 200,
+      "developmentStatus": 200,
+      "identityParity": true,
+      "identities": {
+        "publicationHash": "99096b70eaf7bd295b9dbb180efd06b421bd69cb2e92449f5d9752d065f92b28"
+      }
+    },
+    {
+      "path": "/api/participation-status",
+      "status": 200,
+      "developmentStatus": 200,
+      "identityParity": true,
+      "identities": {
+        "publicationHash": "99096b70eaf7bd295b9dbb180efd06b421bd69cb2e92449f5d9752d065f92b28"
+      }
+    },
+    {
+      "path": "/api/weather-status",
+      "status": 200,
+      "developmentStatus": 200,
+      "identityParity": true,
+      "identities": {
+        "manifestHash": "aec388f6440e093d9f144d35ea596b1851bc32f7ed1ec5085a5582b437d964f7",
+        "generatedAt": "2026-09-11T18:05:54.258885+00:00"
+      }
+    },
+    {
+      "path": "/api/odds-status",
+      "status": 200,
+      "developmentStatus": 200,
+      "identityParity": true,
+      "identities": {
+        "fetchedAt": "2026-09-11T19:10:04.631Z"
+      }
+    },
+    {
+      "path": "/api/matchup-status",
+      "status": 200,
+      "developmentStatus": 200,
+      "identityParity": true,
+      "identities": {}
+    }
+  ]
+}
