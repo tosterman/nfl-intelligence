@@ -10,5 +10,21 @@
   "rejected": [],
   "ambiguousOwners": [],
   "disagreements": [],
+  "outcomes": {
+    "possessions": 5998,
+    "inside20": 1824,
+    "offensiveTouchdowns": 1046
+  },
+  "outcomeRejected": [],
+  "cincinnatiMinnesotaSample": {
+    "MIN": {
+      "possessions": 5,
+      "touchdowns": 4
+    },
+    "CIN": {
+      "possessions": 1,
+      "touchdowns": 1
+    }
+  },
   "publicationReady": false
 }

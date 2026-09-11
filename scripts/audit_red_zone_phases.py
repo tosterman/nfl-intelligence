@@ -6,7 +6,7 @@ import hashlib
 import io
 import json
 from pathlib import Path
-from red_zone_possessions import possession_rows
+from red_zone_possessions import possession_rows, drive_evidence
 from pbp_adjudications import apply_adjudications
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -25,6 +25,9 @@ def main():
         groups[(row['game_id'], row['fixed_drive'])].append(row)
     counts = collections.Counter()
     rejected, ambiguous, disagreements = [], [], []
+    outcome_counts = collections.Counter()
+    outcome_rejected = []
+    official_sample = collections.defaultdict(lambda: {'possessions': 0, 'touchdowns': 0})
     for (game, drive), rows in groups.items():
         identity = {'gameId': game, 'fixedDrive': drive}
         try:
@@ -40,11 +43,27 @@ def main():
         counts[f'observed={reached},provider={provider}'] += 1
         if reached != provider:
             disagreements.append(identity)
+        try:
+            outcome = drive_evidence(rows)
+        except ValueError as error:
+            outcome_rejected.append({**identity, 'reason': str(error)})
+            continue
+        if outcome:
+            outcome_counts['possessions'] += 1
+            if outcome['inside20']:
+                outcome_counts['inside20'] += 1
+                outcome_counts['offensiveTouchdowns'] += int(outcome['offensiveTouchdown'])
+                if game == '2025_03_CIN_MIN':
+                    sample = official_sample[outcome['offense']]
+                    sample['possessions'] += 1
+                    sample['touchdowns'] += int(outcome['offensiveTouchdown'])
     report = {'sourceSha256': source['sha256'], 'groups': len(groups),
               'adjudicationsApplied': len(adjudications['decisions']),
               'definition': 'Pre-snap field position strictly inside 20, ending at any touchdown; source row order preserved',
               'comparison': dict(counts), 'rejected': rejected,
               'ambiguousOwners': ambiguous, 'disagreements': disagreements,
+              'outcomes': dict(outcome_counts), 'outcomeRejected': outcome_rejected,
+              'cincinnatiMinnesotaSample': dict(official_sample),
               'publicationReady': False}
     (ROOT / 'reviews/red-zone-phase-reconciliation.json').write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps(report))
