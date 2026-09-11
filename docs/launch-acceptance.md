@@ -145,10 +145,16 @@ score-efficiency-v1.2.0: 570 retrospective development games, 569 decisive and o
 
 ## External launch gates
 
-Operational update: the forecast publishing workflow is temporarily disabled because its main-branch implementation lacks the staged cooldown guard and its next schedule precedes the provider retry boundary. Odds and health workflows remain active. Restore and verify publishing using `docs/publication-resume.md`; historical successful runs below do not establish current publisher availability. The experimental planned odds collector must also remain inactive until acquisition-history completeness and migration are established. Missing live history cannot be initialized as an empty budget.
+Operational update: forecast publishing is active, and the controlled forecast,
+weather, personnel and hosted health runs passed as recorded above. The previous
+cooldown and unpublished-release blockers are resolved. Actual scheduled runs
+after this rollout and sustained reliability still need evidence. The
+experimental planned odds collector must remain inactive until acquisition-history
+completeness and migration are established. Missing live history cannot be
+initialized as an empty budget.
 
-1. An older public deployment and its exact-artifact capture were verified. The current development release remains unpublished; the older public weather incident requires a verified rollout. Continue broader device/performance verification.
-2. The connected Git integration now supports the refresh/deploy/archive workflow without a separate Vercel token. The complete manually dispatched workflow succeeded (34504966362), including GitHub-token push, provider deployment, exact public capture, recovery artifact and receipt push. One actual scheduled five-feed health check is now verified (34524200347); no scheduled odds or forecast run was observed in that audit. Sustained clock-triggered reliability, failure recovery drills and branch protection with an explicit publishing-writer policy remain.
+1. The current release is public, with exact forecast capture and verified weather/personnel readback. Continue broader physical-device, assistive-technology and representative performance verification.
+2. The connected Git integration supports the refresh/deploy/archive workflow without a separate Vercel token. Controlled forecast run `34645220767` and seven-feed hosted health run `34646352554` passed. These manual runs do not establish sustained clock-triggered reliability. Verify subsequent scheduled execution and operational recovery; branch protection also needs an explicit publishing-writer policy.
 3. Web Analytics is now enabled and consented production pageviews are verified through the reporting API. A declined control page remained untracked in the bounded check. Speed Insights reports received data; representative performance remains unverified. Custom-event reporting is blocked by the current plan. See `reviews/analytics-ingestion.md` and `docs/measurement-plan.md` for exact evidence and limitations.
 4. Confirm operator identity, private contact channel and final domain. The authenticated team API reports Hobby; a hosting plan permitting commercial use is required before monetization. No recurring service was purchased.
 5. Obtain Google publisher approval and applicable certified consent configuration before enabling ad tags/ads.txt. AdSense/Ad Manager monetizes publisher inventory; Google Ads buys advertising. See monetization.md.
