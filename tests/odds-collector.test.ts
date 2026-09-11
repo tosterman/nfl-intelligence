@@ -12,6 +12,170 @@ import {
   ACQUISITION_MAX_ATTEMPTS,
 } from "../src/lib/odds-store";
 import type { OddsFeed } from "../src/lib/odds";
+import { recordAttemptEvent } from "../src/lib/odds-attempt-journal";
+
+test("journal gates provider access and retains verified capture evidence", async () => {
+  const { deps, calls } = collectorFixture();
+  const events: Parameters<typeof recordAttemptEvent>[0][] = [];
+  const result = await runOddsCollection({
+    ...deps,
+    journal: async (event) => {
+      events.push(event);
+    },
+  });
+  assert.equal(result.status, "captured");
+  assert.deepEqual(
+    events.map((e) => e.stage),
+    ["reserved", "requested", "captured"],
+  );
+  assert.equal(
+    events[2].archiveSha256,
+    "sha256" in result ? result.sha256 : undefined,
+  );
+  assert.equal(calls.fetch, 1);
+});
+
+test("journal failure before provider access keeps the reservation and prevents acquisition", async () => {
+  for (const stage of ["reserved", "requested"]) {
+    const { deps, calls } = collectorFixture();
+    let reservations = 0;
+    deps.reserve = async (at) => {
+      reservations++;
+      return at + 1800000;
+    };
+    await assert.rejects(
+      runOddsCollection({
+        ...deps,
+        journal: async (event) => {
+          if (event.stage === stage) throw new Error("journal unavailable");
+        },
+      }),
+      /journal unavailable/,
+    );
+    assert.equal(reservations, 1);
+    assert.equal(calls.fetch, 0);
+  }
+});
+
+test("provider failure is classified without persisting raw errors", async () => {
+  const { deps, calls } = collectorFixture();
+  const fetcher = deps.fetcher;
+  deps.fetcher = (async (url, init) => {
+    if (new URL(String(url)).pathname === "/v4/sports/")
+      return fetcher(url, init);
+    calls.fetch++;
+    throw new Error("secret-provider-url");
+  }) as typeof fetch;
+  const events: Parameters<typeof recordAttemptEvent>[0][] = [];
+  await assert.rejects(
+    runOddsCollection({
+      ...deps,
+      journal: async (event) => {
+        events.push(event);
+      },
+    }),
+  );
+  assert.equal(events.at(-1)?.reason, "provider-error");
+  assert.ok(!JSON.stringify(events).includes("secret-provider-url"));
+  assert.equal(calls.fetch, 1);
+});
+
+test("failed capture journaling never writes a contradictory failure outcome", async () => {
+  const { deps, calls } = collectorFixture();
+  const stages: string[] = [];
+  await assert.rejects(
+    runOddsCollection({
+      ...deps,
+      journal: async (event) => {
+        stages.push(event.stage);
+        if (event.stage === "captured")
+          throw new Error("lost outcome response");
+      },
+    }),
+    /lost outcome response/,
+  );
+  assert.deepEqual(stages, ["reserved", "requested", "captured"]);
+  assert.equal(calls.fetch, 1);
+});
+
+test("journal latency cannot allow an expired reservation to reach the provider", async () => {
+  const { deps, calls } = collectorFixture();
+  let clock = deps.now();
+  await assert.rejects(
+    runOddsCollection({
+      ...deps,
+      now: () => clock,
+      journal: async (event) => {
+        if (event.stage === "requested") clock += 1800000;
+      },
+    }),
+    /reservation expired/,
+  );
+  assert.equal(calls.fetch, 0);
+});
+
+test("collector and immutable journal retain success, failures and uncertain outcomes without reacquisition", async () => {
+  for (const mode of [
+    "success",
+    "provider",
+    "storage",
+    "readback",
+    "outcome-unavailable",
+  ]) {
+    const { deps, calls } = collectorFixture();
+    const files = new Map<string, Buffer>();
+    let reserved = false;
+    deps.reserve = async (at) => {
+      if (reserved) throw new Error("already reserved");
+      reserved = true;
+      return at + 1800000;
+    };
+    if (mode === "provider") {
+      const fetcher = deps.fetcher;
+      deps.fetcher = (async (url, init) => {
+        if (new URL(String(url)).pathname === "/v4/sports/")
+          return fetcher(url, init);
+        calls.fetch++;
+        throw new Error("provider timeout");
+      }) as typeof fetch;
+    }
+    if (mode === "storage")
+      deps.publish = async () => {
+        throw new Error("unavailable");
+      };
+    if (mode === "readback") deps.read = async () => null;
+    const journal = (event: Parameters<typeof recordAttemptEvent>[0]) =>
+      recordAttemptEvent(event, {
+        read: async (path) => files.get(path) ?? null,
+        write: async (path, body) => {
+          if (mode === "outcome-unavailable" && path.endsWith("outcome.json"))
+            throw new Error("unavailable");
+          if (files.has(path)) throw new Error("immutable conflict");
+          files.set(path, body);
+        },
+      });
+    if (mode === "success")
+      assert.equal(
+        (await runOddsCollection({ ...deps, journal })).status,
+        "captured",
+      );
+    else await assert.rejects(runOddsCollection({ ...deps, journal }));
+    const events = [...files.values()].map((body) =>
+      JSON.parse(body.toString()),
+    );
+    assert.equal(events.length, mode === "outcome-unavailable" ? 2 : 3);
+    if (mode === "success") assert.equal(events.at(-1).stage, "captured");
+    else if (mode !== "outcome-unavailable")
+      assert.equal(events.at(-1).reason, `${mode}-error`);
+    assert.equal(reserved, true);
+    // Force the retry through the budget gate even when a capture was saved.
+    await assert.rejects(
+      runOddsCollection({ ...deps, journal, reuse: () => false }),
+      /reserved/,
+    );
+    assert.equal(calls.fetch, 1);
+  }
+});
 
 function collectorFixture() {
   const at = Date.parse("2026-09-10T16:00:00Z");
