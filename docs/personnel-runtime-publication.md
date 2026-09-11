@@ -1,5 +1,10 @@
 # Independent personnel publication
 
+Current checkpoint: private storage and the local runtime reader are active.
+A fresh worker can restore and replay the accepted current source closure.
+Recurring acquisition/derivation/publication and public scheduled operation are
+still unfinished. The sections below retain the implementation chronology.
+
 The current panel imports build-time injury, quarterback, participation and
 report-change artifacts. Refreshing only the injury file would leave the others
 bound to an older source. The runtime change must publish a compatible set and
@@ -269,3 +274,27 @@ refresh handling, scheduled execution, public deployment/readback and real
 weekly participation rollover. Initial archive capacity does not establish
 indefinite growth safety. The bootstrap command trusts the controlled local
 replay/packaging process; it is not an untrusted-upload endpoint.
+
+## Bounded current-source restore
+
+`restore_personnel_worker.ts` restores the accepted publication into a new local
+directory using hash-verified, create-only files. It selects current injury and
+QB captures, the current participation source, only the QB manifest's referenced
+chunks, pinned schedule/registry evidence, collection states, derived artifacts
+and retained scripts. Older injury captures and cumulative change ledgers are
+not restored. Their accepted publication remains in immutable storage.
+
+The restore binds selected artifacts and exact game contexts to the reader
+presentation, checks schedule bytes, verifies decompressed source hashes and
+reconstructs the QB source hash in manifest order. Existing capacity ceilings
+remain rejection limits. Retaining the complete current provider QB source can
+still grow as the provider file grows; this is not constant-size storage.
+
+Actual private restore selected 321 files (17,683,952 bytes) from 475 archived
+logical files. Its retained scripts reproduced 167 player reports and 32 listed
+QB team contexts, and verified all 272 schedule contexts. See
+`reviews/personnel-runtime-restore.json` and
+`reviews/personnel-restored-source-replay.json`. Two regressions cover selective
+restoration and missing/corrupt inputs; independent review found no material
+restore blocker. This does not establish new acquisition, derived usage replay,
+failed-source publication or repeat scheduled operation.

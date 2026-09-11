@@ -1,0 +1,10 @@
+{
+  "publication": {
+    "bytes": 83867,
+    "sha256": "c3cdbbda3af5af0324485935370b7de3d081e729ca9f6a9c65e465117c8ed8a7"
+  },
+  "sourceRecordsReplayed": 167,
+  "quarterbackTeamsReplayed": 32,
+  "scheduleContextsVerified": 272,
+  "scope": "Restored source replay only; no acquisition or publication"
+}

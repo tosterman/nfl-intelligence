@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-09-11T18:54:27.462Z",
+  "publication": {
+    "bytes": 83867,
+    "sha256": "c3cdbbda3af5af0324485935370b7de3d081e729ca9f6a9c65e465117c8ed8a7"
+  },
+  "capture": "fc321e3791043c6ae830dcb4f2694b43bec663ae1982ad6920f774afa59adf1e",
+  "files": 321,
+  "bytes": 17683952,
+  "archiveFiles": 475,
+  "directory": "release-recovery/personnel-restored-Z3svEJ",
+  "scope": "Fresh isolated restore and source integrity; no new acquisition, derivation or publication"
+}
