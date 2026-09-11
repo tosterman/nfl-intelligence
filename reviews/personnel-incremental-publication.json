@@ -1,18 +1,18 @@
 {
-  "checkedAt": "2026-09-11T19:04:17.522Z",
+  "checkedAt": "2026-09-11T19:13:29.790Z",
   "mode": "published",
   "publication": {
     "bytes": 55203,
-    "sha256": "f765e6a146a854975c3f9bda275b679b5184be089098ec65930077cd0bf24ad5"
+    "sha256": "99096b70eaf7bd295b9dbb180efd06b421bd69cb2e92449f5d9752d065f92b28"
   },
-  "previous": "c3cdbbda3af5af0324485935370b7de3d081e729ca9f6a9c65e465117c8ed8a7",
+  "previous": "f765e6a146a854975c3f9bda275b679b5184be089098ec65930077cd0bf24ad5",
   "result": {
     "publication": {
       "bytes": 55203,
-      "sha256": "f765e6a146a854975c3f9bda275b679b5184be089098ec65930077cd0bf24ad5"
+      "sha256": "99096b70eaf7bd295b9dbb180efd06b421bd69cb2e92449f5d9752d065f92b28"
     },
-    "uploaded": 23,
-    "reused": 309
+    "uploaded": 21,
+    "reused": 310
   },
   "scope": "Private personnel publication; live reader and scheduler require separate verification"
 }

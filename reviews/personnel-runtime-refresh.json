@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-09-11T18:57:44.833820+00:00",
+  "checkedAt": "2026-09-11T19:11:45.318387+00:00",
   "previousPublication": {
-    "bytes": 83867,
-    "sha256": "c3cdbbda3af5af0324485935370b7de3d081e729ca9f6a9c65e465117c8ed8a7"
+    "bytes": 55203,
+    "sha256": "f765e6a146a854975c3f9bda275b679b5184be089098ec65930077cd0bf24ad5"
   },
-  "previousCapture": "fc321e3791043c6ae830dcb4f2694b43bec663ae1982ad6920f774afa59adf1e",
+  "previousCapture": "bf991c5edbdc8da65ff6fa3a1df8411732cc4f8165fc58f939e6817d2750c3f6",
   "acquisitions": [
     {
       "step": "refresh_personnel.py",
@@ -40,7 +40,7 @@
   "derivationFailure": null,
   "sourceReplay": true,
   "personnelChanged": true,
-  "directory": "release-recovery/personnel-refresh-m85nlb40",
+  "directory": "release-recovery/personnel-refresh-qsaedr4n",
   "reports": 167,
   "scope": "Isolated refresh candidate only; no independent derived replay or storage publication"
 }

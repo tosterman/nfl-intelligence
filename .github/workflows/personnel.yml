@@ -1,0 +1,50 @@
+name: Collect and verify personnel
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '47 */6 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: personnel-collection
+  cancel-in-progress: false
+jobs:
+  collect:
+    # Enable only after deploying and verifying the independent public reader.
+    if: vars.PERSONNEL_RUNTIME_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.13'
+      - run: npm ci
+      - run: pip install -r requirements.txt
+      - name: Restore, collect, replay and publish
+        run: npx tsx scripts/collect_personnel.ts --publish
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+      - name: Verify exact public publication and feed health
+        run: python scripts/verify_personnel_publication.py
+      - name: Retain collection and verification evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: personnel-collection-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 90
+          path: |
+            reviews/personnel-pipeline.json
+            reviews/personnel-runtime-restore.json
+            reviews/personnel-runtime-refresh.json
+            reviews/personnel-refresh-replay.json
+            reviews/personnel-incremental-package.json
+            reviews/personnel-incremental-publication.json
+            reviews/personnel-public-readback.json
+            release-recovery/personnel-refresh-*/reviews/*.log
+            release-recovery/personnel-refresh-*/refresh-report.json
+          if-no-files-found: error

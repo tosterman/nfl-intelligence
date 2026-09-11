@@ -1,0 +1,96 @@
+{
+  "checkedAt": "2026-09-11T19:13:29.845Z",
+  "restored": {
+    "checkedAt": "2026-09-11T19:10:59.698Z",
+    "publication": {
+      "bytes": 55203,
+      "sha256": "f765e6a146a854975c3f9bda275b679b5184be089098ec65930077cd0bf24ad5"
+    },
+    "capture": "bf991c5edbdc8da65ff6fa3a1df8411732cc4f8165fc58f939e6817d2750c3f6",
+    "files": 322,
+    "bytes": 17648429,
+    "archiveFiles": 332,
+    "directory": "release-recovery/personnel-restored-OaklkC",
+    "scope": "Fresh isolated restore and source integrity; no new acquisition, derivation or publication"
+  },
+  "refreshed": {
+    "checkedAt": "2026-09-11T19:11:45.318387+00:00",
+    "previousPublication": {
+      "bytes": 55203,
+      "sha256": "f765e6a146a854975c3f9bda275b679b5184be089098ec65930077cd0bf24ad5"
+    },
+    "previousCapture": "bf991c5edbdc8da65ff6fa3a1df8411732cc4f8165fc58f939e6817d2750c3f6",
+    "acquisitions": [
+      {
+        "step": "refresh_personnel.py",
+        "exitCode": 0
+      },
+      {
+        "step": "refresh_quarterbacks.py",
+        "exitCode": 0
+      },
+      {
+        "step": "refresh_participation.py",
+        "exitCode": 0
+      }
+    ],
+    "derivations": [
+      {
+        "step": "audit_personnel_identity.py",
+        "exitCode": 0
+      },
+      {
+        "step": "audit_player_usage.py",
+        "exitCode": 0
+      },
+      {
+        "step": "build_public_usage.py",
+        "exitCode": 0
+      },
+      {
+        "step": "build_season_participation.py",
+        "exitCode": 0
+      }
+    ],
+    "derivationFailure": null,
+    "sourceReplay": true,
+    "personnelChanged": true,
+    "directory": "release-recovery/personnel-refresh-qsaedr4n",
+    "reports": 167,
+    "scope": "Isolated refresh candidate only; no independent derived replay or storage publication"
+  },
+  "packaged": {
+    "publication": {
+      "sha256": "99096b70eaf7bd295b9dbb180efd06b421bd69cb2e92449f5d9752d065f92b28",
+      "bytes": 55203
+    },
+    "objectCount": 331,
+    "bytes": 18259085,
+    "previousPublication": {
+      "bytes": 55203,
+      "sha256": "f765e6a146a854975c3f9bda275b679b5184be089098ec65930077cd0bf24ad5"
+    },
+    "previousCapture": "bf991c5edbdc8da65ff6fa3a1df8411732cc4f8165fc58f939e6817d2750c3f6",
+    "directory": "release-recovery/personnel-incremental/99096b70eaf7bd295b9dbb180efd06b421bd69cb2e92449f5d9752d065f92b28",
+    "scope": "Replay-verified incremental package; not published"
+  },
+  "publication": {
+    "checkedAt": "2026-09-11T19:13:29.790Z",
+    "mode": "published",
+    "publication": {
+      "bytes": 55203,
+      "sha256": "99096b70eaf7bd295b9dbb180efd06b421bd69cb2e92449f5d9752d065f92b28"
+    },
+    "previous": "f765e6a146a854975c3f9bda275b679b5184be089098ec65930077cd0bf24ad5",
+    "result": {
+      "publication": {
+        "bytes": 55203,
+        "sha256": "99096b70eaf7bd295b9dbb180efd06b421bd69cb2e92449f5d9752d065f92b28"
+      },
+      "uploaded": 21,
+      "reused": 310
+    },
+    "scope": "Private personnel publication; live reader and scheduler require separate verification"
+  },
+  "scope": "Full real collection pipeline; public reader and scheduled execution require separate checks"
+}

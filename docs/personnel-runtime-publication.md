@@ -378,3 +378,34 @@ restore selected 321 files. See `reviews/personnel-failure-rehearsal.json` and
 simulation-marked candidates. No simulated failure was written to private Blob
 or presented as a real provider outage. Sixteen targeted Python tests and six
 transaction/incremental tests passed. Real scheduled operation remains required.
+
+## Combined command and gated workflow
+
+Run `node --import tsx scripts/collect_personnel.ts --publish` with the private
+Blob credential in the environment. It restores the accepted publication,
+collects, replays, packages and publishes in order, verifying predecessor
+identities between stages. Without `--publish` it still collects real sources
+and verifies the candidate, but stops after the predecessor check.
+
+A create-only local lock prevents concurrent wrappers sharing report paths.
+New invocations clear their own prior reports and write a current stage/outcome
+record even on failure. Readback retries bounded connection/malformed-response
+failures, retains attempts and rejects an older healthy publication. A matching
+publication with an unavailable feed is retained as evidence but fails the
+health check. Review identified and corrected both stale-report and missing
+readback-failure evidence gaps.
+
+The combined real command completed at 19:13 UTC, publishing
+`99096b70eaf7bd295b9dbb180efd06b421bd69cb2e92449f5d9752d065f92b28`
+with 21 uploaded and 310 reused objects. All three localhost endpoints selected
+that root. See `reviews/personnel-pipeline.json` and
+`reviews/personnel-public-readback.json` (whose URL is explicitly localhost).
+That invocation began before the reporting fixes; the fixes apply to subsequent
+runs and are not claimed as exercised by that successful run.
+
+`.github/workflows/personnel.yml` schedules the combined command every six hours,
+followed by exact public readback, and retains 90 days of run evidence. Its job
+requires `PERSONNEL_RUNTIME_ENABLED=true`; this variable remains unset. Enable
+only after deployment of the matching public reader and exact public readback,
+then observe an actual scheduled execution. A committed gated workflow is not
+evidence that scheduling has run.
