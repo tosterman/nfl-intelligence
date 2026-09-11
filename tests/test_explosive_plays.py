@@ -9,10 +9,17 @@ GAME = {'game_id': '2025_01_BUF_NYJ', 'gameday': '2025-09-07',
 def play(pid, kind='pass', yards='20', **changes):
     return dict(game_id=GAME['game_id'], game_date=GAME['gameday'],
                 play_id=str(pid), posteam='BUF', defteam='NYJ',
-                play_type=kind, yards_gained=yards, qb_kneel='0', qb_spike='0', **changes)
+                play_type=kind, yards_gained=yards, qb_kneel='0', qb_spike='0', two_point_attempt='0', **changes)
 
 
 class ExplosivePlays(unittest.TestCase):
+    def test_two_point_attempts_are_not_scrimmage_rate_denominators(self):
+        rows = [play(1), {**play(2, yards='2'), 'two_point_attempt': '1'},
+                {**play(3, 'run', '2'), 'two_point_attempt': '1'}]
+        result = summarize(rows, [GAME], '2025-09-08')[0]
+        self.assertEqual(result['passing'], {'plays': 1, 'explosive': 1})
+        self.assertEqual(result['rushing'], {'plays': 0, 'explosive': 0})
+
     def test_thresholds_and_denominators_include_sacks_and_scrambles(self):
         result = summarize([play(1), play(2, yards='19'), play(3, yards='-8'),
                             play(4, 'run', '10'), play(5, 'run', '9'),
@@ -29,7 +36,7 @@ class ExplosivePlays(unittest.TestCase):
     def test_duplicate_or_corrupt_evidence_is_rejected(self):
         for rows in [[play(1), play(1)], [play(1, yards='NaN')],
                      [{**play(1), 'defteam': 'BUF'}], [{**play(1), 'game_date': '2025-09-06'}],
-                     [{**play(1), 'qb_spike': ''}]]:
+                     [{**play(1), 'qb_spike': ''}], [{**play(1), 'two_point_attempt': ''}]]:
             with self.subTest(rows=rows), self.assertRaises(ValueError):
                 summarize(rows, [GAME], '2025-09-08')
 

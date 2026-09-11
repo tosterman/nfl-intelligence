@@ -9,7 +9,7 @@ numerators and denominators; do not average game-level rates. Do not change froz
 Define an explosive passing play as a source `pass` play with at least 20 yards
 gained, and an explosive run as a source `run` play with at least 10 yards gained.
 These are this publication's chosen thresholds. Passing plays include sacks;
-runs include scrambles. Exclude no-play records, kneels, spikes and special teams.
+runs include scrambles. Exclude two-point attempts, no-play records, kneels, spikes and special teams.
 Keep valid pass/run plays with penalties using the source's credited yards.
 Do not reinterpret descriptions to override source scoring.
 

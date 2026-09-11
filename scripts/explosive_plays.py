@@ -28,9 +28,10 @@ def summarize(plays, schedule, cutoff):
         kind = play['play_type']
         if kind not in ('pass', 'run'):
             continue
-        if any(play.get(flag) not in ('0', '1') for flag in ('qb_kneel', 'qb_spike')):
-            raise ValueError('Missing kneel/spike classification')
-        if play['qb_kneel'] == '1' or play['qb_spike'] == '1':
+        excluded_flags = ('qb_kneel', 'qb_spike', 'two_point_attempt')
+        if any(play.get(flag) not in ('0', '1') for flag in excluded_flags):
+            raise ValueError('Missing kneel/spike/conversion classification')
+        if any(play[flag] == '1' for flag in excluded_flags):
             continue
         offense, defense = play['posteam'], play['defteam']
         if offense == defense or {offense, defense} != {game['home_team'], game['away_team']}:

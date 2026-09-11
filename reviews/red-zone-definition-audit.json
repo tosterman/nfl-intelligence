@@ -1,0 +1,177 @@
+{
+  "method": "Exploratory pre-snap yardline strictly inside 20, excludes two-point tries and kickoffs; not published red-zone rates",
+  "groups": 6046,
+  "comparison": {
+    "observed=False,provider=False": 4212,
+    "observed=True,provider=True": 1824,
+    "observed=True,provider=False": 10
+  },
+  "multipleOffensesAfterFiltering": [
+    [
+      "2025_19_HOU_PIT",
+      "19"
+    ]
+  ],
+  "examples": [
+    {
+      "gameId": "2025_02_NE_MIA",
+      "fixedDrive": "6",
+      "observed": true,
+      "provider": false,
+      "rows": [
+        {
+          "play_id": "1776",
+          "posteam": "MIA",
+          "yardline_100": "2",
+          "play_type": "no_play",
+          "drive_inside20": "0",
+          "desc": "(Pass formation) PENALTY on MIA-52-P.Paul, False Start, 5 yards, enforced at NE 2 - No Play."
+        }
+      ]
+    },
+    {
+      "gameId": "2025_04_NO_BUF",
+      "fixedDrive": "17",
+      "observed": true,
+      "provider": false,
+      "rows": [
+        {
+          "play_id": "3526",
+          "posteam": "BUF",
+          "yardline_100": "15",
+          "play_type": "no_play",
+          "drive_inside20": "0",
+          "desc": "(Kick formation) PENALTY on BUF-69-R.Ferguson, False Start, 5 yards, enforced at NO 15 - No Play."
+        }
+      ]
+    },
+    {
+      "gameId": "2025_05_DAL_NYJ",
+      "fixedDrive": "4",
+      "observed": true,
+      "provider": false,
+      "rows": [
+        {
+          "play_id": "1165",
+          "posteam": "DAL",
+          "yardline_100": "1",
+          "play_type": "no_play",
+          "drive_inside20": "0",
+          "desc": "(Pass formation) PENALTY on DAL-66-T.Bass, False Start, 5 yards, enforced at NYJ 1 - No Play."
+        }
+      ]
+    },
+    {
+      "gameId": "2025_06_NE_NO",
+      "fixedDrive": "8",
+      "observed": true,
+      "provider": false,
+      "rows": [
+        {
+          "play_id": "2100",
+          "posteam": "NE",
+          "yardline_100": "1",
+          "play_type": "no_play",
+          "drive_inside20": "0",
+          "desc": "(Run formation) PENALTY on NO-92-D.Godchaux, Encroachment, 0 yards, enforced at NO 1 - No Play."
+        }
+      ]
+    },
+    {
+      "gameId": "2025_06_SEA_JAX",
+      "fixedDrive": "17",
+      "observed": true,
+      "provider": false,
+      "rows": [
+        {
+          "play_id": "3303",
+          "posteam": "JAX",
+          "yardline_100": "2",
+          "play_type": "no_play",
+          "drive_inside20": "0",
+          "desc": "(Pass formation) PENALTY on SEA, Defensive Too Many Men on Field, 1 yard, enforced at SEA 2 - No Play."
+        }
+      ]
+    },
+    {
+      "gameId": "2025_08_GB_PIT",
+      "fixedDrive": "22",
+      "observed": true,
+      "provider": false,
+      "rows": [
+        {
+          "play_id": "4271",
+          "posteam": "PIT",
+          "yardline_100": "2",
+          "play_type": "no_play",
+          "drive_inside20": "0",
+          "desc": "TWO-POINT CONVERSION ATTEMPT. 8-A.Rodgers pass to 80-D.Washington is incomplete. ATTEMPT FAILS. PENALTY on GB-24-C.Valentine, Defensive Pass Interference, 1 yard, enforced at GB 2 - No Play."
+        }
+      ]
+    },
+    {
+      "gameId": "2025_13_JAX_TEN",
+      "fixedDrive": "4",
+      "observed": true,
+      "provider": false,
+      "rows": [
+        {
+          "play_id": "913",
+          "posteam": "JAX",
+          "yardline_100": "15",
+          "play_type": "no_play",
+          "drive_inside20": "0",
+          "desc": "(Kick formation) PENALTY on TEN-49-A.Key, Encroachment, 1 yard, enforced at TEN 15 - No Play."
+        }
+      ]
+    },
+    {
+      "gameId": "2025_13_SF_CLE",
+      "fixedDrive": "8",
+      "observed": true,
+      "provider": false,
+      "rows": [
+        {
+          "play_id": "1651",
+          "posteam": "CLE",
+          "yardline_100": "15",
+          "play_type": "no_play",
+          "drive_inside20": "0",
+          "desc": "(Kick formation) PENALTY on SF, Defensive Too Many Men on Field, 1 yard, enforced at SF 15 - No Play."
+        }
+      ]
+    },
+    {
+      "gameId": "2025_16_LV_HOU",
+      "fixedDrive": "15",
+      "observed": true,
+      "provider": false,
+      "rows": [
+        {
+          "play_id": "2538",
+          "posteam": "LV",
+          "yardline_100": "15",
+          "play_type": "no_play",
+          "drive_inside20": "0",
+          "desc": "(Kick formation) PENALTY on LV, Delay of Game, 5 yards, enforced at HOU 15 - No Play."
+        }
+      ]
+    },
+    {
+      "gameId": "2025_19_HOU_PIT",
+      "fixedDrive": "19",
+      "observed": true,
+      "provider": false,
+      "rows": [
+        {
+          "play_id": "3993",
+          "posteam": "HOU",
+          "yardline_100": "15",
+          "play_type": "no_play",
+          "drive_inside20": "",
+          "desc": "(Kick formation) PENALTY on HOU, Delay of Game, 5 yards, enforced at PIT 15 - No Play."
+        }
+      ]
+    }
+  ]
+}

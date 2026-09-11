@@ -44,7 +44,8 @@ def build(manifest, root):
                     counts[field] += row[kind][field]
     return {'schemaVersion': 1, 'season': manifest['season'], 'cutoff': manifest['cutoff'],
             'definitions': {'passingYards': 20, 'rushingYards': 10,
-                            'weighting': 'none', 'includesPostseason': True},
+                            'weighting': 'none', 'includesPostseason': True,
+                            'excludesTwoPointAttempts': True},
             'sourceManifestHash': hashlib.sha256(json.dumps(manifest, sort_keys=True).encode()).hexdigest(),
             'games': results, 'teams': dict(sorted(teams.items()))}
 

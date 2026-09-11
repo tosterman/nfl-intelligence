@@ -22,10 +22,10 @@ test("rates use pooled play counts and put each opponent defense in the correct 
   const html = renderToStaticMarkup(React.createElement(ExplosiveMatchup, {away: "SF", home: "LA", season: 2026, kickoff: "2026-09-11T00:35:00Z"}));
   const cells = [...html.matchAll(/<strong>([^<]+)<\/strong><small>([^<]+)<\/small>/g)].map(m => [m[1], m[2]]);
   assert.deepEqual(cells, [
-    ["8.2%", "55 / 669 credited plays"], ["8.0%", "61 / 759 credited plays"],
-    ["9.4%", "48 / 511 credited plays"], ["8.9%", "46 / 518 credited plays"],
-    ["11.6%", "86 / 741 credited plays"], ["7.1%", "47 / 658 credited plays"],
-    ["11.4%", "59 / 519 credited plays"], ["8.9%", "43 / 485 credited plays"],
+    ["8.3%", "55 / 664 credited plays"], ["8.1%", "61 / 755 credited plays"],
+    ["9.4%", "48 / 511 credited plays"], ["8.9%", "46 / 517 credited plays"],
+    ["11.6%", "86 / 741 credited plays"], ["7.2%", "47 / 655 credited plays"],
+    ["11.4%", "59 / 519 credited plays"], ["8.9%", "43 / 482 credited plays"],
   ]);
 });
 

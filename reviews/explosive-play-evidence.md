@@ -7,10 +7,10 @@ to the forecast model or public matchup pages yet.
 
 | Source classification | Eligible plays | Explosive plays | Definition |
 | --- | ---: | ---: | --- |
-| Passing, including sacks | 19,737 | 1,639 | At least 20 credited yards |
-| Rushing, including scrambles | 14,895 | 1,661 | At least 10 credited yards |
+| Passing, including sacks | 19,639 | 1,639 | At least 20 credited yards |
+| Rushing, including scrambles | 14,863 | 1,661 | At least 10 credited yards |
 
-The source contains 48,771 total rows. No-play records, special teams, kneels,
+The source contains 48,771 total rows. Two-point attempts, no-play records, special teams, kneels,
 spikes and non-play rows do not enter these denominators. A penalty flag alone
 does not remove a valid credited play. These definitions follow the source's
 play classification, rather than treating its pass count as official attempts.

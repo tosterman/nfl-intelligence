@@ -6,7 +6,8 @@
     "passingYards": 20,
     "rushingYards": 10,
     "weighting": "none",
-    "includesPostseason": true
+    "includesPostseason": true,
+    "excludesTwoPointAttempts": true
   },
   "sourceManifestHash": "b05d62adece28151ec6e22d4961a46e2f7f84bb6dbfd9f17e2f852cd28285721",
   "games": [
@@ -58,7 +59,7 @@
       "offense": "BUF",
       "defense": "BAL",
       "passing": {
-        "plays": 49,
+        "plays": 46,
         "explosive": 7
       },
       "rushing": {
@@ -212,7 +213,7 @@
       "offense": "KC",
       "defense": "LAC",
       "passing": {
-        "plays": 41,
+        "plays": 40,
         "explosive": 3
       },
       "rushing": {
@@ -282,7 +283,7 @@
       "offense": "MIA",
       "defense": "IND",
       "passing": {
-        "plays": 35,
+        "plays": 34,
         "explosive": 1
       },
       "rushing": {
@@ -310,7 +311,7 @@
       "offense": "MIN",
       "defense": "CHI",
       "passing": {
-        "plays": 25,
+        "plays": 23,
         "explosive": 2
       },
       "rushing": {
@@ -352,11 +353,11 @@
       "offense": "NYJ",
       "defense": "PIT",
       "passing": {
-        "plays": 24,
+        "plays": 23,
         "explosive": 5
       },
       "rushing": {
-        "plays": 40,
+        "plays": 39,
         "explosive": 6
       }
     },
@@ -538,7 +539,7 @@
         "explosive": 4
       },
       "rushing": {
-        "plays": 20,
+        "plays": 18,
         "explosive": 1
       }
     },
@@ -734,7 +735,7 @@
         "explosive": 2
       },
       "rushing": {
-        "plays": 27,
+        "plays": 26,
         "explosive": 3
       }
     },
@@ -800,7 +801,7 @@
       "offense": "PIT",
       "defense": "SEA",
       "passing": {
-        "plays": 38,
+        "plays": 37,
         "explosive": 3
       },
       "rushing": {
@@ -856,7 +857,7 @@
       "offense": "HOU",
       "defense": "TB",
       "passing": {
-        "plays": 28,
+        "plays": 27,
         "explosive": 5
       },
       "rushing": {
@@ -870,7 +871,7 @@
       "offense": "TB",
       "defense": "HOU",
       "passing": {
-        "plays": 43,
+        "plays": 42,
         "explosive": 3
       },
       "rushing": {
@@ -898,7 +899,7 @@
       "offense": "WAS",
       "defense": "GB",
       "passing": {
-        "plays": 46,
+        "plays": 45,
         "explosive": 1
       },
       "rushing": {
@@ -1010,7 +1011,7 @@
       "offense": "DAL",
       "defense": "CHI",
       "passing": {
-        "plays": 48,
+        "plays": 47,
         "explosive": 4
       },
       "rushing": {
@@ -1052,7 +1053,7 @@
       "offense": "BAL",
       "defense": "DET",
       "passing": {
-        "plays": 36,
+        "plays": 35,
         "explosive": 4
       },
       "rushing": {
@@ -1206,7 +1207,7 @@
       "offense": "PHI",
       "defense": "LA",
       "passing": {
-        "plays": 37,
+        "plays": 36,
         "explosive": 4
       },
       "rushing": {
@@ -1220,11 +1221,11 @@
       "offense": "LV",
       "defense": "WAS",
       "passing": {
-        "plays": 35,
+        "plays": 34,
         "explosive": 3
       },
       "rushing": {
-        "plays": 29,
+        "plays": 28,
         "explosive": 3
       }
     },
@@ -1416,7 +1417,7 @@
       "offense": "CHI",
       "defense": "LV",
       "passing": {
-        "plays": 39,
+        "plays": 38,
         "explosive": 2
       },
       "rushing": {
@@ -1556,7 +1557,7 @@
       "offense": "JAX",
       "defense": "SF",
       "passing": {
-        "plays": 31,
+        "plays": 30,
         "explosive": 1
       },
       "rushing": {
@@ -1570,7 +1571,7 @@
       "offense": "SF",
       "defense": "JAX",
       "passing": {
-        "plays": 40,
+        "plays": 39,
         "explosive": 6
       },
       "rushing": {
@@ -1588,7 +1589,7 @@
         "explosive": 2
       },
       "rushing": {
-        "plays": 14,
+        "plays": 13,
         "explosive": 4
       }
     },
@@ -1602,7 +1603,7 @@
         "explosive": 0
       },
       "rushing": {
-        "plays": 43,
+        "plays": 42,
         "explosive": 4
       }
     },
@@ -1611,1926 +1612,1926 @@
       "date": "2025-09-28",
       "offense": "MIN",
       "defense": "PIT",
-      "passing": {
-        "plays": 52,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 20,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_04_MIN_PIT",
-      "date": "2025-09-28",
-      "offense": "PIT",
-      "defense": "MIN",
-      "passing": {
-        "plays": 24,
-        "explosive": 1
-      },
-      "rushing": {
-        "plays": 27,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_04_NO_BUF",
-      "date": "2025-09-28",
-      "offense": "BUF",
-      "defense": "NO",
-      "passing": {
-        "plays": 25,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 29,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_04_NO_BUF",
-      "date": "2025-09-28",
-      "offense": "NO",
-      "defense": "BUF",
-      "passing": {
-        "plays": 31,
-        "explosive": 0
-      },
-      "rushing": {
-        "plays": 35,
-        "explosive": 8
-      }
-    },
-    {
-      "gameId": "2025_04_NYJ_MIA",
-      "date": "2025-09-29",
-      "offense": "MIA",
-      "defense": "NYJ",
-      "passing": {
-        "plays": 25,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 31,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_04_NYJ_MIA",
-      "date": "2025-09-29",
-      "offense": "NYJ",
-      "defense": "MIA",
-      "passing": {
-        "plays": 29,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 29,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_04_PHI_TB",
-      "date": "2025-09-28",
-      "offense": "PHI",
-      "defense": "TB",
-      "passing": {
-        "plays": 26,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 32,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_04_PHI_TB",
-      "date": "2025-09-28",
-      "offense": "TB",
-      "defense": "PHI",
-      "passing": {
-        "plays": 41,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 26,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_04_SEA_ARI",
-      "date": "2025-09-25",
-      "offense": "ARI",
-      "defense": "SEA",
-      "passing": {
-        "plays": 47,
-        "explosive": 0
-      },
-      "rushing": {
-        "plays": 17,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_04_SEA_ARI",
-      "date": "2025-09-25",
-      "offense": "SEA",
-      "defense": "ARI",
-      "passing": {
-        "plays": 29,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 35,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_04_TEN_HOU",
-      "date": "2025-09-28",
-      "offense": "HOU",
-      "defense": "TEN",
-      "passing": {
-        "plays": 31,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 35,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_04_TEN_HOU",
-      "date": "2025-09-28",
-      "offense": "TEN",
-      "defense": "HOU",
-      "passing": {
-        "plays": 27,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 18,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_04_WAS_ATL",
-      "date": "2025-09-28",
-      "offense": "ATL",
-      "defense": "WAS",
-      "passing": {
-        "plays": 27,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 34,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_04_WAS_ATL",
-      "date": "2025-09-28",
-      "offense": "WAS",
-      "defense": "ATL",
-      "passing": {
-        "plays": 29,
-        "explosive": 1
-      },
-      "rushing": {
-        "plays": 22,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_05_DAL_NYJ",
-      "date": "2025-10-05",
-      "offense": "DAL",
-      "defense": "NYJ",
-      "passing": {
-        "plays": 30,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 26,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_05_DAL_NYJ",
-      "date": "2025-10-05",
-      "offense": "NYJ",
-      "defense": "DAL",
-      "passing": {
-        "plays": 52,
-        "explosive": 1
-      },
-      "rushing": {
-        "plays": 21,
-        "explosive": 7
-      }
-    },
-    {
-      "gameId": "2025_05_DEN_PHI",
-      "date": "2025-10-05",
-      "offense": "DEN",
-      "defense": "PHI",
-      "passing": {
-        "plays": 42,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 29,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_05_DEN_PHI",
-      "date": "2025-10-05",
-      "offense": "PHI",
-      "defense": "DEN",
-      "passing": {
-        "plays": 44,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 10,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_05_DET_CIN",
-      "date": "2025-10-05",
-      "offense": "CIN",
-      "defense": "DET",
-      "passing": {
-        "plays": 42,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 16,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_05_DET_CIN",
-      "date": "2025-10-05",
-      "offense": "DET",
-      "defense": "CIN",
-      "passing": {
-        "plays": 28,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 31,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_05_HOU_BAL",
-      "date": "2025-10-05",
-      "offense": "BAL",
-      "defense": "HOU",
-      "passing": {
-        "plays": 21,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 19,
-        "explosive": 0
-      }
-    },
-    {
-      "gameId": "2025_05_HOU_BAL",
-      "date": "2025-10-05",
-      "offense": "HOU",
-      "defense": "BAL",
-      "passing": {
-        "plays": 33,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 31,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_05_KC_JAX",
-      "date": "2025-10-06",
-      "offense": "JAX",
-      "defense": "KC",
-      "passing": {
-        "plays": 28,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 26,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_05_KC_JAX",
-      "date": "2025-10-06",
-      "offense": "KC",
-      "defense": "JAX",
-      "passing": {
-        "plays": 41,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 22,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_05_LV_IND",
-      "date": "2025-10-05",
-      "offense": "IND",
-      "defense": "LV",
-      "passing": {
-        "plays": 35,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 26,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_05_LV_IND",
-      "date": "2025-10-05",
-      "offense": "LV",
-      "defense": "IND",
-      "passing": {
-        "plays": 40,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 25,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_05_MIA_CAR",
-      "date": "2025-10-05",
-      "offense": "CAR",
-      "defense": "MIA",
-      "passing": {
-        "plays": 32,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 30,
-        "explosive": 7
-      }
-    },
-    {
-      "gameId": "2025_05_MIA_CAR",
-      "date": "2025-10-05",
-      "offense": "MIA",
-      "defense": "CAR",
-      "passing": {
-        "plays": 39,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 14,
-        "explosive": 0
-      }
-    },
-    {
-      "gameId": "2025_05_MIN_CLE",
-      "date": "2025-10-05",
-      "offense": "CLE",
-      "defense": "MIN",
-      "passing": {
-        "plays": 34,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 32,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_05_MIN_CLE",
-      "date": "2025-10-05",
-      "offense": "MIN",
-      "defense": "CLE",
-      "passing": {
-        "plays": 38,
-        "explosive": 5
-      },
-      "rushing": {
-        "plays": 22,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_05_NE_BUF",
-      "date": "2025-10-05",
-      "offense": "BUF",
-      "defense": "NE",
-      "passing": {
-        "plays": 32,
-        "explosive": 5
-      },
-      "rushing": {
-        "plays": 29,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_05_NE_BUF",
-      "date": "2025-10-05",
-      "offense": "NE",
-      "defense": "BUF",
-      "passing": {
-        "plays": 34,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 22,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_05_NYG_NO",
-      "date": "2025-10-05",
-      "offense": "NO",
-      "defense": "NYG",
-      "passing": {
-        "plays": 32,
-        "explosive": 1
-      },
-      "rushing": {
-        "plays": 29,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_05_NYG_NO",
-      "date": "2025-10-05",
-      "offense": "NYG",
-      "defense": "NO",
-      "passing": {
-        "plays": 40,
-        "explosive": 0
-      },
-      "rushing": {
-        "plays": 29,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_05_SF_LA",
-      "date": "2025-10-02",
-      "offense": "LA",
-      "defense": "SF",
-      "passing": {
-        "plays": 47,
-        "explosive": 7
-      },
-      "rushing": {
-        "plays": 16,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_05_SF_LA",
-      "date": "2025-10-02",
-      "offense": "SF",
-      "defense": "LA",
-      "passing": {
-        "plays": 49,
-        "explosive": 1
-      },
-      "rushing": {
-        "plays": 33,
-        "explosive": 0
-      }
-    },
-    {
-      "gameId": "2025_05_TB_SEA",
-      "date": "2025-10-05",
-      "offense": "SEA",
-      "defense": "TB",
-      "passing": {
-        "plays": 34,
-        "explosive": 5
-      },
-      "rushing": {
-        "plays": 20,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_05_TB_SEA",
-      "date": "2025-10-05",
-      "offense": "TB",
-      "defense": "SEA",
-      "passing": {
-        "plays": 35,
-        "explosive": 7
-      },
-      "rushing": {
-        "plays": 23,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_05_TEN_ARI",
-      "date": "2025-10-05",
-      "offense": "ARI",
-      "defense": "TEN",
-      "passing": {
-        "plays": 35,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 29,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_05_TEN_ARI",
-      "date": "2025-10-05",
-      "offense": "TEN",
-      "defense": "ARI",
-      "passing": {
-        "plays": 41,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 20,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_05_WAS_LAC",
-      "date": "2025-10-05",
-      "offense": "LAC",
-      "defense": "WAS",
-      "passing": {
-        "plays": 37,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 26,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_05_WAS_LAC",
-      "date": "2025-10-05",
-      "offense": "WAS",
-      "defense": "LAC",
-      "passing": {
-        "plays": 26,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 28,
-        "explosive": 6
-      }
-    },
-    {
-      "gameId": "2025_06_ARI_IND",
-      "date": "2025-10-12",
-      "offense": "ARI",
-      "defense": "IND",
-      "passing": {
-        "plays": 46,
-        "explosive": 7
-      },
-      "rushing": {
-        "plays": 24,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_06_ARI_IND",
-      "date": "2025-10-12",
-      "offense": "IND",
-      "defense": "ARI",
-      "passing": {
-        "plays": 31,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 25,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_06_BUF_ATL",
-      "date": "2025-10-13",
-      "offense": "ATL",
-      "defense": "BUF",
-      "passing": {
-        "plays": 34,
-        "explosive": 6
-      },
-      "rushing": {
-        "plays": 31,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_06_BUF_ATL",
-      "date": "2025-10-13",
-      "offense": "BUF",
-      "defense": "ATL",
-      "passing": {
-        "plays": 30,
-        "explosive": 1
-      },
-      "rushing": {
-        "plays": 24,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_06_CHI_WAS",
-      "date": "2025-10-13",
-      "offense": "CHI",
-      "defense": "WAS",
-      "passing": {
-        "plays": 33,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 26,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_06_CHI_WAS",
-      "date": "2025-10-13",
-      "offense": "WAS",
-      "defense": "CHI",
-      "passing": {
-        "plays": 29,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 30,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_06_CIN_GB",
-      "date": "2025-10-12",
-      "offense": "CIN",
-      "defense": "GB",
-      "passing": {
-        "plays": 45,
-        "explosive": 0
-      },
-      "rushing": {
-        "plays": 16,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_06_CIN_GB",
-      "date": "2025-10-12",
-      "offense": "GB",
-      "defense": "CIN",
-      "passing": {
-        "plays": 27,
-        "explosive": 6
-      },
-      "rushing": {
-        "plays": 32,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_06_CLE_PIT",
-      "date": "2025-10-12",
-      "offense": "CLE",
-      "defense": "PIT",
-      "passing": {
-        "plays": 58,
-        "explosive": 1
-      },
-      "rushing": {
-        "plays": 17,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_06_CLE_PIT",
-      "date": "2025-10-12",
-      "offense": "PIT",
-      "defense": "CLE",
-      "passing": {
-        "plays": 30,
-        "explosive": 5
-      },
-      "rushing": {
-        "plays": 25,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_06_DAL_CAR",
-      "date": "2025-10-12",
-      "offense": "CAR",
-      "defense": "DAL",
-      "passing": {
-        "plays": 26,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 36,
-        "explosive": 6
-      }
-    },
-    {
-      "gameId": "2025_06_DAL_CAR",
-      "date": "2025-10-12",
-      "offense": "DAL",
-      "defense": "CAR",
-      "passing": {
-        "plays": 34,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 18,
-        "explosive": 0
-      }
-    },
-    {
-      "gameId": "2025_06_DEN_NYJ",
-      "date": "2025-10-12",
-      "offense": "DEN",
-      "defense": "NYJ",
-      "passing": {
-        "plays": 31,
-        "explosive": 1
-      },
-      "rushing": {
-        "plays": 24,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_06_DEN_NYJ",
-      "date": "2025-10-12",
-      "offense": "NYJ",
-      "defense": "DEN",
-      "passing": {
-        "plays": 26,
-        "explosive": 0
-      },
-      "rushing": {
-        "plays": 31,
-        "explosive": 0
-      }
-    },
-    {
-      "gameId": "2025_06_DET_KC",
-      "date": "2025-10-12",
-      "offense": "DET",
-      "defense": "KC",
-      "passing": {
-        "plays": 30,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 23,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_06_DET_KC",
-      "date": "2025-10-12",
-      "offense": "KC",
-      "defense": "DET",
-      "passing": {
-        "plays": 33,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 25,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_06_LAC_MIA",
-      "date": "2025-10-12",
-      "offense": "LAC",
-      "defense": "MIA",
-      "passing": {
-        "plays": 39,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 25,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_06_LAC_MIA",
-      "date": "2025-10-12",
-      "offense": "MIA",
-      "defense": "LAC",
-      "passing": {
-        "plays": 35,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 21,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_06_LA_BAL",
-      "date": "2025-10-12",
-      "offense": "BAL",
-      "defense": "LA",
-      "passing": {
-        "plays": 37,
-        "explosive": 0
-      },
-      "rushing": {
-        "plays": 37,
-        "explosive": 6
-      }
-    },
-    {
-      "gameId": "2025_06_LA_BAL",
-      "date": "2025-10-12",
-      "offense": "LA",
-      "defense": "BAL",
-      "passing": {
-        "plays": 28,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 21,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_06_NE_NO",
-      "date": "2025-10-12",
-      "offense": "NE",
-      "defense": "NO",
-      "passing": {
-        "plays": 27,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 29,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_06_NE_NO",
-      "date": "2025-10-12",
-      "offense": "NO",
-      "defense": "NE",
-      "passing": {
-        "plays": 28,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 23,
-        "explosive": 0
-      }
-    },
-    {
-      "gameId": "2025_06_PHI_NYG",
-      "date": "2025-10-09",
-      "offense": "NYG",
-      "defense": "PHI",
-      "passing": {
-        "plays": 28,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 36,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_06_PHI_NYG",
-      "date": "2025-10-09",
-      "offense": "PHI",
-      "defense": "NYG",
-      "passing": {
-        "plays": 36,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 20,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_06_SEA_JAX",
-      "date": "2025-10-12",
-      "offense": "JAX",
-      "defense": "SEA",
-      "passing": {
-        "plays": 49,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 19,
-        "explosive": 0
-      }
-    },
-    {
-      "gameId": "2025_06_SEA_JAX",
-      "date": "2025-10-12",
-      "offense": "SEA",
-      "defense": "JAX",
-      "passing": {
-        "plays": 28,
-        "explosive": 5
-      },
-      "rushing": {
-        "plays": 23,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_06_SF_TB",
-      "date": "2025-10-12",
-      "offense": "SF",
-      "defense": "TB",
-      "passing": {
-        "plays": 45,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 22,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_06_SF_TB",
-      "date": "2025-10-12",
-      "offense": "TB",
-      "defense": "SF",
-      "passing": {
-        "plays": 24,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 26,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_06_TEN_LV",
-      "date": "2025-10-12",
-      "offense": "LV",
-      "defense": "TEN",
-      "passing": {
-        "plays": 25,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 29,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_06_TEN_LV",
-      "date": "2025-10-12",
-      "offense": "TEN",
-      "defense": "LV",
-      "passing": {
-        "plays": 43,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 15,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_07_ATL_SF",
-      "date": "2025-10-19",
-      "offense": "ATL",
-      "defense": "SF",
-      "passing": {
-        "plays": 40,
-        "explosive": 1
-      },
-      "rushing": {
-        "plays": 20,
-        "explosive": 0
-      }
-    },
-    {
-      "gameId": "2025_07_ATL_SF",
-      "date": "2025-10-19",
-      "offense": "SF",
-      "defense": "ATL",
-      "passing": {
-        "plays": 27,
-        "explosive": 0
-      },
-      "rushing": {
-        "plays": 37,
-        "explosive": 8
-      }
-    },
-    {
-      "gameId": "2025_07_CAR_NYJ",
-      "date": "2025-10-19",
-      "offense": "CAR",
-      "defense": "NYJ",
-      "passing": {
-        "plays": 34,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 34,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_07_CAR_NYJ",
-      "date": "2025-10-19",
-      "offense": "NYJ",
-      "defense": "CAR",
-      "passing": {
-        "plays": 40,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 20,
-        "explosive": 0
-      }
-    },
-    {
-      "gameId": "2025_07_GB_ARI",
-      "date": "2025-10-19",
-      "offense": "ARI",
-      "defense": "GB",
-      "passing": {
-        "plays": 42,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 28,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_07_GB_ARI",
-      "date": "2025-10-19",
-      "offense": "GB",
-      "defense": "ARI",
-      "passing": {
-        "plays": 30,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 22,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_07_HOU_SEA",
-      "date": "2025-10-20",
-      "offense": "HOU",
-      "defense": "SEA",
-      "passing": {
-        "plays": 53,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 17,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_07_HOU_SEA",
-      "date": "2025-10-20",
-      "offense": "SEA",
-      "defense": "HOU",
-      "passing": {
-        "plays": 34,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 31,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_07_IND_LAC",
-      "date": "2025-10-19",
-      "offense": "IND",
-      "defense": "LAC",
-      "passing": {
-        "plays": 35,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 20,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_07_IND_LAC",
-      "date": "2025-10-19",
-      "offense": "LAC",
-      "defense": "IND",
-      "passing": {
-        "plays": 58,
-        "explosive": 6
-      },
-      "rushing": {
-        "plays": 16,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_07_LA_JAX",
-      "date": "2025-10-19",
-      "offense": "JAX",
-      "defense": "LA",
-      "passing": {
-        "plays": 55,
-        "explosive": 6
-      },
-      "rushing": {
-        "plays": 19,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_07_LA_JAX",
-      "date": "2025-10-19",
-      "offense": "LA",
-      "defense": "JAX",
-      "passing": {
-        "plays": 33,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 25,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_07_LV_KC",
-      "date": "2025-10-19",
-      "offense": "KC",
-      "defense": "LV",
-      "passing": {
-        "plays": 36,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 38,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_07_LV_KC",
-      "date": "2025-10-19",
-      "offense": "LV",
-      "defense": "KC",
-      "passing": {
-        "plays": 19,
-        "explosive": 0
-      },
-      "rushing": {
-        "plays": 11,
-        "explosive": 0
-      }
-    },
-    {
-      "gameId": "2025_07_MIA_CLE",
-      "date": "2025-10-19",
-      "offense": "CLE",
-      "defense": "MIA",
-      "passing": {
-        "plays": 20,
-        "explosive": 1
-      },
-      "rushing": {
-        "plays": 32,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_07_MIA_CLE",
-      "date": "2025-10-19",
-      "offense": "MIA",
-      "defense": "CLE",
-      "passing": {
-        "plays": 35,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 22,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_07_NE_TEN",
-      "date": "2025-10-19",
-      "offense": "NE",
-      "defense": "TEN",
-      "passing": {
-        "plays": 28,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 34,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_07_NE_TEN",
-      "date": "2025-10-19",
-      "offense": "TEN",
-      "defense": "NE",
-      "passing": {
-        "plays": 39,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 12,
-        "explosive": 0
-      }
-    },
-    {
-      "gameId": "2025_07_NO_CHI",
-      "date": "2025-10-19",
-      "offense": "CHI",
-      "defense": "NO",
-      "passing": {
-        "plays": 27,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 38,
-        "explosive": 9
-      }
-    },
-    {
-      "gameId": "2025_07_NO_CHI",
-      "date": "2025-10-19",
-      "offense": "NO",
-      "defense": "CHI",
-      "passing": {
-        "plays": 36,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 17,
-        "explosive": 0
-      }
-    },
-    {
-      "gameId": "2025_07_NYG_DEN",
-      "date": "2025-10-19",
-      "offense": "DEN",
-      "defense": "NYG",
-      "passing": {
-        "plays": 53,
-        "explosive": 5
-      },
-      "rushing": {
-        "plays": 24,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_07_NYG_DEN",
-      "date": "2025-10-19",
-      "offense": "NYG",
-      "defense": "DEN",
-      "passing": {
-        "plays": 38,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 32,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_07_PHI_MIN",
-      "date": "2025-10-19",
-      "offense": "MIN",
-      "defense": "PHI",
-      "passing": {
-        "plays": 44,
-        "explosive": 5
-      },
-      "rushing": {
-        "plays": 23,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_07_PHI_MIN",
-      "date": "2025-10-19",
-      "offense": "PHI",
-      "defense": "MIN",
-      "passing": {
-        "plays": 26,
-        "explosive": 6
-      },
-      "rushing": {
-        "plays": 22,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_07_PIT_CIN",
-      "date": "2025-10-16",
-      "offense": "CIN",
-      "defense": "PIT",
-      "passing": {
-        "plays": 49,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 20,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_07_PIT_CIN",
-      "date": "2025-10-16",
-      "offense": "PIT",
-      "defense": "CIN",
-      "passing": {
-        "plays": 34,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 20,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_07_TB_DET",
-      "date": "2025-10-20",
-      "offense": "DET",
-      "defense": "TB",
-      "passing": {
-        "plays": 33,
-        "explosive": 5
-      },
-      "rushing": {
-        "plays": 32,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_07_TB_DET",
-      "date": "2025-10-20",
-      "offense": "TB",
-      "defense": "DET",
-      "passing": {
-        "plays": 55,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 11,
-        "explosive": 0
-      }
-    },
-    {
-      "gameId": "2025_07_WAS_DAL",
-      "date": "2025-10-19",
-      "offense": "DAL",
-      "defense": "WAS",
-      "passing": {
-        "plays": 31,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 29,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_07_WAS_DAL",
-      "date": "2025-10-19",
-      "offense": "WAS",
-      "defense": "DAL",
-      "passing": {
-        "plays": 36,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 28,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_08_BUF_CAR",
-      "date": "2025-10-26",
-      "offense": "BUF",
-      "defense": "CAR",
-      "passing": {
-        "plays": 25,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 35,
-        "explosive": 7
-      }
-    },
-    {
-      "gameId": "2025_08_BUF_CAR",
-      "date": "2025-10-26",
-      "offense": "CAR",
-      "defense": "BUF",
-      "passing": {
-        "plays": 31,
-        "explosive": 1
-      },
-      "rushing": {
-        "plays": 28,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_08_CHI_BAL",
-      "date": "2025-10-26",
-      "offense": "BAL",
-      "defense": "CHI",
-      "passing": {
-        "plays": 24,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 35,
-        "explosive": 6
-      }
-    },
-    {
-      "gameId": "2025_08_CHI_BAL",
-      "date": "2025-10-26",
-      "offense": "CHI",
-      "defense": "BAL",
-      "passing": {
-        "plays": 39,
-        "explosive": 5
-      },
-      "rushing": {
-        "plays": 23,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_08_CLE_NE",
-      "date": "2025-10-26",
-      "offense": "CLE",
-      "defense": "NE",
-      "passing": {
-        "plays": 37,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 16,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_08_CLE_NE",
-      "date": "2025-10-26",
-      "offense": "NE",
-      "defense": "CLE",
-      "passing": {
-        "plays": 30,
-        "explosive": 5
-      },
-      "rushing": {
-        "plays": 32,
-        "explosive": 6
-      }
-    },
-    {
-      "gameId": "2025_08_DAL_DEN",
-      "date": "2025-10-26",
-      "offense": "DAL",
-      "defense": "DEN",
-      "passing": {
-        "plays": 37,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 31,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_08_DAL_DEN",
-      "date": "2025-10-26",
-      "offense": "DEN",
-      "defense": "DAL",
-      "passing": {
-        "plays": 30,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 26,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_08_GB_PIT",
-      "date": "2025-10-26",
-      "offense": "GB",
-      "defense": "PIT",
-      "passing": {
-        "plays": 38,
-        "explosive": 6
-      },
-      "rushing": {
-        "plays": 25,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_08_GB_PIT",
-      "date": "2025-10-26",
-      "offense": "PIT",
-      "defense": "GB",
-      "passing": {
-        "plays": 40,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 18,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_08_MIA_ATL",
-      "date": "2025-10-26",
-      "offense": "ATL",
-      "defense": "MIA",
-      "passing": {
-        "plays": 32,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 16,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_08_MIA_ATL",
-      "date": "2025-10-26",
-      "offense": "MIA",
-      "defense": "ATL",
-      "passing": {
-        "plays": 28,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 37,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_08_MIN_LAC",
-      "date": "2025-10-23",
-      "offense": "LAC",
-      "defense": "MIN",
-      "passing": {
-        "plays": 27,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 43,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_08_MIN_LAC",
-      "date": "2025-10-23",
-      "offense": "MIN",
-      "defense": "LAC",
-      "passing": {
-        "plays": 36,
-        "explosive": 0
-      },
-      "rushing": {
-        "plays": 11,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_08_NYG_PHI",
-      "date": "2025-10-26",
-      "offense": "NYG",
-      "defense": "PHI",
-      "passing": {
-        "plays": 29,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 20,
-        "explosive": 0
-      }
-    },
-    {
-      "gameId": "2025_08_NYG_PHI",
-      "date": "2025-10-26",
-      "offense": "PHI",
-      "defense": "NYG",
-      "passing": {
-        "plays": 24,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 30,
-        "explosive": 8
-      }
-    },
-    {
-      "gameId": "2025_08_NYJ_CIN",
-      "date": "2025-10-26",
-      "offense": "CIN",
-      "defense": "NYJ",
-      "passing": {
-        "plays": 35,
-        "explosive": 1
-      },
-      "rushing": {
-        "plays": 23,
-        "explosive": 9
-      }
-    },
-    {
-      "gameId": "2025_08_NYJ_CIN",
-      "date": "2025-10-26",
-      "offense": "NYJ",
-      "defense": "CIN",
-      "passing": {
-        "plays": 33,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 37,
-        "explosive": 6
-      }
-    },
-    {
-      "gameId": "2025_08_SF_HOU",
-      "date": "2025-10-26",
-      "offense": "HOU",
-      "defense": "SF",
-      "passing": {
-        "plays": 39,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 35,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_08_SF_HOU",
-      "date": "2025-10-26",
-      "offense": "SF",
-      "defense": "HOU",
-      "passing": {
-        "plays": 35,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 10,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_08_TB_NO",
-      "date": "2025-10-26",
-      "offense": "NO",
-      "defense": "TB",
-      "passing": {
-        "plays": 55,
-        "explosive": 1
-      },
-      "rushing": {
-        "plays": 15,
-        "explosive": 0
-      }
-    },
-    {
-      "gameId": "2025_08_TB_NO",
-      "date": "2025-10-26",
-      "offense": "TB",
-      "defense": "NO",
-      "passing": {
-        "plays": 27,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 29,
-        "explosive": 1
-      }
-    },
-    {
-      "gameId": "2025_08_TEN_IND",
-      "date": "2025-10-26",
-      "offense": "IND",
-      "defense": "TEN",
-      "passing": {
-        "plays": 34,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 18,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_08_TEN_IND",
-      "date": "2025-10-26",
-      "offense": "TEN",
-      "defense": "IND",
-      "passing": {
-        "plays": 41,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 25,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_08_WAS_KC",
-      "date": "2025-10-27",
-      "offense": "KC",
-      "defense": "WAS",
-      "passing": {
-        "plays": 37,
-        "explosive": 5
-      },
-      "rushing": {
-        "plays": 29,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_08_WAS_KC",
-      "date": "2025-10-27",
-      "offense": "WAS",
-      "defense": "KC",
-      "passing": {
-        "plays": 32,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 20,
-        "explosive": 0
-      }
-    },
-    {
-      "gameId": "2025_09_ARI_DAL",
-      "date": "2025-11-03",
-      "offense": "ARI",
-      "defense": "DAL",
-      "passing": {
-        "plays": 36,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 27,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_09_ARI_DAL",
-      "date": "2025-11-03",
-      "offense": "DAL",
-      "defense": "ARI",
-      "passing": {
-        "plays": 43,
-        "explosive": 2
-      },
-      "rushing": {
-        "plays": 21,
-        "explosive": 4
-      }
-    },
-    {
-      "gameId": "2025_09_ATL_NE",
-      "date": "2025-11-02",
-      "offense": "ATL",
-      "defense": "NE",
-      "passing": {
-        "plays": 38,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 16,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_09_ATL_NE",
-      "date": "2025-11-02",
-      "offense": "NE",
-      "defense": "ATL",
-      "passing": {
-        "plays": 35,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 30,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_09_BAL_MIA",
-      "date": "2025-10-30",
-      "offense": "BAL",
-      "defense": "MIA",
-      "passing": {
-        "plays": 25,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 29,
-        "explosive": 5
-      }
-    },
-    {
-      "gameId": "2025_09_BAL_MIA",
-      "date": "2025-10-30",
-      "offense": "MIA",
-      "defense": "BAL",
-      "passing": {
-        "plays": 41,
-        "explosive": 3
-      },
-      "rushing": {
-        "plays": 20,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_09_CAR_GB",
-      "date": "2025-11-02",
-      "offense": "CAR",
-      "defense": "GB",
-      "passing": {
-        "plays": 21,
-        "explosive": 1
-      },
-      "rushing": {
-        "plays": 33,
-        "explosive": 3
-      }
-    },
-    {
-      "gameId": "2025_09_CAR_GB",
-      "date": "2025-11-02",
-      "offense": "GB",
-      "defense": "CAR",
-      "passing": {
-        "plays": 38,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 25,
-        "explosive": 2
-      }
-    },
-    {
-      "gameId": "2025_09_CHI_CIN",
-      "date": "2025-11-02",
-      "offense": "CHI",
-      "defense": "CIN",
-      "passing": {
-        "plays": 40,
-        "explosive": 4
-      },
-      "rushing": {
-        "plays": 37,
-        "explosive": 8
-      }
-    },
-    {
-      "gameId": "2025_09_CHI_CIN",
-      "date": "2025-11-02",
-      "offense": "CIN",
-      "defense": "CHI",
       "passing": {
         "plays": 51,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 20,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_04_MIN_PIT",
+      "date": "2025-09-28",
+      "offense": "PIT",
+      "defense": "MIN",
+      "passing": {
+        "plays": 24,
+        "explosive": 1
+      },
+      "rushing": {
+        "plays": 27,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_04_NO_BUF",
+      "date": "2025-09-28",
+      "offense": "BUF",
+      "defense": "NO",
+      "passing": {
+        "plays": 25,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 29,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_04_NO_BUF",
+      "date": "2025-09-28",
+      "offense": "NO",
+      "defense": "BUF",
+      "passing": {
+        "plays": 31,
+        "explosive": 0
+      },
+      "rushing": {
+        "plays": 34,
+        "explosive": 8
+      }
+    },
+    {
+      "gameId": "2025_04_NYJ_MIA",
+      "date": "2025-09-29",
+      "offense": "MIA",
+      "defense": "NYJ",
+      "passing": {
+        "plays": 25,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 31,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_04_NYJ_MIA",
+      "date": "2025-09-29",
+      "offense": "NYJ",
+      "defense": "MIA",
+      "passing": {
+        "plays": 29,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 28,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_04_PHI_TB",
+      "date": "2025-09-28",
+      "offense": "PHI",
+      "defense": "TB",
+      "passing": {
+        "plays": 26,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 32,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_04_PHI_TB",
+      "date": "2025-09-28",
+      "offense": "TB",
+      "defense": "PHI",
+      "passing": {
+        "plays": 41,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 26,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_04_SEA_ARI",
+      "date": "2025-09-25",
+      "offense": "ARI",
+      "defense": "SEA",
+      "passing": {
+        "plays": 47,
+        "explosive": 0
+      },
+      "rushing": {
+        "plays": 17,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_04_SEA_ARI",
+      "date": "2025-09-25",
+      "offense": "SEA",
+      "defense": "ARI",
+      "passing": {
+        "plays": 29,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 35,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_04_TEN_HOU",
+      "date": "2025-09-28",
+      "offense": "HOU",
+      "defense": "TEN",
+      "passing": {
+        "plays": 30,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 35,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_04_TEN_HOU",
+      "date": "2025-09-28",
+      "offense": "TEN",
+      "defense": "HOU",
+      "passing": {
+        "plays": 27,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 18,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_04_WAS_ATL",
+      "date": "2025-09-28",
+      "offense": "ATL",
+      "defense": "WAS",
+      "passing": {
+        "plays": 27,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 34,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_04_WAS_ATL",
+      "date": "2025-09-28",
+      "offense": "WAS",
+      "defense": "ATL",
+      "passing": {
+        "plays": 28,
+        "explosive": 1
+      },
+      "rushing": {
+        "plays": 22,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_05_DAL_NYJ",
+      "date": "2025-10-05",
+      "offense": "DAL",
+      "defense": "NYJ",
+      "passing": {
+        "plays": 30,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 26,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_05_DAL_NYJ",
+      "date": "2025-10-05",
+      "offense": "NYJ",
+      "defense": "DAL",
+      "passing": {
+        "plays": 50,
+        "explosive": 1
+      },
+      "rushing": {
+        "plays": 21,
+        "explosive": 7
+      }
+    },
+    {
+      "gameId": "2025_05_DEN_PHI",
+      "date": "2025-10-05",
+      "offense": "DEN",
+      "defense": "PHI",
+      "passing": {
+        "plays": 41,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 29,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_05_DEN_PHI",
+      "date": "2025-10-05",
+      "offense": "PHI",
+      "defense": "DEN",
+      "passing": {
+        "plays": 44,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 10,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_05_DET_CIN",
+      "date": "2025-10-05",
+      "offense": "CIN",
+      "defense": "DET",
+      "passing": {
+        "plays": 42,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 16,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_05_DET_CIN",
+      "date": "2025-10-05",
+      "offense": "DET",
+      "defense": "CIN",
+      "passing": {
+        "plays": 28,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 31,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_05_HOU_BAL",
+      "date": "2025-10-05",
+      "offense": "BAL",
+      "defense": "HOU",
+      "passing": {
+        "plays": 21,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 19,
+        "explosive": 0
+      }
+    },
+    {
+      "gameId": "2025_05_HOU_BAL",
+      "date": "2025-10-05",
+      "offense": "HOU",
+      "defense": "BAL",
+      "passing": {
+        "plays": 33,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 31,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_05_KC_JAX",
+      "date": "2025-10-06",
+      "offense": "JAX",
+      "defense": "KC",
+      "passing": {
+        "plays": 28,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 26,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_05_KC_JAX",
+      "date": "2025-10-06",
+      "offense": "KC",
+      "defense": "JAX",
+      "passing": {
+        "plays": 41,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 22,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_05_LV_IND",
+      "date": "2025-10-05",
+      "offense": "IND",
+      "defense": "LV",
+      "passing": {
+        "plays": 32,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 25,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_05_LV_IND",
+      "date": "2025-10-05",
+      "offense": "LV",
+      "defense": "IND",
+      "passing": {
+        "plays": 40,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 25,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_05_MIA_CAR",
+      "date": "2025-10-05",
+      "offense": "CAR",
+      "defense": "MIA",
+      "passing": {
+        "plays": 32,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 30,
+        "explosive": 7
+      }
+    },
+    {
+      "gameId": "2025_05_MIA_CAR",
+      "date": "2025-10-05",
+      "offense": "MIA",
+      "defense": "CAR",
+      "passing": {
+        "plays": 39,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 14,
+        "explosive": 0
+      }
+    },
+    {
+      "gameId": "2025_05_MIN_CLE",
+      "date": "2025-10-05",
+      "offense": "CLE",
+      "defense": "MIN",
+      "passing": {
+        "plays": 34,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 32,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_05_MIN_CLE",
+      "date": "2025-10-05",
+      "offense": "MIN",
+      "defense": "CLE",
+      "passing": {
+        "plays": 38,
+        "explosive": 5
+      },
+      "rushing": {
+        "plays": 22,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_05_NE_BUF",
+      "date": "2025-10-05",
+      "offense": "BUF",
+      "defense": "NE",
+      "passing": {
+        "plays": 32,
+        "explosive": 5
+      },
+      "rushing": {
+        "plays": 29,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_05_NE_BUF",
+      "date": "2025-10-05",
+      "offense": "NE",
+      "defense": "BUF",
+      "passing": {
+        "plays": 34,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 22,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_05_NYG_NO",
+      "date": "2025-10-05",
+      "offense": "NO",
+      "defense": "NYG",
+      "passing": {
+        "plays": 32,
+        "explosive": 1
+      },
+      "rushing": {
+        "plays": 29,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_05_NYG_NO",
+      "date": "2025-10-05",
+      "offense": "NYG",
+      "defense": "NO",
+      "passing": {
+        "plays": 40,
+        "explosive": 0
+      },
+      "rushing": {
+        "plays": 29,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_05_SF_LA",
+      "date": "2025-10-02",
+      "offense": "LA",
+      "defense": "SF",
+      "passing": {
+        "plays": 47,
+        "explosive": 7
+      },
+      "rushing": {
+        "plays": 16,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_05_SF_LA",
+      "date": "2025-10-02",
+      "offense": "SF",
+      "defense": "LA",
+      "passing": {
+        "plays": 49,
+        "explosive": 1
+      },
+      "rushing": {
+        "plays": 33,
+        "explosive": 0
+      }
+    },
+    {
+      "gameId": "2025_05_TB_SEA",
+      "date": "2025-10-05",
+      "offense": "SEA",
+      "defense": "TB",
+      "passing": {
+        "plays": 34,
+        "explosive": 5
+      },
+      "rushing": {
+        "plays": 20,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_05_TB_SEA",
+      "date": "2025-10-05",
+      "offense": "TB",
+      "defense": "SEA",
+      "passing": {
+        "plays": 34,
+        "explosive": 7
+      },
+      "rushing": {
+        "plays": 23,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_05_TEN_ARI",
+      "date": "2025-10-05",
+      "offense": "ARI",
+      "defense": "TEN",
+      "passing": {
+        "plays": 35,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 29,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_05_TEN_ARI",
+      "date": "2025-10-05",
+      "offense": "TEN",
+      "defense": "ARI",
+      "passing": {
+        "plays": 41,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 20,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_05_WAS_LAC",
+      "date": "2025-10-05",
+      "offense": "LAC",
+      "defense": "WAS",
+      "passing": {
+        "plays": 37,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 26,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_05_WAS_LAC",
+      "date": "2025-10-05",
+      "offense": "WAS",
+      "defense": "LAC",
+      "passing": {
+        "plays": 26,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 28,
+        "explosive": 6
+      }
+    },
+    {
+      "gameId": "2025_06_ARI_IND",
+      "date": "2025-10-12",
+      "offense": "ARI",
+      "defense": "IND",
+      "passing": {
+        "plays": 46,
+        "explosive": 7
+      },
+      "rushing": {
+        "plays": 24,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_06_ARI_IND",
+      "date": "2025-10-12",
+      "offense": "IND",
+      "defense": "ARI",
+      "passing": {
+        "plays": 31,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 25,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_06_BUF_ATL",
+      "date": "2025-10-13",
+      "offense": "ATL",
+      "defense": "BUF",
+      "passing": {
+        "plays": 34,
+        "explosive": 6
+      },
+      "rushing": {
+        "plays": 31,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_06_BUF_ATL",
+      "date": "2025-10-13",
+      "offense": "BUF",
+      "defense": "ATL",
+      "passing": {
+        "plays": 30,
+        "explosive": 1
+      },
+      "rushing": {
+        "plays": 24,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_06_CHI_WAS",
+      "date": "2025-10-13",
+      "offense": "CHI",
+      "defense": "WAS",
+      "passing": {
+        "plays": 32,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 26,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_06_CHI_WAS",
+      "date": "2025-10-13",
+      "offense": "WAS",
+      "defense": "CHI",
+      "passing": {
+        "plays": 29,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 30,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_06_CIN_GB",
+      "date": "2025-10-12",
+      "offense": "CIN",
+      "defense": "GB",
+      "passing": {
+        "plays": 44,
+        "explosive": 0
+      },
+      "rushing": {
+        "plays": 16,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_06_CIN_GB",
+      "date": "2025-10-12",
+      "offense": "GB",
+      "defense": "CIN",
+      "passing": {
+        "plays": 27,
+        "explosive": 6
+      },
+      "rushing": {
+        "plays": 32,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_06_CLE_PIT",
+      "date": "2025-10-12",
+      "offense": "CLE",
+      "defense": "PIT",
+      "passing": {
+        "plays": 58,
+        "explosive": 1
+      },
+      "rushing": {
+        "plays": 17,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_06_CLE_PIT",
+      "date": "2025-10-12",
+      "offense": "PIT",
+      "defense": "CLE",
+      "passing": {
+        "plays": 30,
+        "explosive": 5
+      },
+      "rushing": {
+        "plays": 25,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_06_DAL_CAR",
+      "date": "2025-10-12",
+      "offense": "CAR",
+      "defense": "DAL",
+      "passing": {
+        "plays": 26,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 36,
+        "explosive": 6
+      }
+    },
+    {
+      "gameId": "2025_06_DAL_CAR",
+      "date": "2025-10-12",
+      "offense": "DAL",
+      "defense": "CAR",
+      "passing": {
+        "plays": 34,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 18,
+        "explosive": 0
+      }
+    },
+    {
+      "gameId": "2025_06_DEN_NYJ",
+      "date": "2025-10-12",
+      "offense": "DEN",
+      "defense": "NYJ",
+      "passing": {
+        "plays": 31,
+        "explosive": 1
+      },
+      "rushing": {
+        "plays": 24,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_06_DEN_NYJ",
+      "date": "2025-10-12",
+      "offense": "NYJ",
+      "defense": "DEN",
+      "passing": {
+        "plays": 26,
+        "explosive": 0
+      },
+      "rushing": {
+        "plays": 31,
+        "explosive": 0
+      }
+    },
+    {
+      "gameId": "2025_06_DET_KC",
+      "date": "2025-10-12",
+      "offense": "DET",
+      "defense": "KC",
+      "passing": {
+        "plays": 30,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 23,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_06_DET_KC",
+      "date": "2025-10-12",
+      "offense": "KC",
+      "defense": "DET",
+      "passing": {
+        "plays": 33,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 25,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_06_LAC_MIA",
+      "date": "2025-10-12",
+      "offense": "LAC",
+      "defense": "MIA",
+      "passing": {
+        "plays": 39,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 25,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_06_LAC_MIA",
+      "date": "2025-10-12",
+      "offense": "MIA",
+      "defense": "LAC",
+      "passing": {
+        "plays": 35,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 21,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_06_LA_BAL",
+      "date": "2025-10-12",
+      "offense": "BAL",
+      "defense": "LA",
+      "passing": {
+        "plays": 37,
+        "explosive": 0
+      },
+      "rushing": {
+        "plays": 37,
+        "explosive": 6
+      }
+    },
+    {
+      "gameId": "2025_06_LA_BAL",
+      "date": "2025-10-12",
+      "offense": "LA",
+      "defense": "BAL",
+      "passing": {
+        "plays": 28,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 21,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_06_NE_NO",
+      "date": "2025-10-12",
+      "offense": "NE",
+      "defense": "NO",
+      "passing": {
+        "plays": 27,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 28,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_06_NE_NO",
+      "date": "2025-10-12",
+      "offense": "NO",
+      "defense": "NE",
+      "passing": {
+        "plays": 28,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 23,
+        "explosive": 0
+      }
+    },
+    {
+      "gameId": "2025_06_PHI_NYG",
+      "date": "2025-10-09",
+      "offense": "NYG",
+      "defense": "PHI",
+      "passing": {
+        "plays": 28,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 36,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_06_PHI_NYG",
+      "date": "2025-10-09",
+      "offense": "PHI",
+      "defense": "NYG",
+      "passing": {
+        "plays": 36,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 20,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_06_SEA_JAX",
+      "date": "2025-10-12",
+      "offense": "JAX",
+      "defense": "SEA",
+      "passing": {
+        "plays": 49,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 18,
+        "explosive": 0
+      }
+    },
+    {
+      "gameId": "2025_06_SEA_JAX",
+      "date": "2025-10-12",
+      "offense": "SEA",
+      "defense": "JAX",
+      "passing": {
+        "plays": 28,
+        "explosive": 5
+      },
+      "rushing": {
+        "plays": 23,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_06_SF_TB",
+      "date": "2025-10-12",
+      "offense": "SF",
+      "defense": "TB",
+      "passing": {
+        "plays": 45,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 22,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_06_SF_TB",
+      "date": "2025-10-12",
+      "offense": "TB",
+      "defense": "SF",
+      "passing": {
+        "plays": 24,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 25,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_06_TEN_LV",
+      "date": "2025-10-12",
+      "offense": "LV",
+      "defense": "TEN",
+      "passing": {
+        "plays": 25,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 29,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_06_TEN_LV",
+      "date": "2025-10-12",
+      "offense": "TEN",
+      "defense": "LV",
+      "passing": {
+        "plays": 43,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 15,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_07_ATL_SF",
+      "date": "2025-10-19",
+      "offense": "ATL",
+      "defense": "SF",
+      "passing": {
+        "plays": 40,
+        "explosive": 1
+      },
+      "rushing": {
+        "plays": 20,
+        "explosive": 0
+      }
+    },
+    {
+      "gameId": "2025_07_ATL_SF",
+      "date": "2025-10-19",
+      "offense": "SF",
+      "defense": "ATL",
+      "passing": {
+        "plays": 27,
+        "explosive": 0
+      },
+      "rushing": {
+        "plays": 37,
+        "explosive": 8
+      }
+    },
+    {
+      "gameId": "2025_07_CAR_NYJ",
+      "date": "2025-10-19",
+      "offense": "CAR",
+      "defense": "NYJ",
+      "passing": {
+        "plays": 34,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 34,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_07_CAR_NYJ",
+      "date": "2025-10-19",
+      "offense": "NYJ",
+      "defense": "CAR",
+      "passing": {
+        "plays": 40,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 20,
+        "explosive": 0
+      }
+    },
+    {
+      "gameId": "2025_07_GB_ARI",
+      "date": "2025-10-19",
+      "offense": "ARI",
+      "defense": "GB",
+      "passing": {
+        "plays": 42,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 28,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_07_GB_ARI",
+      "date": "2025-10-19",
+      "offense": "GB",
+      "defense": "ARI",
+      "passing": {
+        "plays": 30,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 22,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_07_HOU_SEA",
+      "date": "2025-10-20",
+      "offense": "HOU",
+      "defense": "SEA",
+      "passing": {
+        "plays": 52,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 17,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_07_HOU_SEA",
+      "date": "2025-10-20",
+      "offense": "SEA",
+      "defense": "HOU",
+      "passing": {
+        "plays": 34,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 31,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_07_IND_LAC",
+      "date": "2025-10-19",
+      "offense": "IND",
+      "defense": "LAC",
+      "passing": {
+        "plays": 34,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 20,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_07_IND_LAC",
+      "date": "2025-10-19",
+      "offense": "LAC",
+      "defense": "IND",
+      "passing": {
+        "plays": 58,
+        "explosive": 6
+      },
+      "rushing": {
+        "plays": 16,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_07_LA_JAX",
+      "date": "2025-10-19",
+      "offense": "JAX",
+      "defense": "LA",
+      "passing": {
+        "plays": 55,
+        "explosive": 6
+      },
+      "rushing": {
+        "plays": 19,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_07_LA_JAX",
+      "date": "2025-10-19",
+      "offense": "LA",
+      "defense": "JAX",
+      "passing": {
+        "plays": 33,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 25,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_07_LV_KC",
+      "date": "2025-10-19",
+      "offense": "KC",
+      "defense": "LV",
+      "passing": {
+        "plays": 36,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 38,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_07_LV_KC",
+      "date": "2025-10-19",
+      "offense": "LV",
+      "defense": "KC",
+      "passing": {
+        "plays": 19,
+        "explosive": 0
+      },
+      "rushing": {
+        "plays": 11,
+        "explosive": 0
+      }
+    },
+    {
+      "gameId": "2025_07_MIA_CLE",
+      "date": "2025-10-19",
+      "offense": "CLE",
+      "defense": "MIA",
+      "passing": {
+        "plays": 20,
+        "explosive": 1
+      },
+      "rushing": {
+        "plays": 32,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_07_MIA_CLE",
+      "date": "2025-10-19",
+      "offense": "MIA",
+      "defense": "CLE",
+      "passing": {
+        "plays": 35,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 22,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_07_NE_TEN",
+      "date": "2025-10-19",
+      "offense": "NE",
+      "defense": "TEN",
+      "passing": {
+        "plays": 28,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 34,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_07_NE_TEN",
+      "date": "2025-10-19",
+      "offense": "TEN",
+      "defense": "NE",
+      "passing": {
+        "plays": 39,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 12,
+        "explosive": 0
+      }
+    },
+    {
+      "gameId": "2025_07_NO_CHI",
+      "date": "2025-10-19",
+      "offense": "CHI",
+      "defense": "NO",
+      "passing": {
+        "plays": 27,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 38,
+        "explosive": 9
+      }
+    },
+    {
+      "gameId": "2025_07_NO_CHI",
+      "date": "2025-10-19",
+      "offense": "NO",
+      "defense": "CHI",
+      "passing": {
+        "plays": 36,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 17,
+        "explosive": 0
+      }
+    },
+    {
+      "gameId": "2025_07_NYG_DEN",
+      "date": "2025-10-19",
+      "offense": "DEN",
+      "defense": "NYG",
+      "passing": {
+        "plays": 51,
+        "explosive": 5
+      },
+      "rushing": {
+        "plays": 24,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_07_NYG_DEN",
+      "date": "2025-10-19",
+      "offense": "NYG",
+      "defense": "DEN",
+      "passing": {
+        "plays": 37,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 32,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_07_PHI_MIN",
+      "date": "2025-10-19",
+      "offense": "MIN",
+      "defense": "PHI",
+      "passing": {
+        "plays": 44,
+        "explosive": 5
+      },
+      "rushing": {
+        "plays": 23,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_07_PHI_MIN",
+      "date": "2025-10-19",
+      "offense": "PHI",
+      "defense": "MIN",
+      "passing": {
+        "plays": 26,
+        "explosive": 6
+      },
+      "rushing": {
+        "plays": 22,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_07_PIT_CIN",
+      "date": "2025-10-16",
+      "offense": "CIN",
+      "defense": "PIT",
+      "passing": {
+        "plays": 49,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 20,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_07_PIT_CIN",
+      "date": "2025-10-16",
+      "offense": "PIT",
+      "defense": "CIN",
+      "passing": {
+        "plays": 34,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 20,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_07_TB_DET",
+      "date": "2025-10-20",
+      "offense": "DET",
+      "defense": "TB",
+      "passing": {
+        "plays": 33,
+        "explosive": 5
+      },
+      "rushing": {
+        "plays": 32,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_07_TB_DET",
+      "date": "2025-10-20",
+      "offense": "TB",
+      "defense": "DET",
+      "passing": {
+        "plays": 54,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 11,
+        "explosive": 0
+      }
+    },
+    {
+      "gameId": "2025_07_WAS_DAL",
+      "date": "2025-10-19",
+      "offense": "DAL",
+      "defense": "WAS",
+      "passing": {
+        "plays": 31,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 29,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_07_WAS_DAL",
+      "date": "2025-10-19",
+      "offense": "WAS",
+      "defense": "DAL",
+      "passing": {
+        "plays": 36,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 27,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_08_BUF_CAR",
+      "date": "2025-10-26",
+      "offense": "BUF",
+      "defense": "CAR",
+      "passing": {
+        "plays": 25,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 35,
+        "explosive": 7
+      }
+    },
+    {
+      "gameId": "2025_08_BUF_CAR",
+      "date": "2025-10-26",
+      "offense": "CAR",
+      "defense": "BUF",
+      "passing": {
+        "plays": 31,
+        "explosive": 1
+      },
+      "rushing": {
+        "plays": 28,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_08_CHI_BAL",
+      "date": "2025-10-26",
+      "offense": "BAL",
+      "defense": "CHI",
+      "passing": {
+        "plays": 24,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 35,
+        "explosive": 6
+      }
+    },
+    {
+      "gameId": "2025_08_CHI_BAL",
+      "date": "2025-10-26",
+      "offense": "CHI",
+      "defense": "BAL",
+      "passing": {
+        "plays": 39,
+        "explosive": 5
+      },
+      "rushing": {
+        "plays": 23,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_08_CLE_NE",
+      "date": "2025-10-26",
+      "offense": "CLE",
+      "defense": "NE",
+      "passing": {
+        "plays": 36,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 16,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_08_CLE_NE",
+      "date": "2025-10-26",
+      "offense": "NE",
+      "defense": "CLE",
+      "passing": {
+        "plays": 30,
+        "explosive": 5
+      },
+      "rushing": {
+        "plays": 32,
+        "explosive": 6
+      }
+    },
+    {
+      "gameId": "2025_08_DAL_DEN",
+      "date": "2025-10-26",
+      "offense": "DAL",
+      "defense": "DEN",
+      "passing": {
+        "plays": 37,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 31,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_08_DAL_DEN",
+      "date": "2025-10-26",
+      "offense": "DEN",
+      "defense": "DAL",
+      "passing": {
+        "plays": 29,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 26,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_08_GB_PIT",
+      "date": "2025-10-26",
+      "offense": "GB",
+      "defense": "PIT",
+      "passing": {
+        "plays": 37,
+        "explosive": 6
+      },
+      "rushing": {
+        "plays": 25,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_08_GB_PIT",
+      "date": "2025-10-26",
+      "offense": "PIT",
+      "defense": "GB",
+      "passing": {
+        "plays": 39,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 18,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_08_MIA_ATL",
+      "date": "2025-10-26",
+      "offense": "ATL",
+      "defense": "MIA",
+      "passing": {
+        "plays": 32,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 16,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_08_MIA_ATL",
+      "date": "2025-10-26",
+      "offense": "MIA",
+      "defense": "ATL",
+      "passing": {
+        "plays": 28,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 37,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_08_MIN_LAC",
+      "date": "2025-10-23",
+      "offense": "LAC",
+      "defense": "MIN",
+      "passing": {
+        "plays": 27,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 43,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_08_MIN_LAC",
+      "date": "2025-10-23",
+      "offense": "MIN",
+      "defense": "LAC",
+      "passing": {
+        "plays": 36,
+        "explosive": 0
+      },
+      "rushing": {
+        "plays": 11,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_08_NYG_PHI",
+      "date": "2025-10-26",
+      "offense": "NYG",
+      "defense": "PHI",
+      "passing": {
+        "plays": 29,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 20,
+        "explosive": 0
+      }
+    },
+    {
+      "gameId": "2025_08_NYG_PHI",
+      "date": "2025-10-26",
+      "offense": "PHI",
+      "defense": "NYG",
+      "passing": {
+        "plays": 24,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 30,
+        "explosive": 8
+      }
+    },
+    {
+      "gameId": "2025_08_NYJ_CIN",
+      "date": "2025-10-26",
+      "offense": "CIN",
+      "defense": "NYJ",
+      "passing": {
+        "plays": 35,
+        "explosive": 1
+      },
+      "rushing": {
+        "plays": 23,
+        "explosive": 9
+      }
+    },
+    {
+      "gameId": "2025_08_NYJ_CIN",
+      "date": "2025-10-26",
+      "offense": "NYJ",
+      "defense": "CIN",
+      "passing": {
+        "plays": 32,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 36,
+        "explosive": 6
+      }
+    },
+    {
+      "gameId": "2025_08_SF_HOU",
+      "date": "2025-10-26",
+      "offense": "HOU",
+      "defense": "SF",
+      "passing": {
+        "plays": 39,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 35,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_08_SF_HOU",
+      "date": "2025-10-26",
+      "offense": "SF",
+      "defense": "HOU",
+      "passing": {
+        "plays": 34,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 10,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_08_TB_NO",
+      "date": "2025-10-26",
+      "offense": "NO",
+      "defense": "TB",
+      "passing": {
+        "plays": 55,
+        "explosive": 1
+      },
+      "rushing": {
+        "plays": 15,
+        "explosive": 0
+      }
+    },
+    {
+      "gameId": "2025_08_TB_NO",
+      "date": "2025-10-26",
+      "offense": "TB",
+      "defense": "NO",
+      "passing": {
+        "plays": 27,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 29,
+        "explosive": 1
+      }
+    },
+    {
+      "gameId": "2025_08_TEN_IND",
+      "date": "2025-10-26",
+      "offense": "IND",
+      "defense": "TEN",
+      "passing": {
+        "plays": 34,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 18,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_08_TEN_IND",
+      "date": "2025-10-26",
+      "offense": "TEN",
+      "defense": "IND",
+      "passing": {
+        "plays": 41,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 25,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_08_WAS_KC",
+      "date": "2025-10-27",
+      "offense": "KC",
+      "defense": "WAS",
+      "passing": {
+        "plays": 37,
+        "explosive": 5
+      },
+      "rushing": {
+        "plays": 29,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_08_WAS_KC",
+      "date": "2025-10-27",
+      "offense": "WAS",
+      "defense": "KC",
+      "passing": {
+        "plays": 32,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 20,
+        "explosive": 0
+      }
+    },
+    {
+      "gameId": "2025_09_ARI_DAL",
+      "date": "2025-11-03",
+      "offense": "ARI",
+      "defense": "DAL",
+      "passing": {
+        "plays": 36,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 27,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_09_ARI_DAL",
+      "date": "2025-11-03",
+      "offense": "DAL",
+      "defense": "ARI",
+      "passing": {
+        "plays": 43,
+        "explosive": 2
+      },
+      "rushing": {
+        "plays": 21,
+        "explosive": 4
+      }
+    },
+    {
+      "gameId": "2025_09_ATL_NE",
+      "date": "2025-11-02",
+      "offense": "ATL",
+      "defense": "NE",
+      "passing": {
+        "plays": 38,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 16,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_09_ATL_NE",
+      "date": "2025-11-02",
+      "offense": "NE",
+      "defense": "ATL",
+      "passing": {
+        "plays": 35,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 30,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_09_BAL_MIA",
+      "date": "2025-10-30",
+      "offense": "BAL",
+      "defense": "MIA",
+      "passing": {
+        "plays": 25,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 29,
+        "explosive": 5
+      }
+    },
+    {
+      "gameId": "2025_09_BAL_MIA",
+      "date": "2025-10-30",
+      "offense": "MIA",
+      "defense": "BAL",
+      "passing": {
+        "plays": 41,
+        "explosive": 3
+      },
+      "rushing": {
+        "plays": 20,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_09_CAR_GB",
+      "date": "2025-11-02",
+      "offense": "CAR",
+      "defense": "GB",
+      "passing": {
+        "plays": 21,
+        "explosive": 1
+      },
+      "rushing": {
+        "plays": 33,
+        "explosive": 3
+      }
+    },
+    {
+      "gameId": "2025_09_CAR_GB",
+      "date": "2025-11-02",
+      "offense": "GB",
+      "defense": "CAR",
+      "passing": {
+        "plays": 38,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 25,
+        "explosive": 2
+      }
+    },
+    {
+      "gameId": "2025_09_CHI_CIN",
+      "date": "2025-11-02",
+      "offense": "CHI",
+      "defense": "CIN",
+      "passing": {
+        "plays": 39,
+        "explosive": 4
+      },
+      "rushing": {
+        "plays": 37,
+        "explosive": 8
+      }
+    },
+    {
+      "gameId": "2025_09_CHI_CIN",
+      "date": "2025-11-02",
+      "offense": "CIN",
+      "defense": "CHI",
+      "passing": {
+        "plays": 50,
         "explosive": 10
       },
       "rushing": {
@@ -3544,7 +3545,7 @@
       "offense": "DEN",
       "defense": "HOU",
       "passing": {
-        "plays": 39,
+        "plays": 38,
         "explosive": 3
       },
       "rushing": {
@@ -3614,7 +3615,7 @@
       "offense": "LV",
       "defense": "JAX",
       "passing": {
-        "plays": 42,
+        "plays": 41,
         "explosive": 3
       },
       "rushing": {
@@ -3642,7 +3643,7 @@
       "offense": "KC",
       "defense": "BUF",
       "passing": {
-        "plays": 38,
+        "plays": 37,
         "explosive": 7
       },
       "rushing": {
@@ -3796,7 +3797,7 @@
       "offense": "ARI",
       "defense": "SEA",
       "passing": {
-        "plays": 51,
+        "plays": 50,
         "explosive": 3
       },
       "rushing": {
@@ -3824,7 +3825,7 @@
       "offense": "ATL",
       "defense": "IND",
       "passing": {
-        "plays": 32,
+        "plays": 31,
         "explosive": 2
       },
       "rushing": {
@@ -3838,7 +3839,7 @@
       "offense": "IND",
       "defense": "ATL",
       "passing": {
-        "plays": 34,
+        "plays": 33,
         "explosive": 5
       },
       "rushing": {
@@ -3852,7 +3853,7 @@
       "offense": "BAL",
       "defense": "MIN",
       "passing": {
-        "plays": 31,
+        "plays": 30,
         "explosive": 3
       },
       "rushing": {
@@ -3866,7 +3867,7 @@
       "offense": "MIN",
       "defense": "BAL",
       "passing": {
-        "plays": 44,
+        "plays": 43,
         "explosive": 3
       },
       "rushing": {
@@ -3880,7 +3881,7 @@
       "offense": "BUF",
       "defense": "MIA",
       "passing": {
-        "plays": 44,
+        "plays": 43,
         "explosive": 7
       },
       "rushing": {
@@ -3940,7 +3941,7 @@
         "explosive": 2
       },
       "rushing": {
-        "plays": 33,
+        "plays": 32,
         "explosive": 6
       }
     },
@@ -3950,11 +3951,11 @@
       "offense": "WAS",
       "defense": "DET",
       "passing": {
-        "plays": 25,
+        "plays": 24,
         "explosive": 3
       },
       "rushing": {
-        "plays": 27,
+        "plays": 26,
         "explosive": 0
       }
     },
@@ -3964,11 +3965,11 @@
       "offense": "HOU",
       "defense": "JAX",
       "passing": {
-        "plays": 49,
+        "plays": 47,
         "explosive": 4
       },
       "rushing": {
-        "plays": 23,
+        "plays": 22,
         "explosive": 5
       }
     },
@@ -3978,7 +3979,7 @@
       "offense": "JAX",
       "defense": "HOU",
       "passing": {
-        "plays": 29,
+        "plays": 28,
         "explosive": 2
       },
       "rushing": {
@@ -4006,7 +4007,7 @@
       "offense": "SF",
       "defense": "LA",
       "passing": {
-        "plays": 40,
+        "plays": 39,
         "explosive": 2
       },
       "rushing": {
@@ -4066,7 +4067,7 @@
         "explosive": 4
       },
       "rushing": {
-        "plays": 22,
+        "plays": 21,
         "explosive": 5
       }
     },
@@ -4230,7 +4231,7 @@
       "offense": "CAR",
       "defense": "ATL",
       "passing": {
-        "plays": 52,
+        "plays": 50,
         "explosive": 9
       },
       "rushing": {
@@ -4276,7 +4277,7 @@
         "explosive": 2
       },
       "rushing": {
-        "plays": 22,
+        "plays": 21,
         "explosive": 2
       }
     },
@@ -4356,7 +4357,7 @@
       "offense": "GB",
       "defense": "NYG",
       "passing": {
-        "plays": 29,
+        "plays": 28,
         "explosive": 3
       },
       "rushing": {
@@ -4524,11 +4525,11 @@
       "offense": "ARI",
       "defense": "SF",
       "passing": {
-        "plays": 58,
+        "plays": 57,
         "explosive": 4
       },
       "rushing": {
-        "plays": 15,
+        "plays": 14,
         "explosive": 0
       }
     },
@@ -4538,7 +4539,7 @@
       "offense": "SF",
       "defense": "ARI",
       "passing": {
-        "plays": 28,
+        "plays": 27,
         "explosive": 3
       },
       "rushing": {
@@ -4552,7 +4553,7 @@
       "offense": "BUF",
       "defense": "TB",
       "passing": {
-        "plays": 31,
+        "plays": 30,
         "explosive": 8
       },
       "rushing": {
@@ -4566,7 +4567,7 @@
       "offense": "TB",
       "defense": "BUF",
       "passing": {
-        "plays": 31,
+        "plays": 29,
         "explosive": 2
       },
       "rushing": {
@@ -4612,7 +4613,7 @@
         "explosive": 3
       },
       "rushing": {
-        "plays": 29,
+        "plays": 28,
         "explosive": 3
       }
     },
@@ -4664,7 +4665,7 @@
       "offense": "CAR",
       "defense": "SF",
       "passing": {
-        "plays": 31,
+        "plays": 30,
         "explosive": 1
       },
       "rushing": {
@@ -4734,7 +4735,7 @@
       "offense": "KC",
       "defense": "IND",
       "passing": {
-        "plays": 51,
+        "plays": 50,
         "explosive": 4
       },
       "rushing": {
@@ -5098,7 +5099,7 @@
       "offense": "PHI",
       "defense": "CHI",
       "passing": {
-        "plays": 33,
+        "plays": 32,
         "explosive": 3
       },
       "rushing": {
@@ -5154,7 +5155,7 @@
       "offense": "WAS",
       "defense": "DEN",
       "passing": {
-        "plays": 53,
+        "plays": 52,
         "explosive": 3
       },
       "rushing": {
@@ -5228,7 +5229,7 @@
         "explosive": 3
       },
       "rushing": {
-        "plays": 25,
+        "plays": 24,
         "explosive": 1
       }
     },
@@ -5252,7 +5253,7 @@
       "offense": "DAL",
       "defense": "KC",
       "passing": {
-        "plays": 40,
+        "plays": 39,
         "explosive": 2
       },
       "rushing": {
@@ -5378,11 +5379,11 @@
       "offense": "NO",
       "defense": "MIA",
       "passing": {
-        "plays": 43,
+        "plays": 42,
         "explosive": 0
       },
       "rushing": {
-        "plays": 28,
+        "plays": 27,
         "explosive": 0
       }
     },
@@ -5406,7 +5407,7 @@
       "offense": "NYG",
       "defense": "NE",
       "passing": {
-        "plays": 27,
+        "plays": 26,
         "explosive": 1
       },
       "rushing": {
@@ -5424,7 +5425,7 @@
         "explosive": 1
       },
       "rushing": {
-        "plays": 32,
+        "plays": 31,
         "explosive": 1
       }
     },
@@ -5434,7 +5435,7 @@
       "offense": "SF",
       "defense": "CLE",
       "passing": {
-        "plays": 32,
+        "plays": 31,
         "explosive": 2
       },
       "rushing": {
@@ -5452,7 +5453,7 @@
         "explosive": 3
       },
       "rushing": {
-        "plays": 33,
+        "plays": 32,
         "explosive": 0
       }
     },
@@ -5476,7 +5477,7 @@
       "offense": "BUF",
       "defense": "CIN",
       "passing": {
-        "plays": 32,
+        "plays": 31,
         "explosive": 4
       },
       "rushing": {
@@ -5490,7 +5491,7 @@
       "offense": "CIN",
       "defense": "BUF",
       "passing": {
-        "plays": 38,
+        "plays": 37,
         "explosive": 3
       },
       "rushing": {
@@ -5504,7 +5505,7 @@
       "offense": "DAL",
       "defense": "DET",
       "passing": {
-        "plays": 53,
+        "plays": 52,
         "explosive": 6
       },
       "rushing": {
@@ -5588,7 +5589,7 @@
       "offense": "IND",
       "defense": "JAX",
       "passing": {
-        "plays": 38,
+        "plays": 37,
         "explosive": 2
       },
       "rushing": {
@@ -5784,11 +5785,11 @@
       "offense": "CLE",
       "defense": "TEN",
       "passing": {
-        "plays": 45,
+        "plays": 44,
         "explosive": 5
       },
       "rushing": {
-        "plays": 21,
+        "plays": 20,
         "explosive": 2
       }
     },
@@ -5840,7 +5841,7 @@
       "offense": "ARI",
       "defense": "HOU",
       "passing": {
-        "plays": 43,
+        "plays": 42,
         "explosive": 3
       },
       "rushing": {
@@ -5868,7 +5869,7 @@
       "offense": "ATL",
       "defense": "TB",
       "passing": {
-        "plays": 46,
+        "plays": 44,
         "explosive": 5
       },
       "rushing": {
@@ -5882,7 +5883,7 @@
       "offense": "TB",
       "defense": "ATL",
       "passing": {
-        "plays": 40,
+        "plays": 39,
         "explosive": 5
       },
       "rushing": {
@@ -6040,7 +6041,7 @@
         "explosive": 5
       },
       "rushing": {
-        "plays": 30,
+        "plays": 29,
         "explosive": 0
       }
     },
@@ -6148,7 +6149,7 @@
       "offense": "MIA",
       "defense": "PIT",
       "passing": {
-        "plays": 34,
+        "plays": 32,
         "explosive": 4
       },
       "rushing": {
@@ -6498,11 +6499,11 @@
       "offense": "SEA",
       "defense": "LA",
       "passing": {
-        "plays": 39,
+        "plays": 37,
         "explosive": 5
       },
       "rushing": {
-        "plays": 26,
+        "plays": 25,
         "explosive": 3
       }
     },
@@ -6582,7 +6583,7 @@
       "offense": "NE",
       "defense": "BAL",
       "passing": {
-        "plays": 49,
+        "plays": 48,
         "explosive": 9
       },
       "rushing": {
@@ -6628,7 +6629,7 @@
         "explosive": 1
       },
       "rushing": {
-        "plays": 33,
+        "plays": 32,
         "explosive": 7
       }
     },
@@ -6642,7 +6643,7 @@
         "explosive": 3
       },
       "rushing": {
-        "plays": 26,
+        "plays": 25,
         "explosive": 2
       }
     },
@@ -7072,7 +7073,7 @@
       "offense": "BUF",
       "defense": "PHI",
       "passing": {
-        "plays": 41,
+        "plays": 40,
         "explosive": 4
       },
       "rushing": {
@@ -7268,7 +7269,7 @@
       "offense": "CIN",
       "defense": "CLE",
       "passing": {
-        "plays": 42,
+        "plays": 41,
         "explosive": 3
       },
       "rushing": {
@@ -7310,7 +7311,7 @@
       "offense": "NYG",
       "defense": "DAL",
       "passing": {
-        "plays": 38,
+        "plays": 37,
         "explosive": 3
       },
       "rushing": {
@@ -7324,11 +7325,11 @@
       "offense": "CHI",
       "defense": "DET",
       "passing": {
-        "plays": 35,
+        "plays": 34,
         "explosive": 2
       },
       "rushing": {
-        "plays": 19,
+        "plays": 18,
         "explosive": 2
       }
     },
@@ -7520,7 +7521,7 @@
       "offense": "BUF",
       "defense": "NYJ",
       "passing": {
-        "plays": 31,
+        "plays": 29,
         "explosive": 4
       },
       "rushing": {
@@ -7534,7 +7535,7 @@
       "offense": "NYJ",
       "defense": "BUF",
       "passing": {
-        "plays": 24,
+        "plays": 23,
         "explosive": 0
       },
       "rushing": {
@@ -7660,7 +7661,7 @@
       "offense": "CHI",
       "defense": "GB",
       "passing": {
-        "plays": 50,
+        "plays": 49,
         "explosive": 9
       },
       "rushing": {
@@ -7968,7 +7969,7 @@
       "offense": "NE",
       "defense": "SEA",
       "passing": {
-        "plays": 50,
+        "plays": 49,
         "explosive": 5
       },
       "rushing": {
@@ -7995,21 +7996,21 @@
     "ARI": {
       "offense": {
         "passing": {
-          "plays": 710,
+          "plays": 707,
           "explosive": 49
         },
         "rushing": {
-          "plays": 364,
+          "plays": 363,
           "explosive": 35
         }
       },
       "defense": {
         "passing": {
-          "plays": 597,
+          "plays": 596,
           "explosive": 52
         },
         "rushing": {
-          "plays": 456,
+          "plays": 454,
           "explosive": 62
         }
       }
@@ -8017,17 +8018,17 @@
     "ATL": {
       "offense": {
         "passing": {
-          "plays": 571,
+          "plays": 568,
           "explosive": 47
         },
         "rushing": {
-          "plays": 465,
+          "plays": 464,
           "explosive": 54
         }
       },
       "defense": {
         "passing": {
-          "plays": 590,
+          "plays": 585,
           "explosive": 49
         },
         "rushing": {
@@ -8039,7 +8040,7 @@
     "BAL": {
       "offense": {
         "passing": {
-          "plays": 466,
+          "plays": 464,
           "explosive": 43
         },
         "rushing": {
@@ -8049,7 +8050,7 @@
       },
       "defense": {
         "passing": {
-          "plays": 658,
+          "plays": 653,
           "explosive": 64
         },
         "rushing": {
@@ -8061,7 +8062,7 @@
     "BUF": {
       "offense": {
         "passing": {
-          "plays": 621,
+          "plays": 612,
           "explosive": 68
         },
         "rushing": {
@@ -8071,11 +8072,11 @@
       },
       "defense": {
         "passing": {
-          "plays": 582,
+          "plays": 577,
           "explosive": 45
         },
         "rushing": {
-          "plays": 488,
+          "plays": 487,
           "explosive": 75
         }
       }
@@ -8083,11 +8084,11 @@
     "CAR": {
       "offense": {
         "passing": {
-          "plays": 593,
+          "plays": 590,
           "explosive": 46
         },
         "rushing": {
-          "plays": 466,
+          "plays": 464,
           "explosive": 46
         }
       },
@@ -8105,17 +8106,17 @@
     "CHI": {
       "offense": {
         "passing": {
-          "plays": 692,
+          "plays": 687,
           "explosive": 72
         },
         "rushing": {
-          "plays": 563,
+          "plays": 561,
           "explosive": 72
         }
       },
       "defense": {
         "passing": {
-          "plays": 663,
+          "plays": 658,
           "explosive": 71
         },
         "rushing": {
@@ -8127,21 +8128,21 @@
     "CIN": {
       "offense": {
         "passing": {
-          "plays": 677,
+          "plays": 673,
           "explosive": 47
         },
         "rushing": {
-          "plays": 372,
+          "plays": 371,
           "explosive": 37
         }
       },
       "defense": {
         "passing": {
-          "plays": 571,
+          "plays": 568,
           "explosive": 60
         },
         "rushing": {
-          "plays": 464,
+          "plays": 463,
           "explosive": 62
         }
       }
@@ -8149,17 +8150,17 @@
     "CLE": {
       "offense": {
         "passing": {
-          "plays": 609,
+          "plays": 607,
           "explosive": 35
         },
         "rushing": {
-          "plays": 419,
+          "plays": 417,
           "explosive": 41
         }
       },
       "defense": {
         "passing": {
-          "plays": 540,
+          "plays": 538,
           "explosive": 43
         },
         "rushing": {
@@ -8171,7 +8172,7 @@
     "DAL": {
       "offense": {
         "passing": {
-          "plays": 655,
+          "plays": 652,
           "explosive": 56
         },
         "rushing": {
@@ -8181,11 +8182,11 @@
       },
       "defense": {
         "passing": {
-          "plays": 593,
+          "plays": 589,
           "explosive": 58
         },
         "rushing": {
-          "plays": 434,
+          "plays": 433,
           "explosive": 64
         }
       }
@@ -8193,17 +8194,17 @@
     "DEN": {
       "offense": {
         "passing": {
-          "plays": 720,
+          "plays": 715,
           "explosive": 53
         },
         "rushing": {
-          "plays": 483,
+          "plays": 482,
           "explosive": 54
         }
       },
       "defense": {
         "passing": {
-          "plays": 726,
+          "plays": 724,
           "explosive": 46
         },
         "rushing": {
@@ -8219,17 +8220,17 @@
           "explosive": 66
         },
         "rushing": {
-          "plays": 432,
+          "plays": 431,
           "explosive": 44
         }
       },
       "defense": {
         "passing": {
-          "plays": 609,
+          "plays": 604,
           "explosive": 58
         },
         "rushing": {
-          "plays": 431,
+          "plays": 429,
           "explosive": 54
         }
       }
@@ -8237,7 +8238,7 @@
     "GB": {
       "offense": {
         "passing": {
-          "plays": 566,
+          "plays": 564,
           "explosive": 65
         },
         "rushing": {
@@ -8247,11 +8248,11 @@
       },
       "defense": {
         "passing": {
-          "plays": 634,
+          "plays": 630,
           "explosive": 50
         },
         "rushing": {
-          "plays": 501,
+          "plays": 499,
           "explosive": 41
         }
       }
@@ -8259,17 +8260,17 @@
     "HOU": {
       "offense": {
         "passing": {
-          "plays": 700,
+          "plays": 695,
           "explosive": 53
         },
         "rushing": {
-          "plays": 516,
+          "plays": 515,
           "explosive": 47
         }
       },
       "defense": {
         "passing": {
-          "plays": 658,
+          "plays": 653,
           "explosive": 52
         },
         "rushing": {
@@ -8281,17 +8282,17 @@
     "IND": {
       "offense": {
         "passing": {
-          "plays": 580,
+          "plays": 574,
           "explosive": 44
         },
         "rushing": {
-          "plays": 431,
+          "plays": 430,
           "explosive": 48
         }
       },
       "defense": {
         "passing": {
-          "plays": 664,
+          "plays": 661,
           "explosive": 57
         },
         "rushing": {
@@ -8303,21 +8304,21 @@
     "JAX": {
       "offense": {
         "passing": {
-          "plays": 634,
+          "plays": 632,
           "explosive": 59
         },
         "rushing": {
-          "plays": 494,
+          "plays": 492,
           "explosive": 55
         }
       },
       "defense": {
         "passing": {
-          "plays": 707,
+          "plays": 702,
           "explosive": 49
         },
         "rushing": {
-          "plays": 383,
+          "plays": 382,
           "explosive": 36
         }
       }
@@ -8325,7 +8326,7 @@
     "KC": {
       "offense": {
         "passing": {
-          "plays": 631,
+          "plays": 628,
           "explosive": 52
         },
         "rushing": {
@@ -8335,7 +8336,7 @@
       },
       "defense": {
         "passing": {
-          "plays": 545,
+          "plays": 544,
           "explosive": 45
         },
         "rushing": {
@@ -8357,11 +8358,11 @@
       },
       "defense": {
         "passing": {
-          "plays": 759,
+          "plays": 755,
           "explosive": 61
         },
         "rushing": {
-          "plays": 518,
+          "plays": 517,
           "explosive": 46
         }
       }
@@ -8373,17 +8374,17 @@
           "explosive": 46
         },
         "rushing": {
-          "plays": 477,
+          "plays": 476,
           "explosive": 54
         }
       },
       "defense": {
         "passing": {
-          "plays": 584,
+          "plays": 582,
           "explosive": 41
         },
         "rushing": {
-          "plays": 432,
+          "plays": 431,
           "explosive": 55
         }
       }
@@ -8391,21 +8392,21 @@
     "LV": {
       "offense": {
         "passing": {
-          "plays": 578,
+          "plays": 576,
           "explosive": 37
         },
         "rushing": {
-          "plays": 364,
+          "plays": 363,
           "explosive": 31
         }
       },
       "defense": {
         "passing": {
-          "plays": 562,
+          "plays": 558,
           "explosive": 37
         },
         "rushing": {
-          "plays": 492,
+          "plays": 491,
           "explosive": 50
         }
       }
@@ -8413,7 +8414,7 @@
     "MIA": {
       "offense": {
         "passing": {
-          "plays": 518,
+          "plays": 515,
           "explosive": 43
         },
         "rushing": {
@@ -8423,11 +8424,11 @@
       },
       "defense": {
         "passing": {
-          "plays": 555,
+          "plays": 553,
           "explosive": 50
         },
         "rushing": {
-          "plays": 461,
+          "plays": 458,
           "explosive": 60
         }
       }
@@ -8435,7 +8436,7 @@
     "MIN": {
       "offense": {
         "passing": {
-          "plays": 547,
+          "plays": 543,
           "explosive": 39
         },
         "rushing": {
@@ -8445,7 +8446,7 @@
       },
       "defense": {
         "passing": {
-          "plays": 496,
+          "plays": 495,
           "explosive": 32
         },
         "rushing": {
@@ -8457,21 +8458,21 @@
     "NE": {
       "offense": {
         "passing": {
-          "plays": 694,
+          "plays": 692,
           "explosive": 83
         },
         "rushing": {
-          "plays": 574,
+          "plays": 572,
           "explosive": 65
         }
       },
       "defense": {
         "passing": {
-          "plays": 722,
+          "plays": 720,
           "explosive": 48
         },
         "rushing": {
-          "plays": 504,
+          "plays": 503,
           "explosive": 52
         }
       }
@@ -8479,11 +8480,11 @@
     "NO": {
       "offense": {
         "passing": {
-          "plays": 635,
+          "plays": 634,
           "explosive": 33
         },
         "rushing": {
-          "plays": 429,
+          "plays": 427,
           "explosive": 34
         }
       },
@@ -8493,7 +8494,7 @@
           "explosive": 44
         },
         "rushing": {
-          "plays": 498,
+          "plays": 496,
           "explosive": 52
         }
       }
@@ -8501,21 +8502,21 @@
     "NYG": {
       "offense": {
         "passing": {
-          "plays": 576,
+          "plays": 573,
           "explosive": 52
         },
         "rushing": {
-          "plays": 503,
+          "plays": 502,
           "explosive": 59
         }
       },
       "defense": {
         "passing": {
-          "plays": 589,
+          "plays": 586,
           "explosive": 49
         },
         "rushing": {
-          "plays": 443,
+          "plays": 442,
           "explosive": 75
         }
       }
@@ -8523,17 +8524,17 @@
     "NYJ": {
       "offense": {
         "passing": {
-          "plays": 556,
+          "plays": 551,
           "explosive": 26
         },
         "rushing": {
-          "plays": 453,
+          "plays": 450,
           "explosive": 53
         }
       },
       "defense": {
         "passing": {
-          "plays": 542,
+          "plays": 540,
           "explosive": 57
         },
         "rushing": {
@@ -8545,21 +8546,21 @@
     "PHI": {
       "offense": {
         "passing": {
-          "plays": 568,
+          "plays": 566,
           "explosive": 43
         },
         "rushing": {
-          "plays": 499,
+          "plays": 498,
           "explosive": 56
         }
       },
       "defense": {
         "passing": {
-          "plays": 615,
+          "plays": 613,
           "explosive": 50
         },
         "rushing": {
-          "plays": 506,
+          "plays": 505,
           "explosive": 56
         }
       }
@@ -8567,7 +8568,7 @@
     "PIT": {
       "offense": {
         "passing": {
-          "plays": 618,
+          "plays": 616,
           "explosive": 43
         },
         "rushing": {
@@ -8577,11 +8578,11 @@
       },
       "defense": {
         "passing": {
-          "plays": 696,
+          "plays": 691,
           "explosive": 56
         },
         "rushing": {
-          "plays": 474,
+          "plays": 472,
           "explosive": 50
         }
       }
@@ -8589,21 +8590,21 @@
     "SEA": {
       "offense": {
         "passing": {
-          "plays": 603,
+          "plays": 601,
           "explosive": 62
         },
         "rushing": {
-          "plays": 582,
+          "plays": 581,
           "explosive": 68
         }
       },
       "defense": {
         "passing": {
-          "plays": 768,
+          "plays": 763,
           "explosive": 58
         },
         "rushing": {
-          "plays": 477,
+          "plays": 476,
           "explosive": 35
         }
       }
@@ -8611,7 +8612,7 @@
     "SF": {
       "offense": {
         "passing": {
-          "plays": 669,
+          "plays": 664,
           "explosive": 55
         },
         "rushing": {
@@ -8621,11 +8622,11 @@
       },
       "defense": {
         "passing": {
-          "plays": 658,
+          "plays": 655,
           "explosive": 47
         },
         "rushing": {
-          "plays": 485,
+          "plays": 482,
           "explosive": 43
         }
       }
@@ -8633,17 +8634,17 @@
     "TB": {
       "offense": {
         "passing": {
-          "plays": 601,
+          "plays": 595,
           "explosive": 55
         },
         "rushing": {
-          "plays": 464,
+          "plays": 462,
           "explosive": 48
         }
       },
       "defense": {
         "passing": {
-          "plays": 604,
+          "plays": 600,
           "explosive": 55
         },
         "rushing": {
@@ -8665,11 +8666,11 @@
       },
       "defense": {
         "passing": {
-          "plays": 558,
+          "plays": 556,
           "explosive": 58
         },
         "rushing": {
-          "plays": 434,
+          "plays": 432,
           "explosive": 49
         }
       }
@@ -8677,21 +8678,21 @@
     "WAS": {
       "offense": {
         "passing": {
-          "plays": 504,
+          "plays": 500,
           "explosive": 40
         },
         "rushing": {
-          "plays": 475,
+          "plays": 472,
           "explosive": 60
         }
       },
       "defense": {
         "passing": {
-          "plays": 583,
+          "plays": 581,
           "explosive": 53
         },
         "rushing": {
-          "plays": 490,
+          "plays": 487,
           "explosive": 65
         }
       }
