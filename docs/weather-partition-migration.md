@@ -63,3 +63,17 @@ chain remains: root → snapshot/index → game partitions → original NWS byte
 
 This migration must not change numerical forecasts, backfill publication
 receipts, infer weather effects on scores, or introduce a new paid service.
+
+## Implemented checkpoint
+
+`scripts/weather_partitions.py` now builds and audits the offline partitioned
+archive. The real migration preserves 137 observations across 14 game partitions
+and 126 original compressed source objects. Snapshot size is 124,123 bytes;
+the index is 1,585 bytes and largest partition 62,458 bytes. Four tests cover
+exact deterministic migration, missing/corrupt objects, and rehashed attempts
+to remove either a game or an observation. Independent review found no material
+offline migration blocker. See `reviews/weather-partition-migration.json`.
+
+Runtime readers, append-only publication, active-worker restoration, bounded
+per-object validators and public cutover remain unfinished. A hash-valid object
+alone is not evidence that its weather semantics or current context are valid.

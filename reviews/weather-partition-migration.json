@@ -1,0 +1,17 @@
+{
+  "games": 14,
+  "indexBytes": 1585,
+  "largestPartitionBytes": 62458,
+  "observations": 137,
+  "publication": {
+    "bytes": 300,
+    "sha256": "617f1279d761e500974108197c481b7eb5cd7a303e320722e180e41bce612730"
+  },
+  "reachableObjects": 143,
+  "snapshotBytes": 124123,
+  "sources": 126,
+  "storageWrites": false,
+  "checkedAt": "2026-09-11T17:43:32.549544+00:00",
+  "scope": "Offline migration against replayed v1 archive; no runtime cutover or public availability claim",
+  "tests": "4 migration tests passed; independent review found no material migration blocker"
+}
