@@ -8,7 +8,7 @@ from urllib.error import HTTPError,URLError
 
 ROOT=Path(__file__).resolve().parents[1]
 ORIGIN='https://nfl-intelligence-one.vercel.app'
-ENDPOINTS={'forecasts':'/api/status','odds':'/api/odds-status','personnel':'/api/personnel-status','weather':'/api/weather-status','quarterbacks':'/api/quarterback-status','matchup':'/api/matchup-status'}
+ENDPOINTS={'forecasts':'/api/status','odds':'/api/odds-status','personnel':'/api/personnel-status','weather':'/api/weather-status','quarterbacks':'/api/quarterback-status','matchup':'/api/matchup-status','participation':'/api/participation-status'}
 NFL_TEAMS=set('ARI ATL BAL BUF CAR CHI CIN CLE DAL DEN DET GB HOU IND JAX KC LA LAC LV MIA MIN NE NO NYG NYJ PHI PIT SEA SF TB TEN WAS'.split())
 
 def age(value,now):
@@ -24,6 +24,17 @@ def validate_health(kind,http_status,payload,now):
     if kind=='odds':
         if payload.get('maximumAgeHours')!=6 or not 0<=age(payload.get('fetchedAt'),now)<=6:
             raise ValueError('Odds acquisition is missing, stale or future-dated')
+    elif kind=='participation':
+        if payload.get('maximumAgeHours')!=30 or payload.get('collectionStatus')!='collected':
+            raise ValueError('Participation collection failed')
+        season=payload.get('season')
+        if type(season) is not int or season!=payload.get('expectedSeason') or not now.year-1<=season<=now.year:
+            raise ValueError('Participation season mismatch')
+        ages={key:age(payload.get(key),now) for key in ('checkedAt','retrievedAt','calculatedAt','personnelRetrievedAt')}
+        if not all(0<=value<30 for value in ages.values()) or not ages['checkedAt']>=ages['retrievedAt']>=ages['calculatedAt'] or ages['personnelRetrievedAt']<ages['calculatedAt']:
+            raise ValueError('Participation timestamps stale or inconsistent')
+        if not re.fullmatch('[a-f0-9]{64}',payload.get('sourceHash','')) or type(payload.get('rowCount')) is not int or payload['rowCount']<1:
+            raise ValueError('Participation source evidence missing')
     elif kind=='matchup':
         if payload.get('maximumAgeHours')!=30 or type(payload.get('season')) is not int or payload['season']!=payload.get('expectedSeason') or not now.year-1<=payload['season']<=now.year:
             raise ValueError('Matchup season or age policy invalid')
@@ -102,6 +113,7 @@ def health_evidence(kind, payload):
         'forecasts': ('generatedAt','modelVersion','sourceHash'),
         'odds': ('fetchedAt','maximumAgeHours'),
         'personnel': ('retrievedAt','assetUpdatedAt','sourceHash','rowCount','collectionStatus'),
+        'participation': ('retrievedAt','calculatedAt','personnelRetrievedAt','sourceHash','rowCount','collectionStatus'),
         'quarterbacks': ('retrievedAt','assetUpdatedAt','sourceHash','collectionStatus'),
         'weather': ('collectionStartedAt','generatedAt','eligibleGames','availableGames'),
         'matchup': ('season','week','gameType','cutoff','sourceObservedAt','expiresAt','sourceHash','scheduleHash','sampleStatus','gameCount'),

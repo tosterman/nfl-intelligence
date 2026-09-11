@@ -31,4 +31,10 @@ Before claiming monetization readiness, verify real publisher reporting, ads eli
 
 `/api/status` measures forecast/source freshness; `/api/odds-status` measures stored acquisition freshness. Neither proves full bookmaker coverage. The odds workflow checks authenticated collection and exact archive readback. Track operational failures independently from readership metrics. A green pipeline is not a model accuracy claim.
 
+The staged `/api/participation-status` route checks participation acquisition and
+its binding to the current report/artifact. It does not treat an empty earlier-week
+sample as a collection failure or claim player availability. Its independent
+production probe is wired for the next public release; see
+`reviews/participation-health.md`.
+
 References: [Web Analytics API](https://vercel.com/docs/analytics/web-analytics-api), [custom-event plan availability](https://vercel.com/docs/analytics/custom-events), [analytics privacy](https://vercel.com/docs/analytics/privacy-policy). Live evidence is in `reviews/analytics-ingestion.md`.
