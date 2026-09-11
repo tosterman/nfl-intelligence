@@ -1,0 +1,38 @@
+[
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_ARI_LAC",
+    "width": 320,
+    "osmAttributionVisible": true,
+    "correctNwsLink": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_MIA_LV",
+    "width": 320,
+    "osmAttributionVisible": true,
+    "correctNwsLink": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_ARI_LAC",
+    "width": 320,
+    "osmAttributionVisible": true,
+    "correctNwsLink": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_MIA_LV",
+    "width": 320,
+    "osmAttributionVisible": true,
+    "correctNwsLink": true,
+    "overflow": false,
+    "pageErrors": []
+  }
+]
