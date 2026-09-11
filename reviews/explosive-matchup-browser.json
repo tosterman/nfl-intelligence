@@ -1,0 +1,18 @@
+[
+  {
+    "browser": "chromium",
+    "width": 320,
+    "tables": 2,
+    "rates": 8,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "browser": "webkit",
+    "width": 320,
+    "tables": 2,
+    "rates": 8,
+    "overflow": false,
+    "pageErrors": []
+  }
+]

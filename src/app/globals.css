@@ -2075,3 +2075,11 @@ summary {
 .ratings-order { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 12px; }
 .ratings-order a { border: 1px solid var(--line); border-radius: 6px; padding: 12px 18px; }
 .ratings-order a[aria-current="page"] { background: var(--line); font-weight: 600; }
+.explosive-matchups { display: grid; gap: 24px; margin: 24px 0; }
+.explosive-pair h3 { font-size: 16px; margin-bottom: 12px; }
+.explosive-pair h3 span { font-weight: 400; opacity: .6; padding: 0 6px; }
+.explosive-pair .comparison { width: 100%; table-layout: fixed; }
+.explosive-pair .comparison th, .explosive-pair .comparison td { padding: 12px 6px; white-space: normal; overflow-wrap: anywhere; }
+.explosive-rate { display: grid; gap: 4px; }
+.explosive-rate strong { font-size: 20px; font-variant-numeric: tabular-nums; }
+.explosive-rate small { font-size: 11px; line-height: 1.5; }
