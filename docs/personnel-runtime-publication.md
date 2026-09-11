@@ -84,3 +84,21 @@ roles from the retained raw source at the original acquisition time. It still
 does not prove fresh acquisition, failed-collection publication, schedule/edition
 binding rejection, bounded recurring restore, storage publication or runtime
 behavior. Those remain required implementation checks.
+
+At 18:16 UTC the isolated probe passed with the new `personnel_schedule.py`
+gate: the edition's declared source digest matched the schedule bytes and all
+272 game contexts matched. Four regressions reject changed bytes, altered
+contexts and missing/duplicate scope. The numerical engine was not modified.
+
+`personnel_transition.py` now replays just the explicitly selected previous and
+current injury captures. Four regressions verify agreement with the existing
+retained change presentation without an archive scan, an initial unknown
+comparison, and rejection of invalid/missing/reversed/unchanged captures. The
+runtime publisher must supply the accepted predecessor and retain previous
+transition references; this helper alone does not prove archive continuity.
+Independent review found no material helper defect and reran the eight new
+tests. The publisher must bind the current capture to its selected personnel
+snapshot, bind the predecessor to the accepted publication, and permit a null
+predecessor only for an explicit initial/season baseline. Failed collections
+retain the existing transition; identical captures are not a new observation.
+All 28 personnel Python tests passed locally at this checkpoint.

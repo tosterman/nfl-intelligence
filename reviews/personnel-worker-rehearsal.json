@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-11T18:15:12.099372+00:00",
+  "checkedAt": "2026-09-11T18:16:55.271005+00:00",
   "scope": "Offline isolated reconstruction from retained sources; no collection or publication",
   "steps": [
     "personnel_changes.py",
@@ -10,8 +10,9 @@
   ],
   "inputsUnchanged": true,
   "quarterbackRolesReplayed": true,
-  "inputFiles": 322,
-  "inputBytes": 16350056,
+  "scheduleContextsVerified": 272,
+  "inputFiles": 323,
+  "inputBytes": 16351969,
   "outputs": {
     "personnel-changes.json": {
       "bytes": 247,
@@ -19,13 +20,13 @@
       "records": 0
     },
     "player-usage.json": {
-      "bytes": 420251,
-      "sha256": "3b532d9810637a0c080598e983fa75f4773c0d327e44a7459086526fb073040e",
+      "bytes": 420240,
+      "sha256": "4264de66155f9d0a590db8113e8fde462546e3dd7589630ed01f9f501e0656e3",
       "records": 139
     },
     "season-participation.json": {
       "bytes": 107282,
-      "sha256": "42267232966614006e76a967b9efd7843048a71276e567301caf9c24c50b3bdd",
+      "sha256": "1c4b345223298afc4461bb7e3df311f2bf0a0cc8cdf6eb1b10327040f795b1f5",
       "records": 139
     }
   },
@@ -1122,6 +1123,10 @@
       "bytes": 5222,
       "sha256": "b43313930525911a6839c62d88d6c784a2a14735e6ed0245af1938f41cf47470"
     },
+    "scripts/personnel_schedule.py": {
+      "bytes": 1651,
+      "sha256": "aeb076e92b56af94c006008baf3dc3bf26ae1f5db6d4d14fb1ac66ce9a82f665"
+    },
     "scripts/plan_odds_cadence.py": {
       "bytes": 3446,
       "sha256": "4f89271d10d91b90edb853b089247cb12e24ae8ce7bf8261710bb7cbf540f0e4"
@@ -1203,8 +1208,8 @@
       "sha256": "f2ed6b3aeeda9bcfd7d33a909033b8dfeb30de700bbd833a5c408b80bc2623af"
     },
     "scripts/rehearse_personnel_worker.py": {
-      "bytes": 3965,
-      "sha256": "542e6c35daee297fef3018f5e694dacd20de6fad5fa5fc2bd747de140fda93ef"
+      "bytes": 4227,
+      "sha256": "14753a1c9f18a6a7131a003ad602aa59da09ddb692ef102e10dbbbf2ddcd01e3"
     },
     "scripts/replay_forecast.py": {
       "bytes": 7509,

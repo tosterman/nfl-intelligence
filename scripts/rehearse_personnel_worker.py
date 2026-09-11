@@ -8,6 +8,7 @@ import tempfile
 from audit_personnel_identity import reconstruct
 from refresh_quarterbacks import normalize
 from depth_chart import instant
+from personnel_schedule import verify_schedule
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -39,6 +40,8 @@ def main():
     inputs = {path.relative_to(worker).as_posix(): {
         'bytes': path.stat().st_size, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()
     } for path in files}
+    contexts = verify_schedule(json.loads((worker / 'data/site.json').read_bytes()),
+                               (worker / 'data/games.csv').read_bytes())
     quarterback = json.loads((worker / 'data/quarterbacks.json').read_bytes())
     raw = reconstruct(worker / 'data/quarterback-sources', quarterback['sourceHash'])
     if normalize(raw, set(quarterback['teams']), instant(quarterback['retrievedAt'])) != quarterback['teams']:
@@ -66,6 +69,7 @@ def main():
               'scope': 'Offline isolated reconstruction from retained sources; no collection or publication',
               'steps': completed, 'inputsUnchanged': unchanged,
               'quarterbackRolesReplayed': True,
+              'scheduleContextsVerified': len(contexts),
               'inputFiles': len(inputs), 'inputBytes': sum(v['bytes'] for v in inputs.values()),
               'outputs': outputs, 'inputs': inputs}
     target = ROOT / 'reviews/personnel-worker-rehearsal.json'
