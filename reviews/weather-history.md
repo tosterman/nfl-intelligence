@@ -30,3 +30,6 @@ were corrected against the retained evidence. Neither was a product defect.
 The 390px expanded Dallas–New York history was visually inspected. This is
 bounded local evidence, not a human comprehension study or a public deployment.
 The engine, forecast snapshots and numerical predictions were not modified.
+Repository JSON fingerprints normalize CRLF to Git's LF line endings for
+Windows/Linux portability; raw upstream response fingerprints remain exact.
+A fourth Python test checks this normalization and rejects content changes.

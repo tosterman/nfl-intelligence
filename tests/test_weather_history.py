@@ -8,10 +8,14 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
-from weather_history import build, verify_record
+from weather_history import build, verify_record, repository_json_hash
 
 
 class WeatherHistory(unittest.TestCase):
+    def test_repository_fingerprints_match_windows_and_linux_checkouts(self):
+        self.assertEqual(repository_json_hash(b'{\n  "value": 1\n}\n'), repository_json_hash(b'{\r\n  "value": 1\r\n}\r\n'))
+        self.assertNotEqual(repository_json_hash(b'{"value": 1}\n'), repository_json_hash(b'{"value": 2}\n'))
+
     def test_complete_retained_replay(self):
         report = build(ROOT)
         self.assertEqual(report, json.loads((ROOT / 'data/weather-history.json').read_text()))

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "ledgerHash": "3e9d290ac1713ea09e3d75b5012750847667059ab4cb321e6fa8d6d5981eb72a",
-  "weatherHash": "a4d4466481770487b6f6ef9ca07011a52980fac7d8c332a49ace386cf6169ba3",
+  "ledgerHash": "3c3c9ff890c29435530e577b189946cdc176c4ba208962bde7e8c693017ab4ab",
+  "weatherHash": "3207624226a832704880e45bd50a9d5d8ae85ef70db87f2a1c7bc90f1ef6855d",
   "records": [
     {
       "status": "available",

@@ -17,6 +17,12 @@ def digest(payload):
     return hashlib.sha256(payload).hexdigest()
 
 
+def repository_json_hash(payload):
+    # Git stores these text artifacts with LF; Windows checkouts may use CRLF.
+    # Raw upstream NWS response hashes are never normalized.
+    return digest(payload.replace(b'\r\n', b'\n'))
+
+
 def source(root, identity):
     if not isinstance(identity, str) or len(identity) != 64 or any(c not in '0123456789abcdef' for c in identity):
         raise ValueError('Invalid weather source identity')
@@ -58,8 +64,8 @@ def build(root=ROOT):
     rows = [verify_record(record, root) for record in json.loads(payload)]
     if len({r['hash'] for r in rows}) != len(rows):
         raise ValueError('Duplicate weather observations')
-    return {'schemaVersion': 1, 'ledgerHash': digest(payload),
-            'weatherHash': digest((root / 'data/weather.json').read_bytes()), 'records': rows}
+    return {'schemaVersion': 1, 'ledgerHash': repository_json_hash(payload),
+            'weatherHash': repository_json_hash((root / 'data/weather.json').read_bytes()), 'records': rows}
 
 
 def main():
