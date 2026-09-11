@@ -848,6 +848,20 @@
     "failedTest": "preserving the same legacy ledger cannot justify an older current snapshot",
     "reason": "Synthetic one-minute advancement preceded real wall time after fresh acquisition; rejected by future-time guard before rollback guard.",
     "benchmarkStep": "success",
-    "published": false
+    "published": false,
+    "rerun": {
+      "runId": 34644690564,
+      "conclusion": "failure",
+      "stage": "build-typecheck",
+      "published": false,
+      "reason": "Heterogeneous JSON change dictionaries inferred absent keys as optional undefined; static fixture assignment failed TypeScript.",
+      "fixValidation": {
+        "actualRetainedJsonTypecheck": "passed",
+        "heterogeneousFixtureTypecheck": "passed",
+        "applicationTestsPassed": 257,
+        "fullTypecheck": "passed",
+        "independentReview": "no regression found"
+      }
+    }
   }
 }
