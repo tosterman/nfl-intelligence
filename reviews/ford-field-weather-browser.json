@@ -1,0 +1,20 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "temperatureVisible": true,
+    "areaLimitationVisible": true,
+    "correctNwsLink": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "temperatureVisible": true,
+    "areaLimitationVisible": true,
+    "correctNwsLink": true,
+    "overflow": false,
+    "pageErrors": []
+  }
+]

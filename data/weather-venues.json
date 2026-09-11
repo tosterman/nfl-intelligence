@@ -440,5 +440,46 @@
     "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
     "geocodeMatches": [],
     "status": "unavailable"
+  },
+  "Ford Field": {
+    "address": "2000 Brush Street, Detroit, MI 48226",
+    "addressSource": "https://www.fordfield.com/stadium-info/about-ford-field",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=2000+Brush+Street%2C+Detroit%2C+MI+48226&benchmark=Public_AR_Current&format=json",
+    "geocodeHash": "213a296c22c863feb93ff3a2b20ef2ef3b7b3eafc68597d6dc22cb0729e66ebc",
+    "retrievedAt": "2026-09-11T00:28:17.241323+00:00",
+    "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+    "geocodeBenchmark": "Public_AR_Current",
+    "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+    "geocodeMatches": [
+      {
+        "tigerLine": {
+          "side": "R",
+          "tigerLineId": "647863625"
+        },
+        "coordinates": {
+          "x": -83.046627958845,
+          "y": 42.338894579179
+        },
+        "addressComponents": {
+          "zip": "48226",
+          "streetName": "BRUSH",
+          "preType": "",
+          "city": "DETROIT",
+          "preDirection": "",
+          "suffixDirection": "",
+          "fromAddress": "2000",
+          "state": "MI",
+          "suffixType": "ST",
+          "toAddress": "2298",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "2000 BRUSH ST, DETROIT, MI, 48226"
+      }
+    ],
+    "status": "confirmed-address-geocode",
+    "latitude": 42.338894579179,
+    "longitude": -83.046627958845,
+    "matchedAddress": "2000 BRUSH ST, DETROIT, MI, 48226"
   }
 }
