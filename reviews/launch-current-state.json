@@ -1,0 +1,99 @@
+{
+  "checkedAt": "2026-09-11T19:20:35.771Z",
+  "checks": [
+    {
+      "url": "https://nfl-intelligence-one.vercel.app/api/status",
+      "status": 200,
+      "body": {
+        "status": "ok",
+        "checks": [
+          {
+            "name": "Model edition",
+            "retrievedAt": "2026-09-10T20:09:04.084122+00:00",
+            "ageHours": 23.2,
+            "status": "ok"
+          },
+          {
+            "name": "Schedule and results",
+            "retrievedAt": "2026-09-10T20:09:00.693703+00:00",
+            "ageHours": 23.2,
+            "status": "ok"
+          },
+          {
+            "name": "2025 efficiency source",
+            "retrievedAt": "2026-09-10T20:09:01.821537+00:00",
+            "ageHours": 23.2,
+            "status": "ok"
+          },
+          {
+            "name": "2026 efficiency source",
+            "retrievedAt": "2026-09-10T20:09:01.803621+00:00",
+            "ageHours": 23.2,
+            "status": "ok"
+          }
+        ],
+        "season": 2026,
+        "generatedAt": "2026-09-10T20:09:04.084122+00:00",
+        "ageHours": 23.2,
+        "modelVersion": "score-efficiency-v1.2.0",
+        "sourceHash": "75b777ae632bb3a1d65d123cc8e1b945867085833057caf2c574463653f5008d"
+      }
+    },
+    {
+      "url": "http://localhost:3000/api/status",
+      "status": 200,
+      "body": {
+        "status": "ok",
+        "checks": [
+          {
+            "name": "Model edition",
+            "retrievedAt": "2026-09-11T16:17:34.782950+00:00",
+            "ageHours": 3.1,
+            "status": "ok"
+          },
+          {
+            "name": "Schedule and results",
+            "retrievedAt": "2026-09-11T16:17:28.200753+00:00",
+            "ageHours": 3.1,
+            "status": "ok"
+          },
+          {
+            "name": "2025 efficiency source",
+            "retrievedAt": "2026-09-11T16:17:28.884434+00:00",
+            "ageHours": 3.1,
+            "status": "ok"
+          },
+          {
+            "name": "2026 efficiency source",
+            "retrievedAt": "2026-09-11T16:17:28.879027+00:00",
+            "ageHours": 3.1,
+            "status": "ok"
+          }
+        ],
+        "season": 2026,
+        "generatedAt": "2026-09-11T16:17:34.782950+00:00",
+        "ageHours": 3.1,
+        "modelVersion": "score-efficiency-v1.2.0",
+        "sourceHash": "664dd4abffd99b29efc5cf875a800c25631c190cb4e4522fb5354e61781369bf"
+      }
+    },
+    {
+      "url": "http://localhost:3000/api/personnel-status",
+      "status": 200,
+      "body": {
+        "status": "ok",
+        "season": 2026,
+        "expectedSeason": 2026,
+        "collectionStatus": "ok",
+        "checkedAt": "2026-09-11T19:11:02.290342+00:00",
+        "retrievedAt": "2026-09-11T19:11:02.944464+00:00",
+        "assetUpdatedAt": "2026-09-11T12:12:00Z",
+        "sourceHash": "cd7338473dd852d02c6986663addb31431609946fa8756d0460bf2e98d3501a9",
+        "rowCount": 167,
+        "maximumAgeHours": 30,
+        "scope": "Collection and file freshness only; individual report dates and complete team coverage are not verified.",
+        "publicationHash": "99096b70eaf7bd295b9dbb180efd06b421bd69cb2e92449f5d9752d065f92b28"
+      }
+    }
+  ]
+}
