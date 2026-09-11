@@ -81,7 +81,10 @@ def build(root=ROOT, now=None):
             'sourceSeason': source['season'], 'sourceHash': source['sourceHash'], 'sourceRetrievedAt': source['retrievedAt'],
             'sourceUrl': source['sourceUrl'], 'collectionStatus': 'current' if current_capture else 'retained',
             'inputHashes': {'personnel': digest('data/personnel.json'), 'schedule': digest('data/games.csv'),
-                'identity': digest('reviews/personnel-identity-audit.json'), 'registry': registry_meta['sha256']},
+                # This repository-generated JSON has LF bytes in Git, including
+                # when a Windows checkout supplies CRLF. Raw feed hashes remain exact.
+                'identity': hashlib.sha256((root / 'reviews/personnel-identity-audit.json').read_bytes().replace(b'\r\n', b'\n')).hexdigest(),
+                'registry': registry_meta['sha256']},
             'records': records,
             'meaning': 'Earlier-week observed appearances; team partitions share the same last-eight sample. No availability, player-value or forecast adjustment.'}
 

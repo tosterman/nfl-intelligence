@@ -41,6 +41,14 @@ class SeasonParticipationBinding(unittest.TestCase):
                 'inputHashes':{name:hashlib.sha256((root / f'data/{name}.json').read_bytes()).hexdigest() for name in ('personnel','quarterbacks')},
                 'codeHash':hashlib.sha256((root / 'scripts/audit_personnel_identity.py').read_bytes()).hexdigest()})
             report = build(root)
+            audit_path = root / 'reviews/personnel-identity-audit.json'
+            audit_bytes = audit_path.read_bytes()
+            audit_path.write_bytes(json.dumps(json.loads(audit_bytes), indent=2).encode() + b'\n')
+            lf_report = build(root)
+            audit_path.write_bytes(audit_path.read_bytes().replace(b'\n', b'\r\n'))
+            crlf_report = build(root)
+            self.assertEqual(lf_report['inputHashes'], crlf_report['inputHashes'])
+            self.assertEqual(lf_report['records'], crlf_report['records'])
             self.assertEqual(len(report['records']), 2)
             self.assertEqual(sum(r['identityStatus'] == 'matched' for r in report['records']), 1)
             self.assertTrue(all(r['usage'] is None or r['usage']['overall']['status'] == 'unavailable' for r in report['records']))
