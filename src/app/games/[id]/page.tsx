@@ -1,3 +1,4 @@
+import { ModelBrief } from '@/components/model-brief';
 import { freshnessInputs } from "@/lib/freshness";
 import { getOdds } from "@/lib/odds-server";
 import { MarketPanel } from "@/components/market-panel";
@@ -218,19 +219,7 @@ export default async function GamePage({
                   {g.status === "final" ? "was" : "is"}{" "}
                   {Math.abs(p.homeMargin).toFixed(1)} points.
                 </p>
-                <p>
-                  {p.contributions
-                    .filter((c) => Math.abs(c.points) > 0.05)
-                    .sort((a, b) => Math.abs(b.points) - Math.abs(a.points))
-                    .slice(0, 3)
-                    .map(
-                      (c) =>
-                        `${c.name} contributes ${Math.abs(c.points).toFixed(1)} points toward ${teams[c.points > 0 ? g.home : g.away].name}.`,
-                    )
-                    .join(" ")}{" "}
-                  These are model contributions from prior scoring and
-                  efficiency, not player-specific matchup findings.
-                </p>
+                <ModelBrief prediction={p} home={teams[g.home].name} away={teams[g.away].name} />
                 <div className="notice">
                   <strong>Room for a different result</strong>
                   <p>The middle 80% of modeled margins span {marginRange(p.marginInterval80, teams[g.home].name, teams[g.away].name) ?? "an unavailable range"}.</p>
@@ -245,7 +234,7 @@ export default async function GamePage({
               </section>
               <WeatherContext game={g} />
               <section className="panel">
-                <h2>What moves the projection</h2>
+                <h2 id="model-contributions" tabIndex={-1}>What moves the projection</h2>
                 <p className="fine">
                   Points toward {teams[g.away].name} ← → Points toward{" "}
                   {teams[g.home].name}
