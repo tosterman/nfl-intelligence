@@ -2,6 +2,7 @@ import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
 import type {WeatherObjectStore} from './weather-publication';
 import type {WeatherHistory} from './weather-history';
+import {decodeWeatherBundle} from './weather-bundle';
 
 type Reader=Pick<WeatherObjectStore,'read'>;
 type JsonObject=Record<string,unknown>;
@@ -33,11 +34,13 @@ export async function readWeatherPartitionRoot(store:Reader,ref:WeatherObjectRef
  return {generatedAt:root.generatedAt,snapshot:reference(root.snapshot),index:reference(root.index)};
 }
 
-export async function readWeatherPartitionSnapshot(store:Reader,root:WeatherPartitionRoot){
+export async function readWeatherPartitionSnapshot(store:Reader,root:WeatherPartitionRoot,now=Date.now()){
  const snapshot=await readJson(store,root.snapshot,'weather-snapshot');
- const weather=object(snapshot.weather),contexts=object(snapshot.contexts),games=object(weather.games);
- if(!hash(snapshot.venueRegistryHash)||weather.generatedAt!==root.generatedAt||!time(weather.collectionStartedAt)||Date.parse(weather.collectionStartedAt)>Date.parse(root.generatedAt)||Object.keys(games).length>1000||!isDeepStrictEqual(Object.keys(games).sort(),Object.keys(contexts).sort()))throw Error('Invalid weather snapshot scope or time');
- return {weather,contexts,venueRegistryHash:snapshot.venueRegistryHash};
+ if(typeof snapshot.bundleJson!=='string')throw Error('Invalid weather snapshot transport');
+ const bundle=decodeWeatherBundle(Buffer.from(snapshot.bundleJson),now);
+ if(bundle.weather.generatedAt!==root.generatedAt)throw Error('Weather snapshot publication time differs');
+ // This contains current anchors only. Load a game partition for historical comparisons.
+ return bundle;
 }
 
 export async function readWeatherPartitionIndex(store:Reader,root:WeatherPartitionRoot){

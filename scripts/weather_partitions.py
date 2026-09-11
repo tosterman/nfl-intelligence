@@ -4,7 +4,7 @@ import hashlib
 import json
 from collections import defaultdict
 from pathlib import Path
-from weather_bundle import ROOT, build, encode
+from weather_bundle import ROOT, build, encode, fingerprint, transport
 
 MAX_JSON_BYTES = 2_000_000
 MAX_SOURCE_BYTES = 2_000_000
@@ -12,6 +12,26 @@ MAX_SOURCE_BYTES = 2_000_000
 
 def digest(raw):
     return hashlib.sha256(raw).hexdigest()
+
+
+def snapshot_transport(verified, ledger):
+    """Reuse the verified bundle codec with only current observation anchors."""
+    retained = {row['hash']: row for row in ledger}
+    anchors = {row['hash']: row for row in verified['history']['records']}
+    identities = sorted(fingerprint(record) for record in verified['weather']['games'].values()
+                        if record['status'] == 'available')
+    current = [retained[identity] for identity in identities]
+    payload = {'schemaVersion': 1, 'weather': verified['weather'], 'contexts': verified['contexts'],
+               'venueRegistryHash': verified['venueRegistryHash'],
+               'history': {'schemaVersion': 1, 'records': [anchors[identity] for identity in identities]}}
+    manifest = {'schemaVersion': 1, 'validatorVersion': 'weather-bundle-v1',
+                'collectionStartedAt': verified['weather']['collectionStartedAt'],
+                'generatedAt': verified['weather']['generatedAt'],
+                'payloadSha256': fingerprint(payload), 'payloadBytes': len(encode(payload)),
+                'venueRegistryHash': verified['venueRegistryHash'],
+                'sourceHashes': sorted({row[key] for row in current for key in ('pointHash', 'sourceHash')}),
+                'ledgerSha256': fingerprint(current)}
+    return transport({'manifest': manifest, 'payload': payload}).decode()
 
 
 def build_partitions(root=ROOT):
@@ -46,8 +66,7 @@ def build_partitions(root=ROOT):
                      'sources': sources}
         games[game] = retain(encode(partition))
     snapshot = {'schemaVersion': 2, 'kind': 'weather-snapshot',
-                'weather': verified['weather'], 'contexts': verified['contexts'],
-                'venueRegistryHash': verified['venueRegistryHash']}
+                'bundleJson': snapshot_transport(verified, ledger)}
     publication = {'schemaVersion': 2, 'kind': 'weather-publication',
                    'generatedAt': verified['weather']['generatedAt'],
                    'snapshot': retain(encode(snapshot)),
@@ -86,9 +105,8 @@ def verify_migration(root, result):
     if publication.get('generatedAt') != verified['weather']['generatedAt']:
         raise ValueError('Migration acquisition time differs')
     snapshot = read(publication['snapshot'], 'weather-snapshot')
-    for key in ('weather', 'contexts', 'venueRegistryHash'):
-        if encode(snapshot.get(key)) != encode(verified[key]):
-            raise ValueError('Migration snapshot differs')
+    if snapshot.get('bundleJson') != snapshot_transport(verified, ledger):
+        raise ValueError('Migration snapshot differs')
     index = read(publication['index'], 'weather-index')
     if set(index.get('games', {})) != set(grouped):
         raise ValueError('Migration game index differs')

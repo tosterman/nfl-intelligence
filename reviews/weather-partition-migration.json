@@ -5,13 +5,13 @@
   "observations": 137,
   "publication": {
     "bytes": 300,
-    "sha256": "617f1279d761e500974108197c481b7eb5cd7a303e320722e180e41bce612730"
+    "sha256": "cfc430a9830f48dce53fac2d3dc8741598f27e40a3b65c9b7a25d94523c9ccab"
   },
   "reachableObjects": 143,
-  "snapshotBytes": 124123,
+  "snapshotBytes": 180577,
   "sources": 126,
   "storageWrites": false,
-  "checkedAt": "2026-09-11T17:43:32.549544+00:00",
-  "scope": "Offline migration against replayed v1 archive; no runtime cutover or public availability claim",
-  "tests": "4 migration tests passed; independent review found no material migration blocker"
+  "checkedAt": "2026-09-11T17:47:42.847848+00:00",
+  "scope": "Offline migration with current-only anchored snapshot; no runtime cutover or public availability claim",
+  "tests": "4 Python migration tests and 5 scoped reader tests passed; existing v1 bundle regression also passed"
 }

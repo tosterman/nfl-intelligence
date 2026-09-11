@@ -87,3 +87,13 @@ missing sources and mismatched compact values. Type checking passes. The reader
 checks transport and ledger/history consistency; approved venue binding and
 current snapshot semantics still need integration before any UI or live pointer
 uses this format. It intentionally does not fetch raw NWS source bodies.
+
+Current snapshot semantics now reuse the existing verified bundle codec. The
+v2 snapshot embeds exact Python transport bytes containing current records,
+their compact retained anchors, and current source references only. All full
+histories stay in game partitions. Its size is now 180,577 bytes, replacing the
+earlier transport-only 124,123-byte snapshot. Five scoped-reader tests pass,
+including removed anchors, changed neutral-site context, invalid capture times,
+and approved-venue binding. The existing v1 decoder regression and four Python
+migration tests also pass. Type checking passes. Publication continuity and
+live reader/worker integration remain pending.
