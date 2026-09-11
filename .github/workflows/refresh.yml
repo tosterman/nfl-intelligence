@@ -32,6 +32,8 @@ jobs:
       - run: npm run data:refresh
       - name: Verify retained forecast input bytes
         run: python scripts/verify_forecast_inputs.py
+      - name: Preserve exact edition input bundle
+        run: python scripts/forecast_input_archive.py
       - name: Numerically replay newly generated forecasts
         run: python scripts/replay_forecast.py --new-snapshots > release-recovery/numerical-replay.json
       - run: python scripts/refresh_weather.py
@@ -72,6 +74,7 @@ jobs:
             data/source.json
             data/games.csv
             data/raw/stats_team_week_*.csv
+            data/forecast-input-archive/
             data/publications.json
             data/weather.json
             data/weather-ledger.json
