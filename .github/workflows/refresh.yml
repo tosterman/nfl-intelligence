@@ -29,11 +29,15 @@ jobs:
           python-version: '3.13'
       - run: npm ci
       - run: pip install -r requirements.txt
+      - name: Remember exact prior edition for source comparison
+        run: python scripts/refresh_input_comparison.py remember
       - run: npm run data:refresh
       - name: Verify retained forecast input bytes
         run: python scripts/verify_forecast_inputs.py
       - name: Preserve exact edition input bundle
         run: python scripts/forecast_input_archive.py
+      - name: Compare retained source records across refresh
+        run: python scripts/refresh_input_comparison.py finish
       - name: Numerically replay newly generated forecasts
         run: python scripts/replay_forecast.py --new-snapshots > release-recovery/numerical-replay.json
       - run: python scripts/refresh_weather.py
@@ -92,6 +96,8 @@ jobs:
             release-recovery/deployment.json
             release-recovery/git-publication.json
             release-recovery/forecast-inputs.json
+            release-recovery/previous-input-edition.json
+            release-recovery/input-comparison.json
             release-recovery/numerical-replay.json
       - name: Commit forecast archive and publication receipt
         run: |
