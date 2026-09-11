@@ -19,9 +19,8 @@ export function PlayerUsage({
     <>
       {hasUsageIdentityConflict(artifact, snapshot, player) && (
         <p className="fine">
-          Source identity conflict: the reported player identifier does not
-          match the same-name entry in the depth-chart cross-check. This
-          report’s identity remains unresolved.
+          Prior-season identity unresolved: historical participation is withheld.
+          The reported identifier differs from the same-name depth-chart entry.
         </p>
       )}
       <details className="player-usage">

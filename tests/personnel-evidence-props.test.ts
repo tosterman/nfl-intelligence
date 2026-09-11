@@ -83,3 +83,15 @@ test('participation collection failure stays visible even when reports have expi
   assert.match(html, /Latest participation collection failed/);
   assert.match(html, /original collection date/);
 });
+
+test('withheld calculations explain missing participation without inventing a collection outage',()=>{
+  const {snapshot}=fixture();
+  const game={id:'2026_01_ATL_PIT',season:2026,type:'REG',week:1,home:'PIT',away:'ATL',
+    kickoff:new Date(Date.now()+3600000).toISOString(),status:'scheduled'} as Game;
+  const html=renderToStaticMarkup(createElement(PersonnelPanel,{game,evidence:{...staticPersonnelEvidence,
+    snapshot,collection:{status:'ok'},quarterbackCollection:{status:'ok'},participationCollection:{status:'collected'},
+    current:null,historical:null}}));
+  assert.match(html,/Participation details are unavailable for this report set/);
+  assert.match(html,/Injected player/);
+  assert.doesNotMatch(html,/Latest participation collection failed/);
+});

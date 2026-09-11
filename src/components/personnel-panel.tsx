@@ -50,6 +50,12 @@ export function PersonnelPanel({ game, evidence }: { game: Game; evidence: Perso
             {time(snapshot.assetUpdatedAt)} ET · Acquired{" "}
             {date(snapshot.retrievedAt)} at {time(snapshot.retrievedAt)} ET
           </p>
+          {selected.players.length > 0 && current === null && historical === null && (
+            <p role="status">
+              Participation details are unavailable for this report set. Player
+              reports below retain their original source dates.
+            </p>
+          )}
           <PersonnelChangesPanel game={game} snapshot={snapshot} history={history} />
           <div className="personnel-teams">
             {[game.away, game.home].map((team) => {
