@@ -46,6 +46,16 @@ scoring and efficiency intercepts, scoring offense/defense, efficiency venue and
 fourteen efficiency sum terms, with an explicit 0.001 rounding reconciliation.
 These are algebraic contributions, not estimates of causal football effects.
 
-Immutable explanation retention, input-manifest linkage, release integration
-and user-facing display remain unfinished. This review output is not imported
-by the app and does not change existing forecasts.
+`scripts/retain_total_explanations.py` now restores the exact edition bundle
+before building explanations. It links the result to input manifest
+`b662fbbc53d786bb1994a1a51838943a2a6426226654363f46356acd10cb27ff`, archives
+the resulting bytes under their SHA-256, and only then atomically replaces the
+current explanation file. The initial retained artifact is
+`5ef55c0871a1ac6744f7a47796e3c86f2aa29b01baea6c561f12fdd9067ed83f` with 15
+records. Repeating capture on this runtime is identical; a simulated failed
+replay leaves the accepted artifact untouched. The test uses a temporary copy
+of the retained input bundle and does not mutate the working app's data.
+
+Release integration and user-facing display remain unfinished. The new artifact
+is not yet imported by the app and does not change existing forecasts. Exact
+repeatability on another numerical runtime has not been established here.
