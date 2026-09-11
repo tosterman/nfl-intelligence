@@ -29,11 +29,18 @@ older snapshot artifacts must not be silently overwritten.
 
 ## Remaining integration
 
-1. Acquire and archive applicable current/prior-season sources with validated
-   source metadata; preserve explicit failed or incomplete current-season states.
-2. Persist content-addressed weekly artifacts and source manifests; retain their
-   first published identities separately from subsequent corrected vintages.
-3. Wire the shared refresh into the staged workflow and deployment allowlist.
+1. Current-season acquisition and immutable snapshots are implemented in
+   `refresh_weekly_matchup.py`. Provider asset URL, size, SHA-256 and update time
+   are checked; files older than 30 hours fail. Collection completion time is
+   retained separately from its start. A local real 2026 capture succeeded with
+   a Week 1 `no-eligible-games` result. Prior-season rotation remains to be built;
+   the existing dated 2025 panels still use their pinned archive.
+2. Content-addressed weekly artifacts and manifests are retained. First public
+   publication identities remain separate work; local retention proves no public
+   pregame availability.
+3. The shared refresh, recovery artifact paths, Git publication paths and runtime
+   allowlist are wired in the development branch. The production refresh remains
+   disabled pending the existing release recovery; no hosted weekly run is claimed.
 4. Update both panels to show clearly separated prior/current-season samples,
    game counts, cutoffs and source observation times. Missing current data must
    leave dated historical evidence available without presenting it as current.
@@ -52,3 +59,12 @@ The pre-terminal-check and corrected post-terminal-check results share the same
 artifact digests at all three boundaries (16, 135 and 256 eligible games). The
 independent review is scoped to the builder, not the
 unimplemented refresh or UI integration.
+
+Acquisition has four additional tests: immutable repeat capture/corrupt existing
+object rejection; bad digest/stale/future metadata rejection; and failed refresh
+preserving earlier archives while replacing current state with unavailable; and
+reproducing the current artifact from its retained manifest and source bytes.
+An independent acquisition review found no material defect. UI integration is
+still pending and must validate scope and source freshness before display.
+The full Python suite passed 295 tests before the final artifact-replay test was
+added; all four targeted acquisition tests then passed.
