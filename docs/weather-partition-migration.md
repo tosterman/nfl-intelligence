@@ -180,3 +180,14 @@ actual scheduled run remain to be observed.
 Hosted verification 34630872623 passed for `247dd19`, covering the prior complete
 reader/migration checkpoint. The scoped-worker changes above are subsequent
 local work and require their own hosted verification.
+
+The first real scoped v2 worker publication succeeded on September 11 at
+18:06 UTC. It restored all 137 prior observations, retained 151 observations
+after collection, uploaded 33 objects and reused 126. The new publication is
+`aec388f6440e093d9f144d35ea596b1851bc32f7ed1ec5085a5582b437d964f7`.
+Local health initially returned the prior cached version, then returned this
+exact publication with 14/14 eligible games after 15 seconds. No site rebuild
+was performed. Evidence: `reviews/weather-v2-worker-publication.json` and
+`reviews/weather-v2-worker-local-readback.json`. Public deployment, exact public
+readback and an actual scheduled run remain unverified; keep the workflow gate
+disabled until those rollout prerequisites are met.

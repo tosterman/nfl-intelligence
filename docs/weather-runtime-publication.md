@@ -95,3 +95,12 @@ model edition remained byte-identical. No storage publication was attempted in
 this rehearsal. See `reviews/weather-collection-worker.json`. Fresh workers need
 both the restored weather archive and the committed `weather-location-sources`
 directory; the normal GitHub checkout supplies the latter.
+
+The active local storage implementation has since moved to per-game v2 history
+partitions; see `docs/weather-partition-migration.md`. The legacy pointer is
+frozen and must remain so. The gated workflow now runs `collect_weather_v2.ts`,
+which restores only upcoming games and preserves untouched game references.
+Its first real publication at 18:06 UTC retained 151 observations, and localhost
+read back the exact new version with 14/14 coverage without rebuilding. This
+confirms the local update path; public rollout and scheduled execution are still
+pending. Do not activate the workflow based on local evidence alone.

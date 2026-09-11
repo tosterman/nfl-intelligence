@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-09-11T18:06:14.427Z",
+  "mode": "published",
+  "restored": {
+    "publication": "cfc430a9830f48dce53fac2d3dc8741598f27e40a3b65c9b7a25d94523c9ccab",
+    "restoredGames": 14,
+    "observations": 137,
+    "sources": 126
+  },
+  "generatedAt": "2026-09-11T18:05:54.258885+00:00",
+  "manifestHash": "aec388f6440e093d9f144d35ea596b1851bc32f7ed1ec5085a5582b437d964f7",
+  "observations": 151,
+  "games": 14,
+  "sources": 142,
+  "reachableObjects": 159,
+  "snapshotBytes": 180579,
+  "indexBytes": 1587,
+  "largestPartitionBytes": 65728,
+  "result": {
+    "publication": {
+      "sha256": "aec388f6440e093d9f144d35ea596b1851bc32f7ed1ec5085a5582b437d964f7",
+      "bytes": 300
+    },
+    "generatedAt": "2026-09-11T18:05:54.258885+00:00",
+    "uploaded": 33,
+    "reused": 126
+  },
+  "scope": "Scoped collection and storage publication; public website readback is separate"
+}
