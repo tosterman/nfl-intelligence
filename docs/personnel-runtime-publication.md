@@ -191,3 +191,21 @@ Those publication and reader steps remain unfinished.
 The follow-up independent review confirmed the audit-binding fix and reran all
 six assembly tests. Hosted run 34633367418 passed on `fae7533`, covering the
 preceding fresh-collection and corrected-fixture checkpoint; assembly is newer.
+
+## Reader validation
+
+The TypeScript presentation decoder verifies the exact object hash/size, schema,
+timestamps, game contexts, collection states, report scope, safe quarterback
+source URL and report-change structure before a component receives the object.
+It rejects duplicate player scope even when names differ. The game selector
+requires every declared context field to match the page's game. Derived usage
+must bind to the selected report snapshot and contain the same player identities;
+its nested values still pass through the existing fail-closed usage selectors.
+Reader acceptance alone does not prove raw-source or numerical replay.
+
+Five decoder tests and type checking pass. Independent review reran the tests
+and found no material rendering blocker. The actual isolated 505,796-byte Python
+candidate decoded successfully with 167 reports and 272 contexts; evidence is in
+`reviews/personnel-reader-candidate.json`. This decoder is not yet wired to the
+live page. Storage transaction, archive retention and runtime health integration
+remain required before replacing the static adapter.

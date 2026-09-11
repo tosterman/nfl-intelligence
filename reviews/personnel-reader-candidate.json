@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-09-11T18:34:18.237Z",
+  "sha256": "5b7ae6f615f6ec6b1becb5dacbcbcf614ae400d980f1f375b3018f5303e75b17",
+  "bytes": 505796,
+  "reports": 167,
+  "contexts": 272,
+  "scope": "TypeScript reader accepted isolated Python candidate; no storage or site publication"
+}
