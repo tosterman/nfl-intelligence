@@ -1,7 +1,7 @@
 import { createHash, timingSafeEqual } from "node:crypto";
 import { normalizeOdds, type OddsFeed } from "./odds";
 import { prepareArchive } from "./odds-archive";
-import type { recordAttemptEvent } from "./odds-attempt-journal";
+import { recordAttemptEvent } from "./odds-attempt-journal";
 import {
   publishOdds,
   readStoredOdds,
@@ -33,6 +33,7 @@ export async function collectOdds() {
     fetcher: fetch,
     now: Date.now,
     reserve: reserveOddsAcquisition,
+    journal: recordAttemptEvent,
   });
 }
 export async function runOddsCollection({

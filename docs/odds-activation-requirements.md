@@ -22,6 +22,13 @@ missing, reserved, requested and terminal evidence. See
 `reviews/odds-journal-reader.md`. It does not establish complete historical coverage;
 the authoritative history reader and migration rule remain activation requirements.
 
+The development branch's ordinary `collectOdds()` entry point now supplies the
+immutable journal to the existing collector. That stages recording of reserved,
+requested and terminal evidence on the current schedule; it does not activate
+the planned executor, change quotas, or establish older coverage. A journal
+failure before dispatch prevents acquisition while preserving the reservation.
+The public deployment has not yet been updated or observed using this wiring.
+
 Then exercise the actual hosted writer with bounded acquisition, storage-failure
 and retry scenarios, and verify its durable readback. Reconcile the provider's
 current quota with the migration allowance. Finally connect the schedule and
