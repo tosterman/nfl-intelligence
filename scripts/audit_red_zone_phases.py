@@ -7,6 +7,7 @@ import io
 import json
 from pathlib import Path
 from red_zone_possessions import possession_rows
+from pbp_adjudications import apply_adjudications
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -18,7 +19,9 @@ def main():
     if hashlib.sha256(raw).hexdigest() != source['sha256']:
         raise ValueError('Retained source digest mismatch')
     groups = collections.defaultdict(list)
-    for row in csv.DictReader(io.StringIO(gzip.decompress(raw).decode())):
+    adjudications = json.loads((ROOT / 'data/red-zone-adjudications.json').read_text())
+    source_rows = list(csv.DictReader(io.StringIO(gzip.decompress(raw).decode())))
+    for row in apply_adjudications(source_rows, source['sha256'], adjudications):
         groups[(row['game_id'], row['fixed_drive'])].append(row)
     counts = collections.Counter()
     rejected, ambiguous, disagreements = [], [], []
@@ -38,6 +41,7 @@ def main():
         if reached != provider:
             disagreements.append(identity)
     report = {'sourceSha256': source['sha256'], 'groups': len(groups),
+              'adjudicationsApplied': len(adjudications['decisions']),
               'definition': 'Pre-snap field position strictly inside 20, ending at any touchdown; source row order preserved',
               'comparison': dict(counts), 'rejected': rejected,
               'ambiguousOwners': ambiguous, 'disagreements': disagreements,

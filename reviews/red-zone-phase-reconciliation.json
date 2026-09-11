@@ -1,18 +1,13 @@
 {
   "sourceSha256": "2f135887790a013fd004e609e37096bb4816d5cc80b9f19122e1bad478961978",
   "groups": 6046,
+  "adjudicationsApplied": 1,
   "definition": "Pre-snap field position strictly inside 20, ending at any touchdown; source row order preserved",
   "comparison": {
     "observed=False,provider=False": 4222,
-    "observed=True,provider=True": 1823
+    "observed=True,provider=True": 1824
   },
-  "rejected": [
-    {
-      "gameId": "2025_03_CIN_MIN",
-      "fixedDrive": "20",
-      "reason": "Unknown touchdown state"
-    }
-  ],
+  "rejected": [],
   "ambiguousOwners": [],
   "disagreements": [],
   "publicationReady": false

@@ -1,0 +1,17 @@
+{
+  "sourceSha256": "2f135887790a013fd004e609e37096bb4816d5cc80b9f19122e1bad478961978",
+  "decisions": [
+    {
+      "gameId": "2025_03_CIN_MIN",
+      "playId": "3284",
+      "rowSha256": "93e430ae604352576da7ca9d7e06f47dfeaf40f325ca4e3bb19477fafd04b027",
+      "action": "exclude-nullified-kickoff",
+      "reason": "Offsetting penalties nullified this kickoff; the following kickoff was the replacement. Original source bytes remain unchanged.",
+      "corroborationUrl": "https://static.www.nfl.com/image/upload/v1758541357/gamecenter/f665f7cb-311e-11f0-b670-ae1250fadad1.pdf",
+      "corroborationPages": [
+        15,
+        16
+      ]
+    }
+  ]
+}
