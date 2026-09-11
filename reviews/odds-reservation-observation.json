@@ -1,6 +1,8 @@
 {
-  "checkedAt": "2026-09-11T00:46:29.073Z",
+  "checkedAt": "2026-09-11T13:33:56.226Z",
   "reservationPresent": false,
+  "schemaVersion": null,
+  "retainedAttempts": null,
   "historyComplete": false,
-  "interpretation": "Missing reservation is not evidence of zero previous provider usage. No acquisition or reservation write performed."
+  "interpretation": "Read-only observation. Presence or absence alone does not establish complete acquisition history. No acquisition or reservation write performed."
 }
