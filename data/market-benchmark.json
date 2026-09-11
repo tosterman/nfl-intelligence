@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-09-11T19:49:10.393740+00:00",
-  "coverageThrough": "2026-09-11T00:38:11.909000+00:00",
+  "checkedAt": "2026-09-11T19:55:59.607327+00:00",
+  "coverageThrough": "2026-09-11T19:55:57.710000+00:00",
   "resultSourceRetrievedAt": "2026-09-11T16:17:28.200753+00:00",
   "editionGeneratedAt": "2026-09-11T16:17:34.782950+00:00",
   "scopeGames": 272,
@@ -230,7 +230,7 @@
     }
   ],
   "interpretation": "24-hour entry forecasts versus sampled final-15-minute market lines. Same games per book and market; ties included in score errors. No betting returns or CLV.",
-  "reportHash": "d46be3ed6c2ef59b355cc66394f3046aa38a40fabd1e40f70c3cebeb2a4288de",
+  "reportHash": "a1e381593a9fc908c740bca7bfb21203b929d5ebe6eafaae7afa4112b37fb92b",
   "excludedBookMarketCount": 18,
   "excludedGameCount": 1,
   "publicationStatus": "Private implementation evaluation; not yet a public benchmark or preregistration receipt"

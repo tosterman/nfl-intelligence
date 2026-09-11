@@ -31,3 +31,12 @@ restore, collection, source replay, storage publication, and public readback
 evidence. Observe a later actual scheduled run separately. Keep the variable
 unset if public verification fails. This weather workflow does not regenerate
 numerical forecasts or replace the forecast publication receipt procedure above.
+
+Market benchmark rollout: the forecast workflow now has a nonfatal benchmark
+refresh gated by `MARKET_BENCHMARK_ENABLED=true`. Keep it unset until the local
+combined export/replay/private-retention run and the deployed performance page's
+exact report fingerprint have been checked. The reader is a dated static audit,
+so later captures do not enter automatically until a successful refresh and
+deployment. Verify the gated step on a controlled forecast run, then separately
+observe scheduled execution. A failed benchmark refresh preserves its prior
+reader summary and cannot waive the forecast edition's publication checks.

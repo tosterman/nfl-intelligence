@@ -74,6 +74,12 @@ jobs:
       - name: Bind current-season participation to report identities
         continue-on-error: true
         run: python scripts/build_season_participation.py
+      - name: Refresh replayed and privately retained market benchmark
+        if: ${{ vars.MARKET_BENCHMARK_ENABLED == 'true' }}
+        continue-on-error: true
+        run: python scripts/run_market_benchmark.py
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
       - run: npm test
       - run: python -m unittest discover -s tests -p 'test_*.py'
       - run: npm run build
@@ -99,6 +105,11 @@ jobs:
             data/prior-matchup-context.json
             data/prior-matchup-collection.json
             data/total-explanations.json
+            data/market-benchmark.json
+            reviews/market-benchmark-summary.json
+            reviews/market-benchmark-replay.json
+            release-recovery/market-benchmark-run.json
+            release-recovery/market-benchmark-retention.json
             data/total-explanation-archive/
             data/weekly-matchup-sources/
             data/games.csv

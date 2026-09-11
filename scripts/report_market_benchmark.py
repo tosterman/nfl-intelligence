@@ -4,7 +4,7 @@ import hashlib
 import json
 from datetime import datetime, timezone
 from pathlib import Path
-from market_benchmark import grade_benchmark, digest
+from market_benchmark import grade_benchmark, digest, public_summary
 from market_capture import load_export
 from market_pairing import instant
 from report_market_pairing import verify_protocol
@@ -17,6 +17,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--export',required=True,type=Path)
     parser.add_argument('--schedule',type=Path,default=ROOT/'data/games.csv')
+    parser.add_argument('--prepare-only',action='store_true',help='Retain candidate without replacing the displayed audit')
     args=parser.parse_args()
     now=datetime.now(timezone.utc)
     protocol=json.loads((ROOT/'reviews/market-pairing-protocol-publication.json').read_text())
@@ -51,7 +52,7 @@ def main():
         target=retained/name;target.parent.mkdir(parents=True,exist_ok=True)
         with target.open('xb') as output:output.write(body)
     (retained/'inventory.json').write_text(json.dumps({name:hashlib.sha256(body).hexdigest() for name,body in dependencies.items()},sort_keys=True,indent=2)+'\n')
-    summary=publish_summary(ROOT,identity)
+    summary=(public_summary(report)|{'publicationStatus':report['publicationStatus']}) if args.prepare_only else publish_summary(ROOT,identity)
     print(json.dumps(summary))
 
 
