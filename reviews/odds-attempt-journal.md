@@ -62,3 +62,29 @@ a final timing rejection can leave dispatch intent with no paid request.
 
 Next: establish authoritative history migration and exercise the actual hosted
 storage before enabling journal writes and changing the operational schedule.
+
+## Actual private storage verification
+
+At 2026-09-11 13:44:43 UTC, the explicit live probe passed against the existing
+private Vercel Blob store from a local Node process. The final receipt is retained
+in `reviews/odds-journal-storage-verification.json`; the reproducible command is:
+
+```
+node --env-file=.env.storage.local --import tsx scripts/verify_odds_journal_storage.ts --run-live
+```
+
+The probe uses a random `verification/odds-journal/` prefix. It verifies real
+create-only rejection, byte preservation after rejection, ordered persistence,
+idempotent replay, conflicting terminal rejection and final digest readback.
+Two competing real creates admit exactly one writer. Rejections must indicate an
+existing object; a generic network failure does not satisfy that check. A lost
+response is simulated after a successful real write, and exact readback recovers
+it. These are synthetic records, not provider attempts or captured quotes.
+
+Two earlier bounded runs preceded the final stricter probe: run IDs
+`6987b419-100b-4061-b528-9789e896f255` and
+`54a53fa1-64c2-4234-b8be-0bfaad244176`. Their isolated private records remain
+separate from operational history. The final probe adds explicit rejection-reason
+verification. No production reservation, live odds pointer or paid provider call
+was touched. Storage behavior is verified; serverless execution, historical budget
+migration and scheduled acquisition remain unverified.

@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-09-11T13:44:43.700Z",
+  "runId": "2ed7b774-a32c-4246-a224-7aa8bfd181c2",
+  "result": "passed",
+  "execution": "local Node process against actual private Vercel Blob",
+  "checks": [
+    "create-only write rejection",
+    "unchanged bytes after rejected overwrite",
+    "readback after simulated lost response",
+    "ordered event persistence",
+    "idempotent replay",
+    "conflicting terminal rejection",
+    "final digest verification",
+    "concurrent create admits exactly one writer"
+  ],
+  "receipts": [
+    {
+      "path": "verification/odds-journal/2ed7b774-a32c-4246-a224-7aa8bfd181c2/odds/attempt-journal/1789134281722/reserved.json",
+      "sha256": "d3b5db28000d123ddfacd0e2f554001c1cb3e98a871d5c85bb75e75013b801ee"
+    },
+    {
+      "path": "verification/odds-journal/2ed7b774-a32c-4246-a224-7aa8bfd181c2/odds/attempt-journal/1789134281722/requested.json",
+      "sha256": "044ddd68e74b5c4bf01df00629ad99540a63372d4a6de75d1ff9552f574482c4"
+    },
+    {
+      "path": "verification/odds-journal/2ed7b774-a32c-4246-a224-7aa8bfd181c2/odds/attempt-journal/1789134281722/outcome.json",
+      "sha256": "933854ac9c90d28f69c95e21b2600e1216317d1af4e8451c992cb85eb3f57f40"
+    },
+    {
+      "path": "verification/odds-journal/2ed7b774-a32c-4246-a224-7aa8bfd181c2/concurrent-create.json",
+      "sha256": "ee0e9af8d7cfe18af8a89bb1099f66078a21e9142867ac233e41451a805dda8c"
+    }
+  ],
+  "limitations": "Synthetic isolated records. No provider requests, production reservations, serverless execution or scheduling verified. Lost response was injected after a real successful write."
+}
