@@ -1,4 +1,5 @@
 import copy
+import gzip
 import json
 import sys
 import unittest
@@ -13,7 +14,10 @@ class PersonnelScheduleTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.site = json.loads((ROOT / 'data/site.json').read_bytes())
-        cls.raw = (ROOT / 'data/games.csv').read_bytes()
+        # CI refreshes data/games.csv for other tests. Bind this regression to
+        # the immutable source actually declared by the retained edition.
+        digest = cls.site['source']['sha256']
+        cls.raw = gzip.decompress((ROOT / 'data/forecast-input-archive/objects' / (digest + '.gz')).read_bytes())
 
     def test_real_edition_binds_every_game(self):
         result = verify_schedule(self.site, self.raw)

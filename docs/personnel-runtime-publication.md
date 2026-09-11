@@ -152,3 +152,10 @@ publication.
 The panel now also exposes failed participation collection outside report expiry
 wrappers, so that failure remains visible when the reports are already outdated.
 A regression explicitly supplies expired reports and a failed participation state.
+
+Hosted run 34632870555 failed in the new schedule tests: CI's source preparation
+downloads a current `games.csv`, which can differ from the retained edition.
+The tests now decompress the immutable schedule object named by that edition's
+source hash. The production validator remains strict. All four corrected schedule
+tests passed locally; a broader Python rerun is in progress. This failed hosted
+run is not launch acceptance evidence.
