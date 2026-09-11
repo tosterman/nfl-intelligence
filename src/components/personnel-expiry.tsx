@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState, type ReactNode } from "react";
+import { type ReactNode } from "react";
+import { useContextExpiry } from "./use-context-expiry";
 export function PersonnelExpiry({
   expiresAt,
   children,
@@ -7,17 +8,7 @@ export function PersonnelExpiry({
   expiresAt: number;
   children: ReactNode;
 }) {
-  const [expired, setExpired] = useState(false);
-  useEffect(() => {
-    const check = () => setExpired(Date.now() >= expiresAt);
-    check();
-    const timer = window.setInterval(check, 1000);
-    document.addEventListener("visibilitychange", check);
-    return () => {
-      window.clearInterval(timer);
-      document.removeEventListener("visibilitychange", check);
-    };
-  }, [expiresAt]);
+  const expired = useContextExpiry(expiresAt, 1000);
   return expired ? (
     <p role="status">
       Pregame personnel context has expired. Refresh for the latest available

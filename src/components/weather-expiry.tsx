@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState, type ReactNode } from "react";
+import { type ReactNode } from "react";
+import { useContextExpiry } from "./use-context-expiry";
 
 export function WeatherExpiry({
   expiresAt,
@@ -8,17 +9,8 @@ export function WeatherExpiry({
   expiresAt: number;
   children: ReactNode;
 }) {
-  const [expired, setExpired] = useState(false);
-  useEffect(() => {
-    const check = () => setExpired(Date.now() > expiresAt);
-    check();
-    const timer = window.setInterval(check, 60000);
-    document.addEventListener("visibilitychange", check);
-    return () => {
-      window.clearInterval(timer);
-      document.removeEventListener("visibilitychange", check);
-    };
-  }, [expiresAt]);
+  // Weather remains valid at the exact inclusive freshness limit.
+  const expired = useContextExpiry(expiresAt + 1, 60000);
   return expired ? (
     <p role="status">Weather forecast is outdated; awaiting refresh.</p>
   ) : (

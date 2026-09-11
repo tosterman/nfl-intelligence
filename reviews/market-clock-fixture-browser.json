@@ -8,6 +8,8 @@
     "feedExpiry": true,
     "kickoffClosure": true,
     "persistentAvailabilityStatus": true,
+    "personnelExactExpiry": true,
+    "weatherInclusiveExpiry": true,
     "pageErrors": []
   },
   {
@@ -19,6 +21,8 @@
     "feedExpiry": true,
     "kickoffClosure": true,
     "persistentAvailabilityStatus": true,
+    "personnelExactExpiry": true,
+    "weatherInclusiveExpiry": true,
     "pageErrors": []
   }
 ]
