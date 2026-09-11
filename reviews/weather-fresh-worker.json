@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-09-11T17:33:02.414Z",
+  "manifestHash": "8d07e5dee9896a7723013cb4af9b7a620470834e714b8e3bc19cb9f587a5b86a",
+  "observations": 137,
+  "sources": 126,
+  "idempotent": true,
+  "storageWrites": false,
+  "scope": "Real Blob download and isolated fresh-worker replay; no public deployment"
+}

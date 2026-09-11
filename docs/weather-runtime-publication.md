@@ -65,8 +65,20 @@ interrupted writes, concurrent publishers and bounded stream reads.
 
 The private Blob adapter uses the existing credential, create-only archives,
 ETag-conditional pointers, five-second request timeouts and bounded response
-streams. A real read of `weather/latest.json` succeeded and returned absent; no
-weather storage writes occurred. The adapter accepts only weather namespace
-paths. Live weather-specific publishing, retained-history continuity, runtime
-schema/context validation, page integration and scheduled activation remain
-unfinished. The current public site still reads its static weather edition.
+streams. The first real publication succeeded on September 11 at 17:24 UTC:
+128 objects retained 137 observations. Local runtime integration subsequently
+served all 14 eligible games. The current public site still reads its static
+weather edition; storage publication is not public deployment evidence.
+
+The recovery worker restores and replays retained history before collection.
+The new `weather.yml` workflow runs every six hours only when the repository
+variable `WEATHER_RUNTIME_ENABLED` equals `true`. Leave that variable unset until
+the public runtime reader has been deployed and verified. The workflow restores,
+collects, replays, publishes, then checks public freshness and exact manifest and
+generation identity, allowing 90 seconds for the reader cache to refresh.
+It retains collection and readback evidence and fails on unavailable coverage or
+a mismatched public bundle. Real Blob recovery into an empty local folder passed
+on September 11 at 17:33 UTC: all 137 observations and 126 source files replayed,
+and a repeated restore preserved identical ledger bytes. Evidence:
+`reviews/weather-fresh-worker.json`. The first scheduled run and public rollout
+still require verification before calling this operational.

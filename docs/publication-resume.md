@@ -22,3 +22,12 @@ fourteen eligible games available. See
 Regenerate any inputs that expire before rollout, then verify public weather
 health and every other deployed feed after publication. A locally healthy
 artifact does not resolve the public incident.
+
+Independent weather rollout: deploy the runtime reader before setting the
+repository variable `WEATHER_RUNTIME_ENABLED=true`. Verify that public
+`/api/weather-status` reports the exact stored manifest and healthy current
+coverage. Then enable the variable and dispatch `weather.yml` once; inspect its
+restore, collection, source replay, storage publication, and public readback
+evidence. Observe a later actual scheduled run separately. Keep the variable
+unset if public verification fails. This weather workflow does not regenerate
+numerical forecasts or replace the forecast publication receipt procedure above.

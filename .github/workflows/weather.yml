@@ -1,0 +1,53 @@
+name: Collect and verify weather
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '37 */6 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: weather-collection
+  cancel-in-progress: false
+jobs:
+  collect:
+    # Enable only after deploying and verifying the independent public reader.
+    if: vars.WEATHER_RUNTIME_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.13'
+      - run: npm ci
+      - name: Restore published history before collecting
+        run: npx tsx scripts/restore_weather.ts
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+      - run: python scripts/refresh_weather.py
+      - run: python scripts/weather_history.py
+      - run: python scripts/weather_history.py --check
+      - name: Publish verified weather bundle
+        run: npx tsx scripts/publish_weather.ts --publish
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+      - name: Verify exact public bundle and freshness
+        run: python scripts/verify_weather_publication.py
+      - name: Retain collection and verification evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: weather-collection-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 90
+          path: |
+            release-recovery/weather-publication-report.json
+            release-recovery/weather-public-readback.json
+            data/weather.json
+            data/weather-history.json
+            data/weather-ledger.json
+            data/weather-sources/*.json.gz
+          if-no-files-found: error
