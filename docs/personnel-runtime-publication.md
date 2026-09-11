@@ -159,3 +159,35 @@ The tests now decompress the immutable schedule object named by that edition's
 source hash. The production validator remains strict. All four corrected schedule
 tests passed locally; a broader Python rerun is in progress. This failed hosted
 run is not launch acceptance evidence.
+
+The corrected full local Python suite subsequently passed all 365 tests. The
+correction and fresh-collection checkpoint were pushed as `fae7533`.
+
+## Presentation assembly
+
+`personnel_presentation.py` now assembles previously replayed artifacts into one
+bounded presentation, with exact schedule contexts, original source timestamps,
+all three collection states and explicit derived-evidence status. It rejects
+mixed report history and participation inputs. Incompatible injury/depth-chart
+cutoffs preserve dated reports and collection states while withholding both
+derived participation artifacts. Failed participation acquisition labels usable
+retained participation as retained without changing its source date.
+
+Independent review caught a missing cross-artifact identity binding. The assembler
+now checks the identity audit against exact personnel and quarterback bytes, then
+binds historical and current participation to that audit using their existing
+producer hash contracts. Historical audit hashes use original bytes; current
+participation uses LF-normalized repository metadata. External source bytes are
+not normalized. A replaced-quarterback regression verifies rejection.
+
+All 34 personnel Python tests pass, including six assembly cases. The fresh real
+candidate assembled at 18:30 UTC into 505,796 bytes covering 167 reports and 272
+game contexts. `reviews/personnel-presentation-candidate.json` records its hash.
+This module validates compatibility, not raw-source calculations: publication
+must first replay normalization and derivation, retain the exact source/audit
+objects, validate reader schema and verify immutable storage and pointer updates.
+Those publication and reader steps remain unfinished.
+
+The follow-up independent review confirmed the audit-binding fix and reran all
+six assembly tests. Hosted run 34633367418 passed on `fae7533`, covering the
+preceding fresh-collection and corrected-fixture checkpoint; assembly is newer.

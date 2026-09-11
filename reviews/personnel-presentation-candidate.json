@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-09-11T18:30:18.709880+00:00",
+  "sha256": "5b7ae6f615f6ec6b1becb5dacbcbcf614ae400d980f1f375b3018f5303e75b17",
+  "bytes": 505796,
+  "contexts": 272,
+  "reports": 167,
+  "derivation": {
+    "status": "compatible",
+    "cutoff": "2026-09-11T18:22:46.240538+00:00",
+    "reason": null
+  },
+  "identityAuditBound": true,
+  "scope": "Presentation consistency for isolated replayed candidate; no storage or site publication"
+}
