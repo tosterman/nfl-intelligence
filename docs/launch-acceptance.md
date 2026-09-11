@@ -7,10 +7,12 @@ https://nfl-intelligence-one.vercel.app.
 
 ## Current verified state
 
-- Direct endpoint checks on September 11 returned the public model edition
-  generated September 10 at 20:09 UTC and the local edition generated September
-  11 at 16:17 UTC. The public deployment has not caught up with development.
-  Exact responses are in `reviews/launch-current-state.json`.
+- The local candidate now contains the real edition generated September 11 at
+  20:04:55 UTC. Its optimized build and eight browser page checks passed, with
+  seven healthy feed responses. The public model edition still dates to
+  September 10 at 20:09 UTC. See `reviews/local-production-candidate.json`,
+  `reviews/release-edition-preparation.json` and the earlier public/local
+  endpoint observations in `reviews/launch-current-state.json`.
 - A later read-only comparison in `reviews/launch-feed-check.json` verified all
   seven local feed checks and the intended edition identity. The older public
   site still served a different, earlier edition: forecast and odds checks
@@ -25,10 +27,12 @@ https://nfl-intelligence-one.vercel.app.
   See `docs/personnel-runtime-publication.md` for exact evidence and limitations.
 - Weather runtime v2 and bounded game-history restoration work locally. The
   public reader rollout and actual scheduled execution remain unverified.
-- Hosted verification passed on `ef0fb2f` in run
-  [34641664018](https://github.com/tosterman/nfl-intelligence/actions/runs/34641664018).
-  The subsequent generated-benchmark staging fix passed 23 related local checks;
-  its hosted run was still running at the 20:01 UTC inspection.
+- Hosted verification passed on `d0d219b` in run
+  [34642275340](https://github.com/tosterman/nfl-intelligence/actions/runs/34642275340).
+  The fresh edition then exposed an older schedule binding in participation;
+  it was rebuilt from retained evidence. The corrected candidate passed all
+  419 Python tests locally and is undergoing hosted verification in run
+  [34642952307](https://github.com/tosterman/nfl-intelligence/actions/runs/34642952307).
 - The real market benchmark now exports retained captures, replays the pinned
   calculation without networking, verifies its private recovery package and
   atomically replaces the local summary. Its September 11 19:56 UTC run has
