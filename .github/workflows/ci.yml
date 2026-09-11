@@ -24,6 +24,8 @@ jobs:
           python-version: '3.13'
       - run: npm ci
       - run: pip install -r requirements.txt
+      - name: Verify committed edition explanation evidence before test fixtures
+        run: python scripts/verify_total_explanations.py
       - name: Replay fixed retained edition without network
         run: python scripts/replay_retained_fixture.py
       - name: Replay immutable input archive without network

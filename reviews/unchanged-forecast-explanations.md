@@ -28,3 +28,13 @@ unchanged. The missing-new-forecast test uses an explicit new-forecast fixture.
 The final site bytes use Git's LF line endings before archive retention, so the
 edition identity survives checkout. These are local/development results, not a
 public deployment or prospective predictive-success claim.
+
+Follow-up: an isolated `git archive HEAD` checkout also passed the current
+explanation verifier. CI now runs that verifier before preparing test fixtures,
+so it checks the committed current edition in addition to historical replay.
+
+A 390px Chromium readback of the refreshed SF–LA page showed the final 27–7
+score separately from the saved pregame estimates and probabilities. The
+performance page showed two excluded completed games, zero eligible results,
+and the missing-context/publication explanation. No retrospective result was
+silently added to the verified pregame record.
