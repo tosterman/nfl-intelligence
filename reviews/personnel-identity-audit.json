@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-10T21:57:25.520244+00:00",
-  "cutoff": "2026-09-10T20:24:20.855806+00:00",
+  "generatedAt": "2026-09-11T20:39:25.959645+00:00",
+  "cutoff": "2026-09-11T20:39:17.799188+00:00",
   "season": 2026,
   "reportScope": {
     "season": 2026,
@@ -9,16 +9,16 @@
   },
   "meaning": "Identity agreement between two feeds from the same publisher; not independent confirmation of a roster, injury or starter. Not-listed entries are unresolved, not disproved.",
   "counts": {
-    "matched": 134,
-    "name-variant": 4,
+    "matched": 161,
+    "name-variant": 5,
     "identifier-mismatch": 1
   },
-  "reports": 139,
-  "depthSourceHash": "db0a09454965e6fcd4d7378a19381fa53f251432f80f09ebdcc45f78f5e1bc9f",
-  "personnelSourceHash": "96dcc98e297a38ecb8edcc7ab8864260b2899e24604f60c2a9514498ea53c2fb",
+  "reports": 167,
+  "depthSourceHash": "bd431f6c551c64e4d0cfe8d816fed35c160637e1bcd0d3dba5898adecffc5e78",
+  "personnelSourceHash": "cd7338473dd852d02c6986663addb31431609946fa8756d0460bf2e98d3501a9",
   "inputHashes": {
-    "personnel": "c09a41625e884270e9e0469cd40d802d45b9045e3e350f023f71d1d2ef0db5f8",
-    "quarterbacks": "211dbb4a8798f4f81abf66683987c025f6aa1de57409915fcb3b0e03f7d02a35"
+    "personnel": "8a62b6331aaf41066638b62ef10a09028e347cb6f668f65a4632c18e58d82b74",
+    "quarterbacks": "0025abc2b99555dacd055d4a197a4700bcc6b06ce3933a506be5620db07eb8e2"
   },
   "codeHash": "c665de4327671efbc5618fa986ed6423383ec0c70868df34e7d3ea061ac1eace",
   "records": [
@@ -37,7 +37,7 @@
         "Josh Sweat"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0035859",
@@ -54,7 +54,7 @@
         "Blake Gillikin"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039007",
@@ -71,7 +71,7 @@
         "Garrett Williams"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039808",
@@ -88,7 +88,7 @@
         "Isaiah Adams"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039864",
@@ -105,7 +105,7 @@
         "Dadrion Taylor-Demerson"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040751",
@@ -122,7 +122,7 @@
         "Will Johnson"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041027",
@@ -139,7 +139,7 @@
         "Jeremiyah Love"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0031576",
@@ -156,7 +156,58 @@
         "Za'Darius Smith"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0034371",
+      "name": "Da'Shawn Hand",
+      "reportTeam": "ATL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ATL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Da'Shawn Hand"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0035237",
+      "name": "Jawaan Taylor",
+      "reportTeam": "ATL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ATL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jawaan Taylor"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0036212",
+      "name": "Tua Tagovailoa",
+      "reportTeam": "ATL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ATL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Tua Tagovailoa"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036354",
@@ -173,7 +224,7 @@
         "Kyle Hinton"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039859",
@@ -190,7 +241,7 @@
         "Brandon Dorlus"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039917",
@@ -207,7 +258,7 @@
         "Michael Penix Jr."
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040156",
@@ -224,7 +275,7 @@
         "Billy Bowman Jr."
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041044",
@@ -241,7 +292,24 @@
         "Zachariah Branch"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0041066",
+      "name": "Kendal Daniels",
+      "reportTeam": "ATL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "ATL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Kendal Daniels"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036130",
@@ -258,7 +326,7 @@
         "Nnamdi Madubuike"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039064",
@@ -275,7 +343,7 @@
         "Zay Flowers"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039792",
@@ -292,7 +360,7 @@
         "Devontez Walker"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040069",
@@ -309,7 +377,7 @@
         "Teddye Buchanan"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0035537",
@@ -326,7 +394,7 @@
         "Ty Johnson"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040192",
@@ -343,7 +411,7 @@
         "Jordan Hancock"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040724",
@@ -360,7 +428,7 @@
         "T.J. Sanders"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036903",
@@ -377,7 +445,7 @@
         "Bobby Brown III"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0037007",
@@ -394,7 +462,7 @@
         "Patrick Jones II"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039344",
@@ -411,7 +479,58 @@
         "Jonathon Brooks"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0031583",
+      "name": "Grady Jarrett",
+      "reportTeam": "CHI",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CHI"
+      ],
+      "depthNamesOnReportTeam": [
+        "Grady Jarrett"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0032391",
+      "name": "Joe Thuney",
+      "reportTeam": "CHI",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CHI"
+      ],
+      "depthNamesOnReportTeam": [
+        "Joe Thuney"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0033579",
+      "name": "Xavier Woods",
+      "reportTeam": "CHI",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CHI"
+      ],
+      "depthNamesOnReportTeam": [
+        "Xavier Woods"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0038416",
@@ -428,7 +547,7 @@
         "Tyson Bagent"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039919",
@@ -445,7 +564,7 @@
         "Rome Odunze"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040740",
@@ -462,7 +581,41 @@
         "Ozzy Trapilo"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0033523",
+      "name": "Jonathan Allen",
+      "reportTeam": "CIN",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CIN"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jonathan Allen"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0034800",
+      "name": "B.J. Hill",
+      "reportTeam": "CIN",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CIN"
+      ],
+      "depthNamesOnReportTeam": [
+        "B.J. Hill"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036410",
@@ -479,7 +632,7 @@
         "Tee Higgins"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036900",
@@ -496,7 +649,24 @@
         "Ja'Marr Chase"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0038549",
+      "name": "DJ Turner II",
+      "reportTeam": "CIN",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "CIN"
+      ],
+      "depthNamesOnReportTeam": [
+        "DJ Turner II"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040756",
@@ -513,7 +683,7 @@
         "Shemar Stewart"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0033131",
@@ -530,7 +700,7 @@
         "Maliek Collins"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036953",
@@ -547,7 +717,7 @@
         "Teven Jenkins"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040579",
@@ -564,7 +734,7 @@
         "Carson Schwesinger"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041073",
@@ -581,7 +751,7 @@
         "Parker Brailsford"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0033093",
@@ -598,7 +768,24 @@
         "Jonathan Bullard"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0038547",
+      "name": "Luke Schoonmaker",
+      "reportTeam": "DAL",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "DAL"
+      ],
+      "depthNamesOnReportTeam": [
+        "Luke Schoonmaker"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040017",
@@ -615,7 +802,24 @@
         "Ajani Cornelius"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0038976",
+      "name": "Marvin Mims Jr.",
+      "reportTeam": "DEN",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "DEN"
+      ],
+      "depthNamesOnReportTeam": [
+        "Marvin Mims Jr."
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0038660",
@@ -632,7 +836,7 @@
         "Trevor Nowaske"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0038820",
@@ -649,7 +853,7 @@
         "Christian Izien"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039396",
@@ -666,7 +870,7 @@
         "Mekhi Wingo"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039660",
@@ -683,7 +887,7 @@
         "Thomas Harper"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039862",
@@ -700,7 +904,7 @@
         "Ennis Rakestraw Jr."
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041441",
@@ -717,7 +921,7 @@
         "Derrick Moore"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041442",
@@ -734,7 +938,7 @@
         "Jimmy Rolder"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041445",
@@ -751,7 +955,7 @@
         "Keith Abney II"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0033109",
@@ -768,7 +972,7 @@
         "Javon Hargrave"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036551",
@@ -785,7 +989,7 @@
         "Aaron Banks"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0037075",
@@ -802,7 +1006,7 @@
         "Devonte Wyatt"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0037817",
@@ -819,7 +1023,7 @@
         "Zach Bako-Bewele"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039812",
@@ -836,7 +1040,7 @@
         "Ty'Ron Hopper"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039904",
@@ -853,7 +1057,7 @@
         "Jordan Morgan"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040010",
@@ -870,7 +1074,7 @@
         "Barryn Sorrell"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040016",
@@ -887,7 +1091,7 @@
         "Warren Brinson"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0032071",
@@ -904,7 +1108,24 @@
         "Trent Brown"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0039108",
+      "name": "Will Anderson Jr.",
+      "reportTeam": "HOU",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "HOU"
+      ],
+      "depthNamesOnReportTeam": [
+        "Will Anderson Jr."
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041440",
@@ -921,7 +1142,7 @@
         "Kayden McDonald"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041465",
@@ -938,7 +1159,24 @@
         "Wade Woodaz"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0033952",
+      "name": "Grover Stewart",
+      "reportTeam": "IND",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "IND"
+      ],
+      "depthNamesOnReportTeam": [
+        "Grover Stewart"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0037292",
@@ -955,7 +1193,7 @@
         "Drew Ogletree"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0037664",
@@ -972,7 +1210,24 @@
         "Alec Pierce"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0039164",
+      "name": "Anthony Richardson",
+      "reportTeam": "IND",
+      "status": "name-variant",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "IND"
+      ],
+      "depthNamesOnReportTeam": [
+        "Anthony Richardson Sr."
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039876",
@@ -989,7 +1244,7 @@
         "Sedrick Van Pran-Granger"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041043",
@@ -1006,7 +1261,7 @@
         "A.J. Haulcy"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0034960",
@@ -1023,7 +1278,7 @@
         "Jakobi Meyers"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036655",
@@ -1040,7 +1295,7 @@
         "Cole Van Lanen"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040238",
@@ -1057,7 +1312,177 @@
         "LeQuint Allen Jr."
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0033873",
+      "name": "Patrick Mahomes",
+      "reportTeam": "KC",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "KC"
+      ],
+      "depthNamesOnReportTeam": [
+        "Patrick Mahomes"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0036374",
+      "name": "L'Jarius Sneed",
+      "reportTeam": "KC",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "KC"
+      ],
+      "depthNamesOnReportTeam": [
+        "L'Jarius Sneed"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0036660",
+      "name": "Trey Smith",
+      "reportTeam": "KC",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "KC"
+      ],
+      "depthNamesOnReportTeam": [
+        "Trey Smith"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0037208",
+      "name": "Jack Cochrane",
+      "reportTeam": "KC",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "KC"
+      ],
+      "depthNamesOnReportTeam": [
+        "Jack Cochrane"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0038982",
+      "name": "Chamarri Conner",
+      "reportTeam": "KC",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "KC"
+      ],
+      "depthNamesOnReportTeam": [
+        "Chamarri Conner"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0039067",
+      "name": "Rashee Rice",
+      "reportTeam": "KC",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "KC"
+      ],
+      "depthNamesOnReportTeam": [
+        "Rashee Rice"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0039894",
+      "name": "Xavier Worthy",
+      "reportTeam": "KC",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "KC"
+      ],
+      "depthNamesOnReportTeam": [
+        "Xavier Worthy"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0040116",
+      "name": "Josh Simmons",
+      "reportTeam": "KC",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "KC"
+      ],
+      "depthNamesOnReportTeam": [
+        "Josh Simmons"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0040640",
+      "name": "Ashton Gillotte",
+      "reportTeam": "KC",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "KC"
+      ],
+      "depthNamesOnReportTeam": [
+        "Ashton Gillotte"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0041501",
+      "name": "R Mason Thomas",
+      "reportTeam": "KC",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "KC"
+      ],
+      "depthNamesOnReportTeam": [
+        "R Mason Thomas"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0031388",
@@ -1074,7 +1499,7 @@
         "Aaron Donald"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0033110",
@@ -1091,7 +1516,7 @@
         "Tyler Higbee"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0033868",
@@ -1108,7 +1533,7 @@
         "Myles Garrett"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036603",
@@ -1125,7 +1550,7 @@
         "Alaric Jackson"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036672",
@@ -1142,7 +1567,7 @@
         "Grant Stuard"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0037195",
@@ -1159,7 +1584,7 @@
         "Jaylen Watson"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039137",
@@ -1176,7 +1601,7 @@
         "Byron Young"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0031040",
@@ -1193,7 +1618,7 @@
         "Khalil Mack"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0037320",
@@ -1210,7 +1635,7 @@
         "Deane Leonard"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0038454",
@@ -1227,7 +1652,7 @@
         "Keaton Mitchell"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039111",
@@ -1244,7 +1669,7 @@
         "Tuli Tuipulotu"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040221",
@@ -1261,7 +1686,7 @@
         "RJ Mickens"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041550",
@@ -1278,7 +1703,7 @@
         "Brenen Thompson"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039338",
@@ -1295,7 +1720,7 @@
         "Brock Bowers"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040122",
@@ -1312,7 +1737,7 @@
         "Ashton Jeanty"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0034779",
@@ -1329,7 +1754,7 @@
         "Ronnie Harrison Jr."
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041524",
@@ -1346,7 +1771,7 @@
         "Will Kacmarek"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041579",
@@ -1363,7 +1788,7 @@
         "Seydou Traore"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041053",
@@ -1380,7 +1805,7 @@
         "Caleb Tiernan"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041054",
@@ -1397,7 +1822,7 @@
         "Jakobe Thomas"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041354",
@@ -1414,7 +1839,7 @@
         "Jacob Thomas"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036981",
@@ -1431,7 +1856,7 @@
         "Christian Barmore"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0037413",
@@ -1448,7 +1873,7 @@
         "Ben Brown"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040734",
@@ -1465,7 +1890,7 @@
         "TreVeyon Henderson"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0027962",
@@ -1482,7 +1907,24 @@
         "Cameron Jordan"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0033860",
+      "name": "Davon Godchaux",
+      "reportTeam": "NO",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "NO"
+      ],
+      "depthNamesOnReportTeam": [
+        "Davon Godchaux"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0033906",
@@ -1499,7 +1941,7 @@
         "Alvin Kamara"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039373",
@@ -1516,7 +1958,7 @@
         "Audric Estime"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041041",
@@ -1533,7 +1975,7 @@
         "Oscar Delp"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0031270",
@@ -1550,7 +1992,7 @@
         "Shelby Harris"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036386",
@@ -1567,7 +2009,7 @@
         "Andrew Thomas"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039337",
@@ -1584,7 +2026,7 @@
         "Malik Nabers"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039446",
@@ -1601,7 +2043,7 @@
         "Bryan Hudson"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039847",
@@ -1618,7 +2060,7 @@
         "Theo Johnson"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0033375",
@@ -1635,7 +2077,7 @@
         "Tim Patrick"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036902",
@@ -1652,7 +2094,7 @@
         "Joseph Ossai"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0038120",
@@ -1669,7 +2111,7 @@
         "Breece Hall"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039798",
@@ -1686,7 +2128,7 @@
         "Isaiah Davis"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041032",
@@ -1703,7 +2145,7 @@
         "Kenyon Sadiq"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041038",
@@ -1720,7 +2162,7 @@
         "D'Angelo Ponds"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036224",
@@ -1737,7 +2179,7 @@
         "Jonathan Greenard"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041483",
@@ -1754,7 +2196,7 @@
         "Eli Stowers"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039167",
@@ -1771,7 +2213,7 @@
         "Joey Porter Jr."
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036363",
@@ -1788,7 +2230,7 @@
         "Josh Jones"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0038765",
@@ -1805,7 +2247,7 @@
         "Ty Okada"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0038797",
@@ -1822,7 +2264,7 @@
         "Emanuel Wilson"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039020",
@@ -1839,7 +2281,7 @@
         "Anthony Bradford"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039793",
@@ -1856,7 +2298,7 @@
         "AJ Barner"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040648",
@@ -1873,7 +2315,7 @@
         "Tory Horton"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040733",
@@ -1890,7 +2332,7 @@
         "Nick Emmanwori"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040873",
@@ -1907,7 +2349,7 @@
         "Julian Neal"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0029892",
@@ -1924,7 +2366,7 @@
         "Kyle Juszczyk"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0033288",
@@ -1941,7 +2383,7 @@
         "George Kittle"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0034982",
@@ -1958,7 +2400,7 @@
         "Dre Greenlaw"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0035413",
@@ -1975,7 +2417,7 @@
         "Luke Gifford"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0035717",
@@ -1992,7 +2434,7 @@
         "Nick Bosa"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039345",
@@ -2009,7 +2451,7 @@
         "Renardo Green"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040152",
@@ -2026,7 +2468,7 @@
         "Upton Stout"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040721",
@@ -2043,7 +2485,7 @@
         "Alfred Collins"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041363",
@@ -2061,7 +2503,7 @@
           "name": "James Thompson Jr."
         }
       ],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041556",
@@ -2078,7 +2520,7 @@
         "Romello Height"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041557",
@@ -2095,7 +2537,7 @@
         "Gracen Halton"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0034989",
@@ -2112,7 +2554,7 @@
         "Justin Skule"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0035942",
@@ -2129,7 +2571,7 @@
         "Christian Rozeboom"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0038951",
@@ -2146,7 +2588,7 @@
         "Sean Tucker"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039855",
@@ -2163,7 +2605,7 @@
         "Jalen McMillan"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040129",
@@ -2180,7 +2622,7 @@
         "Emeka Egbuka"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041031",
@@ -2197,7 +2639,7 @@
         "Rueben Bain Jr."
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041082",
@@ -2214,7 +2656,7 @@
         "Billy Schrauth"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039858",
@@ -2231,7 +2673,7 @@
         "Cedric Gray"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0041508",
@@ -2248,7 +2690,7 @@
         "Keldric Faulk"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0032268",
@@ -2265,7 +2707,24 @@
         "Marcus Mariota"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0034333",
+      "name": "Daron Payne",
+      "reportTeam": "WAS",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "WAS"
+      ],
+      "depthNamesOnReportTeam": [
+        "Daron Payne"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0035149",
@@ -2282,7 +2741,7 @@
         "Nick Allegretti"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0035279",
@@ -2299,7 +2758,24 @@
         "Charles Omenihu"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
+    },
+    {
+      "playerId": "00-0036260",
+      "name": "Javon Kinlaw",
+      "reportTeam": "WAS",
+      "status": "matched",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "depthTeams": [
+        "WAS"
+      ],
+      "depthNamesOnReportTeam": [
+        "Javon Kinlaw"
+      ],
+      "sameNameCandidates": [],
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036286",
@@ -2316,7 +2792,7 @@
         "K'Lavon Chaisson"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0036940",
@@ -2333,7 +2809,7 @@
         "Odafe Oweh"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039368",
@@ -2350,7 +2826,7 @@
         "Jordan Magee"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0039912",
@@ -2367,7 +2843,7 @@
         "Ben Sinnott"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     },
     {
       "playerId": "00-0040242",
@@ -2384,7 +2860,7 @@
         "Jacory Croskey-Merritt"
       ],
       "sameNameCandidates": [],
-      "teamDepthRecordedAt": "2026-09-10T12:01:46+00:00"
+      "teamDepthRecordedAt": "2026-09-11T12:21:50+00:00"
     }
   ]
 }

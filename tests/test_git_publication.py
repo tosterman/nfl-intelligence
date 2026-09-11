@@ -25,14 +25,15 @@ class GitPublicationTests(unittest.TestCase):
     with self.assertRaisesRegex(ValueError,'differs from Git staging'):git_publication.main()
    self.assertFalse(any(call.args[0][:2] in (['git','commit'],['git','push']) for call in command.call_args_list))
    capture.assert_not_called()
- def test_market_benchmark_is_staged_before_release_validation(self):
+ def test_generated_benchmark_and_personnel_audits_are_staged_before_release_validation(self):
   with tempfile.TemporaryDirectory() as folder:
    root=Path(folder);(root/'data').mkdir();site,ledger=fixture()
    for name,value in [('site',site),('ledger',ledger)]:
     (root/f'data/{name}.json').write_text(json.dumps(value))
    def validate_staging(_):
     additions=[call.args[0][2:] for call in command.call_args_list if call.args[0][:2]==['git','add']]
-    self.assertIn('data/market-benchmark.json',[path for paths in additions for path in paths])
+    for required in ('data/market-benchmark.json','reviews/personnel-identity-audit.json','reviews/player-usage-audit.json'):
+     self.assertIn(required,[path for paths in additions for path in paths])
     raise ValueError('Stop after staging validation')
    self.guard.side_effect=validate_staging
    with patch.object(git_publication,'ROOT',root),patch('git_publication.subprocess.check_output',return_value='main'),patch('git_publication.subprocess.run',return_value=SimpleNamespace(returncode=0)) as command,patch('git_publication.capture') as capture:

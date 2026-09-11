@@ -25,6 +25,24 @@ and subsequent actual scheduled execution remain to be verified. This resolves
 the older public feed failures observed below, but does not establish sustained
 operation, prospective model quality or commercial acceptance.
 
+## Controlled updates checkpoint — September 11, 20:43 UTC
+
+Weather run `34644328539` and personnel run `34644330358` completed with exact
+public readback. Forecast run `34645220767` completed acquisition, retained-input
+checks, private benchmark retention, application/Python tests, build, deployment,
+exact public capture and receipt archival. All seven public feeds passed after
+that run, and the live market fingerprint matched its newly generated report in
+Chromium and WebKit. See `reviews/controlled-update-runs.json` and
+`reviews/market-benchmark-controlled-public.json`.
+
+The earlier forecast attempts stopped before publication on a test-clock issue
+and then a heterogeneous JSON typing issue; both were corrected and covered by
+regression checks. A subsequent checkout check found omitted personnel audit
+files in the Git publication step. The exact files were restored from the
+successful run's recovery artifact, and future publications now stage both.
+Controlled execution is verified; actual scheduled execution and sustained
+reliability remain unverified. Commercial and prospective model gates still apply.
+
 ## Earlier release-preparation evidence
 
 - The local candidate now contains the real edition generated September 11 at

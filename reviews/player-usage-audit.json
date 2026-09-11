@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-09-10T21:57:26.476213+00:00",
+  "generatedAt": "2026-09-11T20:39:26.690667+00:00",
   "sourceSeason": 2025,
   "snapSourceUrl": "https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2025.csv",
   "snapSourceHash": "80b02a6e511aa20283551cae622b29ba4d0a6f006c489a2d91591fcad33792e7",
   "registrySourceHash": "c2402e02d39c7ca1adbd9ca5c894bb11f693ab01da0721bff44db2a8bd1ea53d",
-  "scheduleHash": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
-  "personnelArtifactHash": "c09a41625e884270e9e0469cd40d802d45b9045e3e350f023f71d1d2ef0db5f8",
+  "scheduleHash": "b03b033bc3b552b0c0db35c24c0c5a7c2e5f2237179dbad4dd44175b4f5c4ed1",
+  "personnelArtifactHash": "8a62b6331aaf41066638b62ef10a09028e347cb6f668f65a4632c18e58d82b74",
   "codeHashes": {
     "player_usage.py": "f3112bdacc615c703ad5b266f8777a1121d0a08151da74d7b22c0c24c4490c01",
     "audit_player_usage.py": "0cd79aebdd1b683d9f362277bd3844e527cff94c21904f770a14205c5e9dcbd3",
-    "build_data.py": "1137dbd0f57c6d0b913dc10439172b5a742d77c9cac0229a0d1fb7e26064bba5"
+    "build_data.py": "8fb734cd13aa50b962c83ec49f84cff912c94acaa58d02e2915ce31406dff5ad"
   },
-  "available": 110,
-  "unavailable": 29,
+  "available": 136,
+  "unavailable": 31,
   "meaning": "2025 historical appearances only, not a current snap projection or point adjustment. Current revised data, not vintage backtest inputs.",
   "records": [
     {
@@ -28,7 +28,7 @@
         "pfrId": "SweaJo00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T21:25:00+00:00",
-        "daysSinceLastAppearance": 249.0225286598727,
+        "daysSinceLastAppearance": 249.96836447531248,
         "historicalTeams": [
           "ARI"
         ],
@@ -159,7 +159,7 @@
         "pfrId": "GillBl00",
         "appearances": 5,
         "lastAppearance": "2025-10-05T20:05:00+00:00",
-        "daysSinceLastAppearance": 340.07808421542825,
+        "daysSinceLastAppearance": 341.02392003086806,
         "historicalTeams": [
           "ARI"
         ],
@@ -251,7 +251,7 @@
         "pfrId": "WillGa00",
         "appearances": 8,
         "lastAppearance": "2025-12-21T21:05:00+00:00",
-        "daysSinceLastAppearance": 263.03641754876156,
+        "daysSinceLastAppearance": 263.98225336420137,
         "historicalTeams": [
           "ARI"
         ],
@@ -382,7 +382,7 @@
         "pfrId": "AdamIs01",
         "appearances": 8,
         "lastAppearance": "2026-01-04T21:25:00+00:00",
-        "daysSinceLastAppearance": 249.0225286598727,
+        "daysSinceLastAppearance": 249.96836447531248,
         "historicalTeams": [
           "ARI"
         ],
@@ -513,7 +513,7 @@
         "pfrId": "TaylDa02",
         "appearances": 8,
         "lastAppearance": "2026-01-04T21:25:00+00:00",
-        "daysSinceLastAppearance": 249.0225286598727,
+        "daysSinceLastAppearance": 249.96836447531248,
         "historicalTeams": [
           "ARI"
         ],
@@ -644,7 +644,7 @@
         "pfrId": "JohnWi02",
         "appearances": 8,
         "lastAppearance": "2026-01-04T21:25:00+00:00",
-        "daysSinceLastAppearance": 249.0225286598727,
+        "daysSinceLastAppearance": 249.96836447531248,
         "historicalTeams": [
           "ARI"
         ],
@@ -788,7 +788,7 @@
         "pfrId": "SmitZa00",
         "appearances": 5,
         "lastAppearance": "2025-10-10T00:15:00+00:00",
-        "daysSinceLastAppearance": 335.90447310431716,
+        "daysSinceLastAppearance": 336.8503089197569,
         "historicalTeams": [
           "PHI"
         ],
@@ -868,6 +868,399 @@
       }
     },
     {
+      "playerId": "00-0034371",
+      "name": "Da'Shawn Hand",
+      "team": "ATL",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "HandDa00",
+        "appearances": 8,
+        "lastAppearance": "2026-01-12T01:00:00+00:00",
+        "daysSinceLastAppearance": 242.81905891975694,
+        "historicalTeams": [
+          "LAC"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.0,
+          "defense_pct": 0.6061474232080546,
+          "st_pct": 0.18008157821815496
+        },
+        "games": [
+          {
+            "gameId": "2025_19_LAC_NE",
+            "team": "LAC",
+            "kickoff": "2026-01-12T01:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.62,
+              "st_pct": 0.25,
+              "offense_snaps": 0.0,
+              "defense_snaps": 40.0,
+              "st_snaps": 5.0
+            }
+          },
+          {
+            "gameId": "2025_18_LAC_DEN",
+            "team": "LAC",
+            "kickoff": "2026-01-04T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.54,
+              "st_pct": 0.26,
+              "offense_snaps": 0.0,
+              "defense_snaps": 32.0,
+              "st_snaps": 7.0
+            }
+          },
+          {
+            "gameId": "2025_17_HOU_LAC",
+            "team": "LAC",
+            "kickoff": "2025-12-27T21:30:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.71,
+              "st_pct": 0.14,
+              "offense_snaps": 0.0,
+              "defense_snaps": 46.0,
+              "st_snaps": 4.0
+            }
+          },
+          {
+            "gameId": "2025_16_LAC_DAL",
+            "team": "LAC",
+            "kickoff": "2025-12-21T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.6,
+              "st_pct": 0.14,
+              "offense_snaps": 0.0,
+              "defense_snaps": 35.0,
+              "st_snaps": 3.0
+            }
+          },
+          {
+            "gameId": "2025_15_LAC_KC",
+            "team": "LAC",
+            "kickoff": "2025-12-14T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.59,
+              "st_pct": 0.12,
+              "offense_snaps": 0.0,
+              "defense_snaps": 36.0,
+              "st_snaps": 3.0
+            }
+          },
+          {
+            "gameId": "2025_14_PHI_LAC",
+            "team": "LAC",
+            "kickoff": "2025-12-09T01:15:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.63,
+              "st_pct": 0.17,
+              "offense_snaps": 0.0,
+              "defense_snaps": 45.0,
+              "st_snaps": 6.0
+            }
+          },
+          {
+            "gameId": "2025_13_LV_LAC",
+            "team": "LAC",
+            "kickoff": "2025-11-30T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.56,
+              "st_pct": 0.09,
+              "offense_snaps": 0.0,
+              "defense_snaps": 27.0,
+              "st_snaps": 2.0
+            }
+          },
+          {
+            "gameId": "2025_11_LAC_JAX",
+            "team": "LAC",
+            "kickoff": "2025-11-16T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.59,
+              "st_pct": 0.25,
+              "offense_snaps": 0.0,
+              "defense_snaps": 42.0,
+              "st_snaps": 5.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
+      "playerId": "00-0035237",
+      "name": "Jawaan Taylor",
+      "team": "ATL",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "TaylJa02",
+        "appearances": 8,
+        "lastAppearance": "2025-11-27T21:30:00+00:00",
+        "daysSinceLastAppearance": 287.9648922530903,
+        "historicalTeams": [
+          "KC"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.8604989445450834,
+          "defense_pct": 0.0,
+          "st_pct": 0.04561888138748525
+        },
+        "games": [
+          {
+            "gameId": "2025_13_KC_DAL",
+            "team": "KC",
+            "kickoff": "2025-11-27T21:30:00+00:00",
+            "values": {
+              "offense_pct": 0.48,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 32.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_12_IND_KC",
+            "team": "KC",
+            "kickoff": "2025-11-23T18:00:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.1,
+              "offense_snaps": 96.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 3.0
+            }
+          },
+          {
+            "gameId": "2025_11_KC_DEN",
+            "team": "KC",
+            "kickoff": "2025-11-16T21:25:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.07,
+              "offense_snaps": 70.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 2.0
+            }
+          },
+          {
+            "gameId": "2025_09_KC_BUF",
+            "team": "KC",
+            "kickoff": "2025-11-02T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.72,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 43.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_08_WAS_KC",
+            "team": "KC",
+            "kickoff": "2025-10-28T00:15:00+00:00",
+            "values": {
+              "offense_pct": 0.97,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 67.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_07_LV_KC",
+            "team": "KC",
+            "kickoff": "2025-10-19T17:00:00+00:00",
+            "values": {
+              "offense_pct": 0.8,
+              "defense_pct": 0.0,
+              "st_pct": 0.19,
+              "offense_snaps": 65.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 4.0
+            }
+          },
+          {
+            "gameId": "2025_06_DET_KC",
+            "team": "KC",
+            "kickoff": "2025-10-13T00:20:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 64.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_05_KC_JAX",
+            "team": "KC",
+            "kickoff": "2025-10-07T00:15:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 64.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
+      "playerId": "00-0036212",
+      "name": "Tua Tagovailoa",
+      "team": "ATL",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "TagoTu00",
+        "appearances": 8,
+        "lastAppearance": "2025-12-16T01:15:00+00:00",
+        "daysSinceLastAppearance": 269.8086422530903,
+        "historicalTeams": [
+          "MIA"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.9521993759103328,
+          "defense_pct": 0.0,
+          "st_pct": 0.0
+        },
+        "games": [
+          {
+            "gameId": "2025_15_MIA_PIT",
+            "team": "MIA",
+            "kickoff": "2025-12-16T01:15:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 50.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_14_MIA_NYJ",
+            "team": "MIA",
+            "kickoff": "2025-12-07T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.89,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 58.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_13_NO_MIA",
+            "team": "MIA",
+            "kickoff": "2025-11-30T18:00:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 60.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_11_WAS_MIA",
+            "team": "MIA",
+            "kickoff": "2025-11-16T14:30:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 56.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_10_BUF_MIA",
+            "team": "MIA",
+            "kickoff": "2025-11-09T18:00:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 53.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_09_BAL_MIA",
+            "team": "MIA",
+            "kickoff": "2025-10-31T00:15:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 64.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_08_MIA_ATL",
+            "team": "MIA",
+            "kickoff": "2025-10-26T17:00:00+00:00",
+            "values": {
+              "offense_pct": 0.9,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 62.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_07_MIA_CLE",
+            "team": "MIA",
+            "kickoff": "2025-10-19T17:00:00+00:00",
+            "values": {
+              "offense_pct": 0.79,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 46.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
       "playerId": "00-0036354",
       "name": "Kyle Hinton",
       "team": "ATL",
@@ -880,7 +1273,7 @@
         "pfrId": "HintKy00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T18:00:00+00:00",
-        "daysSinceLastAppearance": 249.1648897709838,
+        "daysSinceLastAppearance": 250.1107255864236,
         "historicalTeams": [
           "ATL"
         ],
@@ -1011,7 +1404,7 @@
         "pfrId": "DorlBr00",
         "appearances": 8,
         "lastAppearance": "2025-12-30T01:15:00+00:00",
-        "daysSinceLastAppearance": 254.86280643765048,
+        "daysSinceLastAppearance": 255.80864225309028,
         "historicalTeams": [
           "ATL"
         ],
@@ -1142,7 +1535,7 @@
         "pfrId": "PeniMi00",
         "appearances": 8,
         "lastAppearance": "2025-11-16T18:00:00+00:00",
-        "daysSinceLastAppearance": 298.1648897709838,
+        "daysSinceLastAppearance": 299.1107255864236,
         "historicalTeams": [
           "ATL"
         ],
@@ -1273,7 +1666,7 @@
         "pfrId": "BowmBi01",
         "appearances": 6,
         "lastAppearance": "2025-11-16T18:00:00+00:00",
-        "daysSinceLastAppearance": 298.1648897709838,
+        "daysSinceLastAppearance": 299.1107255864236,
         "historicalTeams": [
           "ATL"
         ],
@@ -1379,6 +1772,19 @@
       }
     },
     {
+      "playerId": "00-0041066",
+      "name": "Kendal Daniels",
+      "team": "ATL",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "unavailable",
+        "reason": "No eligible historical appearances"
+      }
+    },
+    {
       "playerId": "00-0036130",
       "name": "Nnamdi Madubuike",
       "team": "BAL",
@@ -1391,7 +1797,7 @@
         "pfrId": "MaduJu00",
         "appearances": 2,
         "lastAppearance": "2025-09-14T17:00:00+00:00",
-        "daysSinceLastAppearance": 361.2065564376505,
+        "daysSinceLastAppearance": 362.1523922530903,
         "historicalTeams": [
           "BAL"
         ],
@@ -1444,7 +1850,7 @@
         "pfrId": "FlowZa00",
         "appearances": 8,
         "lastAppearance": "2026-01-05T01:20:00+00:00",
-        "daysSinceLastAppearance": 248.85933421542825,
+        "daysSinceLastAppearance": 249.80517003086806,
         "historicalTeams": [
           "BAL"
         ],
@@ -1575,7 +1981,7 @@
         "pfrId": "WalkDe01",
         "appearances": 8,
         "lastAppearance": "2026-01-05T01:20:00+00:00",
-        "daysSinceLastAppearance": 248.85933421542825,
+        "daysSinceLastAppearance": 249.80517003086806,
         "historicalTeams": [
           "BAL"
         ],
@@ -1706,7 +2112,7 @@
         "pfrId": "BuchTe00",
         "appearances": 8,
         "lastAppearance": "2025-12-14T18:00:00+00:00",
-        "daysSinceLastAppearance": 270.1648897709838,
+        "daysSinceLastAppearance": 271.1107255864236,
         "historicalTeams": [
           "BAL"
         ],
@@ -1837,7 +2243,7 @@
         "pfrId": "JohnTy02",
         "appearances": 8,
         "lastAppearance": "2026-01-04T21:25:00+00:00",
-        "daysSinceLastAppearance": 249.0225286598727,
+        "daysSinceLastAppearance": 249.96836447531248,
         "historicalTeams": [
           "BUF"
         ],
@@ -1968,7 +2374,7 @@
         "pfrId": "HancJo00",
         "appearances": 8,
         "lastAppearance": "2026-01-17T21:30:00+00:00",
-        "daysSinceLastAppearance": 236.01905643765048,
+        "daysSinceLastAppearance": 236.96489225309028,
         "historicalTeams": [
           "BUF"
         ],
@@ -2099,7 +2505,7 @@
         "pfrId": "SandTJ00",
         "appearances": 8,
         "lastAppearance": "2026-01-17T21:30:00+00:00",
-        "daysSinceLastAppearance": 236.01905643765048,
+        "daysSinceLastAppearance": 236.96489225309028,
         "historicalTeams": [
           "BUF"
         ],
@@ -2230,7 +2636,7 @@
         "pfrId": "BrowBo04",
         "appearances": 8,
         "lastAppearance": "2026-01-10T21:30:00+00:00",
-        "daysSinceLastAppearance": 243.01905643765048,
+        "daysSinceLastAppearance": 243.96489225309028,
         "historicalTeams": [
           "CAR"
         ],
@@ -2361,7 +2767,7 @@
         "pfrId": "JonePa00",
         "appearances": 4,
         "lastAppearance": "2025-10-12T17:00:00+00:00",
-        "daysSinceLastAppearance": 333.2065564376505,
+        "daysSinceLastAppearance": 334.1523922530903,
         "historicalTeams": [
           "CAR"
         ],
@@ -2441,6 +2847,399 @@
       }
     },
     {
+      "playerId": "00-0031583",
+      "name": "Grady Jarrett",
+      "team": "CHI",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "JarrGr00",
+        "appearances": 8,
+        "lastAppearance": "2026-01-18T23:30:00+00:00",
+        "daysSinceLastAppearance": 235.88155891975694,
+        "historicalTeams": [
+          "CHI"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.0,
+          "defense_pct": 0.7477233891243089,
+          "st_pct": 0.03418205598702797
+        },
+        "games": [
+          {
+            "gameId": "2025_20_LA_CHI",
+            "team": "CHI",
+            "kickoff": "2026-01-18T23:30:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.83,
+              "st_pct": 0.04,
+              "offense_snaps": 0.0,
+              "defense_snaps": 65.0,
+              "st_snaps": 1.0
+            }
+          },
+          {
+            "gameId": "2025_19_GB_CHI",
+            "team": "CHI",
+            "kickoff": "2026-01-11T01:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.83,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 59.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_18_DET_CHI",
+            "team": "CHI",
+            "kickoff": "2026-01-04T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.73,
+              "st_pct": 0.05,
+              "offense_snaps": 0.0,
+              "defense_snaps": 53.0,
+              "st_snaps": 1.0
+            }
+          },
+          {
+            "gameId": "2025_17_CHI_SF",
+            "team": "CHI",
+            "kickoff": "2025-12-29T01:20:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.68,
+              "st_pct": 0.03,
+              "offense_snaps": 0.0,
+              "defense_snaps": 49.0,
+              "st_snaps": 1.0
+            }
+          },
+          {
+            "gameId": "2025_16_GB_CHI",
+            "team": "CHI",
+            "kickoff": "2025-12-21T01:20:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.68,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 49.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_15_CLE_CHI",
+            "team": "CHI",
+            "kickoff": "2025-12-14T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.72,
+              "st_pct": 0.08,
+              "offense_snaps": 0.0,
+              "defense_snaps": 41.0,
+              "st_snaps": 2.0
+            }
+          },
+          {
+            "gameId": "2025_14_CHI_GB",
+            "team": "CHI",
+            "kickoff": "2025-12-07T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.74,
+              "st_pct": 0.04,
+              "offense_snaps": 0.0,
+              "defense_snaps": 39.0,
+              "st_snaps": 1.0
+            }
+          },
+          {
+            "gameId": "2025_13_CHI_PHI",
+            "team": "CHI",
+            "kickoff": "2025-11-28T20:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.74,
+              "st_pct": 0.04,
+              "offense_snaps": 0.0,
+              "defense_snaps": 40.0,
+              "st_snaps": 1.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
+      "playerId": "00-0032391",
+      "name": "Joe Thuney",
+      "team": "CHI",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "ThunJo00",
+        "appearances": 8,
+        "lastAppearance": "2026-01-18T23:30:00+00:00",
+        "daysSinceLastAppearance": 235.88155891975694,
+        "historicalTeams": [
+          "CHI"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.9977069140958924,
+          "defense_pct": 0.0,
+          "st_pct": 0.0
+        },
+        "games": [
+          {
+            "gameId": "2025_20_LA_CHI",
+            "team": "CHI",
+            "kickoff": "2026-01-18T23:30:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 81.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_19_GB_CHI",
+            "team": "CHI",
+            "kickoff": "2026-01-11T01:00:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 78.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_18_DET_CHI",
+            "team": "CHI",
+            "kickoff": "2026-01-04T21:25:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 55.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_17_CHI_SF",
+            "team": "CHI",
+            "kickoff": "2025-12-29T01:20:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 66.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_16_GB_CHI",
+            "team": "CHI",
+            "kickoff": "2025-12-21T01:20:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 64.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_15_CLE_CHI",
+            "team": "CHI",
+            "kickoff": "2025-12-14T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.98,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 65.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_14_CHI_GB",
+            "team": "CHI",
+            "kickoff": "2025-12-07T21:25:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 70.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_13_CHI_PHI",
+            "team": "CHI",
+            "kickoff": "2025-11-28T20:00:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 87.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
+      "playerId": "00-0033579",
+      "name": "Xavier Woods",
+      "team": "CHI",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "WoodXa00",
+        "appearances": 8,
+        "lastAppearance": "2025-12-14T21:25:00+00:00",
+        "daysSinceLastAppearance": 270.9683644753125,
+        "historicalTeams": [
+          "TEN"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.0,
+          "defense_pct": 0.6508408730256706,
+          "st_pct": 0.01799752061889188
+        },
+        "games": [
+          {
+            "gameId": "2025_15_TEN_SF",
+            "team": "TEN",
+            "kickoff": "2025-12-14T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.12,
+              "st_pct": 0.03,
+              "offense_snaps": 0.0,
+              "defense_snaps": 9.0,
+              "st_snaps": 1.0
+            }
+          },
+          {
+            "gameId": "2025_14_TEN_CLE",
+            "team": "TEN",
+            "kickoff": "2025-12-07T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.81,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 56.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_13_JAX_TEN",
+            "team": "TEN",
+            "kickoff": "2025-11-30T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.92,
+              "st_pct": 0.04,
+              "offense_snaps": 0.0,
+              "defense_snaps": 58.0,
+              "st_snaps": 1.0
+            }
+          },
+          {
+            "gameId": "2025_08_TEN_IND",
+            "team": "TEN",
+            "kickoff": "2025-10-26T20:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.47,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 25.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_07_NE_TEN",
+            "team": "TEN",
+            "kickoff": "2025-10-19T17:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.66,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 43.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_06_TEN_LV",
+            "team": "TEN",
+            "kickoff": "2025-10-12T20:05:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.84,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 51.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_05_TEN_ARI",
+            "team": "TEN",
+            "kickoff": "2025-10-05T20:05:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.76,
+              "st_pct": 0.07,
+              "offense_snaps": 0.0,
+              "defense_snaps": 52.0,
+              "st_snaps": 2.0
+            }
+          },
+          {
+            "gameId": "2025_04_TEN_HOU",
+            "team": "TEN",
+            "kickoff": "2025-09-28T17:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.79,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 56.0,
+              "st_snaps": 0.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
       "playerId": "00-0038416",
       "name": "Tyson Bagent",
       "team": "CHI",
@@ -2453,7 +3252,7 @@
         "pfrId": "BageTy00",
         "appearances": 3,
         "lastAppearance": "2025-11-16T18:00:00+00:00",
-        "daysSinceLastAppearance": 298.1648897709838,
+        "daysSinceLastAppearance": 299.1107255864236,
         "historicalTeams": [
           "CHI"
         ],
@@ -2519,7 +3318,7 @@
         "pfrId": "OdunRo00",
         "appearances": 8,
         "lastAppearance": "2026-01-18T23:30:00+00:00",
-        "daysSinceLastAppearance": 234.93572310431713,
+        "daysSinceLastAppearance": 235.88155891975694,
         "historicalTeams": [
           "CHI"
         ],
@@ -2650,7 +3449,7 @@
         "pfrId": "TrapOz00",
         "appearances": 8,
         "lastAppearance": "2026-01-11T01:00:00+00:00",
-        "daysSinceLastAppearance": 242.87322310431713,
+        "daysSinceLastAppearance": 243.81905891975694,
         "historicalTeams": [
           "CHI"
         ],
@@ -2769,6 +3568,268 @@
       }
     },
     {
+      "playerId": "00-0033523",
+      "name": "Jonathan Allen",
+      "team": "CIN",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "AlleJo01",
+        "appearances": 8,
+        "lastAppearance": "2026-01-04T18:00:00+00:00",
+        "daysSinceLastAppearance": 250.1107255864236,
+        "historicalTeams": [
+          "MIN"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.0,
+          "defense_pct": 0.7369599444959394,
+          "st_pct": 0.0
+        },
+        "games": [
+          {
+            "gameId": "2025_18_GB_MIN",
+            "team": "MIN",
+            "kickoff": "2026-01-04T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.53,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 27.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_17_DET_MIN",
+            "team": "MIN",
+            "kickoff": "2025-12-25T21:30:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.75,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 48.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_16_MIN_NYG",
+            "team": "MIN",
+            "kickoff": "2025-12-21T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.88,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 49.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_15_MIN_DAL",
+            "team": "MIN",
+            "kickoff": "2025-12-15T01:20:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.74,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 52.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_14_WAS_MIN",
+            "team": "MIN",
+            "kickoff": "2025-12-07T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.75,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 39.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_13_MIN_SEA",
+            "team": "MIN",
+            "kickoff": "2025-11-30T21:05:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.84,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 56.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_12_MIN_GB",
+            "team": "MIN",
+            "kickoff": "2025-11-23T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.68,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 45.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_11_CHI_MIN",
+            "team": "MIN",
+            "kickoff": "2025-11-16T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.76,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 57.0,
+              "st_snaps": 0.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
+      "playerId": "00-0034800",
+      "name": "B.J. Hill",
+      "team": "CIN",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "HillB.00",
+        "appearances": 8,
+        "lastAppearance": "2026-01-04T18:00:00+00:00",
+        "daysSinceLastAppearance": 250.1107255864236,
+        "historicalTeams": [
+          "CIN"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.0,
+          "defense_pct": 0.5852465415561682,
+          "st_pct": 0.1371507781591824
+        },
+        "games": [
+          {
+            "gameId": "2025_18_CLE_CIN",
+            "team": "CIN",
+            "kickoff": "2026-01-04T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.52,
+              "st_pct": 0.17,
+              "offense_snaps": 0.0,
+              "defense_snaps": 27.0,
+              "st_snaps": 4.0
+            }
+          },
+          {
+            "gameId": "2025_17_ARI_CIN",
+            "team": "CIN",
+            "kickoff": "2025-12-28T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.3,
+              "st_pct": 0.08,
+              "offense_snaps": 0.0,
+              "defense_snaps": 17.0,
+              "st_snaps": 2.0
+            }
+          },
+          {
+            "gameId": "2025_16_CIN_MIA",
+            "team": "CIN",
+            "kickoff": "2025-12-21T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.49,
+              "st_pct": 0.1,
+              "offense_snaps": 0.0,
+              "defense_snaps": 29.0,
+              "st_snaps": 3.0
+            }
+          },
+          {
+            "gameId": "2025_15_BAL_CIN",
+            "team": "CIN",
+            "kickoff": "2025-12-14T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.61,
+              "st_pct": 0.24,
+              "offense_snaps": 0.0,
+              "defense_snaps": 25.0,
+              "st_snaps": 4.0
+            }
+          },
+          {
+            "gameId": "2025_14_CIN_BUF",
+            "team": "CIN",
+            "kickoff": "2025-12-07T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.75,
+              "st_pct": 0.21,
+              "offense_snaps": 0.0,
+              "defense_snaps": 48.0,
+              "st_snaps": 5.0
+            }
+          },
+          {
+            "gameId": "2025_13_CIN_BAL",
+            "team": "CIN",
+            "kickoff": "2025-11-28T01:20:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.63,
+              "st_pct": 0.07,
+              "offense_snaps": 0.0,
+              "defense_snaps": 38.0,
+              "st_snaps": 2.0
+            }
+          },
+          {
+            "gameId": "2025_12_NE_CIN",
+            "team": "CIN",
+            "kickoff": "2025-11-23T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.79,
+              "st_pct": 0.21,
+              "offense_snaps": 0.0,
+              "defense_snaps": 56.0,
+              "st_snaps": 6.0
+            }
+          },
+          {
+            "gameId": "2025_11_CIN_PIT",
+            "team": "CIN",
+            "kickoff": "2025-11-16T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.71,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 46.0,
+              "st_snaps": 0.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
       "playerId": "00-0036410",
       "name": "Tee Higgins",
       "team": "CIN",
@@ -2781,7 +3842,7 @@
         "pfrId": "HiggTe00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T18:00:00+00:00",
-        "daysSinceLastAppearance": 249.1648897709838,
+        "daysSinceLastAppearance": 250.1107255864236,
         "historicalTeams": [
           "CIN"
         ],
@@ -2912,7 +3973,7 @@
         "pfrId": "ChasJa00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T18:00:00+00:00",
-        "daysSinceLastAppearance": 249.1648897709838,
+        "daysSinceLastAppearance": 250.1107255864236,
         "historicalTeams": [
           "CIN"
         ],
@@ -3031,6 +4092,137 @@
       }
     },
     {
+      "playerId": "00-0038549",
+      "name": "DJ Turner II",
+      "team": "CIN",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "TurnDJ01",
+        "appearances": 8,
+        "lastAppearance": "2026-01-04T18:00:00+00:00",
+        "daysSinceLastAppearance": 250.1107255864236,
+        "historicalTeams": [
+          "CIN"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.0,
+          "defense_pct": 0.8220408821354777,
+          "st_pct": 0.0
+        },
+        "games": [
+          {
+            "gameId": "2025_18_CLE_CIN",
+            "team": "CIN",
+            "kickoff": "2026-01-04T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.79,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 41.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_17_ARI_CIN",
+            "team": "CIN",
+            "kickoff": "2025-12-28T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.72,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 41.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_16_CIN_MIA",
+            "team": "CIN",
+            "kickoff": "2025-12-21T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.46,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 27.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_15_BAL_CIN",
+            "team": "CIN",
+            "kickoff": "2025-12-14T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.78,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 32.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_14_CIN_BUF",
+            "team": "CIN",
+            "kickoff": "2025-12-07T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.98,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 63.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_13_CIN_BAL",
+            "team": "CIN",
+            "kickoff": "2025-11-28T01:20:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 1.0,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 60.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_12_NE_CIN",
+            "team": "CIN",
+            "kickoff": "2025-11-23T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.97,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 69.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_11_CIN_PIT",
+            "team": "CIN",
+            "kickoff": "2025-11-16T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 1.0,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 65.0,
+              "st_snaps": 0.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
       "playerId": "00-0040756",
       "name": "Shemar Stewart",
       "team": "CIN",
@@ -3043,7 +4235,7 @@
         "pfrId": "StewSh00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T18:00:00+00:00",
-        "daysSinceLastAppearance": 249.1648897709838,
+        "daysSinceLastAppearance": 250.1107255864236,
         "historicalTeams": [
           "CIN"
         ],
@@ -3174,7 +4366,7 @@
         "pfrId": "CollMa00",
         "appearances": 8,
         "lastAppearance": "2025-11-30T18:00:00+00:00",
-        "daysSinceLastAppearance": 284.1648897709838,
+        "daysSinceLastAppearance": 285.1107255864236,
         "historicalTeams": [
           "CLE"
         ],
@@ -3305,7 +4497,7 @@
         "pfrId": "JenkTe00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T18:00:00+00:00",
-        "daysSinceLastAppearance": 249.1648897709838,
+        "daysSinceLastAppearance": 250.1107255864236,
         "historicalTeams": [
           "CLE"
         ],
@@ -3436,7 +4628,7 @@
         "pfrId": "SchwCa00",
         "appearances": 8,
         "lastAppearance": "2025-12-28T18:00:00+00:00",
-        "daysSinceLastAppearance": 256.1648897709838,
+        "daysSinceLastAppearance": 257.1107255864236,
         "historicalTeams": [
           "CLE"
         ],
@@ -3580,7 +4772,7 @@
         "pfrId": "BullJo00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T18:00:00+00:00",
-        "daysSinceLastAppearance": 249.1648897709838,
+        "daysSinceLastAppearance": 250.1107255864236,
         "historicalTeams": [
           "NO"
         ],
@@ -3699,6 +4891,137 @@
       }
     },
     {
+      "playerId": "00-0038547",
+      "name": "Luke Schoonmaker",
+      "team": "DAL",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "SchoLu00",
+        "appearances": 8,
+        "lastAppearance": "2026-01-04T18:00:00+00:00",
+        "daysSinceLastAppearance": 250.1107255864236,
+        "historicalTeams": [
+          "DAL"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.3237183265803506,
+          "defense_pct": 0.0,
+          "st_pct": 0.4864453127294528
+        },
+        "games": [
+          {
+            "gameId": "2025_18_DAL_NYG",
+            "team": "DAL",
+            "kickoff": "2026-01-04T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.29,
+              "defense_pct": 0.0,
+              "st_pct": 0.54,
+              "offense_snaps": 16.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 14.0
+            }
+          },
+          {
+            "gameId": "2025_17_DAL_WAS",
+            "team": "DAL",
+            "kickoff": "2025-12-25T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.46,
+              "defense_pct": 0.0,
+              "st_pct": 0.45,
+              "offense_snaps": 42.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 13.0
+            }
+          },
+          {
+            "gameId": "2025_16_LAC_DAL",
+            "team": "DAL",
+            "kickoff": "2025-12-21T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.26,
+              "defense_pct": 0.0,
+              "st_pct": 0.55,
+              "offense_snaps": 15.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 12.0
+            }
+          },
+          {
+            "gameId": "2025_15_MIN_DAL",
+            "team": "DAL",
+            "kickoff": "2025-12-15T01:20:00+00:00",
+            "values": {
+              "offense_pct": 0.3,
+              "defense_pct": 0.0,
+              "st_pct": 0.56,
+              "offense_snaps": 21.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 18.0
+            }
+          },
+          {
+            "gameId": "2025_14_DAL_DET",
+            "team": "DAL",
+            "kickoff": "2025-12-05T01:15:00+00:00",
+            "values": {
+              "offense_pct": 0.21,
+              "defense_pct": 0.0,
+              "st_pct": 0.44,
+              "offense_snaps": 17.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 15.0
+            }
+          },
+          {
+            "gameId": "2025_13_KC_DAL",
+            "team": "DAL",
+            "kickoff": "2025-11-27T21:30:00+00:00",
+            "values": {
+              "offense_pct": 0.32,
+              "defense_pct": 0.0,
+              "st_pct": 0.39,
+              "offense_snaps": 23.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 11.0
+            }
+          },
+          {
+            "gameId": "2025_12_PHI_DAL",
+            "team": "DAL",
+            "kickoff": "2025-11-23T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.31,
+              "defense_pct": 0.0,
+              "st_pct": 0.45,
+              "offense_snaps": 23.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 13.0
+            }
+          },
+          {
+            "gameId": "2025_11_DAL_LV",
+            "team": "DAL",
+            "kickoff": "2025-11-18T01:15:00+00:00",
+            "values": {
+              "offense_pct": 0.45,
+              "defense_pct": 0.0,
+              "st_pct": 0.48,
+              "offense_snaps": 30.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 12.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
       "playerId": "00-0040017",
       "name": "Ajani Cornelius",
       "team": "DAL",
@@ -3711,7 +5034,7 @@
         "pfrId": "CornAj00",
         "appearances": 1,
         "lastAppearance": "2025-10-05T17:00:00+00:00",
-        "daysSinceLastAppearance": 340.2065564376505,
+        "daysSinceLastAppearance": 341.1523922530903,
         "historicalTeams": [
           "DAL"
         ],
@@ -3739,6 +5062,137 @@
       }
     },
     {
+      "playerId": "00-0038976",
+      "name": "Marvin Mims Jr.",
+      "team": "DEN",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "MimsMa00",
+        "appearances": 8,
+        "lastAppearance": "2026-01-25T20:00:00+00:00",
+        "daysSinceLastAppearance": 229.02739225309028,
+        "historicalTeams": [
+          "DEN"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.4345525413798868,
+          "defense_pct": 0.0,
+          "st_pct": 0.2720373236320252
+        },
+        "games": [
+          {
+            "gameId": "2025_21_NE_DEN",
+            "team": "DEN",
+            "kickoff": "2026-01-25T20:00:00+00:00",
+            "values": {
+              "offense_pct": 0.66,
+              "defense_pct": 0.0,
+              "st_pct": 0.31,
+              "offense_snaps": 38.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 8.0
+            }
+          },
+          {
+            "gameId": "2025_20_BUF_DEN",
+            "team": "DEN",
+            "kickoff": "2026-01-17T21:30:00+00:00",
+            "values": {
+              "offense_pct": 0.65,
+              "defense_pct": 0.0,
+              "st_pct": 0.1,
+              "offense_snaps": 47.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 3.0
+            }
+          },
+          {
+            "gameId": "2025_18_LAC_DEN",
+            "team": "DEN",
+            "kickoff": "2026-01-04T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.32,
+              "defense_pct": 0.0,
+              "st_pct": 0.33,
+              "offense_snaps": 19.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 9.0
+            }
+          },
+          {
+            "gameId": "2025_17_DEN_KC",
+            "team": "DEN",
+            "kickoff": "2025-12-26T01:15:00+00:00",
+            "values": {
+              "offense_pct": 0.47,
+              "defense_pct": 0.0,
+              "st_pct": 0.33,
+              "offense_snaps": 34.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 7.0
+            }
+          },
+          {
+            "gameId": "2025_16_JAX_DEN",
+            "team": "DEN",
+            "kickoff": "2025-12-21T21:05:00+00:00",
+            "values": {
+              "offense_pct": 0.32,
+              "defense_pct": 0.0,
+              "st_pct": 0.35,
+              "offense_snaps": 21.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 11.0
+            }
+          },
+          {
+            "gameId": "2025_15_GB_DEN",
+            "team": "DEN",
+            "kickoff": "2025-12-14T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.31,
+              "defense_pct": 0.0,
+              "st_pct": 0.15,
+              "offense_snaps": 21.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 4.0
+            }
+          },
+          {
+            "gameId": "2025_14_DEN_LV",
+            "team": "DEN",
+            "kickoff": "2025-12-07T21:05:00+00:00",
+            "values": {
+              "offense_pct": 0.27,
+              "defense_pct": 0.0,
+              "st_pct": 0.32,
+              "offense_snaps": 20.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 6.0
+            }
+          },
+          {
+            "gameId": "2025_13_DEN_WAS",
+            "team": "DEN",
+            "kickoff": "2025-12-01T01:20:00+00:00",
+            "values": {
+              "offense_pct": 0.33,
+              "defense_pct": 0.0,
+              "st_pct": 0.31,
+              "offense_snaps": 23.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 9.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
       "playerId": "00-0038660",
       "name": "Trevor Nowaske",
       "team": "DET",
@@ -3751,7 +5205,7 @@
         "pfrId": "NowaTr00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T21:25:00+00:00",
-        "daysSinceLastAppearance": 249.0225286598727,
+        "daysSinceLastAppearance": 249.96836447531248,
         "historicalTeams": [
           "DET"
         ],
@@ -3882,7 +5336,7 @@
         "pfrId": "IzieCh00",
         "appearances": 8,
         "lastAppearance": "2026-01-03T21:30:00+00:00",
-        "daysSinceLastAppearance": 250.01905643765048,
+        "daysSinceLastAppearance": 250.96489225309028,
         "historicalTeams": [
           "TB"
         ],
@@ -4013,7 +5467,7 @@
         "pfrId": "WingMe00",
         "appearances": 2,
         "lastAppearance": "2026-01-04T21:25:00+00:00",
-        "daysSinceLastAppearance": 249.0225286598727,
+        "daysSinceLastAppearance": 249.96836447531248,
         "historicalTeams": [
           "DET"
         ],
@@ -4066,7 +5520,7 @@
         "pfrId": "HarpTh00",
         "appearances": 8,
         "lastAppearance": "2025-12-25T21:30:00+00:00",
-        "daysSinceLastAppearance": 259.0190564376505,
+        "daysSinceLastAppearance": 259.9648922530903,
         "historicalTeams": [
           "DET"
         ],
@@ -4249,7 +5703,7 @@
         "pfrId": "HargJa00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T18:00:00+00:00",
-        "daysSinceLastAppearance": 249.1648897709838,
+        "daysSinceLastAppearance": 250.1107255864236,
         "historicalTeams": [
           "MIN"
         ],
@@ -4380,7 +5834,7 @@
         "pfrId": "BankAa00",
         "appearances": 8,
         "lastAppearance": "2026-01-11T01:00:00+00:00",
-        "daysSinceLastAppearance": 242.87322310431713,
+        "daysSinceLastAppearance": 243.81905891975694,
         "historicalTeams": [
           "GB"
         ],
@@ -4511,7 +5965,7 @@
         "pfrId": "WyatDe00",
         "appearances": 8,
         "lastAppearance": "2025-11-27T18:00:00+00:00",
-        "daysSinceLastAppearance": 287.1648897709838,
+        "daysSinceLastAppearance": 288.1107255864236,
         "historicalTeams": [
           "GB"
         ],
@@ -4642,7 +6096,7 @@
         "pfrId": "TomxZa00",
         "appearances": 8,
         "lastAppearance": "2025-12-14T21:25:00+00:00",
-        "daysSinceLastAppearance": 270.0225286598727,
+        "daysSinceLastAppearance": 270.9683644753125,
         "historicalTeams": [
           "GB"
         ],
@@ -4773,7 +6227,7 @@
         "pfrId": "HoppTy00",
         "appearances": 8,
         "lastAppearance": "2026-01-11T01:00:00+00:00",
-        "daysSinceLastAppearance": 242.87322310431713,
+        "daysSinceLastAppearance": 243.81905891975694,
         "historicalTeams": [
           "GB"
         ],
@@ -4904,7 +6358,7 @@
         "pfrId": "MorgJo03",
         "appearances": 8,
         "lastAppearance": "2026-01-11T01:00:00+00:00",
-        "daysSinceLastAppearance": 242.87322310431713,
+        "daysSinceLastAppearance": 243.81905891975694,
         "historicalTeams": [
           "GB"
         ],
@@ -5035,7 +6489,7 @@
         "pfrId": "SorrBa00",
         "appearances": 8,
         "lastAppearance": "2026-01-11T01:00:00+00:00",
-        "daysSinceLastAppearance": 242.87322310431713,
+        "daysSinceLastAppearance": 243.81905891975694,
         "historicalTeams": [
           "GB"
         ],
@@ -5166,7 +6620,7 @@
         "pfrId": "BrinWa00",
         "appearances": 8,
         "lastAppearance": "2026-01-11T01:00:00+00:00",
-        "daysSinceLastAppearance": 242.87322310431713,
+        "daysSinceLastAppearance": 243.81905891975694,
         "historicalTeams": [
           "GB"
         ],
@@ -5297,7 +6751,7 @@
         "pfrId": "BrowTr02",
         "appearances": 8,
         "lastAppearance": "2026-01-13T01:00:00+00:00",
-        "daysSinceLastAppearance": 240.87322310431713,
+        "daysSinceLastAppearance": 241.81905891975694,
         "historicalTeams": [
           "HOU"
         ],
@@ -5416,6 +6870,137 @@
       }
     },
     {
+      "playerId": "00-0039108",
+      "name": "Will Anderson Jr.",
+      "team": "HOU",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "AndeWi01",
+        "appearances": 8,
+        "lastAppearance": "2026-01-18T20:00:00+00:00",
+        "daysSinceLastAppearance": 236.02739225309028,
+        "historicalTeams": [
+          "HOU"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.0,
+          "defense_pct": 0.631483822412867,
+          "st_pct": 0.030374204776006043
+        },
+        "games": [
+          {
+            "gameId": "2025_20_HOU_NE",
+            "team": "HOU",
+            "kickoff": "2026-01-18T20:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.71,
+              "st_pct": 0.06,
+              "offense_snaps": 0.0,
+              "defense_snaps": 46.0,
+              "st_snaps": 2.0
+            }
+          },
+          {
+            "gameId": "2025_19_HOU_PIT",
+            "team": "HOU",
+            "kickoff": "2026-01-13T01:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.68,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 39.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_18_IND_HOU",
+            "team": "HOU",
+            "kickoff": "2026-01-04T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.29,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 19.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_17_HOU_LAC",
+            "team": "HOU",
+            "kickoff": "2025-12-27T21:30:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.7,
+              "st_pct": 0.07,
+              "offense_snaps": 0.0,
+              "defense_snaps": 44.0,
+              "st_snaps": 2.0
+            }
+          },
+          {
+            "gameId": "2025_16_LV_HOU",
+            "team": "HOU",
+            "kickoff": "2025-12-21T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.67,
+              "st_pct": 0.03,
+              "offense_snaps": 0.0,
+              "defense_snaps": 36.0,
+              "st_snaps": 1.0
+            }
+          },
+          {
+            "gameId": "2025_15_ARI_HOU",
+            "team": "HOU",
+            "kickoff": "2025-12-14T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.67,
+              "st_pct": 0.04,
+              "offense_snaps": 0.0,
+              "defense_snaps": 44.0,
+              "st_snaps": 1.0
+            }
+          },
+          {
+            "gameId": "2025_14_HOU_KC",
+            "team": "HOU",
+            "kickoff": "2025-12-08T01:20:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.72,
+              "st_pct": 0.04,
+              "offense_snaps": 0.0,
+              "defense_snaps": 46.0,
+              "st_snaps": 1.0
+            }
+          },
+          {
+            "gameId": "2025_13_HOU_IND",
+            "team": "HOU",
+            "kickoff": "2025-11-30T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.63,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 34.0,
+              "st_snaps": 0.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
       "playerId": "00-0041440",
       "name": "Kayden McDonald",
       "team": "HOU",
@@ -5442,6 +7027,137 @@
       }
     },
     {
+      "playerId": "00-0033952",
+      "name": "Grover Stewart",
+      "team": "IND",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "StewGr00",
+        "appearances": 8,
+        "lastAppearance": "2026-01-04T18:00:00+00:00",
+        "daysSinceLastAppearance": 250.1107255864236,
+        "historicalTeams": [
+          "IND"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.0,
+          "defense_pct": 0.6050647472658489,
+          "st_pct": 0.21414858747869403
+        },
+        "games": [
+          {
+            "gameId": "2025_18_IND_HOU",
+            "team": "IND",
+            "kickoff": "2026-01-04T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.54,
+              "st_pct": 0.25,
+              "offense_snaps": 0.0,
+              "defense_snaps": 37.0,
+              "st_snaps": 9.0
+            }
+          },
+          {
+            "gameId": "2025_17_JAX_IND",
+            "team": "IND",
+            "kickoff": "2025-12-28T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.61,
+              "st_pct": 0.21,
+              "offense_snaps": 0.0,
+              "defense_snaps": 42.0,
+              "st_snaps": 5.0
+            }
+          },
+          {
+            "gameId": "2025_16_SF_IND",
+            "team": "IND",
+            "kickoff": "2025-12-23T01:15:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.67,
+              "st_pct": 0.29,
+              "offense_snaps": 0.0,
+              "defense_snaps": 44.0,
+              "st_snaps": 9.0
+            }
+          },
+          {
+            "gameId": "2025_15_IND_SEA",
+            "team": "IND",
+            "kickoff": "2025-12-14T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.47,
+              "st_pct": 0.2,
+              "offense_snaps": 0.0,
+              "defense_snaps": 28.0,
+              "st_snaps": 6.0
+            }
+          },
+          {
+            "gameId": "2025_14_IND_JAX",
+            "team": "IND",
+            "kickoff": "2025-12-07T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.56,
+              "st_pct": 0.26,
+              "offense_snaps": 0.0,
+              "defense_snaps": 36.0,
+              "st_snaps": 7.0
+            }
+          },
+          {
+            "gameId": "2025_13_HOU_IND",
+            "team": "IND",
+            "kickoff": "2025-11-30T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.68,
+              "st_pct": 0.18,
+              "offense_snaps": 0.0,
+              "defense_snaps": 52.0,
+              "st_snaps": 4.0
+            }
+          },
+          {
+            "gameId": "2025_12_IND_KC",
+            "team": "IND",
+            "kickoff": "2025-11-23T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.67,
+              "st_pct": 0.17,
+              "offense_snaps": 0.0,
+              "defense_snaps": 64.0,
+              "st_snaps": 5.0
+            }
+          },
+          {
+            "gameId": "2025_10_ATL_IND",
+            "team": "IND",
+            "kickoff": "2025-11-09T14:30:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.68,
+              "st_pct": 0.11,
+              "offense_snaps": 0.0,
+              "defense_snaps": 43.0,
+              "st_snaps": 3.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
       "playerId": "00-0037292",
       "name": "Andrew Ogletree",
       "team": "IND",
@@ -5454,7 +7170,7 @@
         "pfrId": "OgleAn00",
         "appearances": 8,
         "lastAppearance": "2025-12-23T01:15:00+00:00",
-        "daysSinceLastAppearance": 261.8628064376505,
+        "daysSinceLastAppearance": 262.8086422530903,
         "historicalTeams": [
           "IND"
         ],
@@ -5585,7 +7301,7 @@
         "pfrId": "PierAl00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T18:00:00+00:00",
-        "daysSinceLastAppearance": 249.1648897709838,
+        "daysSinceLastAppearance": 250.1107255864236,
         "historicalTeams": [
           "IND"
         ],
@@ -5704,6 +7420,59 @@
       }
     },
     {
+      "playerId": "00-0039164",
+      "name": "Anthony Richardson",
+      "team": "IND",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "RichAn03",
+        "appearances": 2,
+        "lastAppearance": "2025-10-05T17:00:00+00:00",
+        "daysSinceLastAppearance": 341.1523922530903,
+        "historicalTeams": [
+          "IND"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.1147307036108828,
+          "defense_pct": 0.0,
+          "st_pct": 0.0
+        },
+        "games": [
+          {
+            "gameId": "2025_05_LV_IND",
+            "team": "IND",
+            "kickoff": "2025-10-05T17:00:00+00:00",
+            "values": {
+              "offense_pct": 0.11,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 7.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_03_IND_TEN",
+            "team": "IND",
+            "kickoff": "2025-09-21T17:00:00+00:00",
+            "values": {
+              "offense_pct": 0.12,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 7.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
       "playerId": "00-0039876",
       "name": "Sedrick Van Pran-Granger",
       "team": "IND",
@@ -5716,7 +7485,7 @@
         "pfrId": "VanPSe00",
         "appearances": 8,
         "lastAppearance": "2026-01-17T21:30:00+00:00",
-        "daysSinceLastAppearance": 236.01905643765048,
+        "daysSinceLastAppearance": 236.96489225309028,
         "historicalTeams": [
           "BUF"
         ],
@@ -5860,7 +7629,7 @@
         "pfrId": "MeyeJa01",
         "appearances": 8,
         "lastAppearance": "2026-01-11T18:00:00+00:00",
-        "daysSinceLastAppearance": 242.1648897709838,
+        "daysSinceLastAppearance": 243.1107255864236,
         "historicalTeams": [
           "JAX"
         ],
@@ -5991,7 +7760,7 @@
         "pfrId": "VanxCo00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T18:00:00+00:00",
-        "daysSinceLastAppearance": 249.1648897709838,
+        "daysSinceLastAppearance": 250.1107255864236,
         "historicalTeams": [
           "JAX"
         ],
@@ -6122,7 +7891,7 @@
         "pfrId": "AlleLe01",
         "appearances": 8,
         "lastAppearance": "2026-01-11T18:00:00+00:00",
-        "daysSinceLastAppearance": 242.1648897709838,
+        "daysSinceLastAppearance": 243.1107255864236,
         "historicalTeams": [
           "JAX"
         ],
@@ -6241,6 +8010,1185 @@
       }
     },
     {
+      "playerId": "00-0033873",
+      "name": "Patrick Mahomes",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "MahoPa00",
+        "appearances": 8,
+        "lastAppearance": "2025-12-14T18:00:00+00:00",
+        "daysSinceLastAppearance": 271.1107255864236,
+        "historicalTeams": [
+          "KC"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.9679642936573116,
+          "defense_pct": 0.0,
+          "st_pct": 0.0
+        },
+        "games": [
+          {
+            "gameId": "2025_15_LAC_KC",
+            "team": "KC",
+            "kickoff": "2025-12-14T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.92,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 56.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_14_HOU_KC",
+            "team": "KC",
+            "kickoff": "2025-12-08T01:20:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 64.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_13_KC_DAL",
+            "team": "KC",
+            "kickoff": "2025-11-27T21:30:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 66.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_12_IND_KC",
+            "team": "KC",
+            "kickoff": "2025-11-23T18:00:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 96.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_11_KC_DEN",
+            "team": "KC",
+            "kickoff": "2025-11-16T21:25:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 70.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_09_KC_BUF",
+            "team": "KC",
+            "kickoff": "2025-11-02T21:25:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 60.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_08_WAS_KC",
+            "team": "KC",
+            "kickoff": "2025-10-28T00:15:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 69.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_07_LV_KC",
+            "team": "KC",
+            "kickoff": "2025-10-19T17:00:00+00:00",
+            "values": {
+              "offense_pct": 0.8,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 65.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
+      "playerId": "00-0036374",
+      "name": "L'Jarius Sneed",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "SneeLJ00",
+        "appearances": 7,
+        "lastAppearance": "2025-10-19T17:00:00+00:00",
+        "daysSinceLastAppearance": 327.1523922530903,
+        "historicalTeams": [
+          "TEN"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.0,
+          "defense_pct": 0.8072386077534018,
+          "st_pct": 0.0
+        },
+        "games": [
+          {
+            "gameId": "2025_07_NE_TEN",
+            "team": "TEN",
+            "kickoff": "2025-10-19T17:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.51,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 33.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_06_TEN_LV",
+            "team": "TEN",
+            "kickoff": "2025-10-12T20:05:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.97,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 59.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_05_TEN_ARI",
+            "team": "TEN",
+            "kickoff": "2025-10-05T20:05:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.94,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 64.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_04_TEN_HOU",
+            "team": "TEN",
+            "kickoff": "2025-09-28T17:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 1.0,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 71.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_03_IND_TEN",
+            "team": "TEN",
+            "kickoff": "2025-09-21T17:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 1.0,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 57.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_02_LA_TEN",
+            "team": "TEN",
+            "kickoff": "2025-09-14T17:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.92,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 56.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_01_TEN_DEN",
+            "team": "TEN",
+            "kickoff": "2025-09-07T20:05:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.28,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 21.0,
+              "st_snaps": 0.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
+      "playerId": "00-0036660",
+      "name": "Trey Smith",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "SmitTr05",
+        "appearances": 8,
+        "lastAppearance": "2025-12-26T01:15:00+00:00",
+        "daysSinceLastAppearance": 259.8086422530903,
+        "historicalTeams": [
+          "KC"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.8410032659896741,
+          "defense_pct": 0.0,
+          "st_pct": 0.13051799574379638
+        },
+        "games": [
+          {
+            "gameId": "2025_17_DEN_KC",
+            "team": "KC",
+            "kickoff": "2025-12-26T01:15:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.14,
+              "offense_snaps": 43.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 3.0
+            }
+          },
+          {
+            "gameId": "2025_16_KC_TEN",
+            "team": "KC",
+            "kickoff": "2025-12-21T18:00:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.15,
+              "offense_snaps": 45.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 4.0
+            }
+          },
+          {
+            "gameId": "2025_12_IND_KC",
+            "team": "KC",
+            "kickoff": "2025-11-23T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.41,
+              "defense_pct": 0.0,
+              "st_pct": 0.07,
+              "offense_snaps": 39.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 2.0
+            }
+          },
+          {
+            "gameId": "2025_11_KC_DEN",
+            "team": "KC",
+            "kickoff": "2025-11-16T21:25:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.14,
+              "offense_snaps": 70.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 4.0
+            }
+          },
+          {
+            "gameId": "2025_09_KC_BUF",
+            "team": "KC",
+            "kickoff": "2025-11-02T21:25:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.12,
+              "offense_snaps": 60.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 3.0
+            }
+          },
+          {
+            "gameId": "2025_07_LV_KC",
+            "team": "KC",
+            "kickoff": "2025-10-19T17:00:00+00:00",
+            "values": {
+              "offense_pct": 0.21,
+              "defense_pct": 0.0,
+              "st_pct": 0.05,
+              "offense_snaps": 17.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 1.0
+            }
+          },
+          {
+            "gameId": "2025_06_DET_KC",
+            "team": "KC",
+            "kickoff": "2025-10-13T00:20:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.23,
+              "offense_snaps": 64.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 5.0
+            }
+          },
+          {
+            "gameId": "2025_05_KC_JAX",
+            "team": "KC",
+            "kickoff": "2025-10-07T00:15:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.15,
+              "offense_snaps": 64.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 4.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
+      "playerId": "00-0037208",
+      "name": "Jack Cochrane",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "CochJa00",
+        "appearances": 8,
+        "lastAppearance": "2026-01-04T21:25:00+00:00",
+        "daysSinceLastAppearance": 249.96836447531248,
+        "historicalTeams": [
+          "KC"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.0,
+          "defense_pct": 0.06698449102605039,
+          "st_pct": 0.8495213521508547
+        },
+        "games": [
+          {
+            "gameId": "2025_18_KC_LV",
+            "team": "KC",
+            "kickoff": "2026-01-04T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.88,
+              "offense_snaps": 0.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 28.0
+            }
+          },
+          {
+            "gameId": "2025_17_DEN_KC",
+            "team": "KC",
+            "kickoff": "2025-12-26T01:15:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.01,
+              "st_pct": 0.86,
+              "offense_snaps": 0.0,
+              "defense_snaps": 1.0,
+              "st_snaps": 18.0
+            }
+          },
+          {
+            "gameId": "2025_16_KC_TEN",
+            "team": "KC",
+            "kickoff": "2025-12-21T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.4,
+              "st_pct": 0.85,
+              "offense_snaps": 0.0,
+              "defense_snaps": 29.0,
+              "st_snaps": 23.0
+            }
+          },
+          {
+            "gameId": "2025_15_LAC_KC",
+            "team": "KC",
+            "kickoff": "2025-12-14T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.09,
+              "st_pct": 0.88,
+              "offense_snaps": 0.0,
+              "defense_snaps": 6.0,
+              "st_snaps": 21.0
+            }
+          },
+          {
+            "gameId": "2025_14_HOU_KC",
+            "team": "KC",
+            "kickoff": "2025-12-08T01:20:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.89,
+              "offense_snaps": 0.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 24.0
+            }
+          },
+          {
+            "gameId": "2025_13_KC_DAL",
+            "team": "KC",
+            "kickoff": "2025-11-27T21:30:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.86,
+              "offense_snaps": 0.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 24.0
+            }
+          },
+          {
+            "gameId": "2025_12_IND_KC",
+            "team": "KC",
+            "kickoff": "2025-11-23T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.72,
+              "offense_snaps": 0.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 21.0
+            }
+          },
+          {
+            "gameId": "2025_11_KC_DEN",
+            "team": "KC",
+            "kickoff": "2025-11-16T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.83,
+              "offense_snaps": 0.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 24.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
+      "playerId": "00-0038982",
+      "name": "Chamarri Conner",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "ConnCh01",
+        "appearances": 8,
+        "lastAppearance": "2026-01-04T21:25:00+00:00",
+        "daysSinceLastAppearance": 249.96836447531248,
+        "historicalTeams": [
+          "KC"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.0,
+          "defense_pct": 0.9955011201330101,
+          "st_pct": 0.15143582860385485
+        },
+        "games": [
+          {
+            "gameId": "2025_18_KC_LV",
+            "team": "KC",
+            "kickoff": "2026-01-04T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 1.0,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 62.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_17_DEN_KC",
+            "team": "KC",
+            "kickoff": "2025-12-26T01:15:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 1.0,
+              "st_pct": 0.19,
+              "offense_snaps": 0.0,
+              "defense_snaps": 72.0,
+              "st_snaps": 4.0
+            }
+          },
+          {
+            "gameId": "2025_16_KC_TEN",
+            "team": "KC",
+            "kickoff": "2025-12-21T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 1.0,
+              "st_pct": 0.19,
+              "offense_snaps": 0.0,
+              "defense_snaps": 73.0,
+              "st_snaps": 5.0
+            }
+          },
+          {
+            "gameId": "2025_15_LAC_KC",
+            "team": "KC",
+            "kickoff": "2025-12-14T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 1.0,
+              "st_pct": 0.17,
+              "offense_snaps": 0.0,
+              "defense_snaps": 66.0,
+              "st_snaps": 4.0
+            }
+          },
+          {
+            "gameId": "2025_14_HOU_KC",
+            "team": "KC",
+            "kickoff": "2025-12-08T01:20:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 1.0,
+              "st_pct": 0.11,
+              "offense_snaps": 0.0,
+              "defense_snaps": 70.0,
+              "st_snaps": 3.0
+            }
+          },
+          {
+            "gameId": "2025_13_KC_DAL",
+            "team": "KC",
+            "kickoff": "2025-11-27T21:30:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.96,
+              "st_pct": 0.21,
+              "offense_snaps": 0.0,
+              "defense_snaps": 69.0,
+              "st_snaps": 6.0
+            }
+          },
+          {
+            "gameId": "2025_12_IND_KC",
+            "team": "KC",
+            "kickoff": "2025-11-23T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 1.0,
+              "st_pct": 0.21,
+              "offense_snaps": 0.0,
+              "defense_snaps": 51.0,
+              "st_snaps": 6.0
+            }
+          },
+          {
+            "gameId": "2025_11_KC_DEN",
+            "team": "KC",
+            "kickoff": "2025-11-16T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 1.0,
+              "st_pct": 0.17,
+              "offense_snaps": 0.0,
+              "defense_snaps": 62.0,
+              "st_snaps": 5.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
+      "playerId": "00-0039067",
+      "name": "Rashee Rice",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "RiceRa01",
+        "appearances": 8,
+        "lastAppearance": "2025-12-14T18:00:00+00:00",
+        "daysSinceLastAppearance": 271.1107255864236,
+        "historicalTeams": [
+          "KC"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.7583920488572666,
+          "defense_pct": 0.0,
+          "st_pct": 0.0
+        },
+        "games": [
+          {
+            "gameId": "2025_15_LAC_KC",
+            "team": "KC",
+            "kickoff": "2025-12-14T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.85,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 52.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_14_HOU_KC",
+            "team": "KC",
+            "kickoff": "2025-12-08T01:20:00+00:00",
+            "values": {
+              "offense_pct": 0.78,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 50.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_13_KC_DAL",
+            "team": "KC",
+            "kickoff": "2025-11-27T21:30:00+00:00",
+            "values": {
+              "offense_pct": 0.89,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 59.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_12_IND_KC",
+            "team": "KC",
+            "kickoff": "2025-11-23T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.62,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 60.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_11_KC_DEN",
+            "team": "KC",
+            "kickoff": "2025-11-16T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.76,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 53.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_09_KC_BUF",
+            "team": "KC",
+            "kickoff": "2025-11-02T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.82,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 49.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_08_WAS_KC",
+            "team": "KC",
+            "kickoff": "2025-10-28T00:15:00+00:00",
+            "values": {
+              "offense_pct": 0.86,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 59.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_07_LV_KC",
+            "team": "KC",
+            "kickoff": "2025-10-19T17:00:00+00:00",
+            "values": {
+              "offense_pct": 0.41,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 33.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
+      "playerId": "00-0039894",
+      "name": "Xavier Worthy",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "WortXa00",
+        "appearances": 8,
+        "lastAppearance": "2025-12-26T01:15:00+00:00",
+        "daysSinceLastAppearance": 259.8086422530903,
+        "historicalTeams": [
+          "KC"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.7873594608855821,
+          "defense_pct": 0.0,
+          "st_pct": 0.03873176626351632
+        },
+        "games": [
+          {
+            "gameId": "2025_17_DEN_KC",
+            "team": "KC",
+            "kickoff": "2025-12-26T01:15:00+00:00",
+            "values": {
+              "offense_pct": 0.79,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 34.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_16_KC_TEN",
+            "team": "KC",
+            "kickoff": "2025-12-21T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.84,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 38.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_15_LAC_KC",
+            "team": "KC",
+            "kickoff": "2025-12-14T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.67,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 41.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_14_HOU_KC",
+            "team": "KC",
+            "kickoff": "2025-12-08T01:20:00+00:00",
+            "values": {
+              "offense_pct": 0.77,
+              "defense_pct": 0.0,
+              "st_pct": 0.3,
+              "offense_snaps": 49.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 8.0
+            }
+          },
+          {
+            "gameId": "2025_13_KC_DAL",
+            "team": "KC",
+            "kickoff": "2025-11-27T21:30:00+00:00",
+            "values": {
+              "offense_pct": 0.88,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 58.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_12_IND_KC",
+            "team": "KC",
+            "kickoff": "2025-11-23T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.77,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 74.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_11_KC_DEN",
+            "team": "KC",
+            "kickoff": "2025-11-16T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.76,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 53.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_09_KC_BUF",
+            "team": "KC",
+            "kickoff": "2025-11-02T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.83,
+              "defense_pct": 0.0,
+              "st_pct": 0.0,
+              "offense_snaps": 50.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 0.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
+      "playerId": "00-0040116",
+      "name": "Josh Simmons",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "SimmJo01",
+        "appearances": 8,
+        "lastAppearance": "2025-11-27T21:30:00+00:00",
+        "daysSinceLastAppearance": 287.9648922530903,
+        "historicalTeams": [
+          "KC"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.9255346502360918,
+          "defense_pct": 0.0,
+          "st_pct": 0.16750495893804832
+        },
+        "games": [
+          {
+            "gameId": "2025_13_KC_DAL",
+            "team": "KC",
+            "kickoff": "2025-11-27T21:30:00+00:00",
+            "values": {
+              "offense_pct": 0.7,
+              "defense_pct": 0.0,
+              "st_pct": 0.07,
+              "offense_snaps": 46.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 2.0
+            }
+          },
+          {
+            "gameId": "2025_12_IND_KC",
+            "team": "KC",
+            "kickoff": "2025-11-23T18:00:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.17,
+              "offense_snaps": 96.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 5.0
+            }
+          },
+          {
+            "gameId": "2025_11_KC_DEN",
+            "team": "KC",
+            "kickoff": "2025-11-16T21:25:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.14,
+              "offense_snaps": 70.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 4.0
+            }
+          },
+          {
+            "gameId": "2025_05_KC_JAX",
+            "team": "KC",
+            "kickoff": "2025-10-07T00:15:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.15,
+              "offense_snaps": 64.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 4.0
+            }
+          },
+          {
+            "gameId": "2025_04_BAL_KC",
+            "team": "KC",
+            "kickoff": "2025-09-28T20:25:00+00:00",
+            "values": {
+              "offense_pct": 0.92,
+              "defense_pct": 0.0,
+              "st_pct": 0.31,
+              "offense_snaps": 67.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 8.0
+            }
+          },
+          {
+            "gameId": "2025_03_KC_NYG",
+            "team": "KC",
+            "kickoff": "2025-09-22T00:20:00+00:00",
+            "values": {
+              "offense_pct": 0.92,
+              "defense_pct": 0.0,
+              "st_pct": 0.29,
+              "offense_snaps": 66.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 6.0
+            }
+          },
+          {
+            "gameId": "2025_02_PHI_KC",
+            "team": "KC",
+            "kickoff": "2025-09-14T20:25:00+00:00",
+            "values": {
+              "offense_pct": 0.93,
+              "defense_pct": 0.0,
+              "st_pct": 0.12,
+              "offense_snaps": 56.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 3.0
+            }
+          },
+          {
+            "gameId": "2025_01_KC_LAC",
+            "team": "KC",
+            "kickoff": "2025-09-06T00:00:00+00:00",
+            "values": {
+              "offense_pct": 1.0,
+              "defense_pct": 0.0,
+              "st_pct": 0.16,
+              "offense_snaps": 61.0,
+              "defense_snaps": 0.0,
+              "st_snaps": 4.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
+      "playerId": "00-0040640",
+      "name": "Ashton Gillotte",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "GillAs00",
+        "appearances": 8,
+        "lastAppearance": "2026-01-04T21:25:00+00:00",
+        "daysSinceLastAppearance": 249.96836447531248,
+        "historicalTeams": [
+          "KC"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.0,
+          "defense_pct": 0.5416843850435108,
+          "st_pct": 0.14360606786180186
+        },
+        "games": [
+          {
+            "gameId": "2025_18_KC_LV",
+            "team": "KC",
+            "kickoff": "2026-01-04T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.74,
+              "st_pct": 0.03,
+              "offense_snaps": 0.0,
+              "defense_snaps": 46.0,
+              "st_snaps": 1.0
+            }
+          },
+          {
+            "gameId": "2025_17_DEN_KC",
+            "team": "KC",
+            "kickoff": "2025-12-26T01:15:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.62,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 45.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_16_KC_TEN",
+            "team": "KC",
+            "kickoff": "2025-12-21T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.62,
+              "st_pct": 0.22,
+              "offense_snaps": 0.0,
+              "defense_snaps": 45.0,
+              "st_snaps": 6.0
+            }
+          },
+          {
+            "gameId": "2025_15_LAC_KC",
+            "team": "KC",
+            "kickoff": "2025-12-14T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.5,
+              "st_pct": 0.25,
+              "offense_snaps": 0.0,
+              "defense_snaps": 33.0,
+              "st_snaps": 6.0
+            }
+          },
+          {
+            "gameId": "2025_14_HOU_KC",
+            "team": "KC",
+            "kickoff": "2025-12-08T01:20:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.56,
+              "st_pct": 0.11,
+              "offense_snaps": 0.0,
+              "defense_snaps": 39.0,
+              "st_snaps": 3.0
+            }
+          },
+          {
+            "gameId": "2025_13_KC_DAL",
+            "team": "KC",
+            "kickoff": "2025-11-27T21:30:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.47,
+              "st_pct": 0.18,
+              "offense_snaps": 0.0,
+              "defense_snaps": 34.0,
+              "st_snaps": 5.0
+            }
+          },
+          {
+            "gameId": "2025_12_IND_KC",
+            "team": "KC",
+            "kickoff": "2025-11-23T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.43,
+              "st_pct": 0.24,
+              "offense_snaps": 0.0,
+              "defense_snaps": 22.0,
+              "st_snaps": 7.0
+            }
+          },
+          {
+            "gameId": "2025_11_KC_DEN",
+            "team": "KC",
+            "kickoff": "2025-11-16T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.27,
+              "st_pct": 0.17,
+              "offense_snaps": 0.0,
+              "defense_snaps": 17.0,
+              "st_snaps": 5.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
+      "playerId": "00-0041501",
+      "name": "R Mason Thomas",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "unavailable",
+        "reason": "No eligible historical appearances"
+      }
+    },
+    {
       "playerId": "00-0031388",
       "name": "Aaron Donald",
       "team": "LA",
@@ -6266,7 +9214,7 @@
         "pfrId": "HigbTy00",
         "appearances": 8,
         "lastAppearance": "2026-01-25T23:30:00+00:00",
-        "daysSinceLastAppearance": 227.93572310431713,
+        "daysSinceLastAppearance": 228.88155891975694,
         "historicalTeams": [
           "LA"
         ],
@@ -6397,7 +9345,7 @@
         "pfrId": "GarrMy00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T18:00:00+00:00",
-        "daysSinceLastAppearance": 249.1648897709838,
+        "daysSinceLastAppearance": 250.1107255864236,
         "historicalTeams": [
           "CLE"
         ],
@@ -6528,7 +9476,7 @@
         "pfrId": "JackAl01",
         "appearances": 8,
         "lastAppearance": "2026-01-25T23:30:00+00:00",
-        "daysSinceLastAppearance": 227.93572310431713,
+        "daysSinceLastAppearance": 228.88155891975694,
         "historicalTeams": [
           "LA"
         ],
@@ -6659,7 +9607,7 @@
         "pfrId": "StuaGr00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T21:25:00+00:00",
-        "daysSinceLastAppearance": 249.0225286598727,
+        "daysSinceLastAppearance": 249.96836447531248,
         "historicalTeams": [
           "DET"
         ],
@@ -6790,7 +9738,7 @@
         "pfrId": "WatsJa02",
         "appearances": 8,
         "lastAppearance": "2025-12-21T18:00:00+00:00",
-        "daysSinceLastAppearance": 263.1648897709838,
+        "daysSinceLastAppearance": 264.1107255864236,
         "historicalTeams": [
           "KC"
         ],
@@ -6921,7 +9869,7 @@
         "pfrId": "YounBy01",
         "appearances": 8,
         "lastAppearance": "2026-01-25T23:30:00+00:00",
-        "daysSinceLastAppearance": 227.93572310431713,
+        "daysSinceLastAppearance": 228.88155891975694,
         "historicalTeams": [
           "LA"
         ],
@@ -7052,7 +10000,7 @@
         "pfrId": "MackKh00",
         "appearances": 8,
         "lastAppearance": "2026-01-12T01:00:00+00:00",
-        "daysSinceLastAppearance": 241.87322310431713,
+        "daysSinceLastAppearance": 242.81905891975694,
         "historicalTeams": [
           "LAC"
         ],
@@ -7183,7 +10131,7 @@
         "pfrId": "LeonDe00",
         "appearances": 8,
         "lastAppearance": "2026-01-12T01:00:00+00:00",
-        "daysSinceLastAppearance": 241.87322310431713,
+        "daysSinceLastAppearance": 242.81905891975694,
         "historicalTeams": [
           "LAC"
         ],
@@ -7314,7 +10262,7 @@
         "pfrId": "MitcKe01",
         "appearances": 8,
         "lastAppearance": "2026-01-05T01:20:00+00:00",
-        "daysSinceLastAppearance": 248.85933421542825,
+        "daysSinceLastAppearance": 249.80517003086806,
         "historicalTeams": [
           "BAL"
         ],
@@ -7445,7 +10393,7 @@
         "pfrId": "TuipTu00",
         "appearances": 8,
         "lastAppearance": "2026-01-12T01:00:00+00:00",
-        "daysSinceLastAppearance": 241.87322310431713,
+        "daysSinceLastAppearance": 242.81905891975694,
         "historicalTeams": [
           "LAC"
         ],
@@ -7576,7 +10524,7 @@
         "pfrId": "MickRJ00",
         "appearances": 8,
         "lastAppearance": "2026-01-12T01:00:00+00:00",
-        "daysSinceLastAppearance": 241.87322310431713,
+        "daysSinceLastAppearance": 242.81905891975694,
         "historicalTeams": [
           "LAC"
         ],
@@ -7720,7 +10668,7 @@
         "pfrId": "BoweBr01",
         "appearances": 8,
         "lastAppearance": "2025-12-21T21:25:00+00:00",
-        "daysSinceLastAppearance": 263.0225286598727,
+        "daysSinceLastAppearance": 263.9683644753125,
         "historicalTeams": [
           "LV"
         ],
@@ -7851,7 +10799,7 @@
         "pfrId": "JeanAs00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T21:25:00+00:00",
-        "daysSinceLastAppearance": 249.0225286598727,
+        "daysSinceLastAppearance": 249.96836447531248,
         "historicalTeams": [
           "LV"
         ],
@@ -7982,7 +10930,7 @@
         "pfrId": "HarrRo02",
         "appearances": 8,
         "lastAppearance": "2025-12-30T01:15:00+00:00",
-        "daysSinceLastAppearance": 254.86280643765048,
+        "daysSinceLastAppearance": 255.80864225309028,
         "historicalTeams": [
           "ATL"
         ],
@@ -8178,7 +11126,7 @@
         "pfrId": "BarmCh00",
         "appearances": 8,
         "lastAppearance": "2026-02-08T23:30:00+00:00",
-        "daysSinceLastAppearance": 213.93572310431713,
+        "daysSinceLastAppearance": 214.88155891975694,
         "historicalTeams": [
           "NE"
         ],
@@ -8309,7 +11257,7 @@
         "pfrId": "BrowBe01",
         "appearances": 8,
         "lastAppearance": "2026-02-08T23:30:00+00:00",
-        "daysSinceLastAppearance": 213.93572310431713,
+        "daysSinceLastAppearance": 214.88155891975694,
         "historicalTeams": [
           "NE"
         ],
@@ -8440,7 +11388,7 @@
         "pfrId": "HendTr02",
         "appearances": 8,
         "lastAppearance": "2026-02-08T23:30:00+00:00",
-        "daysSinceLastAppearance": 213.93572310431713,
+        "daysSinceLastAppearance": 214.88155891975694,
         "historicalTeams": [
           "NE"
         ],
@@ -8571,7 +11519,7 @@
         "pfrId": "JordCa00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T18:00:00+00:00",
-        "daysSinceLastAppearance": 249.1648897709838,
+        "daysSinceLastAppearance": 250.1107255864236,
         "historicalTeams": [
           "NO"
         ],
@@ -8690,6 +11638,137 @@
       }
     },
     {
+      "playerId": "00-0033860",
+      "name": "Davon Godchaux",
+      "team": "NO",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "GodcDa00",
+        "appearances": 8,
+        "lastAppearance": "2026-01-04T18:00:00+00:00",
+        "daysSinceLastAppearance": 250.1107255864236,
+        "historicalTeams": [
+          "NO"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.0,
+          "defense_pct": 0.30303391724340006,
+          "st_pct": 0.0
+        },
+        "games": [
+          {
+            "gameId": "2025_18_NO_ATL",
+            "team": "NO",
+            "kickoff": "2026-01-04T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.05,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 3.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_17_NO_TEN",
+            "team": "NO",
+            "kickoff": "2025-12-28T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.28,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 21.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_16_NYJ_NO",
+            "team": "NO",
+            "kickoff": "2025-12-21T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.2,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 13.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_15_CAR_NO",
+            "team": "NO",
+            "kickoff": "2025-12-14T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.4,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 23.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_14_NO_TB",
+            "team": "NO",
+            "kickoff": "2025-12-07T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.28,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 21.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_13_NO_MIA",
+            "team": "NO",
+            "kickoff": "2025-11-30T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.48,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 29.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_12_ATL_NO",
+            "team": "NO",
+            "kickoff": "2025-11-23T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.52,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 29.0,
+              "st_snaps": 0.0
+            }
+          },
+          {
+            "gameId": "2025_10_NO_CAR",
+            "team": "NO",
+            "kickoff": "2025-11-09T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.32,
+              "st_pct": 0.0,
+              "offense_snaps": 0.0,
+              "defense_snaps": 17.0,
+              "st_snaps": 0.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
       "playerId": "00-0033906",
       "name": "Alvin Kamara",
       "team": "NO",
@@ -8702,7 +11781,7 @@
         "pfrId": "KamaAl00",
         "appearances": 8,
         "lastAppearance": "2025-11-23T21:25:00+00:00",
-        "daysSinceLastAppearance": 291.0225286598727,
+        "daysSinceLastAppearance": 291.9683644753125,
         "historicalTeams": [
           "NO"
         ],
@@ -8833,7 +11912,7 @@
         "pfrId": "EstiAu00",
         "appearances": 7,
         "lastAppearance": "2026-01-04T18:00:00+00:00",
-        "daysSinceLastAppearance": 249.1648897709838,
+        "daysSinceLastAppearance": 250.1107255864236,
         "historicalTeams": [
           "NO"
         ],
@@ -8964,7 +12043,7 @@
         "pfrId": "HarrSh00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T18:00:00+00:00",
-        "daysSinceLastAppearance": 249.1648897709838,
+        "daysSinceLastAppearance": 250.1107255864236,
         "historicalTeams": [
           "CLE"
         ],
@@ -9095,7 +12174,7 @@
         "pfrId": "ThomAn02",
         "appearances": 8,
         "lastAppearance": "2025-12-21T18:00:00+00:00",
-        "daysSinceLastAppearance": 263.1648897709838,
+        "daysSinceLastAppearance": 264.1107255864236,
         "historicalTeams": [
           "NYG"
         ],
@@ -9226,7 +12305,7 @@
         "pfrId": "NabeMa00",
         "appearances": 4,
         "lastAppearance": "2025-09-28T17:00:00+00:00",
-        "daysSinceLastAppearance": 347.2065564376505,
+        "daysSinceLastAppearance": 348.1523922530903,
         "historicalTeams": [
           "NYG"
         ],
@@ -9305,7 +12384,7 @@
         "pfrId": "HudsBr00",
         "appearances": 2,
         "lastAppearance": "2026-01-04T18:00:00+00:00",
-        "daysSinceLastAppearance": 249.1648897709838,
+        "daysSinceLastAppearance": 250.1107255864236,
         "historicalTeams": [
           "NYG"
         ],
@@ -9358,7 +12437,7 @@
         "pfrId": "JohnTh00",
         "appearances": 8,
         "lastAppearance": "2025-12-21T18:00:00+00:00",
-        "daysSinceLastAppearance": 263.1648897709838,
+        "daysSinceLastAppearance": 264.1107255864236,
         "historicalTeams": [
           "NYG"
         ],
@@ -9489,7 +12568,7 @@
         "pfrId": "PatrTi00",
         "appearances": 8,
         "lastAppearance": "2026-01-11T18:00:00+00:00",
-        "daysSinceLastAppearance": 242.1648897709838,
+        "daysSinceLastAppearance": 243.1107255864236,
         "historicalTeams": [
           "JAX"
         ],
@@ -9620,7 +12699,7 @@
         "pfrId": "OssaJo00",
         "appearances": 8,
         "lastAppearance": "2025-12-14T18:00:00+00:00",
-        "daysSinceLastAppearance": 270.1648897709838,
+        "daysSinceLastAppearance": 271.1107255864236,
         "historicalTeams": [
           "CIN"
         ],
@@ -9751,7 +12830,7 @@
         "pfrId": "HallBr03",
         "appearances": 8,
         "lastAppearance": "2025-12-28T18:00:00+00:00",
-        "daysSinceLastAppearance": 256.1648897709838,
+        "daysSinceLastAppearance": 257.1107255864236,
         "historicalTeams": [
           "NYJ"
         ],
@@ -9882,7 +12961,7 @@
         "pfrId": "DaviIs00",
         "appearances": 8,
         "lastAppearance": "2025-12-28T18:00:00+00:00",
-        "daysSinceLastAppearance": 256.1648897709838,
+        "daysSinceLastAppearance": 257.1107255864236,
         "historicalTeams": [
           "NYJ"
         ],
@@ -10039,7 +13118,7 @@
         "pfrId": "GreeJo04",
         "appearances": 8,
         "lastAppearance": "2025-12-15T01:20:00+00:00",
-        "daysSinceLastAppearance": 269.85933421542825,
+        "daysSinceLastAppearance": 270.80517003086806,
         "historicalTeams": [
           "MIN"
         ],
@@ -10183,7 +13262,7 @@
         "pfrId": "PortJo02",
         "appearances": 8,
         "lastAppearance": "2026-01-13T01:00:00+00:00",
-        "daysSinceLastAppearance": 240.87322310431713,
+        "daysSinceLastAppearance": 241.81905891975694,
         "historicalTeams": [
           "PIT"
         ],
@@ -10314,7 +13393,7 @@
         "pfrId": "JoneJo07",
         "appearances": 8,
         "lastAppearance": "2026-02-08T23:30:00+00:00",
-        "daysSinceLastAppearance": 213.93572310431713,
+        "daysSinceLastAppearance": 214.88155891975694,
         "historicalTeams": [
           "SEA"
         ],
@@ -10445,7 +13524,7 @@
         "pfrId": "OkadTy00",
         "appearances": 8,
         "lastAppearance": "2026-02-08T23:30:00+00:00",
-        "daysSinceLastAppearance": 213.93572310431713,
+        "daysSinceLastAppearance": 214.88155891975694,
         "historicalTeams": [
           "SEA"
         ],
@@ -10576,7 +13655,7 @@
         "pfrId": "WilsEm00",
         "appearances": 8,
         "lastAppearance": "2026-01-11T01:00:00+00:00",
-        "daysSinceLastAppearance": 242.87322310431713,
+        "daysSinceLastAppearance": 243.81905891975694,
         "historicalTeams": [
           "GB"
         ],
@@ -10707,7 +13786,7 @@
         "pfrId": "BradAn00",
         "appearances": 8,
         "lastAppearance": "2026-02-08T23:30:00+00:00",
-        "daysSinceLastAppearance": 213.93572310431713,
+        "daysSinceLastAppearance": 214.88155891975694,
         "historicalTeams": [
           "SEA"
         ],
@@ -10838,7 +13917,7 @@
         "pfrId": "BarnAJ00",
         "appearances": 8,
         "lastAppearance": "2026-02-08T23:30:00+00:00",
-        "daysSinceLastAppearance": 213.93572310431713,
+        "daysSinceLastAppearance": 214.88155891975694,
         "historicalTeams": [
           "SEA"
         ],
@@ -10969,7 +14048,7 @@
         "pfrId": "HortTo00",
         "appearances": 8,
         "lastAppearance": "2025-11-03T01:20:00+00:00",
-        "daysSinceLastAppearance": 311.85933421542825,
+        "daysSinceLastAppearance": 312.80517003086806,
         "historicalTeams": [
           "SEA"
         ],
@@ -11100,7 +14179,7 @@
         "pfrId": "EmmaNi00",
         "appearances": 8,
         "lastAppearance": "2026-02-08T23:30:00+00:00",
-        "daysSinceLastAppearance": 213.93572310431713,
+        "daysSinceLastAppearance": 214.88155891975694,
         "historicalTeams": [
           "SEA"
         ],
@@ -11244,7 +14323,7 @@
         "pfrId": "JuszKy00",
         "appearances": 8,
         "lastAppearance": "2026-01-18T01:00:00+00:00",
-        "daysSinceLastAppearance": 235.87322310431713,
+        "daysSinceLastAppearance": 236.81905891975694,
         "historicalTeams": [
           "SF"
         ],
@@ -11375,7 +14454,7 @@
         "pfrId": "KittGe00",
         "appearances": 8,
         "lastAppearance": "2026-01-11T21:30:00+00:00",
-        "daysSinceLastAppearance": 242.01905643765048,
+        "daysSinceLastAppearance": 242.96489225309028,
         "historicalTeams": [
           "SF"
         ],
@@ -11506,7 +14585,7 @@
         "pfrId": "GreeDr00",
         "appearances": 8,
         "lastAppearance": "2026-01-25T20:00:00+00:00",
-        "daysSinceLastAppearance": 228.08155643765048,
+        "daysSinceLastAppearance": 229.02739225309028,
         "historicalTeams": [
           "DEN"
         ],
@@ -11637,7 +14716,7 @@
         "pfrId": "GiffLu00",
         "appearances": 8,
         "lastAppearance": "2026-01-18T01:00:00+00:00",
-        "daysSinceLastAppearance": 235.87322310431713,
+        "daysSinceLastAppearance": 236.81905891975694,
         "historicalTeams": [
           "SF"
         ],
@@ -11768,7 +14847,7 @@
         "pfrId": "BosaNi00",
         "appearances": 3,
         "lastAppearance": "2025-09-21T20:25:00+00:00",
-        "daysSinceLastAppearance": 354.06419532653933,
+        "daysSinceLastAppearance": 355.01003114197914,
         "historicalTeams": [
           "SF"
         ],
@@ -11834,7 +14913,7 @@
         "pfrId": "GreeRe00",
         "appearances": 8,
         "lastAppearance": "2026-01-18T01:00:00+00:00",
-        "daysSinceLastAppearance": 235.87322310431713,
+        "daysSinceLastAppearance": 236.81905891975694,
         "historicalTeams": [
           "SF"
         ],
@@ -11965,7 +15044,7 @@
         "pfrId": "StouUp00",
         "appearances": 8,
         "lastAppearance": "2026-01-18T01:00:00+00:00",
-        "daysSinceLastAppearance": 235.87322310431713,
+        "daysSinceLastAppearance": 236.81905891975694,
         "historicalTeams": [
           "SF"
         ],
@@ -12096,7 +15175,7 @@
         "pfrId": "CollAl01",
         "appearances": 8,
         "lastAppearance": "2026-01-18T01:00:00+00:00",
-        "daysSinceLastAppearance": 235.87322310431713,
+        "daysSinceLastAppearance": 236.81905891975694,
         "historicalTeams": [
           "SF"
         ],
@@ -12266,7 +15345,7 @@
         "pfrId": "SkulJu00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T18:00:00+00:00",
-        "daysSinceLastAppearance": 249.1648897709838,
+        "daysSinceLastAppearance": 250.1107255864236,
         "historicalTeams": [
           "MIN"
         ],
@@ -12397,7 +15476,7 @@
         "pfrId": "RozeCh00",
         "appearances": 8,
         "lastAppearance": "2026-01-10T21:30:00+00:00",
-        "daysSinceLastAppearance": 243.01905643765048,
+        "daysSinceLastAppearance": 243.96489225309028,
         "historicalTeams": [
           "CAR"
         ],
@@ -12528,7 +15607,7 @@
         "pfrId": "TuckSe00",
         "appearances": 8,
         "lastAppearance": "2026-01-03T21:30:00+00:00",
-        "daysSinceLastAppearance": 250.01905643765048,
+        "daysSinceLastAppearance": 250.96489225309028,
         "historicalTeams": [
           "TB"
         ],
@@ -12659,7 +15738,7 @@
         "pfrId": "McMiJa01",
         "appearances": 4,
         "lastAppearance": "2026-01-03T21:30:00+00:00",
-        "daysSinceLastAppearance": 250.01905643765048,
+        "daysSinceLastAppearance": 250.96489225309028,
         "historicalTeams": [
           "TB"
         ],
@@ -12738,7 +15817,7 @@
         "pfrId": "EgbuEm01",
         "appearances": 8,
         "lastAppearance": "2026-01-03T21:30:00+00:00",
-        "daysSinceLastAppearance": 250.01905643765048,
+        "daysSinceLastAppearance": 250.96489225309028,
         "historicalTeams": [
           "TB"
         ],
@@ -12895,7 +15974,7 @@
         "pfrId": "GrayCe00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T18:00:00+00:00",
-        "daysSinceLastAppearance": 249.1648897709838,
+        "daysSinceLastAppearance": 250.1107255864236,
         "historicalTeams": [
           "TEN"
         ],
@@ -13039,7 +16118,7 @@
         "pfrId": "MariMa01",
         "appearances": 8,
         "lastAppearance": "2025-12-20T22:00:00+00:00",
-        "daysSinceLastAppearance": 263.99822310431716,
+        "daysSinceLastAppearance": 264.9440589197569,
         "historicalTeams": [
           "WAS"
         ],
@@ -13158,6 +16237,137 @@
       }
     },
     {
+      "playerId": "00-0034333",
+      "name": "Daron Payne",
+      "team": "WAS",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "PaynDa00",
+        "appearances": 8,
+        "lastAppearance": "2026-01-04T21:25:00+00:00",
+        "daysSinceLastAppearance": 249.96836447531248,
+        "historicalTeams": [
+          "WAS"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.0,
+          "defense_pct": 0.5926045120854514,
+          "st_pct": 0.16577878126427736
+        },
+        "games": [
+          {
+            "gameId": "2025_18_WAS_PHI",
+            "team": "WAS",
+            "kickoff": "2026-01-04T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.66,
+              "st_pct": 0.14,
+              "offense_snaps": 0.0,
+              "defense_snaps": 42.0,
+              "st_snaps": 3.0
+            }
+          },
+          {
+            "gameId": "2025_16_PHI_WAS",
+            "team": "WAS",
+            "kickoff": "2025-12-20T22:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.53,
+              "st_pct": 0.08,
+              "offense_snaps": 0.0,
+              "defense_snaps": 37.0,
+              "st_snaps": 2.0
+            }
+          },
+          {
+            "gameId": "2025_15_WAS_NYG",
+            "team": "WAS",
+            "kickoff": "2025-12-14T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.54,
+              "st_pct": 0.17,
+              "offense_snaps": 0.0,
+              "defense_snaps": 37.0,
+              "st_snaps": 5.0
+            }
+          },
+          {
+            "gameId": "2025_14_WAS_MIN",
+            "team": "WAS",
+            "kickoff": "2025-12-07T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.64,
+              "st_pct": 0.31,
+              "offense_snaps": 0.0,
+              "defense_snaps": 41.0,
+              "st_snaps": 5.0
+            }
+          },
+          {
+            "gameId": "2025_13_DEN_WAS",
+            "team": "WAS",
+            "kickoff": "2025-12-01T01:20:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.63,
+              "st_pct": 0.17,
+              "offense_snaps": 0.0,
+              "defense_snaps": 44.0,
+              "st_snaps": 5.0
+            }
+          },
+          {
+            "gameId": "2025_10_DET_WAS",
+            "team": "WAS",
+            "kickoff": "2025-11-09T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.33,
+              "st_pct": 0.07,
+              "offense_snaps": 0.0,
+              "defense_snaps": 23.0,
+              "st_snaps": 2.0
+            }
+          },
+          {
+            "gameId": "2025_09_SEA_WAS",
+            "team": "WAS",
+            "kickoff": "2025-11-03T01:20:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.76,
+              "st_pct": 0.21,
+              "offense_snaps": 0.0,
+              "defense_snaps": 39.0,
+              "st_snaps": 5.0
+            }
+          },
+          {
+            "gameId": "2025_08_WAS_KC",
+            "team": "WAS",
+            "kickoff": "2025-10-28T00:15:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.65,
+              "st_pct": 0.19,
+              "offense_snaps": 0.0,
+              "defense_snaps": 45.0,
+              "st_snaps": 3.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
       "playerId": "00-0035149",
       "name": "Nick Allegretti",
       "team": "WAS",
@@ -13170,7 +16380,7 @@
         "pfrId": "AlleNi00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T21:25:00+00:00",
-        "daysSinceLastAppearance": 249.0225286598727,
+        "daysSinceLastAppearance": 249.96836447531248,
         "historicalTeams": [
           "WAS"
         ],
@@ -13301,7 +16511,7 @@
         "pfrId": "OmenCh00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T21:25:00+00:00",
-        "daysSinceLastAppearance": 249.0225286598727,
+        "daysSinceLastAppearance": 249.96836447531248,
         "historicalTeams": [
           "KC"
         ],
@@ -13420,6 +16630,137 @@
       }
     },
     {
+      "playerId": "00-0036260",
+      "name": "Javon Kinlaw",
+      "team": "WAS",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "reportStatus": null,
+      "usage": {
+        "status": "available",
+        "pfrId": "KinlJa00",
+        "appearances": 8,
+        "lastAppearance": "2026-01-04T21:25:00+00:00",
+        "daysSinceLastAppearance": 249.96836447531248,
+        "historicalTeams": [
+          "WAS"
+        ],
+        "weightedShares": {
+          "offense_pct": 0.0,
+          "defense_pct": 0.6627149689640397,
+          "st_pct": 0.21997900635923104
+        },
+        "games": [
+          {
+            "gameId": "2025_18_WAS_PHI",
+            "team": "WAS",
+            "kickoff": "2026-01-04T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.7,
+              "st_pct": 0.14,
+              "offense_snaps": 0.0,
+              "defense_snaps": 45.0,
+              "st_snaps": 3.0
+            }
+          },
+          {
+            "gameId": "2025_17_DAL_WAS",
+            "team": "WAS",
+            "kickoff": "2025-12-25T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.64,
+              "st_pct": 0.24,
+              "offense_snaps": 0.0,
+              "defense_snaps": 59.0,
+              "st_snaps": 7.0
+            }
+          },
+          {
+            "gameId": "2025_16_PHI_WAS",
+            "team": "WAS",
+            "kickoff": "2025-12-20T22:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.63,
+              "st_pct": 0.25,
+              "offense_snaps": 0.0,
+              "defense_snaps": 44.0,
+              "st_snaps": 6.0
+            }
+          },
+          {
+            "gameId": "2025_15_WAS_NYG",
+            "team": "WAS",
+            "kickoff": "2025-12-14T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.69,
+              "st_pct": 0.17,
+              "offense_snaps": 0.0,
+              "defense_snaps": 47.0,
+              "st_snaps": 5.0
+            }
+          },
+          {
+            "gameId": "2025_14_WAS_MIN",
+            "team": "WAS",
+            "kickoff": "2025-12-07T18:00:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.62,
+              "st_pct": 0.31,
+              "offense_snaps": 0.0,
+              "defense_snaps": 40.0,
+              "st_snaps": 5.0
+            }
+          },
+          {
+            "gameId": "2025_13_DEN_WAS",
+            "team": "WAS",
+            "kickoff": "2025-12-01T01:20:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.66,
+              "st_pct": 0.21,
+              "offense_snaps": 0.0,
+              "defense_snaps": 46.0,
+              "st_snaps": 6.0
+            }
+          },
+          {
+            "gameId": "2025_11_WAS_MIA",
+            "team": "WAS",
+            "kickoff": "2025-11-16T14:30:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.77,
+              "st_pct": 0.2,
+              "offense_snaps": 0.0,
+              "defense_snaps": 43.0,
+              "st_snaps": 4.0
+            }
+          },
+          {
+            "gameId": "2025_10_DET_WAS",
+            "team": "WAS",
+            "kickoff": "2025-11-09T21:25:00+00:00",
+            "values": {
+              "offense_pct": 0.0,
+              "defense_pct": 0.59,
+              "st_pct": 0.26,
+              "offense_snaps": 0.0,
+              "defense_snaps": 41.0,
+              "st_snaps": 7.0
+            }
+          }
+        ],
+        "meaning": "Recency-weighted shares in up to eight recorded appearances; missing games are not zero-filled. Historical teams may differ from current team. Not expected snaps, injury impact or player quality."
+      }
+    },
+    {
       "playerId": "00-0036286",
       "name": "K'Lavon Chaisson",
       "team": "WAS",
@@ -13432,7 +16773,7 @@
         "pfrId": "ChaiKL00",
         "appearances": 8,
         "lastAppearance": "2026-02-08T23:30:00+00:00",
-        "daysSinceLastAppearance": 213.93572310431713,
+        "daysSinceLastAppearance": 214.88155891975694,
         "historicalTeams": [
           "NE"
         ],
@@ -13563,7 +16904,7 @@
         "pfrId": "OwehJa00",
         "appearances": 8,
         "lastAppearance": "2026-01-12T01:00:00+00:00",
-        "daysSinceLastAppearance": 241.87322310431713,
+        "daysSinceLastAppearance": 242.81905891975694,
         "historicalTeams": [
           "LAC"
         ],
@@ -13694,7 +17035,7 @@
         "pfrId": "MageJo00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T21:25:00+00:00",
-        "daysSinceLastAppearance": 249.0225286598727,
+        "daysSinceLastAppearance": 249.96836447531248,
         "historicalTeams": [
           "WAS"
         ],
@@ -13825,7 +17166,7 @@
         "pfrId": "SinnBe00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T21:25:00+00:00",
-        "daysSinceLastAppearance": 249.0225286598727,
+        "daysSinceLastAppearance": 249.96836447531248,
         "historicalTeams": [
           "WAS"
         ],
@@ -13956,7 +17297,7 @@
         "pfrId": "CrosJa00",
         "appearances": 8,
         "lastAppearance": "2026-01-04T21:25:00+00:00",
-        "daysSinceLastAppearance": 249.0225286598727,
+        "daysSinceLastAppearance": 249.96836447531248,
         "historicalTeams": [
           "WAS"
         ],

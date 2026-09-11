@@ -91,7 +91,8 @@ def main():
     subprocess.run([sys.executable, '-m', 'scripts.verify_prior_matchup'], cwd=ROOT, check=True)
     subprocess.run([sys.executable, str(ROOT / 'scripts/verify_total_explanations.py')], cwd=ROOT, check=True)
     subprocess.run([sys.executable, str(ROOT / 'scripts/weather_history.py'), '--check'], cwd=ROOT, check=True)
-    subprocess.run(['git', 'add', 'data/weather-history.json', 'data/market-benchmark.json'], cwd=ROOT, check=True)
+    subprocess.run(['git', 'add', 'data/weather-history.json', 'data/market-benchmark.json',
+                    'reviews/personnel-identity-audit.json', 'reviews/player-usage-audit.json'], cwd=ROOT, check=True)
     subprocess.run(['git', 'add', 'data/season-participation.json', 'data/participation-source.json', 'data/participation-collection.json', 'data/participation-sources/'], cwd=ROOT, check=True)
     subprocess.run(['git','add','data/total-explanations.json','data/total-explanation-archive/','data/prior-matchup-context.json','data/prior-matchup-collection.json','data/weekly-matchup-context.json','data/weekly-matchup-sources/','data/source-record-changes.json','data/forecast-input-archive/','data/player-usage.json','data/personnel-changes.json','data/site.json','data/ledger.json','data/source.json','data/weather.json','data/weather-ledger.json','data/weather-sources/','data/quarterbacks.json','data/quarterback-collection.json','data/quarterback-sources/','data/personnel.json','data/personnel-collection.json','data/personnel-sources/'],check=True)
     verify_staged_release(ROOT)
