@@ -1,0 +1,6 @@
+{
+  "checkedAt": "2026-09-11T00:46:29.073Z",
+  "reservationPresent": false,
+  "historyComplete": false,
+  "interpretation": "Missing reservation is not evidence of zero previous provider usage. No acquisition or reservation write performed."
+}

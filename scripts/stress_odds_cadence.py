@@ -4,12 +4,13 @@ from datetime import datetime,timedelta
 from pathlib import Path
 
 
-def simulate(start,end,events,kickoffs,prior_attempts=(),limit=155,cooldown_minutes=30):
+def simulate(start,end,events,kickoffs,prior_attempts=(),limit=155,cooldown_minutes=30,reuse_minutes=0):
     attempts=sorted(prior_attempts)
-    if end<=start or any(t>=start for t in attempts) or cooldown_minutes<=0:raise ValueError('Invalid scenario chronology')
-    successful=[];cooldown=budget=failed=accepted=0
+    if end<=start or any(t>=start for t in attempts) or cooldown_minutes<=0 or reuse_minutes<0:raise ValueError('Invalid scenario chronology')
+    successful=[];cooldown=budget=failed=accepted=reused=0
     for at,ok in sorted(events):
         if not start<=at<=end:continue
+        if successful and at-successful[-1]<timedelta(minutes=reuse_minutes):reused+=1;continue
         recent=[t for t in attempts if at-t<timedelta(days=31)]
         if recent and at-recent[-1]<timedelta(minutes=cooldown_minutes):cooldown+=1;continue
         if len(recent)>=limit:budget+=1;continue
@@ -24,7 +25,7 @@ def simulate(start,end,events,kickoffs,prior_attempts=(),limit=155,cooldown_minu
         if at>fresh_until:stale+=at-fresh_until
         fresh_until=max(fresh_until,at+timedelta(hours=6))
     if end>fresh_until:stale+=end-fresh_until
-    return {'acceptedAttempts':accepted,'failedRequests':failed,'cooldownBlocked':cooldown,'budgetBlocked':budget,
+    return ({'reusedSnapshots':reused} if reuse_minutes else {}) | {'acceptedAttempts':accepted,'failedRequests':failed,'cooldownBlocked':cooldown,'budgetBlocked':budget,
             'coveredKickoffs':covered,'totalKickoffs':len(set(kickoffs)),'staleMinutes':stale.total_seconds()/60}
 
 

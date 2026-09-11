@@ -27,6 +27,7 @@ def main():
       'productionChanged':False,'candidateCooldownMinutes':15,'plannedMinimumGapMinutes':20,'plannedLeadMinutes':10,
       'requestCount':len(times),'remainingFrom155':155-len(times),'requestTimes':[t.isoformat() for t in times],
       'scenarios':{name:simulate(start,end,events,kicks,prior,cooldown_minutes=15) for name,(events,prior) in scenarios.items()},
+      'withCurrentThirtyMinuteReuse':{name:simulate(start,end,events,kicks,prior,cooldown_minutes=15,reuse_minutes=30) for name,(events,prior) in scenarios.items()},
       'limitations':['Requires a separately reviewed change from the production thirty-minute acquisition cooldown.','Fixed hypothetical delay scenarios do not establish real scheduler reliability.','No retry or rescheduling; successful requests assume fresh quotes and immediate upload.','Actual rolling attempt history remains required before live activation.']}
     (root/'reviews/odds-cadence-alternative.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({k:v for k,v in report.items() if k!='requestTimes'},indent=2))

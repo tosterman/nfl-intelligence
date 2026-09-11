@@ -5,6 +5,12 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from stress_odds_cadence import simulate
 
 class StressTests(unittest.TestCase):
+    def test_snapshot_reuse_does_not_create_a_new_closing_quote(self):
+        s=datetime(2026,9,1,tzinfo=timezone.utc);k=s+timedelta(minutes=30)
+        r=simulate(s,k,[(s,True),(s+timedelta(minutes=20),True)],[k],cooldown_minutes=15,reuse_minutes=30)
+        self.assertEqual(r['acceptedAttempts'],1);self.assertEqual(r['reusedSnapshots'],1)
+        self.assertEqual(r['coveredKickoffs'],0)
+
     def test_failure_consumes_budget_and_cooldown_but_not_freshness(self):
         s=datetime(2026,9,1,tzinfo=timezone.utc)
         r=simulate(s,s+timedelta(hours=1),[(s,False),(s+timedelta(minutes=10),True),(s+timedelta(minutes=30),True)],[],limit=1)

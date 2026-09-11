@@ -218,6 +218,68 @@
       "staleMinutes": 1075.0
     }
   },
+  "withCurrentThirtyMinuteReuse": {
+    "on-time": {
+      "reusedSnapshots": 4,
+      "acceptedAttempts": 149,
+      "failedRequests": 0,
+      "cooldownBlocked": 0,
+      "budgetBlocked": 0,
+      "coveredKickoffs": 25,
+      "totalKickoffs": 29,
+      "staleMinutes": 0.0
+    },
+    "all-five-minutes-late": {
+      "reusedSnapshots": 4,
+      "acceptedAttempts": 149,
+      "failedRequests": 0,
+      "cooldownBlocked": 0,
+      "budgetBlocked": 0,
+      "coveredKickoffs": 25,
+      "totalKickoffs": 29,
+      "staleMinutes": 5.0
+    },
+    "alternating-five-minutes-late-even": {
+      "reusedSnapshots": 4,
+      "acceptedAttempts": 149,
+      "failedRequests": 0,
+      "cooldownBlocked": 0,
+      "budgetBlocked": 0,
+      "coveredKickoffs": 25,
+      "totalKickoffs": 29,
+      "staleMinutes": 5.0
+    },
+    "alternating-five-minutes-late-odd": {
+      "reusedSnapshots": 4,
+      "acceptedAttempts": 149,
+      "failedRequests": 0,
+      "cooldownBlocked": 0,
+      "budgetBlocked": 0,
+      "coveredKickoffs": 25,
+      "totalKickoffs": 29,
+      "staleMinutes": 0.0
+    },
+    "first-closing-request-fails": {
+      "reusedSnapshots": 4,
+      "acceptedAttempts": 149,
+      "failedRequests": 1,
+      "cooldownBlocked": 0,
+      "budgetBlocked": 0,
+      "coveredKickoffs": 24,
+      "totalKickoffs": 29,
+      "staleMinutes": 165.77727631666667
+    },
+    "ten-prior-attempts": {
+      "reusedSnapshots": 4,
+      "acceptedAttempts": 148,
+      "failedRequests": 0,
+      "cooldownBlocked": 0,
+      "budgetBlocked": 1,
+      "coveredKickoffs": 24,
+      "totalKickoffs": 29,
+      "staleMinutes": 156.25
+    }
+  },
   "limitations": [
     "Requires a separately reviewed change from the production thirty-minute acquisition cooldown.",
     "Fixed hypothetical delay scenarios do not establish real scheduler reliability.",
