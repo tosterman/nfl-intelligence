@@ -2,6 +2,9 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { seasonParticipation } from '../src/lib/season-participation';
 import type { PersonnelSnapshot, PlayerReport } from '../src/lib/personnel';
+import { createElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { SeasonParticipationView } from '../src/components/season-participation';
 const player = {playerId:'p',name:'Player',team:'PIT',season:2026,week:2,type:'REG'} as PlayerReport;
 const snapshot = {sourceHash:'a'.repeat(64),retrievedAt:'2026-09-16T00:00:00Z'} as PersonnelSnapshot;
 const cutoff = snapshot.retrievedAt;
@@ -9,6 +12,14 @@ const game = {gameId:'2026_01_A_PIT',team:'PIT',kickoff:'2026-09-10T00:00:00Z'};
 const usage = {season:2026,week:2,type:'REG',cutoff,overall:{status:'available',appearances:1,lastAppearance:game.kickoff,weightedShares:{offense_pct:.5,defense_pct:0,st_pct:.1},games:[game]}};
 const artifact = {schemaVersion:1,sourceSeason:2026,sourceHash:'b'.repeat(64),sourceRetrievedAt:cutoff,calculatedAt:cutoff,personnelSourceHash:snapshot.sourceHash,personnelRetrievedAt:cutoff,collectionStatus:'current',records:[{...player,identityStatus:'matched',cutoff,usage}]};
 const now = Date.parse('2026-09-17T00:00:00Z');
+test('nonempty disclosure states weighted shares, tenure counts and retained collection', () => {
+  const evidence = seasonParticipation({...artifact,collectionStatus:'retained'},snapshot,player,now);
+  const html = renderToStaticMarkup(createElement(SeasonParticipationView,{evidence,season:2026}));
+  for (const expected of ['2026 season', '1 recorded appearance', '50%', '0%', '10%',
+    'Current reported team: 1 appearance', 'Former teams: 0', '90-day half-life',
+    'not full-season totals', 'Retained source collected', 'No forecast adjustment']) assert.ok(html.includes(expected),expected);
+  assert.ok(!html.includes('No verified earlier-week appearances'));
+});
 test('current-season sample binds exact report and separates team appearances', () => {
   assert.equal(seasonParticipation(artifact,snapshot,player,now)?.currentTeamAppearances,1);
   const transfer = {...artifact,records:[{...artifact.records[0],usage:{...usage,overall:{...usage.overall,games:[{...game,team:'ATL'}]}}}]};

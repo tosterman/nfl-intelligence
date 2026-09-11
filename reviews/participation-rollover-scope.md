@@ -72,3 +72,11 @@ run: the publisher remains paused and the new UI has not been publicly deployed.
 Positive current-season browser behavior and a real weekly rollover still need
 verification. The feature does not change numerical forecasts, claim player
 quality or infer expected availability from observed participation.
+
+Follow-up tests now render a nonempty isolated sample through the same view,
+checking displayed percentages, tenure counts, weighting, retained-source wording
+and the absence of an empty-state message. Four selector/rendering tests pass.
+The binding test uses fixed synthetic report/identity scope with retained real
+2026 source bytes, rather than asserting the live report count will remain 139.
+It verifies failure preservation and audit binding; the earlier actual 139-report
+rehearsal remains separately recorded and is not a synthetic positive result.
