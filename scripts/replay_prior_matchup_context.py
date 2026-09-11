@@ -32,7 +32,9 @@ def main():
     red = json.loads((root / 'data/red-zone.json').read_text())
     reconcile(result, big, red)
     raw = (json.dumps(result, indent=2) + '\n').encode()
-    (root / 'data/prior-matchup-context.json').write_bytes(raw)
+    # Replay is an audit, not an acquisition. Never replace the live artifact
+    # independently of its collection receipt.
+    (root / 'reviews/prior-matchup-retained-replay.json').write_bytes(raw)
     report = {'season': result['season'], 'forecastSeason': result['forecastSeason'], 'cutoff': result['cutoff'],
               'games': len(result['gameIds']), 'teams': len(result['teams']), 'artifactSha256': hashlib.sha256(raw).hexdigest(),
               'sourceSha256': result['sourceSha256'], 'scheduleSha256': result['scheduleSha256'],

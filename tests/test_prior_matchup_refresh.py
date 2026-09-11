@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 from datetime import datetime
 from scripts.refresh_weekly_matchup import acquire
 from scripts.refresh_prior_matchup import run
@@ -14,6 +15,27 @@ NOW = '2026-09-11T14:00:00+00:00'
 
 
 class PriorRefresh(unittest.TestCase):
+    def test_receipt_failure_does_not_claim_old_sample_was_preserved(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'data').mkdir()
+            (root / 'data/site.json').write_text('{"season":2026}')
+            (root / 'data/red-zone-adjudications.json').write_text('{"sourceSha256":"hash","decisions":[]}')
+            writes = []
+            def save_record(root, filename, value):
+                writes.append((filename, value))
+                if len(writes) == 2:
+                    raise OSError('receipt write failed')
+            result = {'cutoff': '2026-09-09', 'validated': True}
+            with patch('scripts.refresh_prior_matchup.acquire', return_value=({'plays': {'sha256': 'hash'}}, 'manifest')), \
+                 patch('scripts.refresh_prior_matchup.from_retained', return_value=result), \
+                 patch('scripts.refresh_prior_matchup.save', side_effect=save_record):
+                self.assertEqual(run(root, now=lambda: datetime.fromisoformat(NOW)), 1)
+            failure = writes[-1][1]
+            self.assertEqual(failure['status'], 'unavailable')
+            self.assertIn('sample updated', failure['reason'])
+            self.assertEqual(failure['updatedArtifactSha256'], hashlib.sha256(encode(result)).hexdigest())
+
     def test_successful_current_capture_replays_exactly(self):
         root = Path(__file__).resolve().parents[1]
         collection = json.loads((root / 'data/prior-matchup-collection.json').read_text())

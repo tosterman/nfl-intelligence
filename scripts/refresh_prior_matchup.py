@@ -25,6 +25,7 @@ def run(root=ROOT, read=fetch, now=lambda: datetime.now(timezone.utc)):
     season = json.loads((root / 'data/site.json').read_text())['season']
     checked = now().isoformat()
     base = {'schemaVersion': 1, 'forecastSeason': season, 'checkedAt': checked}
+    updated_hash = None
     try:
         manifest, identity = acquire(root, season - 1, checked, read, now, historical=True)
         corrections = json.loads((root / 'data/red-zone-adjudications.json').read_text())
@@ -35,16 +36,21 @@ def run(root=ROOT, read=fetch, now=lambda: datetime.now(timezone.utc)):
             raise ValueError('Following-season boundary has not occurred')
         # Archive and atomically replace only after every source and sample check.
         save(root, 'prior-matchup-context.json', result)
+        updated_hash = hashlib.sha256(encode(result)).hexdigest()
         save(root, 'prior-matchup-collection.json', {**base, 'status': 'ok', 'manifestHash': identity,
-             'artifactSha256': hashlib.sha256(encode(result)).hexdigest()})
+             'artifactSha256': updated_hash})
         return 0
     except Exception:
-        save(root, 'prior-matchup-collection.json', {**base, 'status': 'unavailable',
-             'reason': 'Prior-season acquisition or validation failed; last verified sample retained'})
+        failure = {**base, 'status': 'unavailable', 'reason':
+             'Validated sample updated but collection receipt failed' if updated_hash else
+             'Prior-season acquisition or validation failed; last verified sample retained'}
+        if updated_hash:
+            failure['updatedArtifactSha256'] = updated_hash
+        save(root, 'prior-matchup-collection.json', failure)
         return 1
 
 
 if __name__ == '__main__':
     code = run()
-    print('Prior-season context retained' if code == 0 else 'Prior-season refresh failed; previous sample preserved')
+    print('Prior-season context retained' if code == 0 else 'Prior-season refresh incomplete; inspect collection record')
     raise SystemExit(code)
