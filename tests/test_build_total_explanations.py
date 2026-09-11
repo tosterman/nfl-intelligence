@@ -14,10 +14,15 @@ from forecast_input_archive import restore
 class TotalExplanationReplay(unittest.TestCase):
     def test_failed_or_unreviewed_engine_cannot_produce_explanations(self):
         good = {'mismatches': 0, 'unreplayable': 0, 'matched': 15, 'modelCodeHash': builder.SUPPORTED_ENGINE, 'records': []}
-        for changes in ({'mismatches': 1}, {'unreplayable': 1}, {'matched': 0}, {'modelCodeHash': 'new'}):
-            with self.subTest(changes=changes), patch.object(builder.replay_forecast, 'replay', return_value={**good, **changes}):
-                with self.assertRaises(ValueError):
-                    builder.build()
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'data').mkdir()
+            (root / 'data/site.json').write_text(json.dumps({'generatedAt': 'now',
+                'games': [{'id': 'required-new-forecast', 'snapshot': {'generatedAt': 'now'}}]}))
+            for changes in ({'mismatches': 1}, {'unreplayable': 1}, {'matched': 0}, {'modelCodeHash': 'new'}):
+                with self.subTest(changes=changes), patch.object(builder.replay_forecast, 'replay', return_value={**good, **changes}):
+                    with self.assertRaises(ValueError):
+                        builder.build(root)
 
     def test_no_new_forecasts_produces_explicit_empty_explanations(self):
         with tempfile.TemporaryDirectory() as directory:

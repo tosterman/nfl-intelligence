@@ -6,6 +6,7 @@ from pathlib import Path
 import tempfile
 from build_total_explanations import ROOT, build
 from forecast_input_archive import restore, immutable
+from retained_total_records import collect
 
 
 def retain(root=ROOT):
@@ -28,6 +29,7 @@ def retain(root=ROOT):
     if report['siteSha256'] != edition or hashlib.sha256((root / 'data/site.json').read_bytes()).hexdigest() != edition:
         raise ValueError('Edition changed during explanation retention')
     report['inputManifestSha256'] = identity
+    report['retainedRecords'] = collect(root, report)
     report['retentionCodeHash'] = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
     raw = (json.dumps(report, sort_keys=True, separators=(',', ':')) + '\n').encode()
     digest = hashlib.sha256(raw).hexdigest()

@@ -24,7 +24,8 @@ test("source explanation distinguishes this game's changes from other records", 
 });
 
 test("retained additional pairs remain separate from the historical comparison", () => {
-  const pair = evidence.additionalPairs[0];
+  const pair = evidence.additionalPairs.find(pair => pair.beforeSha256 === pair.afterSha256)!;
+  assert.ok(pair, 'Retained same-source comparison is required');
   const result = scheduleSourceChanges(pair.comparedSiteGames[0], pair.beforeSha256, pair.afterSha256);
   assert.deepEqual(result?.categories, []);
   assert.equal(result?.otherRecords, 0);

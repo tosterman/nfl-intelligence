@@ -43,6 +43,9 @@ def verify(root=ROOT):
         restore(root / 'data/forecast-input-archive', saved['inputManifestSha256'], restored)
         replay = build(restored)
     compare(saved, replay)
+    from retained_total_records import collect
+    if saved.get('retainedRecords', {}) != collect(root, saved):
+        raise ValueError('Retained explanation coverage or provenance mismatch')
     return digest
 
 

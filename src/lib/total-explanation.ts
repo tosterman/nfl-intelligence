@@ -2,9 +2,17 @@ import type { Snapshot } from './types';
 export type TotalTerm = {name: string; points: number};
 export type TotalExplanation = {snapshotHash: string; gameId: string; total: number; terms: TotalTerm[]};
 export type TotalEvidence = {schemaVersion: number; modelCodeHash: string; inputManifestSha256: string;
-  explanationCodeHash: string; records: Record<string, TotalExplanation>};
+  explanationCodeHash: string; records: Record<string, TotalExplanation>;
+  retainedRecords?: Record<string, {schemaVersion: number; modelCodeHash: string;
+    explanationCodeHash: string; inputManifestSha256: string; artifactSha256: string; record: TotalExplanation}>};
 
-export function selectTotalExplanation(evidence: TotalEvidence, snapshot: Snapshot) {
+export function selectTotalExplanation(evidence: TotalEvidence, snapshot: Snapshot): (TotalExplanation & {baseline: number; adjustment: number}) | null {
+  if (!Object.hasOwn(evidence.records, snapshot.hash) && evidence.retainedRecords &&
+      Object.hasOwn(evidence.retainedRecords, snapshot.hash)) {
+    const origin = evidence.retainedRecords[snapshot.hash];
+    if (!/^[a-f0-9]{64}$/.test(origin.artifactSha256)) return null;
+    return selectTotalExplanation({...origin, records: {[snapshot.hash]: origin.record}}, snapshot);
+  }
   if (evidence.schemaVersion !== 1 || evidence.modelCodeHash !== snapshot.modelCodeHash ||
       ![evidence.inputManifestSha256, evidence.explanationCodeHash, snapshot.hash].every(v => /^[a-f0-9]{64}$/.test(v)) ||
       !Object.hasOwn(evidence.records, snapshot.hash)) return null;
