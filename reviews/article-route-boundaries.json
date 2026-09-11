@@ -1,0 +1,38 @@
+[
+  {
+    "path": "/not-a-page",
+    "httpStatus": 404
+  },
+  {
+    "path": "/constructor",
+    "httpStatus": 404
+  },
+  {
+    "path": "/toString",
+    "httpStatus": 404
+  },
+  {
+    "path": "/__proto__",
+    "httpStatus": 404
+  },
+  {
+    "path": "/hasOwnProperty",
+    "httpStatus": 404
+  },
+  {
+    "path": "/about",
+    "httpStatus": 200
+  },
+  {
+    "path": "/privacy",
+    "httpStatus": 200
+  },
+  {
+    "path": "/contact",
+    "httpStatus": 200
+  },
+  {
+    "path": "/responsible-use",
+    "httpStatus": 200
+  }
+]

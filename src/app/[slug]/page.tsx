@@ -104,6 +104,9 @@ const pages: Record<
     ],
   },
 };
+function pageForSlug(slug: string) {
+  return Object.hasOwn(pages, slug) ? pages[slug] : undefined;
+}
 export function generateStaticParams() {
   return Object.keys(pages).map((slug) => ({ slug }));
 }
@@ -113,7 +116,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const page = pages[slug];
+  const page = pageForSlug(slug);
   if (!page) return { title: "Not found", robots: { index: false } };
   return editorialMetadata(page.title, page.description ?? page.intro, `/${slug}`);
 }
@@ -123,7 +126,7 @@ export default async function Article({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const p = pages[slug];
+  const p = pageForSlug(slug);
   if (!p) notFound();
   return (
     <div className="subpage">

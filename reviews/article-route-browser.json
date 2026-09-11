@@ -1,0 +1,18 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "invalidRouteStatus": 404,
+    "friendlyNotFound": true,
+    "returnToSlate": true,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "invalidRouteStatus": 404,
+    "friendlyNotFound": true,
+    "returnToSlate": true,
+    "pageErrors": []
+  }
+]
