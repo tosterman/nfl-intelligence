@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "calculatedAt": "2026-09-11T16:34:04.631431+00:00",
+  "calculatedAt": "2026-09-11T20:10:31.127341+00:00",
   "personnelSourceHash": "96dcc98e297a38ecb8edcc7ab8864260b2899e24604f60c2a9514498ea53c2fb",
   "personnelRetrievedAt": "2026-09-10T20:24:24.691947+00:00",
   "sourceSeason": 2026,
@@ -10,7 +10,7 @@
   "collectionStatus": "current",
   "inputHashes": {
     "personnel": "c09a41625e884270e9e0469cd40d802d45b9045e3e350f023f71d1d2ef0db5f8",
-    "schedule": "664dd4abffd99b29efc5cf875a800c25631c190cb4e4522fb5354e61781369bf",
+    "schedule": "0318c13c2cd2568d7c09bfc72fcdbe2c5de2d8f2caea5b80d425a89d36a5ca51",
     "identity": "06ad73dc09b855b62a3ed5c64affc65f40f9c2d96b9739d8950c93d16c7f5ab7",
     "registry": "c2402e02d39c7ca1adbd9ca5c894bb11f693ab01da0721bff44db2a8bd1ea53d"
   },

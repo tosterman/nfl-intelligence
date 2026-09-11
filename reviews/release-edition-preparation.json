@@ -17,5 +17,17 @@
     "passed": 256,
     "failed": 0
   },
-  "scope": "Fresh real source acquisition and local release preparation only. No new numerical snapshots were generated; retained snapshots are not counted as replayed. No public deployment or receipt is established."
+  "scope": "Fresh real source acquisition and local release preparation only. No new numerical snapshots were generated; retained snapshots are not counted as replayed. No public deployment or receipt is established.",
+  "followup": {
+    "scheduleDependentParticipationRebuiltAt": "2026-09-11T20:10:31.127341+00:00",
+    "pythonTests": {
+      "passed": 419,
+      "failed": 0
+    },
+    "relatedApplicationTests": {
+      "passed": 9,
+      "failed": 0
+    },
+    "reason": "Hosted verification caught the older participation schedule binding after fresh acquisition. Rebuilt from retained evidence; only calculation time and schedule hash changed."
+  }
 }

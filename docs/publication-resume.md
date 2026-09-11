@@ -13,6 +13,15 @@ Before resuming:
 
 Record the resumed workflow state and successful publication evidence alongside the pause receipt in `reviews/publication-workflow-pause.json`. Until then, report the publisher as paused, not operational or sustainably scheduled. No hosting upgrade or deployment retry was made as part of the pause.
 
+For a manual edition refresh, rebuild schedule-dependent participation with
+`python scripts/build_season_participation.py` after acquiring and retaining the
+new schedule, as the hosted refresh workflow already does. Run the full Python
+suite as well as application checks before accepting the candidate. A fresh
+schedule can change only market or source-label fields while leaving predictions
+unchanged; the derived participation artifact still must bind to its exact new
+source hash. The September 11 candidate exposed this omission in hosted
+personnel-presentation tests; do not waive that binding check.
+
 September 11 pre-rollout observation: scheduled health run 34623950366 failed
 because the older public Washington–Philadelphia weather issue passed its
 30-hour limit. Direct readback confirms public weather status 503 with six of
