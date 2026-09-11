@@ -56,4 +56,17 @@ one initial deployment; it cannot update the currently deployed static reader.
 - Storage retention alone never proves historical public availability.
 
 Independent architecture review supports this bounded weather-only change before
-rollout. It is planned, not implemented or operationally verified.
+rollout. Implementation is in progress: the Python bundle builder replays retained
+sources and binds schedule/venue context; storage primitives verify immutable
+objects before conditional pointer publication; the reader validates hashes and
+can select presentation objects without downloading raw archives. Three Python
+bundle tests and eight TypeScript storage tests pass, including corruption,
+interrupted writes, concurrent publishers and bounded stream reads.
+
+The private Blob adapter uses the existing credential, create-only archives,
+ETag-conditional pointers, five-second request timeouts and bounded response
+streams. A real read of `weather/latest.json` succeeded and returned absent; no
+weather storage writes occurred. The adapter accepts only weather namespace
+paths. Live weather-specific publishing, retained-history continuity, runtime
+schema/context validation, page integration and scheduled activation remain
+unfinished. The current public site still reads its static weather edition.
