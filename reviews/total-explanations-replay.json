@@ -1,0 +1,2525 @@
+{
+  "schemaVersion": 1,
+  "siteSha256": "dc79461c5cf0c6fed3131f66c45f6d6b38d98ef491ed9f4a13a0445eaaee9a41",
+  "modelCodeHash": "08495229d4ed0202c1abbe941005ca259d0dd190b6c7442206f24f52b1470ad9",
+  "explanationCodeHash": "59b0aa67b81fb03a2f19b5cc85666f5ea3d935da88531bd41183198b9d6a08b4",
+  "editionGeneratedAt": "2026-09-10T23:29:01.710181+00:00",
+  "replayMatched": 15,
+  "records": {
+    "b054ae945a18dd5aadc844fa3400df7cb30c0b8cad3758ebf22e07271818d4c6": {
+      "schemaVersion": 1,
+      "total": 49.012,
+      "unroundedTotal": 49.01232360749164,
+      "terms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.375
+        },
+        {
+          "name": "Scoring offense",
+          "points": 3.503
+        },
+        {
+          "name": "Scoring defense",
+          "points": -0.749
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.327
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.0
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.848
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.081
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.012
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.044
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.154
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.054
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.697
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.02
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.016
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": 0.006
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.412
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.048
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.39
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.714
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.002
+        }
+      ],
+      "rawTerms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.37542461939995
+        },
+        {
+          "name": "Scoring offense",
+          "points": 3.5032658287056084
+        },
+        {
+          "name": "Scoring defense",
+          "points": -0.7494896243711648
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.326835599843884
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.0
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.8480486128781078
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.08125238834081952
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.012244394616339853
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.04400632623194379
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.15416577407177698
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.05359832510996619
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.6968734741905522
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.01985667833599407
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.015635140188682176
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": 0.00592557608111506
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.41210768122964053
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.04847991194178115
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.38983061428135707
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.7144432695754253
+        }
+      ],
+      "limitations": "Additive model accounting, not causal effects. The efficiency intercept is not average league scoring.",
+      "gameId": "2026_01_SF_LA",
+      "snapshotHash": "b054ae945a18dd5aadc844fa3400df7cb30c0b8cad3758ebf22e07271818d4c6",
+      "cutoff": "2026-09-09"
+    },
+    "d7d97b8c48a5b4bd37d02eb6c63da4d44efd4318568e3b879f78549a9ff80e99": {
+      "schemaVersion": 1,
+      "total": 44.989,
+      "unroundedTotal": 44.989157508672704,
+      "terms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.375
+        },
+        {
+          "name": "Scoring offense",
+          "points": -1.343
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.523
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.327
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.443
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": -0.095
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.081
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.003
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.089
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.124
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.06
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.694
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.016
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.081
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": -0.005
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.487
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.064
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.309
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.392
+        }
+      ],
+      "rawTerms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.37542461939995
+        },
+        {
+          "name": "Scoring offense",
+          "points": -1.3434712242474394
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.5226266496051334
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.326835599843884
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.44283808483039083
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": -0.0946220391526755
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.0806648860222725
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.003147737191614386
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.08928162747667602
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.12428769030721001
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.06010147890845194
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.694036225576661
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.016120865111126544
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.08149006510216594
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": -0.0045038739709099
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.4871539208061641
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.06421092966749746
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.309309216365275
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.3915967114067733
+        }
+      ],
+      "limitations": "Additive model accounting, not causal effects. The efficiency intercept is not average league scoring.",
+      "gameId": "2026_01_ARI_LAC",
+      "snapshotHash": "d7d97b8c48a5b4bd37d02eb6c63da4d44efd4318568e3b879f78549a9ff80e99",
+      "cutoff": "2026-09-09"
+    },
+    "4a7989642ffc06ff9ee9fc8a2f250261e7de5aceea352ffdc70e8fdd20cb6d08": {
+      "schemaVersion": 1,
+      "total": 44.77,
+      "unroundedTotal": 44.76969374217521,
+      "terms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.375
+        },
+        {
+          "name": "Scoring offense",
+          "points": -1.164
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.259
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.327
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.443
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.011
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.116
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": -0.007
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.051
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.107
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.064
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.498
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.007
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.015
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": -0.004
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.582
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.07
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.406
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.505
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": 0.001
+        }
+      ],
+      "rawTerms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.37542461939995
+        },
+        {
+          "name": "Scoring offense",
+          "points": -1.163789338360698
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.2589544304254524
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.326835599843884
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.44283808483039083
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.010697079165740014
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.115874888816781
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": -0.0072489873032019
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.05102932765621676
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.10654170478841254
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.06366840625791383
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.4983907307006885
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.006824798995123183
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.015056862807003272
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": -0.003957293325724241
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.5821580454644227
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.06977468767452849
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.4063864610943818
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.5048953323413317
+        }
+      ],
+      "limitations": "Additive model accounting, not causal effects. The efficiency intercept is not average league scoring.",
+      "gameId": "2026_01_ATL_PIT",
+      "snapshotHash": "4a7989642ffc06ff9ee9fc8a2f250261e7de5aceea352ffdc70e8fdd20cb6d08",
+      "cutoff": "2026-09-09"
+    },
+    "66ddabcf0e30da13173927a2a98dc292346490c5551e103347d38fc3b5d566e5": {
+      "schemaVersion": 1,
+      "total": 49.093,
+      "unroundedTotal": 49.09342527280666,
+      "terms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.375
+        },
+        {
+          "name": "Scoring offense",
+          "points": 2.6
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.53
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.327
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.443
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.275
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": 0.155
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.007
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.067
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.167
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.078
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.211
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.021
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.111
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": 0.004
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.358
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.046
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.348
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.531
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.001
+        }
+      ],
+      "rawTerms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.37542461939995
+        },
+        {
+          "name": "Scoring offense",
+          "points": 2.600118854508078
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.5296531033423333
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.326835599843884
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.44283808483039083
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.2748177747268414
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": 0.15484887719126297
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.007258090330186717
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.06713178515292322
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.1666626335991962
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.07772377155874993
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.2107137400613395
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.020820012435336512
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.11103177744676955
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": 0.0039699330122074696
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.35774434780216463
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.04602909184774249
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.34750656762481663
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.530504120209917
+        }
+      ],
+      "limitations": "Additive model accounting, not causal effects. The efficiency intercept is not average league scoring.",
+      "gameId": "2026_01_BAL_IND",
+      "snapshotHash": "66ddabcf0e30da13173927a2a98dc292346490c5551e103347d38fc3b5d566e5",
+      "cutoff": "2026-09-09"
+    },
+    "b041c4664a6821d432bd93bece09b5732bc90b118565566c1e4fe734f0cf87b6": {
+      "schemaVersion": 1,
+      "total": 46.598,
+      "unroundedTotal": 46.597776980955196,
+      "terms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.375
+        },
+        {
+          "name": "Scoring offense",
+          "points": 2.902
+        },
+        {
+          "name": "Scoring defense",
+          "points": -2.295
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.327
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.443
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.469
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.061
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.002
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.06
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.141
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.067
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.498
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": -0.036
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.047
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": -0.023
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.554
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.086
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.462
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.644
+        }
+      ],
+      "rawTerms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.37542461939995
+        },
+        {
+          "name": "Scoring offense",
+          "points": 2.9020108964987803
+        },
+        {
+          "name": "Scoring defense",
+          "points": -2.2950900255122875
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.326835599843884
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.44283808483039083
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.4692365099066858
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.06115286595464342
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.0020885104904096036
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.060166009069989285
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.14068231685937177
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.06650782082103883
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.497536092635292
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": -0.03604200439010418
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.047195453257372906
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": -0.022726860084729447
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.5540605019029287
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.08611705747606493
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.4622716217842301
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.6437396807479776
+        }
+      ],
+      "limitations": "Additive model accounting, not causal effects. The efficiency intercept is not average league scoring.",
+      "gameId": "2026_01_BUF_HOU",
+      "snapshotHash": "b041c4664a6821d432bd93bece09b5732bc90b118565566c1e4fe734f0cf87b6",
+      "cutoff": "2026-09-09"
+    },
+    "a2a858806da2091f0c702398ec70405785bd9c0a67480505584decc41028dd1b": {
+      "schemaVersion": 1,
+      "total": 45.619,
+      "unroundedTotal": 45.61941488647429,
+      "terms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.375
+        },
+        {
+          "name": "Scoring offense",
+          "points": -1.055
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.748
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.327
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.443
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.054
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.046
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": -0.005
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.049
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.145
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.059
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.53
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.025
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.01
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": 0.012
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.429
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.078
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.327
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.465
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": 0.001
+        }
+      ],
+      "rawTerms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.37542461939995
+        },
+        {
+          "name": "Scoring offense",
+          "points": -1.0548282942770237
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.7480294261089133
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.326835599843884
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.44283808483039083
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.05410065596116837
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.04643109994247551
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": -0.004714456607015253
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.04885806120826746
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.14471864285833486
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.059059549463449545
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.52961320267807
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.025492182524468516
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.009536526805307605
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": 0.012283453508170982
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.42925076463818157
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.07787892095500136
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.3267533536281491
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.4647984741807227
+        }
+      ],
+      "limitations": "Additive model accounting, not causal effects. The efficiency intercept is not average league scoring.",
+      "gameId": "2026_01_CHI_CAR",
+      "snapshotHash": "a2a858806da2091f0c702398ec70405785bd9c0a67480505584decc41028dd1b",
+      "cutoff": "2026-09-09"
+    },
+    "9f2b602abcd070f057dae4d3d6fd3bcc0192c23d0ee3f74bc0a6157831fdb241": {
+      "schemaVersion": 1,
+      "total": 42.92,
+      "unroundedTotal": 42.91991932578806,
+      "terms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.375
+        },
+        {
+          "name": "Scoring offense",
+          "points": -1.378
+        },
+        {
+          "name": "Scoring defense",
+          "points": -0.835
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.327
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.443
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": -0.315
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.135
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": -0.012
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.073
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.191
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.053
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.467
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": -0.031
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.045
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": -0.003
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.495
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.064
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.353
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.52
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.001
+        }
+      ],
+      "rawTerms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.37542461939995
+        },
+        {
+          "name": "Scoring offense",
+          "points": -1.3780425845393354
+        },
+        {
+          "name": "Scoring defense",
+          "points": -0.8354931555829734
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.326835599843884
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.44283808483039083
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": -0.31457499700838
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.13513506329230282
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": -0.01241050162842908
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.07309990419246191
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.19059444760789673
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.05276888074602023
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.4668307666427984
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": -0.03126575719927679
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.04460570997801696
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": -0.002997433969494756
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.4950243227533803
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.06420519761980772
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.3529592423055169
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.5202887926087487
+        }
+      ],
+      "limitations": "Additive model accounting, not causal effects. The efficiency intercept is not average league scoring.",
+      "gameId": "2026_01_CLE_JAX",
+      "snapshotHash": "9f2b602abcd070f057dae4d3d6fd3bcc0192c23d0ee3f74bc0a6157831fdb241",
+      "cutoff": "2026-09-09"
+    },
+    "1abe373c1f2ee3905828959a8a9b1cbbc9c79a40b273a8507c5061642b541c01": {
+      "schemaVersion": 1,
+      "total": 50.457,
+      "unroundedTotal": 50.456891151315595,
+      "terms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.375
+        },
+        {
+          "name": "Scoring offense",
+          "points": 0.629
+        },
+        {
+          "name": "Scoring defense",
+          "points": 3.539
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.327
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.443
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.276
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.013
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": -0.001
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.065
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.114
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.057
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.334
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.036
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": 0.12
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": 0.024
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.442
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.034
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.304
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.337
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": -0.001
+        }
+      ],
+      "rawTerms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.37542461939995
+        },
+        {
+          "name": "Scoring offense",
+          "points": 0.6288371261398659
+        },
+        {
+          "name": "Scoring defense",
+          "points": 3.538721570031022
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.326835599843884
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.44283808483039083
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.2761495040829251
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.013466448036556708
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": -0.0011452683199297561
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.06458340650076999
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.11404828849118712
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.05719007852767858
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.3339998387116636
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.03600872381878084
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": 0.12021584491869691
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": 0.023704192309102656
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.44189298828708223
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.0343321107971644
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.3038033362496406
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.337368857115318
+        }
+      ],
+      "limitations": "Additive model accounting, not causal effects. The efficiency intercept is not average league scoring.",
+      "gameId": "2026_01_DAL_NYG",
+      "snapshotHash": "1abe373c1f2ee3905828959a8a9b1cbbc9c79a40b273a8507c5061642b541c01",
+      "cutoff": "2026-09-09"
+    },
+    "89bc815ef17febf2775e8f4b5814548b0c5755b7d5234c12be983c19e552ff0d": {
+      "schemaVersion": 1,
+      "total": 42.769,
+      "unroundedTotal": 42.768761665057426,
+      "terms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.375
+        },
+        {
+          "name": "Scoring offense",
+          "points": -0.574
+        },
+        {
+          "name": "Scoring defense",
+          "points": -2.312
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.327
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.443
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.011
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.134
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.003
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.087
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.166
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.058
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.365
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": -0.009
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.099
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": -0.011
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.6
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.046
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.468
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.243
+        }
+      ],
+      "rawTerms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.37542461939995
+        },
+        {
+          "name": "Scoring offense",
+          "points": -0.5738146182477488
+        },
+        {
+          "name": "Scoring defense",
+          "points": -2.312173192735709
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.326835599843884
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.44283808483039083
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.010723847294059823
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.13417729456397864
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.0034354310903239814
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.08660798139758752
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.16574611340305723
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.057997571573953854
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.3654689242227347
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": -0.008975418457287691
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.09915208105944627
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": -0.01126620300007226
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.6000849553622952
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.04597006397071576
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.4675027113557922
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.243497202355767
+        }
+      ],
+      "limitations": "Additive model accounting, not causal effects. The efficiency intercept is not average league scoring.",
+      "gameId": "2026_01_GB_MIN",
+      "snapshotHash": "89bc815ef17febf2775e8f4b5814548b0c5755b7d5234c12be983c19e552ff0d",
+      "cutoff": "2026-09-09"
+    },
+    "4e315c43c9288085bc6f885ac29c8b6b6e8d0b715ebd578c6b09d5137df8769f": {
+      "schemaVersion": 1,
+      "total": 42.751,
+      "unroundedTotal": 42.75089292107159,
+      "terms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.375
+        },
+        {
+          "name": "Scoring offense",
+          "points": -3.897
+        },
+        {
+          "name": "Scoring defense",
+          "points": 1.518
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.327
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.443
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": -0.39
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.448
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.001
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.086
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.215
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.044
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.452
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.031
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.064
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": 0.025
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.463
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.037
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.402
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.269
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": 0.002
+        }
+      ],
+      "rawTerms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.37542461939995
+        },
+        {
+          "name": "Scoring offense",
+          "points": -3.896967709278324
+        },
+        {
+          "name": "Scoring defense",
+          "points": 1.5183942236014492
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.326835599843884
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.44283808483039083
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": -0.39010059991832996
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.44816167032643944
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.000774129709704637
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.08554842980938512
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.21489299450787797
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.04357944818330626
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.452230627005223
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.031127620834822796
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.06410693158633074
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": 0.025258722939899444
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.4628862237333857
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.03676402131189437
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.4024981966818452
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.268639771486916
+        }
+      ],
+      "limitations": "Additive model accounting, not causal effects. The efficiency intercept is not average league scoring.",
+      "gameId": "2026_01_MIA_LV",
+      "snapshotHash": "4e315c43c9288085bc6f885ac29c8b6b6e8d0b715ebd578c6b09d5137df8769f",
+      "cutoff": "2026-09-09"
+    },
+    "d3578ab4272537289173f02e432ee0aadd2cd282d701f8bedb5c3ec87c71c486": {
+      "schemaVersion": 1,
+      "total": 46.849,
+      "unroundedTotal": 46.84854552886723,
+      "terms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.375
+        },
+        {
+          "name": "Scoring offense",
+          "points": 0.707
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.112
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.327
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.443
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.409
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.271
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.008
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.067
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.111
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.07
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.524
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": -0.002
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.063
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": -0.004
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.567
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.047
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.314
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.309
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": 0.001
+        }
+      ],
+      "rawTerms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.37542461939995
+        },
+        {
+          "name": "Scoring offense",
+          "points": 0.7067708428129906
+        },
+        {
+          "name": "Scoring defense",
+          "points": 0.11198708463899015
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.326835599843884
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.44283808483039083
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.4090824002146851
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.2712362933976431
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.008425144937579086
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.0668820866093479
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.11069821377397308
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.06987993458819289
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.524413504055457
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": -0.0021622956966238526
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.06345687684606995
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": -0.003649047470715464
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.5671999900376438
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.04668003982374301
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.3136576028429424
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.3088044456420764
+        }
+      ],
+      "limitations": "Additive model accounting, not causal effects. The efficiency intercept is not average league scoring.",
+      "gameId": "2026_01_NO_DET",
+      "snapshotHash": "d3578ab4272537289173f02e432ee0aadd2cd282d701f8bedb5c3ec87c71c486",
+      "cutoff": "2026-09-09"
+    },
+    "1ea205f4fa98f28be15d870ec9261977cc709318614199ba51274286c2517a1d": {
+      "schemaVersion": 1,
+      "total": 44.907,
+      "unroundedTotal": 44.90698347511438,
+      "terms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.375
+        },
+        {
+          "name": "Scoring offense",
+          "points": -4.058
+        },
+        {
+          "name": "Scoring defense",
+          "points": 3.891
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.327
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.443
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": -0.868
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.187
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": -0.021
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.086
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.128
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.068
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.493
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.063
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.024
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": 0.024
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.417
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.012
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.262
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.238
+        }
+      ],
+      "rawTerms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.37542461939995
+        },
+        {
+          "name": "Scoring offense",
+          "points": -4.057650628254793
+        },
+        {
+          "name": "Scoring defense",
+          "points": 3.8910870110306233
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.326835599843884
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.44283808483039083
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": -0.8681542901087179
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.1873735318982265
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": -0.020892336112404392
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.08614159516506303
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.12779247453484474
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.06764720249705836
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.4930138190111557
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.06259588538223311
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.023610964799615088
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": 0.024155707803372225
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.4166518529854829
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.01203660796690359
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.26181413573578044
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.2381243085940175
+        }
+      ],
+      "limitations": "Additive model accounting, not causal effects. The efficiency intercept is not average league scoring.",
+      "gameId": "2026_01_NYJ_TEN",
+      "snapshotHash": "1ea205f4fa98f28be15d870ec9261977cc709318614199ba51274286c2517a1d",
+      "cutoff": "2026-09-09"
+    },
+    "4685be8b46065cf180453b32e8493ba6ffe04cd7aacb9d03fbfc1bac5c37e823": {
+      "schemaVersion": 1,
+      "total": 49.527,
+      "unroundedTotal": 49.52652501949126,
+      "terms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.375
+        },
+        {
+          "name": "Scoring offense",
+          "points": 1.15
+        },
+        {
+          "name": "Scoring defense",
+          "points": 2.199
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.327
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.443
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.119
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": 0.036
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.002
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.056
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.148
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.042
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.523
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.033
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.036
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": 0.01
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.476
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.053
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.468
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.434
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": 0.003
+        }
+      ],
+      "rawTerms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.37542461939995
+        },
+        {
+          "name": "Scoring offense",
+          "points": 1.1503403021828622
+        },
+        {
+          "name": "Scoring defense",
+          "points": 2.1994348190995
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.326835599843884
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.44283808483039083
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.11856829241033685
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": 0.03563641179379707
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.0016139093073330702
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.05560620437888256
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.1477535007396488
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.042311159226458
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.5232266286846614
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.033011756672846414
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.03564402148120242
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": 0.010272894940351582
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.47554013021253067
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.05293638804579919
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.4683362470494285
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.4338454610924747
+        }
+      ],
+      "limitations": "Additive model accounting, not causal effects. The efficiency intercept is not average league scoring.",
+      "gameId": "2026_01_TB_CIN",
+      "snapshotHash": "4685be8b46065cf180453b32e8493ba6ffe04cd7aacb9d03fbfc1bac5c37e823",
+      "cutoff": "2026-09-09"
+    },
+    "b8bd1338b4059e9755708126264385dfd74d48f4952f7279db4f4427b1b2fa55": {
+      "schemaVersion": 1,
+      "total": 45.489,
+      "unroundedTotal": 45.4886128997439,
+      "terms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.375
+        },
+        {
+          "name": "Scoring offense",
+          "points": -0.055
+        },
+        {
+          "name": "Scoring defense",
+          "points": -0.293
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.327
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.443
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.226
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.022
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.009
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.063
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.123
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.07
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.263
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.013
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.008
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": -0.009
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.518
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.051
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.268
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.365
+        },
+        {
+          "name": "Rounding reconciliation",
+          "points": 0.002
+        }
+      ],
+      "rawTerms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.37542461939995
+        },
+        {
+          "name": "Scoring offense",
+          "points": -0.054784559410525645
+        },
+        {
+          "name": "Scoring defense",
+          "points": -0.2927432550047887
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.326835599843884
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.44283808483039083
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.22618522152432766
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.02195970674218472
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": 0.009262750697842454
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.06293518266871383
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.12328796959018809
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.07024785156385444
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.263435840753664
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": 0.013229634862266967
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.007727629444026251
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": -0.008606676831857944
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.517890126376749
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.05135761093933822
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.26780578580292913
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.3653597725268365
+        }
+      ],
+      "limitations": "Additive model accounting, not causal effects. The efficiency intercept is not average league scoring.",
+      "gameId": "2026_01_WAS_PHI",
+      "snapshotHash": "b8bd1338b4059e9755708126264385dfd74d48f4952f7279db4f4427b1b2fa55",
+      "cutoff": "2026-09-09"
+    },
+    "1aad24d260a62e3fe0ccc8db11cf9cea8ebd72e62c51ca7acd8af2fb9fe5c051": {
+      "schemaVersion": 1,
+      "total": 42.157,
+      "unroundedTotal": 42.15701485436252,
+      "terms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.375
+        },
+        {
+          "name": "Scoring offense",
+          "points": -0.615
+        },
+        {
+          "name": "Scoring defense",
+          "points": -2.766
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.327
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.443
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.034
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.062
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": -0.009
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.061
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.129
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.037
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.659
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": -0.02
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.07
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": -0.006
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.629
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.044
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.259
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.566
+        }
+      ],
+      "rawTerms": [
+        {
+          "name": "Scoring baseline",
+          "points": 34.37542461939995
+        },
+        {
+          "name": "Scoring offense",
+          "points": -0.6149986147621744
+        },
+        {
+          "name": "Scoring defense",
+          "points": -2.7658876756858337
+        },
+        {
+          "name": "Efficiency intercept",
+          "points": 11.326835599843884
+        },
+        {
+          "name": "Efficiency venue",
+          "points": 0.44283808483039083
+        },
+        {
+          "name": "Efficiency sum: offense pass EPA/dropback",
+          "points": 0.0339894628565507
+        },
+        {
+          "name": "Efficiency sum: offense rush EPA/carry",
+          "points": -0.06174781568160823
+        },
+        {
+          "name": "Efficiency sum: offense CPOE",
+          "points": -0.008578963884186469
+        },
+        {
+          "name": "Efficiency sum: offense sack rate",
+          "points": -0.06077138073511504
+        },
+        {
+          "name": "Efficiency sum: offense interception rate",
+          "points": -0.12920551300104796
+        },
+        {
+          "name": "Efficiency sum: offense fumble loss/play",
+          "points": 0.0370082887340812
+        },
+        {
+          "name": "Efficiency sum: offense pass share",
+          "points": 2.6593459272932374
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass EPA/dropback",
+          "points": -0.020360219039021417
+        },
+        {
+          "name": "Efficiency sum: opponent allowed rush EPA/carry",
+          "points": -0.0704456539242853
+        },
+        {
+          "name": "Efficiency sum: opponent allowed CPOE",
+          "points": -0.0057202977828522865
+        },
+        {
+          "name": "Efficiency sum: opponent allowed sack rate",
+          "points": -0.6292846430472043
+        },
+        {
+          "name": "Efficiency sum: opponent allowed interception rate",
+          "points": -0.044163294188767084
+        },
+        {
+          "name": "Efficiency sum: opponent allowed fumble loss/play",
+          "points": 0.25884541116014775
+        },
+        {
+          "name": "Efficiency sum: opponent allowed pass share",
+          "points": -2.566108468023624
+        }
+      ],
+      "limitations": "Additive model accounting, not causal effects. The efficiency intercept is not average league scoring.",
+      "gameId": "2026_01_DEN_KC",
+      "snapshotHash": "1aad24d260a62e3fe0ccc8db11cf9cea8ebd72e62c51ca7acd8af2fb9fe5c051",
+      "cutoff": "2026-09-09"
+    }
+  }
+}

@@ -28,5 +28,24 @@ contributions but lack total coefficients; those cannot be inferred from margin
 differences. Recomputing the existing fit is required. This is explanatory replay,
 not model selection or evidence of improved predictive accuracy.
 
-Current artifact generation, immutable explanation retention, release integration
-and the user-facing total explanation remain unfinished.
+`scripts/build_total_explanations.py` now reproduces the complete current
+prediction objects before generating separate review explanations. It admits
+only the reviewed engine hash, rechecks input bytes after fitting, and binds
+each explanation to the snapshot hash and the report to the edition, engine and
+explanation code. The formulas use the unchanged engine's fit functions and
+feature builder with the fixed parameters.
+
+The actual retained edition produced 15 exact forecast matches and 15 reconciled
+total explanations in `reviews/total-explanations-replay.json`. Two additional
+tests passed: rejecting failed/unreviewed replay, and actual current replay with
+byte preservation of site, ledger and all three production engine files. The
+separately frozen joint-model files also retained their expected hashes.
+
+For ATL/PIT the saved total is 44.770. The decomposition includes distinct
+scoring and efficiency intercepts, scoring offense/defense, efficiency venue and
+fourteen efficiency sum terms, with an explicit 0.001 rounding reconciliation.
+These are algebraic contributions, not estimates of causal football effects.
+
+Immutable explanation retention, input-manifest linkage, release integration
+and user-facing display remain unfinished. This review output is not imported
+by the app and does not change existing forecasts.
