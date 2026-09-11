@@ -4,6 +4,8 @@ import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { selectWeeklyContext, type WeeklySnapshot } from '../src/lib/weekly-matchup';
 import { WeeklyMatchup } from '../src/components/weekly-matchup';
+import { ExplosiveMatchup } from '../src/components/explosive-matchup';
+import { RedZoneMatchup } from '../src/components/red-zone-matchup';
 
 const now = Date.now();
 const game = { away: 'BUF', home: 'NYJ', season: 2026, week: 2, type: 'REG', kickoff: new Date(now + 3600000).toISOString() };
@@ -42,4 +44,13 @@ test('no qualifying inside-20 possessions are unavailable, not zero percent', ()
   assert.match(html, /Unavailable/);
   assert.match(html, /0 \/ 0 possessions/);
   assert.match(html, /75.0%/);
+});
+
+test('missing prior-season evidence cannot suppress the independent current-season panel', () => {
+  for (const Component of [ExplosiveMatchup, RedZoneMatchup]) {
+    const html = renderToStaticMarkup(React.createElement(Component, {...game, season: 2027}));
+    assert.match(html, /This season · 2027/);
+    assert.match(html, /Compatible prior-season/);
+    assert.doesNotMatch(html, /history remains below/);
+  }
 });

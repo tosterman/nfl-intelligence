@@ -21,7 +21,22 @@ inspection and a Chromium axe scan found no tested WCAG violations. Small label
 and selector refinements were followed by targeted tests. Independent code review
 found no material defect.
 
-Available-sample rates and zero denominators are covered by rendered fixture
-tests, not by current-season live browser data. Real eligible games, positive
-sample browser inspection, prior-season rollover, hosted refresh and public
-publication verification remain outstanding.
+Available-sample rates and zero denominators now also have six static browser
+fixture checks: Chromium/WebKit at 320/390/1280px, with actual app CSS explicitly
+verified as applied. Fixtures are visibly labeled synthetic and never published
+as NFL results. The check verifies four tables, opposing-column counts, no
+overflow and no tested WCAG violations. Visual inspection caught an awkwardly
+wrapped unavailable label; zero-denominator cells now use a dash with accessible
+Unavailable text and retain their sample counts. All 165 application tests pass.
+
+Initial fixture attempts exposed harness issues: live development scripts could
+replace the fixture DOM, and an isolated document initially missed its stylesheet.
+Those runs are not counted as final verification. The fixture now uses a fresh
+document with copied CSS and a computed-style assertion. Final results are in
+`weekly-populated-browser.json` and `weekly-populated-fixture.png`.
+
+Missing prior-season evidence no longer suppresses the independent current-season
+panel. A regression covers that branch, and the empty-state copy does not promise
+historical data that might be unavailable. Actual prior-season data rotation,
+real eligible current-season samples, hosted refresh and public publication
+verification remain outstanding.

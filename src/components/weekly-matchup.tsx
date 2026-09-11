@@ -15,7 +15,7 @@ export function WeeklyMatchup({ game, kind, evidence = snapshot as WeeklySnapsho
         ['Pass · 20+ yards', produced.passing.explosive, produced.passing.plays, allowed.passing.explosive, allowed.passing.plays],
         ['Run · 10+ yards', produced.rushing.explosive, produced.rushing.plays, allowed.rushing.explosive, allowed.rushing.plays],
       ] as const : [['Inside-20 TD', produced.inside20.touchdowns, produced.inside20.possessions, allowed.inside20.touchdowns, allowed.inside20.possessions]] as const;
-      const rate = (n: number, d: number) => <span className="explosive-rate"><strong>{d ? `${(100 * n / d).toFixed(1)}%` : 'Unavailable'}</strong><small>{n} / {d} {kind === 'big-play' ? 'plays' : 'possessions'}</small></span>;
+      const rate = (n: number, d: number) => <span className="explosive-rate"><strong>{d ? `${(100 * n / d).toFixed(1)}%` : <><span aria-hidden="true">—</span><span className="sr-only">Unavailable</span></>}</strong><small>{n} / {d} {kind === 'big-play' ? 'plays' : 'possessions'}</small></span>;
       return <div className="explosive-pair" key={offense}>
         <h4>{offense} offense vs {defense} defense</h4>
         <p className="fine">Offense sample: {produced.gameIds.length} {produced.gameIds.length === 1 ? 'game' : 'games'} · Defense sample: {allowed.gameIds.length} {allowed.gameIds.length === 1 ? 'game' : 'games'}</p>

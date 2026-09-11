@@ -16,6 +16,7 @@ export function RedZoneMatchup({ away, home, season, kickoff, week, type }: Prop
     kickoff !== null && Number.isFinite(Date.parse(kickoff)) &&
     Date.parse(kickoff) >= Date.parse(`${evidence.cutoff}T00:00:00Z`);
   if (!valid) return <section className="panel"><h2 id="red-zone-heading" tabIndex={-1}>Inside-20 history unavailable</h2>
+    <WeeklyMatchup game={{ away, home, season, kickoff, week, type }} kind="inside20" />
     <p>Compatible prior-season possession evidence is not available for this matchup.</p></section>;
   const rows = evidence.teams as Record<string, typeof evidence.teams.SF>;
   return <section className="panel red-zone-panel" aria-labelledby="red-zone-heading">

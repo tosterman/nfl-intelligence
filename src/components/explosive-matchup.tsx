@@ -18,6 +18,7 @@ export function ExplosiveMatchup({ away, home, season, kickoff, week, type }: Pr
     kickoff !== null && Number.isFinite(Date.parse(kickoff)) &&
     Date.parse(kickoff) >= Date.parse(`${evidence.cutoff}T00:00:00Z`);
   if (!valid) return <section className="panel"><h2 id="explosive-heading" tabIndex={-1}>Historical comparison unavailable</h2>
+    <WeeklyMatchup game={{ away, home, season, kickoff, week, type }} kind="big-play" />
     <p>Compatible prior-season big-play evidence is not available for this matchup.</p></section>;
   const rows = evidence.teams as Record<string, typeof evidence.teams.BUF>;
   return <section className="panel explosive-panel" aria-labelledby="explosive-heading">
