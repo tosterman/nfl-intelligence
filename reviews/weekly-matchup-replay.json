@@ -1,0 +1,70 @@
+{
+  "sourceSha256": "2f135887790a013fd004e609e37096bb4816d5cc80b9f19122e1bad478961978",
+  "scheduleSha256": "00c1e3896ee5c8b1d929ef738ed301ca08b5b030056cd3f0879c4246ff86f22e",
+  "results": [
+    {
+      "week": 2,
+      "cutoff": "2025-09-11",
+      "games": 16,
+      "teams": 32,
+      "sha256": "34f79fa2213d9782bd2c2a71c6ae7c98f38df691f197f4a2af1faa933a1deba5",
+      "offenseTotals": {
+        "passing": {
+          "plays": 1096,
+          "explosive": 96
+        },
+        "rushing": {
+          "plays": 811,
+          "explosive": 87
+        },
+        "inside20": {
+          "possessions": 100,
+          "touchdowns": 54
+        }
+      }
+    },
+    {
+      "week": 10,
+      "cutoff": "2025-11-06",
+      "games": 135,
+      "teams": 32,
+      "sha256": "95ee0d20bf9c743a4de7b32ec8aa465260b2bbbe837617ba56a0aef89d792a67",
+      "offenseTotals": {
+        "passing": {
+          "plays": 9402,
+          "explosive": 788
+        },
+        "rushing": {
+          "plays": 6843,
+          "explosive": 793
+        },
+        "inside20": {
+          "possessions": 880,
+          "touchdowns": 522
+        }
+      }
+    },
+    {
+      "week": 18,
+      "cutoff": "2026-01-03",
+      "games": 256,
+      "teams": 32,
+      "sha256": "22ebb5ca90c0eeff1f58863f6c28db8f56bd79e02a9bf43b69c1e1764a2a0ebd",
+      "offenseTotals": {
+        "passing": {
+          "plays": 17608,
+          "explosive": 1480
+        },
+        "rushing": {
+          "plays": 13320,
+          "explosive": 1497
+        },
+        "inside20": {
+          "possessions": 1649,
+          "touchdowns": 952
+        }
+      }
+    }
+  ],
+  "limitations": "Historical vintage, current-season component only. No prospective availability or forecast improvement established."
+}
