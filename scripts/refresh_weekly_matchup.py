@@ -3,6 +3,7 @@ import gzip
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import tempfile
 from datetime import datetime, timezone
@@ -38,7 +39,7 @@ def encode(value):
     return (json.dumps(value, sort_keys=True, separators=(',', ':')) + '\n').encode()
 
 
-def acquire(root, season, observed_at, read=fetch, now=lambda: datetime.now(timezone.utc)):
+def acquire(root, season, observed_at, read=fetch, now=lambda: datetime.now(timezone.utc), *, historical=False):
     parsed = datetime.fromisoformat(observed_at.replace('Z', '+00:00'))
     if parsed.tzinfo is None or type(season) is not int:
         raise ValueError('Invalid acquisition scope')
@@ -54,9 +55,20 @@ def acquire(root, season, observed_at, read=fetch, now=lambda: datetime.now(time
         if asset['browser_download_url'] != url:
             raise ValueError('Unexpected source identity')
         updated = datetime.fromisoformat(asset['updated_at'].replace('Z', '+00:00'))
-        if updated.tzinfo is None or updated > parsed or (parsed - updated).total_seconds() > 30 * 3600:
+        if updated.tzinfo is None or updated > parsed or (not (historical and key == 'plays') and (parsed - updated).total_seconds() > 30 * 3600):
             raise ValueError('Invalid source update time')
-        raw = read(url)
+        expected = asset.get('digest', '')
+        if not isinstance(expected, str) or not re.fullmatch(r'sha256:[a-f0-9]{64}', expected):
+            raise ValueError('Missing source digest')
+        raw = None
+        if historical and key == 'plays':
+            for folder in ('weekly-matchup-sources', 'pbp-sources'):
+                cached = root / f'data/{folder}/{expected[7:]}.csv.gz'
+                if cached.exists():
+                    raw = cached.read_bytes()
+                    break
+        if raw is None:
+            raw = read(url)
         digest = hashlib.sha256(raw).hexdigest()
         if asset.get('digest') != 'sha256:' + digest or asset['size'] != len(raw):
             raise ValueError('Source bytes disagree with metadata')
