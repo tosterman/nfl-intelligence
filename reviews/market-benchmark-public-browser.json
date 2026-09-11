@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-09-11T20:27:14.538987+00:00",
+  "url": "https://nfl-intelligence-one.vercel.app/performance",
+  "reportHash": "a1e381593a9fc908c740bca7bfb21203b929d5ebe6eafaae7afa4112b37fb92b",
+  "auditAt": "2026-09-11T19:55:59.607327+00:00",
+  "coverageThrough": "2026-09-11T19:55:57.710000+00:00",
+  "pairedGameCount": 0,
+  "scope": "Intended report identity, rendered counts and paired errors, keyboard disclosures and scoped axe at 320px",
+  "results": [
+    {
+      "engine": "chromium",
+      "status": 200,
+      "overflow": false,
+      "errors": [],
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "status": 200,
+      "overflow": false,
+      "errors": [],
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    }
+  ]
+}

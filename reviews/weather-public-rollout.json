@@ -1,0 +1,10 @@
+{
+  "manifestHash": "aec388f6440e093d9f144d35ea596b1851bc32f7ed1ec5085a5582b437d964f7",
+  "healthy": true,
+  "attempts": [
+    {
+      "checkedAt": "2026-09-11T20:27:30.712746+00:00",
+      "healthy": true
+    }
+  ]
+}

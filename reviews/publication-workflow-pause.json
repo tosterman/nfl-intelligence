@@ -18,5 +18,19 @@
       "path": ".github/workflows/health.yml",
       "state": "active"
     }
+  },
+  "resumed": {
+    "checkedAt": "2026-09-11T20:28:06.937742+00:00",
+    "workflowState": "active",
+    "sourceCommit": "9ea8a4247c74360f9df76377cdf67b74c3471171",
+    "publicationReceiptFile": "data/publications.json",
+    "allPublicFeedsHealthy": true,
+    "weatherRuntimeEnabled": true,
+    "personnelRuntimeEnabled": true,
+    "marketBenchmarkEnabled": true,
+    "controlledWeatherRun": 34644328539,
+    "controlledPersonnelRun": 34644330358,
+    "scheduledPublicationVerified": false,
+    "scope": "Verified controlled Git publication and public readers; dispatched runtime jobs are not yet accepted."
   }
 }

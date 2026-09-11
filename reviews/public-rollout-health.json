@@ -1,0 +1,152 @@
+{
+  "checkedAt": "2026-09-11T20:27:06.555583+00:00",
+  "healthy": true,
+  "feedsHealthy": true,
+  "editionParity": {
+    "status": "matching",
+    "intended": {
+      "generatedAt": "2026-09-11T20:04:55.671471+00:00",
+      "modelVersion": "score-efficiency-v1.2.0",
+      "sourceHash": "0318c13c2cd2568d7c09bfc72fcdbe2c5de2d8f2caea5b80d425a89d36a5ca51"
+    },
+    "observed": {
+      "generatedAt": "2026-09-11T20:04:55.671471+00:00",
+      "modelVersion": "score-efficiency-v1.2.0",
+      "sourceHash": "0318c13c2cd2568d7c09bfc72fcdbe2c5de2d8f2caea5b80d425a89d36a5ca51"
+    }
+  },
+  "checks": {
+    "forecasts": {
+      "endpoint": "/api/status",
+      "healthy": true,
+      "attempts": [
+        {
+          "observedAt": "2026-09-11T20:27:04.749518+00:00",
+          "httpStatus": 200,
+          "healthy": true,
+          "reason": "Verified status and acquisition times",
+          "evidence": {
+            "generatedAt": "2026-09-11T20:04:55.671471+00:00",
+            "modelVersion": "score-efficiency-v1.2.0",
+            "sourceHash": "0318c13c2cd2568d7c09bfc72fcdbe2c5de2d8f2caea5b80d425a89d36a5ca51"
+          }
+        }
+      ]
+    },
+    "odds": {
+      "endpoint": "/api/odds-status",
+      "healthy": true,
+      "attempts": [
+        {
+          "observedAt": "2026-09-11T20:27:04.751253+00:00",
+          "httpStatus": 200,
+          "healthy": true,
+          "reason": "Verified status and acquisition times",
+          "evidence": {
+            "fetchedAt": "2026-09-11T19:10:04.631Z",
+            "maximumAgeHours": 6
+          }
+        }
+      ]
+    },
+    "personnel": {
+      "endpoint": "/api/personnel-status",
+      "healthy": true,
+      "attempts": [
+        {
+          "observedAt": "2026-09-11T20:27:04.752068+00:00",
+          "httpStatus": 200,
+          "healthy": true,
+          "reason": "Verified status and acquisition times",
+          "evidence": {
+            "retrievedAt": "2026-09-11T19:11:02.944464+00:00",
+            "assetUpdatedAt": "2026-09-11T12:12:00Z",
+            "sourceHash": "cd7338473dd852d02c6986663addb31431609946fa8756d0460bf2e98d3501a9",
+            "rowCount": 167,
+            "collectionStatus": "ok"
+          }
+        }
+      ]
+    },
+    "weather": {
+      "endpoint": "/api/weather-status",
+      "healthy": true,
+      "attempts": [
+        {
+          "observedAt": "2026-09-11T20:27:05.503744+00:00",
+          "httpStatus": 200,
+          "healthy": true,
+          "reason": "Verified status and acquisition times",
+          "evidence": {
+            "collectionStartedAt": "2026-09-11T18:05:49.288553+00:00",
+            "generatedAt": "2026-09-11T18:05:54.258885+00:00",
+            "eligibleGames": 14,
+            "availableGames": 14
+          }
+        }
+      ]
+    },
+    "quarterbacks": {
+      "endpoint": "/api/quarterback-status",
+      "healthy": true,
+      "attempts": [
+        {
+          "observedAt": "2026-09-11T20:27:05.894366+00:00",
+          "httpStatus": 200,
+          "healthy": true,
+          "reason": "Verified status and acquisition times",
+          "evidence": {
+            "retrievedAt": "2026-09-11T19:11:06.062845+00:00",
+            "assetUpdatedAt": "2026-09-11T12:22:01Z",
+            "sourceHash": "bd431f6c551c64e4d0cfe8d816fed35c160637e1bcd0d3dba5898adecffc5e78",
+            "collectionStatus": "ok"
+          }
+        }
+      ]
+    },
+    "matchup": {
+      "endpoint": "/api/matchup-status",
+      "healthy": true,
+      "attempts": [
+        {
+          "observedAt": "2026-09-11T20:27:06.062030+00:00",
+          "httpStatus": 200,
+          "healthy": true,
+          "reason": "Verified status and acquisition times",
+          "evidence": {
+            "season": 2026,
+            "week": 1,
+            "gameType": "REG",
+            "cutoff": "2026-09-09",
+            "sourceObservedAt": "2026-09-11T14:40:52.100621+00:00",
+            "expiresAt": "2026-09-12T20:01:43.000Z",
+            "sourceHash": "d9e442ae17ba88e70c6df6ed15e4f0ce54c9ff63a607de54f62cb7ed4f016e39",
+            "scheduleHash": "aaf609d395ba813c53566fd2ab87decc8732b0303aac83586fe014b8a9ac0ca6",
+            "sampleStatus": "no-eligible-games",
+            "gameCount": 0
+          }
+        }
+      ]
+    },
+    "participation": {
+      "endpoint": "/api/participation-status",
+      "healthy": true,
+      "attempts": [
+        {
+          "observedAt": "2026-09-11T20:27:06.239212+00:00",
+          "httpStatus": 200,
+          "healthy": true,
+          "reason": "Verified status and acquisition times",
+          "evidence": {
+            "retrievedAt": "2026-09-11T19:11:15.102604+00:00",
+            "calculatedAt": "2026-09-11T19:11:32.755657+00:00",
+            "personnelRetrievedAt": "2026-09-11T19:11:02.944464+00:00",
+            "sourceHash": "f4dfe061f01ab8153f4bb2e8cc7ecf23c7d8c7f6d03f62be2f156365952c4445",
+            "rowCount": 187,
+            "collectionStatus": "collected"
+          }
+        }
+      ]
+    }
+  }
+}

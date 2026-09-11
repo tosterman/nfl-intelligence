@@ -5,7 +5,27 @@ commercial launch is not accepted. Repository:
 https://github.com/tosterman/nfl-intelligence. Public site:
 https://nfl-intelligence-one.vercel.app.
 
-## Current verified state
+## Public rollout checkpoint — September 11, 20:27 UTC
+
+The controlled publication of `9ea8a4247c74360f9df76377cdf67b74c3471171`
+succeeded after the recorded cooldown. The public forecast artifact matched the
+intended 20:04:55 edition exactly, and its receipt is retained in
+`data/publications.json`. All seven public feed checks passed with matching
+edition identity. Weather and all three personnel endpoints selected their
+exact private publications. The public market report passed Chromium/WebKit
+fingerprint, count, keyboard and scoped accessibility checks at 320px.
+See `reviews/public-rollout-health.json`, `reviews/weather-public-rollout.json`,
+`reviews/personnel-public-readback.json` and
+`reviews/market-benchmark-public-browser.json`.
+
+The forecast workflow is active again. Weather, personnel and benchmark enabling
+variables are now true after their public checks; controlled weather and
+personnel runs were dispatched. Their completion, the controlled forecast run
+and subsequent actual scheduled execution remain to be verified. This resolves
+the older public feed failures observed below, but does not establish sustained
+operation, prospective model quality or commercial acceptance.
+
+## Earlier release-preparation evidence
 
 - The local candidate now contains the real edition generated September 11 at
   20:04:55 UTC. Its optimized build and eight browser page checks passed, with
