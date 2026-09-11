@@ -25,6 +25,20 @@ class GitPublicationTests(unittest.TestCase):
     with self.assertRaisesRegex(ValueError,'differs from Git staging'):git_publication.main()
    self.assertFalse(any(call.args[0][:2] in (['git','commit'],['git','push']) for call in command.call_args_list))
    capture.assert_not_called()
+ def test_market_benchmark_is_staged_before_release_validation(self):
+  with tempfile.TemporaryDirectory() as folder:
+   root=Path(folder);(root/'data').mkdir();site,ledger=fixture()
+   for name,value in [('site',site),('ledger',ledger)]:
+    (root/f'data/{name}.json').write_text(json.dumps(value))
+   def validate_staging(_):
+    additions=[call.args[0][2:] for call in command.call_args_list if call.args[0][:2]==['git','add']]
+    self.assertIn('data/market-benchmark.json',[path for paths in additions for path in paths])
+    raise ValueError('Stop after staging validation')
+   self.guard.side_effect=validate_staging
+   with patch.object(git_publication,'ROOT',root),patch('git_publication.subprocess.check_output',return_value='main'),patch('git_publication.subprocess.run',return_value=SimpleNamespace(returncode=0)) as command,patch('git_publication.capture') as capture:
+    with self.assertRaisesRegex(ValueError,'Stop after staging validation'):git_publication.main()
+   self.assertFalse(any(call.args[0][:2] in (['git','commit'],['git','push']) for call in command.call_args_list))
+   capture.assert_not_called()
  def test_cooldown_requires_trusted_latest_limit_and_expires_without_claiming_capacity(self):
   limited={**status(),'state':'failure','target_url':'https://vercel.com/khnum?upgradeToPro=build-rate-limit'}
   deadline=git_publication.provider_cooldown([limited],NOW)
