@@ -1,0 +1,12 @@
+{
+  "verifiedAt": "2026-09-11T00:51:20.912735+00:00",
+  "workflowRun": 34541012669,
+  "source": "https://github.com/tosterman/nfl-intelligence/actions/runs/34541012669",
+  "fetchedAt": "2026-09-10T23:11:44.852Z",
+  "captureHash": "b84765e71eb70c0d6c0540045659166ba2ec42e4da7c6039481860212293cc0f",
+  "creditsRemaining": 470,
+  "sourceLogLineHash": "d8503cd6702ae79a624b0e260f00c65977e54b3298b78c2fba0c2202c6150b9b",
+  "interpretation": "Historical provider quota observed by the completed collection. Not current quota, complete acquisition history or a reset-date guarantee.",
+  "nominalCandidateCost": 459,
+  "headroomAtObservationOnly": 11
+}
