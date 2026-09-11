@@ -1,0 +1,210 @@
+{
+  "url": "https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2026.csv",
+  "retrievedAt": "2026-09-11T16:29:18.302482+00:00",
+  "sha256": "f4dfe061f01ab8153f4bb2e8cc7ecf23c7d8c7f6d03f62be2f156365952c4445",
+  "rows": 187,
+  "columns": [
+    "game_id",
+    "pfr_game_id",
+    "season",
+    "game_type",
+    "week",
+    "player",
+    "pfr_player_id",
+    "position",
+    "team",
+    "opponent",
+    "offense_snaps",
+    "offense_pct",
+    "defense_snaps",
+    "defense_pct",
+    "st_snaps",
+    "st_pct"
+  ],
+  "games": [
+    "2026_01_NE_SEA",
+    "2026_01_SF_LA"
+  ],
+  "seasons": [
+    "2026"
+  ],
+  "reportedPlayerCandidateMatches": [
+    {
+      "playerId": "00-0033110",
+      "reportWeek": 1,
+      "reportTeam": "LA",
+      "games": [
+        "2026_01_SF_LA"
+      ]
+    },
+    {
+      "playerId": "00-0033868",
+      "reportWeek": 1,
+      "reportTeam": "LA",
+      "games": [
+        "2026_01_SF_LA"
+      ]
+    },
+    {
+      "playerId": "00-0036603",
+      "reportWeek": 1,
+      "reportTeam": "LA",
+      "games": [
+        "2026_01_SF_LA"
+      ]
+    },
+    {
+      "playerId": "00-0036672",
+      "reportWeek": 1,
+      "reportTeam": "LA",
+      "games": [
+        "2026_01_SF_LA"
+      ]
+    },
+    {
+      "playerId": "00-0037195",
+      "reportWeek": 1,
+      "reportTeam": "LA",
+      "games": [
+        "2026_01_SF_LA"
+      ]
+    },
+    {
+      "playerId": "00-0039137",
+      "reportWeek": 1,
+      "reportTeam": "LA",
+      "games": [
+        "2026_01_SF_LA"
+      ]
+    },
+    {
+      "playerId": "00-0036981",
+      "reportWeek": 1,
+      "reportTeam": "NE",
+      "games": [
+        "2026_01_NE_SEA"
+      ]
+    },
+    {
+      "playerId": "00-0036363",
+      "reportWeek": 1,
+      "reportTeam": "SEA",
+      "games": [
+        "2026_01_NE_SEA"
+      ]
+    },
+    {
+      "playerId": "00-0038797",
+      "reportWeek": 1,
+      "reportTeam": "SEA",
+      "games": [
+        "2026_01_NE_SEA"
+      ]
+    },
+    {
+      "playerId": "00-0039020",
+      "reportWeek": 1,
+      "reportTeam": "SEA",
+      "games": [
+        "2026_01_NE_SEA"
+      ]
+    },
+    {
+      "playerId": "00-0039793",
+      "reportWeek": 1,
+      "reportTeam": "SEA",
+      "games": [
+        "2026_01_NE_SEA"
+      ]
+    },
+    {
+      "playerId": "00-0040873",
+      "reportWeek": 1,
+      "reportTeam": "SEA",
+      "games": [
+        "2026_01_NE_SEA"
+      ]
+    },
+    {
+      "playerId": "00-0029892",
+      "reportWeek": 1,
+      "reportTeam": "SF",
+      "games": [
+        "2026_01_SF_LA"
+      ]
+    },
+    {
+      "playerId": "00-0033288",
+      "reportWeek": 1,
+      "reportTeam": "SF",
+      "games": [
+        "2026_01_SF_LA"
+      ]
+    },
+    {
+      "playerId": "00-0034982",
+      "reportWeek": 1,
+      "reportTeam": "SF",
+      "games": [
+        "2026_01_SF_LA"
+      ]
+    },
+    {
+      "playerId": "00-0035413",
+      "reportWeek": 1,
+      "reportTeam": "SF",
+      "games": [
+        "2026_01_SF_LA"
+      ]
+    },
+    {
+      "playerId": "00-0035717",
+      "reportWeek": 1,
+      "reportTeam": "SF",
+      "games": [
+        "2026_01_SF_LA"
+      ]
+    },
+    {
+      "playerId": "00-0039345",
+      "reportWeek": 1,
+      "reportTeam": "SF",
+      "games": [
+        "2026_01_SF_LA"
+      ]
+    },
+    {
+      "playerId": "00-0040152",
+      "reportWeek": 1,
+      "reportTeam": "SF",
+      "games": [
+        "2026_01_SF_LA"
+      ]
+    },
+    {
+      "playerId": "00-0041363",
+      "reportWeek": 1,
+      "reportTeam": "SF",
+      "games": [
+        "2026_01_SF_LA"
+      ]
+    },
+    {
+      "playerId": "00-0041556",
+      "reportWeek": 1,
+      "reportTeam": "SF",
+      "games": [
+        "2026_01_SF_LA"
+      ]
+    },
+    {
+      "playerId": "00-0041557",
+      "reportWeek": 1,
+      "reportTeam": "SF",
+      "games": [
+        "2026_01_SF_LA"
+      ]
+    }
+  ],
+  "scope": "Identity-join feasibility only, not accepted current usage. Same-week source appearances must not enter an earlier weekly context."
+}
