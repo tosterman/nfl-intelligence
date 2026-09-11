@@ -32,6 +32,8 @@ jobs:
       - run: npm run data:refresh
       - name: Verify retained forecast input bytes
         run: python scripts/verify_forecast_inputs.py
+      - name: Numerically replay newly generated forecasts
+        run: python scripts/replay_forecast.py --new-snapshots > release-recovery/numerical-replay.json
       - run: python scripts/refresh_weather.py
       - name: Collect listed quarterback roles
         continue-on-error: true
@@ -87,6 +89,7 @@ jobs:
             release-recovery/deployment.json
             release-recovery/git-publication.json
             release-recovery/forecast-inputs.json
+            release-recovery/numerical-replay.json
       - name: Commit forecast archive and publication receipt
         run: |
           git config user.name 'NFL Intelligence publisher'

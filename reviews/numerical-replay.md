@@ -10,4 +10,8 @@ The full Python suite initially passed 233 tests. Adversarial review then identi
 
 The final full Python suite passed 234 tests. Independent follow-up review verified both the type-aware comparator and incomplete-coverage exit behavior, with no further defect reported.
 
+Release integration adds `--new-snapshots`: only current snapshots whose generation time equals the edition time are selected, and retained older revisions are counted as `notSelected`. An unchanged edition can therefore report zero selected snapshots without claiming they were numerically replayed. The existing publication preflight still validates forecast presence, context, ledger membership and pregame timing; this numerical check supplements it. The staged refresh workflow runs the new check before publication and retains its report in recovery artifacts. The live publisher remains paused until the release is deployed and verified.
+
+The manual drill now also verifies a 14-new/1-retained edition and an all-retained edition. The actual release command reproduced all 15 current forecasts with zero mismatches or unreplayable selections. These are local checks; a hosted refresh executing the new gate has not yet occurred.
+
 This advances numerical reproducibility, not predictive accuracy. Prior snapshot revisions, retrospective performance aggregates, ratings and publication authenticity are outside this check's scope. The independent uncertainty-table review also found no actionable defect in a439f9f.

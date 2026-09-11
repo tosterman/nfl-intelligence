@@ -6,6 +6,7 @@
   "matched": 15,
   "mismatches": 0,
   "unreplayable": 0,
+  "notSelected": 0,
   "comparison": "Exact equality of full rounded prediction objects and training metadata; no numerical tolerance.",
   "scope": "Current snapshots only. Numerical reproducibility is not vintage-data, publication or predictive-accuracy evidence.",
   "records": [
@@ -122,6 +123,8 @@
     "configurationMismatchRejected": true,
     "contextMismatchRejected": true,
     "missingScheduleRejected": true,
-    "sameWeekFutureResultPerturbationUnchanged": true
+    "sameWeekFutureResultPerturbationUnchanged": true,
+    "newRevisionScopeExcludesOlder": true,
+    "unchangedEditionHasZeroSelected": true
   }
 }

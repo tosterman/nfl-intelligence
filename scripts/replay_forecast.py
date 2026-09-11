@@ -4,6 +4,7 @@ Uses the existing inference functions without calling acquisition or publication
 Does not reproduce prior revisions whose input bytes are absent from this bundle.
 """
 import csv
+import argparse
 import hashlib
 import json
 import math
@@ -40,7 +41,7 @@ def compare_prediction(snapshot, prediction, training_games, training_through):
             and snapshot['trainingThrough'] == training_through)
 
 
-def replay(root=ROOT):
+def replay(root=ROOT, *, new_only=False):
     root = Path(root)
     inputs = verify(root)
     if not inputs['inputsMatch']:
@@ -77,6 +78,9 @@ def replay(root=ROOT):
         result = {'gameId': game['id'], 'snapshotHash': snapshot.get('hash')}
         if not snapshot_valid(snapshot):
             raise ValueError('Invalid snapshot hash')
+        if new_only and snapshot.get('generatedAt') != site['generatedAt']:
+            results.append(result | {'status': 'not-selected', 'reason': 'Retained older revision; not newly generated in this edition'})
+            continue
         if (snapshot.get('modelCodeHash') != code_hash or snapshot.get('configuration') != refresh.CONFIG
                 or snapshot.get('modelVersion') != refresh.VERSION
                 or snapshot.get('sourceHash') != site['source']['sha256']
@@ -96,9 +100,9 @@ def replay(root=ROOT):
         if generated.tzinfo is None or generated >= refresh.base.kickoff(row):
             raise ValueError('Invalid pregame generation time')
         groups.setdefault((row['season'], row['week']), []).append((row, snapshot, result))
-    if not groups:
+    if not groups and not new_only:
         raise ValueError('No current snapshots can be replayed with retained evidence')
-    _, sigmas = refresh.replay_blend(rows, statmap)
+    sigmas = refresh.replay_blend(rows, statmap)[1] if groups else None
     for (season, week), group in groups.items():
         cutoff = min(r['gameday'] for r in rows if r['season'] == season and r['week'] == week)
         predictions = refresh.efficiency.infer_blend(rows, statmap, [r for r, _, _ in group])
@@ -115,13 +119,18 @@ def replay(root=ROOT):
             'matched': sum(r['status'] == 'matched' for r in results),
             'mismatches': sum(r['status'] == 'mismatch' for r in results),
             'unreplayable': sum(r['status'] == 'unreplayable' for r in results),
+            'notSelected': sum(r['status'] == 'not-selected' for r in results),
             'comparison': 'Exact equality of full rounded prediction objects and training metadata; no numerical tolerance.',
-            'scope': 'Current snapshots only. Numerical reproducibility is not vintage-data, publication or predictive-accuracy evidence.',
+            'scope': ('Newly generated current snapshots only; retained older revisions excluded. ' if new_only else 'Current snapshots only. ')
+                     + 'Numerical reproducibility is not vintage-data, publication or predictive-accuracy evidence.',
             'records': results}
 
 
 if __name__ == '__main__':
-    report = replay()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--new-snapshots', action='store_true', help='Release gate: replay only snapshots generated in this edition; report retained older revisions separately.')
+    args = parser.parse_args()
+    report = replay(new_only=args.new_snapshots)
     print(json.dumps(report, indent=2))
     if report['mismatches']:
         raise SystemExit(1)

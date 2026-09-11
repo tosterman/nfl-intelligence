@@ -36,6 +36,20 @@ with patch.object(urllib.request,'urlopen',side_effect=AssertionError('Network f
   snap['hash']=digest({k:v for k,v in snap.items() if k!='hash'})
   save(altered)
   assert replay.replay(target)['mismatches']==1
+  # The release gate verifies new revisions while reporting older retained ones.
+  altered=copy.deepcopy(original)
+  snap=next(g['snapshot'] for g in altered['games'] if g['snapshot'])
+  snap['generatedAt']='2026-09-10T23:00:00+00:00'
+  snap['hash']=digest({k:v for k,v in snap.items() if k!='hash'})
+  save(altered)
+  scoped=replay.replay(target,new_only=True)
+  assert scoped['matched']==14 and scoped['notSelected']==1 and scoped['mismatches']==0
+  for game in altered['games']:
+   if game['snapshot']:
+    snap=game['snapshot'];snap['generatedAt']='2026-09-10T23:00:00+00:00';snap['hash']=digest({k:v for k,v in snap.items() if k!='hash'})
+  save(altered)
+  scoped=replay.replay(target,new_only=True)
+  assert scoped['matched']==0 and scoped['notSelected']==15 and scoped['unreplayable']==0
   altered=copy.deepcopy(original);altered['model']['configuration']['scoreRidge']=99;reject(altered)
   altered=copy.deepcopy(original)
   snap=next(g['snapshot'] for g in altered['games'] if g['snapshot']);snap['gameContext']['neutral']=not snap['gameContext']['neutral']
@@ -57,6 +71,6 @@ with patch.object(urllib.request,'urlopen',side_effect=AssertionError('Network f
   leak=replay.replay(target);assert leak['matched']==15 and leak['mismatches']==0
   schedule.unlink();reject(altered)
 assert hashes()==before
-report['verification']={'networkBlocked':True,'originalFilesUnchanged':True,'validHashNumericalTamperingDetected':True,'configurationMismatchRejected':True,'contextMismatchRejected':True,'missingScheduleRejected':True,'sameWeekFutureResultPerturbationUnchanged':True}
+report['verification']={'networkBlocked':True,'originalFilesUnchanged':True,'validHashNumericalTamperingDetected':True,'configurationMismatchRejected':True,'contextMismatchRejected':True,'missingScheduleRejected':True,'sameWeekFutureResultPerturbationUnchanged':True,'newRevisionScopeExcludesOlder':True,'unchangedEditionHasZeroSelected':True}
 Path('reviews/numerical-replay.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps({k:v for k,v in report.items() if k!='records'},indent=2))
