@@ -33,3 +33,12 @@ The engine, forecast snapshots and numerical predictions were not modified.
 Repository JSON fingerprints normalize CRLF to Git's LF line endings for
 Windows/Linux portability; raw upstream response fingerprints remain exact.
 A fourth Python test checks this normalization and rejects content changes.
+
+After the next real weather refresh, the browser verifier was updated to read
+the actual retained NWS periods instead of assuming the earlier Dallas wind
+values remained current. It now verifies every changed field, the exact source
+fingerprint sequence and issue count, while retaining keyboard/layout checks.
+Its independent inputs are the raw observation ledger and compressed upstream
+responses rather than the compact UI history artifact. Fixed TypeScript cases
+continue to cover unchanged, missing and contradictory observations even when
+both live browser examples have changed.

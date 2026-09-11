@@ -3,6 +3,15 @@
     "engine": "chromium",
     "width": 320,
     "gameId": "2026_01_ATL_PIT",
+    "upstreamSourceHashes": [
+      "98e875ed95878da3ce354588a804ba702102f882968eacdab8a1c17ba66ff64d",
+      "11a376725c9f37625d5af13cc1e1bfa978417fa749dd4917e20ffea28d260733",
+      "202c03a19aea9ca13e9f5350f19523f37b433f47136a1eee2c6d16bce0176290"
+    ],
+    "changedFields": [
+      "Wind",
+      "Precipitation chance"
+    ],
     "keyboardDisclosure": true,
     "overflow": false,
     "wcagViolations": 0
@@ -11,6 +20,17 @@
     "engine": "chromium",
     "width": 320,
     "gameId": "2026_01_DAL_NYG",
+    "upstreamSourceHashes": [
+      "cf9bfeb3903fb96e5fa3971065f7edaa280b1598d42500b5f890d77c7989f520",
+      "fd3a641cc618201aa6618787f1bf6ccb622e246f681eafaf5fb2532c57539189",
+      "7cf9929b2a9d08d9e4a6cbb365d26aff52addecd37b67b73c725bb6ee2224869"
+    ],
+    "changedFields": [
+      "Temperature",
+      "Wind",
+      "Precipitation chance",
+      "Outlook"
+    ],
     "keyboardDisclosure": true,
     "overflow": false,
     "wcagViolations": 0
@@ -19,6 +39,15 @@
     "engine": "chromium",
     "width": 390,
     "gameId": "2026_01_ATL_PIT",
+    "upstreamSourceHashes": [
+      "98e875ed95878da3ce354588a804ba702102f882968eacdab8a1c17ba66ff64d",
+      "11a376725c9f37625d5af13cc1e1bfa978417fa749dd4917e20ffea28d260733",
+      "202c03a19aea9ca13e9f5350f19523f37b433f47136a1eee2c6d16bce0176290"
+    ],
+    "changedFields": [
+      "Wind",
+      "Precipitation chance"
+    ],
     "keyboardDisclosure": true,
     "overflow": false,
     "wcagViolations": 0
@@ -27,6 +56,17 @@
     "engine": "chromium",
     "width": 390,
     "gameId": "2026_01_DAL_NYG",
+    "upstreamSourceHashes": [
+      "cf9bfeb3903fb96e5fa3971065f7edaa280b1598d42500b5f890d77c7989f520",
+      "fd3a641cc618201aa6618787f1bf6ccb622e246f681eafaf5fb2532c57539189",
+      "7cf9929b2a9d08d9e4a6cbb365d26aff52addecd37b67b73c725bb6ee2224869"
+    ],
+    "changedFields": [
+      "Temperature",
+      "Wind",
+      "Precipitation chance",
+      "Outlook"
+    ],
     "keyboardDisclosure": true,
     "overflow": false,
     "wcagViolations": 0
@@ -35,6 +75,15 @@
     "engine": "chromium",
     "width": 1280,
     "gameId": "2026_01_ATL_PIT",
+    "upstreamSourceHashes": [
+      "98e875ed95878da3ce354588a804ba702102f882968eacdab8a1c17ba66ff64d",
+      "11a376725c9f37625d5af13cc1e1bfa978417fa749dd4917e20ffea28d260733",
+      "202c03a19aea9ca13e9f5350f19523f37b433f47136a1eee2c6d16bce0176290"
+    ],
+    "changedFields": [
+      "Wind",
+      "Precipitation chance"
+    ],
     "keyboardDisclosure": true,
     "overflow": false,
     "wcagViolations": 0
@@ -43,6 +92,17 @@
     "engine": "chromium",
     "width": 1280,
     "gameId": "2026_01_DAL_NYG",
+    "upstreamSourceHashes": [
+      "cf9bfeb3903fb96e5fa3971065f7edaa280b1598d42500b5f890d77c7989f520",
+      "fd3a641cc618201aa6618787f1bf6ccb622e246f681eafaf5fb2532c57539189",
+      "7cf9929b2a9d08d9e4a6cbb365d26aff52addecd37b67b73c725bb6ee2224869"
+    ],
+    "changedFields": [
+      "Temperature",
+      "Wind",
+      "Precipitation chance",
+      "Outlook"
+    ],
     "keyboardDisclosure": true,
     "overflow": false,
     "wcagViolations": 0
@@ -51,6 +111,15 @@
     "engine": "webkit",
     "width": 320,
     "gameId": "2026_01_ATL_PIT",
+    "upstreamSourceHashes": [
+      "98e875ed95878da3ce354588a804ba702102f882968eacdab8a1c17ba66ff64d",
+      "11a376725c9f37625d5af13cc1e1bfa978417fa749dd4917e20ffea28d260733",
+      "202c03a19aea9ca13e9f5350f19523f37b433f47136a1eee2c6d16bce0176290"
+    ],
+    "changedFields": [
+      "Wind",
+      "Precipitation chance"
+    ],
     "keyboardDisclosure": true,
     "overflow": false,
     "wcagViolations": 0
@@ -59,6 +128,17 @@
     "engine": "webkit",
     "width": 320,
     "gameId": "2026_01_DAL_NYG",
+    "upstreamSourceHashes": [
+      "cf9bfeb3903fb96e5fa3971065f7edaa280b1598d42500b5f890d77c7989f520",
+      "fd3a641cc618201aa6618787f1bf6ccb622e246f681eafaf5fb2532c57539189",
+      "7cf9929b2a9d08d9e4a6cbb365d26aff52addecd37b67b73c725bb6ee2224869"
+    ],
+    "changedFields": [
+      "Temperature",
+      "Wind",
+      "Precipitation chance",
+      "Outlook"
+    ],
     "keyboardDisclosure": true,
     "overflow": false,
     "wcagViolations": 0
@@ -67,6 +147,15 @@
     "engine": "webkit",
     "width": 390,
     "gameId": "2026_01_ATL_PIT",
+    "upstreamSourceHashes": [
+      "98e875ed95878da3ce354588a804ba702102f882968eacdab8a1c17ba66ff64d",
+      "11a376725c9f37625d5af13cc1e1bfa978417fa749dd4917e20ffea28d260733",
+      "202c03a19aea9ca13e9f5350f19523f37b433f47136a1eee2c6d16bce0176290"
+    ],
+    "changedFields": [
+      "Wind",
+      "Precipitation chance"
+    ],
     "keyboardDisclosure": true,
     "overflow": false,
     "wcagViolations": 0
@@ -75,6 +164,17 @@
     "engine": "webkit",
     "width": 390,
     "gameId": "2026_01_DAL_NYG",
+    "upstreamSourceHashes": [
+      "cf9bfeb3903fb96e5fa3971065f7edaa280b1598d42500b5f890d77c7989f520",
+      "fd3a641cc618201aa6618787f1bf6ccb622e246f681eafaf5fb2532c57539189",
+      "7cf9929b2a9d08d9e4a6cbb365d26aff52addecd37b67b73c725bb6ee2224869"
+    ],
+    "changedFields": [
+      "Temperature",
+      "Wind",
+      "Precipitation chance",
+      "Outlook"
+    ],
     "keyboardDisclosure": true,
     "overflow": false,
     "wcagViolations": 0
@@ -83,6 +183,15 @@
     "engine": "webkit",
     "width": 1280,
     "gameId": "2026_01_ATL_PIT",
+    "upstreamSourceHashes": [
+      "98e875ed95878da3ce354588a804ba702102f882968eacdab8a1c17ba66ff64d",
+      "11a376725c9f37625d5af13cc1e1bfa978417fa749dd4917e20ffea28d260733",
+      "202c03a19aea9ca13e9f5350f19523f37b433f47136a1eee2c6d16bce0176290"
+    ],
+    "changedFields": [
+      "Wind",
+      "Precipitation chance"
+    ],
     "keyboardDisclosure": true,
     "overflow": false,
     "wcagViolations": 0
@@ -91,6 +200,17 @@
     "engine": "webkit",
     "width": 1280,
     "gameId": "2026_01_DAL_NYG",
+    "upstreamSourceHashes": [
+      "cf9bfeb3903fb96e5fa3971065f7edaa280b1598d42500b5f890d77c7989f520",
+      "fd3a641cc618201aa6618787f1bf6ccb622e246f681eafaf5fb2532c57539189",
+      "7cf9929b2a9d08d9e4a6cbb365d26aff52addecd37b67b73c725bb6ee2224869"
+    ],
+    "changedFields": [
+      "Temperature",
+      "Wind",
+      "Precipitation chance",
+      "Outlook"
+    ],
     "keyboardDisclosure": true,
     "overflow": false,
     "wcagViolations": 0

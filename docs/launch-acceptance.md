@@ -4,16 +4,19 @@ Verdict: publicly deployed research edition; full operational and commercial lau
 
 ## Verified release evidence
 
-Latest completed development verification: `415d719` passed GitHub run
-[34617162673](https://github.com/tosterman/nfl-intelligence/actions/runs/34617162673).
-It includes weekly/prior-season matchup acquisition and replay, prepublication
-historical verification, reconciled retained total explanations, and the opening
-model/market/revision brief. The subsequent weather-card checkpoint `fb3ec6d`
-passed local selector tests, TypeScript checking, the 319-page production build,
-and Chromium/WebKit layout and timing checks. Its hosted run
-[34617737812](https://github.com/tosterman/nfl-intelligence/actions/runs/34617737812)
-has now completed successfully. These development changes are not deployed
-to the public edition.
+Latest completed development verification: `60964d3` passed GitHub run
+[34618803803](https://github.com/tosterman/nfl-intelligence/actions/runs/34618803803),
+including retained-input replay, application/Python tests, browser deadline
+checks, production build and dependency audit. All 324 Python tests also passed
+locally. This includes retained total and weather explanations, the opening
+brief, slate weather/comparisons and staged-release verification.
+
+The subsequent Highmark checkpoint `cc9e2dd` adds a verified 2026 stadium-area
+location and refreshes real weather to 14 games and 137 retained observations.
+It passed local source replay, venue/season tests, six Chromium/WebKit checks
+and the 319-page production build. Its hosted run
+[34620242767](https://github.com/tosterman/nfl-intelligence/actions/runs/34620242767)
+is still running at this inspection. These changes are not publicly deployed.
 
 The older checkpoints below are historical evidence, not the current head.
 
