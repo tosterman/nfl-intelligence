@@ -16,7 +16,7 @@ location and refreshes real weather to 14 games and 137 retained observations.
 It passed local source replay, venue/season tests, six Chromium/WebKit checks
 and the 319-page production build. Its hosted run
 [34620242767](https://github.com/tosterman/nfl-intelligence/actions/runs/34620242767)
-is still running at this inspection. These changes are not publicly deployed.
+completed successfully. These changes are not publicly deployed.
 
 The older checkpoints below are historical evidence, not the current head.
 

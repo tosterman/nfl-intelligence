@@ -77,7 +77,7 @@ export default async function TeamPage({
         </div>
       </div>
       {next && (
-        <Link className="trust-banner" href={`/games/${next.id}`}>
+        <Link className="trust-banner" href={`/games/${next.id}?from=${encodeURIComponent(`/teams/${code.toLowerCase()}`)}`}>
           <TeamMark code={next.home === code ? next.away : next.home} />
           <div>
             <h3>
@@ -142,7 +142,7 @@ export default async function TeamPage({
                         : "Awaiting forecast"}
                   </td>
                   <td>
-                    <Link className="small-link" href={`/games/${g.id}`}>
+                    <Link className="small-link" href={`/games/${g.id}?from=${encodeURIComponent(`/teams/${code.toLowerCase()}`)}`}>
                       View game <ArrowUpRight size={13} />
                     </Link>
                   </td>

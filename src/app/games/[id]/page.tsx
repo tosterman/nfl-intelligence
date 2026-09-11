@@ -16,6 +16,7 @@ import { TeamMark } from "@/components/brand";
 import { RevisionHistory } from "@/components/revision-history";
 import { WeatherContext } from "@/components/weather-context";
 import { WeatherRevisionBrief } from "@/components/weather-history";
+import { gameReturn } from "@/lib/game-return";
 import { ScheduleContext } from "@/components/schedule-context";
 import { PersonnelPanel } from "@/components/personnel-panel";
 import { ExplosiveMatchup } from "@/components/explosive-matchup";
@@ -54,16 +55,13 @@ export default async function GamePage({
   searchParams,
 }: {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ from?: string }>;
+  searchParams: Promise<{ from?: string | string[] }>;
 }) {
   const { id } = await params;
   const g = site.games.find((g) => g.id === id);
   if (!g) notFound();
   const { from } = await searchParams;
-  const returnTo =
-    from?.startsWith("/?week=") && !from.includes("\\")
-      ? from
-      : `/?week=${g.week}`;
+  const returnTo = gameReturn(from, g);
   const p = g.snapshot?.prediction;
   const marketData = p
     ? await Promise.all([getOdds(), getMarketHistory(g)])
@@ -78,8 +76,8 @@ export default async function GamePage({
         {teams[g.away].city} {teams[g.away].name} {g.neutral ? "vs" : "at"}{" "}
         {teams[g.home].city} {teams[g.home].name} · Week {g.week}
       </h1>
-      <Link className="breadcrumb" href={returnTo}>
-        <ArrowLeft size={14} /> Back to the slate <span>/</span> Week {g.week}
+      <Link className="breadcrumb" href={returnTo.href}>
+        <ArrowLeft size={14} /> {returnTo.label} <span>/</span> Week {g.week}
       </Link>
       <section className="detail-hero">
         <div className="detail-hero-meta">

@@ -1,0 +1,82 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "team": "pit",
+    "nextGameReturn": true,
+    "scheduleReturn": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "team": "buf",
+    "nextGameReturn": true,
+    "scheduleReturn": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "team": "pit",
+    "nextGameReturn": true,
+    "scheduleReturn": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "team": "buf",
+    "nextGameReturn": true,
+    "scheduleReturn": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "duplicateParameterFallback": true
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "team": "pit",
+    "nextGameReturn": true,
+    "scheduleReturn": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "team": "buf",
+    "nextGameReturn": true,
+    "scheduleReturn": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "team": "pit",
+    "nextGameReturn": true,
+    "scheduleReturn": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "team": "buf",
+    "nextGameReturn": true,
+    "scheduleReturn": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "duplicateParameterFallback": true
+  }
+]
