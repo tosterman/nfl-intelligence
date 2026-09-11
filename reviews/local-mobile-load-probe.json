@@ -1,0 +1,32 @@
+{
+  "measuredAt": "2026-09-11T16:59:53.896245+00:00",
+  "scope": "Single cold browser navigation per route to existing local production build; lab diagnostic, not field Core Web Vitals or current-head build proof",
+  "network": "150ms latency, 1.6Mbps download, 0.75Mbps upload",
+  "cpuSlowdown": 4,
+  "rows": [
+    {
+      "lcp": 1236,
+      "shift": 0.0007371785647899379,
+      "domContentLoaded": 1282.0999999940395,
+      "transferBytes": 366603,
+      "overflow": false,
+      "route": "/"
+    },
+    {
+      "lcp": 1576,
+      "shift": 0.0009413403801375208,
+      "domContentLoaded": 1644.2000000029802,
+      "transferBytes": 359140,
+      "overflow": false,
+      "route": "/games/2026_01_WAS_PHI"
+    },
+    {
+      "lcp": 972,
+      "shift": 0.0003870688508275265,
+      "domContentLoaded": 1006.3999999910593,
+      "transferBytes": 328900,
+      "overflow": false,
+      "route": "/performance"
+    }
+  ]
+}
