@@ -5,6 +5,19 @@ from venue_evidence import validate_venue, stadium_name
 ROOT=Path(__file__).resolve().parents[1]
 
 class VenueEvidenceTests(unittest.TestCase):
+    def test_retained_census_responses_match_recorded_results(self):
+        venues=json.loads((ROOT/'data/weather-venues.json').read_text())
+        captured=[v for v in venues.values() if v.get('geocodeHash')]
+        self.assertTrue(captured)
+        for venue in captured:
+            with self.subTest(address=venue['address']):
+                digest=venue['geocodeHash']
+                raw=gzip.decompress((ROOT/'data/weather-location-sources'/(digest+'.json.gz')).read_bytes())
+                self.assertEqual(hashlib.sha256(raw).hexdigest(),digest)
+                result=json.loads(raw)['result']
+                self.assertEqual(result['addressMatches'],venue['geocodeMatches'])
+                self.assertEqual(result['input']['address']['address'],venue['address'])
+
     def test_osm_bounds_and_source_bytes_are_reproducible(self):
         for name,v in json.loads((ROOT/'data/weather-osm-venues.json').read_text()).items():
             validate_venue(v)

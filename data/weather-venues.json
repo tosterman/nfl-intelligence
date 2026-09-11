@@ -481,5 +481,85 @@
     "latitude": 42.338894579179,
     "longitude": -83.046627958845,
     "matchedAddress": "2000 BRUSH ST, DETROIT, MI, 48226"
+  },
+  "SoFi Stadium": {
+    "address": "1001 South Stadium Drive, Inglewood, CA 90301",
+    "addressSource": "https://www.sofistadium.com/connect",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1001+South+Stadium+Drive%2C+Inglewood%2C+CA+90301&benchmark=Public_AR_Current&format=json",
+    "geocodeHash": "8b0ae81fbd07d3218bfc9c3f02750cf8569368c8461f862037592596b14d65ab",
+    "retrievedAt": "2026-09-11T00:30:15.044543+00:00",
+    "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+    "geocodeBenchmark": "Public_AR_Current",
+    "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+    "geocodeMatches": [],
+    "status": "unavailable",
+    "reason": "No unique Census match for official address."
+  },
+  "Lucas Oil Stadium": {
+    "address": "500 South Capitol Avenue, Indianapolis, IN 46225",
+    "addressSource": "https://www.lucasoilstadium.com/attending-an-event/contact-guest-services/",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=500+South+Capitol+Avenue%2C+Indianapolis%2C+IN+46225&benchmark=Public_AR_Current&format=json",
+    "geocodeHash": "00183be353dc777cb1f26e2573f35753007a0af542a0fb55453d7a8ef002a93d",
+    "retrievedAt": "2026-09-11T00:30:15.043848+00:00",
+    "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+    "geocodeBenchmark": "Public_AR_Current",
+    "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+    "geocodeMatches": [
+      {
+        "tigerLine": {
+          "side": "R",
+          "tigerLineId": "108068703"
+        },
+        "coordinates": {
+          "x": -86.162053606565,
+          "y": 39.760281305733
+        },
+        "addressComponents": {
+          "zip": "46225",
+          "streetName": "CAPITOL",
+          "preType": "",
+          "city": "INDIANAPOLIS",
+          "preDirection": "S",
+          "suffixDirection": "",
+          "fromAddress": "400",
+          "state": "IN",
+          "suffixType": "AVE",
+          "toAddress": "598",
+          "suffixQualifier": "",
+          "preQualifier": ""
+        },
+        "matchedAddress": "500 S CAPITOL AVE, INDIANAPOLIS, IN, 46225"
+      }
+    ],
+    "status": "confirmed-address-geocode",
+    "latitude": 39.760281305733,
+    "longitude": -86.162053606565,
+    "matchedAddress": "500 S CAPITOL AVE, INDIANAPOLIS, IN, 46225"
+  },
+  "Allegiant Stadium": {
+    "address": "3333 Al Davis Way, Las Vegas, NV 89118",
+    "addressSource": "https://www.allegiantstadium.com/planyourvisit/a-z-guide-1",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3333+Al+Davis+Way%2C+Las+Vegas%2C+NV+89118&benchmark=Public_AR_Current&format=json",
+    "geocodeHash": "ad4c9c19e8ca5078bf57e6a3926bce62aaad3b9943f8c10117dfe831f06d0abe",
+    "retrievedAt": "2026-09-11T00:30:15.044607+00:00",
+    "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+    "geocodeBenchmark": "Public_AR_Current",
+    "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+    "geocodeMatches": [],
+    "status": "unavailable",
+    "reason": "No unique Census match for official address."
+  },
+  "U.S. Bank Stadium": {
+    "address": "401 Chicago Avenue, Minneapolis, MN 55415",
+    "addressSource": "https://www.usbankstadium.com/contact-us/",
+    "geocodeSource": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=401+Chicago+Avenue%2C+Minneapolis%2C+MN+55415&benchmark=Public_AR_Current&format=json",
+    "geocodeHash": "cf4dd6e49543d287818d2c8c5cce4d96d6cd0419892fbd5272c235d3df35f497",
+    "retrievedAt": "2026-09-11T00:30:15.044318+00:00",
+    "coordinateMeaning": "US Census address-interpolated vicinity point, not surveyed stadium field center. Intended only for NWS area forecast lookup.",
+    "geocodeBenchmark": "Public_AR_Current",
+    "geocoderDocumentation": "https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html",
+    "geocodeMatches": [],
+    "status": "unavailable",
+    "reason": "No unique Census match for official address."
   }
 }

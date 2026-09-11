@@ -1,0 +1,20 @@
+[
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_BAL_IND",
+    "width": 320,
+    "areaLimitationVisible": true,
+    "correctNwsLink": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_BAL_IND",
+    "width": 320,
+    "areaLimitationVisible": true,
+    "correctNwsLink": true,
+    "overflow": false,
+    "pageErrors": []
+  }
+]
