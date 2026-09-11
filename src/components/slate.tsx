@@ -373,9 +373,11 @@ export function Slate({
         </div>
         {!filtered.length && (
           <div className="empty">
-            <h3>No games match this view.</h3>
+            <h3>{filter === "upcoming" ? "No upcoming games match this view." : "No games match this view."}</h3>
             <p>
-              {filter === "forecast"
+              {filter === "upcoming"
+                ? "Games leave this view at kickoff. Try another team or show all games for results and unconfirmed start times."
+                : filter === "forecast"
                 ? "Forecasts are published for the current week before kickoff."
                 : "Try a different team or show all games."}
             </p>
