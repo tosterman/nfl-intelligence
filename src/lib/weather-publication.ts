@@ -52,7 +52,7 @@ async function immutable(path:string,body:Buffer,store:WeatherObjectStore){
 }
 
 /** Storage primitive only: callers must validate weather evidence and history continuity. */
-export async function publishWeatherObjects(objects:Buffer[],generatedAt:string,store:WeatherObjectStore){
+export async function publishWeatherObjects(objects:Buffer[],generatedAt:string,store:WeatherObjectStore,validatedPrevious?:string|null){
   const timestamp=Date.parse(generatedAt);
   if(!Number.isFinite(timestamp)||!/(Z|[+-]\d\d:\d\d)$/.test(generatedAt)||!objects.length||objects.length>2048 ||
     objects.some(body=>body.length===0||body.length>10_000_000)||objects.reduce((n,b)=>n+b.length,0)>MAX_TOTAL_BYTES) throw Error('Invalid weather publication input');
@@ -61,6 +61,7 @@ export async function publishWeatherObjects(objects:Buffer[],generatedAt:string,
   const manifest=Buffer.from(JSON.stringify({schemaVersion:1,generatedAt,objects:entries}));
   const manifestHash=hash(manifest);
   const previous=await store.read(LATEST);
+  if(validatedPrevious!==undefined&&(previous?parsePointer(previous.body).manifestHash:null)!==validatedPrevious)throw Error('Weather pointer changed since history validation');
   if(previous){
     if(!previous.etag)throw Error('Invalid weather pointer');
     const pointer=parsePointer(previous.body);

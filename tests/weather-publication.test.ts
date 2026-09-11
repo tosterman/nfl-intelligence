@@ -65,3 +65,11 @@ test('reader rejects missing manifests, oversized declarations and timestamp dis
   await assert.rejects(readWeatherObjects(s),/manifest/);
  }
 });
+test('publication rejects a pointer changed since weather history validation',async()=>{
+ const s=store();const old=await publishWeatherObjects([Buffer.from('old')],'2026-09-11T12:00:00Z',s);
+ await publishWeatherObjects([Buffer.from('newer')],'2026-09-11T13:00:00Z',s);
+ const current=s.files.get('weather/latest.json');
+ await assert.rejects(publishWeatherObjects([Buffer.from('based on old')],'2026-09-11T14:00:00Z',s,old),/validation/);
+ assert.deepEqual(s.files.get('weather/latest.json'),current);
+ await assert.rejects(publishWeatherObjects([Buffer.from('first')],'2026-09-11T14:00:00Z',s,null),/validation/);
+});

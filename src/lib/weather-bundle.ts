@@ -1,4 +1,5 @@
 import {createHash} from 'node:crypto';
+import {isDeepStrictEqual} from 'node:util';
 import type {WeatherRecord} from './weather';
 import {weatherHistoryForGame,type WeatherHistory} from './weather-history';
 
@@ -12,6 +13,24 @@ export type WeatherBundle={
   history:WeatherHistory;contexts:Record<string,Context>;venueRegistryHash:string;
   sourceHashes:string[];ledgerSha256:string;
 };
+
+export function assertWeatherContinuity(previous:WeatherBundle,next:WeatherBundle){
+  if(Date.parse(next.weather.generatedAt)<Date.parse(previous.weather.generatedAt))throw Error('Weather collection regressed');
+  const rows=new Map(next.history.records.map(row=>[row.hash,row]));
+  if(previous.history.records.some(row=>!isDeepStrictEqual(rows.get(row.hash),row)))throw Error('Retained weather history was removed or changed');
+  const sources=new Set(next.sourceHashes);
+  if(previous.sourceHashes.some(hash=>!sources.has(hash)))throw Error('Retained weather source was removed');
+}
+
+export function boundWeatherRecord(bundle:WeatherBundle,game:Context,venues:Record<string,unknown>):WeatherRecord|undefined{
+  const context=bundle.contexts[game.id],record=bundle.weather.games[game.id];
+  if(!context||!record||!['id','season','kickoff','venue','neutral'].every(key=>context[key as keyof Context]===game[key as keyof Context]))return undefined;
+  if(record.status==='available'){
+    const approved=Object.hasOwn(venues,game.venue)?venues[game.venue]:null;
+    if(game.neutral||!approved||!isDeepStrictEqual(record.locationEvidence,approved))return undefined;
+  }
+  return record;
+}
 
 /** Verify transport/bundle consistency; raw NWS replay remains the trusted publisher's job. */
 export function decodeWeatherBundle(raw:Buffer,now=Date.now()):WeatherBundle{
