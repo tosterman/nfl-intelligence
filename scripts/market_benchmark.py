@@ -123,4 +123,6 @@ def grade_benchmark(site, ledger, receipts, captures, now, coverage_through, res
 def public_summary(report):
     """Only aggregate accounting crosses the public boundary; private traces stay retained."""
     keys=('schemaVersion','checkedAt','coverageThrough','scopeGames','closingCheckpointCounts','pairedGameCount','books','interpretation')
-    return {key:report[key] for key in keys} | {'reportHash':digest(report)}
+    excluded=[row for row in report['records'] if row['status']=='excluded' and row['book'] is not None]
+    return {key:report[key] for key in keys} | {'reportHash':digest(report),
+        'excludedBookMarketCount':len(excluded),'excludedGameCount':len({row['gameId'] for row in excluded})}

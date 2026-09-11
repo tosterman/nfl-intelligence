@@ -52,6 +52,7 @@ def main():
     (retained/'inventory.json').write_text(json.dumps({name:hashlib.sha256(body).hexdigest() for name,body in dependencies.items()},sort_keys=True,indent=2)+'\n')
     summary=public_summary(report)|{'publicationStatus':report['publicationStatus']}
     (ROOT/'reviews/market-benchmark-summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+    (ROOT/'data/market-benchmark.json').write_text(json.dumps(summary,indent=2)+'\n')
     print(json.dumps(summary))
 
 

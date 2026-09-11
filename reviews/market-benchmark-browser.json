@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-09-11T19:46:46.350918+00:00",
+  "url": "http://localhost:3000/performance",
+  "scope": "Real empty benchmark at 320px; keyboard disclosures and scoped axe",
+  "results": [
+    {
+      "engine": "chromium",
+      "status": 200,
+      "overflow": false,
+      "errors": [],
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "status": 200,
+      "overflow": false,
+      "errors": [],
+      "axe": {
+        "violations": [],
+        "incomplete": []
+      }
+    }
+  ]
+}

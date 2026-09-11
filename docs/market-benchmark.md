@@ -1,6 +1,6 @@
 # Matched forecast and market errors
 
-This implementation extends the unchanged market-pairing v1 observations into descriptive score-error accounting. It is not yet wired to the public performance page or scheduled publisher. It is not a separately verified preregistration receipt and does not calculate betting settlement, return or CLV.
+This implementation extends the unchanged market-pairing v1 observations into descriptive score-error accounting. A sanitized audit is now wired to the local performance page; public rollout and automatic refresh remain unverified. It is not a separately verified preregistration receipt and does not calculate betting settlement, return or CLV.
 
 For each book, spread and total remain separate. Use the latest valid forecast published by the protocol's 24-hour entry checkpoint and a sampled market observation from the final 15 minutes before kickoff. A spread of home -3 corresponds to a market-implied home margin of +3. Compare absolute model and market errors against the same retained final result. Include tied scores. Each mean uses exactly the same games for that book/market; empty cohorts have null means, never zero error. No favorable-book selection or older-quote fallback is permitted.
 
@@ -12,4 +12,6 @@ The September 11 real run used archive coverage through 00:38 UTC, not a new exp
 
 Validation: 31 market-related Python tests passed, including nine new benchmark tests. Independent code review found and prompted the future-edition rejection. The retained real report replayed exactly with zero paired games and networking blocked; see `reviews/market-benchmark-replay.json`.
 
-Before public acceptance: verify a published scoring convention, wire and validate the sanitized performance view, retain production reports durably, integrate refresh/replay into the operational workflow, and observe actual qualified captures and results. A private report or fixture pass is not a public benchmark or proof of accuracy.
+The local performance view validates audit chronology, reconciled counts, unique book/market rows and nullable empty-cohort means. It shows the stricter entry forecast definition separately from latest-pregame scoring, with source coverage dates, per-book reasons and distinct game versus book/market counts. Chromium and WebKit at 320px passed keyboard disclosure checks, zero document overflow and scoped axe checks. Positive paired values are fixture-tested and do not appear as real results.
+
+Before public acceptance: verify a published scoring convention and public view, retain production reports durably, integrate refresh/replay into the operational workflow, and observe actual qualified captures and results. A private report or fixture pass is not a public benchmark or proof of accuracy.

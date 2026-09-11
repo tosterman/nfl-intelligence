@@ -5,6 +5,8 @@ import { marginComparisonSummary } from "@/lib/performance-summary";
 import { PerformanceBands } from "@/components/performance-bands";
 import { IntervalCoverage } from "@/components/interval-coverage";
 import { editorialMetadata } from "@/lib/editorial-metadata";
+import {MarketBenchmarkPanel} from '@/components/market-benchmark';
+import marketBenchmark from '../../../data/market-benchmark.json';
 export const metadata = editorialMetadata(
   "Track record — Every result counts",
   "Inspect forecast accuracy, score errors, calibration and uncertainty coverage, with published-before-kickoff results separate from retrospective development tests.",
@@ -182,6 +184,7 @@ export default function Performance() {
         )}
         <LiveCalibration bins={site.livePerformance.calibration} />
       </section>
+      <MarketBenchmarkPanel data={marketBenchmark} now={Date.now()} />
       <h2 style={{ marginTop: 36 }}>Historical development record</h2>
       <div className="notice">
         <strong>
