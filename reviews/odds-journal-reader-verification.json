@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-09-11T14:29:28.263Z",
+  "probeRunId": "2ed7b774-a32c-4246-a224-7aa8bfd181c2",
+  "result": {
+    "attemptStartedAt": 1789134281722,
+    "eventAt": 1789134282791,
+    "stage": "failed",
+    "reason": "unknown-error"
+  },
+  "checks": [
+    "three retained byte hashes verified",
+    "complete event chain validated"
+  ],
+  "limitations": "Reads existing synthetic probe records only. No provider request, storage write, complete usage history or hosted execution established."
+}

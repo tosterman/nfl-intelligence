@@ -15,6 +15,39 @@ const defaultIO: IO = {
 };
 const pathFor = (at: number, slot: string) => `odds/attempt-journal/${at}/${slot}.json`;
 
+/** Read one immutable chain. null means no evidence was found, never zero usage.
+ * requested records dispatch intent; captured records an archive digest, whose
+ * contents must be verified separately. This cannot establish history coverage.
+ */
+export async function readAttemptEvidence(at: number, read: IO["read"] = readBlob): Promise<Event | null> {
+  if (!Number.isSafeInteger(at) || at < 0) throw new Error("Invalid attempt event time");
+  const events: Event[] = [];
+  // Read newest slots first. A concurrently appended immutable successor may
+  // be omitted, but cannot make an already-visible successor lose its prefix.
+  for (const slot of ["outcome", "requested", "reserved"] as const) {
+    const raw = await read(pathFor(at, slot));
+    if (!raw) {
+      if (events.length) throw new Error("Attempt journal predecessor missing");
+      continue;
+    }
+    if (raw.length > 1024) throw new Error("Invalid attempt journal record");
+    let event;
+    try { event = JSON.parse(raw.toString()); } catch { throw new Error("Invalid attempt journal record"); }
+    if (!event || typeof event !== "object" || Array.isArray(event) ||
+        event.schemaVersion !== 1 || event.attemptStartedAt !== at ||
+        (slot === "outcome" ? !["captured", "failed"].includes(event.stage) : event.stage !== slot) ||
+        !encode(event).equals(raw)) throw new Error("Invalid attempt journal record");
+    if (events.length && event.eventAt > events.at(-1)!.eventAt)
+      throw new Error("Invalid attempt journal chronology");
+    events.push(event);
+  }
+  if (!events.length) return null;
+  const latest = events[0];
+  return { attemptStartedAt: latest.attemptStartedAt, eventAt: latest.eventAt, stage: latest.stage,
+    ...(latest.stage === "captured" ? { archiveSha256: latest.archiveSha256 } : {}),
+    ...(latest.stage === "failed" ? { reason: latest.reason } : {}) };
+}
+
 function encode(event: Event) {
   if (!Number.isSafeInteger(event.attemptStartedAt) || event.attemptStartedAt < 0 ||
       !Number.isSafeInteger(event.eventAt) || event.eventAt < event.attemptStartedAt ||

@@ -17,6 +17,11 @@ existing atomic reservation is still responsible for concurrent writers and the
 rolling attempt cap. Persist outcome evidence so failures can be audited, without
 putting credentials or raw request URLs in the journal.
 
+The single-attempt reader now validates immutable evidence chains and distinguishes
+missing, reserved, requested and terminal evidence. See
+`reviews/odds-journal-reader.md`. It does not establish complete historical coverage;
+the authoritative history reader and migration rule remain activation requirements.
+
 Then exercise the actual hosted writer with bounded acquisition, storage-failure
 and retry scenarios, and verify its durable readback. Reconcile the provider's
 current quota with the migration allowance. Finally connect the schedule and

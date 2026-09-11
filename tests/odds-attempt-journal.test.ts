@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { recordAttemptEvent } from "../src/lib/odds-attempt-journal";
+import { recordAttemptEvent, readAttemptEvidence } from "../src/lib/odds-attempt-journal";
 
 function store() {
   const files = new Map<string, Buffer>();
@@ -13,6 +13,47 @@ function store() {
 }
 const reserved = { attemptStartedAt: 1000, eventAt: 1000, stage: "reserved" as const };
 const requested = { ...reserved, eventAt: 1001, stage: "requested" as const };
+
+test("reader distinguishes missing, unfinished and terminal evidence without writing", async () => {
+  const { files, io } = store();
+  assert.equal(await readAttemptEvidence(1000, io.read), null);
+  await recordAttemptEvent(reserved, io);
+  assert.equal((await readAttemptEvidence(1000, io.read))?.stage, "reserved");
+  await recordAttemptEvent(requested, io);
+  assert.equal((await readAttemptEvidence(1000, io.read))?.stage, "requested");
+  await recordAttemptEvent({ ...requested, stage: "captured", eventAt: 1002, archiveSha256: "a".repeat(64) }, io);
+  const result = await readAttemptEvidence(1000, io.read);
+  assert.equal(result?.stage, "captured");
+  assert.equal(result?.archiveSha256, "a".repeat(64));
+  assert.equal(files.size, 3);
+});
+
+test("reader rejects damaged, foreign, orphaned and reversed events", async () => {
+  for (const damage of ["null", "[]", "{", JSON.stringify({schemaVersion: 2, ...reserved}),
+    JSON.stringify({schemaVersion: 1, ...reserved, attemptStartedAt: 999}),
+    JSON.stringify({schemaVersion: 1, ...reserved, secret: "unexpected"})]) {
+    const { files, io } = store();
+    files.set("odds/attempt-journal/1000/reserved.json", Buffer.from(damage));
+    await assert.rejects(readAttemptEvidence(1000, io.read));
+  }
+  const { files, io } = store();
+  const first = await recordAttemptEvent(reserved, io);
+  await recordAttemptEvent({ ...requested, eventAt: 1010 }, io);
+  const last = await recordAttemptEvent({ ...requested, eventAt: 1011, stage: "failed", reason: "provider-error" }, io);
+  assert.equal((await readAttemptEvidence(1000, io.read))?.reason, "provider-error");
+  const validOutcome = files.get(last.path)!;
+  files.set(last.path, Buffer.from(JSON.stringify({schemaVersion: 1, ...requested, eventAt: 1005, stage: "failed", reason: "provider-error"})));
+  await assert.rejects(readAttemptEvidence(1000, io.read), /chronology/);
+  files.set(last.path, validOutcome);
+  files.delete(first.path);
+  await assert.rejects(readAttemptEvidence(1000, io.read), /predecessor/);
+});
+
+test("reader validates identity before storage and propagates storage failure", async () => {
+  for (const at of [-1, NaN, 1.5, Number.MAX_SAFE_INTEGER + 1])
+    await assert.rejects(readAttemptEvidence(at, async () => { throw new Error("must not read"); }), /time/);
+  await assert.rejects(readAttemptEvidence(1000, async () => { throw new Error("storage unavailable"); }), /storage unavailable/);
+});
 
 test("journal preserves event order and only records approved fields", async () => {
   const { files, io } = store();
