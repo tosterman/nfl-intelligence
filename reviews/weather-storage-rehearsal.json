@@ -1,0 +1,7 @@
+{
+  "scope": "In-memory storage rehearsal using retained real weather bytes; no provider writes",
+  "objects": 128,
+  "manifestHash": "fe336aae7e9daf496a3981b933587f2185a0beab889a3e9f59d88892cf728341",
+  "presentationBytes": 224128,
+  "exactReadback": true
+}

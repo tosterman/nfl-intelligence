@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-import {publishWeatherObjects} from '../src/lib/weather-publication';
+import {publishWeatherObjects, readWeatherObjects} from '../src/lib/weather-publication';
 const hash=(b:Buffer)=>createHash('sha256').update(b).digest('hex');
 function store(){
  const files=new Map<string,Buffer>();
@@ -40,4 +40,28 @@ test('lost pointer response is accepted only with exact committed readback',asyn
    await s.write(path,body,etag);if(path==='weather/latest.json')throw Error('response lost');
  }});
  assert.ok(s.files.has('weather/latest.json'));
+});
+test('reader verifies complete hash chain and may select presentation without source downloads',async()=>{
+ const s=store();const objects=[Buffer.from('presentation'),Buffer.from('source')];
+ assert.equal(await readWeatherObjects(s),null);
+ await publishWeatherObjects(objects,'2026-09-11T12:00:00Z',s);
+ const calls:string[]=[];
+ const result=await readWeatherObjects({...s,read:async(path)=>{calls.push(path);return s.read(path);}},[0]);
+ assert.deepEqual(result!.objects,[objects[0]]);
+ assert.ok(!calls.includes(`weather/objects/${hash(objects[1])}`));
+ s.files.set(`weather/objects/${hash(objects[0])}`,Buffer.from('corrupt'));
+ await assert.rejects(readWeatherObjects(s),/integrity/);
+});
+test('reader rejects missing manifests, oversized declarations and timestamp disagreement',async()=>{
+ const s=store();await publishWeatherObjects([Buffer.from('value')],'2026-09-11T12:00:00Z',s);
+ const pointer=JSON.parse(s.files.get('weather/latest.json')!.toString());
+ const path=`weather/manifests/${pointer.manifestHash}.json`;
+ const original=s.files.get(path)!;s.files.delete(path);
+ await assert.rejects(readWeatherObjects(s),/manifest/);
+ for(const change of [{generatedAt:'2026-09-12T12:00:00Z'},{objects:[{sha256:'a'.repeat(64),bytes:20_000_001}]}]){
+  const body=Buffer.from(JSON.stringify({...JSON.parse(original.toString()),...change}));
+  s.files.set(`weather/manifests/${hash(body)}.json`,body);
+  s.files.set('weather/latest.json',Buffer.from(JSON.stringify({...pointer,manifestHash:hash(body)})));
+  await assert.rejects(readWeatherObjects(s),/manifest/);
+ }
 });
