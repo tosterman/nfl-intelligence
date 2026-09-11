@@ -19,10 +19,20 @@ https://nfl-intelligence-one.vercel.app.
   See `docs/personnel-runtime-publication.md` for exact evidence and limitations.
 - Weather runtime v2 and bounded game-history restoration work locally. The
   public reader rollout and actual scheduled execution remain unverified.
-- Hosted verification passed on `759e28e` in run
-  [34637817184](https://github.com/tosterman/nfl-intelligence/actions/runs/34637817184).
-  Subsequent wording and wrapper-failure checks passed locally; their newer
-  hosted checks were still running or queued at this checkpoint.
+- Hosted verification passed on `ef0fb2f` in run
+  [34641664018](https://github.com/tosterman/nfl-intelligence/actions/runs/34641664018).
+  The subsequent generated-benchmark staging fix passed 23 related local checks;
+  its hosted run was still running at the 20:01 UTC inspection.
+- The real market benchmark now exports retained captures, replays the pinned
+  calculation without networking, verifies its private recovery package and
+  atomically replaces the local summary. Its September 11 19:56 UTC run has
+  zero eligible paired games; exclusions are explicit rather than treated as
+  zero error. At 20:02 UTC, Chromium and WebKit verified the intended report
+  fingerprint and rendered counts at 320px with no scoped axe violations,
+  browser errors or document overflow. A deliberately wrong fingerprint was
+  rejected against the actual local page. See `docs/market-benchmark.md` and
+  `reviews/market-benchmark-browser.json`. Public rollout and scheduled
+  benchmark execution remain unverified; its enabling variable is unset.
 - The forecast workflow remains disabled. Live workflow inspection shows odds
   and health active. Weather and personnel workflows are gated in development;
   their enabling variables remain unset. No sustained reliability claim follows

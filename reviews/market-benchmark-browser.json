@@ -1,7 +1,11 @@
 {
-  "checkedAt": "2026-09-11T19:46:46.350918+00:00",
+  "checkedAt": "2026-09-11T20:02:38.552777+00:00",
   "url": "http://localhost:3000/performance",
-  "scope": "Real empty benchmark at 320px; keyboard disclosures and scoped axe",
+  "reportHash": "a1e381593a9fc908c740bca7bfb21203b929d5ebe6eafaae7afa4112b37fb92b",
+  "auditAt": "2026-09-11T19:55:59.607327+00:00",
+  "coverageThrough": "2026-09-11T19:55:57.710000+00:00",
+  "pairedGameCount": 0,
+  "scope": "Intended report identity, rendered counts and paired errors, keyboard disclosures and scoped axe at 320px",
   "results": [
     {
       "engine": "chromium",

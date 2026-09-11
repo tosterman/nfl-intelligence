@@ -40,3 +40,11 @@ so later captures do not enter automatically until a successful refresh and
 deployment. Verify the gated step on a controlled forecast run, then separately
 observe scheduled execution. A failed benchmark refresh preserves its prior
 reader summary and cannot waive the forecast edition's publication checks.
+
+Run `python scripts/check_market_benchmark_ui.py --origin https://nfl-intelligence-one.vercel.app --output reviews/market-benchmark-public-browser.json`
+from the stable intended release checkout. This opens the actual performance
+page in Chromium and WebKit, checks the report fingerprint, rendered comparison
+and exclusion counts, any paired error values, keyboard disclosures and scoped
+accessibility at 320px. A failed invocation removes its old output proof rather
+than leaving a stale success receipt. This verifies the rendered benchmark;
+forecast publication still requires the separate exact-artifact receipt above.

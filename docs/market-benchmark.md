@@ -35,3 +35,14 @@ The real combined run completed September 11 at 19:56 UTC. It extended archive c
 The forecast workflow includes an independent, nonfatal step gated by `MARKET_BENCHMARK_ENABLED=true`, using the existing Blob secret. The repository variable is currently unset, and the forecast workflow remains paused pending the public rollout. The recovery artifact includes sanitized benchmark/run/retention metadata, not raw private captures. Before enabling the gate, verify the deployed performance page's report fingerprint and audit coverage against the intended local summary. Observe a controlled workflow run, then an actual scheduled run separately. A successful manual local run is not scheduler evidence.
 
 Before public acceptance: verify a published scoring convention and public view, enable and observe the guarded workflow after rollout, and observe actual qualified captures and results. Verified private packages do not prove sustained scheduled durability or model accuracy.
+
+The repeatable browser acceptance command is
+`python scripts/check_market_benchmark_ui.py --output reviews/market-benchmark-browser.json`.
+Its September 11 20:02 UTC local run matched the current report fingerprint and
+all rendered book/market counts in Chromium and WebKit at 320px, with keyboard
+disclosures, no overflow, no browser errors and no scoped axe violations or
+incomplete checks. A separate intentional wrong-fingerprint invocation failed
+against that real page. The checker also compares paired error values when
+present; this real zero-pair report does not exercise those positive rows.
+Use the public origin described in `docs/publication-resume.md` after deployment;
+local success does not establish public acceptance.
