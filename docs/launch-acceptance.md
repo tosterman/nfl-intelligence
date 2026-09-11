@@ -43,6 +43,15 @@ successful run's recovery artifact, and future publications now stage both.
 Controlled execution is verified; actual scheduled execution and sustained
 reliability remain unverified. Commercial and prospective model gates still apply.
 
+## Hosted health checkpoint — September 11, 20:51 UTC
+
+GitHub health run `34646352554` passed all seven feed checks against the public
+site, with exact edition parity for the September 11 20:38:54 edition. The
+downloaded runner artifact is retained in `reviews/hosted-production-health.json`.
+This verifies that monitoring works independently of the development computer.
+The run was manually dispatched; it does not establish clock-triggered execution
+or sustained reliability. Final published-repository CI `34645789733` also passed.
+
 ## Earlier release-preparation evidence
 
 - The local candidate now contains the real edition generated September 11 at
