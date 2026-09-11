@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-11T19:37:49.774614+00:00",
+  "checkedAt": "2026-09-11T20:07:05.384813+00:00",
   "baseUrl": "http://localhost:3001",
   "kind": "local-production-candidate",
   "pages": [
@@ -7,7 +7,7 @@
       "engine": "chromium",
       "path": "/?week=1",
       "status": 200,
-      "elapsedSeconds": 1.761,
+      "elapsedSeconds": 1.475,
       "overflow": false,
       "pageErrors": []
     },
@@ -15,7 +15,7 @@
       "engine": "chromium",
       "path": "/games/2026_01_ATL_PIT",
       "status": 200,
-      "elapsedSeconds": 0.968,
+      "elapsedSeconds": 0.916,
       "overflow": false,
       "pageErrors": []
     },
@@ -23,7 +23,7 @@
       "engine": "chromium",
       "path": "/performance",
       "status": 200,
-      "elapsedSeconds": 0.62,
+      "elapsedSeconds": 0.622,
       "overflow": false,
       "pageErrors": []
     },
@@ -31,7 +31,7 @@
       "engine": "chromium",
       "path": "/ratings",
       "status": 200,
-      "elapsedSeconds": 0.691,
+      "elapsedSeconds": 0.668,
       "overflow": false,
       "pageErrors": []
     },
@@ -39,7 +39,7 @@
       "engine": "webkit",
       "path": "/?week=1",
       "status": 200,
-      "elapsedSeconds": 1.667,
+      "elapsedSeconds": 1.588,
       "overflow": false,
       "pageErrors": []
     },
@@ -47,7 +47,7 @@
       "engine": "webkit",
       "path": "/games/2026_01_ATL_PIT",
       "status": 200,
-      "elapsedSeconds": 1.146,
+      "elapsedSeconds": 1.163,
       "overflow": false,
       "pageErrors": []
     },
@@ -55,7 +55,7 @@
       "engine": "webkit",
       "path": "/performance",
       "status": 200,
-      "elapsedSeconds": 0.772,
+      "elapsedSeconds": 0.764,
       "overflow": false,
       "pageErrors": []
     },
@@ -63,7 +63,7 @@
       "engine": "webkit",
       "path": "/ratings",
       "status": 200,
-      "elapsedSeconds": 0.8,
+      "elapsedSeconds": 0.813,
       "overflow": false,
       "pageErrors": []
     }
@@ -75,7 +75,7 @@
       "developmentStatus": 200,
       "identityParity": true,
       "identities": {
-        "generatedAt": "2026-09-11T16:17:34.782950+00:00"
+        "generatedAt": "2026-09-11T20:04:55.671471+00:00"
       }
     },
     {

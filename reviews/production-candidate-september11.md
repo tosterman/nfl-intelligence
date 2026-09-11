@@ -9,3 +9,21 @@ A rebuilt candidate including the cache fallback fix passed all eight browser ca
 Hosted run 34639419446 passed on ac52e0a. The next locally actionable founding gap is a receipt-qualified model-versus-market benchmark using existing frozen closing checkpoints, with matched games, per-book results, missing-capture exclusions and original result provenance. It must allow zero eligible completed comparisons and cannot fabricate CLV or profitable selections.
 
 The public reader rollout, actual scheduled execution, fresh forecast publication and commercial launch gates remain outstanding. No public deployment follows from these local checks.
+
+## Fresh edition follow-up at 20:07 UTC
+
+Commit `23dc10a` includes the real 20:04:55 UTC edition, its retained input
+archive and verified explanations. Its optimized build passed with 319 pages.
+The same eight browser cases passed again, and all seven production and
+development feed responses returned HTTP 200 with matching available identities.
+`local-production-candidate.json` now records this newer check; the earlier
+observations above retain their original scope.
+
+The market benchmark described above is now implemented. Its dedicated browser
+checker verified the intended report fingerprint and all real comparison counts
+on the optimized server in Chromium and WebKit at 320px, including keyboard
+disclosures and scoped axe checks without violations or incomplete checks.
+See `market-benchmark-production-browser.json`. The report still has zero
+eligible pairs, so positive comparison values are not established by this real
+browser check. The production server was temporary; this is still local evidence,
+not public deployment or sustained availability.
