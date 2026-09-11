@@ -78,6 +78,8 @@ export function Slate({
   const filtered = weekGames
     .filter(
       (g) =>
+        (filter !== "upcoming" ||
+          (g.status === "scheduled" && Date.parse(g.kickoff ?? "") > now)) &&
         (filter !== "forecast" || !!g.snapshot) &&
         (filter !== "close" ||
           (g.snapshot &&
@@ -315,6 +317,7 @@ export function Slate({
           <div className="filters" role="group" aria-label="Filter games">
             {[
               ["all", "All games"],
+              ["upcoming", "Upcoming"],
               ["forecast", "With forecasts"],
               ["close", "Close matchups"],
             ].map(([v, l]) => (

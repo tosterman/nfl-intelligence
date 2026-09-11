@@ -29,7 +29,7 @@ export default async function Home({
     query: typeof params.q === "string" ? params.q.slice(0, 60) : "",
     filter:
       typeof params.filter === "string" &&
-      ["all", "forecast", "close"].includes(params.filter)
+      ["all", "upcoming", "forecast", "close"].includes(params.filter)
         ? params.filter
         : "all",
     sort: params.sort === "confidence" ? "confidence" : "kickoff",
