@@ -58,7 +58,11 @@ export async function readWeatherPartitionIndex(store:Reader,root:WeatherPartiti
 export async function readWeatherGamePartition(store:Reader,root:WeatherPartitionRoot,gameId:string){
  const index=await readWeatherPartitionIndex(store,root);
  if(!Object.hasOwn(index,gameId))return null;
- const partition=await readJson(store,index[gameId],'weather-game-history');
+ return readWeatherGamePartitionObject(store,root,gameId,index[gameId]);
+}
+
+export async function readWeatherGamePartitionObject(store:Reader,root:WeatherPartitionRoot,gameId:string,ref:WeatherObjectRef){
+ const partition=await readJson(store,ref,'weather-game-history');
  if(partition.gameId!==gameId||typeof partition.ledgerJson!=='string')throw Error('Weather partition game mismatch');
  const ledger:unknown=JSON.parse(partition.ledgerJson),history=object(partition.history),sources=object(partition.sources);
  if(!Array.isArray(ledger)||ledger.length>2000||history.schemaVersion!==1||!Array.isArray(history.records)||history.records.length!==ledger.length||Object.keys(sources).length>4096)throw Error('Invalid weather partition history');

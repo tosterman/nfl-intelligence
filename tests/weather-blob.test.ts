@@ -10,7 +10,7 @@ test('bounded weather reads cancel streams that exceed declared size',async()=>{
  assert.equal((await readWeatherStream(valid,3)).toString(),'abc');
 });
 test('weather storage paths cannot target odds or arbitrary objects',()=>{
- for(const path of ['weather/latest.json',`weather/objects/${'a'.repeat(64)}`,`weather/manifests/${'b'.repeat(64)}.json`])assert.equal(weatherBlobPath(path),path);
+ for(const path of ['weather/latest.json','weather/latest-v2.json',`weather/objects/${'a'.repeat(64)}`,`weather/manifests/${'b'.repeat(64)}.json`])assert.equal(weatherBlobPath(path),path);
  for(const path of ['odds/latest.json','weather/../odds/latest.json','https://example.com','weather/objects/not-a-hash'])assert.throws(()=>weatherBlobPath(path));
 });
 test('private responses without content length remain bounded and must contain data',async()=>{

@@ -2,7 +2,7 @@ import {get,put} from '@vercel/blob';
 import type {WeatherObjectStore} from './weather-publication';
 
 export function weatherBlobPath(path:string){
-  if(!/^weather\/(latest\.json|objects\/[a-f0-9]{64}|manifests\/[a-f0-9]{64}\.json)$/.test(path))throw Error('Invalid weather storage path');
+  if(!/^weather\/(latest(?:-v2)?\.json|objects\/[a-f0-9]{64}|manifests\/[a-f0-9]{64}\.json)$/.test(path))throw Error('Invalid weather storage path');
   return path;
 }
 
@@ -32,7 +32,7 @@ export const weatherBlobStore:WeatherObjectStore={
   async write(path,body,etag){
     weatherBlobPath(path);
     if(body.length<1||body.length>10_000_000)throw Error('Invalid weather object size');
-    if(path!=='weather/latest.json'&&etag!==undefined)throw Error('Weather archives cannot be overwritten');
+    if(!['weather/latest.json','weather/latest-v2.json'].includes(path)&&etag!==undefined)throw Error('Weather archives cannot be overwritten');
     if(etag!==undefined&&!etag)throw Error('Weather pointer version required');
     await put(path,body,{access:'private',allowOverwrite:etag!==undefined,ifMatch:etag,
       addRandomSuffix:false,contentType:'application/octet-stream',abortSignal:AbortSignal.timeout(5000)});

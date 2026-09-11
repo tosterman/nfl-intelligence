@@ -108,3 +108,14 @@ passed: 137 → 151 observations, with all 14 games retained and the anchored
 snapshot remaining 180,577 bytes. See `reviews/weather-partition-continuity.json`.
 This is a continuity check, not a substitute for raw-source replay or pointer
 publication verification; the publisher must enforce all three.
+
+The storage transaction in `weather-partition-publication.ts` now verifies the
+prepared root, snapshot, index, changed partitions and their referenced sources
+before writing. It reuses exact existing immutable objects and advances a
+version-conditional `weather/latest-v2.json` pointer only after readback. This
+separate migration pointer preserves the v1 reader and archive until controlled
+cutover; it is not a fallback that masks v2 failures. Four transaction tests and
+five scoped-reader tests pass, including interrupted writes, lost responses,
+concurrent publication, and missing source/index rejection before mutation.
+The command-line publisher must still invoke Python source replay and continuity
+verification before this storage transaction. No v2 storage publication occurred.
