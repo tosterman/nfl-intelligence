@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { MarketCard, MarketPanel } from "../src/components/market-panel";
+import { MarketCard, MarketPanel, MarketBrief } from "../src/components/market-panel";
 import type { OddsFeed } from "../src/lib/odds";
 import { assessGameOdds } from "../src/lib/odds";
 import { site } from "../src/lib/data";
@@ -29,6 +29,13 @@ test('slate comparisons use the selected book and suppress stale model or quotes
   assert.doesNotMatch(render(prediction, Date.parse(at) + 21600001), /pts stronger|pts higher/);
   assert.doesNotMatch(render(prediction, Date.parse(game.kickoff)), /pts stronger|pts higher/);
   assert.doesNotMatch(render(prediction, Date.parse(at), []), /pts stronger|pts higher/);
+  const brief = (initialNow = Date.parse(at), freshness = [{name: 'model', retrievedAt: at}]) => renderToStaticMarkup(createElement(MarketBrief, {game, feed, initialNow, prediction, freshness}));
+  assert.match(brief(), /LAR is 2.0 points stronger/);
+  assert.match(brief(), /total is 2.0 points higher/);
+  assert.match(brief(), /Against FanDuel/);
+  assert.match(brief(), /href="#market-prices"/);
+  assert.doesNotMatch(brief(Date.parse(game.kickoff)), /2.0 points/);
+  assert.doesNotMatch(brief(Date.parse(at), []), /2.0 points/);
 });
 test("cross-book snapshot preserves distinct quotes and excludes expired books", () => {
   const pair = { observedAt: at, homePrice: -110, awayPrice: -110 };

@@ -1,7 +1,7 @@
 import { ModelBrief } from '@/components/model-brief';
 import { freshnessInputs } from "@/lib/freshness";
 import { getOdds } from "@/lib/odds-server";
-import { MarketPanel } from "@/components/market-panel";
+import { MarketPanel, MarketBrief } from "@/components/market-panel";
 import { MarketHistoryPanel } from "@/components/market-history";
 import { getMarketHistory } from "@/lib/odds-history-server";
 import { snapshotTime } from "@/lib/types";
@@ -220,6 +220,7 @@ export default async function GamePage({
                   {Math.abs(p.homeMargin).toFixed(1)} points.
                 </p>
                 <ModelBrief prediction={p} home={teams[g.home].name} away={teams[g.away].name} />
+                <MarketBrief game={g} feed={marketData![0]} prediction={p} freshness={freshnessInputs(site)} initialNow={Date.now()} />
                 <div className="notice">
                   <strong>Room for a different result</strong>
                   <p>The middle 80% of modeled margins span {marginRange(p.marginInterval80, teams[g.home].name, teams[g.away].name) ?? "an unavailable range"}.</p>

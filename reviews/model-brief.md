@@ -19,6 +19,19 @@ brief, no horizontal overflow, and focus moving to the contribution heading
 after activating the evidence link. The mobile screenshot was reviewed; consent
 was then declined for the retained unobscured capture.
 
-Market and revision summaries are still separate panels. This is the modeled
-advantage/counterweight portion of the planned brief, not a completed integrated
-game briefing or evidence of timed two-minute comprehension.
+The opening read now also includes MarketBrief: the default eligible sportsbook,
+spread and total differences, independent quote timestamps and an evidence link.
+It uses the same selection, freshness assessment and deadline clock as the
+market panels, and withholds comparisons on stale inputs or closed markets.
+The full price table remains independently selectable; the opening brief always
+identifies its own default sportsbook and does not imply it follows that selector.
+
+Four market-display tests passed with brief assertions for selected-book values,
+stale model withholding and kickoff closure. TypeScript checking passed. A real
+390px Chromium visit showed the populated FanDuel brief, with no horizontal
+overflow; its evidence link focused the market heading. The retained screenshot
+was visually inspected. This adds no odds-provider calls: it uses the same stored
+feed already loaded for the detail page.
+
+Revision summaries remain separate. This is not evidence of timed two-minute
+comprehension or validated betting value.

@@ -50,6 +50,24 @@ const defaultBook = (books: BookQuote[]) =>
   books.find((b) => b.book === "fanduel" && b.spread) ??
   books.find((b) => b.spread) ??
   books[0];
+export function MarketBrief({game, feed, prediction, freshness, initialNow}: {
+  game: Match; feed: OddsFeed; prediction: Prediction; freshness: FreshnessInput[]; initialNow: number;
+}) {
+  const now = useClock(initialNow, marketDeadlines(feed, game, freshness));
+  const assessment = assessGameOdds(feed, game, now);
+  const book = defaultBook(assessment.books);
+  const fresh = assessFreshness(freshness, now).status === 'ok';
+  const spread = book?.spread ? prediction.homeMargin + book.spread.homePoint : null;
+  const total = book?.total ? prediction.total - book.total.point : null;
+  return <div className="market-brief">
+    <p><strong>Market context. </strong>{!book ? assessment.reason : !fresh ? 'Model comparisons are withheld while the model inputs await refresh.' : <>
+      Against {book.name}, {spread === null ? 'the spread is not quoted' : Math.abs(spread) < 0.05 ? 'the model spread matches at displayed precision' : `${teams[game.home].short} is ${Math.abs(spread).toFixed(1)} points ${spread > 0 ? 'stronger than' : 'weaker than'} the spread implies`}.
+      {' '}{total === null ? 'The total is not quoted.' : Math.abs(total) < 0.05 ? 'The model total matches at displayed precision.' : `The model total is ${Math.abs(total).toFixed(1)} points ${total > 0 ? 'higher' : 'lower'}.`}
+    </>}</p>
+    {book && fresh && <p className="fine">{book.spread && <>Spread as of {stamp(book.spread.observedAt)}. </>}{book.total && <>Total as of {stamp(book.total.observedAt)}. </>}Differences are not proven betting edges.</p>}
+    <p className="fine"><a href="#market-prices">Inspect prices and compare sportsbooks</a></p>
+  </div>;
+}
 export function MarketCard({
   game,
   feed,
