@@ -1,0 +1,178 @@
+{
+  "checkedAt": "2026-09-11T17:10:49.446319+00:00",
+  "scheduledFailureRun": 34623950366,
+  "observations": {
+    "public": {
+      "httpStatus": 503,
+      "status": "unavailable",
+      "collectionStartedAt": "2026-09-10T20:09:04.331031+00:00",
+      "generatedAt": "2026-09-10T20:09:05.031413+00:00",
+      "maximumAgeHours": 30,
+      "eligibleGames": 7,
+      "availableGames": 6,
+      "checks": [
+        {
+          "gameId": "2026_01_CHI_CAR",
+          "status": "ok",
+          "issuedAt": "2026-09-10T18:23:35+00:00",
+          "retrievedAt": "2026-09-10T20:09:04.473084+00:00",
+          "sourceHash": "37034a686378626f22a0a67deda8ffbef63b8ab8f791184e6419c9a56c6ababb"
+        },
+        {
+          "gameId": "2026_01_CLE_JAX",
+          "status": "ok",
+          "issuedAt": "2026-09-10T18:21:00+00:00",
+          "retrievedAt": "2026-09-10T20:09:04.526166+00:00",
+          "sourceHash": "c377bb0396598cbf325ddf175f3f73379d0f8233a0a5c3da2d4f5f069e118c11"
+        },
+        {
+          "gameId": "2026_01_DAL_NYG",
+          "status": "ok",
+          "issuedAt": "2026-09-10T18:19:47+00:00",
+          "retrievedAt": "2026-09-10T20:09:04.610336+00:00",
+          "sourceHash": "bf290cb322186917e135e931b96b3637ed9eec9f19c106a976c3160b61cc04d6"
+        },
+        {
+          "gameId": "2026_01_NYJ_TEN",
+          "status": "ok",
+          "issuedAt": "2026-09-10T18:31:34+00:00",
+          "retrievedAt": "2026-09-10T20:09:04.715070+00:00",
+          "sourceHash": "539fd805ffca6b671feac6dc62db1312df90c831c7bc081ecd672e6a8aa723f2"
+        },
+        {
+          "gameId": "2026_01_TB_CIN",
+          "status": "ok",
+          "issuedAt": "2026-09-10T18:17:01+00:00",
+          "retrievedAt": "2026-09-10T20:09:04.771322+00:00",
+          "sourceHash": "68afb205830efa6ae73ce52e495cfd079b590f4430086e2b56e79090254a925c"
+        },
+        {
+          "gameId": "2026_01_WAS_PHI",
+          "status": "unavailable",
+          "issuedAt": "2026-09-10T08:09:38+00:00",
+          "retrievedAt": "2026-09-10T20:09:04.926120+00:00",
+          "sourceHash": "a958a2d627c41ee2a8d653492371a4f8e7529262ae7bfc77f3d46719f2f0b2f0"
+        },
+        {
+          "gameId": "2026_01_DEN_KC",
+          "status": "ok",
+          "issuedAt": "2026-09-10T19:01:28+00:00",
+          "retrievedAt": "2026-09-10T20:09:05.029353+00:00",
+          "sourceHash": "2b29ea163db5d99a84259213932ca88ca38dc8f4b6634c92425f371583c07aec"
+        }
+      ],
+      "scope": "Unplayed games with verified US coordinates inside the collection-time seven-day window. Zero eligible games is valid; this does not establish complete venue coverage or a weather adjustment to the model."
+    },
+    "local": {
+      "httpStatus": 200,
+      "status": "ok",
+      "collectionStartedAt": "2026-09-11T16:06:00.303552+00:00",
+      "generatedAt": "2026-09-11T16:06:04.297497+00:00",
+      "maximumAgeHours": 30,
+      "eligibleGames": 14,
+      "availableGames": 14,
+      "checks": [
+        {
+          "gameId": "2026_01_ARI_LAC",
+          "status": "ok",
+          "issuedAt": "2026-09-11T14:26:37+00:00",
+          "retrievedAt": "2026-09-11T16:06:00.744309+00:00",
+          "sourceHash": "8c83d7f14cb1197bdb7eb96ed64624e945827f9cf7506c60336bbf239b584d2a"
+        },
+        {
+          "gameId": "2026_01_ATL_PIT",
+          "status": "ok",
+          "issuedAt": "2026-09-11T09:41:38+00:00",
+          "retrievedAt": "2026-09-11T16:06:00.966016+00:00",
+          "sourceHash": "98e875ed95878da3ce354588a804ba702102f882968eacdab8a1c17ba66ff64d"
+        },
+        {
+          "gameId": "2026_01_BAL_IND",
+          "status": "ok",
+          "issuedAt": "2026-09-11T15:45:31+00:00",
+          "retrievedAt": "2026-09-11T16:06:01.370832+00:00",
+          "sourceHash": "6015cb5c632190c4439f177dd8074251263545dd95e3a57aaee52e61f4238512"
+        },
+        {
+          "gameId": "2026_01_CHI_CAR",
+          "status": "ok",
+          "issuedAt": "2026-09-11T10:38:33+00:00",
+          "retrievedAt": "2026-09-11T16:06:01.650802+00:00",
+          "sourceHash": "96e21e165db418ad912f5989af9381cd1a12d8f461c7ae1f78d62644349ba067"
+        },
+        {
+          "gameId": "2026_01_CLE_JAX",
+          "status": "ok",
+          "issuedAt": "2026-09-11T14:26:22+00:00",
+          "retrievedAt": "2026-09-11T16:06:01.865966+00:00",
+          "sourceHash": "2d34fe9cdd93ef479114479e2b9cb0abe0e5b23a52f58700e418799daf572855"
+        },
+        {
+          "gameId": "2026_01_DAL_NYG",
+          "status": "ok",
+          "issuedAt": "2026-09-11T07:39:50+00:00",
+          "retrievedAt": "2026-09-11T16:06:02.151481+00:00",
+          "sourceHash": "cf9bfeb3903fb96e5fa3971065f7edaa280b1598d42500b5f890d77c7989f520"
+        },
+        {
+          "gameId": "2026_01_GB_MIN",
+          "status": "ok",
+          "issuedAt": "2026-09-11T12:51:55+00:00",
+          "retrievedAt": "2026-09-11T16:06:02.429696+00:00",
+          "sourceHash": "177784fcdf0af267f74c2c903410199f5d1255acf1922333216927510cc7a8be"
+        },
+        {
+          "gameId": "2026_01_MIA_LV",
+          "status": "ok",
+          "issuedAt": "2026-09-11T10:08:09+00:00",
+          "retrievedAt": "2026-09-11T16:06:02.724669+00:00",
+          "sourceHash": "85ac6a9f56ae21a38e8c25da77cc9c701d608036ceb6df72d00e0cc3ea7fe48b"
+        },
+        {
+          "gameId": "2026_01_NO_DET",
+          "status": "ok",
+          "issuedAt": "2026-09-11T08:24:39+00:00",
+          "retrievedAt": "2026-09-11T16:06:02.990495+00:00",
+          "sourceHash": "068278f1f448dcbcbfbb3b94945fd19029ee47e2b760d41440bcd0957bf56635"
+        },
+        {
+          "gameId": "2026_01_NYJ_TEN",
+          "status": "ok",
+          "issuedAt": "2026-09-11T10:51:57+00:00",
+          "retrievedAt": "2026-09-11T16:06:03.234019+00:00",
+          "sourceHash": "22716f9209947ffcd5f62544383799e572473d978790db2a5088506069ee87f2"
+        },
+        {
+          "gameId": "2026_01_TB_CIN",
+          "status": "ok",
+          "issuedAt": "2026-09-11T08:00:27+00:00",
+          "retrievedAt": "2026-09-11T16:06:03.496010+00:00",
+          "sourceHash": "3f60b89334b2ccadcd425118f72db50c8bf4c84a76d84849c2689e2c0bdb8c62"
+        },
+        {
+          "gameId": "2026_01_WAS_PHI",
+          "status": "ok",
+          "issuedAt": "2026-09-11T13:17:12+00:00",
+          "retrievedAt": "2026-09-11T16:06:03.737541+00:00",
+          "sourceHash": "883a6f2b912dc60da965e61d133660240e8f1c5b80882d1298a26324989896dd"
+        },
+        {
+          "gameId": "2026_01_DEN_KC",
+          "status": "ok",
+          "issuedAt": "2026-09-11T11:31:12+00:00",
+          "retrievedAt": "2026-09-11T16:06:03.992667+00:00",
+          "sourceHash": "4fb38ca7c3bf1ede829eb3d1ff1f3830da033c9e82991611ac942300778318f6"
+        },
+        {
+          "gameId": "2026_02_DET_BUF",
+          "status": "ok",
+          "issuedAt": "2026-09-11T13:57:57+00:00",
+          "retrievedAt": "2026-09-11T16:06:04.277226+00:00",
+          "sourceHash": "b39883b3658ad3530688c331162cf94eba51d86d027dc37b20116121dd46a8c3"
+        }
+      ],
+      "scope": "Unplayed games with verified US coordinates inside the collection-time seven-day window. Zero eligible games is valid; this does not establish complete venue coverage or a weather adjustment to the model."
+    }
+  },
+  "diagnosis": "Public Washington-Philadelphia issue time exceeds the 30-hour weather limit; local retained edition is fresh. Public recovery requires permitted deployment and post-deployment readback."
+}

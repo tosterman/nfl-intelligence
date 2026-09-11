@@ -12,3 +12,13 @@ Before resuming:
 6. Observe a subsequent actual scheduled run through refresh, public capture and receipt archival. A manual dispatch is not evidence of scheduler reliability. Confirm odds and health workflows remain active, and monitor feed freshness and whether the public edition matches the intended release.
 
 Record the resumed workflow state and successful publication evidence alongside the pause receipt in `reviews/publication-workflow-pause.json`. Until then, report the publisher as paused, not operational or sustainably scheduled. No hosting upgrade or deployment retry was made as part of the pause.
+
+September 11 pre-rollout observation: scheduled health run 34623950366 failed
+because the older public Washington–Philadelphia weather issue passed its
+30-hour limit. Direct readback confirms public weather status 503 with six of
+seven eligible games available; the local release reports 200 with fourteen of
+fourteen eligible games available. See
+`reviews/weather-public-expiry-observation.json`. Keep freshness limits intact.
+Regenerate any inputs that expire before rollout, then verify public weather
+health and every other deployed feed after publication. A locally healthy
+artifact does not resolve the public incident.
