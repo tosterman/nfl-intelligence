@@ -1,0 +1,772 @@
+{
+  "retainedEdition": "2026-09-10T23:29:01.710181+00:00",
+  "currentEdition": "2026-09-10T23:29:01.710181+00:00",
+  "currentSiteSha256": "dc79461c5cf0c6fed3131f66c45f6d6b38d98ef491ed9f4a13a0445eaaee9a41",
+  "filesCompared": 18,
+  "changedFiles": 0,
+  "addedRecords": 0,
+  "removedRecords": 0,
+  "revisedRecords": 0,
+  "files": [
+    {
+      "path": "data/games.csv",
+      "beforeSha256": "940ed9189dda64a784b8c9beea0e66786c83a05592bb72151f961d0f2cb2d1c0",
+      "afterSha256": "940ed9189dda64a784b8c9beea0e66786c83a05592bb72151f961d0f2cb2d1c0",
+      "identityColumns": [
+        "game_id"
+      ],
+      "beforeRows": 7548,
+      "afterRows": 7548,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2010.csv",
+      "beforeSha256": "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "afterSha256": "aebfca58157e4ba6190914591d6cb9392578f1d50e79c672ca9a3b44e496ead0",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 534,
+      "afterRows": 534,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2011.csv",
+      "beforeSha256": "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "afterSha256": "731f66ca962f8d7012548a400508bd6ea1fba373229bb8ee388584e5371efa7d",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 534,
+      "afterRows": 534,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2012.csv",
+      "beforeSha256": "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "afterSha256": "f12953415da4c78cb947007fba8b6ef8a4c8e9666bd4329dd8e408979b03cfde",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 534,
+      "afterRows": 534,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2013.csv",
+      "beforeSha256": "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "afterSha256": "423ddacd4b04c5d873c53aa64ee2ed7710c92ea37f350c8a8e884b395f7a51ac",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 534,
+      "afterRows": 534,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2014.csv",
+      "beforeSha256": "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "afterSha256": "c3e0dabe2e5e09594d01e481c94ee1f92527f94b441e480f82c1d06b6299bb77",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 534,
+      "afterRows": 534,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2015.csv",
+      "beforeSha256": "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "afterSha256": "d490bbf8817651f083d28b008b75e49714bc6998b0f2495d0df5bca75fc97fb8",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 534,
+      "afterRows": 534,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2016.csv",
+      "beforeSha256": "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "afterSha256": "1a6f704d6eda8d26820ffadba05fbb42e6e60d1dc33dc93bc365c244d25349db",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 534,
+      "afterRows": 534,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2017.csv",
+      "beforeSha256": "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "afterSha256": "c09fa261c37069b1ffc4ee340b8c90458d7453333321e97d13d6fb8a0aab51f4",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 534,
+      "afterRows": 534,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2018.csv",
+      "beforeSha256": "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "afterSha256": "d2df3adf2fbadfb597bc334807f5020aefe2b2ae13d28155f7f01cb981f00555",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 534,
+      "afterRows": 534,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2019.csv",
+      "beforeSha256": "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "afterSha256": "d3311b008de52dd95729d76d225b45f51eb91932e8fa3c38c18548397aa00a06",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 534,
+      "afterRows": 534,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2020.csv",
+      "beforeSha256": "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "afterSha256": "a8f2cc2055404fc293105af25f14ff28593c32961912e752e2e50f4a6ba461ad",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 538,
+      "afterRows": 538,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2021.csv",
+      "beforeSha256": "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "afterSha256": "a094523217f7f351a79f5e667dbe67267e0861a3b76a7a3b62a1cfe49f289673",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 570,
+      "afterRows": 570,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2022.csv",
+      "beforeSha256": "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "afterSha256": "9803875bd0b74aa49230288d45359c75e45910f1cf1953ea0f07b9d3db35e4d1",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 568,
+      "afterRows": 568,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2023.csv",
+      "beforeSha256": "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "afterSha256": "dc5a387daabe8663deaddac492ad7020d47fb1a66048690b355b406cd8e4c454",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 570,
+      "afterRows": 570,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2024.csv",
+      "beforeSha256": "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "afterSha256": "b207a1430c2715d03bbf1844c4eae98695f364851ff6025f422febc2c13f5255",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 570,
+      "afterRows": 570,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2025.csv",
+      "beforeSha256": "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "afterSha256": "91058a59d894855377b2f39f40c4e7bdbeef96d12144289dc68215209a1c93cb",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 570,
+      "afterRows": 570,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    },
+    {
+      "path": "data/raw/stats_team_week_2026.csv",
+      "beforeSha256": "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845",
+      "afterSha256": "a23f9c4b5f159f4121c79d8cb32cff7eab68d4629740bafe38fb416925b1c845",
+      "identityColumns": [
+        "game_id",
+        "team"
+      ],
+      "beforeRows": 2,
+      "afterRows": 2,
+      "bytesChanged": false,
+      "recordsChanged": false,
+      "added": [],
+      "removed": [],
+      "revised": [],
+      "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+    }
+  ],
+  "historicalScheduleComparison": {
+    "originalAcquisitionTimeKnown": false,
+    "beforeSha256": "b0b01f911efc41ad05259f26938091678afde4790541c9d99268843d5c08320f",
+    "afterSha256": "940ed9189dda64a784b8c9beea0e66786c83a05592bb72151f961d0f2cb2d1c0",
+    "identityColumns": [
+      "game_id"
+    ],
+    "beforeRows": 7548,
+    "afterRows": 7548,
+    "bytesChanged": true,
+    "recordsChanged": true,
+    "added": [],
+    "removed": [],
+    "revised": [
+      {
+        "key": [
+          "2026_01_ATL_PIT"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "154",
+            "after": "190"
+          },
+          "away_spread_odds": {
+            "before": "-108",
+            "after": "-115"
+          },
+          "home_moneyline": {
+            "before": "-185",
+            "after": "-230"
+          },
+          "home_spread_odds": {
+            "before": "-112",
+            "after": "-105"
+          },
+          "over_odds": {
+            "before": "-105",
+            "after": "-110"
+          },
+          "spread_line": {
+            "before": "3.5",
+            "after": "5.5"
+          },
+          "total_line": {
+            "before": "42.5",
+            "after": "41.5"
+          },
+          "under_odds": {
+            "before": "-115",
+            "after": "-110"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_01_BUF_HOU"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "-120",
+            "after": "-122"
+          },
+          "home_moneyline": {
+            "before": "100",
+            "after": "102"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_01_CLE_JAX"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "350",
+            "after": "360"
+          },
+          "home_moneyline": {
+            "before": "-455",
+            "after": "-470"
+          },
+          "over_odds": {
+            "before": "-110",
+            "after": "-118"
+          },
+          "total_line": {
+            "before": "40.5",
+            "after": "39.5"
+          },
+          "under_odds": {
+            "before": "-110",
+            "after": "-102"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_01_MIA_LV"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "140",
+            "after": "142"
+          },
+          "home_moneyline": {
+            "before": "-166",
+            "after": "-170"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_01_NO_DET"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "250",
+            "after": "245"
+          },
+          "home_moneyline": {
+            "before": "-310",
+            "after": "-305"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_01_SF_LA"
+        ],
+        "fields": {
+          "away_spread_odds": {
+            "before": "-102",
+            "after": "-105"
+          },
+          "home_spread_odds": {
+            "before": "-118",
+            "after": "-115"
+          },
+          "over_odds": {
+            "before": "-105",
+            "after": "-115"
+          },
+          "total_line": {
+            "before": "48.5",
+            "after": "47.5"
+          },
+          "under_odds": {
+            "before": "-115",
+            "after": "-105"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_02_CAR_ATL"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "102",
+            "after": "105"
+          },
+          "home_moneyline": {
+            "before": "-122",
+            "after": "-125"
+          },
+          "over_odds": {
+            "before": "-118",
+            "after": "-110"
+          },
+          "under_odds": {
+            "before": "-102",
+            "after": "-110"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_02_IND_KC"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "260",
+            "after": "250"
+          },
+          "home_moneyline": {
+            "before": "-325",
+            "after": "-310"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_02_NO_BAL"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "280",
+            "after": "295"
+          },
+          "home_moneyline": {
+            "before": "-355",
+            "after": "-375"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_02_PIT_NE"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "",
+            "after": "170"
+          },
+          "away_spread_odds": {
+            "before": "",
+            "after": "-115"
+          },
+          "home_moneyline": {
+            "before": "",
+            "after": "-205"
+          },
+          "home_spread_odds": {
+            "before": "",
+            "after": "-105"
+          },
+          "over_odds": {
+            "before": "",
+            "after": "-110"
+          },
+          "spread_line": {
+            "before": "",
+            "after": "4.5"
+          },
+          "total_line": {
+            "before": "",
+            "after": "43.5"
+          },
+          "under_odds": {
+            "before": "",
+            "after": "-110"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_02_SEA_ARI"
+        ],
+        "fields": {
+          "away_qb_id": {
+            "before": "00-0034869",
+            "after": "00-0035704"
+          },
+          "away_qb_name": {
+            "before": "Sam Darnold",
+            "after": "Drew Lock"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_04_ATL_NO"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "120",
+            "after": "114"
+          },
+          "home_moneyline": {
+            "before": "-142",
+            "after": "-135"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_04_TEN_BAL"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "300",
+            "after": "310"
+          },
+          "home_moneyline": {
+            "before": "-380",
+            "after": "-395"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_05_BAL_ATL"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "-205",
+            "after": "-198"
+          },
+          "home_moneyline": {
+            "before": "170",
+            "after": "164"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_07_CIN_BAL"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "154",
+            "after": "150"
+          },
+          "home_moneyline": {
+            "before": "-185",
+            "after": "-180"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_07_SF_ATL"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "-225",
+            "after": "-218"
+          },
+          "home_moneyline": {
+            "before": "185",
+            "after": "180"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_08_ARI_DAL"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "410",
+            "after": ""
+          },
+          "away_spread_odds": {
+            "before": "-110",
+            "after": ""
+          },
+          "home_moneyline": {
+            "before": "-550",
+            "after": ""
+          },
+          "home_spread_odds": {
+            "before": "-110",
+            "after": ""
+          },
+          "over_odds": {
+            "before": "-110",
+            "after": ""
+          },
+          "spread_line": {
+            "before": "10.5",
+            "after": ""
+          },
+          "total_line": {
+            "before": "47.5",
+            "after": ""
+          },
+          "under_odds": {
+            "before": "-110",
+            "after": ""
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_08_ATL_TB"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "",
+            "after": "185"
+          },
+          "away_spread_odds": {
+            "before": "",
+            "after": "-110"
+          },
+          "home_moneyline": {
+            "before": "",
+            "after": "-225"
+          },
+          "home_spread_odds": {
+            "before": "",
+            "after": "-110"
+          },
+          "over_odds": {
+            "before": "",
+            "after": "-110"
+          },
+          "spread_line": {
+            "before": "",
+            "after": "4.5"
+          },
+          "total_line": {
+            "before": "",
+            "after": "46.5"
+          },
+          "under_odds": {
+            "before": "",
+            "after": "-110"
+          }
+        }
+      },
+      {
+        "key": [
+          "2026_08_CLE_PIT"
+        ],
+        "fields": {
+          "away_moneyline": {
+            "before": "210",
+            "after": ""
+          },
+          "away_spread_odds": {
+            "before": "-110",
+            "after": ""
+          },
+          "home_moneyline": {
+            "before": "-258",
+            "after": ""
+          },
+          "home_spread_odds": {
+            "before": "-110",
+            "after": ""
+          },
+          "over_odds": {
+            "before": "-110",
+            "after": ""
+          },
+          "spread_line": {
+            "before": "6",
+            "after": ""
+          },
+          "total_line": {
+            "before": "39.5",
+            "after": ""
+          },
+          "under_odds": {
+            "before": "-110",
+            "after": ""
+          }
+        }
+      }
+    ],
+    "interpretation": "Exact string field differences between verified source bytes. Not proof of correction intent, model influence, or historical availability."
+  },
+  "scope": "Verified retained and current input bytes only. No attribution of numerical forecast changes; no source acquisition or model modification."
+}
