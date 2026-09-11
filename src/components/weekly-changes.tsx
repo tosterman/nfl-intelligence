@@ -23,7 +23,9 @@ export function WeeklyChanges({ games, week, asOf, returnTo, briefing, contextBr
       <h3>Reported personnel & weather changes</h3>
       <p className="fine">Latest retained comparisons for upcoming games. These observations do not adjust the model. Unchanged or expired comparisons are omitted; no listed update does not establish that conditions are unchanged.</p>
       {!context.length && <p>No fresh, verified personnel or weather changes to summarize.</p>}
-      {context.length>0 && <ul className="weekly-change-list">{context.map(row=>{
+      {context.length>0 && <details className="weekly-context-details">
+        <summary>View {context.length} personnel and weather {context.length===1?'update':'updates'}</summary>
+        <ul className="weekly-change-list">{context.map(row=>{
         const game=games.find(game=>game.id===row.gameId)!;
         const anchor=row.kind==='personnel'?'personnel-reports':'weather-history';
         return <li key={`${row.kind}-${row.gameId}`}>
@@ -33,7 +35,7 @@ export function WeeklyChanges({ games, week, asOf, returnTo, briefing, contextBr
           <p>{row.text}</p>
           <p className="fine">{row.kind==='personnel'?'Collected':'Forecast issued'} {date(row.previousAt)} {time(row.previousAt)} ET → {date(row.currentAt)} {time(row.currentAt)} ET{row.kind==='personnel'?'. Underlying report times are unknown.':''}</p>
         </li>;
-      })}</ul>}
+      })}</ul></details>}
       <h3>Model changes</h3>
       <p>
         Each matchup’s latest retained forecast versus its preceding run,

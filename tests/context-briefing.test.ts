@@ -27,6 +27,7 @@ const current={...first,issuedAt:'2026-09-11T12:00:00Z',retrievedAt:'2026-09-11T
 test('weather summary compares issued forecasts, excludes repeated values, closes on expiry and kickoff',()=>{
   const history={schemaVersion:1,records:[first,current]};
   assert.match(weatherBrief(history,current,game,now)!.text,/Temperature 70°F → 73°F/);
+  assert.match(weatherBrief(history,current,game,now)!.text,/Outside stadium:.*Field and roof conditions are unknown/);
   assert.equal(weatherBrief(history,current,game,now+31*3600000),null);
   assert.equal(weatherBrief(history,current,game,now-2*3600000),null);
   assert.equal(weatherBrief(history,current,{...game,venue:'Other'},now),null);

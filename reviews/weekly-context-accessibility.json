@@ -1,0 +1,8 @@
+{
+  "violations": [],
+  "incomplete": [],
+  "passes": 8,
+  "checkedAt": "2026-09-11T19:32:30.208214+00:00",
+  "url": "http://localhost:3000/?week=1&q=&filter=all&sort=kickoff",
+  "scope": "Expanded weekly briefing at 320px; automated Chromium axe checks only"
+}

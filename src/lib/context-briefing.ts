@@ -43,7 +43,7 @@ export function weatherBrief(history: WeatherHistory, record: WeatherRecord | un
   if((current.precipitationProbability??null)!==(previous.precipitationProbability??null))
     changed.push(`Precipitation chance ${precipitation(previous.precipitationProbability)} → ${precipitation(current.precipitationProbability)}`);
   if((current.summary??null)!==(previous.summary??null))changed.push('Forecast description changed; see game evidence');
-  return { gameId: game.id, kind: 'weather', text: `${changed.join(' · ')}.`,
+  return { gameId: game.id, kind: 'weather', text: `Outside stadium: ${changed.join(' · ')}. Field and roof conditions are unknown.`,
     previousAt: previous.issuedAt!, currentAt: current.issuedAt!,
     expiresAt: Math.min(kickoff, Date.parse(record.issuedAt!) + 30 * 3600000, Date.parse(record.retrievedAt!) + 30 * 3600000) };
 }
