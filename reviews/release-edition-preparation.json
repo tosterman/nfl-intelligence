@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-09-11T20:06:17.435510+00:00",
+  "editionGeneratedAt": "2026-09-11T20:04:55.671471+00:00",
+  "siteSha256": "51d5a7de52ed5ba41700674705e092afedda6e5fc65b014815017ca1ad167af0",
+  "inputManifestSha256": "75cc0403c697d51db55c53030366e97b5285bbfc01bfcbc906025c7bf1bdc2ba",
+  "sourceComparisonSha256": "a211129dedfe110b3f6f70884f007b6b367c79c3f72f28cc2bd0596c46bde872",
+  "inputBytesMatched": true,
+  "newSnapshotReplay": {
+    "matched": 0,
+    "mismatches": 0,
+    "unreplayable": 0,
+    "notSelected": 15
+  },
+  "explanationArtifactSha256": "b20b4bb217ff02307730a1324c355f8fbfd7838774a5d22baaad18760ba25081",
+  "retainedExplanationRecords": 15,
+  "applicationTests": {
+    "passed": 256,
+    "failed": 0
+  },
+  "scope": "Fresh real source acquisition and local release preparation only. No new numerical snapshots were generated; retained snapshots are not counted as replayed. No public deployment or receipt is established."
+}
