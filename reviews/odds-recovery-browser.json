@@ -1,0 +1,7 @@
+{
+  "checkedAt": "2026-09-11T17:39:20.034933+00:00",
+  "recoveryRun": 34628799978,
+  "marketPanel": "Model versus market\n\nTimestamped pregame snapshots via The Odds API, collected five times daily. Quotes older than six hours are withheld; prices can change between collections.\n\nCompare sportsbook\nBetMGM\nBetOnline.ag\nBetRivers\nBetUS\nBovada\nDraftKings\nFanDuel\nLowVig.ag\nMyBookie.ag\nMarket\tOur model\tFanDuel\nPIT spread\t-2.9\t-5.5 (-115)\nSep 11, Fri 1:37 PM ET\n\nTotal\t44.8\t41.5\nOver -105 / Under -115\nSep 11, Fri 1:37 PM ET\n\nPIT moneyline\t-140\nFair estimate \u00b7 conditional on no tie\n\t-270\nATL +220\nSep 11, Fri 1:37 PM ET\nWhere the estimates differ\n\nThe model has PIT 2.6 points weaker than this spread implies.\n\nThe model total is 3.3 points higher.\n\nPIT win probability: model 58%; market 70% after proportionally removing the two-sided bookmaker margin. The market figure normalizes the two quoted sides; verify the bookmaker\u2019s tie and overtime settlement rules.\n\nRetrieved Sep 11, Fri 1:38 PM ET. Showing 9 sportsbooks with eligible quotes. Check the sportsbook for its current price and settlement rules.\n\nDifferences are not validated betting edges. Player availability is not included in this model, and spread/total cover probabilities and push risk are not yet validated. No expected return or stake recommendation is implied.",
+  "horizontalOverflow": false,
+  "scope": "Public 390px ATL PIT market panel after manual odds recovery; no scheduled reliability claim"
+}
