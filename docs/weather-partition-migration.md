@@ -77,3 +77,13 @@ offline migration blocker. See `reviews/weather-partition-migration.json`.
 Runtime readers, append-only publication, active-worker restoration, bounded
 per-object validators and public cutover remain unfinished. A hash-valid object
 alone is not evidence that its weather semantics or current context are valid.
+
+The first scoped transport reader is now implemented in
+`src/lib/weather-partition-store.ts`. Against the real migrated fixture it reads
+the root and current snapshot in two object requests; adding one game's history
+requires only the index and that partition. Four tests cover corruption, future
+publication time, substituted game partitions, duplicate compact observations,
+missing sources and mismatched compact values. Type checking passes. The reader
+checks transport and ledger/history consistency; approved venue binding and
+current snapshot semantics still need integration before any UI or live pointer
+uses this format. It intentionally does not fetch raw NWS source bodies.
