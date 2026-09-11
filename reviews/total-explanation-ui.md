@@ -35,3 +35,13 @@ The builder targets newly generated forecasts, matching the release replay
 scope. Earlier unsupported snapshots remain explicitly unavailable in the UI.
 Actual scheduled operation and broader device review remain pending. No hosted
 deployment was performed.
+
+Empty-edition follow-up: the builder now compares the exact new-forecast ID set
+with replay results. A verified edition with no new forecasts yields an empty
+explanation set; omitted explanations for actual new forecasts still fail.
+Three builder tests passed, including this empty case. UI selection tests use a
+fixed archived explanation sample so a legitimate empty future edition does not
+invalidate historical regression coverage. Empty record sets are withheld.
+TypeScript checks passed, and the current 15-record artifact was rebuilt under
+the updated explanation code identity. Hosted CI was still running at this
+checkpoint.

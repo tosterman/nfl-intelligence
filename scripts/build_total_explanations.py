@@ -14,11 +14,16 @@ SUPPORTED_ENGINE = '08495229d4ed0202c1abbe941005ca259d0dd190b6c7442206f24f52b147
 
 def build(root=ROOT):
     replay = replay_forecast.replay(root, new_only=True)
-    if replay['mismatches'] or replay['unreplayable'] or not replay['matched']:
+    if replay['mismatches'] or replay['unreplayable']:
         raise ValueError('Full current forecast replay did not pass')
     if replay['modelCodeHash'] != SUPPORTED_ENGINE:
         raise ValueError('Total accounting has not been reviewed for this engine')
     site = json.loads((root / 'data/site.json').read_bytes())
+    expected_ids = {g['id'] for g in site['games'] if g.get('snapshot') and
+                    g['snapshot'].get('generatedAt') == site['generatedAt']}
+    matched_ids = {r['gameId'] for r in replay['records'] if r['status'] == 'matched'}
+    if matched_ids != expected_ids or replay['matched'] != len(expected_ids):
+        raise ValueError('New forecast coverage differs from replay')
     rows = refresh.base.load_rows(root / 'data/games.csv')
     statmap = {}
     for source in site['efficiencySources']:
