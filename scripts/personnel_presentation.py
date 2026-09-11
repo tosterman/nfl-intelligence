@@ -13,9 +13,12 @@ FILES = ('site.json', 'personnel.json', 'personnel-collection.json', 'quarterbac
          'personnel-changes.json', 'player-usage.json', 'season-participation.json')
 
 
-def assemble(files, now=None):
+def assemble(files, now=None, derivation_failure=None):
+    if derivation_failure not in (None, 'identity-audit', 'historical-usage', 'current-participation'):
+        raise ValueError('Unknown personnel derivation failure')
     now = now or datetime.now(timezone.utc)
-    data = {name: json.loads(files[name]) for name in FILES}
+    data = {name: (None if derivation_failure and name in ('player-usage.json','season-participation.json')
+                   else json.loads(files[name])) for name in FILES}
     contexts = verify_schedule(data['site.json'], files['games.csv'])
     personnel, quarterback = data['personnel.json'], data['quarterbacks.json']
     history, historical, current = (data[name] for name in
@@ -44,8 +47,9 @@ def assemble(files, now=None):
     if history['sourceHash'] != personnel['sourceHash'] or history['retrievedAt'] != personnel['retrievedAt']:
         raise ValueError('Personnel history binding differs')
     cutoff = min(instant(personnel['retrievedAt']), instant(quarterback['retrievedAt']))
-    compatible = all(timedelta(0) <= cutoff - instant(source['assetUpdatedAt']) < timedelta(hours=30)
-                     for source in (personnel, quarterback))
+    compatible = derivation_failure is None and all(
+        timedelta(0) <= cutoff - instant(source['assetUpdatedAt']) < timedelta(hours=30)
+        for source in (personnel, quarterback))
     if compatible:
         audit_raw = files['identityAudit']
         audit = json.loads(audit_raw)
@@ -79,7 +83,9 @@ def assemble(files, now=None):
               'contexts': contexts, 'scheduleHash': data['site.json']['source']['sha256'],
               'derivation': {'status': 'compatible' if compatible else 'unavailable',
                              'cutoff': cutoff.isoformat(),
-                             'reason': None if compatible else 'Injury and depth-chart sources lack a compatible identity cutoff'},
+                             'reason': None if compatible else (
+                                 'Participation verification failed; derived usage is withheld'
+                                 if derivation_failure else 'Injury and depth-chart sources lack a compatible identity cutoff')},
               'evidence': {'snapshot': personnel, 'quarterback': quarterback,
                            'collection': data['personnel-collection.json'],
                            'quarterbackCollection': data['quarterback-collection.json'],

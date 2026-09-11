@@ -81,3 +81,25 @@ class PersonnelPresentationTests(unittest.TestCase):
         self.change('quarterbacks.json', sourceHash='0'*64)
         with self.assertRaisesRegex(ValueError, 'identity audit binding'):
             assemble(self.files)
+
+    def test_derivation_failure_preserves_reports_dates_and_collection_failure(self):
+        self.change('participation-collection.json', status='failed')
+        before=copy.deepcopy(self.files)
+        self.files['player-usage.json']=b'truncated output'
+        self.files['season-participation.json']=b'truncated output'
+        expected=copy.deepcopy(self.files)
+        for failure in ('identity-audit','historical-usage','current-participation'):
+            value=assemble(self.files,derivation_failure=failure)
+            self.assertIsNone(value['evidence']['historical'])
+            self.assertIsNone(value['evidence']['current'])
+            self.assertEqual(value['evidence']['snapshot'],json.loads(before['personnel.json']))
+            self.assertEqual(value['evidence']['participationCollection']['status'],'failed')
+            self.assertEqual(value['derivation']['status'],'unavailable')
+        self.assertEqual(self.files,expected)
+
+    def test_degraded_derivation_cannot_bypass_source_history_or_schedule_checks(self):
+        with self.assertRaisesRegex(ValueError,'Unknown'):
+            assemble(self.files,derivation_failure='anything')
+        self.change('personnel-changes.json',sourceHash='0'*64)
+        with self.assertRaisesRegex(ValueError,'history binding'):
+            assemble(self.files,derivation_failure='identity-audit')

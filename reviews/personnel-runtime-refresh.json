@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-09-11T18:57:44.833820+00:00",
+  "previousPublication": {
+    "bytes": 83867,
+    "sha256": "c3cdbbda3af5af0324485935370b7de3d081e729ca9f6a9c65e465117c8ed8a7"
+  },
+  "previousCapture": "fc321e3791043c6ae830dcb4f2694b43bec663ae1982ad6920f774afa59adf1e",
+  "acquisitions": [
+    {
+      "step": "refresh_personnel.py",
+      "exitCode": 0
+    },
+    {
+      "step": "refresh_quarterbacks.py",
+      "exitCode": 0
+    },
+    {
+      "step": "refresh_participation.py",
+      "exitCode": 0
+    }
+  ],
+  "derivations": [
+    {
+      "step": "audit_personnel_identity.py",
+      "exitCode": 0
+    },
+    {
+      "step": "audit_player_usage.py",
+      "exitCode": 0
+    },
+    {
+      "step": "build_public_usage.py",
+      "exitCode": 0
+    },
+    {
+      "step": "build_season_participation.py",
+      "exitCode": 0
+    }
+  ],
+  "derivationFailure": null,
+  "sourceReplay": true,
+  "personnelChanged": true,
+  "directory": "release-recovery/personnel-refresh-m85nlb40",
+  "reports": 167,
+  "scope": "Isolated refresh candidate only; no independent derived replay or storage publication"
+}

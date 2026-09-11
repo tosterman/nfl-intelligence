@@ -298,3 +298,28 @@ QB team contexts, and verified all 272 schedule contexts. See
 restoration and missing/corrupt inputs; independent review found no material
 restore blocker. This does not establish new acquisition, derived usage replay,
 failed-source publication or repeat scheduled operation.
+
+## Isolated recurring refresh candidate
+
+`refresh_personnel_worker.py restored-directory --collect` copies a restored
+worker and attempts all three collectors. Nonzero exits, including timeouts,
+restore the original source pointer bytes and write an explicit failed collection
+state. The current injury capture is compared only with the accepted capture;
+an unchanged capture retains the prior change presentation. Source normalization
+and QB reconstruction run using the retained worker scripts before derivation.
+
+Identity and participation steps stop at the first failed derivation. The
+assembler can explicitly withhold both usage artifacts while preserving reports,
+their original dates and collection failures, including when a failed calculation
+left truncated JSON. This branch still enforces schedule, history, source-season
+and chronology checks. Integrity conditions use explicit exceptions, so Python
+optimization cannot disable raw reconstruction or QB role comparison.
+
+The September 11 18:57 UTC real isolated refresh collected all three sources and
+completed all four derivation steps with 167 reports. Corrected source checks
+were rerun against that candidate. Eleven targeted regressions cover rollback,
+dependency failure, withholding, binding and optimized-mode QB tampering. See
+`reviews/personnel-runtime-refresh.json` and `reviews/personnel-refresh-recheck.json`.
+This remains an unpublished candidate: independent derived replay, incremental
+archive packaging, predecessor-bound publication and live update readback remain
+required. The candidate's source and calculation times must not be rewritten.

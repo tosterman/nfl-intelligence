@@ -1,0 +1,10 @@
+{
+  "directory": "C:\\Users\\tyler\\Desktop\\nfl\\release-recovery\\personnel-refresh-m85nlb40",
+  "previousPublication": {
+    "bytes": 83867,
+    "sha256": "c3cdbbda3af5af0324485935370b7de3d081e729ca9f6a9c65e465117c8ed8a7"
+  },
+  "sourceReplay": true,
+  "checkerHash": "8b61ee5b43e92e99ae832e50a35ed610fd5e203829f75ce3e491993dc663ef93",
+  "scope": "Explicit source checks after optimized-mode correction; no publication"
+}
