@@ -27,6 +27,10 @@ export function WeatherContext({
             30 * 3600000
           }
         >
+          <p className="fine">
+            Outdoor forecast for the stadium area. Indoor and on-field conditions
+            are unknown.
+          </p>
           <p>{record.summary || "Forecast description unavailable"}</p>
           <dl className="revision-deltas weather-values">
             <div>
@@ -62,9 +66,8 @@ export function WeatherContext({
           <details>
             <summary>Weather source & limitations</summary>
             <p className="fine">
-              Outdoor area forecast near the stadium address, not field-level
-              measurements. Roof status and actual game conditions are not
-              inferred. Captured {date(record.retrievedAt!)} at{" "}
+              Roof status and actual game conditions are not inferred.
+              Captured {date(record.retrievedAt!)} at{" "}
               {time(record.retrievedAt!)} ET.
             </p>
             <a

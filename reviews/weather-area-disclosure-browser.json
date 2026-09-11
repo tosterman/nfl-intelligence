@@ -1,0 +1,236 @@
+[
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_ARI_LAC",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_ATL_PIT",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_BAL_IND",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_CHI_CAR",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_CLE_JAX",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_DAL_NYG",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_GB_MIN",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_MIA_LV",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_NO_DET",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_NYJ_TEN",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_TB_CIN",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_WAS_PHI",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_DEN_KC",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_ARI_LAC",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_ATL_PIT",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_BAL_IND",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_CHI_CAR",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_CLE_JAX",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_DAL_NYG",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_GB_MIN",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_MIA_LV",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_NO_DET",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_NYJ_TEN",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_TB_CIN",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_WAS_PHI",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_DEN_KC",
+    "width": 320,
+    "disclosureVisibleAboveValues": true,
+    "detailsClosed": true,
+    "overflow": false,
+    "pageErrors": []
+  }
+]
