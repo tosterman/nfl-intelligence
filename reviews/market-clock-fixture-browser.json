@@ -1,0 +1,22 @@
+[
+  {
+    "engine": "chromium",
+    "inclusiveSixHourBoundary": true,
+    "individualSpreadExpiry": true,
+    "independentTotalExpiry": true,
+    "modelFreshnessBoundary": true,
+    "feedExpiry": true,
+    "kickoffClosure": true,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "inclusiveSixHourBoundary": true,
+    "individualSpreadExpiry": true,
+    "independentTotalExpiry": true,
+    "modelFreshnessBoundary": true,
+    "feedExpiry": true,
+    "kickoffClosure": true,
+    "pageErrors": []
+  }
+]

@@ -1,0 +1,9 @@
+# Quote and model freshness deadlines
+
+The market clock now selects the next relevant time boundary: kickoff; feed and individual quote activation/expiry; and model-input freshness boundaries. The six-hour quote and 30-hour model limits are inclusive, so expiry timers use the following millisecond. Old deadlines are removed as the clock advances, and periodic/visibility checks remain. Once a backward clock change is detected, selecting deadlines from the updated time also rearms previously completed deadlines. Arbitrary clock jumps still depend on the periodic/visibility detection cadence.
+
+A fixed browser fixture mounts the actual MarketPanel and MarketCard components using esbuild, without a Next server or provider credentials. It exercises spread expiry while a later total remains valid, independent total expiry, whole-feed expiry, model freshness and kickoff closure. Both Chromium and WebKit passed all states. Network HTTPS requests are blocked. The fixture is isolated test data and is never used as product fallback or real sportsbook evidence.
+
+The previous committed component was separately bundled and reproduced the defect: an expired -3.5 spread remained visible at six hours plus one millisecond before the next polling tick. The new fixture verifies its removal while time is held at that boundary, allowing React rendering to settle. This is state-transition evidence, not a guarantee of wall-clock rendering latency.
+
+Run `python scripts/check_market_clock.py` with Python Playwright browsers and installed project dependencies. It creates only ignored bundle files and the review JSON. `tests/market-deadlines.test.ts` verifies deadline selection, unmatched-event exclusion and the age-limit boundary against the eligibility function. All 117 application tests and type checking passed. Independent review found no material issue with boundaries, rearming, cleanup or loop behavior.

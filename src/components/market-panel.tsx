@@ -7,14 +7,16 @@ import { fairMoneyline, noVig } from "@/lib/math";
 import { teams, signed, pct, time, date } from "@/lib/teams";
 import type { Prediction } from "@/lib/types";
 import { BookSnapshot } from "@/components/book-snapshot";
+import { marketDeadlines } from "@/lib/market-deadlines";
 type Match = {
   home: string;
   away: string;
   kickoff: string | null;
   status: string;
 };
-function useClock(initial: number, kickoff: string | null) {
+function useClock(initial: number, deadlines: number[]) {
   const [now, setNow] = useState(initial);
+  const deadline = Math.min(...deadlines.filter((at) => at > now));
   useEffect(() => {
     const update = () => setNow(Date.now());
     update();
@@ -26,7 +28,6 @@ function useClock(initial: number, kickoff: string | null) {
     };
   }, []);
   useEffect(() => {
-    const deadline = Date.parse(kickoff ?? "");
     if (!Number.isFinite(deadline)) return;
     let timer: ReturnType<typeof setTimeout> | undefined;
     const checkDeadline = () => {
@@ -41,7 +42,7 @@ function useClock(initial: number, kickoff: string | null) {
     };
     checkDeadline();
     return () => clearTimeout(timer);
-  }, [kickoff]);
+  }, [deadline]);
   return now;
 }
 const stamp = (value: string) => `${date(value)}, ${time(value)} ET`;
@@ -58,7 +59,7 @@ export function MarketCard({
   feed: OddsFeed;
   initialNow: number;
 }) {
-  const now = useClock(initialNow, game.kickoff),
+  const now = useClock(initialNow, marketDeadlines(feed, game)),
     assessment = assessGameOdds(feed, game, now),
     books = assessment.books;
   const book = defaultBook(books);
@@ -90,7 +91,7 @@ export function MarketPanel({
   feed: OddsFeed;
   initialNow: number;
 }) {
-  const now = useClock(initialNow, game.kickoff),
+  const now = useClock(initialNow, marketDeadlines(feed, game, freshness)),
     assessment = assessGameOdds(feed, game, now),
     books = assessment.books;
   const [selected, setSelected] = useState<string | null>(null);
