@@ -27,4 +27,8 @@ async function main(){
   await writeFile('release-recovery/weather-publication-report.json',JSON.stringify(report,null,2)+'\n');
   console.log(JSON.stringify(report));
 }
-main().catch(error=>{console.error('Weather publication failed:',error instanceof Error?error.name:'UnknownError');process.exitCode=1;});
+main().catch(error=>{
+  let detail=error instanceof Error?error.message:'Unknown failure';
+  for(const [key,value] of Object.entries(process.env))if(value&&/token|secret|password|key/i.test(key))detail=detail.split(value).join('[redacted]');
+  console.error('Weather publication failed:',detail.slice(0,1000));process.exitCode=1;
+});

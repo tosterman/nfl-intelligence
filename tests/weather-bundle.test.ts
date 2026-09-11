@@ -26,6 +26,11 @@ test('Python weather transport verifies exact payload bytes in JavaScript',()=>{
  assert.equal(boundWeatherRecord(value,{...game,neutral:true},venues),undefined);
  const moved=structuredClone(venues);moved[game.venue].latitude+=.01;
  assert.equal(boundWeatherRecord(value,game,moved),undefined);
+ const min=value.contexts['2026_01_GB_MIN'];
+ if(min&&value.weather.games[min.id]?.status==='available'){
+   const rounded=structuredClone(venues);rounded[min.venue].longitude=Number(rounded[min.venue].longitude.toPrecision(15));
+   assert.equal(boundWeatherRecord(value,min,rounded)?.status,'available');
+ }
  for(const kind of ['history','neutral','sources']){
   const changed=JSON.parse(raw.toString()),payload=JSON.parse(changed.payloadJson);
   const id=Object.keys(payload.weather.games).find(k=>payload.weather.games[k].status==='available')!;

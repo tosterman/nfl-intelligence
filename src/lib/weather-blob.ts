@@ -6,16 +6,16 @@ export function weatherBlobPath(path:string){
   return path;
 }
 
-export async function readWeatherStream(stream:ReadableStream<Uint8Array>,size:number){
+export async function readWeatherStream(stream:ReadableStream<Uint8Array>,size:number|null){
   const reader=stream.getReader();const chunks:Buffer[]=[];let bytes=0;
   try{
-    if(!Number.isSafeInteger(size)||size<1||size>10_000_000)throw Error('Invalid weather object size');
+    if(size!==null&&(!Number.isSafeInteger(size)||size<1||size>10_000_000))throw Error('Invalid weather object size');
     for(;;){
       const {done,value}=await reader.read();if(done)break;
-      bytes+=value.byteLength;if(bytes>size)throw Error('Weather stream exceeds declared size');
+      bytes+=value.byteLength;if(bytes>(size??10_000_000))throw Error('Weather stream exceeds declared size');
       chunks.push(Buffer.from(value));
     }
-    if(bytes!==size)throw Error('Weather stream size mismatch');
+    if(!bytes||(size!==null&&bytes!==size))throw Error('Weather stream size mismatch');
     return Buffer.concat(chunks,bytes);
   }catch(error){await reader.cancel().catch(()=>{});throw error;}
   finally{reader.releaseLock();}
@@ -26,7 +26,8 @@ export const weatherBlobStore:WeatherObjectStore={
     const result=await get(weatherBlobPath(path),{access:'private',useCache:false,abortSignal:AbortSignal.timeout(5000)});
     if(!result)return null;
     if(result.statusCode!==200||!result.blob.etag)throw Error('Invalid stored weather response');
-    return {body:await readWeatherStream(result.stream,result.blob.size),etag:result.blob.etag};
+    // SDK reports zero when Content-Length is absent on a chunked private read.
+    return {body:await readWeatherStream(result.stream,result.blob.size===0?null:result.blob.size),etag:result.blob.etag};
   },
   async write(path,body,etag){
     weatherBlobPath(path);

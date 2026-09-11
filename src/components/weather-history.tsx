@@ -1,11 +1,8 @@
-import history from "../../data/weather-history.json";
-import weather from "../../data/weather.json";
 import { weatherHistoryForGame, type WeatherHistory as History } from "@/lib/weather-history";
 import type { WeatherRecord } from "@/lib/weather";
 import { date, time } from "@/lib/teams";
 
-export function WeatherRevisionBrief({ game }: { game: { id: string; venue: string; kickoff: string | null } }) {
-  const current = (weather.games as Record<string, WeatherRecord>)[game.id];
+export function WeatherRevisionBrief({ game,current,history }: { current?:WeatherRecord;history:History;game: { id: string; venue: string; kickoff: string | null } }) {
   const selected = weatherHistoryForGame(history as History, current, game);
   if (!selected?.changed) return null;
   return <p className="fine">The latest retained outdoor weather forecast differs from the previous issue. <a href="#weather-history">See the weather changes</a>. Weather does not change this model’s numbers.</p>;
@@ -15,7 +12,7 @@ const temperature = (r: WeatherRecord) => r.temperature == null ? "Unavailable" 
 const wind = (r: WeatherRecord) => r.windSpeed ? `${r.windSpeed}${r.windDirection ? ` ${r.windDirection}` : ""}` : "Unavailable";
 const precipitation = (r: WeatherRecord) => r.precipitationProbability == null ? "Unavailable" : `${r.precipitationProbability}%`;
 
-export function WeatherHistory({ current, game }: { current: WeatherRecord | undefined;
+export function WeatherHistory({ current, game, history }: { history:History; current: WeatherRecord | undefined;
   game: { id: string; venue: string; kickoff: string | null } }) {
   const selected = weatherHistoryForGame(history as History, current, game);
   const latest = selected?.issues[0], previous = selected?.issues[1];

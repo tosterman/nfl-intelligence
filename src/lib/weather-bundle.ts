@@ -8,6 +8,17 @@ const hash=(v:unknown)=>typeof v==='string'&&/^[a-f0-9]{64}$/.test(v);
 const time=(v:unknown)=>typeof v==='string'&&/(Z|[+-]\d\d:\d\d)$/.test(v)&&Number.isFinite(Date.parse(v));
 const object=(v:unknown)=>v!==null&&typeof v==='object'&&!Array.isArray(v);
 type Context={id:string;season:number;kickoff:string|null;venue:string;neutral:boolean};
+function sameVenue(a:unknown,b:unknown,key=''):boolean{
+  if(typeof a==='number'&&typeof b==='number'&&['latitude','longitude','minlat','minlon','maxlat','maxlon'].includes(key)){
+    // Bundlers can shorten JSON numeric literals. This is below 0.02 mm on Earth.
+    return Number.isFinite(a)&&Number.isFinite(b)&&Math.abs(a-b)<=1e-10;
+  }
+  if(object(a)&&object(b)){
+    const left=a as Record<string,unknown>,right=b as Record<string,unknown>;
+    return Object.keys(left).length===Object.keys(right).length&&Object.keys(left).every(k=>Object.hasOwn(right,k)&&sameVenue(left[k],right[k],k));
+  }
+  return isDeepStrictEqual(a,b);
+}
 export type WeatherBundle={
   weather:{collectionStartedAt:string;generatedAt:string;games:Record<string,WeatherRecord>};
   history:WeatherHistory;contexts:Record<string,Context>;venueRegistryHash:string;
@@ -27,7 +38,7 @@ export function boundWeatherRecord(bundle:WeatherBundle,game:Context,venues:Reco
   if(!context||!record||!['id','season','kickoff','venue','neutral'].every(key=>context[key as keyof Context]===game[key as keyof Context]))return undefined;
   if(record.status==='available'){
     const approved=Object.hasOwn(venues,game.venue)?venues[game.venue]:null;
-    if(game.neutral||!approved||!isDeepStrictEqual(record.locationEvidence,approved))return undefined;
+    if(game.neutral||!approved||!sameVenue(record.locationEvidence,approved))return undefined;
   }
   return record;
 }

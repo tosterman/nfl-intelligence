@@ -1,4 +1,4 @@
-import raw from "../../data/weather.json";
+import type {WeatherHistory as History} from '@/lib/weather-history';
 import { weatherStatus, type WeatherRecord } from "@/lib/weather";
 import { date, time } from "@/lib/teams";
 import { WeatherExpiry } from "./weather-expiry";
@@ -6,11 +6,11 @@ import { VenueConditions } from "./venue-conditions";
 import { WeatherHistory } from "./weather-history";
 
 export function WeatherContext({
-  game,
+  game,record,history={schemaVersion:1,records:[]},
 }: {
   game: { id: string; venue: string; kickoff: string | null };
+  record?:WeatherRecord;history?:History;
 }) {
-  const record = (raw.games as Record<string, WeatherRecord>)[game.id];
   const status = weatherStatus(record, game);
   return (
     <section className="panel">
@@ -18,7 +18,7 @@ export function WeatherContext({
       <h2 id="kickoff-weather" tabIndex={-1}>
         At kickoff, around the venue
       </h2>
-      {status === "available" ? (
+      {status === "available" && record ? (
         <WeatherExpiry
           expiresAt={
             Math.min(
@@ -128,7 +128,7 @@ export function WeatherContext({
         <p>{status}.</p>
       )}
       <VenueConditions venue={game.venue} />
-      <WeatherHistory current={record} game={game} />
+      <WeatherHistory history={history} current={record} game={game} />
       <p className="fine">
         Weather has no numerical adjustment in this model. This context cannot
         establish a betting edge.

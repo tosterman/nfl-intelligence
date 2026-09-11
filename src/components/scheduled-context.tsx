@@ -2,6 +2,8 @@ import type { Game } from "@/lib/types";
 import { WeatherContext } from "./weather-context";
 import { PersonnelPanel } from "./personnel-panel";
 import Link from "next/link";
+import type {WeatherRecord} from '@/lib/weather';
+import type {WeatherHistory} from '@/lib/weather-history';
 
 export function ForecastPendingNotice({
   game,
@@ -39,9 +41,11 @@ export function ForecastPendingNotice({
 
 export function ScheduledContext({
   game,
+  weather,
   now = Date.now(),
 }: {
   game: Game;
+  weather?:{record?:WeatherRecord;history:WeatherHistory};
   now?: number;
 }) {
   const kickoff = Date.parse(game.kickoff ?? "");
@@ -66,7 +70,7 @@ export function ScheduledContext({
         </p>
       </nav>
       <div className="scheduled-context">
-        <WeatherContext game={game} />
+        <WeatherContext game={game} record={weather?.record} history={weather?.history} />
         <PersonnelPanel game={game} />
       </div>
     </>

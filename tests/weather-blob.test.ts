@@ -13,3 +13,9 @@ test('weather storage paths cannot target odds or arbitrary objects',()=>{
  for(const path of ['weather/latest.json',`weather/objects/${'a'.repeat(64)}`,`weather/manifests/${'b'.repeat(64)}.json`])assert.equal(weatherBlobPath(path),path);
  for(const path of ['odds/latest.json','weather/../odds/latest.json','https://example.com','weather/objects/not-a-hash'])assert.throws(()=>weatherBlobPath(path));
 });
+test('private responses without content length remain bounded and must contain data',async()=>{
+ const data=new ReadableStream<Uint8Array>({start(c){c.enqueue(Buffer.from('abc'));c.close();}});
+ assert.equal((await readWeatherStream(data,null)).toString(),'abc');
+ const empty=new ReadableStream<Uint8Array>({start(c){c.close();}});
+ await assert.rejects(readWeatherStream(empty,null),/size/);
+});

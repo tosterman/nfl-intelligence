@@ -1,0 +1,14 @@
+{
+  "scope": "Local running app using real private Blob publication; public site not deployed",
+  "manifestHash": "8d07e5dee9896a7723013cb4af9b7a620470834e714b8e3bc19cb9f587a5b86a",
+  "availableGames": 14,
+  "eligibleGames": 14,
+  "mobileWeatherValues": true,
+  "historyVisible": true,
+  "overflow": false,
+  "initialAbsentPointerWithheld": true,
+  "providerFixes": [
+    "Missing Content-Length bounded streaming",
+    "Negligible coordinate literal rounding"
+  ]
+}

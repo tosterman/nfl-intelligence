@@ -15,6 +15,7 @@ import { fairMoneyline } from "@/lib/math";
 import { TeamMark } from "@/components/brand";
 import { RevisionHistory } from "@/components/revision-history";
 import { WeatherContext } from "@/components/weather-context";
+import {getWeather} from '@/lib/weather-server';
 import { WeatherRevisionBrief } from "@/components/weather-history";
 import { gameReturn } from "@/lib/game-return";
 import { ScheduleContext } from "@/components/schedule-context";
@@ -62,6 +63,7 @@ export default async function GamePage({
   if (!g) notFound();
   const { from } = await searchParams;
   const returnTo = gameReturn(from, g);
+  const weather=await getWeather();
   const p = g.snapshot?.prediction;
   const marketData = p
     ? await Promise.all([getOdds(), getMarketHistory(g)])
@@ -154,7 +156,7 @@ export default async function GamePage({
       {!p ? (
         <>
           <ForecastPendingNotice game={g} />
-          <ScheduledContext game={g} />
+          <ScheduledContext game={g} weather={{record:weather.snapshot.games[g.id],history:weather.history}} />
           <div className="two-column" style={{ marginTop: 24 }}>
             <ExplosiveMatchup away={g.away} home={g.home} season={g.season} kickoff={g.kickoff} week={g.week} type={g.type} />
             <RedZoneMatchup away={g.away} home={g.home} season={g.season} kickoff={g.kickoff} week={g.week} type={g.type} />
@@ -223,7 +225,7 @@ export default async function GamePage({
                 <ModelBrief prediction={p} home={teams[g.home].name} away={teams[g.away].name} />
                 <MarketBrief game={g} feed={marketData![0]} prediction={p} freshness={freshnessInputs(site)} initialNow={Date.now()} />
                 {g.history.length > 0 && <RevisionBrief game={g} asOf={Date.now()} />}
-                <WeatherRevisionBrief game={g} />
+                <WeatherRevisionBrief game={g} current={weather.snapshot.games[g.id]} history={weather.history} />
                 <div className="notice">
                   <strong>Room for a different result</strong>
                   <p>The middle 80% of modeled margins span {marginRange(p.marginInterval80, teams[g.home].name, teams[g.away].name) ?? "an unavailable range"}.</p>
@@ -237,7 +239,7 @@ export default async function GamePage({
                 </p>
               </section>
               <TotalExplanation snapshot={g.snapshot!} />
-              <WeatherContext game={g} />
+              <WeatherContext game={g} record={weather.snapshot.games[g.id]} history={weather.history} />
               <section className="panel">
                 <h2 id="model-contributions" tabIndex={-1}>What moves the projection</h2>
                 <p className="fine">
