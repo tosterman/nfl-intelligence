@@ -13,7 +13,7 @@ const feed = {state: 'ready' as const, fetchedAt: at, events: [{id: 'synthetic',
     spread: {observedAt: at, homePoint: -3.5, homePrice: -110, awayPrice: -110},
     total: {observedAt: at, point: 45, overPrice: -105, underPrice: -115}}]}]};
 const html = renderToStaticMarkup(<main><h1>Synthetic market layout test</h1><Slate games={[game]}
-  site={site} initial={{week: game.week, query: '', filter: 'all', sort: 'kickoff'}}
+  site={site} gradedGameIds={[]} initial={{week: game.week, query: '', filter: 'all', sort: 'kickoff'}}
   freshness={[{name: 'fixture', retrievedAt: at}]} initialStale={false}
   odds={feed} initialNow={Date.parse(at)} briefings={{}} /></main>);
 writeFileSync('release-recovery/slate-market-fixture.html', html);

@@ -36,6 +36,7 @@ export default async function Home({
   };
   return (
     <Slate
+      gradedGameIds={site.livePerformance.scoreRecords.map(record => record.gameId)}
       liveRecord={<LiveRecordSummary record={site.livePerformance} />}
       weather={Object.fromEntries(site.games.map(game => [game.id, slateWeather(weather.games[game.id], game, now)]))}
       odds={await getOdds()}

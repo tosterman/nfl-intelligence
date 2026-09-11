@@ -40,7 +40,9 @@ export function Slate({
   contextBriefs = [],
   weather = {},
   liveRecord,
+  gradedGameIds,
 }: {
+  gradedGameIds: string[];
   liveRecord?: ReactNode;
   weather?: Record<string, SlateWeather>;
   games: Game[];
@@ -301,7 +303,7 @@ export function Slate({
             </h2>
             <p>
               All times Eastern · Forecasts show expected points; final games
-              show results
+              show results. Win probabilities exclude ties.
             </p>
           </div>
           <Link className="small-link" href="/methodology">
@@ -364,6 +366,7 @@ export function Slate({
             <GameCard
               key={g.id}
               game={g}
+              graded={gradedGameIds.includes(g.id)}
               weather={weather[g.id]}
               returnTo={returnTo}
               odds={odds}
@@ -419,7 +422,9 @@ function GameCard({
   odds,
   initialNow, freshness,
   weather,
+  graded,
 }: {
+  graded: boolean;
   weather?: SlateWeather;
   game: Game;
   returnTo: string;
@@ -474,6 +479,11 @@ function GameCard({
       </div>
       {p ? (
         <>
+          {g.status === "final" && <p className="card-record-note">
+            {graded
+              ? "Included in the verified live score record."
+              : "Retained forecast · Excluded from the live record: qualifying pregame publication evidence is missing."}
+          </p>}
           <div className="card-prob">
             <span>
               {teams[fav!].name}{" "}
