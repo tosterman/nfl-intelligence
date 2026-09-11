@@ -1,234 +1,236 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-09-11T19:46:23.134994+00:00",
+  "checkedAt": "2026-09-11T19:49:10.393740+00:00",
   "coverageThrough": "2026-09-11T00:38:11.909000+00:00",
+  "resultSourceRetrievedAt": "2026-09-11T16:17:28.200753+00:00",
+  "editionGeneratedAt": "2026-09-11T16:17:34.782950+00:00",
   "scopeGames": 272,
   "closingCheckpointCounts": {
-    "excluded-before-protocol": 1,
     "evaluated": 1,
+    "excluded-before-protocol": 1,
     "pending": 270
   },
   "pairedGameCount": 0,
   "books": [
     {
       "book": "betmgm",
-      "market": "spread",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "spread",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "betmgm",
-      "market": "total",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "total",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "betonlineag",
-      "market": "spread",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "spread",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "betonlineag",
-      "market": "total",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "total",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "betrivers",
-      "market": "spread",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "spread",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "betrivers",
-      "market": "total",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "total",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "betus",
-      "market": "spread",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "spread",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "betus",
-      "market": "total",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "total",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "bovada",
-      "market": "spread",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "spread",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "bovada",
-      "market": "total",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "total",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "draftkings",
-      "market": "spread",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "spread",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "draftkings",
-      "market": "total",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "total",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "fanduel",
-      "market": "spread",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "spread",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "fanduel",
-      "market": "total",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "total",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "lowvig",
-      "market": "spread",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "spread",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "lowvig",
-      "market": "total",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "total",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "mybookieag",
+      "excludedGames": 1,
+      "exclusionReasons": {
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
       "market": "spread",
-      "pairedGames": 0,
-      "modelMae": null,
       "marketMae": null,
-      "excludedGames": 1,
-      "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+      "modelMae": null,
+      "pairedGames": 0
     },
     {
       "book": "mybookieag",
-      "market": "total",
-      "pairedGames": 0,
-      "modelMae": null,
-      "marketMae": null,
       "excludedGames": 1,
       "exclusionReasons": {
-        "stale-capture": 1,
-        "excluded-before-protocol": 1
-      }
+        "excluded-before-protocol": 1,
+        "stale-capture": 1
+      },
+      "market": "total",
+      "marketMae": null,
+      "modelMae": null,
+      "pairedGames": 0
     }
   ],
   "interpretation": "24-hour entry forecasts versus sampled final-15-minute market lines. Same games per book and market; ties included in score errors. No betting returns or CLV.",
-  "reportHash": "dc55dce91d1753e5ae190271067a7d7a0454ee52e47b19d8212e6212d6dee0e6",
+  "reportHash": "d46be3ed6c2ef59b355cc66394f3046aa38a40fabd1e40f70c3cebeb2a4288de",
   "excludedBookMarketCount": 18,
   "excludedGameCount": 1,
   "publicationStatus": "Private implementation evaluation; not yet a public benchmark or preregistration receipt"

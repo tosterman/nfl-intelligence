@@ -1,0 +1,10 @@
+{
+  "scenario": "Real generator invoked with deliberately wrong schedule bytes",
+  "exitCode": 1,
+  "priorArtifactsUnchanged": true,
+  "artifactHashes": {
+    "data/market-benchmark.json": "945976edae2d50cc60bf838d23471baa813d95562fcc49411dad0a2bcd9addc6",
+    "reviews/market-benchmark-summary.json": "945976edae2d50cc60bf838d23471baa813d95562fcc49411dad0a2bcd9addc6",
+    "reviews/market-benchmark-replay.json": "d0d57fcc01054a5fc52ccc747f5b2d239ea4286baa9be5cb22dba9c6c2a40c27"
+  }
+}

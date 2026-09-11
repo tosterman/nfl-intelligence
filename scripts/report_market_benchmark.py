@@ -4,10 +4,11 @@ import hashlib
 import json
 from datetime import datetime, timezone
 from pathlib import Path
-from market_benchmark import grade_benchmark, public_summary, digest
+from market_benchmark import grade_benchmark, digest
 from market_capture import load_export
 from market_pairing import instant
 from report_market_pairing import verify_protocol
+from publish_market_summary import publish_summary
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -31,7 +32,7 @@ def main():
         'captureHashes':[capture['sha256'] for capture in captures],
         'fileHashes':{name:hashlib.sha256(raw).hexdigest() for name,raw in inputs.items()},
         'codeHashes':{name:hashlib.sha256((ROOT/'scripts'/name).read_bytes().replace(b'\r\n',b'\n')).hexdigest() for name in
-            ('market_benchmark.py','report_market_benchmark.py','market_pairing.py','market_capture.py','report_market_pairing.py','personnel_schedule.py','publication.py','build_data.py','calibration.py')},
+            ('market_benchmark.py','report_market_benchmark.py','publish_market_summary.py','replay_market_benchmark.py','market_pairing.py','market_capture.py','report_market_pairing.py','personnel_schedule.py','publication.py','build_data.py','calibration.py')},
         'publicationStatus':'Private implementation evaluation; not yet a public benchmark or preregistration receipt'}
     folder=ROOT/'release-recovery/market-benchmark';folder.mkdir(parents=True,exist_ok=True)
     identity=digest(report)
@@ -50,9 +51,7 @@ def main():
         target=retained/name;target.parent.mkdir(parents=True,exist_ok=True)
         with target.open('xb') as output:output.write(body)
     (retained/'inventory.json').write_text(json.dumps({name:hashlib.sha256(body).hexdigest() for name,body in dependencies.items()},sort_keys=True,indent=2)+'\n')
-    summary=public_summary(report)|{'publicationStatus':report['publicationStatus']}
-    (ROOT/'reviews/market-benchmark-summary.json').write_text(json.dumps(summary,indent=2)+'\n')
-    (ROOT/'data/market-benchmark.json').write_text(json.dumps(summary,indent=2)+'\n')
+    summary=publish_summary(ROOT,identity)
     print(json.dumps(summary))
 
 

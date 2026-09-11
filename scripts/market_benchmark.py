@@ -113,6 +113,7 @@ def grade_benchmark(site, ledger, receipts, captures, now, coverage_through, res
             'excludedGames':len(selected)-count,
             'exclusionReasons':dict(Counter(reason for r in selected for reason in r.get('reasons',[])))})
     return {'schemaVersion':1,'checkedAt':now.isoformat(),'coverageThrough':coverage_through.isoformat(),
+        'resultSourceRetrievedAt':site['source']['retrievedAt'],'editionGeneratedAt':site['generatedAt'],
         'scopeGames':len(games),'closingCheckpointCounts':dict(Counter(r['status'] for r in audit['checkpoints'] if r['phase']=='closing')),
         'pairedGameCount':len({r['gameId'] for r in rows if r['status']=='paired'}),
         'books':summaries,'records':rows,
@@ -122,7 +123,7 @@ def grade_benchmark(site, ledger, receipts, captures, now, coverage_through, res
 
 def public_summary(report):
     """Only aggregate accounting crosses the public boundary; private traces stay retained."""
-    keys=('schemaVersion','checkedAt','coverageThrough','scopeGames','closingCheckpointCounts','pairedGameCount','books','interpretation')
+    keys=('schemaVersion','checkedAt','coverageThrough','resultSourceRetrievedAt','editionGeneratedAt','scopeGames','closingCheckpointCounts','pairedGameCount','books','interpretation')
     excluded=[row for row in report['records'] if row['status']=='excluded' and row['book'] is not None]
     return {key:report[key] for key in keys} | {'reportHash':digest(report),
         'excludedBookMarketCount':len(excluded),'excludedGameCount':len({row['gameId'] for row in excluded})}
