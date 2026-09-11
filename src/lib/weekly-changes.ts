@@ -57,9 +57,14 @@ export function weeklyChanges(games: Game[], asOf: number): WeeklyChange[] {
     const previous = game.history[index - 1];
     const previousTime = Date.parse(snapshotTime(previous));
     entry.previous = previous;
-    if (!Number.isFinite(previousTime) || previousTime >= currentTime || !validPrediction(previous) ||
-        !sameRevisionContext(previous, current)) {
-      result.push(entry); continue;
+    if (!Number.isFinite(previousTime) || previousTime >= currentTime || !validPrediction(previous)) {
+      result.push({ ...entry, note: "The previous run has an invalid time or prediction; changes cannot be compared." }); continue;
+    }
+    if (!previous.gameContext) {
+      result.push({ ...entry, note: "The previous run did not retain its original matchup details, so a reliable comparison is unavailable." }); continue;
+    }
+    if (!sameRevisionContext(previous, current)) {
+      result.push({ ...entry, note: "The recorded matchup details changed between runs; inspect them separately." }); continue;
     }
     const delta = compareRevisions(previous, current);
     if (!delta.completeProvenance || !completeIdentity(previous) || !completeIdentity(current)) {

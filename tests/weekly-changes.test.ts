@@ -23,6 +23,11 @@ test('opening revision brief distinguishes changes, unchanged runs and unavailab
   assert.doesNotMatch(render(model), /percentage points/);
   const broken = fixture(); broken.history[0].sourceHash = undefined;
   assert.match(render(broken), /identity is incomplete/);
+  const legacy = fixture(); legacy.history[0].gameContext = undefined;
+  assert.match(render(legacy), /did not retain its original matchup details/);
+  assert.doesNotMatch(render(legacy), /percentage points/);
+  const moved = fixture(); moved.history[0].gameContext!.venue = 'Different venue';
+  assert.match(render(moved), /matchup details changed between runs/);
 });
 test("server-prepared briefing preserves rendered evidence without shipping histories", () => {
   const ready = fixture("ready");

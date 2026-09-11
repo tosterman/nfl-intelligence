@@ -49,3 +49,13 @@ browser capture does not claim the real matchup has comparable history.
 The opening brief now connects model advantage, counterweight, market context,
 recorded changes and outcome uncertainty. Timed two-minute comprehension and
 validated betting value remain unproven.
+
+Follow-up inspection established why ATL/PIT has no comparable predecessor:
+current snapshot `4a7989642ffc06ff9ee9fc8a2f250261e7de5aceea352ffdc70e8fdd20cb6d08`
+retains matchup context, while its immediate preceding snapshot
+`2935d75a584cbc8c9277186592b63d7e44d32ff4372cda299470f62da403e9f7`
+does not. The brief now explains missing original matchup details explicitly.
+Changed matchup contexts and invalid previous timestamps/predictions have their
+own messages. No legacy context was backfilled or comparison gate relaxed.
+All eight weekly-change tests passed; a real 390px browser check verified the
+specific missing-context message and no overflow.
