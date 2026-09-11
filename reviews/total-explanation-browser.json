@@ -1,0 +1,122 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "gameId": "2026_01_ATL_PIT",
+    "total": "44.770",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 320,
+    "gameId": "2026_01_SF_LA",
+    "total": "49.012",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "gameId": "2026_01_ATL_PIT",
+    "total": "44.770",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "gameId": "2026_01_SF_LA",
+    "total": "49.012",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "gameId": "2026_01_ATL_PIT",
+    "total": "44.770",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "gameId": "2026_01_SF_LA",
+    "total": "49.012",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "gameId": "2026_01_ATL_PIT",
+    "total": "44.770",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "gameId": "2026_01_SF_LA",
+    "total": "49.012",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "gameId": "2026_01_ATL_PIT",
+    "total": "44.770",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "gameId": "2026_01_SF_LA",
+    "total": "49.012",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "gameId": "2026_01_ATL_PIT",
+    "total": "44.770",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "gameId": "2026_01_SF_LA",
+    "total": "49.012",
+    "keyboardDisclosure": true,
+    "overflow": false,
+    "wcagViolations": 0,
+    "pageErrors": []
+  }
+]

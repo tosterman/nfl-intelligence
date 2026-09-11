@@ -45,3 +45,22 @@ invalidate historical regression coverage. Empty record sets are withheld.
 TypeScript checks passed, and the current 15-record artifact was rebuilt under
 the updated explanation code identity. Hosted CI was still running at this
 checkpoint.
+
+Hosted follow-up: GitHub run 34616769716 for commit 2ae7b1b completed successfully,
+including Python and TypeScript suites, retained-input replay, browser deadlines,
+production build and dependency audit. This resolves the earlier archived-input
+test failure for that commit. Later empty-edition and browser-matrix additions
+still need their own hosted result.
+
+The real-page matrix now passes all 12 cases: Chromium/WebKit, 320/390/1280px,
+ATL/PIT and neutral-site SF/LA. Keyboard Enter opens and closes the accounting
+table; saved totals match its footer; the neutral efficiency-venue term is zero.
+No horizontal overflow, page errors or scoped automated WCAG A/AA violations
+were found. The first attempt expected a plus sign on zero; the test was
+corrected to the existing `0.000` format and the complete matrix rerun.
+
+Independent review found two remaining nonempty-test assumptions reading the
+mutable current explanation artifact. Those tests now use a fixed archived
+sample; the separate empty-edition test remains. The verifier test and all three
+builder tests passed after this correction. This review does not establish
+physical-device accessibility or hosted scheduled publication.

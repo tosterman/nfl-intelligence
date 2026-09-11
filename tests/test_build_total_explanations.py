@@ -39,7 +39,7 @@ class TotalExplanationReplay(unittest.TestCase):
         root = builder.ROOT
         watched = [root / 'data/site.json', root / 'data/ledger.json', root / 'scripts/build_data.py', root / 'scripts/experiment_model.py', root / 'scripts/refresh.py']
         before = {p: p.read_bytes() for p in watched}
-        identity = json.loads((root / 'data/total-explanations.json').read_text())['inputManifestSha256']
+        identity = json.loads((root / 'data/total-explanation-archive/187b903b528dc2e39bc1ce5b92c4a3ec3d545bcf778f8f8bc3278f4c621519c0.json').read_text())['inputManifestSha256']
         with tempfile.TemporaryDirectory() as directory:
             restored = Path(directory)
             restore(root / 'data/forecast-input-archive', identity, restored)
