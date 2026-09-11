@@ -1,0 +1,3279 @@
+{
+  "generatedAt": "2026-09-11T16:31:14.595577+00:00",
+  "source": {
+    "url": "https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2026.csv",
+    "retrievedAt": "2026-09-11T16:29:18.302482+00:00",
+    "sha256": "f4dfe061f01ab8153f4bb2e8cc7ecf23c7d8c7f6d03f62be2f156365952c4445",
+    "rows": 187,
+    "columns": [
+      "game_id",
+      "pfr_game_id",
+      "season",
+      "game_type",
+      "week",
+      "player",
+      "pfr_player_id",
+      "position",
+      "team",
+      "opponent",
+      "offense_snaps",
+      "offense_pct",
+      "defense_snaps",
+      "defense_pct",
+      "st_snaps",
+      "st_pct"
+    ],
+    "games": [
+      "2026_01_NE_SEA",
+      "2026_01_SF_LA"
+    ],
+    "seasons": [
+      "2026"
+    ],
+    "reportedPlayerCandidateMatches": [
+      {
+        "playerId": "00-0033110",
+        "reportWeek": 1,
+        "reportTeam": "LA",
+        "games": [
+          "2026_01_SF_LA"
+        ]
+      },
+      {
+        "playerId": "00-0033868",
+        "reportWeek": 1,
+        "reportTeam": "LA",
+        "games": [
+          "2026_01_SF_LA"
+        ]
+      },
+      {
+        "playerId": "00-0036603",
+        "reportWeek": 1,
+        "reportTeam": "LA",
+        "games": [
+          "2026_01_SF_LA"
+        ]
+      },
+      {
+        "playerId": "00-0036672",
+        "reportWeek": 1,
+        "reportTeam": "LA",
+        "games": [
+          "2026_01_SF_LA"
+        ]
+      },
+      {
+        "playerId": "00-0037195",
+        "reportWeek": 1,
+        "reportTeam": "LA",
+        "games": [
+          "2026_01_SF_LA"
+        ]
+      },
+      {
+        "playerId": "00-0039137",
+        "reportWeek": 1,
+        "reportTeam": "LA",
+        "games": [
+          "2026_01_SF_LA"
+        ]
+      },
+      {
+        "playerId": "00-0036981",
+        "reportWeek": 1,
+        "reportTeam": "NE",
+        "games": [
+          "2026_01_NE_SEA"
+        ]
+      },
+      {
+        "playerId": "00-0036363",
+        "reportWeek": 1,
+        "reportTeam": "SEA",
+        "games": [
+          "2026_01_NE_SEA"
+        ]
+      },
+      {
+        "playerId": "00-0038797",
+        "reportWeek": 1,
+        "reportTeam": "SEA",
+        "games": [
+          "2026_01_NE_SEA"
+        ]
+      },
+      {
+        "playerId": "00-0039020",
+        "reportWeek": 1,
+        "reportTeam": "SEA",
+        "games": [
+          "2026_01_NE_SEA"
+        ]
+      },
+      {
+        "playerId": "00-0039793",
+        "reportWeek": 1,
+        "reportTeam": "SEA",
+        "games": [
+          "2026_01_NE_SEA"
+        ]
+      },
+      {
+        "playerId": "00-0040873",
+        "reportWeek": 1,
+        "reportTeam": "SEA",
+        "games": [
+          "2026_01_NE_SEA"
+        ]
+      },
+      {
+        "playerId": "00-0029892",
+        "reportWeek": 1,
+        "reportTeam": "SF",
+        "games": [
+          "2026_01_SF_LA"
+        ]
+      },
+      {
+        "playerId": "00-0033288",
+        "reportWeek": 1,
+        "reportTeam": "SF",
+        "games": [
+          "2026_01_SF_LA"
+        ]
+      },
+      {
+        "playerId": "00-0034982",
+        "reportWeek": 1,
+        "reportTeam": "SF",
+        "games": [
+          "2026_01_SF_LA"
+        ]
+      },
+      {
+        "playerId": "00-0035413",
+        "reportWeek": 1,
+        "reportTeam": "SF",
+        "games": [
+          "2026_01_SF_LA"
+        ]
+      },
+      {
+        "playerId": "00-0035717",
+        "reportWeek": 1,
+        "reportTeam": "SF",
+        "games": [
+          "2026_01_SF_LA"
+        ]
+      },
+      {
+        "playerId": "00-0039345",
+        "reportWeek": 1,
+        "reportTeam": "SF",
+        "games": [
+          "2026_01_SF_LA"
+        ]
+      },
+      {
+        "playerId": "00-0040152",
+        "reportWeek": 1,
+        "reportTeam": "SF",
+        "games": [
+          "2026_01_SF_LA"
+        ]
+      },
+      {
+        "playerId": "00-0041363",
+        "reportWeek": 1,
+        "reportTeam": "SF",
+        "games": [
+          "2026_01_SF_LA"
+        ]
+      },
+      {
+        "playerId": "00-0041556",
+        "reportWeek": 1,
+        "reportTeam": "SF",
+        "games": [
+          "2026_01_SF_LA"
+        ]
+      },
+      {
+        "playerId": "00-0041557",
+        "reportWeek": 1,
+        "reportTeam": "SF",
+        "games": [
+          "2026_01_SF_LA"
+        ]
+      }
+    ],
+    "scope": "Identity-join feasibility only, not accepted current usage. Same-week source appearances must not enter an earlier weekly context."
+  },
+  "inputHashes": {
+    "registry": "c2402e02d39c7ca1adbd9ca5c894bb11f693ab01da0721bff44db2a8bd1ea53d",
+    "personnel": "c09a41625e884270e9e0469cd40d802d45b9045e3e350f023f71d1d2ef0db5f8",
+    "schedule": "664dd4abffd99b29efc5cf875a800c25631c190cb4e4522fb5354e61781369bf"
+  },
+  "records": [
+    {
+      "playerId": "00-0034381",
+      "team": "ARI",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0035859",
+      "team": "ARI",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039007",
+      "team": "ARI",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039808",
+      "team": "ARI",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039864",
+      "team": "ARI",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040751",
+      "team": "ARI",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041027",
+      "team": "ARI",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0031576",
+      "team": "ATL",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036354",
+      "team": "ATL",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039859",
+      "team": "ATL",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039917",
+      "team": "ATL",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040156",
+      "team": "ATL",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041044",
+      "team": "ATL",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036130",
+      "team": "BAL",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039064",
+      "team": "BAL",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039792",
+      "team": "BAL",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040069",
+      "team": "BAL",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0035537",
+      "team": "BUF",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040192",
+      "team": "BUF",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040724",
+      "team": "BUF",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036903",
+      "team": "CAR",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0037007",
+      "team": "CAR",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039344",
+      "team": "CAR",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0038416",
+      "team": "CHI",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039919",
+      "team": "CHI",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040740",
+      "team": "CHI",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036410",
+      "team": "CIN",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036900",
+      "team": "CIN",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040756",
+      "team": "CIN",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0033131",
+      "team": "CLE",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036953",
+      "team": "CLE",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040579",
+      "team": "CLE",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041073",
+      "team": "CLE",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0033093",
+      "team": "DAL",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040017",
+      "team": "DAL",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0038660",
+      "team": "DET",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0038820",
+      "team": "DET",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039396",
+      "team": "DET",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039660",
+      "team": "DET",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039862",
+      "team": "DET",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041441",
+      "team": "DET",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041442",
+      "team": "DET",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041445",
+      "team": "DET",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0033109",
+      "team": "GB",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036551",
+      "team": "GB",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0037075",
+      "team": "GB",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0037817",
+      "team": "GB",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039812",
+      "team": "GB",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039904",
+      "team": "GB",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040010",
+      "team": "GB",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040016",
+      "team": "GB",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0032071",
+      "team": "HOU",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041440",
+      "team": "HOU",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041465",
+      "team": "HOU",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0037292",
+      "team": "IND",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0037664",
+      "team": "IND",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039876",
+      "team": "IND",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041043",
+      "team": "IND",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0034960",
+      "team": "JAX",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036655",
+      "team": "JAX",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040238",
+      "team": "JAX",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0031388",
+      "team": "LA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0033110",
+      "team": "LA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0033868",
+      "team": "LA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036603",
+      "team": "LA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036672",
+      "team": "LA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0037195",
+      "team": "LA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039137",
+      "team": "LA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0031040",
+      "team": "LAC",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0037320",
+      "team": "LAC",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0038454",
+      "team": "LAC",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039111",
+      "team": "LAC",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040221",
+      "team": "LAC",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041550",
+      "team": "LAC",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039338",
+      "team": "LV",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040122",
+      "team": "LV",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0034779",
+      "team": "MIA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041524",
+      "team": "MIA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041579",
+      "team": "MIA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041053",
+      "team": "MIN",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041054",
+      "team": "MIN",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041354",
+      "team": "MIN",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036981",
+      "team": "NE",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0037413",
+      "team": "NE",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040734",
+      "team": "NE",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0027962",
+      "team": "NO",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0033906",
+      "team": "NO",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039373",
+      "team": "NO",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041041",
+      "team": "NO",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0031270",
+      "team": "NYG",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036386",
+      "team": "NYG",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039337",
+      "team": "NYG",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039446",
+      "team": "NYG",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039847",
+      "team": "NYG",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0033375",
+      "team": "NYJ",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036902",
+      "team": "NYJ",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0038120",
+      "team": "NYJ",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039798",
+      "team": "NYJ",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041032",
+      "team": "NYJ",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041038",
+      "team": "NYJ",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036224",
+      "team": "PHI",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041483",
+      "team": "PHI",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039167",
+      "team": "PIT",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036363",
+      "team": "SEA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0038765",
+      "team": "SEA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0038797",
+      "team": "SEA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039020",
+      "team": "SEA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039793",
+      "team": "SEA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040648",
+      "team": "SEA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040733",
+      "team": "SEA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040873",
+      "team": "SEA",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0029892",
+      "team": "SF",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0033288",
+      "team": "SF",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0034982",
+      "team": "SF",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0035413",
+      "team": "SF",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0035717",
+      "team": "SF",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039345",
+      "team": "SF",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040152",
+      "team": "SF",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040721",
+      "team": "SF",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041363",
+      "team": "SF",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041556",
+      "team": "SF",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041557",
+      "team": "SF",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0034989",
+      "team": "TB",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0035942",
+      "team": "TB",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0038951",
+      "team": "TB",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039855",
+      "team": "TB",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040129",
+      "team": "TB",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041031",
+      "team": "TB",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041082",
+      "team": "TB",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039858",
+      "team": "TEN",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041508",
+      "team": "TEN",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0032268",
+      "team": "WAS",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0035149",
+      "team": "WAS",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0035279",
+      "team": "WAS",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036286",
+      "team": "WAS",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036940",
+      "team": "WAS",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039368",
+      "team": "WAS",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039912",
+      "team": "WAS",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040242",
+      "team": "WAS",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    }
+  ],
+  "scope": "Rehearsal only. Registry join is not current-team identity corroboration; no public usage artifact or numerical forecast changes."
+}

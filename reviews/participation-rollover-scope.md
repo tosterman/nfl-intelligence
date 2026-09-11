@@ -28,5 +28,14 @@ Implementation requirements:
    scope tests pass. Verify rollover, transfers, duplicate identities, empty
    current-season samples, failed collection and mobile display.
 
-This work is not implemented yet. It must not change the numerical forecasts,
-claim player quality or infer expected availability from observed participation.
+The scope engine and a retained-source rehearsal are now implemented in
+`scripts/season_usage.py` and `scripts/audit_season_usage.py`. Five focused tests
+pass, alongside the five existing historical-usage tests. The actual retained
+source produces no eligible current-season appearances for all 139 Week 1
+reports, as required: the first two games cannot enter those earlier weekly
+contexts. `season-usage-rehearsal.json` retains that negative result.
+
+Acquisition automation, corroborated identity binding and the public selector/UI
+remain unfinished. This rehearsal does not replace the accepted public usage
+artifact. It must not change numerical forecasts, claim player quality or infer
+expected availability from observed participation.
