@@ -41,6 +41,7 @@ export async function runOddsCollection({
   fetcher,
   now,
   reserve,
+  reuse = canReuseSnapshot,
 }: {
   key: string | undefined;
   read: () => Promise<OddsFeed | null>;
@@ -50,11 +51,12 @@ export async function runOddsCollection({
   fetcher: typeof fetch;
   now: () => number;
   reserve: (now: number) => Promise<number>;
+  reuse?: typeof canReuseSnapshot;
 }) {
   if (!key) throw new Error("Collection configuration missing");
   const existing = await read();
   const health = oddsHealth(existing, now());
-  if (canReuseSnapshot(existing, now()))
+  if (reuse(existing, now()))
     return { ...health, status: "already-current" };
   // /sports is quota-free and reports current account credits. Do not guess
   // availability from a previous snapshot or assume a calendar reset date.
