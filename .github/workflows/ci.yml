@@ -29,5 +29,20 @@ jobs:
       - run: python scripts/prepare_test_data.py
       - run: npm test
       - run: python -m unittest discover -s tests -p 'test_*.py'
+      - name: Install browser verification runtime
+        run: |
+          pip install -r requirements-browser.txt
+          python -m playwright install --with-deps chromium webkit
+      - name: Verify market deadlines in Chromium and WebKit
+        id: market-clocks
+        run: python scripts/check_market_clock.py
+      - name: Retain successful browser deadline evidence
+        if: ${{ !cancelled() && steps.market-clocks.outcome == 'success' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: market-deadlines-${{ github.run_id }}-${{ github.run_attempt }}
+          path: reviews/market-clock-fixture-browser.json
+          if-no-files-found: error
+          retention-days: 30
       - run: npm run build
       - run: npm audit --omit=dev --audit-level=high

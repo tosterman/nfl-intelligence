@@ -1,0 +1,2 @@
+# Match the browser-testing runtime verified locally; separate from model dependencies.
+playwright==1.60.0
