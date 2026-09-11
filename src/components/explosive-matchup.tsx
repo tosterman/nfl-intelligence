@@ -1,5 +1,6 @@
 import React from "react";
-import evidence from "../../data/explosive-plays.json";
+import evidence from "../../data/prior-matchup-context.json";
+import { selectPriorContext } from '../lib/prior-matchup';
 import { WeeklyMatchup } from './weekly-matchup';
 
 type Props = { away: string; home: string; season: number; kickoff: string | null; week?: number; type?: string };
@@ -13,10 +14,7 @@ function Rate({ counts }: { counts: Counts }) {
 }
 
 export function ExplosiveMatchup({ away, home, season, kickoff, week, type }: Props) {
-  const valid = season === evidence.season + 1 && away !== home &&
-    Object.hasOwn(evidence.teams, away) && Object.hasOwn(evidence.teams, home) &&
-    kickoff !== null && Number.isFinite(Date.parse(kickoff)) &&
-    Date.parse(kickoff) >= Date.parse(`${evidence.cutoff}T00:00:00Z`);
+  const valid = selectPriorContext(evidence, { away, home, season, kickoff });
   if (!valid) return <section className="panel"><h2 id="explosive-heading" tabIndex={-1}>Historical comparison unavailable</h2>
     <WeeklyMatchup game={{ away, home, season, kickoff, week, type }} kind="big-play" />
     <p>Compatible prior-season big-play evidence is not available for this matchup.</p></section>;

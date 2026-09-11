@@ -1,5 +1,6 @@
 import React from "react";
-import evidence from "../../data/red-zone.json";
+import evidence from "../../data/prior-matchup-context.json";
+import { selectPriorContext } from '../lib/prior-matchup';
 import { WeeklyMatchup } from './weekly-matchup';
 
 type Props = { away: string; home: string; season: number; kickoff: string | null; week?: number; type?: string };
@@ -11,10 +12,7 @@ function Rate({ counts }: { counts: { possessions: number; touchdowns: number } 
 }
 
 export function RedZoneMatchup({ away, home, season, kickoff, week, type }: Props) {
-  const valid = season === evidence.season + 1 && away !== home &&
-    Object.hasOwn(evidence.teams, away) && Object.hasOwn(evidence.teams, home) &&
-    kickoff !== null && Number.isFinite(Date.parse(kickoff)) &&
-    Date.parse(kickoff) >= Date.parse(`${evidence.cutoff}T00:00:00Z`);
+  const valid = selectPriorContext(evidence, { away, home, season, kickoff });
   if (!valid) return <section className="panel"><h2 id="red-zone-heading" tabIndex={-1}>Inside-20 history unavailable</h2>
     <WeeklyMatchup game={{ away, home, season, kickoff, week, type }} kind="inside20" />
     <p>Compatible prior-season possession evidence is not available for this matchup.</p></section>;
@@ -31,7 +29,7 @@ export function RedZoneMatchup({ away, home, season, kickoff, week, type }: Prop
         <table className="comparison">
           <caption className="sr-only">Historical inside-20 touchdown rates: {offense} scored and {defense} allowed</caption>
           <thead><tr><th scope="col">Scored</th><th scope="col">Allowed</th></tr></thead>
-          <tbody><tr><td><Rate counts={rows[offense].offense} /></td><td><Rate counts={rows[defense].defense} /></td></tr></tbody>
+          <tbody><tr><td><Rate counts={rows[offense].offense.inside20} /></td><td><Rate counts={rows[defense].defense.inside20} /></td></tr></tbody>
         </table>
       </div>)}
     </div>
@@ -39,7 +37,7 @@ export function RedZoneMatchup({ away, home, season, kickoff, week, type }: Prop
     <details><summary>Possession definition &amp; source</summary>
       <p>A possession qualifies when its pre-snap field position is less than 20 yards from the opponent’s goal line. The 20-yard line itself is excluded. Penalty situations can qualify; a long touchdown without an inside-20 situation cannot. Leaving and re-entering counts as one possession.</p>
       <p>Conversion attempts are excluded. Defensive and return touchdowns are not offensive conversions. Drives end at the touchdown, before the extra-point sequence. These are our reproducible historical counts, not a claim of official league statistics.</p>
-      <p>Source: <a href="https://nflreadr.nflverse.com/reference/load_pbp.html">nflverse play-by-play</a>, CC BY 4.0. Completed games before {evidence.cutoff}. One nullified kickoff was excluded after checking the official gamebook. Uses historical data collected after those games.</p>
+      <p>Source: <a href="https://nflreadr.nflverse.com/reference/load_pbp.html">nflverse play-by-play</a>, CC BY 4.0. Completed games before {evidence.cutoff}. Source corrections are bound to the exact retained data used for these counts. Uses historical data collected after those games.</p>
     </details>
   </section>;
 }

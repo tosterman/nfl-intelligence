@@ -89,7 +89,14 @@ so Python optimization cannot skip comparisons. Three targeted tests cover prior
 scope and deliberate reconciliation failures; all eight weekly builder tests
 also pass. The shared aggregation refactor preserves the four recorded weekly
 replay hashes. Automatic historical acquisition and UI consumption of this new
-artifact remain pending; it is not yet a season-rollover implementation.
+artifact were initially separate integration steps. Both historical matchup
+panels now consume this artifact through `selectPriorContext`, which validates
+the forecast/prior-season relationship, teams, source hashes, and dates. It does
+not apply current-feed expiry to historical evidence. The runtime release copy
+includes the artifact. Two additional TypeScript tests cover selection, a
+synthetic following-season transition, and every historical count. Automatic
+historical acquisition still remains pending; UI consumption alone is not a
+complete season-rollover implementation.
 
 Acquisition has four additional tests: immutable repeat capture/corrupt existing
 object rejection; bad digest/stale/future metadata rejection; and failed refresh
