@@ -3,6 +3,9 @@ import { site } from "@/lib/data";
 import { Slate } from "@/components/slate";
 import { weeklyBriefing } from "@/lib/weekly-changes";
 import { assessFreshness, freshnessInputs } from "@/lib/freshness";
+import weather from "../../data/weather.json";
+import type { WeatherRecord } from "@/lib/weather";
+import { slateWeather } from "@/lib/slate-weather";
 export default async function Home({
   searchParams,
 }: {
@@ -24,6 +27,7 @@ export default async function Home({
   };
   return (
     <Slate
+      weather={Object.fromEntries(site.games.map(game => [game.id, slateWeather((weather.games as Record<string, WeatherRecord>)[game.id], game, now)]))}
       odds={await getOdds()}
       initialNow={now}
       briefings={briefings}

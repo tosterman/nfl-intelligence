@@ -1,0 +1,54 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "weatherCards": 14,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "weatherCards": 14,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "weatherCards": 14,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "inclusiveExpiry": true,
+    "kickoffClosure": true
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "weatherCards": 14,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "weatherCards": 14,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "weatherCards": 14,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "inclusiveExpiry": true,
+    "kickoffClosure": true
+  }
+]

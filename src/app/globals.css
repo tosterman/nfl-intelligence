@@ -763,6 +763,14 @@ select:focus-visible {
   color: #a7afb9;
   padding-top: 1px;
 }
+.slate-weather {
+  border-top: 1px solid var(--line);
+  padding: 12px 20px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.slate-weather p { margin: 4px 0; }
+.slate-weather small { color: var(--muted); }
 .card-bottom {
   margin-top: auto;
   border-top: 1px solid #292e36;

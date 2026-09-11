@@ -1,5 +1,7 @@
 "use client";
 import { MarketCard, useClock } from "./market-panel";
+import { SlateWeatherContext } from "./slate-weather";
+import type { SlateWeather } from "@/lib/slate-weather";
 import { featuredGame, slateGameStatus } from "@/lib/slate-timing";
 import { WeeklyChanges } from "./weekly-changes";
 import type { WeeklyBriefing } from "@/lib/weekly-changes";
@@ -34,7 +36,9 @@ export function Slate({
   odds,
   initialNow,
   briefings,
+  weather = {},
 }: {
+  weather?: Record<string, SlateWeather>;
   games: Game[];
   briefings: Record<number, WeeklyBriefing>;
   odds: OddsFeed;
@@ -344,6 +348,7 @@ export function Slate({
             <GameCard
               key={g.id}
               game={g}
+              weather={weather[g.id]}
               returnTo={returnTo}
               odds={odds}
               initialNow={now} freshness={freshness}
@@ -395,7 +400,9 @@ function GameCard({
   returnTo,
   odds,
   initialNow, freshness,
+  weather,
 }: {
+  weather?: SlateWeather;
   game: Game;
   returnTo: string;
   odds: OddsFeed;
@@ -495,6 +502,7 @@ function GameCard({
           </small>
         </div>
       )}
+      {weather && <SlateWeatherContext weather={weather} kickoff={g.kickoff} initialNow={initialNow} />}
       <div className="card-bottom">
         <span>
           {p ? "Scoring + efficiency · Limited inputs" : "Schedule & results"}
