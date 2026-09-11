@@ -1,3 +1,4 @@
+import { RevisionBrief } from '@/components/revision-brief';
 import { ModelBrief } from '@/components/model-brief';
 import { freshnessInputs } from "@/lib/freshness";
 import { getOdds } from "@/lib/odds-server";
@@ -221,6 +222,7 @@ export default async function GamePage({
                 </p>
                 <ModelBrief prediction={p} home={teams[g.home].name} away={teams[g.away].name} />
                 <MarketBrief game={g} feed={marketData![0]} prediction={p} freshness={freshnessInputs(site)} initialNow={Date.now()} />
+                {g.history.length > 0 && <RevisionBrief game={g} asOf={Date.now()} />}
                 <div className="notice">
                   <strong>Room for a different result</strong>
                   <p>The middle 80% of modeled margins span {marginRange(p.marginInterval80, teams[g.home].name, teams[g.away].name) ?? "an unavailable range"}.</p>

@@ -33,5 +33,19 @@ overflow; its evidence link focused the market heading. The retained screenshot
 was visually inspected. This adds no odds-provider calls: it uses the same stored
 feed already loaded for the detail page.
 
-Revision summaries remain separate. This is not evidence of timed two-minute
-comprehension or validated betting value.
+The opening read now includes RevisionBrief, using the existing verified
+comparison logic against the immediate predecessor. It distinguishes first,
+unchanged, model-definition changes and unavailable histories. Comparable runs
+show signed win-chance, home-margin and total deltas at three-decimal precision,
+with the preceding run's time and a warning against causal/publication inference.
+The evidence link focuses the retained history heading.
+
+All eight weekly-change tests passed, including rendering of these states, and
+TypeScript checking passed. A real 390px Chromium check verified the unavailable
+history state on ATL/PIT, no overflow and link focus. The screenshot was visually
+inspected. Positive numerical revision rendering is tested synthetically; this
+browser capture does not claim the real matchup has comparable history.
+
+The opening brief now connects model advantage, counterweight, market context,
+recorded changes and outcome uncertainty. Timed two-minute comprehension and
+validated betting value remain unproven.

@@ -5,8 +5,25 @@ import type { Game, Snapshot } from "../src/lib/types";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { WeeklyChanges } from "../src/components/weekly-changes";
+import { RevisionBrief } from "../src/components/revision-brief";
 
 const now = Date.parse("2026-09-10T16:00:00Z");
+test('opening revision brief distinguishes changes, unchanged runs and unavailable comparisons', () => {
+  const render = (game: Game) => renderToStaticMarkup(createElement(RevisionBrief, {game, asOf: now}));
+  const changed = render(fixture('changed', -2));
+  assert.match(changed, /win chance -2.000 percentage points/);
+  assert.match(changed, /expected home margin -2.000 points/);
+  assert.match(changed, /not proof of a football cause/);
+  assert.match(changed, /href="#forecast-changes"/);
+  assert.match(render(fixture('same', 0)), /unchanged/);
+  const first = fixture(); first.history = [first.snapshot!];
+  assert.match(render(first), /First retained forecast/);
+  const model = fixture(); model.snapshot!.modelCodeHash = 'changed';
+  assert.match(render(model), /Model definition changed/);
+  assert.doesNotMatch(render(model), /percentage points/);
+  const broken = fixture(); broken.history[0].sourceHash = undefined;
+  assert.match(render(broken), /identity is incomplete/);
+});
 test("server-prepared briefing preserves rendered evidence without shipping histories", () => {
   const ready = fixture("ready");
   const missing = fixture("missing"); missing.snapshot = null;
