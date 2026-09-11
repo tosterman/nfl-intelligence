@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { site } from "@/lib/data";
-export const metadata = {
-  title: "Inside the model — Methodology & limitations",
-};
+import { editorialMetadata } from "@/lib/editorial-metadata";
+export const metadata = editorialMetadata(
+  "Inside the model — Methodology & limitations",
+  "How NFL Intelligence builds forecasts, tests past results, preserves pregame records and separates evidence from unproven model ideas.",
+  "/methodology",
+);
 export default function Methodology() {
   return (
     <div className="subpage">

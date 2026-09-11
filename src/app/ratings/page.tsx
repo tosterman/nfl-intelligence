@@ -2,10 +2,12 @@ import { site, teams, signed } from "@/lib/data";
 import { TeamMark } from "@/components/brand";
 import Link from "next/link";
 import { orderRatings, ratingMetric } from "@/lib/ratings-order";
-export const metadata = {
-  title: "NFL power ratings",
-  alternates: { canonical: "/ratings" },
-};
+import { editorialMetadata } from "@/lib/editorial-metadata";
+export const metadata = editorialMetadata(
+  "NFL power ratings",
+  "Compare all 32 NFL teams using opponent-adjusted scoring ratings, with separate offense, defense and combined views.",
+  "/ratings",
+);
 export default async function Ratings({ searchParams }: { searchParams: Promise<{ sort?: string | string[] }> }) {
   const params = await searchParams;
   const metric = ratingMetric(typeof params.sort === "string" ? params.sort : undefined);

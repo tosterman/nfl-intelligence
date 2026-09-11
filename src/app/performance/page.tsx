@@ -4,7 +4,12 @@ import { LiveCalibration } from "@/components/live-calibration";
 import { marginComparisonSummary } from "@/lib/performance-summary";
 import { PerformanceBands } from "@/components/performance-bands";
 import { IntervalCoverage } from "@/components/interval-coverage";
-export const metadata = { title: "Track record — Every result counts" };
+import { editorialMetadata } from "@/lib/editorial-metadata";
+export const metadata = editorialMetadata(
+  "Track record — Every result counts",
+  "Inspect forecast accuracy, score errors, calibration and uncertainty coverage, with published-before-kickoff results separate from retrospective development tests.",
+  "/performance",
+);
 export default function Performance() {
   const m = site.performance.aggregate;
   return (

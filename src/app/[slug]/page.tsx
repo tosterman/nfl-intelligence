@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { editorialMetadata } from "@/lib/editorial-metadata";
 const pages: Record<
   string,
   {
     title: string;
     intro: string;
+    description?: string;
     sections: { heading: string; text: string }[];
   }
 > = {
@@ -33,6 +35,7 @@ const pages: Record<
   },
   privacy: {
     title: "Your football. Your privacy.",
+    description: "How NFL Intelligence handles analytics consent, browser storage, hosting data and privacy choices in the current research edition.",
     intro:
       "This page describes the current research edition. Last updated September 10, 2026.",
     sections: [
@@ -110,7 +113,9 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  return { title: pages[slug]?.title ?? "Not found" };
+  const page = pages[slug];
+  if (!page) return { title: "Not found", robots: { index: false } };
+  return editorialMetadata(page.title, page.description ?? page.intro, `/${slug}`);
 }
 export default async function Article({
   params,

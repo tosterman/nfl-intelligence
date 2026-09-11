@@ -1,0 +1,114 @@
+[
+  {
+    "engine": "chromium",
+    "path": "/methodology",
+    "title": "Inside the model \u2014 Methodology & limitations",
+    "canonical": "https://nfl-intelligence-one.vercel.app/methodology",
+    "descriptionMatches": true,
+    "imagePresent": true
+  },
+  {
+    "engine": "chromium",
+    "path": "/performance",
+    "title": "Track record \u2014 Every result counts",
+    "canonical": "https://nfl-intelligence-one.vercel.app/performance",
+    "descriptionMatches": true,
+    "imagePresent": true
+  },
+  {
+    "engine": "chromium",
+    "path": "/ratings?sort=offense",
+    "title": "NFL power ratings",
+    "canonical": "https://nfl-intelligence-one.vercel.app/ratings",
+    "descriptionMatches": true,
+    "imagePresent": true
+  },
+  {
+    "engine": "chromium",
+    "path": "/about",
+    "title": "A clearer way to follow football.",
+    "canonical": "https://nfl-intelligence-one.vercel.app/about",
+    "descriptionMatches": true,
+    "imagePresent": true
+  },
+  {
+    "engine": "chromium",
+    "path": "/privacy",
+    "title": "Your football. Your privacy.",
+    "canonical": "https://nfl-intelligence-one.vercel.app/privacy",
+    "descriptionMatches": true,
+    "imagePresent": true
+  },
+  {
+    "engine": "chromium",
+    "path": "/contact",
+    "title": "Make the analysis better.",
+    "canonical": "https://nfl-intelligence-one.vercel.app/contact",
+    "descriptionMatches": true,
+    "imagePresent": true
+  },
+  {
+    "engine": "chromium",
+    "path": "/responsible-use",
+    "title": "Keep the game in perspective.",
+    "canonical": "https://nfl-intelligence-one.vercel.app/responsible-use",
+    "descriptionMatches": true,
+    "imagePresent": true
+  },
+  {
+    "engine": "webkit",
+    "path": "/methodology",
+    "title": "Inside the model \u2014 Methodology & limitations",
+    "canonical": "https://nfl-intelligence-one.vercel.app/methodology",
+    "descriptionMatches": true,
+    "imagePresent": true
+  },
+  {
+    "engine": "webkit",
+    "path": "/performance",
+    "title": "Track record \u2014 Every result counts",
+    "canonical": "https://nfl-intelligence-one.vercel.app/performance",
+    "descriptionMatches": true,
+    "imagePresent": true
+  },
+  {
+    "engine": "webkit",
+    "path": "/ratings?sort=offense",
+    "title": "NFL power ratings",
+    "canonical": "https://nfl-intelligence-one.vercel.app/ratings",
+    "descriptionMatches": true,
+    "imagePresent": true
+  },
+  {
+    "engine": "webkit",
+    "path": "/about",
+    "title": "A clearer way to follow football.",
+    "canonical": "https://nfl-intelligence-one.vercel.app/about",
+    "descriptionMatches": true,
+    "imagePresent": true
+  },
+  {
+    "engine": "webkit",
+    "path": "/privacy",
+    "title": "Your football. Your privacy.",
+    "canonical": "https://nfl-intelligence-one.vercel.app/privacy",
+    "descriptionMatches": true,
+    "imagePresent": true
+  },
+  {
+    "engine": "webkit",
+    "path": "/contact",
+    "title": "Make the analysis better.",
+    "canonical": "https://nfl-intelligence-one.vercel.app/contact",
+    "descriptionMatches": true,
+    "imagePresent": true
+  },
+  {
+    "engine": "webkit",
+    "path": "/responsible-use",
+    "title": "Keep the game in perspective.",
+    "canonical": "https://nfl-intelligence-one.vercel.app/responsible-use",
+    "descriptionMatches": true,
+    "imagePresent": true
+  }
+]
