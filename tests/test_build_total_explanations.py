@@ -1,10 +1,13 @@
 import sys
 from pathlib import Path
 import unittest
+import json
+import tempfile
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import build_total_explanations as builder
+from forecast_input_archive import restore
 
 
 class TotalExplanationReplay(unittest.TestCase):
@@ -19,7 +22,11 @@ class TotalExplanationReplay(unittest.TestCase):
         root = builder.ROOT
         watched = [root / 'data/site.json', root / 'data/ledger.json', root / 'scripts/build_data.py', root / 'scripts/experiment_model.py', root / 'scripts/refresh.py']
         before = {p: p.read_bytes() for p in watched}
-        report = builder.build(root)
+        identity = json.loads((root / 'data/total-explanations.json').read_text())['inputManifestSha256']
+        with tempfile.TemporaryDirectory() as directory:
+            restored = Path(directory)
+            restore(root / 'data/forecast-input-archive', identity, restored)
+            report = builder.build(restored)
         self.assertEqual(len(report['records']), report['replayMatched'])
         self.assertGreater(report['replayMatched'], 0)
         for identity, row in report['records'].items():

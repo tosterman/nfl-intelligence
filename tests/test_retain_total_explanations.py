@@ -9,6 +9,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import retain_total_explanations as retention
+from forecast_input_archive import restore
 
 
 class TotalExplanationRetention(unittest.TestCase):
@@ -16,8 +17,9 @@ class TotalExplanationRetention(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             shutil.copytree(retention.ROOT / 'data/forecast-input-archive', root / 'data/forecast-input-archive')
-            for name in ('site.json', 'ledger.json'):
-                shutil.copy2(retention.ROOT / 'data' / name, root / 'data' / name)
+            identity = json.loads((retention.ROOT / 'data/total-explanations.json').read_text())['inputManifestSha256']
+            restore(root / 'data/forecast-input-archive', identity, root)
+            shutil.copy2(retention.ROOT / 'data/ledger.json', root / 'data/ledger.json')
             self.check_retention(root)
 
     def check_retention(self, root):

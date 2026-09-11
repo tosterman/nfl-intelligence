@@ -42,6 +42,8 @@ jobs:
         run: python scripts/build_source_registry.py
       - name: Numerically replay newly generated forecasts
         run: python scripts/replay_forecast.py --new-snapshots > release-recovery/numerical-replay.json
+      - name: Build and retain verified total explanations
+        run: python scripts/retain_total_explanations.py
       - run: python scripts/refresh_weather.py
       - name: Refresh weekly descriptive matchup context
         continue-on-error: true
@@ -88,6 +90,8 @@ jobs:
             data/weekly-matchup-context.json
             data/prior-matchup-context.json
             data/prior-matchup-collection.json
+            data/total-explanations.json
+            data/total-explanation-archive/
             data/weekly-matchup-sources/
             data/games.csv
             data/raw/stats_team_week_*.csv

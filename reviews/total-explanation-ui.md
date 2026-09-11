@@ -18,5 +18,20 @@ horizontal overflow. The expanded screenshot was visually reviewed. The default
 collapsed state avoids placing the full 20-row accounting table in the normal
 reading path.
 
-Scheduled explanation refresh, prepublication verification and broader device
-review remain pending. No hosted deployment was performed.
+The development refresh workflow now retains total explanations after new
+forecast replay, and preserves the artifact/archive in Git and recovery output.
+Both publication paths run a separate verifier before publishing. It restores
+the linked input manifest, requires the current edition identity, reproduces
+the explanations and checks exact displayed terms. Raw floating-point terms
+allow only 1e-9 numerical variation; displayed values have no tolerance.
+
+The real artifact passed this verifier. Tamper tests, both builder tests and
+all 33 publication tests passed locally. The previous hosted CI run failed
+because new tests read working inputs rather than the exact archived bundle;
+CI preparation fetches source inputs. Tests now restore their linked archive
+into a temporary directory. Hosted verification of that fix remains pending.
+
+The builder targets newly generated forecasts, matching the release replay
+scope. Earlier unsupported snapshots remain explicitly unavailable in the UI.
+Actual scheduled operation and broader device review remain pending. No hosted
+deployment was performed.

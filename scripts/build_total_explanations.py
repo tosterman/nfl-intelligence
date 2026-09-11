@@ -13,7 +13,7 @@ SUPPORTED_ENGINE = '08495229d4ed0202c1abbe941005ca259d0dd190b6c7442206f24f52b147
 
 
 def build(root=ROOT):
-    replay = replay_forecast.replay(root)
+    replay = replay_forecast.replay(root, new_only=True)
     if replay['mismatches'] or replay['unreplayable'] or not replay['matched']:
         raise ValueError('Full current forecast replay did not pass')
     if replay['modelCodeHash'] != SUPPORTED_ENGINE:
