@@ -5,6 +5,9 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from audit_personnel_identity import reconstruct
+from refresh_quarterbacks import normalize
+from depth_chart import instant
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -36,6 +39,10 @@ def main():
     inputs = {path.relative_to(worker).as_posix(): {
         'bytes': path.stat().st_size, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()
     } for path in files}
+    quarterback = json.loads((worker / 'data/quarterbacks.json').read_bytes())
+    raw = reconstruct(worker / 'data/quarterback-sources', quarterback['sourceHash'])
+    if normalize(raw, set(quarterback['teams']), instant(quarterback['retrievedAt'])) != quarterback['teams']:
+        raise ValueError('Quarterback roles do not replay from retained source')
     completed = []
     for step in STEPS:
         run = subprocess.run([sys.executable, str(worker / 'scripts' / step)], cwd=worker,
@@ -58,6 +65,7 @@ def main():
     report = {'checkedAt': datetime.now(timezone.utc).isoformat(),
               'scope': 'Offline isolated reconstruction from retained sources; no collection or publication',
               'steps': completed, 'inputsUnchanged': unchanged,
+              'quarterbackRolesReplayed': True,
               'inputFiles': len(inputs), 'inputBytes': sum(v['bytes'] for v in inputs.values()),
               'outputs': outputs, 'inputs': inputs}
     target = ROOT / 'reviews/personnel-worker-rehearsal.json'

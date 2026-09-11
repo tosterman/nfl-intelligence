@@ -8,7 +8,7 @@ preserve the existing identity, freshness and pregame cutoffs.
 ## Publication unit
 
 One immutable publication root selects a current presentation object containing
-personnel, quarterback roles, both collection states, prior-season usage,
+personnel, quarterback roles, all three collection states, prior-season usage,
 current-season participation, report changes and exact game contexts. Include
 the source and acquisition identities that existing selectors already require.
 Bind season, phase, week, teams, kickoff, venue and neutral status to the deployed
@@ -28,6 +28,8 @@ must remain bounded and must not require loading the entire season on a page.
 
 1. Restore the selected publication and required source objects into an isolated
    directory; verify hashes before use. Pin the exact schedule and registry.
+   Require the schedule digest declared by the selected edition to match the
+   actual schedule bytes, in addition to matching each deployed game context.
 2. Collect injury, depth-chart and participation sources independently. Preserve
    prior valid snapshots and original dates on failure; record failed collection
    state explicitly. Failure must not turn missing evidence into healthy players,
@@ -38,11 +40,22 @@ must remain bounded and must not require loading the entire season on a page.
 4. Validate exact input bindings and all presentation references. If the identity
    audit cannot establish a common cutoff, withhold dependent usage explicitly;
    do not copy a successful audit from the previous report into the new one.
+   This is an explicit degraded-publication branch: retain available dated
+   reports and all three collection states while marking incompatible derived
+   usage unavailable. A derivation exception must not prevent a failed-collection
+   status from becoming visible. Keep acquisition, identity-audit and participation
+   cutoff timestamps distinct from the new publication timestamp.
 5. Retain immutable objects, verify readback, then conditionally move the pointer.
    A concurrent publication requires recollection/revalidation. Preserve all
    previous history references; never rewrite an old observation.
 6. Check the exact new root through local health and browser rendering without a
    build. Then verify the deployed reader and one real scheduled collection.
+
+The runtime transition builder must operate on the accepted injury capture and
+its predecessor, rather than call the cumulative `personnel_changes.py` scan.
+The offline probe currently copies full retained directories; that is a bootstrap
+feasibility check, not the intended recurring restore algorithm. Preserve older
+immutable transition references without rebuilding their payloads.
 
 ## Required verification
 
@@ -66,5 +79,8 @@ The first probe passed on September 11 at 18:14 UTC: 322 copied input files
 (16,349,527 bytes, including scripts) remained unchanged. Five pipeline steps
 rebuilt report changes and both usage artifacts, each with 139 report records.
 See `reviews/personnel-worker-rehearsal.json` for the exact input inventory.
-This does not yet prove normalized quarterback replay, fresh acquisition,
-failure handling, storage publication or runtime behavior.
+The subsequent 18:15 UTC probe additionally reproduced normalized quarterback
+roles from the retained raw source at the original acquisition time. It still
+does not prove fresh acquisition, failed-collection publication, schedule/edition
+binding rejection, bounded recurring restore, storage publication or runtime
+behavior. Those remain required implementation checks.

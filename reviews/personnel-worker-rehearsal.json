@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-11T18:14:02.964126+00:00",
+  "checkedAt": "2026-09-11T18:15:12.099372+00:00",
   "scope": "Offline isolated reconstruction from retained sources; no collection or publication",
   "steps": [
     "personnel_changes.py",
@@ -9,8 +9,9 @@
     "build_season_participation.py"
   ],
   "inputsUnchanged": true,
+  "quarterbackRolesReplayed": true,
   "inputFiles": 322,
-  "inputBytes": 16349527,
+  "inputBytes": 16350056,
   "outputs": {
     "personnel-changes.json": {
       "bytes": 247,
@@ -18,13 +19,13 @@
       "records": 0
     },
     "player-usage.json": {
-      "bytes": 420226,
-      "sha256": "98b8d484e52668fbd93c21451e1d1aaaab6b0c45a90c7e8fc35ca1c0d8bbc0a5",
+      "bytes": 420251,
+      "sha256": "3b532d9810637a0c080598e983fa75f4773c0d327e44a7459086526fb073040e",
       "records": 139
     },
     "season-participation.json": {
       "bytes": 107282,
-      "sha256": "468d3e76b59ec7658714a261790c3ebbd1e8990b6842ee32fab338d9833ca524",
+      "sha256": "42267232966614006e76a967b9efd7843048a71276e567301caf9c24c50b3bdd",
       "records": 139
     }
   },
@@ -1202,8 +1203,8 @@
       "sha256": "f2ed6b3aeeda9bcfd7d33a909033b8dfeb30de700bbd833a5c408b80bc2623af"
     },
     "scripts/rehearse_personnel_worker.py": {
-      "bytes": 3436,
-      "sha256": "c00b67317ad21dcd831abd859fddc4f7ee13f4eff9052cdc8af8520510c3c780"
+      "bytes": 3965,
+      "sha256": "542e6c35daee297fef3018f5e694dacd20de6fad5fa5fc2bd747de140fda93ef"
     },
     "scripts/replay_forecast.py": {
       "bytes": 7509,
