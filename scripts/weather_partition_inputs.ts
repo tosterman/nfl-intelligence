@@ -28,7 +28,17 @@ export async function prepareWeatherPartitionCandidate(root:string,store:Pick<We
   const prior:Prepared={publication:previous.publication,objects:new Map([[previous.publication.sha256,rootBody.body],[previous.root.index.sha256,indexBody.body]])};
   const index=await readWeatherPartitionIndex(store,previous.root);
   const newRoot=JSON.parse(candidate.objects.get(candidate.publication.sha256)!.toString());
-  const newIndex=JSON.parse(candidate.objects.get(newRoot.index.sha256)!.toString()).games;
+  const indexObject=JSON.parse(candidate.objects.get(newRoot.index.sha256)!.toString());
+  let newIndex=indexObject.games;
+  // A scoped worker does not download finished games. Retain their immutable references.
+  if(Object.keys(index).some(id=>!Object.hasOwn(newIndex,id))){
+   const oldRootHash=candidate.publication.sha256,oldIndexHash=newRoot.index.sha256;
+   newIndex=Object.fromEntries(Object.entries({...index,...newIndex}).sort(([a],[b])=>a.localeCompare(b)));
+   indexObject.games=newIndex;
+   const retain=(value:unknown)=>{const body=Buffer.from(JSON.stringify(value)),sha256=createHash('sha256').update(body).digest('hex');candidate.objects.set(sha256,body);return {sha256,bytes:body.length};};
+   newRoot.index=retain(indexObject);candidate.publication=retain(newRoot);
+   candidate.objects.delete(oldRootHash);candidate.objects.delete(oldIndexHash);
+  }
   for(const [id,ref] of Object.entries(index))if(newIndex[id]?.sha256!==ref.sha256||newIndex[id]?.bytes!==ref.bytes){
    const saved=await store.read('weather/objects/'+ref.sha256);
    if(!saved)throw Error('Prior game partition disappeared');

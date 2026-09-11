@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-09-11T18:02:23.347Z",
+  "mode": "collection-rehearsal",
+  "restored": {
+    "publication": "cfc430a9830f48dce53fac2d3dc8741598f27e40a3b65c9b7a25d94523c9ccab",
+    "restoredGames": 14,
+    "observations": 137,
+    "sources": 126
+  },
+  "generatedAt": "2026-09-11T18:02:18.538813+00:00",
+  "manifestHash": "79eedae2bfd25825f92d6e551086f087b5c570ff2437fac1c15ec033013e4281",
+  "observations": 151,
+  "games": 14,
+  "sources": 143,
+  "reachableObjects": 160,
+  "snapshotBytes": 180577,
+  "indexBytes": 1587,
+  "largestPartitionBytes": 65885,
+  "result": null,
+  "scope": "Scoped collection and storage publication; public website readback is separate"
+}

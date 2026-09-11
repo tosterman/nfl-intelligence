@@ -160,3 +160,23 @@ This is not a public website deployment. The v2 collection worker is still
 unfinished; the existing gated workflow references v1 scripts and must be
 updated before activation. Keep `WEATHER_RUNTIME_ENABLED` unset. Do not unfreeze
 v1 or treat its frozen archive as the active update path.
+
+The v2 scoped worker is now implemented. `collect_weather_v2.ts` creates an
+isolated workspace, restores only indexed games whose kickoff is within seven
+days, verifies their raw sources, collects NWS updates, builds and audits the
+candidate, and checks continuity before optional publication. Untouched game
+references are merged into the new index. If the publication changed during
+collection, the worker aborts. Reports retain the failed stage without secrets.
+
+A real collection rehearsal restored 137 observations/126 sources and prepared
+151 observations/143 sources without storage mutation. The one-game integration
+test verifies that restoring and publishing only Atlanta–Pittsburgh preserves
+the full index, including all other game references. See
+`reviews/weather-v2-worker-rehearsal.json`. The gated workflow now calls this v2
+worker and retains its isolated evidence files. Keep activation disabled until
+public rollout and exact public readback; a real v2 worker publication and an
+actual scheduled run remain to be observed.
+
+Hosted verification 34630872623 passed for `247dd19`, covering the prior complete
+reader/migration checkpoint. The scoped-worker changes above are subsequent
+local work and require their own hosted verification.

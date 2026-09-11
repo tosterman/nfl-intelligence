@@ -24,15 +24,8 @@ jobs:
         with:
           python-version: '3.13'
       - run: npm ci
-      - name: Restore published history before collecting
-        run: npx tsx scripts/restore_weather.ts
-        env:
-          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
-      - run: python scripts/refresh_weather.py
-      - run: python scripts/weather_history.py
-      - run: python scripts/weather_history.py --check
-      - name: Publish verified weather bundle
-        run: npx tsx scripts/publish_weather.ts --publish
+      - name: Restore active game history, collect, verify and publish
+        run: npx tsx scripts/collect_weather_v2.ts --publish
         env:
           BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
       - name: Verify exact public bundle and freshness
@@ -46,8 +39,8 @@ jobs:
           path: |
             release-recovery/weather-publication-report.json
             release-recovery/weather-public-readback.json
-            data/weather.json
-            data/weather-history.json
-            data/weather-ledger.json
-            data/weather-sources/*.json.gz
+            release-recovery/weather-worker-v2-*/data/weather.json
+            release-recovery/weather-worker-v2-*/data/weather-history.json
+            release-recovery/weather-worker-v2-*/data/weather-ledger.json
+            release-recovery/weather-worker-v2-*/data/weather-sources/*.json.gz
           if-no-files-found: error
