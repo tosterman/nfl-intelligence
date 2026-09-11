@@ -15,7 +15,7 @@ function parsePointer(body:Buffer){
   if(body.length>4096)throw Error('Invalid weather pointer');
   const value=JSON.parse(body.toString());
   if(!value||value.schemaVersion!==1||!validTime(value.generatedAt)||!validHash(value.manifestHash))throw Error('Invalid weather pointer');
-  return {generatedAt:value.generatedAt as string,manifestHash:value.manifestHash as string};
+  return {generatedAt:value.generatedAt as string,manifestHash:value.manifestHash as string,frozenForMigration:value.frozenForMigration===true};
 }
 
 /** Hash integrity only; callers still validate the weather schema and source freshness. */
@@ -65,6 +65,7 @@ export async function publishWeatherObjects(objects:Buffer[],generatedAt:string,
   if(previous){
     if(!previous.etag)throw Error('Invalid weather pointer');
     const pointer=parsePointer(previous.body);
+    if(pointer.frozenForMigration)throw Error('Legacy weather publication is frozen for migration');
     const priorTime=Date.parse(pointer.generatedAt);
     if(priorTime>timestamp)throw Error('Cannot publish older weather');
     if(priorTime===timestamp&&pointer.manifestHash!==manifestHash)throw Error('Conflicting weather acquisition');

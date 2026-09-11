@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-09-11T17:53:51.977Z",
+  "mode": "read-only-rehearsal",
+  "publication": {
+    "sha256": "cfc430a9830f48dce53fac2d3dc8741598f27e40a3b65c9b7a25d94523c9ccab",
+    "bytes": 300
+  },
+  "previousPublication": null,
+  "legacyManifestHash": "8d07e5dee9896a7723013cb4af9b7a620470834e714b8e3bc19cb9f587a5b86a",
+  "observations": 137,
+  "games": 14,
+  "sources": 126,
+  "reachableObjects": 143,
+  "snapshotBytes": 180577,
+  "indexBytes": 1585,
+  "largestPartitionBytes": 62458,
+  "result": null,
+  "scope": "Real read-only v2 candidate rehearsal before migration-freeze addition; no storage mutation"
+}

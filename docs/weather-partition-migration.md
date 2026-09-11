@@ -119,3 +119,21 @@ five scoped-reader tests pass, including interrupted writes, lost responses,
 concurrent publication, and missing source/index rejection before mutation.
 The command-line publisher must still invoke Python source replay and continuity
 verification before this storage transaction. No v2 storage publication occurred.
+
+The command-line candidate pipeline is now connected. `publish_weather_v2.ts`
+defaults to a read-only rehearsal; `--publish` is explicit. Preparation invokes
+Python raw-source replay and migration audit, then verifies either actual stored
+v1-ledger preservation or continuity against the prior v2 partitions. The real
+rehearsal passed against the 137-observation published archive. See
+`reviews/weather-v2-candidate-rehearsal.json`.
+
+Independent review identified two cutover defects, now covered by regression
+tests: an older candidate with the same ledger must be rejected, and a v1 writer
+must not add history during v2 installation. Before publishing the first v2
+pointer, the CLI conditionally freezes the exact v1 pointer. Updated v1 writers
+reject its freeze flag; already-running writers lose their previous ETag. The
+v1 data stays readable. All v1 writer code must include this guard before cutover.
+If v2 publication fails after freezing, keep v1 frozen and resume the verified
+migration; do not silently resume v1 writes. No live freeze has occurred yet.
+The candidate and freeze regressions pass. The preceding full application run
+passed 218 tests; it predates these final freeze/timestamp corrections.
