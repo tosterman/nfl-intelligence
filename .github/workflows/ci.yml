@@ -24,6 +24,8 @@ jobs:
           python-version: '3.13'
       - run: npm ci
       - run: pip install -r requirements.txt
+      - name: Replay fixed retained edition without network
+        run: python scripts/replay_retained_fixture.py
       - run: python scripts/prepare_test_data.py
       - run: npm test
       - run: python -m unittest discover -s tests -p 'test_*.py'
