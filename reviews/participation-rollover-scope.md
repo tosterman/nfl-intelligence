@@ -80,3 +80,10 @@ The binding test uses fixed synthetic report/identity scope with retained real
 2026 source bytes, rather than asserting the live report count will remain 139.
 It verifies failure preservation and audit binding; the earlier actual 139-report
 rehearsal remains separately recorded and is not a synthetic positive result.
+
+Integrated review found no release-critical stale-artifact or season-rollover
+defect. Exact personnel source/time and player scope binding withhold an older
+artifact after report changes. If collection and rebuilding both fail while the
+report is unchanged, existing evidence remains explicitly dated and makes no
+latest-success claim. Hosted run 34623432915 passed on b898d2e, including 188
+application tests, 341 Python tests, build, browser deadlines and dependency audit.

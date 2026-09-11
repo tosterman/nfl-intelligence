@@ -4,6 +4,22 @@ Verdict: publicly deployed research edition; full operational and commercial lau
 
 ## Verified release evidence
 
+Latest completed checkpoint: `b898d2e` passed hosted run
+[34623432915](https://github.com/tosterman/nfl-intelligence/actions/runs/34623432915):
+188 application tests, 341 Python tests, current-edition explanation verification,
+retained-input replay, browser deadline checks, production build and dependency
+audit. This includes season-aware participation collection, identity binding and
+local display, plus the real-result refresh and retained total explanations.
+The subsequent `ccf5096` adds a nonempty display test and stable binding fixtures;
+its focused tests and type check passed locally. Publication remains outstanding.
+
+Current-season participation has no eligible Week 1 sample; this is expected,
+not zero participation. Four local browser cases and independent source review
+cover its empty state and stale/report-rollover guards. A nonempty isolated
+rendering test is distinct from real future-week evidence.
+
+The earlier release checkpoints below retain their original verification scope.
+
 Latest completed development verification: `60964d3` passed GitHub run
 [34618803803](https://github.com/tosterman/nfl-intelligence/actions/runs/34618803803),
 including retained-input replay, application/Python tests, browser deadline
@@ -47,7 +63,7 @@ The exact-release verifier accommodates JavaScript integral-number serialization
 | 11 Personnel | Attributed practice/game-designation snapshots and listed QB roles; staged identity-verified historical participation, explicit identifier-conflict notice, reconstructable source bytes and expiry | Individual report dates, confirmed starter changes, snap-weighted player value and validated numerical effects |
 | 12 Matchup | Opposing efficiency profiles; independently acquired current-season and prior-season big-play/inside-20 samples; exact-source replay, sample sizes, expiry, season scope and explicit empty states. Twelve local mobile/desktop browser cases passed. Rate-product model interaction experiment remains rejected | Hosted scheduled rollover and real positive current-season samples remain unverified; descriptive comparisons are not validated nonlinear scheme, trench or player effects |
 | 13 Situational | Venue identity, neutral-site adjustment and descriptive prior-game kickoff spacing with completion/timing guards | Validated rest/travel/coaching/schedule effects; the tested rest adjustment remains rejected |
-| 14 Weather | Twenty-four verified US venue locations using Census address points or attributed OSM stadium bounds, including reviewed official-linked-place reconciliation for Acrisure; thirteen games with NWS kickoff-hour context in the latest development snapshot; issue/retrieval timestamps, stale/unknown states, compressed source archives | Remaining domestic/international coverage and validated numerical effects |
+| 14 Weather | Twenty-five verified US venue locations using Census address points or attributed OSM stadium bounds, including reviewed official-linked-place reconciliation for Acrisure and the new Highmark stadium; fourteen games with NWS kickoff-hour context in the retained development snapshot; issue/retrieval timestamps, stale/unknown states, compressed source archives | Remaining domestic/international coverage and validated numerical effects |
 | 15 Market intelligence | Closing-line benchmark separate from model; verified recent sportsbook observations and first-to-latest movement; staged per-book quote table and timestamped snapshot ranges | Longer history, verified closing capture, CLV and executable-price evidence |
 | 16 Time-aware data | Source hashes/times, weekly cutoff, code/configuration identity; missing kickoff withheld | Historical vintage data and additional feed availability timestamps |
 | 17 Pipeline | Validated acquisition, fitted artifact, ledger, CI, deployment and receipt workflow; atomic receipt storage, pre-push intent retention, known-cooldown guard, retained input bytes with edition-hash checks, and isolated failure drills (latest safeguards staged) | Sustained scheduled-run reliability and operational recovery from a real provider failure |
