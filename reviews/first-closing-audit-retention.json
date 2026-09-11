@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "verified-private-retention",
+  "checkedAt": "2026-09-11T00:38:14.554Z",
+  "pathname": "market-audits/cb1248892a2da8bfb896307cb8fd688bdd638ed1c1a998901187e876c97fa7bf.json.gz",
+  "sha256": "cb1248892a2da8bfb896307cb8fd688bdd638ed1c1a998901187e876c97fa7bf",
+  "reportHash": "300eb42fa32d9301662a1ca1db3b0aed413c6f0fc9b945fea3820084ebad5b78",
+  "bytes": 255096,
+  "uploadedAt": "2026-09-11T00:38:14.000Z",
+  "coverageThrough": "2026-09-11T00:38:11.909000+00:00",
+  "checkpointCounts": {
+    "evaluated": 1,
+    "excluded-before-protocol": 3,
+    "pending": 540
+  },
+  "marketCounts": {
+    "stale-capture": 27
+  }
+}

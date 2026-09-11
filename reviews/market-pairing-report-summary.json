@@ -1,19 +1,23 @@
 {
-  "checkedAt": "2026-09-10T21:18:00.785224+00:00",
-  "coverageThrough": "2026-09-10T21:17:59.349000+00:00",
+  "checkedAt": "2026-09-11T00:38:13.094386+00:00",
+  "coverageThrough": "2026-09-11T00:38:11.909000+00:00",
   "games": 272,
   "checkpointCounts": {
     "excluded-before-protocol": 3,
-    "pending": 541
+    "evaluated": 1,
+    "pending": 540
   },
-  "marketCounts": {},
+  "marketCounts": {
+    "stale-capture": 27
+  },
   "captureHashes": [
     "d2f226f35e5a75a0d8a0fb5d77ccb7904f46741a6ce9e40b14ef0e492b5cdee8",
     "0beaa696497b3c3e4e474b2f494f3afdb83ab9cb42dcdff16f186a355d29cfc8",
-    "312a736d5dcfdb7b77eb7dcb8a8ab05d92947c0921649b41dfd05d15f3515955"
+    "312a736d5dcfdb7b77eb7dcb8a8ab05d92947c0921649b41dfd05d15f3515955",
+    "b84765e71eb70c0d6c0540045659166ba2ec42e4da7c6039481860212293cc0f"
   ],
   "protocolHash": "4ca687906dbac977669ae19bf3a61dad523a12334a6e6ad231e2ccd650219621",
-  "reportHash": "97afa8bb8b6f641bcdef076e5e959e4baf14032499db1d21be0e43dfc6e46b0e",
-  "reportPath": "C:\\Users\\tyler\\Desktop\\nfl\\release-recovery\\market-pairing\\97afa8bb8b6f641bcdef076e5e959e4baf14032499db1d21be0e43dfc6e46b0e.json",
+  "reportHash": "300eb42fa32d9301662a1ca1db3b0aed413c6f0fc9b945fea3820084ebad5b78",
+  "reportPath": "C:\\Users\\tyler\\Desktop\\nfl\\release-recovery\\market-pairing\\300eb42fa32d9301662a1ca1db3b0aed413c6f0fc9b945fea3820084ebad5b78.json",
   "productionWorkflow": false
 }

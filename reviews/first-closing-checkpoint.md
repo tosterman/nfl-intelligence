@@ -1,0 +1,11 @@
+# First eligible closing checkpoint
+
+At September 11, 2026 00:38 UTC, the real private odds archive was exported and evaluated under the previously published market-pairing protocol. SF–LA's 00:35 UTC closing checkpoint was the first due checkpoint after activation. All 27 combinations (nine books, three markets) returned `stale-capture`; none qualified for the fixed final-fifteen-minute window. Three earlier checkpoints were excluded by the protocol and 540 future checkpoints remain pending. No window was widened or result backfilled.
+
+The full report and its input/code dependencies were packaged and verified in private Blob storage. `first-closing-audit-retention.json` records the readback identity. Report hash: `300eb42fa32d9301662a1ca1db3b0aed413c6f0fc9b945fea3820084ebad5b78`. The public summary contains no sportsbook quote payload. This was a local audit against real retained captures, not a production workflow run or evidence of a qualifying close.
+
+A separate feasibility calculation uses the retained current schedule for the following 31 days: 76 games in 29 distinct kickoff groups. None falls within fifteen minutes after a nominal existing collection at 01:17, 06:17, 11:17, 16:17 or 21:17 UTC. Keeping all 155 baseline calls and adding one ten minutes before each kickoff group would require 184 requests, nominally 552 credits at three per request. This exceeds the existing 155-attempt acquisition budget. The calculation is in `closing-capture-capacity.json` and is a scheduling scenario, not actual quota expenditure or an optimality proof.
+
+Next engineering step: test a schedule-aware allocation that reuses requests near kickoffs while retaining the normal six-hour freshness limit, rolling budget and retry accounting. Do not simply expand frequency, loosen the closing rule or claim guaranteed execution from a cron expression. Four evenly spaced daily calls alone provide no delay margin under the six-hour freshness limit. Scheduler delays and stale bookmaker updates remain independent failure modes even with better request placement.
+
+No new provider odds request was made by this audit, no paid service was purchased, and the collection schedule remains unchanged.
