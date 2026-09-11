@@ -170,7 +170,9 @@ export function RevisionHistory({ history }: { history: Snapshot[] }) {
                 <p className="fine">
                   Compared the exact retained files used by these runs. These
                   differences do not establish what changed the prediction.
-                  The older file’s original collection time is unknown.
+                  {sourceRecords.olderCollectionTimeUnknown
+                    ? "The older file’s original collection time is unknown."
+                    : "File differences alone do not establish when information became public."}
                   Source betting lines are not verified closing odds.
                 </p>
               </details>

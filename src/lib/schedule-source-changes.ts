@@ -1,9 +1,10 @@
 import evidence from "../../data/source-record-changes.json";
 
 export function scheduleSourceChanges(gameId: string, before?: string, after?: string) {
-  if (before !== evidence.beforeSha256 || after !== evidence.afterSha256 ||
-      !evidence.comparedSiteGames.includes(gameId)) return null;
-  const revision = evidence.revisions.find(row => row.gameId === gameId);
+  const pair = [evidence, ...evidence.additionalPairs].find(value =>
+    before === value.beforeSha256 && after === value.afterSha256 && value.comparedSiteGames.includes(gameId));
+  if (!pair) return null;
+  const revision = pair.revisions.find(row => row.gameId === gameId);
   const fields = revision?.fields ?? [];
   const category = (field: string) => {
     if (["away_moneyline", "home_moneyline", "away_spread_odds", "home_spread_odds",
@@ -12,5 +13,6 @@ export function scheduleSourceChanges(gameId: string, before?: string, after?: s
     return "Other schedule fields";
   };
   return { categories: [...new Set(fields.map(category))],
-    otherRecords: evidence.changedRecords - (revision ? 1 : 0) };
+    olderCollectionTimeUnknown: pair === evidence,
+    otherRecords: pair.changedRecords - (revision ? 1 : 0) };
 }
