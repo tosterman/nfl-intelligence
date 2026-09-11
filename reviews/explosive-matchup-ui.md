@@ -3,7 +3,7 @@
 Current forecast-bearing matchup pages now show two comparisons: the away
 offense against the home defense, and the home offense against the away defense.
 Passing and rushing rates display both numerator and denominator. The section
-labels the 2025 regular season and playoffs, equal game weighting, lack of
+labels the 2025 regular season and playoffs, equal eligible-play weighting, lack of
 opponent/roster adjustment, and separation from the forecast. Definitions and
 nflverse attribution are available in an expandable source panel.
 

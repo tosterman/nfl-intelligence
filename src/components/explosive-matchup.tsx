@@ -35,7 +35,7 @@ export function ExplosiveMatchup({ away, home, season, kickoff }: Props) {
         </table>
       </div>)}
     </div>
-    <p className="fine-print">Historical rates, not a prediction of this game. Games count equally; opponents and roster changes are not adjusted. These rates do not change the forecast.</p>
+    <p className="fine-print">Historical rates, not a prediction of this game. Each eligible play counts equally; opponents and roster changes are not adjusted. These rates do not change the forecast.</p>
     <details><summary>Definitions &amp; source</summary>
       <p>Passing plays include sacks; rushing plays include scrambles. Kneels, spikes, nullified plays and special teams are excluded. Valid penalized plays retain the source’s credited yardage. Thresholds are 20 passing yards and 10 rushing yards.</p>
       <p>Source: <a href="https://nflreadr.nflverse.com/reference/load_pbp.html">nflverse play-by-play</a>, CC BY 4.0. Prior games only, before {evidence.cutoff}. This is a historical data vintage, not a pregame publication record.</p>

@@ -14,6 +14,19 @@ test("historical matchup compares each offense with the opposing defense and lab
   assert.match(html, /credited plays/);
   assert.match(html, /20\+ yards/);
   assert.match(html, /10\+ yards/);
+  assert.match(html, /Each eligible play counts equally/);
+  assert.doesNotMatch(html, /Games count equally/);
+});
+
+test("rates use pooled play counts and put each opponent defense in the correct column", () => {
+  const html = renderToStaticMarkup(React.createElement(ExplosiveMatchup, {away: "SF", home: "LA", season: 2026, kickoff: "2026-09-11T00:35:00Z"}));
+  const cells = [...html.matchAll(/<strong>([^<]+)<\/strong><small>([^<]+)<\/small>/g)].map(m => [m[1], m[2]]);
+  assert.deepEqual(cells, [
+    ["8.2%", "55 / 669 credited plays"], ["8.0%", "61 / 759 credited plays"],
+    ["9.4%", "48 / 511 credited plays"], ["8.9%", "46 / 518 credited plays"],
+    ["11.6%", "86 / 741 credited plays"], ["7.1%", "47 / 658 credited plays"],
+    ["11.4%", "59 / 519 credited plays"], ["8.9%", "43 / 485 credited plays"],
+  ]);
 });
 
 test("historical evidence is withheld for incompatible season, date or teams", () => {

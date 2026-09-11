@@ -3,7 +3,8 @@
 Build descriptive offense and defense evidence from retained nflverse play-by-play.
 Use completed games strictly before the supplied weekly date cutoff, matched by
 game ID, date and home/away teams to the schedule. Initially use the 2025 season;
-label it as historical, unweighted evidence. Do not change frozen forecasts.
+label it as historical evidence with equally weighted eligible plays. Pool the
+numerators and denominators; do not average game-level rates. Do not change frozen forecasts.
 
 Define an explosive passing play as a source `pass` play with at least 20 yards
 gained, and an explosive run as a source `run` play with at least 10 yards gained.

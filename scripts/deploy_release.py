@@ -13,7 +13,7 @@ def release_files():
         paths.extend(p for p in (ROOT/folder).rglob('*') if p.is_file())
     for name in ['site.json','weather.json','weather-venues.json','weather-osm-venues.json',
                  'personnel.json','personnel-collection.json','personnel-changes.json','player-usage.json',
-                 'quarterbacks.json','quarterback-collection.json']:
+                 'quarterbacks.json','quarterback-collection.json','explosive-plays.json']:
         paths.append(ROOT/'data'/name)
     for p in paths:
         binary=p.suffix in ['.ttf','.woff','.woff2','.png','.jpg','.ico']

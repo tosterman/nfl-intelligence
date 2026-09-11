@@ -1,0 +1,242 @@
+[
+  {
+    "gameId": "2026_01_SF_LA",
+    "engine": "chromium",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_ARI_LAC",
+    "engine": "chromium",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_ATL_PIT",
+    "engine": "chromium",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_BAL_IND",
+    "engine": "chromium",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_BUF_HOU",
+    "engine": "chromium",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_CHI_CAR",
+    "engine": "chromium",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_CLE_JAX",
+    "engine": "chromium",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_DAL_NYG",
+    "engine": "chromium",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_GB_MIN",
+    "engine": "chromium",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_MIA_LV",
+    "engine": "chromium",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_NO_DET",
+    "engine": "chromium",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_NYJ_TEN",
+    "engine": "chromium",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_TB_CIN",
+    "engine": "chromium",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_WAS_PHI",
+    "engine": "chromium",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_DEN_KC",
+    "engine": "chromium",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_SF_LA",
+    "engine": "webkit",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_ARI_LAC",
+    "engine": "webkit",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_ATL_PIT",
+    "engine": "webkit",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_BAL_IND",
+    "engine": "webkit",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_BUF_HOU",
+    "engine": "webkit",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_CHI_CAR",
+    "engine": "webkit",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_CLE_JAX",
+    "engine": "webkit",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_DAL_NYG",
+    "engine": "webkit",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_GB_MIN",
+    "engine": "webkit",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_MIA_LV",
+    "engine": "webkit",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_NO_DET",
+    "engine": "webkit",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_NYJ_TEN",
+    "engine": "webkit",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_TB_CIN",
+    "engine": "webkit",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_WAS_PHI",
+    "engine": "webkit",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  },
+  {
+    "gameId": "2026_01_DEN_KC",
+    "engine": "webkit",
+    "width": 320,
+    "verifiedRates": 8,
+    "pageErrors": [],
+    "overflow": false
+  }
+]
