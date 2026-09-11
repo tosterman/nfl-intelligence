@@ -108,12 +108,15 @@ export function PersonnelPanel({ game }: { game: Game }) {
       <details>
         <summary>Personnel source & limitations</summary>
         <p className="fine">
-          Historical participation uses the{" "}
+          Prior-season participation uses the{" "}
           <a href="https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2025.csv">
             nflverse 2025 snap-count release
           </a>
           , joined through retained player identifiers. These revised historical
           records are not a preserved pregame data vintage.
+          {' '}Current-season appearances come from the corresponding nflverse
+          season release and exclude the report’s own week. They do not establish
+          current availability or a player’s expected role.
         </p>
         <p className="fine">
           A blank designation or absent player does not establish health or

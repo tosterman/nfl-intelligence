@@ -1,0 +1,38 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "keyboardDisclosure": true,
+    "separateSeasons": true,
+    "noHindsightSample": true,
+    "overflow": false,
+    "axeViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "keyboardDisclosure": true,
+    "separateSeasons": true,
+    "noHindsightSample": true,
+    "overflow": false,
+    "axeViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "keyboardDisclosure": true,
+    "separateSeasons": true,
+    "noHindsightSample": true,
+    "overflow": false,
+    "axeViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "keyboardDisclosure": true,
+    "separateSeasons": true,
+    "noHindsightSample": true,
+    "overflow": false,
+    "axeViolations": 0
+  }
+]

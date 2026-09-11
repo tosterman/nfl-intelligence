@@ -14,7 +14,7 @@ def release_paths(root=None):
     for folder in ['src','public']:
         paths.extend(p for p in (root/folder).rglob('*') if p.is_file())
     for name in ['site.json','weather.json','weather-history.json','weather-venues.json','weather-osm-venues.json',
-                 'personnel.json','personnel-collection.json','personnel-changes.json','player-usage.json',
+                 'personnel.json','personnel-collection.json','personnel-changes.json','player-usage.json','season-participation.json',
                    'quarterbacks.json','quarterback-collection.json','explosive-plays.json','red-zone.json','source-record-changes.json','weekly-matchup-context.json','prior-matchup-context.json','total-explanations.json']:
         paths.append(root/'data'/name)
     return paths

@@ -2,6 +2,7 @@ import artifact from "../../data/player-usage.json";
 import { usageForPlayer, hasUsageIdentityConflict } from "@/lib/player-usage";
 import type { PersonnelSnapshot, PlayerReport } from "@/lib/personnel";
 import { date, pct } from "@/lib/teams";
+import { SeasonParticipation } from './season-participation';
 
 export function PlayerUsage({
   snapshot,
@@ -22,6 +23,8 @@ export function PlayerUsage({
       )}
       <details className="player-usage">
         <summary>Historical participation</summary>
+        <SeasonParticipation snapshot={snapshot} player={player} />
+        <h4>Prior-season history</h4>
         {usage ? (
           <>
             <p className="fine">

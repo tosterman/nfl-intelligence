@@ -51,7 +51,24 @@ of an audit for different personnel inputs. Duplicate/blank CSV headers now fail
 validation following independent review. Team partitions use the same overall
 eight-appearance sample.
 
-Scheduled wiring and the public selector/UI remain unfinished. The new artifact
-does not yet replace the accepted public usage
-artifact. It must not change numerical forecasts, claim player quality or infer
-expected availability from observed participation.
+The local public selector/UI now presents current-season evidence above the
+separate prior-season history inside the participation disclosure. Three selector
+tests cover exact report identity, sample/team counts, missing records, retained
+dates, malformed counts and timing guards. All 188 application tests passed;
+the build generated 319 pages and 26 publishing/packaging tests passed.
+
+Four Chromium/WebKit cases at 320 and 1280px verified keyboard disclosure,
+separate season headings, the actual empty Week 1 sample, no page overflow and
+zero scoped axe violations. An initial browser driver stalled during cleanup
+after its browser exited; the rerun saved each case separately and completed all
+cases and cleanup. The mobile screenshot was inspected. Audience source review
+requested explicit weighting/sample-limit wording for future nonempty samples;
+that text now appears directly beneath the current-season figures.
+
+The refresh workflow now collects and binds participation after identity audit,
+retains recovery inputs, and stages the new public artifact for native release.
+The direct-release file list includes it. This wiring is not an observed scheduled
+run: the publisher remains paused and the new UI has not been publicly deployed.
+Positive current-season browser behavior and a real weekly rollover still need
+verification. The feature does not change numerical forecasts, claim player
+quality or infer expected availability from observed participation.

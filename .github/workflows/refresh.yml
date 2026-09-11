@@ -68,6 +68,12 @@ jobs:
           python scripts/audit_personnel_identity.py
           python scripts/audit_player_usage.py
           python scripts/build_public_usage.py
+      - name: Collect current-season participation independently
+        continue-on-error: true
+        run: python scripts/refresh_participation.py
+      - name: Bind current-season participation to report identities
+        continue-on-error: true
+        run: python scripts/build_season_participation.py
       - run: npm test
       - run: python -m unittest discover -s tests -p 'test_*.py'
       - run: npm run build
@@ -105,6 +111,10 @@ jobs:
             data/weather-sources/
             data/personnel-changes.json
             data/player-usage.json
+            data/season-participation.json
+            data/participation-source.json
+            data/participation-collection.json
+            data/participation-sources/
             reviews/personnel-identity-audit.json
             reviews/player-usage-audit.json
             data/personnel.json
