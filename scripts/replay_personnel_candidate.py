@@ -24,11 +24,15 @@ def verify_output(actual,expected):
         raise ValueError('Personnel replay output differs')
 
 
-def candidate_files(root):
+def candidate_files(root,recurring=False):
     files=list((root/'data').rglob('*.json'))+list((root/'data').rglob('*.csv'))+list((root/'data').rglob('*.gz'))
-    files += [root/'reviews'/name for name in REVIEWS]
+    files += [root/'reviews'/name for name in REVIEWS if not recurring or name!='personnel-change-ledger.json']
+    if recurring and (root/'reviews/personnel-runtime-transition.json').exists():
+        files.append(root/'reviews/personnel-runtime-transition.json')
     files += list((root/'scripts').glob('*.py'))
-    return {path.relative_to(root).as_posix():path.read_bytes() for path in sorted(set(files))}
+    result={path.relative_to(root).as_posix():path.read_bytes() for path in sorted(set(files))}
+    if recurring:result['reviews/personnel-refresh-report.json']=(root/'refresh-report.json').read_bytes()
+    return result
 
 
 CHILD = '''import importlib,sys
@@ -58,9 +62,13 @@ else:
 '''
 
 
-def replay(root):
+def replay(root,recurring=False):
     root=Path(root).resolve()
-    original=candidate_files(root)
+    original=candidate_files(root,recurring)
+    if recurring:
+        report=json.loads(original['reviews/personnel-refresh-report.json'])
+        if report['derivationFailure'] is not None:
+            raise ValueError('Degraded refresh requires separate failure replay')
     parent=ROOT/'release-recovery';parent.mkdir(exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='personnel-replay-',dir=parent) as name:
         target=Path(name).resolve()
@@ -73,8 +81,15 @@ def replay(root):
         if qb_result.returncode:
             (parent/'personnel-replay-failure.log').write_bytes(qb_result.stdout+qb_result.stderr)
             raise ValueError('Candidate quarterback replay failed')
+        if recurring:
+            from refresh_personnel_worker import replay_sources
+            replay_sources(target,report['previousCapture'])
+            for relative in ('data/personnel-changes.json','reviews/personnel-runtime-transition.json'):
+                if relative in original:
+                    verify_output((target/relative).read_bytes(),original[relative])
+                    (target/relative).write_bytes(original[relative])
         completed=[]
-        for module,output,clock,other in STEPS:
+        for module,output,clock,other in (STEPS[1:] if recurring else STEPS):
             expected=original[output]
             at=json.loads(expected)[clock] if clock else ''
             result=subprocess.run([sys.executable,'-c',CHILD,str(target),module,at],
@@ -89,16 +104,22 @@ def replay(root):
                 (target/relative).write_bytes(original[relative])
             completed.append(module)
             print(f'Replayed {module}',flush=True)
-    if candidate_files(root)!=original:
+    if candidate_files(root,recurring)!=original:
         raise ValueError('Candidate changed during replay')
-    return {'steps':completed,'files':{name:{'sha256':hashlib.sha256(raw).hexdigest(),'bytes':len(raw)}
+    proof={'steps':completed,'files':{name:{'sha256':hashlib.sha256(raw).hexdigest(),'bytes':len(raw)}
                                     for name,raw in original.items()},'inputsUnchanged':True,'quarterbackRolesReplayed':True}
+    if recurring:proof.update({'mode':'recurring','previousPublication':report['previousPublication'],
+        'previousCapture':report['previousCapture'],'transitionReplayed':True,
+        'checkerHashes':{name:hashlib.sha256((ROOT/'scripts'/name).read_bytes()).hexdigest()
+                        for name in ('replay_personnel_candidate.py','refresh_personnel_worker.py')}})
+    return proof
 
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('root',type=Path)
+    parser.add_argument('--recurring',action='store_true')
     args=parser.parse_args()
-    report=replay(args.root)
-    (ROOT/'reviews/personnel-candidate-replay.json').write_text(json.dumps(report,indent=2)+'\n')
+    report=replay(args.root,args.recurring)
+    (ROOT/'reviews'/('personnel-refresh-replay.json' if args.recurring else 'personnel-candidate-replay.json')).write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({'steps':report['steps'],'files':len(report['files']),'inputsUnchanged':True}))

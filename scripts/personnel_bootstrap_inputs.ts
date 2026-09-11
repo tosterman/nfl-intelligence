@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import type {PersonnelRef} from '../src/lib/personnel-publication';
 
 /** Load a locally replayed bootstrap package, never arbitrary manifest paths. */
-export async function loadPersonnelBootstrap(directory:string){
+export async function loadPersonnelBootstrap(directory:string,initial=true){
   const raw=await readFile(join(directory,'candidate.json'));
   if(raw.length>1_000_000)throw Error('Personnel candidate manifest too large');
   const manifest=JSON.parse(raw.toString());
@@ -23,6 +23,6 @@ export async function loadPersonnelBootstrap(directory:string){
   const body=objects.get(publication?.sha256);
   if(!body||body.length!==publication.bytes||bytes!==manifest.bytes)
     throw Error('Personnel candidate root or size differs');
-  if(JSON.parse(body.toString()).previous!==null)throw Error('Bootstrap requires an initial publication');
+  if(initial&&JSON.parse(body.toString()).previous!==null)throw Error('Bootstrap requires an initial publication');
   return {publication,objects};
 }

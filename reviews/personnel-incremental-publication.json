@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-09-11T19:04:17.522Z",
+  "mode": "published",
+  "publication": {
+    "bytes": 55203,
+    "sha256": "f765e6a146a854975c3f9bda275b679b5184be089098ec65930077cd0bf24ad5"
+  },
+  "previous": "c3cdbbda3af5af0324485935370b7de3d081e729ca9f6a9c65e465117c8ed8a7",
+  "result": {
+    "publication": {
+      "bytes": 55203,
+      "sha256": "f765e6a146a854975c3f9bda275b679b5184be089098ec65930077cd0bf24ad5"
+    },
+    "uploaded": 23,
+    "reused": 309
+  },
+  "scope": "Private personnel publication; live reader and scheduler require separate verification"
+}

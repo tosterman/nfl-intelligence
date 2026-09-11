@@ -323,3 +323,36 @@ dependency failure, withholding, binding and optimized-mode QB tampering. See
 This remains an unpublished candidate: independent derived replay, incremental
 archive packaging, predecessor-bound publication and live update readback remain
 required. The candidate's source and calculation times must not be rewritten.
+
+## Incremental publication verification
+
+Recurring replay now independently rebuilds the four derived artifacts at their
+recorded calculation times and recomputes a changed-capture transition from the
+explicit predecessor. It inventories all candidate files and retains the exact
+checker identities. The incremental packager preserves producer scripts and
+stores current checker/packager code separately; the new immutable root links
+the accepted previous root instead of copying its cumulative history.
+
+The publisher verifies the expected current root, accepted prior capture and
+pinned edition, schedule and registry references. When the injury snapshot is
+unchanged, both its history archive reference and presentation history must
+match the accepted publication exactly. This closes a review finding in which
+an unchanged capture could otherwise carry altered supplied history.
+
+The real 18:57 refresh replay passed with 326 unchanged input files. Its package
+contains 332 objects (18,263,456 bytes). All 247 application tests and type checking
+passed before the first incremental write, including changed predecessor,
+changed pinned inputs, missing captures and unchanged-capture history mutation.
+See `reviews/personnel-refresh-replay.json` and
+`reviews/personnel-incremental-package.json`. Degraded refresh replay/packaging
+is still rejected explicitly; failed-collection orchestration alone does not
+yet establish the complete degraded publication path.
+
+At 19:04 UTC the incremental publication
+`f765e6a146a854975c3f9bda275b679b5184be089098ec65930077cd0bf24ad5`
+uploaded 23 objects and reused 309, linking the original `c3cdbb...` root.
+All three localhost health endpoints selected that exact new publication after
+cache refresh, without a build. The before/after evidence is retained in
+`reviews/personnel-incremental-local-readback.json`, and the immutable write
+result is in `reviews/personnel-incremental-publication.json`. Public deployment
+and real scheduled operation remain unverified.
