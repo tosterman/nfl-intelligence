@@ -1,0 +1,44 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "synthetic": true,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "synthetic": true,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "synthetic": true,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "synthetic": true,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "synthetic": true,
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "synthetic": true,
+    "overflow": false,
+    "wcagViolations": 0
+  }
+]

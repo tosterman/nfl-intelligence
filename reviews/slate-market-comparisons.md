@@ -16,6 +16,15 @@ total direction, equality, stale model, stale quotes and kickoff. TypeScript
 checking passed. Chromium and WebKit clock tests passed, including removal of
 the new total difference when model inputs expire. No page errors were reported.
 
-Visual mobile review and comparison-density refinement remain pending. The clock
-fixture proves behavior, not the appearance of styled slate cards. No public
-deployment was performed.
+Styled visual review now covers Chromium and WebKit at 320, 390 and 1280px.
+The actual local slate had no horizontal overflow at those sizes. An isolated
+populated synthetic quote fixture uses the real Slate component and actual app
+styles; all six cases showed both differences and the selected book, with no
+horizontal overflow or automated WCAG A/AA violations. The 390px card screenshot
+was visually inspected. Model values remain above the separate market section;
+each quote has its own observation time. The synthetic scores reconcile to the
+specified margin and total before display rounding.
+
+TypeScript checking passed with the fixture. This is bounded browser/automated
+accessibility evidence, not timed human scanning or complete accessibility
+certification. No public deployment was performed.
