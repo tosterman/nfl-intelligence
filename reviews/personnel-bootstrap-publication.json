@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-09-11T18:50:21.173Z",
+  "mode": "published",
+  "publication": {
+    "bytes": 83867,
+    "sha256": "c3cdbbda3af5af0324485935370b7de3d081e729ca9f6a9c65e465117c8ed8a7"
+  },
+  "objectCount": 477,
+  "result": {
+    "publication": {
+      "bytes": 83867,
+      "sha256": "c3cdbbda3af5af0324485935370b7de3d081e729ca9f6a9c65e465117c8ed8a7"
+    },
+    "uploaded": 477,
+    "reused": 0
+  },
+  "scope": "Private storage bootstrap; public page availability and scheduled collection are separate checks"
+}

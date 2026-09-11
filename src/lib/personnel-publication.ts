@@ -52,6 +52,12 @@ export async function readPersonnelPublication(store:Pick<PersonnelObjectStore,'
   return {publication,root:selected,presentation,etag:current.etag};
 }
 
+export async function readPersonnelArchiveObject(store:Pick<PersonnelObjectStore,'read'>,selected:PersonnelRoot,name:string){
+  const reference=selected.archive[name];
+  if(!reference)throw Error('Personnel archive input missing');
+  return object(store,reference);
+}
+
 /** Transaction only. The caller must replay source/derivation evidence and select its complete archive. */
 export async function publishPersonnelObjects(input:{publication:PersonnelRef;objects:Map<string,Buffer>},
   store:PersonnelObjectStore,expectedPrevious:string|null,now=Date.now()){

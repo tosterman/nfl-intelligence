@@ -4,6 +4,7 @@ import { PersonnelPanel } from "./personnel-panel";
 import Link from "next/link";
 import type {WeatherRecord} from '@/lib/weather';
 import type {WeatherHistory} from '@/lib/weather-history';
+import type {PersonnelEvidence} from '@/lib/personnel-evidence';
 
 export function ForecastPendingNotice({
   game,
@@ -42,10 +43,12 @@ export function ForecastPendingNotice({
 export function ScheduledContext({
   game,
   weather,
+  personnel = null,
   now = Date.now(),
 }: {
   game: Game;
   weather?:{record?:WeatherRecord;history:WeatherHistory};
+  personnel?:PersonnelEvidence|null;
   now?: number;
 }) {
   const kickoff = Date.parse(game.kickoff ?? "");
@@ -71,7 +74,7 @@ export function ScheduledContext({
       </nav>
       <div className="scheduled-context">
         <WeatherContext game={game} record={weather?.record} history={weather?.history} />
-        <PersonnelPanel game={game} />
+        <PersonnelPanel game={game} evidence={personnel} />
       </div>
     </>
   );

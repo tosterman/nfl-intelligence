@@ -1,4 +1,3 @@
-import { staticPersonnelEvidence } from '@/lib/personnel-static';
 import type { PersonnelEvidence } from '@/lib/personnel-evidence';
 import { personnelForGame, orderPersonnelReports } from "@/lib/personnel";
 import type { Game } from "@/lib/types";
@@ -9,7 +8,13 @@ import { QuarterbackContext } from "./quarterback-context";
 import { PlayerUsage } from "./player-usage";
 import { PersonnelBriefing } from './personnel-briefing';
 
-export function PersonnelPanel({ game, evidence = staticPersonnelEvidence }: { game: Game; evidence?: PersonnelEvidence }) {
+export function PersonnelPanel({ game, evidence }: { game: Game; evidence: PersonnelEvidence | null }) {
+  if(!evidence)return <section className="panel personnel-panel">
+    <div className="eyebrow">Personnel · Reported context</div>
+    <h2 id="personnel-reports" tabIndex={-1}>Practice & game designations</h2>
+    <p>Verified player reports are unavailable for this matchup. Availability is unknown.</p>
+    <p className="fine">Personnel does not adjust this model’s forecast.</p>
+  </section>;
   const { snapshot, collection, quarterback, quarterbackCollection, history, current, historical } = evidence;
   const selected = personnelForGame(snapshot, game);
   return (

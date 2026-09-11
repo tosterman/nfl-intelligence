@@ -8,6 +8,13 @@ import { PersonnelPanel } from '../src/components/personnel-panel';
 import type { Game } from '../src/lib/types';
 import { staticPersonnelEvidence } from '../src/lib/personnel-static';
 
+test('missing runtime publication keeps report availability unknown', () => {
+  const html=renderToStaticMarkup(createElement(PersonnelPanel,{game:{} as Game,evidence:null}));
+  assert.match(html,/Verified player reports are unavailable/);
+  assert.match(html,/Availability is unknown/);
+  assert.doesNotMatch(html,/Full reports|Listed first|File updated/);
+});
+
 function fixture() {
   const acquired = new Date(Date.now() - 60000).toISOString();
   const player = {playerId:'00-1234567', name:'Injected player', team:'PIT', season:2026,

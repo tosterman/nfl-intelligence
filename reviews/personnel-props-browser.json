@@ -2,37 +2,37 @@
   {
     "engine": "chromium",
     "width": 320,
-    "expiredReportsWithheld": true,
-    "keyboardSourceDisclosure": true,
+    "keyboardDisclosure": true,
+    "separateSeasons": true,
+    "noHindsightSample": true,
     "overflow": false,
-    "axeViolations": 0,
-    "scope": "Expired retained edition; populated views covered by injected-data tests"
+    "axeViolations": 0
   },
   {
     "engine": "chromium",
     "width": 1280,
-    "expiredReportsWithheld": true,
-    "keyboardSourceDisclosure": true,
+    "keyboardDisclosure": true,
+    "separateSeasons": true,
+    "noHindsightSample": true,
     "overflow": false,
-    "axeViolations": 0,
-    "scope": "Expired retained edition; populated views covered by injected-data tests"
+    "axeViolations": 0
   },
   {
     "engine": "webkit",
     "width": 320,
-    "expiredReportsWithheld": true,
-    "keyboardSourceDisclosure": true,
+    "keyboardDisclosure": true,
+    "separateSeasons": true,
+    "noHindsightSample": true,
     "overflow": false,
-    "axeViolations": 0,
-    "scope": "Expired retained edition; populated views covered by injected-data tests"
+    "axeViolations": 0
   },
   {
     "engine": "webkit",
     "width": 1280,
-    "expiredReportsWithheld": true,
-    "keyboardSourceDisclosure": true,
+    "keyboardDisclosure": true,
+    "separateSeasons": true,
+    "noHindsightSample": true,
     "overflow": false,
-    "axeViolations": 0,
-    "scope": "Expired retained edition; populated views covered by injected-data tests"
+    "axeViolations": 0
   }
 ]

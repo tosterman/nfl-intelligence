@@ -20,6 +20,7 @@ import { WeatherRevisionBrief } from "@/components/weather-history";
 import { gameReturn } from "@/lib/game-return";
 import { ScheduleContext } from "@/components/schedule-context";
 import { PersonnelPanel } from "@/components/personnel-panel";
+import {getPersonnel} from '@/lib/personnel-server';
 import { ExplosiveMatchup } from "@/components/explosive-matchup";
 import { RedZoneMatchup } from "@/components/red-zone-matchup";
 import {
@@ -63,7 +64,7 @@ export default async function GamePage({
   if (!g) notFound();
   const { from } = await searchParams;
   const returnTo = gameReturn(from, g);
-  const weather=await getWeather(id);
+  const [weather,personnel]=await Promise.all([getWeather(id),getPersonnel(g)]);
   const p = g.snapshot?.prediction;
   const marketData = p
     ? await Promise.all([getOdds(), getMarketHistory(g)])
@@ -156,7 +157,7 @@ export default async function GamePage({
       {!p ? (
         <>
           <ForecastPendingNotice game={g} />
-          <ScheduledContext game={g} weather={{record:weather.snapshot.games[g.id],history:weather.history}} />
+          <ScheduledContext game={g} personnel={personnel} weather={{record:weather.snapshot.games[g.id],history:weather.history}} />
           <div className="two-column" style={{ marginTop: 24 }}>
             <ExplosiveMatchup away={g.away} home={g.home} season={g.season} kickoff={g.kickoff} week={g.week} type={g.type} />
             <RedZoneMatchup away={g.away} home={g.home} season={g.season} kickoff={g.kickoff} week={g.week} type={g.type} />
@@ -451,7 +452,7 @@ export default async function GamePage({
               </section>
             </div>
           </div>
-          <PersonnelPanel game={g} />
+          <PersonnelPanel game={g} evidence={personnel} />
           <MarketHistoryPanel
             history={marketData![1]}
             home={g.home}

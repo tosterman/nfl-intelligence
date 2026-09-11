@@ -1,0 +1,256 @@
+{
+  "checkedAt": "2026-09-11T18:51:46.919Z",
+  "checks": [
+    {
+      "endpoint": "personnel-status",
+      "httpStatus": 200,
+      "body": {
+        "status": "ok",
+        "season": 2026,
+        "expectedSeason": 2026,
+        "collectionStatus": "ok",
+        "checkedAt": "2026-09-11T18:22:45.801833+00:00",
+        "retrievedAt": "2026-09-11T18:22:46.240538+00:00",
+        "assetUpdatedAt": "2026-09-11T12:12:00Z",
+        "sourceHash": "cd7338473dd852d02c6986663addb31431609946fa8756d0460bf2e98d3501a9",
+        "rowCount": 167,
+        "maximumAgeHours": 30,
+        "scope": "Collection and file freshness only; individual report dates and complete team coverage are not verified.",
+        "publicationHash": "c3cdbbda3af5af0324485935370b7de3d081e729ca9f6a9c65e465117c8ed8a7"
+      }
+    },
+    {
+      "endpoint": "quarterback-status",
+      "httpStatus": 200,
+      "body": {
+        "status": "ok",
+        "season": 2026,
+        "expectedSeason": 2026,
+        "collectionStatus": "ok",
+        "checkedAt": "2026-09-11T18:22:46.523271+00:00",
+        "retrievedAt": "2026-09-11T18:22:48.744944+00:00",
+        "assetUpdatedAt": "2026-09-11T12:22:01Z",
+        "sourceHash": "bd431f6c551c64e4d0cfe8d816fed35c160637e1bcd0d3dba5898adecffc5e78",
+        "maximumAgeHours": 30,
+        "expectedTeams": [
+          "ARI",
+          "ATL",
+          "BAL",
+          "BUF",
+          "CAR",
+          "CHI",
+          "CIN",
+          "CLE",
+          "DAL",
+          "DEN",
+          "DET",
+          "GB",
+          "HOU",
+          "IND",
+          "JAX",
+          "KC",
+          "LA",
+          "LAC",
+          "LV",
+          "MIA",
+          "MIN",
+          "NE",
+          "NO",
+          "NYG",
+          "NYJ",
+          "PHI",
+          "PIT",
+          "SEA",
+          "SF",
+          "TB",
+          "TEN",
+          "WAS"
+        ],
+        "checks": [
+          {
+            "team": "ARI",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "ATL",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "BAL",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "BUF",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "CAR",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "CHI",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "CIN",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "CLE",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "DAL",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "DEN",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "DET",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "GB",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "HOU",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "IND",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "JAX",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "KC",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "LA",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "LAC",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "LV",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "MIA",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "MIN",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "NE",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "NO",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "NYG",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "NYJ",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "PHI",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "PIT",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "SEA",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "SF",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "TB",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "TEN",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          },
+          {
+            "team": "WAS",
+            "status": "ok",
+            "recordedAt": "2026-09-11T12:21:50+00:00"
+          }
+        ],
+        "scope": "Recent listed quarterback roles, not confirmed starters or verified announcement times.",
+        "publicationHash": "c3cdbbda3af5af0324485935370b7de3d081e729ca9f6a9c65e465117c8ed8a7"
+      }
+    },
+    {
+      "endpoint": "participation-status",
+      "httpStatus": 200,
+      "body": {
+        "status": "ok",
+        "season": 2026,
+        "expectedSeason": 2026,
+        "collectionStatus": "collected",
+        "checkedAt": "2026-09-11T18:22:57.397746+00:00",
+        "retrievedAt": "2026-09-11T18:22:57.670963+00:00",
+        "calculatedAt": "2026-09-11T18:23:17.200783+00:00",
+        "personnelRetrievedAt": "2026-09-11T18:22:46.240538+00:00",
+        "sourceHash": "f4dfe061f01ab8153f4bb2e8cc7ecf23c7d8c7f6d03f62be2f156365952c4445",
+        "rowCount": 187,
+        "maximumAgeHours": 30,
+        "scope": "Collection freshness and artifact binding only; not complete player coverage, current availability or nonempty weekly samples.",
+        "publicationHash": "c3cdbbda3af5af0324485935370b7de3d081e729ca9f6a9c65e465117c8ed8a7"
+      }
+    }
+  ],
+  "scope": "Local runtime only; public deployment and scheduler unverified"
+}

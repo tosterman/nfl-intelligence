@@ -236,3 +236,36 @@ caller omitted a required source; source/archive closure remains a publisher
 responsibility. No real personnel storage writes have occurred.
 
 All 242 application tests passed locally after the storage/reader batch.
+
+## Initial private publication and local activation (September 11, 18:50 UTC)
+
+This checkpoint supersedes the unfinished bootstrap/runtime statements above.
+The isolated candidate was independently replayed with its retained scripts at
+the recorded calculation times. Quarterback reconstruction also runs inside
+that isolated candidate. The exact 471-file inventory remained unchanged.
+`personnel_archive.py` packages that proof, source files and packaging code;
+`publish_personnel_bootstrap.ts` validates all local object bytes, rehearses the
+transaction in memory, then optionally publishes with `--publish`. This is an
+initial bootstrap command: an existing different publication is rejected.
+
+Private publication `c3cdbbda3af5af0324485935370b7de3d081e729ca9f6a9c65e465117c8ed8a7`
+uploaded and read back 477 objects (26,470,601 bytes), with 475 archive references
+and 167 report records. The accepted root has no predecessor. See
+`reviews/personnel-candidate-replay.json`, `reviews/personnel-bootstrap-package.json`
+and `reviews/personnel-bootstrap-publication.json`.
+
+Matchup pages now read that publication through a 60-second server cache and
+require exact game-context matching. Both forecast and pending-forecast paths
+pass the same evidence into nested views. Missing or invalid publication data
+renders an explicit unavailable state; source-age expiry still applies.
+The three personnel/QB/participation health routes use the selected runtime
+publication. Participation health additionally verifies its archived source
+object. Populated browser checks passed at 320/1280px in Chromium and WebKit,
+including keyboard disclosures, separate seasons, no horizontal overflow and
+zero scoped axe violations. These are local checks, not public rollout proof.
+
+Still required: bounded recurring-worker restore and publication, failed-source
+refresh handling, scheduled execution, public deployment/readback and real
+weekly participation rollover. Initial archive capacity does not establish
+indefinite growth safety. The bootstrap command trusts the controlled local
+replay/packaging process; it is not an untrusted-upload endpoint.
