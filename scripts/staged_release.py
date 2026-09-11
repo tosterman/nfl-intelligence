@@ -2,6 +2,8 @@
 import subprocess
 from deploy_release import release_paths, ALLOW_ROOT
 
+CONTENT_ADDRESSED_RELEASE_PATHS = {'data/site.json', 'data/total-explanations.json'}
+
 
 def verify_staged_release(root, paths=None):
     root = root.resolve()
@@ -34,4 +36,9 @@ def verify_staged_release(root, paths=None):
         identity = subprocess.check_output(['git', 'hash-object', '--path=' + name, name], cwd=root, text=True).strip()
         if identity != staged[name]:
             raise ValueError('Release file differs from Git staging: ' + name)
+        if name in CONTENT_ADDRESSED_RELEASE_PATHS:
+            committed_bytes = subprocess.check_output(['git', 'cat-file', 'blob', staged[name]], cwd=root)
+            if (root / name).read_bytes() != committed_bytes:
+                raise ValueError('Content-addressed release bytes differ from Git staging: ' + name +
+                                 '; retain and verify evidence from Git-identical bytes before publication')
     return len(names)

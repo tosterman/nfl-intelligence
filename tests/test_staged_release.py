@@ -28,6 +28,16 @@ class StagedReleaseTests(unittest.TestCase):
         self.file.write_bytes(b'{"value": 1}\r\n')
         self.assertEqual(verify_staged_release(self.root, [self.file]), 1)
 
+    def test_content_addressed_edition_cannot_change_bytes_through_git_filters(self):
+        edition = self.root / 'data/site.json'
+        edition.parent.mkdir()
+        edition.write_bytes(b'{"generatedAt":"fixture"}\r\n')
+        self.git('add', 'data/site.json')
+        with self.assertRaisesRegex(ValueError, 'Content-addressed release bytes'):
+            verify_staged_release(self.root, [edition])
+        edition.write_bytes(b'{"generatedAt":"fixture"}\n')
+        self.assertEqual(verify_staged_release(self.root, [edition]), 1)
+
     def test_unstaged_changed_artifact_rejected_even_if_assumed_unchanged(self):
         self.git('update-index', '--assume-unchanged', 'history.json')
         self.file.write_bytes(b'{"value": 2}\n')
