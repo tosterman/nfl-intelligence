@@ -10,6 +10,7 @@
     "persistentAvailabilityStatus": true,
     "personnelExactExpiry": true,
     "weatherInclusiveExpiry": true,
+    "weeklyIndependentExpiryAndCounts": true,
     "pageErrors": []
   },
   {
@@ -23,6 +24,7 @@
     "persistentAvailabilityStatus": true,
     "personnelExactExpiry": true,
     "weatherInclusiveExpiry": true,
+    "weeklyIndependentExpiryAndCounts": true,
     "pageErrors": []
   }
 ]

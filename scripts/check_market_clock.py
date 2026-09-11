@@ -8,7 +8,7 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright,expect
 root=Path(__file__).resolve().parents[1]
 folder=root/'release-recovery';folder.mkdir(exist_ok=True)
-subprocess.run(['node','-e',"require('esbuild').buildSync({entryPoints:['tests/fixtures/market-clock.tsx'],bundle:true,outfile:'release-recovery/market-clock-fixture.js',platform:'browser',jsx:'automatic',define:{'process.env.NODE_ENV':JSON.stringify('production')}})"],cwd=root,check=True)
+subprocess.run(['node','-e',"require('esbuild').buildSync({entryPoints:['tests/fixtures/market-clock.tsx'],bundle:true,outfile:'release-recovery/market-clock-fixture.js',platform:'browser',jsx:'automatic',define:{'process.env.NODE_ENV':JSON.stringify('production'),'process.env':'{}'}})"],cwd=root,check=True)
 (folder/'market-clock-fixture.html').write_text('<html><head><meta charset="utf-8"></head><body><div id="root"></div><script src="market-clock-fixture.js"></script></body></html>')
 start=datetime(2026,9,10,15,59,49,tzinfo=timezone.utc);out=[]
 with sync_playwright() as p:
@@ -27,12 +27,22 @@ with sync_playwright() as p:
   expect(row.locator('td').last).to_contain_text('-3.5')
   expect(page.locator('#weather')).to_have_text('Weather fixture')
   expect(page.locator('#personnel')).to_have_text('Personnel fixture')
+  page.locator('#weekly > details > summary').click()
+  page.locator('#weekly .weekly-context-details > summary').click()
+  expect(page.locator('#weekly')).to_contain_text('1 weather update')
+  expect(page.locator('#weekly')).to_contain_text('1 player-report update')
   page.clock.run_for(9500)
   expect(page.locator('#weather')).to_have_text('Weather fixture')
   expect(page.locator('#personnel')).to_contain_text('has expired')
+  expect(page.locator('#weekly')).not_to_contain_text('Personnel briefing fixture')
+  expect(page.locator('#weekly')).to_contain_text('Weather briefing fixture')
+  expect(page.locator('#weekly')).to_contain_text('0 player-report updates')
   page.clock.run_for(1)
   expect(page.locator('#weather')).to_contain_text('outdated')
   page.clock.run_for(499)
+  expect(page.locator('#weekly')).not_to_contain_text('Weather briefing fixture')
+  expect(page.locator('#weekly')).to_contain_text('0 weather updates')
+  expect(page.locator('#weekly')).to_contain_text('No fresh, verified personnel or weather changes')
   expect(row.locator('td').last).to_contain_text('-3.5')
   page.clock.run_for(1)
   expect(row.locator('td').last).to_contain_text('Not quoted')
@@ -51,7 +61,7 @@ with sync_playwright() as p:
   expect(page.locator('#card')).to_contain_text('Pregame closed')
   expect(live).to_contain_text('Pregame comparisons close at kickoff')
   assert not errors,errors
-  out.append({'engine':engine,'inclusiveSixHourBoundary':True,'individualSpreadExpiry':True,'independentTotalExpiry':True,'modelFreshnessBoundary':True,'feedExpiry':True,'kickoffClosure':True,'persistentAvailabilityStatus':True,'personnelExactExpiry':True,'weatherInclusiveExpiry':True,'pageErrors':errors})
+  out.append({'engine':engine,'inclusiveSixHourBoundary':True,'individualSpreadExpiry':True,'independentTotalExpiry':True,'modelFreshnessBoundary':True,'feedExpiry':True,'kickoffClosure':True,'persistentAvailabilityStatus':True,'personnelExactExpiry':True,'weatherInclusiveExpiry':True,'weeklyIndependentExpiryAndCounts':True,'pageErrors':errors})
   b.close()
 (root/'reviews/market-clock-fixture-browser.json').write_text(json.dumps(out,indent=2)+'\n')
 print(json.dumps(out))
