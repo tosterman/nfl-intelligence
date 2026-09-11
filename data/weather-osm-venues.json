@@ -722,5 +722,88 @@
     "pointState": "MN",
     "pointCity": "Minneapolis",
     "forecastHourly": "https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly"
+  },
+  "Highmark Stadium": {
+    "status": "confirmed-official-map-entrance",
+    "latitude": 42.77304225,
+    "longitude": -78.79219105,
+    "validFromSeason": 2026,
+    "addressStatus": "unresolved-house-number",
+    "forecastHourly": "https://api.weather.gov/gridpoints/BUF/39,42/forecast/hourly",
+    "mapDataHash": "754a2f6270056b7e294c9ff4a3dddea60611a3eb8920a07c4f6b0c24f0b2008a",
+    "mapElement": {
+      "type": "way",
+      "id": 1339149058,
+      "bounds": {
+        "minlat": 42.7718387,
+        "minlon": -78.7935739,
+        "maxlat": 42.7742458,
+        "maxlon": -78.7908082
+      },
+      "tags": {
+        "addr:city": "Orchard Park",
+        "addr:housenumber": "10",
+        "addr:postcode": "14127",
+        "addr:state": "NY",
+        "addr:street": "Bills Plaza",
+        "building": "yes",
+        "leisure": "stadium",
+        "name": "Highmark Stadium",
+        "sport": "american_football",
+        "start_date": "2026",
+        "wikidata": "Q16251517",
+        "wikipedia": "en:Highmark Stadium"
+      }
+    },
+    "pointHash": "76e8a6925aaa561933dcb06e03dbe82386ae60b500b49234bc2df003e1ce8683",
+    "pointState": "NY",
+    "pointUrl": "https://api.weather.gov/points/42.7730,-78.7922",
+    "mapSource": "https://www.openstreetmap.org/way/1339149058",
+    "attribution": "OpenStreetMap contributors",
+    "license": "ODbL-1.0",
+    "licenseUrl": "https://www.openstreetmap.org/copyright",
+    "coordinateMeaning": "OSM stadium-bounds midpoint, reconciled using an entrance on the officially linked 2026 map. Stadium-area weather only; postal house number unresolved; not field coordinates.",
+    "officialMapEvidence": {
+      "officialUrl": "https://www.buffalobills.com/stadium/",
+      "officialHtmlHash": "ca0dfc8a1f4c49ef4f4ea558a6a8e286000aed728e0ad3dbee33d5600585fceb",
+      "officialMapUrl": "https://map.concept3d.com/?id=2167",
+      "locationsUrl": "https://api.concept3d.com/categories/81549,83476,83479,104688,104699,104700,104701,104703,104704,106040,102751,102752,107431,107432,107433,107434,107435,107436,83795,84366,104698,104706,104707,104708,104709,104710,105016,105350,104689,104690,104691,104692,104693,104694,104695,104696,104697,105018,105019,105020,105021,105028,105920,105931,107419,107420,107421,107422,107423,107424,107426,107427,107428,107429,107430?map=2167&batch&children&key=0001085cc708b9cef47080f064612ca5",
+      "locationsHash": "24c1304c1a78ad4c0cd017c44a0fabeee91763d0f4dd2dcf3c82204b0adef2ed",
+      "osmResponseHash": "754a2f6270056b7e294c9ff4a3dddea60611a3eb8920a07c4f6b0c24f0b2008a",
+      "osmElement": {
+        "type": "way",
+        "id": 1339149058,
+        "bounds": {
+          "minlat": 42.7718387,
+          "minlon": -78.7935739,
+          "maxlat": 42.7742458,
+          "maxlon": -78.7908082
+        },
+        "tags": {
+          "addr:city": "Orchard Park",
+          "addr:housenumber": "10",
+          "addr:postcode": "14127",
+          "addr:state": "NY",
+          "addr:street": "Bills Plaza",
+          "building": "yes",
+          "leisure": "stadium",
+          "name": "Highmark Stadium",
+          "sport": "american_football",
+          "start_date": "2026",
+          "wikidata": "Q16251517",
+          "wikipedia": "en:Highmark Stadium"
+        }
+      },
+      "latitude": 42.77304225,
+      "longitude": -78.79219105,
+      "pointUrl": "https://api.weather.gov/points/42.7730,-78.7922",
+      "pointHash": "76e8a6925aaa561933dcb06e03dbe82386ae60b500b49234bc2df003e1ce8683",
+      "pointState": "NY",
+      "forecastHourly": "https://api.weather.gov/gridpoints/BUF/39,42/forecast/hourly",
+      "retrievedAt": "2026-09-11T16:03:23.278619+00:00",
+      "osmRetrievedAt": "2026-09-10T22:14:57.641801+00:00",
+      "addressStatus": "unresolved-house-number",
+      "validFromSeason": 2026
+    }
   }
 }

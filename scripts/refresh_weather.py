@@ -42,6 +42,8 @@ def acquire_game(game,venues,now,fetch=read_nws):
     if kickoff<=now:return result|{'reason':'Pregame forecast collection has closed'}
     if kickoff-now>timedelta(days=7):return result|{'reason':'Outside the seven-day collection window'}
     venue=venues.get(game['venue'],{})
+    if 'validFromSeason' in venue and (type(game.get('season')) is not int or game['season'] < venue['validFromSeason']):
+        return result|{'reason':'Verified venue location does not cover this season'}
     coords=[venue.get('latitude'),venue.get('longitude')]
     if game.get('neutral') or not all(isinstance(v,(int,float)) and not isinstance(v,bool) and math.isfinite(v) for v in coords):return result|{'reason':'Verified US venue location unavailable'}
     lat,lon=coords

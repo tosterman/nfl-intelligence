@@ -13,6 +13,10 @@ def words(value):
     return [ABBREVIATIONS.get(w,w) for w in re.findall(r'[A-Z0-9]+',value.upper())]
 
 def validate_venue(venue):
+    if venue.get('status')=='confirmed-official-map-entrance':
+        from official_map_evidence import validate_registered_venue
+        validate_registered_venue(venue)
+        return
     if venue.get('status')=='confirmed-official-linked-place':
         from linked_place_evidence import validate_registered_venue
         validate_registered_venue(venue)

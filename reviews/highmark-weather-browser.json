@@ -1,0 +1,50 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "gameId": "2026_02_DET_BUF",
+    "sourceHash": "b39883b3658ad3530688c331162cf94eba51d86d027dc37b20116121dd46a8c3",
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 390,
+    "gameId": "2026_02_DET_BUF",
+    "sourceHash": "b39883b3658ad3530688c331162cf94eba51d86d027dc37b20116121dd46a8c3",
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "gameId": "2026_02_DET_BUF",
+    "sourceHash": "b39883b3658ad3530688c331162cf94eba51d86d027dc37b20116121dd46a8c3",
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "gameId": "2026_02_DET_BUF",
+    "sourceHash": "b39883b3658ad3530688c331162cf94eba51d86d027dc37b20116121dd46a8c3",
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "gameId": "2026_02_DET_BUF",
+    "sourceHash": "b39883b3658ad3530688c331162cf94eba51d86d027dc37b20116121dd46a8c3",
+    "overflow": false,
+    "wcagViolations": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "gameId": "2026_02_DET_BUF",
+    "sourceHash": "b39883b3658ad3530688c331162cf94eba51d86d027dc37b20116121dd46a8c3",
+    "overflow": false,
+    "wcagViolations": 0
+  }
+]

@@ -37,7 +37,7 @@ def verify_record(record, root):
     if digest(json.dumps(original, sort_keys=True, separators=(',', ':')).encode()) != record['hash']:
         raise ValueError('Weather observation fingerprint mismatch')
     location = record['locationEvidence']
-    if location.get('status') not in ('confirmed-address-geocode', 'confirmed-osm-stadium', 'confirmed-official-linked-place'):
+    if location.get('status') not in ('confirmed-address-geocode', 'confirmed-osm-stadium', 'confirmed-official-linked-place', 'confirmed-official-map-entrance'):
         raise ValueError('Unverified weather location')
     validate_venue(location)
     if any(record[axis] != location[axis] for axis in ('latitude', 'longitude')):

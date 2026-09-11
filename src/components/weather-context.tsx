@@ -79,7 +79,7 @@ export function WeatherContext({
             >
               National Weather Service source ↗
             </a>
-            {["confirmed-osm-stadium", "confirmed-official-linked-place"].includes(record.locationEvidence?.status ?? "") && (
+            {["confirmed-osm-stadium", "confirmed-official-linked-place", "confirmed-official-map-entrance"].includes(record.locationEvidence?.status ?? "") && (
               <p className="fine">
                 Stadium map location:{" "}
                 <a
@@ -107,6 +107,13 @@ export function WeatherContext({
                 to a named map place at its official address. The place falls
                 within the stadium’s mapped bounds; this does not establish
                 field-level accuracy.
+              </p>
+            )}
+            {record.locationEvidence?.status === "confirmed-official-map-entrance" && (
+              <p className="fine">
+                The 2026 stadium bounds were reconciled using Entry 1 on the{" "}
+                <a href="https://map.concept3d.com/?id=2167" target="_blank" rel="noreferrer">Bills’ officially linked stadium map</a>.
+                The postal house number remains unresolved. The lookup is a stadium-area midpoint, not a field sensor or roof-status report.
               </p>
             )}
             <p className="hash">{record.sourceHash}</p>

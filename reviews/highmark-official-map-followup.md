@@ -1,5 +1,10 @@
 # Highmark location follow-up — September 11, 2026
 
+Subsequent acceptance: named Entry 1 evidence resolved the geographic identity
+through a separate, tested official-map rule. See `highmark-weather-acceptance.md`.
+The house-number discrepancy remains unresolved; the observations below describe
+the earlier viewport-only investigation.
+
 The [Bills' current stadium page](https://www.buffalobills.com/stadium/) directly
 links to [Concept3D map 2167](https://map.concept3d.com/?id=2167). A live browser
 render showed the inaugural 2026 mark, the new stadium and entrance labels. The
