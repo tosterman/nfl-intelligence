@@ -1,0 +1,34 @@
+[
+  {
+    "engine": "chromium",
+    "width": 390,
+    "kickoffStatusTransition": true,
+    "spotlightMovesWithoutReload": true,
+    "noElapsedFallback": true,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "kickoffStatusTransition": true,
+    "spotlightMovesWithoutReload": true,
+    "noElapsedFallback": true,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "kickoffStatusTransition": true,
+    "spotlightMovesWithoutReload": true,
+    "noElapsedFallback": true,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "kickoffStatusTransition": true,
+    "spotlightMovesWithoutReload": true,
+    "noElapsedFallback": true,
+    "pageErrors": []
+  }
+]

@@ -14,7 +14,7 @@ type Match = {
   kickoff: string | null;
   status: string;
 };
-function useClock(initial: number, deadlines: number[]) {
+export function useClock(initial: number, deadlines: number[]) {
   const [now, setNow] = useState(initial);
   const deadline = Math.min(...deadlines.filter((at) => at > now));
   useEffect(() => {

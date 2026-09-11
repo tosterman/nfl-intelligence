@@ -1,5 +1,6 @@
 "use client";
-import { MarketCard } from "./market-panel";
+import { MarketCard, useClock } from "./market-panel";
+import { featuredGame, slateGameStatus } from "@/lib/slate-timing";
 import { WeeklyChanges } from "./weekly-changes";
 import type { WeeklyBriefing } from "@/lib/weekly-changes";
 import type { OddsFeed } from "@/lib/odds";
@@ -64,6 +65,7 @@ export function Slate({
     return () => clearInterval(timer);
   }, [freshness]);
   const weekGames = games.filter((g) => g.week === week);
+  const now = useClock(initialNow, weekGames.map(game => Date.parse(game.kickoff ?? "")));
   const filtered = weekGames
     .filter(
       (g) =>
@@ -81,9 +83,7 @@ export function Slate({
           Math.abs((a.snapshot?.prediction.homeWinProbability ?? 0.5) - 0.5)
         : (a.kickoff ?? "z").localeCompare(b.kickoff ?? "z"),
     );
-  const featured =
-    weekGames.find((g) => g.snapshot && g.status === "scheduled") ??
-    weekGames.find((g) => g.snapshot);
+  const featured = featuredGame(weekGames, now);
   const forecasts = weekGames.filter((g) => g.snapshot);
   const close = forecasts.filter(
     (g) => Math.abs(g.snapshot!.prediction.homeWinProbability - 0.5) < 0.08,
@@ -346,7 +346,7 @@ export function Slate({
               game={g}
               returnTo={returnTo}
               odds={odds}
-              initialNow={initialNow}
+              initialNow={now}
             />
           ))}
         </div>
@@ -412,11 +412,7 @@ function GameCard({
       <div className="card-top">
         <span>{time(g.kickoff)} ET</span>
         <span className={g.status === "final" ? "final-label" : "muted"}>
-          {g.status === "final"
-            ? "Final"
-            : g.snapshot
-              ? "Model forecast"
-              : "Awaiting forecast"}
+          {slateGameStatus(g, initialNow)}
         </span>
       </div>
       {g.neutral && <p className="card-venue">Neutral venue · {g.venue}</p>}
