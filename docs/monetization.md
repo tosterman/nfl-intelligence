@@ -13,4 +13,6 @@ Before accepting revenue:
 
 No paid subscription, ad contract, provider contract or recurring charge was authorized or purchased during the build. Licensed timestamped odds/personnel/weather feeds are separate infrastructure decisions. Avoid promises of betting profits or future advertising income.
 
+Local layout evidence: `reviews/ad-layout-feasibility.md` compares reserved and unreserved browser-only placement after the slate. Reserving geometry prevented downstream movement during test fill/removal at three widths in Chromium and WebKit. This informs future integration, but no ad slot or publisher tags are implemented and real-ad/consent verification remains open.
+
 Sources reviewed: https://support.google.com/adsense/answer/10437795 and https://support.google.com/publisherpolicies/answer/10437963 . Recheck current policies before activation.

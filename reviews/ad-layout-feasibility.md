@@ -1,0 +1,9 @@
+# Advertising layout feasibility
+
+The product currently has no ad slots. This experiment inserts a temporary labeled test rectangle after the complete game slate in disposable local browser contexts. It does not implement or activate advertising, simulate revenue, contact an ad server, or change application files. A fixed test rectangle is only a layout probe, not a substitute for the publisher integration.
+
+Twelve scenarios compare reserved and unreserved insertion in Chromium and WebKit at 320, 390 and 1440 CSS pixels. The test shapes are 250×250, 300×250 and 728×90 respectively, selected using available container width. These sizes are tested geometry, not a claim that a publisher will serve or approve those formats. The advertisement label sits outside the test creative and outside numerical forecasts.
+
+All six reserved-space scenarios produced zero vertical movement of the following trust banner when content was inserted and removed. The six unreserved controls moved it 250 pixels on phones or 90 pixels on desktop, then moved it back when emptied. No document overflow or page errors were observed. The small-phone reserved screenshot was inspected. See ad-layout-feasibility.json; reproduce using `python scripts/check_ad_layout.py` with localhost:3000 and Python Playwright browsers installed.
+
+These measurements support reserving placement geometry before fill and retaining that geometry when a visible slot is unfilled. They measure downstream document position after the initial setup, not total page CLS, viewability, actual ad loading, consent handling, publisher policy compliance, dynamic resizing or physical-device performance. A real provider integration still needs those checks after approval. There is no test slot in the actual product and no claim of monetization readiness.
