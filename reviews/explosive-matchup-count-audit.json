@@ -4,6 +4,7 @@
     "engine": "chromium",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -12,6 +13,7 @@
     "engine": "chromium",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -20,6 +22,7 @@
     "engine": "chromium",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -28,6 +31,7 @@
     "engine": "chromium",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -36,6 +40,7 @@
     "engine": "chromium",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -44,6 +49,7 @@
     "engine": "chromium",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -52,6 +58,7 @@
     "engine": "chromium",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -60,6 +67,7 @@
     "engine": "chromium",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -68,6 +76,7 @@
     "engine": "chromium",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -76,6 +85,7 @@
     "engine": "chromium",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -84,6 +94,7 @@
     "engine": "chromium",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -92,6 +103,7 @@
     "engine": "chromium",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -100,6 +112,7 @@
     "engine": "chromium",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -108,6 +121,7 @@
     "engine": "chromium",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -116,6 +130,7 @@
     "engine": "chromium",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -124,6 +139,7 @@
     "engine": "webkit",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -132,6 +148,7 @@
     "engine": "webkit",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -140,6 +157,7 @@
     "engine": "webkit",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -148,6 +166,7 @@
     "engine": "webkit",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -156,6 +175,7 @@
     "engine": "webkit",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -164,6 +184,7 @@
     "engine": "webkit",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -172,6 +193,7 @@
     "engine": "webkit",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -180,6 +202,7 @@
     "engine": "webkit",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -188,6 +211,7 @@
     "engine": "webkit",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -196,6 +220,7 @@
     "engine": "webkit",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -204,6 +229,7 @@
     "engine": "webkit",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -212,6 +238,7 @@
     "engine": "webkit",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -220,6 +247,7 @@
     "engine": "webkit",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -228,6 +256,7 @@
     "engine": "webkit",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   },
@@ -236,6 +265,7 @@
     "engine": "webkit",
     "width": 320,
     "verifiedRates": 8,
+    "verifiedRedZoneRates": 4,
     "pageErrors": [],
     "overflow": false
   }

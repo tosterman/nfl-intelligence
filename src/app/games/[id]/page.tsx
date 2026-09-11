@@ -15,6 +15,7 @@ import { WeatherContext } from "@/components/weather-context";
 import { ScheduleContext } from "@/components/schedule-context";
 import { PersonnelPanel } from "@/components/personnel-panel";
 import { ExplosiveMatchup } from "@/components/explosive-matchup";
+import { RedZoneMatchup } from "@/components/red-zone-matchup";
 import {
   ScheduledContext,
   ForecastPendingNotice,
@@ -164,6 +165,7 @@ export default async function GamePage({
               )}
               <a href="#forecast-changes">Forecast changes</a>
               <a href="#explosive-heading">Big-play history</a>
+              <a href="#red-zone-heading">Inside the 20</a>
               <a href="#kickoff-weather">Weather</a>
               <a href="#market-prices">Sportsbook comparison</a>
               <a href="#personnel-reports">Personnel</a>
@@ -356,6 +358,7 @@ export default async function GamePage({
                 </section>
               )}
               <ExplosiveMatchup away={g.away} home={g.home} season={g.season} kickoff={g.kickoff} />
+              <RedZoneMatchup away={g.away} home={g.home} season={g.season} kickoff={g.kickoff} />
               <MarketPanel
                 freshness={freshnessInputs(site)}
                 game={{

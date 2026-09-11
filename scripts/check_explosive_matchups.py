@@ -1,5 +1,6 @@
 """Verify rendered matchup counts against the retained artifact on localhost."""
 import json
+from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
@@ -9,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     site = json.loads((ROOT / 'data/site.json').read_text())
     evidence = json.loads((ROOT / 'data/explosive-plays.json').read_text())
+    red_zone = json.loads((ROOT / 'data/red-zone.json').read_text())
     games = [g for g in site['games'] if g.get('snapshot')]
     report = []
     with sync_playwright() as playwright:
@@ -35,11 +37,23 @@ def main():
                 actual = panel.locator('.explosive-rate').evaluate_all(
                     '(nodes) => nodes.map(n => [n.querySelector("strong").textContent, n.querySelector("small").textContent])')
                 assert actual == expected, (game['id'], actual, expected)
+                red_panel = page.locator('.red-zone-panel')
+                red_expected = []
+                for offense, defense in [(game['away'], game['home']), (game['home'], game['away'])]:
+                    for team, side in [(offense, 'offense'), (defense, 'defense')]:
+                        counts = red_zone['teams'][team][side]
+                        percentage = (Decimal(100) * counts['touchdowns'] / counts['possessions']).quantize(Decimal('0.1'), rounding=ROUND_HALF_UP)
+                        red_expected.append([f"{percentage}%",
+                                             f"{counts['touchdowns']} touchdowns from {counts['possessions']} possessions"])
+                red_actual = red_panel.locator('.explosive-rate').evaluate_all(
+                    '(nodes) => nodes.map(n => [n.querySelector("strong").textContent, n.querySelector("small").textContent])')
+                assert red_actual == red_expected, (game['id'], red_actual, red_expected)
                 assert 'Each eligible play counts equally' in panel.inner_text()
                 assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
                 assert not errors, errors
                 report.append({'gameId': game['id'], 'engine': engine, 'width': 320,
-                               'verifiedRates': len(actual), 'pageErrors': errors, 'overflow': False})
+                               'verifiedRates': len(actual), 'verifiedRedZoneRates': len(red_actual),
+                               'pageErrors': errors, 'overflow': False})
                 page.remove_listener('pageerror', handler)
             browser.close()
     (ROOT / 'reviews/explosive-matchup-count-audit.json').write_text(json.dumps(report, indent=2) + '\n')
