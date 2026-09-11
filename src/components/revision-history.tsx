@@ -5,6 +5,7 @@ import {
   contributionChanges,
 } from "@/lib/revisions";
 import { date, time, signed, pct } from "@/lib/teams";
+import { scheduleSourceChanges } from "@/lib/schedule-source-changes";
 
 export function RevisionHistory({ history }: { history: Snapshot[] }) {
   return (
@@ -28,6 +29,8 @@ export function RevisionHistory({ history }: { history: Snapshot[] }) {
         const away = snapshot.gameContext?.away ?? "Recorded away side";
         const contributions =
           diff && previous ? contributionChanges(previous, snapshot) : null;
+        const sourceRecords = previous && previous.gameId === snapshot.gameId
+          ? scheduleSourceChanges(snapshot.gameId, previous.sourceHash, snapshot.sourceHash) : null;
         return (
           <details
             className="revision"
@@ -154,6 +157,23 @@ export function RevisionHistory({ history }: { history: Snapshot[] }) {
                   ? "Not compared: original matchup context is missing or changed."
                   : "Initial model snapshot. No earlier prediction is available."}
               </p>
+            )}
+            {sourceRecords && (
+              <details>
+                <summary>Which schedule records changed?</summary>
+                <p>
+                  {sourceRecords.categories.length
+                    ? `This matchup: ${sourceRecords.categories.join("; ")}.`
+                    : "This matchup’s schedule record did not change."}
+                  {" "}{sourceRecords.otherRecords} other existing game records were revised in the same source file.
+                </p>
+                <p className="fine">
+                  Compared the exact retained files used by these runs. These
+                  differences do not establish what changed the prediction.
+                  The older file’s original collection time is unknown.
+                  Source betting lines are not verified closing odds.
+                </p>
+              </details>
             )}
             <p className="fine">
               {snapshot.modelVersion} · Training through{" "}

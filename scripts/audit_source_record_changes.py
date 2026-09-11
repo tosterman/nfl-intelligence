@@ -1,6 +1,8 @@
 """Offline source comparison between the fixed retained edition and current inputs."""
 import hashlib
 import gzip
+import csv
+import io
 import json
 import tempfile
 from pathlib import Path
@@ -42,6 +44,10 @@ def audit(root=ROOT):
         raise ValueError('Historical schedule length mismatch')
     schedule_change = compare_csv(historical, (root / 'data/games.csv').read_bytes(),
                                   entry['sha256'], new['data/games.csv']['expectedSha256'], ('game_id',))
+    known = {row['game_id'] for row in csv.DictReader(io.StringIO(historical.decode('utf-8-sig')))}
+    known &= {row['game_id'] for row in csv.DictReader(io.StringIO((root / 'data/games.csv').read_bytes().decode('utf-8-sig')))}
+    site = json.loads((root / 'data/site.json').read_text())
+    schedule_change['comparedSiteGames'] = sorted(game['id'] for game in site['games'] if game['id'] in known)
     return {'retainedEdition': manifest['editionGeneratedAt'], 'currentEdition': current['editionGeneratedAt'],
             'currentSiteSha256': hashlib.sha256((root / 'data/site.json').read_bytes()).hexdigest(),
             'filesCompared': len(files), 'changedFiles': sum(file['recordsChanged'] for file in files),
@@ -57,5 +63,9 @@ if __name__ == '__main__':
     (ROOT / 'reviews/source-record-changes.json').write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps({key: value for key, value in report.items() if key not in ('files', 'historicalScheduleComparison')}, indent=2))
     change = report['historicalScheduleComparison']
+    public = {key: change[key] for key in ('beforeSha256', 'afterSha256', 'comparedSiteGames')}
+    public['changedRecords'] = len(change['revised'])
+    public['revisions'] = [{'gameId': row['key'][0], 'fields': sorted(row['fields'])} for row in change['revised']]
+    (ROOT / 'data/source-record-changes.json').write_text(json.dumps(public, indent=2) + '\n')
     print(json.dumps({'historicalScheduleAdded': len(change['added']), 'historicalScheduleRemoved': len(change['removed']),
                       'historicalScheduleRevised': len(change['revised'])}))
