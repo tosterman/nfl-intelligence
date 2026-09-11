@@ -137,3 +137,26 @@ If v2 publication fails after freezing, keep v1 frozen and resume the verified
 migration; do not silently resume v1 writes. No live freeze has occurred yet.
 The candidate and freeze regressions pass. The preceding full application run
 passed 218 tests; it predates these final freeze/timestamp corrections.
+
+## Live storage and local integration
+
+On September 11 at 17:58 UTC, the reviewed v2 storage migration succeeded:
+17 objects uploaded, 126 reused, all 137 observations preserved. The legacy
+pointer is now frozen; it remains readable. The v2 publication is
+`cfc430a9830f48dce53fac2d3dc8741598f27e40a3b65c9b7a25d94523c9ccab`.
+GitHub listed no weather workflow and no local legacy publisher process was
+running at cutover. See `reviews/weather-v2-storage-publication.json`.
+
+Local readers now use only v2. The slate/health path fetches the current snapshot;
+game pages fetch their own history against that same publication root. Health
+reported 14/14 eligible games. A fresh 390px Atlanta–Pittsburgh and 1280px
+Green Bay–Minnesota browser check confirmed current values and retained history,
+with no page errors or horizontal overflow. The initial check saw one temporarily
+missing section during local server update and was rerun after follow-up reads.
+See `reviews/weather-v2-local-browser.json`. All 222 application tests and the
+production build passed.
+
+This is not a public website deployment. The v2 collection worker is still
+unfinished; the existing gated workflow references v1 scripts and must be
+updated before activation. Keep `WEATHER_RUNTIME_ENABLED` unset. Do not unfreeze
+v1 or treat its frozen archive as the active update path.

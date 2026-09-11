@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-09-11T18:00:13.021261+00:00",
+  "publication": "cfc430a9830f48dce53fac2d3dc8741598f27e40a3b65c9b7a25d94523c9ccab",
+  "cases": [
+    {
+      "width": 390,
+      "game": "2026_01_ATL_PIT",
+      "httpStatus": 200,
+      "currentWeather": "Temperature\n79\u00b0F\nWind\n6 mph W\nPrecipitation chance\n8%",
+      "historyVerified": true,
+      "horizontalOverflow": false,
+      "pageErrors": []
+    },
+    {
+      "width": 1280,
+      "game": "2026_01_GB_MIN",
+      "httpStatus": 200,
+      "currentWeather": "Temperature\n63\u00b0F\nWind\n5 mph NNW\nPrecipitation chance\n20%",
+      "historyVerified": true,
+      "horizontalOverflow": false,
+      "pageErrors": []
+    }
+  ],
+  "scope": "Local Chromium after real v2 storage migration; public website not deployed",
+  "initialAttempt": "One missing weather section during local server update; both pages subsequently rechecked"
+}

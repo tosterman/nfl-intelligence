@@ -63,7 +63,7 @@ export default async function GamePage({
   if (!g) notFound();
   const { from } = await searchParams;
   const returnTo = gameReturn(from, g);
-  const weather=await getWeather();
+  const weather=await getWeather(id);
   const p = g.snapshot?.prediction;
   const marketData = p
     ? await Promise.all([getOdds(), getMarketHistory(g)])
