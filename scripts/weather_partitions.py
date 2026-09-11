@@ -5,6 +5,7 @@ import json
 from collections import defaultdict
 from pathlib import Path
 from weather_bundle import ROOT, build, encode, fingerprint, transport
+from refresh_weather import parse_time
 
 MAX_JSON_BYTES = 2_000_000
 MAX_SOURCE_BYTES = 2_000_000
@@ -132,6 +133,48 @@ def verify_migration(root, result):
             'reachableObjects': len(visited), 'snapshotBytes': publication['snapshot']['bytes'],
             'indexBytes': publication['index']['bytes'],
             'largestPartitionBytes': max((ref['bytes'] for ref in index['games'].values()), default=0)}
+
+
+def verify_partition_continuity(previous, current):
+    """Append-only comparison, separate from raw-source and snapshot validation."""
+    def read(result, ref, kind):
+        if not isinstance(ref, dict) or set(ref) != {'sha256', 'bytes'}:
+            raise ValueError('Invalid partition continuity reference')
+        raw = result['objects'].get(ref['sha256'])
+        if not isinstance(raw, bytes) or type(ref['bytes']) is not int or not 0 < len(raw) <= MAX_JSON_BYTES or len(raw) != ref['bytes'] or digest(raw) != ref['sha256']:
+            raise ValueError('Partition continuity integrity failure')
+        value = json.loads(raw)
+        if not isinstance(value, dict) or value.get('schemaVersion') != 2 or value.get('kind') != kind:
+            raise ValueError('Partition continuity schema differs')
+        return value
+    old_root = read(previous, previous['publication'], 'weather-publication')
+    new_root = read(current, current['publication'], 'weather-publication')
+    old_time, new_time = parse_time(old_root['generatedAt']), parse_time(new_root['generatedAt'])
+    if new_time < old_time or (new_time == old_time and previous['publication'] != current['publication']):
+        raise ValueError('Older or conflicting weather publication')
+    old_index = read(previous, old_root['index'], 'weather-index')['games']
+    new_index = read(current, new_root['index'], 'weather-index')['games']
+    if not set(old_index) <= set(new_index):
+        raise ValueError('Retained weather game removed')
+    changed = 0
+    for game, old_ref in old_index.items():
+        if old_ref == new_index[game]:
+            continue
+        changed += 1
+        old = read(previous, old_ref, 'weather-game-history')
+        new = read(current, new_index[game], 'weather-game-history')
+        if old.get('gameId') != game or new.get('gameId') != game:
+            raise ValueError('Weather partition game differs')
+        for old_rows, new_rows in [(json.loads(old['ledgerJson']), json.loads(new['ledgerJson'])),
+                                   (old['history']['records'], new['history']['records'])]:
+            indexed = {row['hash']: row for row in new_rows}
+            if len(indexed) != len(new_rows) or len({row['hash'] for row in old_rows}) != len(old_rows):
+                raise ValueError('Duplicate partition observations')
+            if any(row['hash'] not in indexed or encode(row) != encode(indexed[row['hash']]) for row in old_rows):
+                raise ValueError('Retained weather observation removed or changed')
+        if any(identity not in new['sources'] or ref != new['sources'][identity] for identity, ref in old['sources'].items()):
+            raise ValueError('Retained weather source removed or changed')
+    return {'previousGames': len(old_index), 'currentGames': len(new_index), 'changedGames': changed}
 
 
 def main():

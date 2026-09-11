@@ -97,3 +97,14 @@ including removed anchors, changed neutral-site context, invalid capture times,
 and approved-venue binding. The existing v1 decoder regression and four Python
 migration tests also pass. Type checking passes. Publication continuity and
 live reader/worker integration remain pending.
+
+`verify_partition_continuity` now compares publication time, preserved index
+keys, exact Python-serialized observations and compact history, and original
+source references. Unchanged partitions require only the two index/root pairs;
+changed partitions are compared individually. Four continuity tests pass,
+including valid append and removal/mutation rejection. Together with migration
+tests, eight Python checks pass. Two separately replayed real collections also
+passed: 137 → 151 observations, with all 14 games retained and the anchored
+snapshot remaining 180,577 bytes. See `reviews/weather-partition-continuity.json`.
+This is a continuity check, not a substitute for raw-source replay or pointer
+publication verification; the publisher must enforce all three.

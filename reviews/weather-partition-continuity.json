@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-09-11T17:49:28.964571+00:00",
+  "previous": {
+    "observations": 137,
+    "games": 14,
+    "sources": 126,
+    "reachableObjects": 143,
+    "snapshotBytes": 180577,
+    "indexBytes": 1585,
+    "largestPartitionBytes": 62458
+  },
+  "next": {
+    "observations": 151,
+    "games": 14,
+    "sources": 141,
+    "reachableObjects": 158,
+    "snapshotBytes": 180577,
+    "indexBytes": 1587,
+    "largestPartitionBytes": 65885
+  },
+  "continuity": {
+    "previousGames": 14,
+    "currentGames": 14,
+    "changedGames": 14
+  },
+  "storageWrites": false,
+  "scope": "Two real, separately replayed weather collections; append-only comparison before any live publication"
+}
