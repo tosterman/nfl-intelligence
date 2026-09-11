@@ -191,3 +191,8 @@ was performed. Evidence: `reviews/weather-v2-worker-publication.json` and
 `reviews/weather-v2-worker-local-readback.json`. Public deployment, exact public
 readback and an actual scheduled run remain unverified; keep the workflow gate
 disabled until those rollout prerequisites are met.
+
+Hosted run 34631754560 passed on `b673d2e`, covering the scoped-worker batch and
+retained live publication evidence. Its application suite contains 223 tests;
+hosted verification also covers Python tests, replay, browser deadline checks,
+production build and dependency audit. Later homepage/personnel work is separate.
