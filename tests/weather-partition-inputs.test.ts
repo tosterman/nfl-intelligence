@@ -26,7 +26,7 @@ test('candidate preparation requires published legacy evidence and supports subs
  assert.deepEqual(next.candidate.publication,first.candidate.publication);
 });
 
-test('preserving the same legacy ledger cannot justify an older current snapshot',async()=>{
+test('preserving the same legacy ledger cannot justify an older current snapshot',async(t)=>{
  const s=store(),legacy=prepareWeatherPublication(process.cwd());
  const envelope=JSON.parse(legacy.objects[0].toString()),payload=JSON.parse(envelope.payloadJson);
  const later=new Date(Date.parse(payload.weather.generatedAt)+60000).toISOString();
@@ -34,5 +34,11 @@ test('preserving the same legacy ledger cannot justify an older current snapshot
  envelope.payloadJson=JSON.stringify(payload);envelope.manifest.payloadBytes=Buffer.byteLength(envelope.payloadJson);
  envelope.manifest.payloadSha256=hash(Buffer.from(envelope.payloadJson));
  await publishWeatherObjects([Buffer.from(JSON.stringify(envelope)),...legacy.objects.slice(1)],later,s,null);
+ // A freshly collected fixture can put the synthetic later publication ahead
+ // of wall time. Exercise future-time rejection, then advance the test clock
+ // so the distinct rollback guard is actually reached.
+ const clock=t.mock.method(Date,'now',()=>Date.parse(later)-1);
+ await assert.rejects(prepareWeatherPartitionCandidate(process.cwd(),s),/Invalid weather bundle time/);
+ clock.mock.mockImplementation(()=>Date.parse(later)+1);
  await assert.rejects(prepareWeatherPartitionCandidate(process.cwd(),s),/older than published legacy/);
 });
