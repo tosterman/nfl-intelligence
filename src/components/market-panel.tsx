@@ -13,7 +13,7 @@ type Match = {
   kickoff: string | null;
   status: string;
 };
-function useClock(initial: number) {
+function useClock(initial: number, kickoff: string | null) {
   const [now, setNow] = useState(initial);
   useEffect(() => {
     const update = () => setNow(Date.now());
@@ -25,6 +25,23 @@ function useClock(initial: number) {
       document.removeEventListener("visibilitychange", update);
     };
   }, []);
+  useEffect(() => {
+    const deadline = Date.parse(kickoff ?? "");
+    if (!Number.isFinite(deadline)) return;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const checkDeadline = () => {
+      const current = Date.now();
+      const remaining = deadline - current;
+      if (remaining <= 0) {
+        setNow(current);
+        return;
+      }
+      // Long-lived tabs may initially be farther out than the browser timer limit.
+      timer = setTimeout(checkDeadline, Math.min(remaining, 2_147_483_647));
+    };
+    checkDeadline();
+    return () => clearTimeout(timer);
+  }, [kickoff]);
   return now;
 }
 const stamp = (value: string) => `${date(value)}, ${time(value)} ET`;
@@ -41,7 +58,7 @@ export function MarketCard({
   feed: OddsFeed;
   initialNow: number;
 }) {
-  const now = useClock(initialNow),
+  const now = useClock(initialNow, game.kickoff),
     assessment = assessGameOdds(feed, game, now),
     books = assessment.books;
   const book = defaultBook(books);
@@ -73,7 +90,7 @@ export function MarketPanel({
   feed: OddsFeed;
   initialNow: number;
 }) {
-  const now = useClock(initialNow),
+  const now = useClock(initialNow, game.kickoff),
     assessment = assessGameOdds(feed, game, now),
     books = assessment.books;
   const [selected, setSelected] = useState<string | null>(null);

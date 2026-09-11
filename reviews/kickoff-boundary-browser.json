@@ -1,0 +1,34 @@
+[
+  {
+    "engine": "chromium",
+    "surface": "detail",
+    "viewport": 320,
+    "pregameVisible100msBefore": true,
+    "closedAfterRenderWhileClockHeld100msAfter": true,
+    "pageErrors": []
+  },
+  {
+    "engine": "chromium",
+    "surface": "slate",
+    "viewport": 320,
+    "pregameVisible100msBefore": true,
+    "closedAfterRenderWhileClockHeld100msAfter": true,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "surface": "detail",
+    "viewport": 320,
+    "pregameVisible100msBefore": true,
+    "closedAfterRenderWhileClockHeld100msAfter": true,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "surface": "slate",
+    "viewport": 320,
+    "pregameVisible100msBefore": true,
+    "closedAfterRenderWhileClockHeld100msAfter": true,
+    "pageErrors": []
+  }
+]
