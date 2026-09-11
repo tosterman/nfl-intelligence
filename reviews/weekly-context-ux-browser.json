@@ -1,0 +1,16 @@
+[
+  {
+    "engine": "chromium",
+    "summary": "What changed this week?\nWeek 1 \u00b7 10 weather updates \u00b7 0 player-report updates \u00b7 0 comparable model revisions",
+    "firstRow": "Falcons at Steelers \u00b7 Weather \u2192\n\nWind 6 mph \u2192 7 mph \u00b7 Precipitation chance 8% \u2192 5%.\n\nForecast issued Sep 11 Fri 5:41 AM ET \u2192 Sep 11 Fri 12:41 PM ET",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "summary": "What changed this week?\nWeek 1 \u00b7 10 weather updates \u00b7 0 player-report updates \u00b7 0 comparable model revisions",
+    "firstRow": "Falcons at Steelers \u00b7 Weather \u2192\n\nWind 6 mph \u2192 7 mph \u00b7 Precipitation chance 8% \u2192 5%.\n\nForecast issued Sep 11 Fri 5:41 AM ET \u2192 Sep 11 Fri 12:41 PM ET",
+    "overflow": false,
+    "errors": []
+  }
+]

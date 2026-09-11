@@ -30,11 +30,20 @@ export function weatherBrief(history: WeatherHistory, record: WeatherRecord | un
   const comparison = weatherHistoryForGame(history, record, game);
   if (!comparison?.changed) return null;
   const [current, previous] = comparison.issues;
-  const fields = [ ['temperature', 'temperature'], ['temperatureUnit', 'temperature unit'],
-    ['windSpeed', 'wind speed'], ['windDirection', 'wind direction'],
-    ['precipitationProbability', 'precipitation chance'], ['summary', 'forecast description'] ] as const;
-  const changed = fields.filter(([key]) => (current[key] ?? null) !== (previous[key] ?? null)).map(([, label]) => label);
-  return { gameId: game.id, kind: 'weather', text: `Weather forecast changed: ${changed.join(', ')}.`,
+  const changed:string[]=[];
+  const value=(v:unknown)=>v===null||v===undefined||v===''?'Unavailable':String(v);
+  const temperature=(r:WeatherRecord)=>r.temperature===null||r.temperature===undefined?'Unavailable':`${r.temperature}°${r.temperatureUnit??' (unit unknown)'}`;
+  if((current.temperature??null)!==(previous.temperature??null)||(current.temperatureUnit??null)!==(previous.temperatureUnit??null))
+    changed.push(`Temperature ${temperature(previous)} → ${temperature(current)}`);
+  if((current.windSpeed??null)!==(previous.windSpeed??null))
+    changed.push(`Wind ${value(previous.windSpeed)} → ${value(current.windSpeed)}`);
+  if((current.windDirection??null)!==(previous.windDirection??null))
+    changed.push(`Wind direction ${value(previous.windDirection)} → ${value(current.windDirection)}`);
+  const precipitation=(v:number|null|undefined)=>v===null||v===undefined?'Unavailable':`${v}%`;
+  if((current.precipitationProbability??null)!==(previous.precipitationProbability??null))
+    changed.push(`Precipitation chance ${precipitation(previous.precipitationProbability)} → ${precipitation(current.precipitationProbability)}`);
+  if((current.summary??null)!==(previous.summary??null))changed.push('Forecast description changed; see game evidence');
+  return { gameId: game.id, kind: 'weather', text: `${changed.join(' · ')}.`,
     previousAt: previous.issuedAt!, currentAt: current.issuedAt!,
     expiresAt: Math.min(kickoff, Date.parse(record.issuedAt!) + 30 * 3600000, Date.parse(record.retrievedAt!) + 30 * 3600000) };
 }

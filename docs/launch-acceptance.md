@@ -31,9 +31,10 @@ https://nfl-intelligence-one.vercel.app.
   20:25:03 UTC boundary, followed by a fresh eligibility check. Follow
   `docs/publication-resume.md`; do not infer deployment from a Git push.
 
-The next locally actionable founding gap is a weekly briefing that includes
-verified personnel and weather changes alongside model revisions, with separate
-timestamps and no invented numerical effects. Actual audience comprehension,
+The weekly briefing now includes verified personnel and weather comparisons
+alongside model revisions, with separate timestamps, before/after weather values,
+expiry and no invented numerical effects. Local Chromium/WebKit checks at 320px
+passed; see `reviews/weekly-context-briefing.md`. Actual audience comprehension,
 prospective model evidence and the commercial gates below remain outstanding.
 
 Earlier release and credential-discovery notes have moved to

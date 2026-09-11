@@ -12,12 +12,14 @@ export function WeeklyChanges({ games, week, asOf, returnTo, briefing, contextBr
   const prepared = briefing ?? weeklyBriefing(games, asOf);
   const changes = prepared.changes;
   const comparable = changes.filter((row) => row.kind === "revision").length;
+  const weatherCount=context.filter(row=>row.kind==='weather').length;
+  const personnelCount=context.filter(row=>row.kind==='personnel').length;
   const available = changes.filter((row) => row.kind !== "unavailable");
   const unavailable = games.filter(game => prepared.unavailableIds.includes(game.id));
   const historyLink = (id: string) => `/games/${id}?from=${encodeURIComponent(returnTo ?? `/?week=${week}`)}#forecast-changes`;
   return (
     <details className="panel weekly-changes">
-      <summary>What changed this week? <span>Week {week} · {comparable} comparable {comparable === 1 ? "revision" : "revisions"}</span></summary>
+      <summary>What changed this week? <span>Week {week} · {weatherCount} weather {weatherCount===1?'update':'updates'} · {personnelCount} player-report {personnelCount===1?'update':'updates'} · {comparable} comparable model {comparable === 1 ? "revision" : "revisions"}</span></summary>
       <h3>Reported personnel & weather changes</h3>
       <p className="fine">Latest retained comparisons for upcoming games. These observations do not adjust the model. Unchanged or expired comparisons are omitted; no listed update does not establish that conditions are unchanged.</p>
       {!context.length && <p>No fresh, verified personnel or weather changes to summarize.</p>}

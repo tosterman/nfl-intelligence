@@ -26,7 +26,7 @@ const first:WeatherObservation={gameId:game.id,venue:game.venue,kickoff:game.kic
 const current={...first,issuedAt:'2026-09-11T12:00:00Z',retrievedAt:'2026-09-11T13:00:00Z',temperature:73,hash:'two',sourceHash:'two'};
 test('weather summary compares issued forecasts, excludes repeated values, closes on expiry and kickoff',()=>{
   const history={schemaVersion:1,records:[first,current]};
-  assert.match(weatherBrief(history,current,game,now)!.text,/temperature/);
+  assert.match(weatherBrief(history,current,game,now)!.text,/Temperature 70°F → 73°F/);
   assert.equal(weatherBrief(history,current,game,now+31*3600000),null);
   assert.equal(weatherBrief(history,current,game,now-2*3600000),null);
   assert.equal(weatherBrief(history,current,{...game,venue:'Other'},now),null);
@@ -41,5 +41,6 @@ test('briefing links retain slate state and expired rows cannot render as curren
   const render=(asOf:number)=>renderToStaticMarkup(createElement(WeeklyChanges,{games:[game],week:1,asOf,returnTo,contextBriefs:[row],briefing:{changes:[],unavailableIds:[]}}));
   assert.ok(render(now).includes(`${encodeURIComponent(returnTo)}#personnel-reports`));
   assert.match(render(now),/Underlying report times are unknown/);
+  assert.match(render(now),/0 weather updates · 1 player-report update · 0 comparable model revisions/);
   assert.doesNotMatch(render(row.expiresAt),/1 player entry changed/);
 });
