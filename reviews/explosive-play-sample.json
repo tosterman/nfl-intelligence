@@ -1,0 +1,87 @@
+{
+  "gameId": "2025_01_ARI_NO",
+  "dictionary": {
+    "path": "data/pbp-sources/137f3c1ae4794e2a1a4bc55ac543d807d36c6c3c24c8088e0489dd7a5c156f33-dictionary.csv",
+    "sha256": "137f3c1ae4794e2a1a4bc55ac543d807d36c6c3c24c8088e0489dd7a5c156f33"
+  },
+  "teams": {
+    "ARI": {
+      "pass": {
+        "denominator": 34,
+        "numerator": 2,
+        "explosivePlays": [
+          {
+            "play_id": "1188",
+            "yards_gained": "45",
+            "desc": "(13:41) (Shotgun) 1-K.Murray pass deep right to 18-M.Harrison ran ob at NO 14 for 45 yards (4-K.McKinstry)."
+          },
+          {
+            "play_id": "1928",
+            "yards_gained": "25",
+            "desc": "(2:07) (Shotgun) 1-K.Murray pass short middle to 85-T.McBride to NO 20 for 25 yards (23-J.Blackmon; 4-K.McKinstry)."
+          }
+        ]
+      },
+      "run": {
+        "denominator": 27,
+        "numerator": 4,
+        "explosivePlays": [
+          {
+            "play_id": "359",
+            "yards_gained": "13",
+            "desc": "(10:06) (No Huddle, Shotgun) 1-K.Murray scrambles right end ran ob at NO 48 for 13 yards (21-J.Reid)."
+          },
+          {
+            "play_id": "506",
+            "yards_gained": "12",
+            "desc": "(7:22) (Shotgun) 6-J.Conner up the middle to NO 27 for 12 yards (21-J.Reid; 58-C.Rumph)."
+          },
+          {
+            "play_id": "2396",
+            "yards_gained": "52",
+            "desc": "(11:45) 33-T.Benson right end to NO 30 for 52 yards (96-C.Granderson)."
+          },
+          {
+            "play_id": "3449",
+            "yards_gained": "11",
+            "desc": "(10:52) (Shotgun) 1-K.Murray scrambles left end ran ob at ARI 40 for 11 yards (58-C.Rumph)."
+          }
+        ]
+      }
+    },
+    "NO": {
+      "pass": {
+        "denominator": 45,
+        "numerator": 1,
+        "explosivePlays": [
+          {
+            "play_id": "3961",
+            "yards_gained": "21",
+            "desc": "(4:16) (No Huddle, Shotgun) 2-S.Rattler pass deep left to 83-J.Johnson to ARI 37 for 21 yards (42-D.Taylor-Demerson)."
+          }
+        ]
+      },
+      "run": {
+        "denominator": 22,
+        "numerator": 3,
+        "explosivePlays": [
+          {
+            "play_id": "815",
+            "yards_gained": "10",
+            "desc": "(3:13) (Shotgun) 5-K.Miller left guard to ARI 44 for 10 yards (21-G.Williams; 2-Ma.Wilson)."
+          },
+          {
+            "play_id": "1101",
+            "yards_gained": "18",
+            "desc": "(14:26) (No Huddle, Shotgun) 41-A.Kamara right guard for 18 yards, TOUCHDOWN."
+          },
+          {
+            "play_id": "4044",
+            "yards_gained": "12",
+            "desc": "(3:24) (Shotgun) 2-S.Rattler scrambles up the middle to ARI 7 for 12 yards (2-Ma.Wilson). PENALTY on ARI-16-M.Melton, Defensive Holding, 4 yards, enforced at ARI 7."
+          }
+        ]
+      }
+    }
+  }
+}

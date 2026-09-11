@@ -1,0 +1,24 @@
+{
+  "season": 2025,
+  "cutoff": "2026-09-09",
+  "retainedAt": "2026-09-11T13:02:54.997256+00:00",
+  "plays": {
+    "path": "data/pbp-sources/2f135887790a013fd004e609e37096bb4816d5cc80b9f19122e1bad478961978.csv.gz",
+    "sha256": "2f135887790a013fd004e609e37096bb4816d5cc80b9f19122e1bad478961978",
+    "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2025.csv.gz"
+  },
+  "schedule": {
+    "path": "data/pbp-sources/00c1e3896ee5c8b1d929ef738ed301ca08b5b030056cd3f0879c4246ff86f22e.csv.gz",
+    "sha256": "00c1e3896ee5c8b1d929ef738ed301ca08b5b030056cd3f0879c4246ff86f22e",
+    "originalSource": {
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv",
+      "sha256": "940ed9189dda64a784b8c9beea0e66786c83a05592bb72151f961d0f2cb2d1c0",
+      "retrievedAt": "2026-09-10T23:28:58.561745+00:00",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md"
+    }
+  },
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://github.com/nflverse/nflverse-data/blob/main/LICENSE.md",
+  "dictionaryUrl": "https://raw.githubusercontent.com/nflverse/nflreadr/main/data-raw/dictionary_pbp.csv"
+}
