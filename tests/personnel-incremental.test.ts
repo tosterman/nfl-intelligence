@@ -30,9 +30,10 @@ test('incremental package binds accepted capture and pinned inputs before public
     const prior=encode({schemaVersion:1,kind:'personnel-publication',generatedAt,presentation,archive,previous:null});
     const pointer=Buffer.from(JSON.stringify({schemaVersion:1,generatedAt,publication:prior}));
     const store={read:async(name:string)=>{const body=name==='personnel/latest.json'?pointer:objects.get(name.split('/').at(-1)!);return body?{body,etag:'test'}:null;}};
-    async function prepare(change:'none'|'pin'|'capture'|'previous'|'history'){
+    async function prepare(change:'none'|'pin'|'capture'|'previous'|'history'|'degraded'){
       const proof=encode({mode:'recurring',previousPublication:prior,previousCapture:change==='capture'?'a'.repeat(64):capture,
-        transitionReplayed:true,inputsUnchanged:true});
+        transitionReplayed:true,inputsUnchanged:true,
+        ...(change==='degraded'?{derivationFailure:'identity-audit',derivedUsageWithheld:true,steps:[]}:{} )});
       const nextArchive:typeof archive={...archive,'reviews/personnel-replay-proof.json':proof};
       if(change==='pin')nextArchive['data/games.csv']=retain(Buffer.from('changed'));
       if(change==='history')nextArchive['data/personnel-changes.json']=encode({...staticPersonnelEvidence.history,previousRetrievedAt:'2000-01-01T00:00:00Z'});
@@ -48,5 +49,6 @@ test('incremental package binds accepted capture and pinned inputs before public
     await assert.rejects(prepare('capture'),/capture/);
     await assert.rejects(prepare('previous'),/predecessor/);
     await assert.rejects(prepare('history'),/preserve accepted history/);
+    await assert.rejects(prepare('degraded'),/must withhold derived usage/);
   }finally{await rm(directory,{recursive:true,force:true});}
 });

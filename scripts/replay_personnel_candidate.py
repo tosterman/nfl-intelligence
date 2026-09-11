@@ -24,6 +24,21 @@ def verify_output(actual,expected):
         raise ValueError('Personnel replay output differs')
 
 
+def validate_degraded_report(report):
+    from refresh_personnel_worker import DERIVATIONS
+    steps=report.get('derivations')
+    if not isinstance(steps,list) or not 1<=len(steps)<=len(DERIVATIONS):
+        raise ValueError('Failed derivation evidence required')
+    for index,step in enumerate(steps):
+        code=step.get('exitCode')
+        if (step.get('step')!=DERIVATIONS[index][0] or type(code) is not int or
+                (code!=0 if index<len(steps)-1 else code==0)):
+            raise ValueError('Failed derivation sequence differs')
+    if report.get('derivationFailure')!=DERIVATIONS[len(steps)-1][1]:
+        raise ValueError('Failed derivation classification differs')
+    return report['derivationFailure']
+
+
 def candidate_files(root,recurring=False):
     files=list((root/'data').rglob('*.json'))+list((root/'data').rglob('*.csv'))+list((root/'data').rglob('*.gz'))
     files += [root/'reviews'/name for name in REVIEWS if not recurring or name!='personnel-change-ledger.json']
@@ -65,10 +80,10 @@ else:
 def replay(root,recurring=False):
     root=Path(root).resolve()
     original=candidate_files(root,recurring)
+    failure=None
     if recurring:
         report=json.loads(original['reviews/personnel-refresh-report.json'])
-        if report['derivationFailure'] is not None:
-            raise ValueError('Degraded refresh requires separate failure replay')
+        if report['derivationFailure'] is not None:failure=validate_degraded_report(report)
     parent=ROOT/'release-recovery';parent.mkdir(exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='personnel-replay-',dir=parent) as name:
         target=Path(name).resolve()
@@ -89,7 +104,7 @@ def replay(root,recurring=False):
                     verify_output((target/relative).read_bytes(),original[relative])
                     (target/relative).write_bytes(original[relative])
         completed=[]
-        for module,output,clock,other in (STEPS[1:] if recurring else STEPS):
+        for module,output,clock,other in (() if failure else STEPS[1:] if recurring else STEPS):
             expected=original[output]
             at=json.loads(expected)[clock] if clock else ''
             result=subprocess.run([sys.executable,'-c',CHILD,str(target),module,at],
@@ -110,6 +125,7 @@ def replay(root,recurring=False):
                                     for name,raw in original.items()},'inputsUnchanged':True,'quarterbackRolesReplayed':True}
     if recurring:proof.update({'mode':'recurring','previousPublication':report['previousPublication'],
         'previousCapture':report['previousCapture'],'transitionReplayed':True,
+        'derivationFailure':failure,'derivedUsageWithheld':failure is not None,
         'checkerHashes':{name:hashlib.sha256((ROOT/'scripts'/name).read_bytes()).hexdigest()
                         for name in ('replay_personnel_candidate.py','refresh_personnel_worker.py')}})
     return proof

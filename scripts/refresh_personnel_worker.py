@@ -15,6 +15,8 @@ COLLECTORS=(('refresh_personnel.py','personnel.json','personnel-collection.json'
             ('refresh_participation.py','participation-source.json','participation-collection.json','failed'))
 DERIVATIONS=(('audit_personnel_identity.py','identity-audit'),('audit_player_usage.py','historical-usage'),
              ('build_public_usage.py','historical-usage'),('build_season_participation.py','current-participation'))
+DERIVED_FILES=('reviews/personnel-identity-audit.json','reviews/player-usage-audit.json',
+               'data/player-usage.json','data/season-participation.json')
 
 
 def run(root,script):
@@ -44,10 +46,13 @@ def collect(root,runner=run):
 
 
 def derive(root,runner=run):
+    original={name:(root/name).read_bytes() for name in DERIVED_FILES}
     results=[]
     for script,failure in DERIVATIONS:
         code=runner(root,script);results.append({'step':script,'exitCode':code})
-        if code:return failure,results
+        if code:
+            for name,raw in original.items():(root/name).write_bytes(raw)
+            return failure,results
     return None,results
 
 

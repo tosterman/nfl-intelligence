@@ -20,6 +20,9 @@ export async function preparePersonnelIncremental(directory:string,store:Pick<Pe
   const prior=JSON.parse(gunzipSync(await readPersonnelArchiveObject(store,current.root,capturePath),{maxOutputLength:10_000_000}).toString());
   if(!isDeepStrictEqual(prior,current.presentation.evidence.snapshot))throw Error('Transition predecessor differs from accepted reports');
   const next=JSON.parse(input.objects.get(root.presentation.sha256)?.toString()??'null');
+  if(proof.derivationFailure&&(proof.derivedUsageWithheld!==true||!Array.isArray(proof.steps)||proof.steps.length||
+    next?.derivation?.status!=='unavailable'||next?.evidence?.historical!==null||next?.evidence?.current!==null))
+    throw Error('Degraded personnel publication must withhold derived usage');
   const nextSnapshot=JSON.parse(input.objects.get(root.archive['data/personnel.json']?.sha256)?.toString()??'null');
   if(!nextSnapshot||!isDeepStrictEqual(nextSnapshot,next?.evidence?.snapshot))throw Error('Candidate report snapshot differs from presentation');
   if(isDeepStrictEqual(nextSnapshot,prior)){

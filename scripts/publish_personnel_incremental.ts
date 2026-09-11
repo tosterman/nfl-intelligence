@@ -7,6 +7,9 @@ async function main(){
   const [directory,mode,...extra]=process.argv.slice(2);
   if(!directory||(mode!==undefined&&mode!=='--publish')||extra.length)throw Error('Usage: package-directory [--publish]');
   const {input,previous}=await preparePersonnelIncremental(directory,personnelBlobStore);
+  const root=JSON.parse(input.objects.get(input.publication.sha256)!.toString());
+  const refresh=JSON.parse(input.objects.get(root.archive['reviews/personnel-refresh-report.json']?.sha256)?.toString()??'null');
+  if(!refresh||refresh.simulation)throw Error('Only actual refresh candidates can use the publication CLI');
   const result=mode==='--publish'?await publishPersonnelObjects(input,personnelBlobStore,previous):null;
   const report={checkedAt:new Date().toISOString(),mode:mode==='--publish'?'published':'predecessor-check',
     publication:input.publication,previous,result,scope:'Private personnel publication; live reader and scheduler require separate verification'};

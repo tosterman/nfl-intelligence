@@ -1,0 +1,15 @@
+{
+  "simulation": true,
+  "result": {
+    "publication": {
+      "bytes": 54543,
+      "sha256": "bd3bff5f440d7d7f46feef2ca02f1ed071c98d7c3a41a6733cb93583e9858204"
+    },
+    "uploaded": 11,
+    "reused": 318
+  },
+  "priorArchivePreserved": true,
+  "derivedUsageWithheld": true,
+  "restoredFiles": 321,
+  "scope": "In-memory simulated outage transaction and next restore; no private Blob or public site writes"
+}

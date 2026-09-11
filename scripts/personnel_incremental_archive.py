@@ -3,7 +3,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
-from replay_personnel_candidate import candidate_files,STEPS
+from replay_personnel_candidate import candidate_files,STEPS,validate_degraded_report
 from personnel_archive import verify_inventory,encode
 from personnel_presentation import assemble,FILES
 
@@ -11,18 +11,22 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 def build(root,proof):
-    if (proof.get('mode')!='recurring' or proof.get('steps')!=[s[0] for s in STEPS[1:]]
+    failure=proof.get('derivationFailure')
+    if (proof.get('mode')!='recurring' or proof.get('steps')!=([] if failure else [s[0] for s in STEPS[1:]])
             or any(proof.get(key) is not True for key in ('inputsUnchanged','quarterbackRolesReplayed','transitionReplayed'))):
         raise ValueError('Complete recurring replay required')
     if set(proof.get('checkerHashes',{}))!={'replay_personnel_candidate.py','refresh_personnel_worker.py'}:
         raise ValueError('Complete replay checker identities required')
     files=candidate_files(root,True);verify_inventory(files,proof['files'])
     report=json.loads(files['reviews/personnel-refresh-report.json'])
+    if failure:
+        if validate_degraded_report(report)!=failure or proof.get('derivedUsageWithheld') is not True:
+            raise ValueError('Degraded publication evidence differs')
     if (report['previousPublication']!=proof['previousPublication'] or report['previousCapture']!=proof['previousCapture']
-            or report['derivationFailure'] is not None):raise ValueError('Refresh predecessor differs')
+            or report['derivationFailure']!=failure):raise ValueError('Refresh predecessor differs')
     inputs={name:files['data/'+name] for name in (*FILES,'games.csv')}
     inputs['identityAudit']=files['reviews/personnel-identity-audit.json']
-    presentation=assemble(inputs)
+    presentation=assemble(inputs,derivation_failure=failure)
     retained={**files,'reviews/personnel-replay-proof.json':encode(proof)}
     for name in ('replay_personnel_candidate.py','refresh_personnel_worker.py','personnel_incremental_archive.py','personnel_presentation.py','personnel_archive.py'):
         raw=(ROOT/'scripts'/name).read_bytes()

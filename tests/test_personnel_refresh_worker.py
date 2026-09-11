@@ -8,7 +8,7 @@ import unittest
 from unittest.mock import patch
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from refresh_personnel_worker import collect,derive,replay_sources,COLLECTORS
+from refresh_personnel_worker import collect,derive,replay_sources,COLLECTORS,DERIVED_FILES
 
 
 class PersonnelRefreshTests(unittest.TestCase):
@@ -49,9 +49,18 @@ class PersonnelRefreshTests(unittest.TestCase):
                 self.assertEqual(json.loads((root/'data'/state).read_bytes())['status'],failure)
 
     def test_first_failed_derivation_stops_dependent_steps(self):
-        calls=[]
-        def failure(root,script):calls.append(script);return 1
-        kind,results=derive(Path('.'),failure)
-        self.assertEqual(kind,'identity-audit')
-        self.assertEqual(calls,['audit_personnel_identity.py'])
-        self.assertEqual(results[0]['exitCode'],1)
+        with tempfile.TemporaryDirectory(prefix='nfl-derived-test-') as folder:
+            root=Path(folder)
+            for name in DERIVED_FILES:
+                (root/name).parent.mkdir(parents=True,exist_ok=True)
+                (root/name).write_bytes(b'original')
+            calls=[]
+            def failure(root,script):
+                calls.append(script)
+                for name in DERIVED_FILES:(root/name).write_bytes(b'')
+                return 1
+            kind,results=derive(root,failure)
+            self.assertEqual(kind,'identity-audit')
+            self.assertEqual(calls,['audit_personnel_identity.py'])
+            self.assertEqual(results[0]['exitCode'],1)
+            for name in DERIVED_FILES:self.assertEqual((root/name).read_bytes(),b'original')

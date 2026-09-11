@@ -356,3 +356,25 @@ cache refresh, without a build. The before/after evidence is retained in
 `reviews/personnel-incremental-local-readback.json`, and the immutable write
 result is in `reviews/personnel-incremental-publication.json`. Public deployment
 and real scheduled operation remain unverified.
+
+## Degraded refresh publication
+
+The failure path now restores all four original derived output files when a
+calculation fails, including interruption after partial writes. This preserves
+valid diagnostic inputs for a subsequent refresh. Both usage views are withheld
+in the degraded presentation; restored old calculations are not shown as new.
+
+The verifier requires an ordered attempt sequence ending in a nonzero exit and
+the matching failure category. It verifies raw sources and report transitions,
+but records zero derived steps replayed: it makes no claim that an interrupted
+calculation reproduced a result. The packager emits explicit unavailable usage,
+and publication preparation rejects degraded proof that exposes derived usage.
+
+An isolated simulated all-feed timeout and identity-audit failure passed source
+verification, packaging, an in-memory successor publication and a new restore.
+It preserved the original source dates and all prior archive objects; the next
+restore selected 321 files. See `reviews/personnel-failure-rehearsal.json` and
+`reviews/personnel-failure-memory-publication.json`. The publication CLI rejects
+simulation-marked candidates. No simulated failure was written to private Blob
+or presented as a real provider outage. Sixteen targeted Python tests and six
+transaction/incremental tests passed. Real scheduled operation remains required.
