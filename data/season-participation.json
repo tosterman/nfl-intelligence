@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "calculatedAt": "2026-09-11T20:10:31.127341+00:00",
-  "personnelSourceHash": "96dcc98e297a38ecb8edcc7ab8864260b2899e24604f60c2a9514498ea53c2fb",
-  "personnelRetrievedAt": "2026-09-10T20:24:24.691947+00:00",
+  "calculatedAt": "2026-09-11T20:39:28.025210+00:00",
+  "personnelSourceHash": "cd7338473dd852d02c6986663addb31431609946fa8756d0460bf2e98d3501a9",
+  "personnelRetrievedAt": "2026-09-11T20:39:23.236800+00:00",
   "sourceSeason": 2026,
   "sourceHash": "f4dfe061f01ab8153f4bb2e8cc7ecf23c7d8c7f6d03f62be2f156365952c4445",
-  "sourceRetrievedAt": "2026-09-11T16:32:22.408320+00:00",
+  "sourceRetrievedAt": "2026-09-11T20:39:27.874138+00:00",
   "sourceUrl": "https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2026.csv",
   "collectionStatus": "current",
   "inputHashes": {
-    "personnel": "c09a41625e884270e9e0469cd40d802d45b9045e3e350f023f71d1d2ef0db5f8",
-    "schedule": "0318c13c2cd2568d7c09bfc72fcdbe2c5de2d8f2caea5b80d425a89d36a5ca51",
-    "identity": "06ad73dc09b855b62a3ed5c64affc65f40f9c2d96b9739d8950c93d16c7f5ab7",
+    "personnel": "8a62b6331aaf41066638b62ef10a09028e347cb6f668f65a4632c18e58d82b74",
+    "schedule": "b03b033bc3b552b0c0db35c24c0c5a7c2e5f2237179dbad4dd44175b4f5c4ed1",
+    "identity": "05f742acd5ae5c837fdeef0cfb65ea9e8b3de927639f2e072bb791d3d01f341e",
     "registry": "c2402e02d39c7ca1adbd9ca5c894bb11f693ab01da0721bff44db2a8bd1ea53d"
   },
   "records": [
@@ -240,6 +240,90 @@
       }
     },
     {
+      "playerId": "00-0034371",
+      "name": "Da'Shawn Hand",
+      "team": "ATL",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0035237",
+      "name": "Jawaan Taylor",
+      "team": "ATL",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036212",
+      "name": "Tua Tagovailoa",
+      "team": "ATL",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
       "playerId": "00-0036354",
       "name": "Kyle Hinton",
       "team": "ATL",
@@ -354,6 +438,34 @@
     {
       "playerId": "00-0041044",
       "name": "Zachariah Branch",
+      "team": "ATL",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041066",
+      "name": "Kendal Daniels",
       "team": "ATL",
       "season": 2026,
       "type": "REG",
@@ -660,6 +772,90 @@
       }
     },
     {
+      "playerId": "00-0031583",
+      "name": "Grady Jarrett",
+      "team": "CHI",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0032391",
+      "name": "Joe Thuney",
+      "team": "CHI",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0033579",
+      "name": "Xavier Woods",
+      "team": "CHI",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
       "playerId": "00-0038416",
       "name": "Tyson Bagent",
       "team": "CHI",
@@ -744,6 +940,62 @@
       }
     },
     {
+      "playerId": "00-0033523",
+      "name": "Jonathan Allen",
+      "team": "CIN",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0034800",
+      "name": "B.J. Hill",
+      "team": "CIN",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
       "playerId": "00-0036410",
       "name": "Tee Higgins",
       "team": "CIN",
@@ -774,6 +1026,34 @@
     {
       "playerId": "00-0036900",
       "name": "Ja'Marr Chase",
+      "team": "CIN",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0038549",
+      "name": "DJ Turner II",
       "team": "CIN",
       "season": 2026,
       "type": "REG",
@@ -968,9 +1248,65 @@
       }
     },
     {
+      "playerId": "00-0038547",
+      "name": "Luke Schoonmaker",
+      "team": "DAL",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
       "playerId": "00-0040017",
       "name": "Ajani Cornelius",
       "team": "DAL",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0038976",
+      "name": "Marvin Mims Jr.",
+      "team": "DEN",
       "season": 2026,
       "type": "REG",
       "week": 1,
@@ -1472,6 +1808,34 @@
       }
     },
     {
+      "playerId": "00-0039108",
+      "name": "Will Anderson Jr.",
+      "team": "HOU",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
       "playerId": "00-0041440",
       "name": "Kayden McDonald",
       "team": "HOU",
@@ -1503,6 +1867,34 @@
       "playerId": "00-0041465",
       "name": "Wade Woodaz",
       "team": "HOU",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0033952",
+      "name": "Grover Stewart",
+      "team": "IND",
       "season": 2026,
       "type": "REG",
       "week": 1,
@@ -1565,6 +1957,17 @@
           "reason": "No eligible historical appearances"
         }
       }
+    },
+    {
+      "playerId": "00-0039164",
+      "name": "Anthony Richardson",
+      "team": "IND",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "name-variant",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": null
     },
     {
       "playerId": "00-0039876",
@@ -1682,6 +2085,286 @@
       "playerId": "00-0040238",
       "name": "LeQuint Allen Jr.",
       "team": "JAX",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0033873",
+      "name": "Patrick Mahomes",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036374",
+      "name": "L'Jarius Sneed",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036660",
+      "name": "Trey Smith",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0037208",
+      "name": "Jack Cochrane",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0038982",
+      "name": "Chamarri Conner",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039067",
+      "name": "Rashee Rice",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0039894",
+      "name": "Xavier Worthy",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040116",
+      "name": "Josh Simmons",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0040640",
+      "name": "Ashton Gillotte",
+      "team": "KC",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0041501",
+      "name": "R Mason Thomas",
+      "team": "KC",
       "season": 2026,
       "type": "REG",
       "week": 1,
@@ -2347,6 +3030,34 @@
     {
       "playerId": "00-0027962",
       "name": "Cameron Jordan",
+      "team": "NO",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0033860",
+      "name": "Davon Godchaux",
       "team": "NO",
       "season": 2026,
       "type": "REG",
@@ -3627,6 +4338,34 @@
       }
     },
     {
+      "playerId": "00-0034333",
+      "name": "Daron Payne",
+      "team": "WAS",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
       "playerId": "00-0035149",
       "name": "Nick Allegretti",
       "team": "WAS",
@@ -3657,6 +4396,34 @@
     {
       "playerId": "00-0035279",
       "name": "Charles Omenihu",
+      "team": "WAS",
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "identityStatus": "matched",
+      "cutoff": "2026-09-10T00:20:00+00:00",
+      "usage": {
+        "season": 2026,
+        "type": "REG",
+        "week": 1,
+        "cutoff": "2026-09-10T00:20:00+00:00",
+        "overall": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "currentTeam": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        },
+        "formerTeams": {
+          "status": "unavailable",
+          "reason": "No eligible historical appearances"
+        }
+      }
+    },
+    {
+      "playerId": "00-0036260",
+      "name": "Javon Kinlaw",
       "team": "WAS",
       "season": 2026,
       "type": "REG",

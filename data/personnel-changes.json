@@ -1,7 +1,1611 @@
 {
   "schemaVersion": 1,
-  "sourceHash": "96dcc98e297a38ecb8edcc7ab8864260b2899e24604f60c2a9514498ea53c2fb",
-  "retrievedAt": "2026-09-10T20:24:24.691947+00:00",
-  "previousRetrievedAt": "2026-09-10T20:09:09.897337+00:00",
-  "changes": []
+  "sourceHash": "cd7338473dd852d02c6986663addb31431609946fa8756d0460bf2e98d3501a9",
+  "retrievedAt": "2026-09-11T20:39:23.236800+00:00",
+  "previousRetrievedAt": "2026-09-10T20:24:24.691947+00:00",
+  "changes": [
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "ARI",
+      "playerId": "00-0034381",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Josh Sweat",
+      "position": "LB",
+      "fields": {
+        "practiceStatus": {
+          "before": "Did Not Participate In Practice",
+          "after": "Limited Participation in Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "ARI",
+      "playerId": "00-0039864",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Dadrion Taylor-Demerson",
+      "position": "S",
+      "fields": {
+        "practiceStatus": {
+          "before": "Limited Participation in Practice",
+          "after": "Did Not Participate In Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "ATL",
+      "playerId": "00-0031576",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Za'Darius Smith",
+      "position": "DE",
+      "fields": {
+        "practiceStatus": {
+          "before": "Limited Participation in Practice",
+          "after": "Did Not Participate In Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "ATL",
+      "playerId": "00-0034371",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Da'Shawn Hand",
+      "position": "DT",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Da'Shawn Hand"
+        },
+        "position": {
+          "before": null,
+          "after": "DT"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Limited Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Knee"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "ATL",
+      "playerId": "00-0035237",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Jawaan Taylor",
+      "position": "T",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Jawaan Taylor"
+        },
+        "position": {
+          "before": null,
+          "after": "T"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Did Not Participate In Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Knee"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "ATL",
+      "playerId": "00-0036212",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Tua Tagovailoa",
+      "position": "QB",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Tua Tagovailoa"
+        },
+        "position": {
+          "before": null,
+          "after": "QB"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Limited Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Oblique"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "ATL",
+      "playerId": "00-0036354",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Kyle Hinton",
+      "position": "G",
+      "fields": {
+        "practiceStatus": {
+          "before": "Limited Participation in Practice",
+          "after": "Full Participation in Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "ATL",
+      "playerId": "00-0041066",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Kendal Daniels",
+      "position": "LB",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Kendal Daniels"
+        },
+        "position": {
+          "before": null,
+          "after": "LB"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Limited Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Achilles"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "BAL",
+      "playerId": "00-0039064",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Zay Flowers",
+      "position": "WR",
+      "fields": {
+        "practiceStatus": {
+          "before": "Limited Participation in Practice",
+          "after": "Full Participation in Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "BUF",
+      "playerId": "00-0040192",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Jordan Hancock",
+      "position": "CB",
+      "fields": {
+        "practiceStatus": {
+          "before": "Did Not Participate In Practice",
+          "after": "Limited Participation in Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "BUF",
+      "playerId": "00-0040724",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "T.J. Sanders",
+      "position": "DE",
+      "fields": {
+        "practiceStatus": {
+          "before": "Limited Participation in Practice",
+          "after": "Did Not Participate In Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "CAR",
+      "playerId": "00-0036903",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Bobby Brown III",
+      "position": "DT",
+      "fields": {
+        "practiceStatus": {
+          "before": "Limited Participation in Practice",
+          "after": "Full Participation in Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "CHI",
+      "playerId": "00-0031583",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Grady Jarrett",
+      "position": "DT",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Grady Jarrett"
+        },
+        "position": {
+          "before": null,
+          "after": "DT"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Did Not Participate In Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Not injury related - resting player"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "CHI",
+      "playerId": "00-0032391",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Joe Thuney",
+      "position": "G",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Joe Thuney"
+        },
+        "position": {
+          "before": null,
+          "after": "G"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Did Not Participate In Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Not injury related - resting player"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "CHI",
+      "playerId": "00-0033579",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Xavier Woods",
+      "position": "S",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Xavier Woods"
+        },
+        "position": {
+          "before": null,
+          "after": "S"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Limited Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Groin"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "CIN",
+      "playerId": "00-0033523",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Jonathan Allen",
+      "position": "DT",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Jonathan Allen"
+        },
+        "position": {
+          "before": null,
+          "after": "DT"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Did Not Participate In Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Not injury related - resting player"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "CIN",
+      "playerId": "00-0034800",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "B.J. Hill",
+      "position": "DT",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "B.J. Hill"
+        },
+        "position": {
+          "before": null,
+          "after": "DT"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Limited Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Not injury related - resting player"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "CIN",
+      "playerId": "00-0038549",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "DJ Turner II",
+      "position": "CB",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "DJ Turner II"
+        },
+        "position": {
+          "before": null,
+          "after": "CB"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Limited Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Hamstring"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "CIN",
+      "playerId": "00-0040756",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Shemar Stewart",
+      "position": "DE",
+      "fields": {
+        "practiceStatus": {
+          "before": "Full Participation in Practice",
+          "after": "Limited Participation in Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "CLE",
+      "playerId": "00-0036953",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Teven Jenkins",
+      "position": "G",
+      "fields": {
+        "practiceStatus": {
+          "before": "Limited Participation in Practice",
+          "after": "Did Not Participate In Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "DAL",
+      "playerId": "00-0038547",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Luke Schoonmaker",
+      "position": "TE",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Luke Schoonmaker"
+        },
+        "position": {
+          "before": null,
+          "after": "TE"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Did Not Participate In Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Not injury related - personal matter"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "DEN",
+      "playerId": "00-0038976",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Marvin Mims Jr.",
+      "position": "WR",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Marvin Mims Jr."
+        },
+        "position": {
+          "before": null,
+          "after": "WR"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Full Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Foot"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "GB",
+      "playerId": "00-0039904",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Jordan Morgan",
+      "position": "T",
+      "fields": {
+        "practiceStatus": {
+          "before": "Limited Participation in Practice",
+          "after": "Full Participation in Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "HOU",
+      "playerId": "00-0039108",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Will Anderson Jr.",
+      "position": "DE",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Will Anderson Jr."
+        },
+        "position": {
+          "before": null,
+          "after": "DE"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Did Not Participate In Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Not injury related - resting player"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "HOU",
+      "playerId": "00-0041440",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Kayden McDonald",
+      "position": "DT",
+      "fields": {
+        "practiceStatus": {
+          "before": "Limited Participation in Practice",
+          "after": "Did Not Participate In Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "IND",
+      "playerId": "00-0033952",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Grover Stewart",
+      "position": "DT",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Grover Stewart"
+        },
+        "position": {
+          "before": null,
+          "after": "DT"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Did Not Participate In Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Not injury related - resting player"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "IND",
+      "playerId": "00-0037292",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Andrew Ogletree",
+      "position": "TE",
+      "fields": {
+        "practiceStatus": {
+          "before": "Limited Participation in Practice",
+          "after": "Full Participation in Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "IND",
+      "playerId": "00-0039164",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Anthony Richardson",
+      "position": "QB",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Anthony Richardson"
+        },
+        "position": {
+          "before": null,
+          "after": "QB"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Full Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Illness"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "IND",
+      "playerId": "00-0039876",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Sedrick Van Pran-Granger",
+      "position": "C",
+      "fields": {
+        "practiceStatus": {
+          "before": "Limited Participation in Practice",
+          "after": "Full Participation in Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "IND",
+      "playerId": "00-0041043",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "A.J. Haulcy",
+      "position": "S",
+      "fields": {
+        "practiceStatus": {
+          "before": "Limited Participation in Practice",
+          "after": "Full Participation in Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "JAX",
+      "playerId": "00-0040238",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "LeQuint Allen Jr.",
+      "position": "RB",
+      "fields": {
+        "practiceStatus": {
+          "before": "Did Not Participate In Practice",
+          "after": "Limited Participation in Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "KC",
+      "playerId": "00-0033873",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Patrick Mahomes",
+      "position": "QB",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Patrick Mahomes"
+        },
+        "position": {
+          "before": null,
+          "after": "QB"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Full Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Knee"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "KC",
+      "playerId": "00-0036374",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "L'Jarius Sneed",
+      "position": "CB",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "L'Jarius Sneed"
+        },
+        "position": {
+          "before": null,
+          "after": "CB"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Full Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Knee"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "KC",
+      "playerId": "00-0036660",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Trey Smith",
+      "position": "G",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Trey Smith"
+        },
+        "position": {
+          "before": null,
+          "after": "G"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Full Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Hip"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "KC",
+      "playerId": "00-0037208",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Jack Cochrane",
+      "position": "LB",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Jack Cochrane"
+        },
+        "position": {
+          "before": null,
+          "after": "LB"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Full Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Knee"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "KC",
+      "playerId": "00-0038982",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Chamarri Conner",
+      "position": "S",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Chamarri Conner"
+        },
+        "position": {
+          "before": null,
+          "after": "S"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Did Not Participate In Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Knee"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "KC",
+      "playerId": "00-0039067",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Rashee Rice",
+      "position": "WR",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Rashee Rice"
+        },
+        "position": {
+          "before": null,
+          "after": "WR"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Full Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Knee"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "KC",
+      "playerId": "00-0039894",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Xavier Worthy",
+      "position": "WR",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Xavier Worthy"
+        },
+        "position": {
+          "before": null,
+          "after": "WR"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Full Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Shoulder"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "KC",
+      "playerId": "00-0040116",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Josh Simmons",
+      "position": "T",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Josh Simmons"
+        },
+        "position": {
+          "before": null,
+          "after": "T"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Did Not Participate In Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Back"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "KC",
+      "playerId": "00-0040640",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Ashton Gillotte",
+      "position": "DE",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Ashton Gillotte"
+        },
+        "position": {
+          "before": null,
+          "after": "DE"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Full Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Foot"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "KC",
+      "playerId": "00-0041501",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "R Mason Thomas",
+      "position": "DE",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "R Mason Thomas"
+        },
+        "position": {
+          "before": null,
+          "after": "DE"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Full Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Hamstring"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "LAC",
+      "playerId": "00-0031040",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Khalil Mack",
+      "position": "DE",
+      "fields": {
+        "practiceStatus": {
+          "before": "Did Not Participate In Practice",
+          "after": "Full Participation in Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "LAC",
+      "playerId": "00-0040221",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "R.J. Mickens",
+      "position": "S",
+      "fields": {
+        "practiceStatus": {
+          "before": "Limited Participation in Practice",
+          "after": "Full Participation in Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "MIN",
+      "playerId": "00-0041054",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Jakobe Thomas",
+      "position": "S",
+      "fields": {
+        "practiceStatus": {
+          "before": "Did Not Participate In Practice",
+          "after": "Limited Participation in Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "NO",
+      "playerId": "00-0033860",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Davon Godchaux",
+      "position": "DT",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Davon Godchaux"
+        },
+        "position": {
+          "before": null,
+          "after": "DT"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Did Not Participate In Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Not injury related - resting player"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "TB",
+      "playerId": "00-0038951",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Sean Tucker",
+      "position": "RB",
+      "fields": {
+        "practiceStatus": {
+          "before": "Did Not Participate In Practice",
+          "after": "Limited Participation in Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "TB",
+      "playerId": "00-0041031",
+      "kind": "changed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Rueben Bain Jr.",
+      "position": "LB",
+      "fields": {
+        "practiceStatus": {
+          "before": "Limited Participation in Practice",
+          "after": "Full Participation in Practice"
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "WAS",
+      "playerId": "00-0034333",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Daron Payne",
+      "position": "DT",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Daron Payne"
+        },
+        "position": {
+          "before": null,
+          "after": "DT"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Limited Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Knee"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    },
+    {
+      "season": 2026,
+      "type": "REG",
+      "week": 1,
+      "team": "WAS",
+      "playerId": "00-0036260",
+      "kind": "first-observed",
+      "observedAfter": "2026-09-10T20:24:24.691947+00:00",
+      "observedBy": "2026-09-11T20:39:23.236800+00:00",
+      "eventTime": null,
+      "playerName": "Javon Kinlaw",
+      "position": "DT",
+      "fields": {
+        "name": {
+          "before": null,
+          "after": "Javon Kinlaw"
+        },
+        "position": {
+          "before": null,
+          "after": "DT"
+        },
+        "reportStatus": {
+          "before": null,
+          "after": null
+        },
+        "practiceStatus": {
+          "before": null,
+          "after": "Full Participation in Practice"
+        },
+        "reportInjury": {
+          "before": null,
+          "after": null
+        },
+        "practiceInjury": {
+          "before": null,
+          "after": "Back"
+        },
+        "practiceSecondaryInjury": {
+          "before": null,
+          "after": null
+        }
+      }
+    }
+  ]
 }
