@@ -24,6 +24,7 @@ with sync_playwright() as p:
             page.goto('http://localhost:3000/games/2026_01_ATL_PIT', wait_until='networkidle')
             decline = page.get_by_role('button', name='Decline', exact=True)
             if decline.is_visible(): decline.click()
+            page.locator('.personnel-full-reports').first.locator(':scope > summary').click()
             details = page.locator('details.player-usage').first
             details.locator('summary').focus()
             page.keyboard.press('Enter')

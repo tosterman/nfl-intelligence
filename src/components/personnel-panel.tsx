@@ -7,6 +7,7 @@ import { PersonnelExpiry } from "./personnel-expiry";
 import { PersonnelChangesPanel } from "./personnel-changes";
 import { QuarterbackContext } from "./quarterback-context";
 import { PlayerUsage } from "./player-usage";
+import { PersonnelBriefing } from './personnel-briefing';
 
 export function PersonnelPanel({ game }: { game: Game }) {
   const selected = personnelForGame(snapshot, game);
@@ -63,6 +64,10 @@ export function PersonnelPanel({ game }: { game: Game }) {
                       unknown.
                     </p>
                   ) : (
+                    <>
+                    <PersonnelBriefing snapshot={snapshot} players={players} />
+                    <details className="personnel-full-reports">
+                    <summary>Full reports & participation details · {players.length}</summary>
                     <ul className="personnel-list">
                       {players.map((player) => (
                         <li key={player.playerId}>
@@ -98,6 +103,8 @@ export function PersonnelPanel({ game }: { game: Game }) {
                         </li>
                       ))}
                     </ul>
+                    </details>
+                    </>
                   )}
                 </div>
               );
