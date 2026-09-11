@@ -1,0 +1,20 @@
+[
+  {
+    "engine": "chromium",
+    "gameId": "2026_01_GB_MIN",
+    "width": 320,
+    "attributionVisible": true,
+    "correctNwsLink": true,
+    "overflow": false,
+    "pageErrors": []
+  },
+  {
+    "engine": "webkit",
+    "gameId": "2026_01_GB_MIN",
+    "width": 320,
+    "attributionVisible": true,
+    "correctNwsLink": true,
+    "overflow": false,
+    "pageErrors": []
+  }
+]

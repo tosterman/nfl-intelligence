@@ -673,5 +673,54 @@
     "pointState": "NV",
     "pointCity": "Paradise",
     "forecastHourly": "https://api.weather.gov/gridpoints/VEF/121,95/forecast/hourly"
+  },
+  "U.S. Bank Stadium": {
+    "address": "401 Chicago Avenue, Minneapolis, MN 55415",
+    "addressSource": "https://www.usbankstadium.com/contact-us/",
+    "status": "confirmed-osm-stadium",
+    "latitude": 44.97354455,
+    "longitude": -93.25744875000001,
+    "coordinateMeaning": "Midpoint of a named OpenStreetMap stadium bounding box, reconciled to the official address. Area forecast lookup only; not surveyed field coordinates.",
+    "mapSource": "https://www.openstreetmap.org/way/743461508",
+    "mapElement": {
+      "type": "way",
+      "id": 743461508,
+      "bounds": {
+        "minlat": 44.9722569,
+        "minlon": -93.2592175,
+        "maxlat": 44.9748322,
+        "maxlon": -93.25568
+      },
+      "tags": {
+        "addr:city": "Minneapolis",
+        "addr:country": "US",
+        "addr:housenumber": "401",
+        "addr:postcode": "55415",
+        "addr:state": "MN",
+        "addr:street": "Chicago Avenue",
+        "building": "stadium",
+        "building:levels": "6",
+        "height": "83",
+        "leisure": "stadium",
+        "name": "US Bank Stadium",
+        "operator": "ASM Global",
+        "roof:shape": "gabled",
+        "sport": "american_football",
+        "wikidata": "Q7929512",
+        "wikipedia": "en:U.S. Bank Stadium"
+      }
+    },
+    "mapDataSource": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3B%28nwr%5B%22leisure%22%3D%22stadium%22%5D%5B%22name%22%3D%22US+Bank+Stadium%22%5D%3B%29%3Bout+tags+bb%3B",
+    "mapDataHash": "f0598ee6404e9940133b1d48db28d7e409b52244b1dbdf6369b664834d937b24",
+    "retrievedAt": "2026-09-11T00:33:34.528128+00:00",
+    "attribution": "OpenStreetMap contributors",
+    "license": "ODbL-1.0",
+    "licenseUrl": "https://www.openstreetmap.org/copyright",
+    "pointUrl": "https://api.weather.gov/points/44.9735,-93.2574",
+    "pointHash": "3b43e6c07a551d6146842789fec17ce01246726b592d9af6b1528338e62857d4",
+    "pointCheckedAt": "2026-09-11T00:33:34.758228+00:00",
+    "pointState": "MN",
+    "pointCity": "Minneapolis",
+    "forecastHourly": "https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly"
   }
 }

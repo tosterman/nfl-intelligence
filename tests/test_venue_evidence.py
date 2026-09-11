@@ -2,6 +2,7 @@ import json,sys,unittest,gzip,hashlib,copy
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from venue_evidence import validate_venue, stadium_name
+from acquire_venue_maps import map_name
 ROOT=Path(__file__).resolve().parents[1]
 
 class VenueEvidenceTests(unittest.TestCase):
@@ -30,7 +31,7 @@ class VenueEvidenceTests(unittest.TestCase):
                     self.assertEqual(payload['properties']['relativeLocation']['properties']['state'],v['pointState'])
                     self.assertEqual(payload['geometry']['type'],'Point')
                     self.assertEqual(payload['geometry']['coordinates'],[round(v['longitude'],4),round(v['latitude'],4)])
-            self.assertEqual(stadium_name(v['mapElement']['tags']['name']),stadium_name(name))
+            self.assertEqual(stadium_name(v['mapElement']['tags']['name']),stadium_name(map_name(name)))
 
     def test_osm_wrong_address_or_shifted_center_is_rejected(self):
         original=json.loads((ROOT/'data/weather-osm-venues.json').read_text())['Gillette Stadium']
