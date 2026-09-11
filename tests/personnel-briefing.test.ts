@@ -22,7 +22,7 @@ test('rendered briefing keeps unavailable identity evidence visible for every de
     reportStatus, practiceStatus:'Did Not Participate', reportInjury:null, practiceInjury:null, practiceSecondaryInjury:null,
   }));
   const snapshot = {status:'available', sourceHash:'a'.repeat(64), retrievedAt:'2026-09-11T00:00:00Z', assetUpdatedAt:'2026-09-11T00:00:00Z', players};
-  const html = renderToStaticMarkup(createElement(PersonnelBriefing,{snapshot,players}));
+  const html = renderToStaticMarkup(createElement(PersonnelBriefing,{snapshot,players,current:null,historical:null}));
   for (const player of players) assert.ok(html.includes(player.name));
   for (const label of ['Reported out', 'Reported doubtful', 'Reported questionable', 'Game availability is unreported', 'Missing history does not mean zero']) assert.ok(html.includes(label), label);
   assert.equal((html.match(/earlier-week participation is not verified/g) ?? []).length, 4);

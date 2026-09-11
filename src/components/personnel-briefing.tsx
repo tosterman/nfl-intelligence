@@ -1,13 +1,11 @@
 import React from 'react';
-import historical from '../../data/player-usage.json';
-import current from '../../data/season-participation.json';
 import { groupPersonnel } from '../lib/personnel-briefing';
 import { usageForPlayer, hasUsageIdentityConflict } from '../lib/player-usage';
 import { seasonParticipation } from '../lib/season-participation';
 import type { PersonnelSnapshot, PlayerReport } from '../lib/personnel';
 import { pct, date } from '../lib/teams';
 
-function ParticipationFact({snapshot, player, sharedEmpty}: {snapshot: PersonnelSnapshot; player: PlayerReport; sharedEmpty: boolean}) {
+function ParticipationFact({snapshot, player, sharedEmpty, current, historical}: {snapshot: PersonnelSnapshot; player: PlayerReport; sharedEmpty: boolean; current: unknown; historical: unknown}) {
   const season = seasonParticipation(current, snapshot, player);
   const prior = usageForPlayer(historical, snapshot, player);
   return <ParticipationFactView season={season} prior={prior} historicalConflict={hasUsageIdentityConflict(historical, snapshot, player)} sharedEmpty={sharedEmpty} year={player.season} />;
@@ -29,7 +27,7 @@ export function ParticipationFactView({season, prior, historicalConflict, shared
   </>;
 }
 
-export function PersonnelBriefing({snapshot, players}: {snapshot: PersonnelSnapshot; players: PlayerReport[]}) {
+export function PersonnelBriefing({snapshot, players, current, historical}: {snapshot: PersonnelSnapshot; players: PlayerReport[]; current: unknown; historical: unknown}) {
   const sharedEmpty = players.length > 0 && players.every(player => {
     const evidence = seasonParticipation(current, snapshot, player);
     return evidence !== null && evidence.shares === null;
@@ -43,7 +41,7 @@ export function PersonnelBriefing({snapshot, players}: {snapshot: PersonnelSnaps
         <strong>{player.name}</strong> <span className="fine">{player.position}</span>
         {group.label === 'Other game designations' && <p className="fine">Game designation: {player.reportStatus}</p>}
         {group.label === 'No game designation' && <p className="fine">Practice: {player.practiceStatus ?? 'Unreported'}</p>}
-        <ParticipationFact snapshot={snapshot} player={player} sharedEmpty={sharedEmpty} />
+        <ParticipationFact snapshot={snapshot} player={player} sharedEmpty={sharedEmpty} current={current} historical={historical} />
       </li>)}</ul>
     </section>)}
     <p className="fine">Snap shares are recency-weighted across up to eight appearances, with a 90-day half-life. Observed history is not expected snaps, availability or player value. See full reports for source dates and details.</p>

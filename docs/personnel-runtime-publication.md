@@ -102,3 +102,30 @@ snapshot, bind the predecessor to the accepted publication, and permit a null
 predecessor only for an explicit initial/season baseline. Failed collections
 retain the existing transition; identical captures are not a new observation.
 All 28 personnel Python tests passed locally at this checkpoint.
+
+## View integration preparation
+
+The panel now accepts one `PersonnelEvidence` value and passes its selected
+quarterback, history and participation artifacts through every nested view.
+Those views no longer import independent data files. A temporary static adapter
+still supplies the current edition at the panel boundary; no live storage reader
+has been activated. The three collection states are represented in the type,
+but participation collection failure rendering still requires implementation.
+
+Four injected-data regressions cover compact and full disclosures, incompatible
+evidence without static fallback, and complete-panel propagation. Independent
+review found no material regression. All 230 application tests, type checking
+and the production build passed.
+
+The initial populated-page browser check could not find the full reports: the
+retained personnel and quarterback assets had passed their 30-hour deadline
+(September 10 at 12:03 and 12:01 UTC respectively). A follow-up check confirmed
+the explicit expired state, keyboard source disclosure, no horizontal overflow
+and no scoped accessibility violations in Chromium/WebKit at 320/1280px.
+`reviews/personnel-props-browser.json` records that scope. It is not a successful
+populated live-page check; populated behavior is presently covered by injected
+render tests. Fresh collection and runtime publication remain outstanding.
+
+Hosted verification 34632254746 passed on `a1f6643` (the homepage and earlier
+offline rehearsal checkpoint). The schedule/transition and view-injection work
+above came afterward and needs its own hosted verification.

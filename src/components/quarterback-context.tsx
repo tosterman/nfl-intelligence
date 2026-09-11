@@ -1,10 +1,9 @@
-import snapshot from "../../data/quarterbacks.json";
-import collection from "../../data/quarterback-collection.json";
+import type { QuarterbackSnapshot } from '@/lib/quarterbacks';
 import { quarterbackForGame } from "@/lib/quarterbacks";
 import type { Game } from "@/lib/types";
 import { teams, date, time } from "@/lib/teams";
 import { PersonnelExpiry } from "./personnel-expiry";
-export function QuarterbackContext({ game }: { game: Game }) {
+export function QuarterbackContext({ game, snapshot, collection }: { game: Game; snapshot: QuarterbackSnapshot; collection: { status: string } }) {
   return (
     <div className="quarterback-context">
       <h3>Listed first at quarterback</h3>

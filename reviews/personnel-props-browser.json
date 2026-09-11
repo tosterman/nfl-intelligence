@@ -1,0 +1,38 @@
+[
+  {
+    "engine": "chromium",
+    "width": 320,
+    "expiredReportsWithheld": true,
+    "keyboardSourceDisclosure": true,
+    "overflow": false,
+    "axeViolations": 0,
+    "scope": "Expired retained edition; populated views covered by injected-data tests"
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "expiredReportsWithheld": true,
+    "keyboardSourceDisclosure": true,
+    "overflow": false,
+    "axeViolations": 0,
+    "scope": "Expired retained edition; populated views covered by injected-data tests"
+  },
+  {
+    "engine": "webkit",
+    "width": 320,
+    "expiredReportsWithheld": true,
+    "keyboardSourceDisclosure": true,
+    "overflow": false,
+    "axeViolations": 0,
+    "scope": "Expired retained edition; populated views covered by injected-data tests"
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "expiredReportsWithheld": true,
+    "keyboardSourceDisclosure": true,
+    "overflow": false,
+    "axeViolations": 0,
+    "scope": "Expired retained edition; populated views covered by injected-data tests"
+  }
+]

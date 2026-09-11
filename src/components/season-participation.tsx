@@ -1,10 +1,9 @@
 import React from 'react';
-import artifact from '../../data/season-participation.json';
 import { seasonParticipation } from '../lib/season-participation';
 import type { PersonnelSnapshot, PlayerReport } from '../lib/personnel';
 import { date, pct } from '../lib/teams';
 
-export function SeasonParticipation({snapshot, player}: {snapshot: PersonnelSnapshot; player: PlayerReport}) {
+export function SeasonParticipation({snapshot, player, artifact}: {snapshot: PersonnelSnapshot; player: PlayerReport; artifact: unknown}) {
   const evidence = seasonParticipation(artifact, snapshot, player);
   return <SeasonParticipationView evidence={evidence} season={player.season} />;
 }

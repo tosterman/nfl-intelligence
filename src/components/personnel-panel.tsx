@@ -1,5 +1,5 @@
-import snapshot from "../../data/personnel.json";
-import collection from "../../data/personnel-collection.json";
+import { staticPersonnelEvidence } from '@/lib/personnel-static';
+import type { PersonnelEvidence } from '@/lib/personnel-evidence';
 import { personnelForGame, orderPersonnelReports } from "@/lib/personnel";
 import type { Game } from "@/lib/types";
 import { teams, date, time } from "@/lib/teams";
@@ -9,7 +9,8 @@ import { QuarterbackContext } from "./quarterback-context";
 import { PlayerUsage } from "./player-usage";
 import { PersonnelBriefing } from './personnel-briefing';
 
-export function PersonnelPanel({ game }: { game: Game }) {
+export function PersonnelPanel({ game, evidence = staticPersonnelEvidence }: { game: Game; evidence?: PersonnelEvidence }) {
+  const { snapshot, collection, quarterback, quarterbackCollection, history, current, historical } = evidence;
   const selected = personnelForGame(snapshot, game);
   return (
     <section className="panel personnel-panel">
@@ -22,7 +23,7 @@ export function PersonnelPanel({ game }: { game: Game }) {
         acquired weekly file, not confirmed lineups. Personnel does not adjust
         this model’s forecast.
       </p>
-      <QuarterbackContext game={game} />
+      <QuarterbackContext game={game} snapshot={quarterback} collection={quarterbackCollection} />
       {collection.status !== "ok" && (
         <p role="status">
           Latest collection failed. Any entries below come from the previous
@@ -38,7 +39,7 @@ export function PersonnelPanel({ game }: { game: Game }) {
             {time(snapshot.assetUpdatedAt)} ET · Acquired{" "}
             {date(snapshot.retrievedAt)} at {time(snapshot.retrievedAt)} ET
           </p>
-          <PersonnelChangesPanel game={game} snapshot={snapshot} />
+          <PersonnelChangesPanel game={game} snapshot={snapshot} history={history} />
           <div className="personnel-teams">
             {[game.away, game.home].map((team) => {
               const players = orderPersonnelReports(
@@ -65,7 +66,7 @@ export function PersonnelPanel({ game }: { game: Game }) {
                     </p>
                   ) : (
                     <>
-                    <PersonnelBriefing snapshot={snapshot} players={players} />
+                    <PersonnelBriefing snapshot={snapshot} players={players} current={current} historical={historical} />
                     <details className="personnel-full-reports">
                     <summary>Full reports & participation details · {players.length}</summary>
                     <ul className="personnel-list">
@@ -99,7 +100,7 @@ export function PersonnelPanel({ game }: { game: Game }) {
                                 .join(" · ")}
                             </div>
                           )}
-                          <PlayerUsage snapshot={snapshot} player={player} />
+                          <PlayerUsage snapshot={snapshot} player={player} current={current} historical={historical} />
                         </li>
                       ))}
                     </ul>

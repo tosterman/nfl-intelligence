@@ -1,4 +1,3 @@
-import history from "../../data/personnel-changes.json";
 import {
   personnelChangesForGame,
   type PersonnelChanges,
@@ -18,9 +17,11 @@ const labels: Record<string, string> = {
 export function PersonnelChangesPanel({
   game,
   snapshot,
+  history,
 }: {
   game: Game;
   snapshot: PersonnelSnapshot;
+  history: PersonnelChanges;
 }) {
   const selected = personnelChangesForGame(
     history as PersonnelChanges,
