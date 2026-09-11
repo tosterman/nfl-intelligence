@@ -1,0 +1,57 @@
+{
+  "planHash": "8b4f146e1c7f56313ad805ab18f037092392c3b94308b4d8e2bfc2eed06aad4c",
+  "scenarios": {
+    "on-time": {
+      "acceptedAttempts": 153,
+      "failedRequests": 0,
+      "cooldownBlocked": 0,
+      "budgetBlocked": 0,
+      "coveredKickoffs": 29,
+      "totalKickoffs": 29,
+      "staleMinutes": 0.0
+    },
+    "all-five-minutes-late": {
+      "acceptedAttempts": 153,
+      "failedRequests": 0,
+      "cooldownBlocked": 0,
+      "budgetBlocked": 0,
+      "coveredKickoffs": 4,
+      "totalKickoffs": 29,
+      "staleMinutes": 5.0
+    },
+    "alternating-five-minutes-late": {
+      "acceptedAttempts": 150,
+      "failedRequests": 0,
+      "cooldownBlocked": 3,
+      "budgetBlocked": 0,
+      "coveredKickoffs": 16,
+      "totalKickoffs": 29,
+      "staleMinutes": 5.0
+    },
+    "first-closing-request-fails": {
+      "acceptedAttempts": 153,
+      "failedRequests": 1,
+      "cooldownBlocked": 0,
+      "budgetBlocked": 0,
+      "coveredKickoffs": 28,
+      "totalKickoffs": 29,
+      "staleMinutes": 166.19394298333333
+    },
+    "ten-prior-attempts": {
+      "acceptedAttempts": 149,
+      "failedRequests": 0,
+      "cooldownBlocked": 0,
+      "budgetBlocked": 4,
+      "coveredKickoffs": 28,
+      "totalKickoffs": 29,
+      "staleMinutes": 1075.0
+    }
+  },
+  "limitations": [
+    "Constructed scenarios, not measured scheduler delay rates or expected performance.",
+    "No retries or dynamic rescheduling.",
+    "Successful requests assume instantaneous fresh quotes and uploads.",
+    "Prior requests consume budget but provide no initial usable feed in this simulation.",
+    "Live acquisition configuration remains unchanged."
+  ]
+}
