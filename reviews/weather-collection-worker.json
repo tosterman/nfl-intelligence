@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-09-11T17:36:08.784Z",
+  "previousManifest": "8d07e5dee9896a7723013cb4af9b7a620470834e714b8e3bc19cb9f587a5b86a",
+  "generatedAt": "2026-09-11T17:36:05.345770+00:00",
+  "previousObservations": 137,
+  "observations": 151,
+  "availableGames": 14,
+  "objects": 143,
+  "historyContinuity": true,
+  "modelEditionUnchanged": true,
+  "storageWrites": false,
+  "scope": "Real NWS collection in isolated recovered worker including committed venue evidence; publication not attempted"
+}

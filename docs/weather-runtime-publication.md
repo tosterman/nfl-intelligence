@@ -82,3 +82,11 @@ on September 11 at 17:33 UTC: all 137 observations and 126 source files replayed
 and a repeated restore preserved identical ledger bytes. Evidence:
 `reviews/weather-fresh-worker.json`. The first scheduled run and public rollout
 still require verification before calling this operational.
+
+The isolated collection rehearsal then used the committed stadium-location
+evidence and real NWS requests. It retained the prior 137 observations, added 14,
+and prepared a verified 143-object bundle with 14 available games. The copied
+model edition remained byte-identical. No storage publication was attempted in
+this rehearsal. See `reviews/weather-collection-worker.json`. Fresh workers need
+both the restored weather archive and the committed `weather-location-sources`
+directory; the normal GitHub checkout supplies the latter.

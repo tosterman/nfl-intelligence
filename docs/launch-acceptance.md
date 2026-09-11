@@ -4,15 +4,20 @@ Verdict: publicly deployed research edition; full operational and commercial lau
 
 ## Verified release evidence
 
-Current development checkpoint: `308a894` adds the reviewed personnel briefing,
-preserves independent current/historical identity evidence, and passes a local
-production build. The preceding full local application run passed 193 tests;
-the final identity correction passed three focused tests. Hosted run
-[34625656787](https://github.com/tosterman/nfl-intelligence/actions/runs/34625656787)
-is still in progress at this update. The previous hosted checkpoint `5989a3a`
-passed run 34625052770. None of these development changes is established as
-publicly deployed. A subsequent local spacing adjustment reduces the six-player
-mobile briefing from approximately 1096px to 889px without hiding reports.
+Current development checkpoint: `5cacb39` passed hosted run
+[34628382817](https://github.com/tosterman/nfl-intelligence/actions/runs/34628382817),
+including application/Python tests, retained-input replay, Chromium/WebKit
+market deadlines, production build and dependency audit. This includes the
+independent weather runtime reader, immutable publication, restored history,
+and gated collection workflow. A real isolated collection preserved 137 prior
+observations and added 14, with all 14 eligible games available and the model
+edition unchanged. The 146-file release staging check passed before the
+subsequent documentation/evidence updates. None of this establishes public
+rollout or sustained scheduled operation. See `docs/weather-runtime-publication.md`.
+
+The preceding `f443fd5` checkpoint passed hosted run 34625851138 with the
+reviewed personnel briefing and mobile spacing improvements. The six-player
+briefing was reduced from approximately 1096px to 889px without hiding reports.
 
 Earlier completed checkpoint: `b898d2e` passed hosted run
 [34623432915](https://github.com/tosterman/nfl-intelligence/actions/runs/34623432915):
@@ -95,13 +100,13 @@ Root browser checks used local IAB. Desktop screenshots inspected slate, game, r
 
 ## Model result
 
-score-efficiency-v1.2.0: 570 retrospective development games, 569 decisive and one tie; 361 correct winners (63.44%), Brier 0.2204, log loss 0.6309, margin MAE 10.159, total MAE 10.251 and 80% interval coverage 81.23%. Closing-market margin MAE is 9.687 on the same games. Exploratory spread selections: 126 wins, 137 losses, two pushes, 305 no-picks. This does not demonstrate profitable edge. The 2024–25 sample is no longer an untouched holdout. The live graded record remains empty; the first verified public pregame capture now exists, with results still pending.
+score-efficiency-v1.2.0: 570 retrospective development games, 569 decisive and one tie; 361 correct winners (63.44%), Brier 0.2204, log loss 0.6309, margin MAE 10.159, total MAE 10.251 and 80% interval coverage 81.23%. Closing-market margin MAE is 9.687 on the same games. Exploratory spread selections: 126 wins, 137 losses, two pushes, 305 no-picks. This does not demonstrate profitable edge. The 2024–25 sample is no longer an untouched holdout. The receipt-qualified live record currently has zero eligible grades and two missed games. Completed results lacked the required original context and pregame publication evidence; no old snapshot was backfilled.
 
 ## External launch gates
 
 Operational update: the forecast publishing workflow is temporarily disabled because its main-branch implementation lacks the staged cooldown guard and its next schedule precedes the provider retry boundary. Odds and health workflows remain active. Restore and verify publishing using `docs/publication-resume.md`; historical successful runs below do not establish current publisher availability. The experimental planned odds collector must also remain inactive until acquisition-history completeness and migration are established. Missing live history cannot be initialized as an empty budget.
 
-1. Public deployment and exact-artifact capture are verified. Continue production monitoring and broader device/performance verification.
+1. An older public deployment and its exact-artifact capture were verified. The current development release remains unpublished; the older public weather incident requires a verified rollout. Continue broader device/performance verification.
 2. The connected Git integration now supports the refresh/deploy/archive workflow without a separate Vercel token. The complete manually dispatched workflow succeeded (34504966362), including GitHub-token push, provider deployment, exact public capture, recovery artifact and receipt push. One actual scheduled five-feed health check is now verified (34524200347); no scheduled odds or forecast run was observed in that audit. Sustained clock-triggered reliability, failure recovery drills and branch protection with an explicit publishing-writer policy remain.
 3. Web Analytics is now enabled and consented production pageviews are verified through the reporting API. A declined control page remained untracked in the bounded check. Speed Insights reports received data; representative performance remains unverified. Custom-event reporting is blocked by the current plan. See `reviews/analytics-ingestion.md` and `docs/measurement-plan.md` for exact evidence and limitations.
 4. Confirm operator identity, private contact channel and final domain. The authenticated team API reports Hobby; a hosting plan permitting commercial use is required before monetization. No recurring service was purchased.
