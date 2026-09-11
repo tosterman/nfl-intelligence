@@ -4,15 +4,15 @@ from datetime import datetime,timedelta,timezone
 from pathlib import Path
 
 
-def plan(start,end,kickoffs,max_gap=timedelta(hours=5,minutes=30),cooldown=timedelta(minutes=30)):
-    if end<=start or cooldown<=timedelta() or max_gap<cooldown:
+def plan(start,end,kickoffs,max_gap=timedelta(hours=5,minutes=30),cooldown=timedelta(minutes=30),lead=timedelta(minutes=5)):
+    if end<=start or cooldown<=timedelta() or max_gap<cooldown or not timedelta()<lead<=timedelta(minutes=15):
         raise ValueError('Invalid planning limits')
-    # Leave five minutes for execution before kickoff. Share a request only
+    # Leave the selected execution lead before kickoff. Share a request only
     # when every grouped kickoff has a common acceptable acquisition window.
     groups=[]
     for kickoff in sorted(set(kickoffs)):
         if not start<kickoff<=end:continue
-        lo=max(start,kickoff-timedelta(minutes=15));hi=kickoff-timedelta(minutes=5)
+        lo=max(start,kickoff-timedelta(minutes=15));hi=kickoff-lead
         if lo>hi:raise ValueError('Kickoff too close to planning start')
         if groups and lo<=groups[-1]['hi']:
             groups[-1]['lo']=lo;groups[-1]['kickoffs'].append(kickoff)

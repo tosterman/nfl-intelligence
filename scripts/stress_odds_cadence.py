@@ -4,14 +4,14 @@ from datetime import datetime,timedelta
 from pathlib import Path
 
 
-def simulate(start,end,events,kickoffs,prior_attempts=(),limit=155):
+def simulate(start,end,events,kickoffs,prior_attempts=(),limit=155,cooldown_minutes=30):
     attempts=sorted(prior_attempts)
-    if end<=start or any(t>=start for t in attempts):raise ValueError('Invalid scenario chronology')
+    if end<=start or any(t>=start for t in attempts) or cooldown_minutes<=0:raise ValueError('Invalid scenario chronology')
     successful=[];cooldown=budget=failed=accepted=0
     for at,ok in sorted(events):
         if not start<=at<=end:continue
         recent=[t for t in attempts if at-t<timedelta(days=31)]
-        if recent and at-recent[-1]<timedelta(minutes=30):cooldown+=1;continue
+        if recent and at-recent[-1]<timedelta(minutes=cooldown_minutes):cooldown+=1;continue
         if len(recent)>=limit:budget+=1;continue
         attempts.append(at);accepted+=1
         if ok:successful.append(at)

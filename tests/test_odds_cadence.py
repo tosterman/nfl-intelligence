@@ -5,6 +5,16 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from plan_odds_cadence import plan
 
 class CadenceTests(unittest.TestCase):
+    def test_earlier_collection_can_tolerate_five_minute_jitter_with_shorter_cooldown(self):
+        from stress_odds_cadence import simulate
+        start=datetime(2026,9,1,tzinfo=timezone.utc);k=start+timedelta(hours=10)
+        kicks=[k,k+timedelta(minutes=20)]
+        requests,groups=plan(start,start+timedelta(days=2),kicks,cooldown=timedelta(minutes=20),lead=timedelta(minutes=10))
+        for parity in (0,1):
+            events=[(t+timedelta(minutes=5 if i%2==parity else 0),True) for i,t in enumerate(requests)]
+            r=simulate(start,start+timedelta(days=2),events,kicks,cooldown_minutes=15)
+            self.assertEqual(r['coveredKickoffs'],2);self.assertEqual(r['cooldownBlocked'],0)
+
     def test_close_kickoffs_share_only_a_common_window(self):
         start=datetime(2026,9,1,tzinfo=timezone.utc);k=start+timedelta(hours=10)
         requests,groups=plan(start,start+timedelta(days=2),[k,k,k+timedelta(minutes=5),k+timedelta(minutes=25)])
