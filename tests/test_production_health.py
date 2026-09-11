@@ -40,6 +40,7 @@ class ProductionHealthTests(unittest.TestCase):
                 payload={'status':'ok','fetchedAt':at,'maximumAgeHours':6}
                 if self.path=='/api/personnel-status':payload={'status':'ok','collectionStatus':'ok','season':datetime.now(timezone.utc).year,'expectedSeason':datetime.now(timezone.utc).year,'checkedAt':at,'retrievedAt':at,'assetUpdatedAt':at,'sourceHash':'a'*64,'rowCount':1,'maximumAgeHours':30}
                 if self.path=='/api/weather-status':payload={'status':'ok','collectionStartedAt':at,'generatedAt':at,'maximumAgeHours':30,'eligibleGames':0,'availableGames':0,'checks':[]}
+                if self.path=='/api/matchup-status':payload={'status':'ok','season':datetime.now(timezone.utc).year,'expectedSeason':datetime.now(timezone.utc).year,'week':1,'expectedWeek':1,'gameType':'REG','expectedGameType':'REG','cutoff':at[:10],'checkedAt':at,'sourceObservedAt':at,'expiresAt':(datetime.now(timezone.utc)+timedelta(hours=1)).isoformat(),'sourceHash':'a'*64,'scheduleHash':'b'*64,'maximumAgeHours':30,'gameCount':0,'sampleStatus':'no-eligible-games'}
                 if self.path=='/api/quarterback-status':payload={'status':'ok','collectionStatus':'ok','season':datetime.now(timezone.utc).year,'expectedSeason':datetime.now(timezone.utc).year,'checkedAt':at,'retrievedAt':at,'assetUpdatedAt':at,'sourceHash':'a'*64,'maximumAgeHours':30,'expectedTeams':sorted(production_health.NFL_TEAMS),'checks':[{'team':t,'status':'ok','recordedAt':at} for t in sorted(production_health.NFL_TEAMS)]}
                 self.wfile.write(json.dumps(payload).encode())
             def log_message(self,*args):pass
@@ -55,7 +56,18 @@ class ProductionHealthTests(unittest.TestCase):
                 self.assertTrue(report['checks']['personnel']['healthy'])
                 self.assertTrue(report['checks']['weather']['healthy'])
                 self.assertTrue(report['checks']['quarterbacks']['healthy'])
+                self.assertTrue(report['checks']['matchup']['healthy'])
         finally:server.shutdown();server.server_close();worker.join()
+
+    def test_matchup_empty_state_is_healthy_but_expiry_scope_and_counts_are_checked(self):
+        good={'status':'ok','season':2026,'expectedSeason':2026,'week':1,'expectedWeek':1,'gameType':'REG','expectedGameType':'REG','cutoff':self.at[:10],'checkedAt':self.at,'sourceObservedAt':self.at,
+              'expiresAt':(self.now+timedelta(hours=1)).isoformat(),'sourceHash':'a'*64,'scheduleHash':'b'*64,'maximumAgeHours':30,'gameCount':0,'sampleStatus':'no-eligible-games'}
+        validate_health('matchup',200,good,self.now)
+        for change in [{'week':2},{'gameType':'POST'},{'cutoff':'invalid'},{'cutoff':'2026-02-30'},{'cutoff':'2099-01-01'},{'sourceHash':'bad'},{'gameCount':1},{'sampleStatus':'available'},
+                       {'expiresAt':self.at},{'expiresAt':(self.now+timedelta(hours=31)).isoformat()},
+                       {'sourceObservedAt':(self.now+timedelta(seconds=1)).isoformat()}]:
+            with self.subTest(change=change),self.assertRaises(ValueError):
+                validate_health('matchup',200,good|change,self.now)
 
     def test_personnel_failure_and_old_asset_override_claimed_health(self):
         good={'status':'ok','collectionStatus':'ok','season':2026,'expectedSeason':2026,'checkedAt':self.at,'retrievedAt':self.at,'assetUpdatedAt':self.at,'sourceHash':'a'*64,'rowCount':1,'maximumAgeHours':30}

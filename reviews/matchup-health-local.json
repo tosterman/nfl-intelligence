@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-09-11T14:55:26.539090+00:00",
+  "url": "http://localhost:3000/api/matchup-status",
+  "httpStatus": 200,
+  "cacheControl": "no-store",
+  "payload": {
+    "status": "ok",
+    "season": 2026,
+    "week": 1,
+    "expectedSeason": 2026,
+    "expectedWeek": 1,
+    "gameType": "REG",
+    "expectedGameType": "REG",
+    "checkedAt": "2026-09-11T14:40:50.926667+00:00",
+    "cutoff": "2026-09-09",
+    "sourceObservedAt": "2026-09-11T14:40:52.100621+00:00",
+    "expiresAt": "2026-09-12T20:01:43.000Z",
+    "sourceHash": "d9e442ae17ba88e70c6df6ed15e4f0ce54c9ff63a607de54f62cb7ed4f016e39",
+    "scheduleHash": "aaf609d395ba813c53566fd2ab87decc8732b0303aac83586fe014b8a9ac0ca6",
+    "sampleStatus": "no-eligible-games",
+    "gameCount": 0,
+    "maximumAgeHours": 30,
+    "scope": "Current weekly collection and retained source freshness. No claim of predictive accuracy or complete historical data availability."
+  }
+}

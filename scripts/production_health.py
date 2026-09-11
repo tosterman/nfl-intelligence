@@ -8,7 +8,7 @@ from urllib.error import HTTPError,URLError
 
 ROOT=Path(__file__).resolve().parents[1]
 ORIGIN='https://nfl-intelligence-one.vercel.app'
-ENDPOINTS={'forecasts':'/api/status','odds':'/api/odds-status','personnel':'/api/personnel-status','weather':'/api/weather-status','quarterbacks':'/api/quarterback-status'}
+ENDPOINTS={'forecasts':'/api/status','odds':'/api/odds-status','personnel':'/api/personnel-status','weather':'/api/weather-status','quarterbacks':'/api/quarterback-status','matchup':'/api/matchup-status'}
 NFL_TEAMS=set('ARI ATL BAL BUF CAR CHI CIN CLE DAL DEN DET GB HOU IND JAX KC LA LAC LV MIA MIN NE NO NYG NYJ PHI PIT SEA SF TB TEN WAS'.split())
 
 def age(value,now):
@@ -24,6 +24,24 @@ def validate_health(kind,http_status,payload,now):
     if kind=='odds':
         if payload.get('maximumAgeHours')!=6 or not 0<=age(payload.get('fetchedAt'),now)<=6:
             raise ValueError('Odds acquisition is missing, stale or future-dated')
+    elif kind=='matchup':
+        if payload.get('maximumAgeHours')!=30 or type(payload.get('season')) is not int or payload['season']!=payload.get('expectedSeason') or not now.year-1<=payload['season']<=now.year:
+            raise ValueError('Matchup season or age policy invalid')
+        if type(payload.get('week')) is not int or not 1<=payload['week']<=22 or payload['week']!=payload.get('expectedWeek'):
+            raise ValueError('Matchup week mismatch')
+        if payload.get('gameType') not in ('REG','POST') or payload['gameType']!=payload.get('expectedGameType'):
+            raise ValueError('Matchup season phase mismatch')
+        observed=age(payload.get('sourceObservedAt'),now)
+        cutoff=payload.get('cutoff')
+        if not isinstance(cutoff,str) or not re.fullmatch(r'\d{4}-\d{2}-\d{2}',cutoff) or age(cutoff+'T00:00:00+00:00',now)<observed:
+            raise ValueError('Matchup cutoff is invalid or postdates observation')
+        if not 0<=observed<=age(payload.get('checkedAt'),now)<30 or not observed-30<=age(payload.get('expiresAt'),now)<0:
+            raise ValueError('Matchup source is stale or future-dated')
+        if any(not re.fullmatch(r'[a-f0-9]{64}',payload.get(k,'')) for k in ['sourceHash','scheduleHash']):
+            raise ValueError('Matchup source identities missing')
+        count=payload.get('gameCount');state=payload.get('sampleStatus')
+        if type(count) is not int or not ((state=='no-eligible-games' and count==0) or (state=='available' and count>0)):
+            raise ValueError('Matchup sample state and count disagree')
     elif kind=='personnel':
         if payload.get('maximumAgeHours')!=30 or payload.get('collectionStatus')!='ok':
             raise ValueError('Personnel collection failed')
@@ -86,6 +104,7 @@ def health_evidence(kind, payload):
         'personnel': ('retrievedAt','assetUpdatedAt','sourceHash','rowCount','collectionStatus'),
         'quarterbacks': ('retrievedAt','assetUpdatedAt','sourceHash','collectionStatus'),
         'weather': ('collectionStartedAt','generatedAt','eligibleGames','availableGames'),
+        'matchup': ('season','week','gameType','cutoff','sourceObservedAt','expiresAt','sourceHash','scheduleHash','sampleStatus','gameCount'),
     }[kind]
     return {key:payload[key] for key in keys}
 

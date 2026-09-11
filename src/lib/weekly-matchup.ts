@@ -16,7 +16,7 @@ export function selectWeeklyContext(snapshot: WeeklySnapshot, game: WeeklyGame, 
   const kickoff = Date.parse(game.kickoff ?? '');
   const expiresAt = snapshot.freshUntil ?? NaN;
   if (![now, observed, cutoff, kickoff, expiresAt].every(Number.isFinite) || observed > now ||
-      cutoff > kickoff || cutoff > now || now >= expiresAt || expiresAt > observed + 30 * 3600000)
+      cutoff > kickoff || cutoff > observed || cutoff > now || new Date(cutoff).toISOString().slice(0, 10) !== data.cutoff || now >= expiresAt || expiresAt > observed + 30 * 3600000)
     return unavailable('Current-season evidence is awaiting a verified refresh.');
   if (data.status === 'no-eligible-games')
     return { reason: 'No earlier games from this season qualify for this week’s sample.', data: null, expiresAt };
