@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-09-11T17:40:50.364195+00:00",
+  "baseline": {
+    "observations": 137,
+    "sourceObjects": 126,
+    "presentationBytes": 246919,
+    "ledgerBytes": 350277,
+    "totalBytes": 1074038
+  },
+  "nextRealCollection": {
+    "observations": 151,
+    "sourceObjects": 141,
+    "presentationBytes": 258026,
+    "ledgerBytes": 389504,
+    "totalBytes": 1183679
+  },
+  "currentLimits": {
+    "objects": 2048,
+    "presentationBytes": 2000000,
+    "totalBytes": 20000000
+  },
+  "linearScenario": {
+    "collectionsPerDay": 4,
+    "additionalSourceObjectsPerCollection": 15,
+    "additionalPresentationBytesPerCollection": 11107,
+    "additionalTotalBytesPerCollection": 109641,
+    "daysUntilObjectLimit": 31.75,
+    "daysUntilPresentationLimit": 39.20892230125146,
+    "daysUntilTotalLimit": 42.904390237228775
+  },
+  "interpretation": "Illustrative extrapolation from one real collection, not a growth forecast. Current all-history bundle cannot be accepted as a full-season archive. Partitioning and runtime scoped reads are required; do not raise caps or discard retained evidence."
+}

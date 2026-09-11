@@ -1,5 +1,10 @@
 # Independent weather publication
 
+Capacity finding: the verified v1 bootstrap accumulates all history in each
+bundle and is not suitable for a full season. Before enabling scheduled
+collection, complete `docs/weather-partition-migration.md`. Keep the existing
+archive and freshness checks intact during migration.
+
 ## Why
 
 Scheduled health run 34623950366 detected expired public weather while the
