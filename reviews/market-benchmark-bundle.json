@@ -1,0 +1,11 @@
+{
+  "sha256": "1c42137e2ba6a139508d3de0db917a036fae0529c669c84d2e3048e28d760d19",
+  "bytes": 1048696,
+  "path": "C:\\Users\\tyler\\Desktop\\nfl\\release-recovery\\market-benchmark\\1c42137e2ba6a139508d3de0db917a036fae0529c669c84d2e3048e28d760d19.bundle.json.gz",
+  "restoredReplay": {
+    "reportHash": "d46be3ed6c2ef59b355cc66394f3046aa38a40fabd1e40f70c3cebeb2a4288de",
+    "pairedGameCount": 0,
+    "networkBlocked": true,
+    "matched": true
+  }
+}
