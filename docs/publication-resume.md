@@ -32,6 +32,19 @@ evidence. Observe a later actual scheduled run separately. Keep the variable
 unset if public verification fails. This weather workflow does not regenerate
 numerical forecasts or replace the forecast publication receipt procedure above.
 
+Independent personnel rollout: deploy the runtime reader before setting
+`PERSONNEL_RUNTIME_ENABLED=true`. Run
+`python scripts/verify_personnel_publication.py --url https://nfl-intelligence-one.vercel.app`
+against the intended `reviews/personnel-incremental-publication.json` receipt.
+Require all three public personnel, quarterback and participation endpoints to
+select that exact publication and return healthy HTTP 200. Then enable the
+variable and dispatch `personnel.yml` once. Inspect its real restore, collection,
+replay, conditional publication and public readback, and retain its workflow
+artifact. Observe a later clock-triggered run separately. Keep the variable
+unset if the initial reader check fails; neither local readback nor an enabled
+workflow proves public feed health. Do not regenerate or substitute timestamps
+to make an expired collection pass.
+
 Market benchmark rollout: the forecast workflow now has a nonfatal benchmark
 refresh gated by `MARKET_BENCHMARK_ENABLED=true`. Keep it unset until the local
 combined export/replay/private-retention run and the deployed performance page's
