@@ -10,6 +10,7 @@ from pathlib import Path
 from record_publication import verified_snapshot_hashes
 from publication import write_receipts
 from publication_preflight import validate_forecast_edition
+from staged_release import verify_staged_release
 ROOT=Path(__file__).resolve().parents[1]
 REPO='tosterman/nfl-intelligence'
 PUBLIC_URL='https://nfl-intelligence-one.vercel.app'
@@ -92,6 +93,7 @@ def main():
     subprocess.run([sys.executable, str(ROOT / 'scripts/weather_history.py'), '--check'], cwd=ROOT, check=True)
     subprocess.run(['git', 'add', 'data/weather-history.json'], cwd=ROOT, check=True)
     subprocess.run(['git','add','data/total-explanations.json','data/total-explanation-archive/','data/prior-matchup-context.json','data/prior-matchup-collection.json','data/weekly-matchup-context.json','data/weekly-matchup-sources/','data/source-record-changes.json','data/forecast-input-archive/','data/player-usage.json','data/personnel-changes.json','data/site.json','data/ledger.json','data/source.json','data/weather.json','data/weather-ledger.json','data/weather-sources/','data/quarterbacks.json','data/quarterback-collection.json','data/quarterback-sources/','data/personnel.json','data/personnel-collection.json','data/personnel-sources/'],check=True)
+    verify_staged_release(ROOT)
     changed=subprocess.run(['git','diff','--cached','--quiet']).returncode
     if changed==1:subprocess.run(['git','commit','-m','data: publish refreshed forecast edition'],check=True)
     elif changed!=0:raise RuntimeError('Cannot inspect staged publication')

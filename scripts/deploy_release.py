@@ -8,16 +8,20 @@ from publication import write_receipts
 from publication_preflight import validate_forecast_edition
 ROOT=Path(__file__).resolve().parents[1]
 ALLOW_ROOT={'package.json','package-lock.json','next.config.ts','tsconfig.json','next-env.d.ts','vercel.json'}
-def release_files():
-    files=[]
-    paths=[p for p in ROOT.iterdir() if p.name in ALLOW_ROOT]
+def release_paths(root=None):
+    root = root or ROOT
+    paths=[p for p in root.iterdir() if p.name in ALLOW_ROOT]
     for folder in ['src','public']:
-        paths.extend(p for p in (ROOT/folder).rglob('*') if p.is_file())
+        paths.extend(p for p in (root/folder).rglob('*') if p.is_file())
     for name in ['site.json','weather.json','weather-history.json','weather-venues.json','weather-osm-venues.json',
                  'personnel.json','personnel-collection.json','personnel-changes.json','player-usage.json',
                    'quarterbacks.json','quarterback-collection.json','explosive-plays.json','red-zone.json','source-record-changes.json','weekly-matchup-context.json','prior-matchup-context.json','total-explanations.json']:
-        paths.append(ROOT/'data'/name)
-    for p in paths:
+        paths.append(root/'data'/name)
+    return paths
+
+def release_files():
+    files=[]
+    for p in release_paths():
         binary=p.suffix in ['.ttf','.woff','.woff2','.png','.jpg','.ico']
         files.append({'file':p.relative_to(ROOT).as_posix(),'data':base64.b64encode(p.read_bytes()).decode() if binary else p.read_text(encoding='utf-8-sig'),'encoding':'base64' if binary else 'utf-8'})
     return files

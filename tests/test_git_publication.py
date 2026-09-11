@@ -10,6 +10,21 @@ from test_publication_preflight import fixture
 NOW=datetime(2026,9,10,17,tzinfo=timezone.utc)
 def status():return {'id':4,'context':'Vercel','state':'success','creator':{'id':35613825,'login':'vercel[bot]'},'target_url':'https://vercel.com/khnum/nfl-intelligence/abc123','created_at':'2026-09-10T16:45:08Z'}
 class GitPublicationTests(unittest.TestCase):
+ def setUp(self):
+  # These fixtures isolate publication orchestration. Actual Git content checks
+  # run in temporary repositories in test_staged_release.py.
+  guard=patch('git_publication.verify_staged_release',return_value=1)
+  self.guard=guard.start();self.addCleanup(guard.stop)
+ def test_staged_release_failure_stops_before_commit_push_and_capture(self):
+  with tempfile.TemporaryDirectory() as folder:
+   root=Path(folder);(root/'data').mkdir();site,ledger=fixture()
+   for name,value in [('site',site),('ledger',ledger)]:
+    (root/f'data/{name}.json').write_text(json.dumps(value))
+   self.guard.side_effect=ValueError('Release file differs from Git staging')
+   with patch.object(git_publication,'ROOT',root),patch('git_publication.subprocess.check_output',return_value='main'),patch('git_publication.subprocess.run',return_value=SimpleNamespace(returncode=0)) as command,patch('git_publication.capture') as capture:
+    with self.assertRaisesRegex(ValueError,'differs from Git staging'):git_publication.main()
+   self.assertFalse(any(call.args[0][:2] in (['git','commit'],['git','push']) for call in command.call_args_list))
+   capture.assert_not_called()
  def test_cooldown_requires_trusted_latest_limit_and_expires_without_claiming_capacity(self):
   limited={**status(),'state':'failure','target_url':'https://vercel.com/khnum?upgradeToPro=build-rate-limit'}
   deadline=git_publication.provider_cooldown([limited],NOW)
